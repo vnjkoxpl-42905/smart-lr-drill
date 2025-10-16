@@ -33,6 +33,7 @@ export interface QuestionManifest {
 }
 
 const JSON_FILES = [
+  // Original 10 files (PT101-PT106)
   '/data/PT106-S3-LR.json',
   '/data/PT105-S1-LR.json',
   '/data/PT104-S1-LR.json',
@@ -43,6 +44,17 @@ const JSON_FILES = [
   '/data/PT105-S2-LR.json',
   '/data/PT106-S1-LR.json',
   '/data/PT103-S2-LR.json',
+  // New 10 files (PT107-PT120) - mega database expansion
+  '/data/PT107-S1-LR.json',
+  '/data/PT107-S4-LR.json',
+  '/data/PT108-S2-LR.json',
+  '/data/PT108-S3-LR.json',
+  '/data/PT109-S1-LR.json',
+  '/data/PT109-S4-LR.json',
+  '/data/PT110-S2-LR.json',
+  '/data/PT111-S1-LR.json',
+  '/data/PT120-S1-LR.json',
+  '/data/PT120-S3-LR.json',
 ];
 
 // Simple hash for qid generation
