@@ -44,7 +44,7 @@ const JSON_FILES = [
   '/data/PT105-S2-LR.json',
   '/data/PT106-S1-LR.json',
   '/data/PT103-S2-LR.json',
-  // New 10 files (PT107-PT120) - mega database expansion
+  // Second batch (PT107-PT120)
   '/data/PT107-S1-LR.json',
   '/data/PT107-S4-LR.json',
   '/data/PT108-S2-LR.json',
@@ -55,6 +55,10 @@ const JSON_FILES = [
   '/data/PT111-S1-LR.json',
   '/data/PT120-S1-LR.json',
   '/data/PT120-S3-LR.json',
+  // Third batch - expanding to mega database
+  '/data/PT127-S1-LR.json',
+  '/data/PT150-S2-LR.json',
+  '/data/PT152-S1-LR.json',
 ];
 
 // Simple hash for qid generation
