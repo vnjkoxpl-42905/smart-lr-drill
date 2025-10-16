@@ -1,0 +1,140 @@
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { useQuestionBank } from '@/contexts/QuestionBankContext';
+import { useNavigate } from 'react-router-dom';
+import { ChevronLeft, BookOpen, Target, Clock } from 'lucide-react';
+
+const Dashboard = () => {
+  const navigate = useNavigate();
+  const { manifest, isLoading } = useQuestionBank();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-muted-foreground">Loading dashboard...</p>
+      </div>
+    );
+  }
+
+  if (!manifest) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-destructive">Failed to load question bank</p>
+      </div>
+    );
+  }
+
+  const qtypes = Object.entries(manifest.byQType).sort((a, b) => b[1] - a[1]);
+  const difficulties = Object.entries(manifest.byDifficulty).sort((a, b) => parseInt(a[0]) - parseInt(b[0]));
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <div className="border-b bg-card">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => navigate('/')}
+              className="gap-2"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              Back
+            </Button>
+            <h1 className="text-xl font-semibold">Dashboard</h1>
+            <div className="w-20" />
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 py-8 max-w-6xl space-y-8">
+        {/* Overview Cards */}
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="p-6 space-y-2">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
+                <BookOpen className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-2xl font-bold">{manifest.totalQuestions}</p>
+                <p className="text-sm text-muted-foreground">Total Questions</p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 space-y-2">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
+                <Target className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-2xl font-bold">0</p>
+                <p className="text-sm text-muted-foreground">Questions Attempted</p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 space-y-2">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
+                <Clock className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-2xl font-bold">--</p>
+                <p className="text-sm text-muted-foreground">Avg Time</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Question Bank Manifest */}
+        <div className="space-y-6">
+          <h2 className="text-2xl font-semibold">Question Bank</h2>
+          
+          {/* By Section */}
+          <Card className="p-6">
+            <h3 className="font-semibold mb-4">By Section</h3>
+            <div className="space-y-2">
+              {manifest.sections.map((sec) => (
+                <div key={`${sec.pt}-${sec.section}`} className="flex justify-between py-2 border-b last:border-0">
+                  <span className="text-sm">PT{sec.pt} - Section {sec.section}</span>
+                  <span className="text-sm font-medium">{sec.count} questions</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          {/* By Question Type */}
+          <Card className="p-6">
+            <h3 className="font-semibold mb-4">By Question Type</h3>
+            <div className="space-y-2">
+              {qtypes.map(([qtype, count]) => (
+                <div key={qtype} className="flex justify-between py-2 border-b last:border-0">
+                  <span className="text-sm">{qtype}</span>
+                  <span className="text-sm font-medium">{count} questions</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          {/* By Difficulty */}
+          <Card className="p-6">
+            <h3 className="font-semibold mb-4">By Difficulty</h3>
+            <div className="space-y-2">
+              {difficulties.map(([level, count]) => (
+                <div key={level} className="flex justify-between py-2 border-b last:border-0">
+                  <span className="text-sm">Level {level}</span>
+                  <span className="text-sm font-medium">{count} questions</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
