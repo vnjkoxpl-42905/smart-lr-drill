@@ -378,7 +378,7 @@ export default function Drill() {
             {Object.entries(currentQuestion.answerChoices).map(([key, text]) => {
               const isCorrect = key === currentQuestion.correctAnswer;
               const isSelected = key === selectedAnswer;
-              const showFeedback = answerLocked && isSelected;
+              const showFeedback = answerLocked && isSelected && confidence !== null;
 
               return (
                 <div
