@@ -9,6 +9,17 @@ import { ArrowLeft, Play } from 'lucide-react';
 import { getWAJEntries, type WAJEntry, type WAJHistoryItem } from '@/lib/wajService';
 import { questionBank } from '@/lib/questionLoader';
 
+function formatTime(ms: number): string {
+  const seconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  
+  if (minutes > 0) {
+    return `${minutes}m ${remainingSeconds}s`;
+  }
+  return `${seconds}s`;
+}
+
 export default function WrongAnswerJournal() {
   const navigate = useNavigate();
   const [entries, setEntries] = React.useState<WAJEntry[]>([]);
@@ -236,7 +247,7 @@ export default function WrongAnswerJournal() {
                         <div className="text-sm">
                           <div>Chose: ({item.chosen_answer})</div>
                           <div>Correct: ({item.correct_answer})</div>
-                          <div>Time: {(item.time_ms / 1000).toFixed(1)}s</div>
+                          <div>Time: {formatTime(item.time_ms)}</div>
                           {item.confidence_1_5 && <div>Confidence: {item.confidence_1_5}/5</div>}
                         </div>
                         {item.review && (
