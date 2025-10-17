@@ -56,12 +56,9 @@ export default function Landing() {
       {selectedMode === 'adaptive' && (
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <h2 className="text-2xl font-bold">Start drill</h2>
-          <p className="text-muted-foreground">
-            The app selects questions based on your performance and resurfaces missed ones.
-          </p>
           <div className="flex gap-3 justify-center">
             <Button onClick={handleStartAdaptive} size="lg">
-              Start
+              Begin
             </Button>
             <Button variant="outline" onClick={() => setSelectedMode(null)}>
               Back

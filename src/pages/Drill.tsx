@@ -10,6 +10,7 @@ import { TimerControls } from '@/components/drill/TimerControls';
 import { ReviewModal } from '@/components/drill/ReviewModal';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
+import { normalizeText } from '@/lib/utils';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
 import type { LRQuestion } from '@/lib/questionLoader';
 import type { DrillMode, DrillSession, TimerConfig, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
@@ -129,6 +130,13 @@ export default function Drill() {
     setAnswerLocked(true);
   };
 
+  // Auto-submit when confidence is selected
+  React.useEffect(() => {
+    if (answerLocked && confidence !== null && !showSolution && !showReviewModal) {
+      handleSubmit();
+    }
+  }, [confidence, answerLocked, showSolution, showReviewModal]);
+
   const handleReviewSave = (review: { whyWrong: string; whyEliminated: string; plan: string }) => {
     if (!currentQuestion || !selectedAnswer || !session || confidence === null) return;
 
@@ -163,11 +171,11 @@ export default function Drill() {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
 
     const correct = selectedAnswer === currentQuestion.correctAnswer;
+    const timeMs = Date.now() - questionStartTime;
 
     if (!correct) {
       setShowReviewModal(true);
     } else {
-      const timeMs = Date.now() - questionStartTime;
       const newAttempts = new Map(session.attempts);
       newAttempts.set(currentQuestion.qid, {
         selectedAnswer,
@@ -343,14 +351,22 @@ export default function Drill() {
 
           {/* Stimulus */}
           {currentQuestion.stimulus && (
-            <div className="p-4 bg-muted/50 rounded-lg">
-              <p className="whitespace-pre-wrap">{currentQuestion.stimulus}</p>
+            <div className="p-4 bg-muted/50 rounded-lg stimulus">
+              {normalizeText(currentQuestion.stimulus).split('\n\n').map((para, i) => (
+                <p key={i} style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
+                  {para}
+                </p>
+              ))}
             </div>
           )}
 
           {/* Question stem */}
-          <div className="text-lg font-semibold">
-            {currentQuestion.questionStem}
+          <div className="text-lg font-semibold question-stem" style={{ marginTop: '16px' }}>
+            {normalizeText(currentQuestion.questionStem).split('\n\n').map((para, i) => (
+              <p key={i} style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
+                {para}
+              </p>
+            ))}
           </div>
 
           {/* Answer choices */}
@@ -397,7 +413,7 @@ export default function Drill() {
           </RadioGroup>
 
           {/* Confidence selector */}
-          {answerLocked && !showSolution && (
+          {answerLocked && (
             <div className="space-y-3 pt-4">
               <Label>Confidence (1–5)</Label>
               <div className="flex gap-2">
@@ -407,6 +423,7 @@ export default function Drill() {
                     variant={confidence === level ? 'default' : 'outline'}
                     onClick={() => setConfidence(level)}
                     className="flex-1"
+                    disabled={showSolution}
                   >
                     {level}
                   </Button>
@@ -417,28 +434,21 @@ export default function Drill() {
 
           {/* Actions */}
           <div className="flex gap-3 pt-4">
-            {!showSolution ? (
-              <>
-                <Button
-                  onClick={handleSubmit}
-                  disabled={!selectedAnswer || confidence === null || timerConfig?.isPaused}
-                  size="lg"
-                >
-                  Next question
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={handleAddToRedo}
-                  size="lg"
-                >
-                  Add to redo queue
-                </Button>
-              </>
-            ) : (
-              <Button onClick={handleNext} size="lg">
-                Next question
-              </Button>
-            )}
+            <Button
+              onClick={handleNext}
+              disabled={!showSolution || timerConfig?.isPaused}
+              size="lg"
+            >
+              Next question
+            </Button>
+            <Button
+              variant="outline"
+              onClick={handleAddToRedo}
+              size="lg"
+              disabled={!answerLocked}
+            >
+              Add to redo queue
+            </Button>
           </div>
 
           {/* Solution */}
