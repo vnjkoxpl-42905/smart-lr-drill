@@ -6,6 +6,7 @@ export interface LRQuestion {
   section: number;
   qnum: number;
   qtype: string;
+  reasoningType?: string; // e.g., "Conditional", "Causal", "Comparison", or "Conditional + Causal"
   difficulty: number;
   stimulus?: string;
   questionStem: string;
@@ -17,6 +18,22 @@ export interface LRQuestion {
     E: string;
   };
   correctAnswer: 'A' | 'B' | 'C' | 'D' | 'E';
+  breakdown?: {
+    conclusion: string;
+    conclusionSimple: string;
+    evidence: string[]; // 2-4 items
+    justification: string; // ≤80 words
+    objection: string; // ≤40 words
+    prediction: string; // ≤60 words
+    crucialInsight: string; // ≤30 words
+  };
+  answerChoiceExplanations?: {
+    A: { verdict: 'correct' | 'incorrect'; whyCorrect?: string; whyIncorrect?: string };
+    B: { verdict: 'correct' | 'incorrect'; whyCorrect?: string; whyIncorrect?: string };
+    C: { verdict: 'correct' | 'incorrect'; whyCorrect?: string; whyIncorrect?: string };
+    D: { verdict: 'correct' | 'incorrect'; whyCorrect?: string; whyIncorrect?: string };
+    E: { verdict: 'correct' | 'incorrect'; whyCorrect?: string; whyIncorrect?: string };
+  };
 }
 
 export interface QuestionManifest {
@@ -135,11 +152,14 @@ export class QuestionBank {
             section,
             qnum,
             qtype,
+            reasoningType: item.reasoningType,
             difficulty,
             stimulus: item.stimulus,
             questionStem: item.questionStem,
             answerChoices: item.answerChoices,
             correctAnswer: item.correctAnswer,
+            breakdown: item.breakdown,
+            answerChoiceExplanations: item.answerChoiceExplanations,
           });
 
           count++;
