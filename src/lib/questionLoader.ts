@@ -200,6 +200,21 @@ export class QuestionBank {
       return true;
     });
   }
+
+  getSection(pt: number, section: number): LRQuestion[] {
+    return this.getAllQuestions()
+      .filter(q => q.pt === pt && q.section === section)
+      .sort((a, b) => a.qnum - b.qnum);
+  }
+
+  shuffleQuestions(questions: LRQuestion[]): LRQuestion[] {
+    const shuffled = [...questions];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
 }
 
 // Singleton instance

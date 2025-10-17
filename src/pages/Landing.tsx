@@ -1,78 +1,103 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
-import { Brain, Target, TrendingUp, Zap } from "lucide-react";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useQuestionBank } from '@/contexts/QuestionBankContext';
+import { ModeSelector } from '@/components/drill/ModeSelector';
+import { SectionSelector } from '@/components/drill/SectionSelector';
+import { FilterPanel } from '@/components/drill/FilterPanel';
+import { Button } from '@/components/ui/button';
+import { DrillMode, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
 
-const Landing = () => {
+export default function Landing() {
   const navigate = useNavigate();
+  const { manifest, isLoading, error } = useQuestionBank();
+  const [selectedMode, setSelectedMode] = useState<DrillMode | null>(null);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-lg">Loading question bank...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-lg text-destructive">{error}</p>
+      </div>
+    );
+  }
+
+  const handleStartAdaptive = () => {
+    navigate('/drill', { state: { mode: 'adaptive' } });
+  };
+
+  const handleStartSection = (config: FullSectionConfig) => {
+    navigate('/drill', { state: { mode: 'full-section', config } });
+  };
+
+  const handleStartTypeDrill = (config: TypeDrillConfig) => {
+    navigate('/drill', { state: { mode: 'type-drill', config } });
+  };
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl font-bold tracking-tight text-foreground">
-            PRP — LR SmartDrill
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Adaptive LSAT Logical Reasoning practice that learns from your mistakes
-            and serves the next best question to boost accuracy and timing.
+    <div className="min-h-screen p-8">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold mb-4">PRP — LR SmartDrill</h1>
+        <p className="text-lg text-muted-foreground mb-2">
+          Adaptive LSAT Logical Reasoning Practice
+        </p>
+        {manifest && (
+          <p className="text-sm text-muted-foreground">
+            {manifest.totalQuestions} questions • {manifest.sections.length} sections loaded
           </p>
-          <div className="flex gap-4 justify-center pt-4">
-            <Button size="lg" onClick={() => navigate('/drill')}>
-              Start Smart Drill
+        )}
+        <Button
+          variant="link"
+          className="mt-2"
+          onClick={() => navigate('/dashboard')}
+        >
+          View Dashboard
+        </Button>
+      </div>
+
+      {!selectedMode && manifest && (
+        <ModeSelector onSelectMode={setSelectedMode} />
+      )}
+
+      {selectedMode === 'adaptive' && (
+        <div className="max-w-2xl mx-auto text-center space-y-6">
+          <h2 className="text-2xl font-bold">Starting Adaptive Drill</h2>
+          <p className="text-muted-foreground">
+            The AI will select questions based on your performance, explore under-seen types,
+            and resurface missed questions for mastery.
+          </p>
+          <div className="flex gap-3 justify-center">
+            <Button onClick={handleStartAdaptive} size="lg">
+              Begin
             </Button>
-            <Button size="lg" variant="outline" onClick={() => navigate('/dashboard')}>
-              View Dashboard
+            <Button variant="outline" onClick={() => setSelectedMode(null)}>
+              Back
             </Button>
           </div>
         </div>
+      )}
 
-        {/* Features */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-6xl mx-auto">
-          <Card className="p-6 space-y-4 border-2">
-            <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
-              <Brain className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="font-semibold text-lg">Adaptive Learning</h3>
-            <p className="text-sm text-muted-foreground">
-              Algorithm picks the next question based on your weakest question types and difficulty level.
-            </p>
-          </Card>
+      {selectedMode === 'full-section' && manifest && (
+        <SectionSelector
+          manifest={manifest}
+          onStartSection={handleStartSection}
+          onCancel={() => setSelectedMode(null)}
+        />
+      )}
 
-          <Card className="p-6 space-y-4 border-2">
-            <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
-              <Target className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="font-semibold text-lg">Focused Practice</h3>
-            <p className="text-sm text-muted-foreground">
-              One question at a time with instant feedback, detailed solutions, and reading tools.
-            </p>
-          </Card>
-
-          <Card className="p-6 space-y-4 border-2">
-            <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
-              <TrendingUp className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="font-semibold text-lg">Track Progress</h3>
-            <p className="text-sm text-muted-foreground">
-              Dashboard shows accuracy, timing, and grayscale heatmaps by question type and difficulty.
-            </p>
-          </Card>
-
-          <Card className="p-6 space-y-4 border-2">
-            <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center">
-              <Zap className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="font-semibold text-lg">Real LSAT Questions</h3>
-            <p className="text-sm text-muted-foreground">
-              Practice with official LSAT LR questions from PT101-PT106, organized and optimized.
-            </p>
-          </Card>
-        </div>
-      </div>
+      {selectedMode === 'type-drill' && manifest && (
+        <FilterPanel
+          manifest={manifest}
+          onStartDrill={handleStartTypeDrill}
+          onCancel={() => setSelectedMode(null)}
+        />
+      )}
     </div>
   );
-};
-
-export default Landing;
+}

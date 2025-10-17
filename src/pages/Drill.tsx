@@ -1,176 +1,333 @@
 import { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
+import { TimerControls } from '@/components/drill/TimerControls';
 import { questionBank, LRQuestion } from '@/lib/questionLoader';
-import { AdaptiveEngine, AttemptRecord, StudentAbility } from '@/lib/adaptiveEngine';
-import { useNavigate } from 'react-router-dom';
-import { ChevronLeft, Clock, Highlighter } from 'lucide-react';
-import { toast } from 'sonner';
+import { AdaptiveEngine } from '@/lib/adaptiveEngine';
+import { DrillMode, DrillSession, TimerConfig, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
+import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
 
-const Drill = () => {
+const adaptiveEngine = new AdaptiveEngine();
+
+export default function Drill() {
+  const location = useLocation();
   const navigate = useNavigate();
-  const [engine] = useState(() => new AdaptiveEngine());
-  const [currentQuestion, setCurrentQuestion] = useState<LRQuestion | null>(null);
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [showSolution, setShowSolution] = useState(false);
-  const [startTime, setStartTime] = useState<number>(Date.now());
-  const [attempts, setAttempts] = useState<AttemptRecord[]>([]);
-  const [ability, setAbility] = useState<StudentAbility>({ overall: 3, byQType: {} });
-  const [questionNumber, setQuestionNumber] = useState(1);
-
-  // Load next question
-  const loadNextQuestion = () => {
-    const pool = questionBank.getAllQuestions();
-    const next = engine.selectNextQuestion(pool, ability);
-    
-    if (next) {
-      setCurrentQuestion(next);
-      setSelectedAnswer(null);
-      setShowSolution(false);
-      setStartTime(Date.now());
-    } else {
-      toast.error('No questions available');
-    }
+  const state = location.state as { 
+    mode: DrillMode; 
+    config?: FullSectionConfig | TypeDrillConfig;
   };
 
+  const [session, setSession] = useState<DrillSession | null>(null);
+  const [currentQuestion, setCurrentQuestion] = useState<LRQuestion | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<string>('');
+  const [showSolution, setShowSolution] = useState(false);
+  const [questionStartTime, setQuestionStartTime] = useState(Date.now());
+  const [timerConfig, setTimerConfig] = useState<TimerConfig | null>(null);
+
+  // Initialize session
   useEffect(() => {
-    loadNextQuestion();
-  }, []);
+    if (!state?.mode) {
+      navigate('/');
+      return;
+    }
+
+    const mode = state.mode;
+    let questionQueue: string[] = [];
+
+    if (mode === 'adaptive') {
+      // Adaptive: start with random pool, engine will select
+      const allQuestions = questionBank.getAllQuestions();
+      questionQueue = allQuestions.map(q => q.qid);
+    } else if (mode === 'full-section' && state.config) {
+      const config = state.config as FullSectionConfig;
+      const sectionQuestions = questionBank.getSection(config.pt, config.section);
+      questionQueue = sectionQuestions.map(q => q.qid);
+      setTimerConfig(config.timer);
+    } else if (mode === 'type-drill' && state.config) {
+      const config = state.config as TypeDrillConfig;
+      const filtered = questionBank.getQuestionsByFilter({
+        qtypes: config.qtypes.length > 0 ? config.qtypes : undefined,
+        difficulties: config.difficulties.length > 0 ? config.difficulties : undefined,
+        pts: config.pts.length > 0 ? config.pts : undefined,
+      });
+      const shuffled = questionBank.shuffleQuestions(filtered);
+      questionQueue = shuffled.slice(0, config.count).map(q => q.qid);
+    }
+
+    setSession({
+      mode,
+      fullSectionConfig: mode === 'full-section' ? (state.config as FullSectionConfig) : undefined,
+      typeDrillConfig: mode === 'type-drill' ? (state.config as TypeDrillConfig) : undefined,
+      questionQueue,
+      currentIndex: 0,
+      attempts: new Map(),
+    });
+  }, [state, navigate]);
+
+  // Load current question
+  useEffect(() => {
+    if (!session) return;
+
+    if (session.mode === 'adaptive') {
+      // Adaptive mode: use engine to select
+      const allQuestions = questionBank.getAllQuestions();
+      const recentQids = new Set(
+        Array.from(session.attempts.keys()).slice(-10)
+      );
+      
+      // Calculate current ability from attempts
+      const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
+        const q = questionBank.getQuestion(qid)!;
+        return {
+          qid,
+          correct: attempt.correct,
+          time_ms: attempt.timeMs,
+          qtype: q.qtype,
+          difficulty: q.difficulty,
+          timestamp: new Date(attempt.timestamp),
+        };
+      });
+      
+      const ability = adaptiveEngine.calculateAbility(attemptRecords);
+      const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
+      
+      setCurrentQuestion(nextQuestion);
+    } else {
+      // Full Section or Type Drill: sequential
+      if (session.currentIndex < session.questionQueue.length) {
+        const qid = session.questionQueue[session.currentIndex];
+        const question = questionBank.getQuestion(qid);
+        setCurrentQuestion(question || null);
+      } else {
+        // Finished
+        setCurrentQuestion(null);
+      }
+    }
+
+    setSelectedAnswer('');
+    setShowSolution(false);
+    setQuestionStartTime(Date.now());
+  }, [session]);
 
   const handleSubmit = () => {
-    if (!currentQuestion || !selectedAnswer) return;
+    if (!currentQuestion || !selectedAnswer || !session) return;
 
-    const timeMs = Date.now() - startTime;
+    const timeMs = Date.now() - questionStartTime;
     const correct = selectedAnswer === currentQuestion.correctAnswer;
 
-    const attempt: AttemptRecord = {
+    // Record attempt
+    const newAttempts = new Map(session.attempts);
+    newAttempts.set(currentQuestion.qid, {
+      selectedAnswer,
+      correct,
+      timeMs,
+      timestamp: Date.now(),
+    });
+
+    adaptiveEngine.recordAttempt({
       qid: currentQuestion.qid,
       correct,
       time_ms: timeMs,
       qtype: currentQuestion.qtype,
       difficulty: currentQuestion.difficulty,
       timestamp: new Date(),
-    };
+    });
 
-    engine.recordAttempt(attempt);
-    const newAttempts = [...attempts, attempt];
-    setAttempts(newAttempts);
-    setAbility(engine.calculateAbility(newAttempts));
+    setSession({ ...session, attempts: newAttempts });
     setShowSolution(true);
-
-    if (correct) {
-      toast.success('Correct!');
-    } else {
-      toast.error('Incorrect');
-    }
   };
 
   const handleNext = () => {
-    setQuestionNumber(questionNumber + 1);
-    loadNextQuestion();
+    if (!session) return;
+
+    if (session.mode === 'adaptive') {
+      // Just trigger re-render to get next question
+      setSession({ ...session });
+    } else {
+      // Move to next in queue
+      setSession({
+        ...session,
+        currentIndex: session.currentIndex + 1,
+      });
+    }
   };
 
-  if (!currentQuestion) {
+  const handlePause = () => {
+    if (!timerConfig) return;
+    const elapsed = Date.now() - timerConfig.startedAt + timerConfig.elapsedMs;
+    setTimerConfig({
+      ...timerConfig,
+      isPaused: true,
+      elapsedMs: elapsed,
+    });
+  };
+
+  const handleResume = () => {
+    if (!timerConfig) return;
+    setTimerConfig({
+      ...timerConfig,
+      isPaused: false,
+      startedAt: Date.now(),
+    });
+  };
+
+  const handleTimeUpdate = (elapsedMs: number) => {
+    if (!timerConfig) return;
+    setTimerConfig({
+      ...timerConfig,
+      elapsedMs,
+    });
+  };
+
+  if (!session || !currentQuestion) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-muted-foreground">Loading questions...</p>
+        <Card className="p-8 max-w-2xl">
+          <h2 className="text-2xl font-bold mb-4">Session Complete</h2>
+          <p className="text-muted-foreground mb-6">
+            {session ? (
+              <>
+                You answered {session.attempts.size} questions.
+                <br />
+                Correct: {Array.from(session.attempts.values()).filter(a => a.correct).length} / {session.attempts.size}
+              </>
+            ) : (
+              'Loading...'
+            )}
+          </p>
+          <div className="flex gap-3">
+            <Button onClick={() => navigate('/')}>
+              Return Home
+            </Button>
+            <Button variant="outline" onClick={() => navigate('/dashboard')}>
+              View Dashboard
+            </Button>
+          </div>
+        </Card>
       </div>
     );
   }
 
-  const choices = ['A', 'B', 'C', 'D', 'E'] as const;
+  const progress = session.mode !== 'adaptive'
+    ? (session.currentIndex / session.questionQueue.length) * 100
+    : undefined;
+
+  const isAnswered = session.attempts.has(currentQuestion.qid);
+  const previousAttempt = session.attempts.get(currentQuestion.qid);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen p-6">
       {/* Header */}
-      <div className="border-b bg-card">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => navigate('/')}
-              className="gap-2"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              Back
-            </Button>
-            <div className="flex items-center gap-6">
+      <div className="max-w-4xl mx-auto mb-6">
+        <div className="flex items-center justify-between mb-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => navigate('/')}
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Exit
+          </Button>
+
+          <div className="flex items-center gap-6">
+            {session.mode !== 'adaptive' && (
               <div className="text-sm text-muted-foreground">
-                Question {questionNumber}
+                Question {session.currentIndex + 1} / {session.questionQueue.length}
               </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Clock className="w-4 h-4" />
-                <span>{currentQuestion.qtype}</span>
-              </div>
-              <div className="text-sm px-3 py-1 rounded-full bg-secondary">
-                Level {currentQuestion.difficulty}
-              </div>
-            </div>
+            )}
+            {timerConfig && (
+              <TimerControls
+                config={timerConfig}
+                onPause={handlePause}
+                onResume={handleResume}
+                onTimeUpdate={handleTimeUpdate}
+              />
+            )}
           </div>
         </div>
+
+        {progress !== undefined && (
+          <Progress value={progress} className="h-2" />
+        )}
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
-        <Card className="p-8 space-y-8">
+      {/* Question */}
+      <Card className="max-w-4xl mx-auto p-8">
+        <div className="space-y-6">
+          {/* Question metadata */}
+          <div className="flex items-center gap-3 flex-wrap">
+            <Badge variant="outline">
+              PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
+            </Badge>
+            <Badge variant="secondary">{currentQuestion.qtype}</Badge>
+            <Badge>Difficulty {currentQuestion.difficulty}</Badge>
+            {isAnswered && (
+              <Badge variant={previousAttempt?.correct ? 'default' : 'destructive'}>
+                {previousAttempt?.correct ? (
+                  <>
+                    <CheckCircle className="w-3 h-3 mr-1" /> Correct
+                  </>
+                ) : (
+                  <>
+                    <XCircle className="w-3 h-3 mr-1" /> Incorrect
+                  </>
+                )}
+              </Badge>
+            )}
+          </div>
+
           {/* Stimulus */}
           {currentQuestion.stimulus && (
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <Highlighter className="w-4 h-4 text-muted-foreground" />
-                <h3 className="font-medium text-sm text-muted-foreground">Stimulus</h3>
-              </div>
-              <p className="text-base leading-relaxed whitespace-pre-wrap">
-                {currentQuestion.stimulus}
-              </p>
+            <div className="p-4 bg-muted/50 rounded-lg">
+              <p className="whitespace-pre-wrap">{currentQuestion.stimulus}</p>
             </div>
           )}
 
-          {/* Question Stem */}
-          <div className="space-y-3">
-            <h3 className="font-medium text-sm text-muted-foreground">Question</h3>
-            <p className="text-base font-medium leading-relaxed">
-              {currentQuestion.questionStem}
-            </p>
+          {/* Question stem */}
+          <div className="text-lg font-semibold">
+            {currentQuestion.questionStem}
           </div>
 
-          {/* Answer Choices */}
-          <div className="space-y-3">
-            {choices.map((choice) => {
-              const isSelected = selectedAnswer === choice;
-              const isCorrect = choice === currentQuestion.correctAnswer;
-              const showCorrect = showSolution && isCorrect;
-              const showIncorrect = showSolution && isSelected && !isCorrect;
-
-              return (
-                <button
-                  key={choice}
-                  onClick={() => !showSolution && setSelectedAnswer(choice)}
-                  disabled={showSolution}
-                  className={`
-                    w-full text-left p-4 rounded-lg border-2 transition-all
-                    ${isSelected && !showSolution ? 'border-primary bg-secondary' : 'border-border'}
-                    ${showCorrect ? 'border-green-500 bg-green-50' : ''}
-                    ${showIncorrect ? 'border-red-500 bg-red-50' : ''}
-                    ${!showSolution ? 'hover:border-muted-foreground cursor-pointer' : 'cursor-default'}
-                  `}
+          {/* Answer choices */}
+          <RadioGroup
+            value={selectedAnswer}
+            onValueChange={setSelectedAnswer}
+            disabled={showSolution}
+          >
+            {Object.entries(currentQuestion.answerChoices).map(([key, text]) => (
+              <div
+                key={key}
+                className={`flex items-start space-x-3 p-4 rounded-lg border transition-colors ${
+                  showSolution && key === currentQuestion.correctAnswer
+                    ? 'border-green-500 bg-green-50'
+                    : showSolution && key === selectedAnswer && key !== currentQuestion.correctAnswer
+                    ? 'border-red-500 bg-red-50'
+                    : 'border-border hover:bg-muted/50'
+                }`}
+              >
+                <RadioGroupItem value={key} id={`answer-${key}`} />
+                <Label
+                  htmlFor={`answer-${key}`}
+                  className="flex-1 cursor-pointer text-base leading-relaxed"
                 >
-                  <div className="flex gap-4">
-                    <span className="font-semibold text-primary">{choice}.</span>
-                    <span className="flex-1">{currentQuestion.answerChoices[choice]}</span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+                  <span className="font-semibold mr-2">({key})</span>
+                  {text}
+                </Label>
+              </div>
+            ))}
+          </RadioGroup>
 
           {/* Actions */}
-          <div className="flex justify-end gap-3 pt-4">
+          <div className="flex gap-3 pt-4">
             {!showSolution ? (
               <Button
                 onClick={handleSubmit}
-                disabled={!selectedAnswer}
+                disabled={!selectedAnswer || timerConfig?.isPaused}
                 size="lg"
               >
                 Submit Answer
@@ -184,23 +341,23 @@ const Drill = () => {
 
           {/* Solution */}
           {showSolution && (
-            <div className="pt-6 border-t space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-semibold">Solution</h3>
-                <span className="text-sm text-muted-foreground">
-                  Correct Answer: {currentQuestion.correctAnswer}
+            <div className="mt-6 p-4 border-t">
+              <div className="flex items-center gap-2 mb-2">
+                {selectedAnswer === currentQuestion.correctAnswer ? (
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                ) : (
+                  <XCircle className="w-5 h-5 text-red-600" />
+                )}
+                <span className="font-semibold">
+                  {selectedAnswer === currentQuestion.correctAnswer
+                    ? 'Correct!'
+                    : `Incorrect. The correct answer is (${currentQuestion.correctAnswer}).`}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Time: {Math.round((Date.now() - startTime) / 1000)}s • 
-                Current Ability: {ability.overall.toFixed(1)}
-              </p>
             </div>
           )}
-        </Card>
-      </div>
+        </div>
+      </Card>
     </div>
   );
-};
-
-export default Drill;
+}
