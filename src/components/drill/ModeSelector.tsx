@@ -17,7 +17,7 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
             <h3 className="text-xl font-semibold">Drill</h3>
           </div>
           <p className="text-muted-foreground">
-            One-at-a-time practice that adapts and resurfaces misses.
+            Let the LSAT coach choose a question for you
           </p>
         </div>
         <Button onClick={() => onSelectMode('adaptive')} size="lg" className="w-full mt-6">
@@ -31,9 +31,6 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
             <Clock className="w-8 h-8 text-primary" />
             <h3 className="text-xl font-semibold">Full section</h3>
           </div>
-          <p className="text-muted-foreground">
-            Run a full LR section with timing options.
-          </p>
         </div>
         <Button onClick={() => onSelectMode('full-section')} size="lg" className="w-full mt-6">
           Start section
@@ -44,7 +41,7 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-4">
             <Filter className="w-8 h-8 text-primary" />
-            <h3 className="text-xl font-semibold">Type drill</h3>
+            <h3 className="text-xl font-semibold">Build a set</h3>
           </div>
           <p className="text-muted-foreground">
             Build a set by type, difficulty, or PT/section.
