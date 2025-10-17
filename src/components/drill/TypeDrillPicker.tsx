@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { Switch } from '@/components/ui/switch';
 import { X, ChevronRight, ChevronLeft } from 'lucide-react';
 import type { TypeDrillConfig } from '@/types/drill';
 import type { QuestionManifest } from '@/lib/questionLoader';
@@ -24,7 +23,6 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
   const [selectedDifficulties, setSelectedDifficulties] = useState<number[]>([]);
   const [selectedPTs, setSelectedPTs] = useState<number[]>([]);
   const [setSize, setSetSize] = useState(10);
-  const [balancedMix, setBalancedMix] = useState(true);
 
   const step2Ref = useRef<HTMLDivElement>(null);
   const step3Ref = useRef<HTMLDivElement>(null);
@@ -115,7 +113,6 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
       difficulties: selectedDifficulties,
       pts: selectedPTs,
       count: setSize,
-      balanced: balancedMix,
     });
   };
 
@@ -315,38 +312,20 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
             })}
           </div>
 
-          {/* Set size and mixing options */}
-          <div className="space-y-4 pt-4 border-t">
-            <div>
-              <Label htmlFor="set-size" className="text-sm font-medium mb-2 block">
-                Set size
-              </Label>
-              <Input
-                id="set-size"
-                type="number"
-                min={1}
-                max={100}
-                value={setSize}
-                onChange={(e) => setSetSize(Math.max(1, Number(e.target.value)))}
-                className="max-w-xs"
-              />
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="space-y-0.5">
-                <Label htmlFor="balanced-mix" className="text-sm font-medium">
-                  Balance evenly across my selections
-                </Label>
-                <p className="text-xs text-muted-foreground">
-                  Distribute questions evenly across types and levels
-                </p>
-              </div>
-              <Switch
-                id="balanced-mix"
-                checked={balancedMix}
-                onCheckedChange={setBalancedMix}
-              />
-            </div>
+          {/* Set size */}
+          <div className="pt-4 border-t">
+            <Label htmlFor="set-size" className="text-sm font-medium mb-2 block">
+              Set size
+            </Label>
+            <Input
+              id="set-size"
+              type="number"
+              min={1}
+              max={100}
+              value={setSize}
+              onChange={(e) => setSetSize(Math.max(1, Number(e.target.value)))}
+              className="max-w-xs"
+            />
           </div>
         </Card>
       )}
