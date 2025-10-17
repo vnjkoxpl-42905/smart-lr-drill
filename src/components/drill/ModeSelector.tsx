@@ -31,6 +31,9 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
             <Clock className="w-8 h-8 text-primary" />
             <h3 className="text-xl font-semibold">Full section</h3>
           </div>
+          <p className="text-muted-foreground">
+            Section mode with standard or custom time.
+          </p>
         </div>
         <Button onClick={() => onSelectMode('full-section')} size="lg" className="w-full mt-6">
           Start section
