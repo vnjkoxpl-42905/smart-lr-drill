@@ -31,11 +31,14 @@ export interface DrillSession {
   typeDrillConfig?: TypeDrillConfig;
   questionQueue: string[]; // qids
   currentIndex: number;
+  redoQueue: string[]; // qids marked for redo
   attempts: Map<string, {
     selectedAnswer: string;
     correct: boolean;
     timeMs: number;
     timestamp: number;
+    confidence?: number; // 1-5
+    reviewDone?: boolean;
   }>;
 }
 

@@ -7,6 +7,7 @@ import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
+import { ReviewModal } from '@/components/drill/ReviewModal';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
@@ -26,9 +27,12 @@ export default function Drill() {
   const [session, setSession] = React.useState<DrillSession | null>(null);
   const [currentQuestion, setCurrentQuestion] = React.useState<LRQuestion | null>(null);
   const [selectedAnswer, setSelectedAnswer] = React.useState<string>('');
+  const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
+  const [showReviewModal, setShowReviewModal] = React.useState(false);
   const [questionStartTime, setQuestionStartTime] = React.useState(Date.now());
   const [timerConfig, setTimerConfig] = React.useState<TimerConfig | null>(null);
+  const [answerLocked, setAnswerLocked] = React.useState(false);
 
   // Initialize session
   React.useEffect(() => {
@@ -66,6 +70,7 @@ export default function Drill() {
       typeDrillConfig: mode === 'type-drill' ? (state.config as TypeDrillConfig) : undefined,
       questionQueue,
       currentIndex: 0,
+      redoQueue: [],
       attempts: new Map(),
     });
   }, [state, navigate]);
@@ -111,23 +116,33 @@ export default function Drill() {
     }
 
     setSelectedAnswer('');
+    setConfidence(null);
     setShowSolution(false);
+    setShowReviewModal(false);
+    setAnswerLocked(false);
     setQuestionStartTime(Date.now());
   }, [session]);
 
-  const handleSubmit = () => {
-    if (!currentQuestion || !selectedAnswer || !session) return;
+  const handleAnswerSelect = (answer: string) => {
+    if (answerLocked) return;
+    setSelectedAnswer(answer);
+    setAnswerLocked(true);
+  };
+
+  const handleReviewSave = (review: { whyWrong: string; whyEliminated: string; plan: string }) => {
+    if (!currentQuestion || !selectedAnswer || !session || confidence === null) return;
 
     const timeMs = Date.now() - questionStartTime;
     const correct = selectedAnswer === currentQuestion.correctAnswer;
 
-    // Record attempt
     const newAttempts = new Map(session.attempts);
     newAttempts.set(currentQuestion.qid, {
       selectedAnswer,
       correct,
       timeMs,
       timestamp: Date.now(),
+      confidence,
+      reviewDone: true,
     });
 
     adaptiveEngine.recordAttempt({
@@ -140,7 +155,51 @@ export default function Drill() {
     });
 
     setSession({ ...session, attempts: newAttempts });
+    setShowReviewModal(false);
     setShowSolution(true);
+  };
+
+  const handleSubmit = () => {
+    if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
+
+    const correct = selectedAnswer === currentQuestion.correctAnswer;
+
+    if (!correct) {
+      setShowReviewModal(true);
+    } else {
+      const timeMs = Date.now() - questionStartTime;
+      const newAttempts = new Map(session.attempts);
+      newAttempts.set(currentQuestion.qid, {
+        selectedAnswer,
+        correct,
+        timeMs,
+        timestamp: Date.now(),
+        confidence,
+        reviewDone: false,
+      });
+
+      adaptiveEngine.recordAttempt({
+        qid: currentQuestion.qid,
+        correct,
+        time_ms: timeMs,
+        qtype: currentQuestion.qtype,
+        difficulty: currentQuestion.difficulty,
+        timestamp: new Date(),
+      });
+
+      setSession({ ...session, attempts: newAttempts });
+      setShowSolution(true);
+    }
+  };
+
+  const handleAddToRedo = () => {
+    if (!currentQuestion || !session) return;
+    if (session.redoQueue.includes(currentQuestion.qid)) return;
+    
+    setSession({
+      ...session,
+      redoQueue: [...session.redoQueue, currentQuestion.qid],
+    });
   };
 
   const handleNext = () => {
@@ -297,45 +356,87 @@ export default function Drill() {
           {/* Answer choices */}
           <RadioGroup
             value={selectedAnswer}
-            onValueChange={setSelectedAnswer}
-            disabled={showSolution}
+            onValueChange={handleAnswerSelect}
+            disabled={answerLocked}
           >
-            {Object.entries(currentQuestion.answerChoices).map(([key, text]) => (
-              <div
-                key={key}
-                className={`flex items-start space-x-3 p-4 rounded-lg border transition-colors ${
-                  showSolution && key === currentQuestion.correctAnswer
-                    ? 'border-green-500 bg-green-50'
-                    : showSolution && key === selectedAnswer && key !== currentQuestion.correctAnswer
-                    ? 'border-red-500 bg-red-50'
-                    : 'border-border hover:bg-muted/50'
-                }`}
-              >
-                <RadioGroupItem value={key} id={`answer-${key}`} />
-                <Label
-                  htmlFor={`answer-${key}`}
-                  className="flex-1 cursor-pointer text-base leading-relaxed"
+            {Object.entries(currentQuestion.answerChoices).map(([key, text]) => {
+              const isCorrect = key === currentQuestion.correctAnswer;
+              const isSelected = key === selectedAnswer;
+              const showFeedback = answerLocked && isSelected;
+
+              return (
+                <div
+                  key={key}
+                  className={`flex items-start space-x-3 p-4 rounded-lg border transition-colors ${
+                    showFeedback && isCorrect
+                      ? 'border-[#16A34A] bg-[#16A34A]/10'
+                      : showFeedback && !isCorrect
+                      ? 'border-[#DC2626] bg-[#DC2626]/10'
+                      : 'border-border hover:bg-muted/50'
+                  }`}
                 >
-                  <span className="font-semibold mr-2">({key})</span>
-                  {text}
-                </Label>
-              </div>
-            ))}
+                  <RadioGroupItem value={key} id={`answer-${key}`} />
+                  <Label
+                    htmlFor={`answer-${key}`}
+                    className="flex-1 cursor-pointer text-base leading-relaxed"
+                  >
+                    <span className="font-semibold mr-2">({key})</span>
+                    {text}
+                    {showFeedback && (
+                      <Badge
+                        variant={isCorrect ? 'default' : 'destructive'}
+                        className="ml-2"
+                      >
+                        {isCorrect ? 'Correct' : 'Wrong'}
+                      </Badge>
+                    )}
+                  </Label>
+                </div>
+              );
+            })}
           </RadioGroup>
+
+          {/* Confidence selector */}
+          {answerLocked && !showSolution && (
+            <div className="space-y-3 pt-4">
+              <Label>Confidence (1–5)</Label>
+              <div className="flex gap-2">
+                {[1, 2, 3, 4, 5].map((level) => (
+                  <Button
+                    key={level}
+                    variant={confidence === level ? 'default' : 'outline'}
+                    onClick={() => setConfidence(level)}
+                    className="flex-1"
+                  >
+                    {level}
+                  </Button>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Actions */}
           <div className="flex gap-3 pt-4">
             {!showSolution ? (
-              <Button
-                onClick={handleSubmit}
-                disabled={!selectedAnswer || timerConfig?.isPaused}
-                size="lg"
-              >
-                Submit Answer
-              </Button>
+              <>
+                <Button
+                  onClick={handleSubmit}
+                  disabled={!selectedAnswer || confidence === null || timerConfig?.isPaused}
+                  size="lg"
+                >
+                  Next question
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={handleAddToRedo}
+                  size="lg"
+                >
+                  Add to redo queue
+                </Button>
+              </>
             ) : (
               <Button onClick={handleNext} size="lg">
-                Next Question
+                Next question
               </Button>
             )}
           </div>
@@ -345,20 +446,25 @@ export default function Drill() {
             <div className="mt-6 p-4 border-t">
               <div className="flex items-center gap-2 mb-2">
                 {selectedAnswer === currentQuestion.correctAnswer ? (
-                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <CheckCircle className="w-5 h-5 text-[#16A34A]" />
                 ) : (
-                  <XCircle className="w-5 h-5 text-red-600" />
+                  <XCircle className="w-5 h-5 text-[#DC2626]" />
                 )}
                 <span className="font-semibold">
                   {selectedAnswer === currentQuestion.correctAnswer
                     ? 'Correct!'
-                    : `Incorrect. The correct answer is (${currentQuestion.correctAnswer}).`}
+                    : `The correct answer is (${currentQuestion.correctAnswer}).`}
                 </span>
               </div>
             </div>
           )}
         </div>
       </Card>
+
+      <ReviewModal
+        open={showReviewModal}
+        onSave={handleReviewSave}
+      />
     </div>
   );
 }

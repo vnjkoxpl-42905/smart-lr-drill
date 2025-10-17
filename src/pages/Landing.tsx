@@ -43,22 +43,10 @@ export default function Landing() {
   return (
     <div className="min-h-screen p-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">PRP — LR SmartDrill</h1>
-        <p className="text-lg text-muted-foreground mb-2">
-          Adaptive LSAT Logical Reasoning Practice
+        <h1 className="text-4xl font-bold mb-4">LR smart drill</h1>
+        <p className="text-lg text-muted-foreground">
+          Logical Reasoning practice
         </p>
-        {manifest && (
-          <p className="text-sm text-muted-foreground">
-            {manifest.totalQuestions} questions • {manifest.sections.length} sections loaded
-          </p>
-        )}
-        <Button
-          variant="link"
-          className="mt-2"
-          onClick={() => navigate('/dashboard')}
-        >
-          View Dashboard
-        </Button>
       </div>
 
       {!selectedMode && manifest && (
@@ -67,14 +55,13 @@ export default function Landing() {
 
       {selectedMode === 'adaptive' && (
         <div className="max-w-2xl mx-auto text-center space-y-6">
-          <h2 className="text-2xl font-bold">Starting Adaptive Drill</h2>
+          <h2 className="text-2xl font-bold">Start drill</h2>
           <p className="text-muted-foreground">
-            The AI will select questions based on your performance, explore under-seen types,
-            and resurface missed questions for mastery.
+            The app selects questions based on your performance and resurfaces missed ones.
           </p>
           <div className="flex gap-3 justify-center">
             <Button onClick={handleStartAdaptive} size="lg">
-              Begin
+              Start
             </Button>
             <Button variant="outline" onClick={() => setSelectedMode(null)}>
               Back
