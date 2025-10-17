@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
-import { TypeDrillConfig } from '@/types/drill';
-import { QuestionManifest } from '@/lib/questionLoader';
+import type { TypeDrillConfig } from '@/types/drill';
+import type { QuestionManifest } from '@/lib/questionLoader';
 
 interface FilterPanelProps {
   manifest: QuestionManifest;

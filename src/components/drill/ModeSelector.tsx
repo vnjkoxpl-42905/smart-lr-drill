@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Brain, Clock, Target } from 'lucide-react';
-import { DrillMode } from '@/types/drill';
+import type { DrillMode } from '@/types/drill';
 
 interface ModeSelectorProps {
   onSelectMode: (mode: DrillMode) => void;

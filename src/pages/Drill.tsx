@@ -7,10 +7,11 @@ import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
-import { questionBank, LRQuestion } from '@/lib/questionLoader';
+import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
-import { DrillMode, DrillSession, TimerConfig, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
+import type { LRQuestion } from '@/lib/questionLoader';
+import type { DrillMode, DrillSession, TimerConfig, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
 
 const adaptiveEngine = new AdaptiveEngine();
 

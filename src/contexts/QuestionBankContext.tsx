@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { questionBank, QuestionManifest } from '@/lib/questionLoader';
 
 interface QuestionBankContextType {
@@ -7,13 +7,9 @@ interface QuestionBankContextType {
   error: string | null;
 }
 
-const QuestionBankContext = createContext<QuestionBankContextType>({
-  manifest: null,
-  isLoading: true,
-  error: null,
-});
+const QuestionBankContext = createContext<QuestionBankContextType | undefined>(undefined);
 
-export function QuestionBankProvider({ children }: { children: React.ReactNode }) {
+export function QuestionBankProvider({ children }: { children: ReactNode }) {
   const [manifest, setManifest] = useState<QuestionManifest | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -42,5 +38,9 @@ export function QuestionBankProvider({ children }: { children: React.ReactNode }
 }
 
 export function useQuestionBank() {
-  return useContext(QuestionBankContext);
+  const context = useContext(QuestionBankContext);
+  if (context === undefined) {
+    throw new Error('useQuestionBank must be used within QuestionBankProvider');
+  }
+  return context;
 }

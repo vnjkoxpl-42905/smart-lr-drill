@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Pause, Play, Clock } from 'lucide-react';
-import { TimerConfig } from '@/types/drill';
+import type { TimerConfig } from '@/types/drill';
 
 interface TimerControlsProps {
   config: TimerConfig;

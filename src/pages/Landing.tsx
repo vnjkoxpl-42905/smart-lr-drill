@@ -5,7 +5,7 @@ import { ModeSelector } from '@/components/drill/ModeSelector';
 import { SectionSelector } from '@/components/drill/SectionSelector';
 import { FilterPanel } from '@/components/drill/FilterPanel';
 import { Button } from '@/components/ui/button';
-import { DrillMode, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
+import type { DrillMode, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
 
 export default function Landing() {
   const navigate = useNavigate();

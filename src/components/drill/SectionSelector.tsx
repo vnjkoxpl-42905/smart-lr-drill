@@ -5,8 +5,8 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { FullSectionConfig, TimerMode } from '@/types/drill';
-import { QuestionManifest } from '@/lib/questionLoader';
+import type { FullSectionConfig, TimerMode } from '@/types/drill';
+import type { QuestionManifest } from '@/lib/questionLoader';
 
 interface SectionSelectorProps {
   manifest: QuestionManifest;
