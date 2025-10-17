@@ -64,8 +64,53 @@ function DrillContent() {
         difficulties: config.difficulties.length > 0 ? config.difficulties : undefined,
         pts: config.pts.length > 0 ? config.pts : undefined,
       });
-      const shuffled = questionBank.shuffleQuestions(filtered);
-      questionQueue = shuffled.slice(0, config.count).map(q => q.qid);
+      
+      let selected: LRQuestion[];
+      if (config.balanced) {
+        // Balanced mix: group by type × level, round-robin select
+        const groups = new Map<string, LRQuestion[]>();
+        
+        // Group questions by type-level combo
+        for (const q of filtered) {
+          const key = `${q.qtype}-${q.difficulty}`;
+          if (!groups.has(key)) groups.set(key, []);
+          groups.get(key)!.push(q);
+        }
+        
+        // Shuffle each group
+        for (const [, questions] of groups) {
+          for (let i = questions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [questions[i], questions[j]] = [questions[j], questions[i]];
+          }
+        }
+        
+        // Round-robin select
+        selected = [];
+        const groupArrays = Array.from(groups.values());
+        let roundIndex = 0;
+        
+        while (selected.length < config.count && groupArrays.some(g => g.length > 0)) {
+          for (const group of groupArrays) {
+            if (group.length > 0 && selected.length < config.count) {
+              selected.push(group.shift()!);
+            }
+          }
+          roundIndex++;
+        }
+        
+        // Final shuffle for variety
+        for (let i = selected.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [selected[i], selected[j]] = [selected[j], selected[i]];
+        }
+      } else {
+        // Random selection
+        const shuffled = questionBank.shuffleQuestions(filtered);
+        selected = shuffled.slice(0, config.count);
+      }
+      
+      questionQueue = selected.map(q => q.qid);
     }
 
     setSession({

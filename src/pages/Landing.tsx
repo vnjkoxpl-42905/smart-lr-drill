@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useQuestionBank } from '@/contexts/QuestionBankContext';
 import { ModeSelector } from '@/components/drill/ModeSelector';
 import { SectionSelector } from '@/components/drill/SectionSelector';
-import { FilterPanel } from '@/components/drill/FilterPanel';
+import { TypeDrillPicker } from '@/components/drill/TypeDrillPicker';
 import { Button } from '@/components/ui/button';
 import type { DrillMode, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
 
@@ -81,7 +81,7 @@ export default function Landing() {
       )}
 
       {selectedMode === 'type-drill' && manifest && (
-        <FilterPanel
+        <TypeDrillPicker
           manifest={manifest}
           onStartDrill={handleStartTypeDrill}
           onCancel={() => setSelectedMode(null)}

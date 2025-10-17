@@ -23,6 +23,7 @@ export interface TypeDrillConfig {
   difficulties: number[];
   pts: number[];
   count: number; // number of questions to drill
+  balanced?: boolean; // balance evenly across selections
 }
 
 export interface DrillSession {
