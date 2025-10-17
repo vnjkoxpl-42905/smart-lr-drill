@@ -14,17 +14,11 @@ export function ReviewModal({ open, onSave }: ReviewModalProps) {
   const [whyEliminated, setWhyEliminated] = React.useState('');
   const [plan, setPlan] = React.useState('');
 
-  const MIN_CHARS = 20; // Lowered from 60 to be more user-friendly
-  const totalLength = whyWrong.length + whyEliminated.length + plan.length;
-  const isValid = totalLength >= MIN_CHARS;
-
   const handleSave = () => {
-    if (isValid) {
-      onSave({ whyWrong, whyEliminated, plan });
-      setWhyWrong('');
-      setWhyEliminated('');
-      setPlan('');
-    }
+    onSave({ whyWrong, whyEliminated, plan });
+    setWhyWrong('');
+    setWhyEliminated('');
+    setPlan('');
   };
 
   return (
@@ -64,12 +58,9 @@ export function ReviewModal({ open, onSave }: ReviewModalProps) {
               rows={3}
             />
           </div>
-          <p className={`text-sm ${isValid ? 'text-muted-foreground' : 'text-destructive font-medium'}`}>
-            {totalLength} / {MIN_CHARS} characters minimum
-          </p>
         </div>
         <DialogFooter>
-          <Button onClick={handleSave} disabled={!isValid} className={!isValid ? 'opacity-50 cursor-not-allowed' : ''}>
+          <Button onClick={handleSave}>
             Save
           </Button>
         </DialogFooter>
