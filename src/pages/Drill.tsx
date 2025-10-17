@@ -71,7 +71,6 @@ export default function Drill() {
       typeDrillConfig: mode === 'type-drill' ? (state.config as TypeDrillConfig) : undefined,
       questionQueue,
       currentIndex: 0,
-      redoQueue: [],
       attempts: new Map(),
     });
   }, [state, navigate]);
@@ -137,7 +136,7 @@ export default function Drill() {
     }
   }, [confidence, answerLocked, showSolution, showReviewModal]);
 
-  const handleReviewSave = (review: { whyWrong: string; whyEliminated: string; plan: string }) => {
+  const handleReviewSave = async (review: { whyWrong: string; whyEliminated: string; plan: string }) => {
     if (!currentQuestion || !selectedAnswer || !session || confidence === null) return;
 
     const timeMs = Date.now() - questionStartTime;
@@ -162,12 +161,37 @@ export default function Drill() {
       timestamp: new Date(),
     });
 
+    // Auto-log to WAJ
+    const { logWrongAnswer } = await import('@/lib/wajService');
+    try {
+      await logWrongAnswer({
+        class_id: 'demo-class', // TODO: get from auth context
+        qid: currentQuestion.qid,
+        pt: currentQuestion.pt,
+        section: currentQuestion.section,
+        qnum: currentQuestion.qnum,
+        qtype: currentQuestion.qtype,
+        level: currentQuestion.difficulty,
+        chosen_answer: selectedAnswer,
+        correct_answer: currentQuestion.correctAnswer,
+        time_ms: timeMs,
+        confidence_1_5: confidence,
+        review: {
+          q1: review.whyWrong,
+          q2: review.whyEliminated,
+          q3: review.plan,
+        },
+      });
+    } catch (error) {
+      console.error('Failed to log to WAJ:', error);
+    }
+
     setSession({ ...session, attempts: newAttempts });
     setShowReviewModal(false);
     setShowSolution(true);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
 
     const correct = selectedAnswer === currentQuestion.correctAnswer;
@@ -195,20 +219,31 @@ export default function Drill() {
         timestamp: new Date(),
       });
 
+      // Log correct answer to WAJ if there's an existing wrong entry
+      const { logCorrectAnswer } = await import('@/lib/wajService');
+      try {
+        await logCorrectAnswer({
+          class_id: 'demo-class', // TODO: get from auth context
+          qid: currentQuestion.qid,
+          pt: currentQuestion.pt,
+          section: currentQuestion.section,
+          qnum: currentQuestion.qnum,
+          qtype: currentQuestion.qtype,
+          level: currentQuestion.difficulty,
+          chosen_answer: selectedAnswer,
+          correct_answer: currentQuestion.correctAnswer,
+          time_ms: timeMs,
+          confidence_1_5: confidence,
+        });
+      } catch (error) {
+        console.error('Failed to log to WAJ:', error);
+      }
+
       setSession({ ...session, attempts: newAttempts });
       setShowSolution(true);
     }
   };
 
-  const handleAddToRedo = () => {
-    if (!currentQuestion || !session) return;
-    if (session.redoQueue.includes(currentQuestion.qid)) return;
-    
-    setSession({
-      ...session,
-      redoQueue: [...session.redoQueue, currentQuestion.qid],
-    });
-  };
 
   const handleNext = () => {
     if (!session) return;
@@ -440,14 +475,6 @@ export default function Drill() {
               size="lg"
             >
               Next question
-            </Button>
-            <Button
-              variant="outline"
-              onClick={handleAddToRedo}
-              size="lg"
-              disabled={!answerLocked}
-            >
-              Add to redo queue
             </Button>
           </div>
 

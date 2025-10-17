@@ -43,6 +43,11 @@ export default function Landing() {
   return (
     <div className="min-h-screen p-8">
       <div className="text-center mb-12">
+        <div className="flex justify-end mb-4">
+          <Button variant="outline" onClick={() => navigate('/waj')}>
+            Wrong Answer Journal
+          </Button>
+        </div>
         <h1 className="text-4xl font-bold mb-4">LR smart drill</h1>
         <p className="text-lg text-muted-foreground">
           Logical Reasoning practice

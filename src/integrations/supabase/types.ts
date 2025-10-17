@@ -239,6 +239,57 @@ export type Database = {
         }
         Relationships: []
       }
+      wrong_answer_journal: {
+        Row: {
+          class_id: string
+          created_at: string | null
+          first_wrong_at_iso: string
+          history_json: Json
+          id: string
+          last_status: string
+          level: number
+          pt: number
+          qid: string
+          qnum: number
+          qtype: string
+          revisit_count: number
+          section: number
+          updated_at: string | null
+        }
+        Insert: {
+          class_id: string
+          created_at?: string | null
+          first_wrong_at_iso?: string
+          history_json?: Json
+          id?: string
+          last_status: string
+          level: number
+          pt: number
+          qid: string
+          qnum: number
+          qtype: string
+          revisit_count?: number
+          section: number
+          updated_at?: string | null
+        }
+        Update: {
+          class_id?: string
+          created_at?: string | null
+          first_wrong_at_iso?: string
+          history_json?: Json
+          id?: string
+          last_status?: string
+          level?: number
+          pt?: number
+          qid?: string
+          qnum?: number
+          qtype?: string
+          revisit_count?: number
+          section?: number
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

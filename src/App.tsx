@@ -8,6 +8,7 @@ import { QuestionBankProvider } from "./contexts/QuestionBankContext";
 import Landing from "./pages/Landing";
 import Drill from "./pages/Drill";
 import Dashboard from "./pages/Dashboard";
+import WrongAnswerJournal from "./pages/WrongAnswerJournal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Landing />} />
             <Route path="/drill" element={<Drill />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/waj" element={<WrongAnswerJournal />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
