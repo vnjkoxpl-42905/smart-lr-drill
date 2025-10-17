@@ -7,7 +7,7 @@ import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
-import { ReviewModal } from '@/components/drill/ReviewModal';
+import { TutorChatModal } from '@/components/drill/TutorChatModal';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
@@ -31,7 +31,7 @@ function DrillContent() {
   const [selectedAnswer, setSelectedAnswer] = React.useState<string>('');
   const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
-  const [showReviewModal, setShowReviewModal] = React.useState(false);
+  const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
   const [questionStartTime, setQuestionStartTime] = React.useState(performance.now());
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
@@ -157,7 +157,7 @@ function DrillContent() {
     setSelectedAnswer('');
     setConfidence(null);
     setShowSolution(false);
-    setShowReviewModal(false);
+    setTutorChatOpen(false);
     setAnswerLocked(false);
     setQuestionStartTime(performance.now());
   }, [session]);
@@ -170,12 +170,12 @@ function DrillContent() {
 
   // Auto-submit when confidence is selected
   React.useEffect(() => {
-    if (answerLocked && confidence !== null && !showSolution && !showReviewModal) {
+    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
       handleSubmit();
     }
-  }, [confidence, answerLocked, showSolution, showReviewModal]);
+  }, [confidence, answerLocked, showSolution, tutorChatOpen]);
 
-  const handleReviewSave = async (review: { whyWrong: string; whyEliminated: string; plan: string }) => {
+  const handleReviewComplete = async () => {
     if (!currentQuestion || !selectedAnswer || !session || confidence === null) return;
 
     const timeMs = Math.floor(performance.now() - questionStartTime);
@@ -191,20 +191,11 @@ function DrillContent() {
       reviewDone: true,
     });
 
-    adaptiveEngine.recordAttempt({
-      qid: currentQuestion.qid,
-      correct,
-      time_ms: timeMs,
-      qtype: currentQuestion.qtype,
-      difficulty: currentQuestion.difficulty,
-      timestamp: new Date(),
-    });
-
     // Auto-log to WAJ
     const { logWrongAnswer } = await import('@/lib/wajService');
     try {
       await logWrongAnswer({
-        class_id: 'demo-class', // TODO: get from auth context
+        class_id: 'demo-class',
         qid: currentQuestion.qid,
         pt: currentQuestion.pt,
         section: currentQuestion.section,
@@ -216,17 +207,26 @@ function DrillContent() {
         time_ms: timeMs,
         confidence_1_5: confidence,
         review: {
-          q1: review.whyWrong,
-          q2: review.whyEliminated,
-          q3: review.plan,
+          q1: 'Reviewed with Joshua',
+          q2: 'AI-assisted review',
+          q3: 'Received personalized coaching',
         },
       });
     } catch (error) {
       console.error('Failed to log to WAJ:', error);
     }
 
+    adaptiveEngine.recordAttempt({
+      qid: currentQuestion.qid,
+      correct,
+      time_ms: timeMs,
+      qtype: currentQuestion.qtype,
+      difficulty: currentQuestion.difficulty,
+      timestamp: new Date(),
+    });
+
     setSession({ ...session, attempts: newAttempts });
-    setShowReviewModal(false);
+    setTutorChatOpen(false);
     setShowSolution(true);
   };
 
@@ -237,7 +237,7 @@ function DrillContent() {
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
     if (!correct) {
-      setShowReviewModal(true);
+      setTutorChatOpen(true);
     } else {
       const newAttempts = new Map(session.attempts);
       newAttempts.set(currentQuestion.qid, {
@@ -510,9 +510,11 @@ function DrillContent() {
         </div>
       </Card>
 
-      <ReviewModal
-        open={showReviewModal}
-        onSave={handleReviewSave}
+      <TutorChatModal
+        open={tutorChatOpen}
+        question={currentQuestion}
+        userAnswer={selectedAnswer}
+        onClose={handleReviewComplete}
       />
     </div>
   );
