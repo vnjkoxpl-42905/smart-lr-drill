@@ -8,16 +8,17 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { ReviewModal } from '@/components/drill/ReviewModal';
+import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
 import type { LRQuestion } from '@/lib/questionLoader';
-import type { DrillMode, DrillSession, TimerConfig, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
+import type { DrillMode, DrillSession, FullSectionConfig, TypeDrillConfig, TimerMode } from '@/types/drill';
 
 const adaptiveEngine = new AdaptiveEngine();
 
-export default function Drill() {
+function DrillContent() {
   const location = useLocation();
   const navigate = useNavigate();
   const state = location.state as { 
@@ -31,9 +32,11 @@ export default function Drill() {
   const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
   const [showReviewModal, setShowReviewModal] = React.useState(false);
-  const [questionStartTime, setQuestionStartTime] = React.useState(Date.now());
-  const [timerConfig, setTimerConfig] = React.useState<TimerConfig | null>(null);
+  const [questionStartTime, setQuestionStartTime] = React.useState(performance.now());
+  const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
+  
+  const timer = hasTimer ? useTimerContext() : null;
 
   // Initialize session
   React.useEffect(() => {
@@ -53,7 +56,7 @@ export default function Drill() {
       const config = state.config as FullSectionConfig;
       const sectionQuestions = questionBank.getSection(config.pt, config.section);
       questionQueue = sectionQuestions.map(q => q.qid);
-      setTimerConfig(config.timer);
+      setHasTimer(config.timer.mode !== 'unlimited');
     } else if (mode === 'type-drill' && state.config) {
       const config = state.config as TypeDrillConfig;
       const filtered = questionBank.getQuestionsByFilter({
@@ -120,7 +123,7 @@ export default function Drill() {
     setShowSolution(false);
     setShowReviewModal(false);
     setAnswerLocked(false);
-    setQuestionStartTime(Date.now());
+    setQuestionStartTime(performance.now());
   }, [session]);
 
   const handleAnswerSelect = (answer: string) => {
@@ -139,7 +142,7 @@ export default function Drill() {
   const handleReviewSave = async (review: { whyWrong: string; whyEliminated: string; plan: string }) => {
     if (!currentQuestion || !selectedAnswer || !session || confidence === null) return;
 
-    const timeMs = Date.now() - questionStartTime;
+    const timeMs = Math.floor(performance.now() - questionStartTime);
     const correct = selectedAnswer === currentQuestion.correctAnswer;
 
     const newAttempts = new Map(session.attempts);
@@ -195,7 +198,7 @@ export default function Drill() {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
 
     const correct = selectedAnswer === currentQuestion.correctAnswer;
-    const timeMs = Date.now() - questionStartTime;
+    const timeMs = Math.floor(performance.now() - questionStartTime);
 
     if (!correct) {
       setShowReviewModal(true);
@@ -260,32 +263,12 @@ export default function Drill() {
     }
   };
 
-  const handlePause = () => {
-    if (!timerConfig) return;
-    const elapsed = Date.now() - timerConfig.startedAt + timerConfig.elapsedMs;
-    setTimerConfig({
-      ...timerConfig,
-      isPaused: true,
-      elapsedMs: elapsed,
-    });
-  };
-
-  const handleResume = () => {
-    if (!timerConfig) return;
-    setTimerConfig({
-      ...timerConfig,
-      isPaused: false,
-      startedAt: Date.now(),
-    });
-  };
-
-  const handleTimeUpdate = (elapsedMs: number) => {
-    if (!timerConfig) return;
-    setTimerConfig({
-      ...timerConfig,
-      elapsedMs,
-    });
-  };
+  // Start timer on mount if applicable
+  React.useEffect(() => {
+    if (hasTimer && timer && !timer.running) {
+      timer.start();
+    }
+  }, [hasTimer, timer]);
 
   if (!session || !currentQuestion) {
     return (
@@ -343,14 +326,7 @@ export default function Drill() {
                 Question {session.currentIndex + 1} / {session.questionQueue.length}
               </div>
             )}
-            {timerConfig && (
-              <TimerControls
-                config={timerConfig}
-                onPause={handlePause}
-                onResume={handleResume}
-                onTimeUpdate={handleTimeUpdate}
-              />
-            )}
+            {hasTimer && <TimerControls />}
           </div>
         </div>
 
@@ -471,7 +447,7 @@ export default function Drill() {
           <div className="flex gap-3 pt-4">
             <Button
               onClick={handleNext}
-              disabled={!showSolution || timerConfig?.isPaused}
+              disabled={!showSolution || timer?.isPaused}
               size="lg"
             >
               Next question
@@ -504,4 +480,48 @@ export default function Drill() {
       />
     </div>
   );
+}
+
+export default function Drill() {
+  const location = useLocation();
+  const state = location.state as { 
+    mode: DrillMode; 
+    config?: FullSectionConfig | TypeDrillConfig;
+  };
+
+  // Calculate timer config
+  const getTimerConfig = (): { mode: 'countdown' | 'stopwatch'; durationMs?: number } | null => {
+    if (state?.mode === 'full-section' && state.config) {
+      const config = state.config as FullSectionConfig;
+      const timerMode = config.timer.mode;
+      
+      if (timerMode === 'unlimited') {
+        return { mode: 'stopwatch' };
+      }
+      
+      let durationMs: number;
+      switch (timerMode) {
+        case '35': durationMs = 35 * 60 * 1000; break;
+        case '52.5': durationMs = 52.5 * 60 * 1000; break;
+        case '70': durationMs = 70 * 60 * 1000; break;
+        case 'custom': durationMs = (config.timer.customMinutes || 35) * 60 * 1000; break;
+        default: durationMs = 35 * 60 * 1000;
+      }
+      
+      return { mode: 'countdown', durationMs };
+    }
+    return null;
+  };
+
+  const timerConfig = getTimerConfig();
+
+  if (timerConfig) {
+    return (
+      <TimerProvider mode={timerConfig.mode} durationMs={timerConfig.durationMs}>
+        <DrillContent />
+      </TimerProvider>
+    );
+  }
+
+  return <DrillContent />;
 }
