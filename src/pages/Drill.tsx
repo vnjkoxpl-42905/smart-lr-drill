@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import * as React from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -23,15 +23,15 @@ export default function Drill() {
     config?: FullSectionConfig | TypeDrillConfig;
   };
 
-  const [session, setSession] = useState<DrillSession | null>(null);
-  const [currentQuestion, setCurrentQuestion] = useState<LRQuestion | null>(null);
-  const [selectedAnswer, setSelectedAnswer] = useState<string>('');
-  const [showSolution, setShowSolution] = useState(false);
-  const [questionStartTime, setQuestionStartTime] = useState(Date.now());
-  const [timerConfig, setTimerConfig] = useState<TimerConfig | null>(null);
+  const [session, setSession] = React.useState<DrillSession | null>(null);
+  const [currentQuestion, setCurrentQuestion] = React.useState<LRQuestion | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = React.useState<string>('');
+  const [showSolution, setShowSolution] = React.useState(false);
+  const [questionStartTime, setQuestionStartTime] = React.useState(Date.now());
+  const [timerConfig, setTimerConfig] = React.useState<TimerConfig | null>(null);
 
   // Initialize session
-  useEffect(() => {
+  React.useEffect(() => {
     if (!state?.mode) {
       navigate('/');
       return;
@@ -71,7 +71,7 @@ export default function Drill() {
   }, [state, navigate]);
 
   // Load current question
-  useEffect(() => {
+  React.useEffect(() => {
     if (!session) return;
 
     if (session.mode === 'adaptive') {

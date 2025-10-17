@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import * as React from "react";
 import { questionBank, QuestionManifest } from '@/lib/questionLoader';
 
 interface QuestionBankContextType {
@@ -7,14 +7,14 @@ interface QuestionBankContextType {
   error: string | null;
 }
 
-const QuestionBankContext = createContext<QuestionBankContextType | undefined>(undefined);
+const QuestionBankContext = React.createContext<QuestionBankContextType | undefined>(undefined);
 
-export function QuestionBankProvider({ children }: { children: ReactNode }) {
-  const [manifest, setManifest] = useState<QuestionManifest | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+export function QuestionBankProvider({ children }: { children: React.ReactNode }) {
+  const [manifest, setManifest] = React.useState<QuestionManifest | null>(null);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [error, setError] = React.useState<string | null>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const loadBank = async () => {
       try {
         await questionBank.load();
@@ -38,7 +38,7 @@ export function QuestionBankProvider({ children }: { children: ReactNode }) {
 }
 
 export function useQuestionBank() {
-  const context = useContext(QuestionBankContext);
+  const context = React.useContext(QuestionBankContext);
   if (context === undefined) {
     throw new Error('useQuestionBank must be used within QuestionBankProvider');
   }

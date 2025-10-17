@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import * as React from "react";
 import { useNavigate } from 'react-router-dom';
 import { useQuestionBank } from '@/contexts/QuestionBankContext';
 import { ModeSelector } from '@/components/drill/ModeSelector';
@@ -10,7 +10,7 @@ import type { DrillMode, FullSectionConfig, TypeDrillConfig } from '@/types/dril
 export default function Landing() {
   const navigate = useNavigate();
   const { manifest, isLoading, error } = useQuestionBank();
-  const [selectedMode, setSelectedMode] = useState<DrillMode | null>(null);
+  const [selectedMode, setSelectedMode] = React.useState<DrillMode | null>(null);
 
   if (isLoading) {
     return (
