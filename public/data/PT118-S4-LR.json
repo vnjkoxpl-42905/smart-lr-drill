@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Mayor McKinney's policies have often been criticized on the grounds that they benefit only wealthy city residents, but that is not a fair evaluation. Some of McKinney's policies have clearly benefited the city's less affluent residents. McKinney actively supported last year's proposal to lower the city's high property taxes. Because of this tax decrease, more development is taking place in the city, helping to end the housing shortage and stabilize the rents in the city.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "It is impossible to tell whether McKinney is more committed to the interests of the wealthy than to those of the poor.",
+      "B": "McKinney's policies have often been criticized for benefiting only wealthy city residents.",
+      "C": "The decrease in property taxes that McKinney supported caused more development to take place in the city.",
+      "D": "The criticism that McKinney's policies benefit only the wealthy is unjustified.",
+      "E": "McKinney's efforts helped end the housing shortage and stabilize the rents in the city."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "A factory spokesperson argued that the factory should not be required to clean up the water in the nearby wetlands, maintaining that although wastewater from the factory polluted the wetlands over the past several years, the factory is not to blame for this, since the disposal of the factory's wastewater is handled entirely by an independent contractor.",
+    "questionStem": "Which one of the following arguments most closely conforms to the principle underlying the reasoning in the spokesperson's argument?",
+    "answerChoices": {
+      "A": "A recent survey revealed that over two-thirds of the teachers in the district are permitted to teach classes on subjects in which they have received no formal training. Thus parents of students in the district should check the qualifications of their children's teachers.",
+      "B": "I object to the policy of making parents responsible for the offenses of their older adolescent children. After all, these adolescents have minds of their own and freely choose to act as they do, often in ways that do not reflect the wishes of their parents.",
+      "C": "The students are justified in their objection to the reading assignment. Many of the topics concern material that is not covered in class, and students should not be required to do such reading in order to do well in the course.",
+      "D": "The most recent appointee to the prize committee should not be permitted to participate in the selection of this year's winner. Unlike each of the other committee members, the appointee has a relative in the contest.",
+      "E": "Despite all the publicity, I am skeptical of the politician's claims of having just returned from the remote village. Just two days ago a reporter spoke with the villagers and said that not a single one reported seeing the politician in the past several months."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Nylon industry spokesperson: Even though cotton and nylon are used for similar purposes, some people have the mistaken notion that cotton is natural but nylon is not. However, nylon's main components come from petroleum and from the nitrogen in the atmosphere. Clearly the atmosphere is natural. And petroleum comes from oil, which in turn comes from ancient plants—a natural source.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the nylon industry spokesperson's reasoning?",
+    "answerChoices": {
+      "A": "A substance is unnatural only if the function it serves is unnatural.",
+      "B": "A substance is no less natural than the processes used in its production.",
+      "C": "A substance is no more natural than its least natural component.",
+      "D": "One substance can be more natural than another if only one is wholly derived from natural substances.",
+      "E": "A substance is natural if the origins of its main components are natural."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Computer manufacturers and retailers tell us that the complexity involved in connecting the various components of personal computers is not a widespread obstacle to their use, but this is wrong. Customers who install accessories to their personal computers have to take full responsibility for the setting of jumpers and switches to satisfy mysterious specifications. Many accessories require extra software that can cause other accessories to stop working; adding a modem, for instance, may disable a printer.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Personal computer instruction manuals usually explain the purposes of the jumpers and switches.",
+      "B": "Software for accessories can often be obtained for free.",
+      "C": "Installing an accessory will become extremely easy in the foreseeable future.",
+      "D": "A personal computer is usually sold as part of a package that includes accessories and free installation.",
+      "E": "Computer manufacturers rarely take into account ease of installation when they are designing programs or accessories."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Rats fed high doses of the artificial sweetener saccharin develop silicate crystals that are toxic to cells lining the bladder. When the cells regenerate, some are cancerous and form tumors. Unlike rats, mice fed high doses of saccharin do not get bladder cancer.",
+    "questionStem": "Which one of the following, if true, does the most to resolve the apparent discrepancy in the information above?",
+    "answerChoices": {
+      "A": "Urine proteins that react with saccharin to form silicate crystals are found in rats but not in mice.",
+      "B": "Cells in the bladder regenerate more quickly in mice than they do in rats.",
+      "C": "High doses of saccharin are much more likely to produce silicate crystals than lower doses are.",
+      "D": "The silicate crystals are toxic only to the cells lining the bladder and not to other bladder cells.",
+      "E": "High doses of other artificial sweeteners have been shown to produce silicate crystals in mice but not in rats."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Although we could replace the beautiful—but dilapidated—old bridge across Black River with a concrete skyway, we should instead replace it with a cable bridge even though this would be more expensive than building a concrete skyway. The extra cost is clearly justified by the importance of maintaining the beauty of our river crossing.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "It is no more costly to maintain a cable bridge than a concrete skyway.",
+      "B": "A concrete skyway would not have any practical advantages over a cable bridge.",
+      "C": "The beauty of the river crossing must be preserved.",
+      "D": "If the new cable bridge is built, most people who see it will think the extra money well spent.",
+      "E": "Building a cable bridge across Black River would produce a more aesthetically pleasing result than building a concrete skyway."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "A typical gasoline-powered lawn mower emits about as much air-polluting material per hour of use as does an automobile. Collectively, such mowers contribute significantly to summer air pollution. Since electric mowers emit no air pollutants, people can help reduce air pollution by choosing electric mowers over gasoline ones whenever feasible.",
+    "questionStem": "Which one of the following, if true, provides the most support for the argument?",
+    "answerChoices": {
+      "A": "Lawns help to clean the air, replacing pollutants with oxygen.",
+      "B": "Electric lawn mowers are more expensive to purchase and maintain than are gasoline mowers.",
+      "C": "Producing the power to run an electric mower for an hour causes less air pollution than does running an automobile for an hour.",
+      "D": "Most manufacturers of gasoline lawn mowers are trying to redesign their mowers to reduce the emission of air pollutants.",
+      "E": "Lawn mowers are used for fewer hours per year than are automobiles."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Ariel: Government art subsidies never benefit art, for art's role is to challenge society's values. A society's values, however, are expressed by its government, and artists cannot challenge the very institution upon which they depend.\nSasha: I agree that art should challenge society's values. However, by its very nature, a democratic government respects dissent and encourages challenges to its own values. Therefore, in a democratic society, government art subsidies ensure that artists can be fully committed to their work while expressing themselves freely.",
+    "questionStem": "The dialogue most supports the claim that Ariel and Sasha disagree with each other about whether",
+    "answerChoices": {
+      "A": "art's role is to challenge society's values",
+      "B": "a society's values are expressed by its government",
+      "C": "artists can express themselves freely in a nondemocratic society",
+      "D": "art subsidies provided by a democratic government benefit art",
+      "E": "only governments that respect dissent ensure that art subsidies are fairly distributed"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "Public health expert: Until recently people believed that applications of biochemical research would eventually achieve complete victory over the microorganisms that cause human disease. However, current medical research shows that those microorganisms reproduce so rapidly that medicines developed for killing one variety will only spur the evolution of other varieties that are immune to those medicines. The most rational public health strategy, therefore, would place much more emphasis than at present on fully informing people about the transmission of diseases caused by microorganisms, with a view to minimizing the incidence of such diseases.",
+    "questionStem": "Of the following, which one most accurately expresses the conclusion drawn by the public health expert?",
+    "answerChoices": {
+      "A": "A medicine that kills one variety of disease-causing microorganism can cause the evolution of a drug-resistant variety.",
+      "B": "A patient who contracts a disease caused by microorganisms cannot be effectively cured by present methods.",
+      "C": "There is good reason to make a particular change to public health policy.",
+      "D": "No one who is fully informed about the diseases caused by microorganisms will ever fall victim to those diseases.",
+      "E": "Some previous approaches to public health policy ignored the fact that disease-causing microorganisms reproduce at a rapid rate."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The enthusiastic acceptance of ascetic lifestyles evidenced in the surviving writings of monastic authors indicates that medieval societies were much less concerned with monetary gain than are contemporary Western cultures.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "employs the imprecise term \"ascetic\"",
+      "B": "generalizes from a sample that is likely to be unrepresentative",
+      "C": "applies contemporary standards inappropriately to medieval societies",
+      "D": "inserts personal opinions into what purports to be a factual debate",
+      "E": "advances premises that are inconsistent"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Evaluate",
+    "questionDifficulty": 2,
+    "stimulus": "Between 1976 and 1985, chemical wastes were dumped into Cod Bay. Today, 3 percent of the bay's bluefin cod population have deformed fins, and wary consumers have stopped buying the fish. In seeking financial reparations from companies that dumped the chemicals, representatives of Cod Bay's fishing industry have claimed that since the chemicals are known to cause genetic mutations, the deformity in the bluefin cod must have been caused by the presence of those chemicals in Cod Bay.",
+    "questionStem": "The answer to each of the following questions would be helpful in evaluating the representatives' claim except:",
+    "answerChoices": {
+      "A": "What is the incidence of deformed fins in bluefin cod that are not exposed to chemicals such as those dumped into Cod Bay?",
+      "B": "What was the incidence of deformed fins in bluefin cod in Cod Bay before the chemical dumping began?",
+      "C": "Has the consumption of the bluefin cod from Cod Bay that have deformed fins caused any health problems in the people who ate them?",
+      "D": "Are bluefin cod prone to any naturally occurring diseases that can cause fin deformities of the same kind as those displayed by the bluefin cod of Cod Bay?",
+      "E": "Are there gene-altering pollutants present in Cod Bay other than the chemical wastes that were dumped by the companies?"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Method",
+    "questionDifficulty": 3,
+    "stimulus": "Columnist: If you received an unsigned letter, you would likely have some doubts about the truth of its contents. But news stories often include statements from anonymous sources, and these are usually quoted with the utmost respect. It makes sense to be skeptical of these sources, for, as in the case of the writer of an unsigned letter, their anonymity makes it possible for them to plant inaccurate or slanted statements without ever having to answer for them.",
+    "questionStem": "The columnist's argument proceeds by",
+    "answerChoices": {
+      "A": "pointing out that a certain attitude would presumably be adopted in one situation, in order to support the claim that a similar attitude would be justified in an analogous situation",
+      "B": "drawing an analogy between an attitude commonly adopted in one situation and a different attitude commonly adopted in another situation, and establishing that the latter attitude is better justified than the former",
+      "C": "inferring that an attitude would be justified in all situations of a given type on the grounds that this attitude is justified in a hypothetical situation of that type",
+      "D": "calling into question a certain type of evidence by drawing an analogy between that evidence and other evidence that the argument shows is usually false",
+      "E": "calling into question the motives of those presenting certain information, and concluding for this reason that the information is likely to be false"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Art theft from museums is on the rise. Most stolen art is sold to wealthy private collectors. Consequently, since thieves steal what their customers are most interested in buying, museums ought to focus more of their security on their most valuable pieces.",
+    "questionStem": "The argument depends on assuming which one of the following?",
+    "answerChoices": {
+      "A": "Art thieves steal both valuable and not-so-valuable art.",
+      "B": "Art pieces that are not very valuable are not very much in demand by wealthy private collectors.",
+      "C": "Art thieves steal primarily from museums that are poorly secured.",
+      "D": "Most museums provide the same amount of security for valuable and not-so-valuable art.",
+      "E": "Wealthy private collectors sometimes sell their stolen art to other wealthy private collectors."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Insufficient rain can cause crops to falter and agricultural prices to rise. Records indicate that during a certain nation's recent crisis, faltering crops and rising agricultural prices prompted the government to take over food distribution in an effort to prevent starvation. Thus, the weather must have played an important role in bringing about the crisis.",
+    "questionStem": "The argument's reasoning is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "concludes, merely from the fact that the period of insufficient rain occurred before the nation's crisis, that insufficient rain caused the nation's crisis",
+      "B": "fails to take into account the possibility that the scarcity was not severe enough to justify the government's taking over food distribution",
+      "C": "uses the term \"crisis\" equivocally in the reasoning, referring to both a political crisis and an economic crisis",
+      "D": "infers, merely from the fact that one event could have caused a second event, that the first event in fact caused the second",
+      "E": "takes for granted that any condition that is necessary for an increase in agricultural prices is also sufficient for such an increase"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "The cost of a semester's tuition at a certain university is based on the number of courses in which a student enrolls that semester. Although the cost per course at that university has not risen in four years, many of its students who could afford the tuition when they first enrolled now claim they can no longer afford it.",
+    "questionStem": "Each of the following, if true, helps to resolve the apparent discrepancy above except:",
+    "answerChoices": {
+      "A": "Faculty salaries at the university have risen slightly over the past four years.",
+      "B": "The number of courses per semester for which full-time students are required to enroll is higher this year than any time in the past.",
+      "C": "The cost of living in the vicinity of the university has risen over the last two years.",
+      "D": "The university awards new students a large number of scholarships that are renewed each year for the students who maintain high grade averages.",
+      "E": "The university has turned many of its part-time office jobs, for which students had generally been hired, into full-time, nonstudent positions."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "People are not happy unless they feel that they are needed by others. Most people in modern society, however, can achieve a feeling of indispensability only within the sphere of family and friendship, because almost everyone knows that his or her job could be done by any one of thousands of others.",
+    "questionStem": "The statements above most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "People who realize that others could fill their occupational roles as ably as they do themselves cannot achieve any happiness in their lives.",
+      "B": "The nature of modern society actually undermines the importance of family life to an individual's happiness.",
+      "C": "Most people in modern society are happy in their private lives even if they are not happy in their jobs.",
+      "D": "A majority of people in modern society do not appreciate having the jobs that they do have.",
+      "E": "Fewer than a majority of people in modern society can find happiness outside the sphere of private interpersonal relationships."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Art critic: Criticism focuses on two issues: first, whether the value of an artwork is intrinsic to the work; and second, whether judgments about an artwork's quality are objective rather than merely matters of taste. These issues are related, for if an artwork's value is not intrinsic, then it must be extrinsic, and thus judgments about the quality of the work can only be a matter of taste.",
+    "questionStem": "The art critic's reasoning is most vulnerable to the criticism that it takes for granted that",
+    "answerChoices": {
+      "A": "judgments about the quality of an artwork are always a matter of taste",
+      "B": "people sometimes agree about judgments that are only matters of taste",
+      "C": "judgments about extrinsic value cannot be objective",
+      "D": "judgments about intrinsic value are always objective",
+      "E": "an artwork's value is sometimes intrinsic to it"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Decentralization enables divisions of a large institution to function autonomously. This always permits more realistic planning and strongly encourages innovation, since the people responsible for decision making are directly involved in implementing the policies they design. Decentralization also permits the central administration to focus on institution-wide issues without being overwhelmed by the details of daily operations.",
+    "questionStem": "The statements above most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "In large institutions whose divisions do not function autonomously, planning is not maximally realistic.",
+      "B": "Innovation is not always encouraged in large centralized institutions.",
+      "C": "For large institutions the advantages of decentralization outweigh its disadvantages.",
+      "D": "The central administrations of large institutions are usually partially responsible for most of the details of daily operations.",
+      "E": "The people directly involved in implementing policies are always able to make innovative and realistic policy decisions."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "According to some astronomers, Earth is struck by a meteorite large enough to cause an ice age on an average of once every 100 million years. The last such incident occurred nearly 100 million years ago, so we can expect that Earth will be struck by such a meteorite in the near future. This clearly warrants funding to determine whether there is a means to protect our planet from such meteorite strikes.",
+    "questionStem": "The reasoning in the argument is most subject to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "makes a bold prescription on the basis of evidence that establishes only a high probability for a disastrous event",
+      "B": "presumes, without providing justification, that the probability of a chance event's occurring is not affected by whether the event has occurred during a period in which it would be expected to occur",
+      "C": "moves from evidence about the average frequency of an event to a specific prediction about when the next such event will occur",
+      "D": "fails to specify the likelihood that, if such a meteorite should strike Earth, the meteorite would indeed cause an ice age",
+      "E": "presumes, without providing justification, that some feasible means can be found to deter large meteorite strikes"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Polling data reveal that an overwhelming majority of nine-year-olds can correctly identify the logos of major cigarette brands. However, of those nine-year-olds who recognize such logos, less than 1 percent smoke. Therefore, there is little or no connection between recognition of cigarette brand logos and smoking.",
+    "questionStem": "Which one of the following uses flawed reasoning most similar to the flawed reasoning above?",
+    "answerChoices": {
+      "A": "The concern about the long-term effect on dolphins of small quantities of mercury in the ocean is unfounded. During a three-month observation period, 1,000 dolphins were exposed to small quantities of mercury in seawater, with no effect on the animals.",
+      "B": "Many ten-year-olds dream of becoming actors. Yet it is not likely they will seriously consider becoming actors, because most parents discourage their children from pursuing such a highly competitive career.",
+      "C": "Most dentists recommend using fluoride to reduce the incidence of cavities, but few recommend giving up candy entirely; so, using fluoride is probably more effective in preventing cavities than is avoiding sweets.",
+      "D": "A large percentage of men exercise moderately throughout their lives, but the average life span of those who do so is not significantly greater than of those who get little or no exercise. So there is little or no correlation between moderate exercise and good health.",
+      "E": "Most people cannot name their legislative representatives. Nonetheless, this is insignificant, for when queried, most of them displayed an adequate command of current political issues."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Etiquette firmly opposes both obscene and malicious talk, but this does not imply that speech needs to be restricted by law. Etiquette does not necessarily even oppose the expression of offensive ideas. Rather, it dictates that there are situations in which the expression of potentially offensive, disturbing, or controversial ideas is inappropriate and that, where appropriate, the expression and discussion of such ideas is to be done in a civil manner.",
+    "questionStem": "Which one of the following judgments most closely corresponds to the principles of etiquette stated above?",
+    "answerChoices": {
+      "A": "Neighbors should not be gruff or unfriendly to one another when they meet on the street.",
+      "B": "When prosecutors elicit testimony from a cooperative witness they should do so without intensive questioning.",
+      "C": "There should be restrictions on speech only if a large majority of the population finds the speech offensive and hateful.",
+      "D": "The journalists at a news conference should not ask a politician potentially embarrassing questions about a controversial policy issue.",
+      "E": "The moderator of a panel discussion of a divisive moral issue should not allow participants to engage in name-calling."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "The only preexisting recordings that are transferred onto compact disc are those that record companies believe will sell well enough on compact disc to be profitable. So, most classic jazz recordings will not be transferred onto compact disc, because few classic jazz recordings are played on the radio.",
+    "questionStem": "The conclusion above follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Few of the preexisting recordings that record companies believe can be profitably transferred to compact disc are classic jazz recordings.",
+      "B": "Few compact discs featuring classic jazz recordings are played on the radio.",
+      "C": "The only recordings that are played on the radio are ones that record companies believe can be profitably sold as compact discs.",
+      "D": "Most record companies are less interested in preserving classic jazz recordings than in making a profit.",
+      "E": "No recording that is not played on the radio is one that record companies believe would be profitable if transferred to compact disc."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Agricultural economist: Over the past several years, increases in worldwide grain production have virtually ceased. Further increases will be extremely difficult; most usable farmland is already being farmed with near-maximal efficiency. But worldwide demand for grain has been increasing steadily, due largely to continuing population growth. Hence, a severe worldwide grain shortage is likely.",
+    "questionStem": "Which one of the following most accurately describes the role played in the agricultural economist's argument by the claim that further increases in worldwide grain production will be extremely difficult?",
+    "answerChoices": {
+      "A": "It is one of the two conclusions drawn by the agricultural economist, neither of which is used to provide support for the other.",
+      "B": "It is a description of a phenomenon, a causal explanation of which is the main conclusion of the argument.",
+      "C": "It is the only premise offered in support of the argument's main conclusion.",
+      "D": "It is a prediction for which the agricultural economist's first claim is offered as the primary justification.",
+      "E": "It is an intermediate conclusion that is presented as evidence for the argument's main conclusion."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Bardis: Extensive research shows that television advertisements affect the buying habits of consumers. Some people conclude from this that violent television imagery sometimes causes violent behavior. But the effectiveness of television advertisements could be a result of those televised images being specifically designed to alter buying habits, whereas television violence is not designed to cause violent behavior. Hence we can safely conclude that violent television imagery does not cause violence.",
+    "questionStem": "The reasoning in Bardis's argument is flawed because that argument",
+    "answerChoices": {
+      "A": "relies on an illegitimate inference from the fact that advertisements can change behavior to the claim that advertisements can cause violent behavior",
+      "B": "fails to distinguish a type of behavior from a type of stimulus that may or may not affect behavior",
+      "C": "undermines its own position by questioning the persuasive power of television advertising",
+      "D": "concludes that a claim is false on the basis of one purported fault in an argument in favor of that claim",
+      "E": "fails to consider the possibility that the argument it disputes is intended to address a separate issue"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT118",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Sarah: Our regulations for staff review are vague and thus difficult to interpret. For instance, the regulations state that a staff member who is performing unsatisfactorily will face dismissal, but they fail to define unsatisfactory performance. Thus, some staff may be dismissed merely because their personal views conflict with those of their supervisors.",
+    "questionStem": "Which one of the following generalizations, if applicable to Sarah's company, most helps to justify her reasoning?",
+    "answerChoices": {
+      "A": "Performance that falls only somewhat below expectations results in disciplinary measures short of dismissal.",
+      "B": "Interpreting regulations is a prerogative that belongs solely to supervisors.",
+      "C": "A vague regulation can be used to make those subject to it answer for their performance.",
+      "D": "A vague regulation can be used to keep those subject to it in subordinate positions.",
+      "E": "Employees usually consider specific regulations to be fairer than vague regulations."
+    },
+    "correctAnswer": "B"
+  }
+]

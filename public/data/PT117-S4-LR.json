@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "Jones fell unconscious on the job and it was suspected that he had swallowed a certain chemical, so he was rushed to the local hospital's emergency room. In making her diagnosis, the emergency-room physician knew that if Jones had swallowed the chemical, a deficiency in the content of a mineral in his blood would result. She also knew that deficiency in the mineral causes inflammation of the skin. Since Jones's skin was not inflamed when he was admitted to the emergency room, the physician concluded that Jones had not swallowed the chemical.",
+    "questionStem": "Which one of the following, if true, would undermine the physician's conclusion?",
+    "answerChoices": {
+      "A": "Jones did not know that the chemical was dangerous.",
+      "B": "Jones had suffered inflammation of the skin in the past.",
+      "C": "It takes 48 hours for the chemical to bring about deficiency of the mineral in the blood.",
+      "D": "Jones often worked with the chemical.",
+      "E": "Deficiency in minerals other than the mineral in question can cause inflammation of the skin."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Pacifist: It is immoral to do anything that causes harm to another person. But, since using force causes harm to another person, it is also immoral to threaten to use force, even when such a threat is made in self-defense.",
+    "questionStem": "Which one of the following principles, if valid, would most help to justify the pacifist's reasoning?",
+    "answerChoices": {
+      "A": "Given the potential harm caused by the use of force, the line between use of force in self-defense and the aggressive use of force is always vague.",
+      "B": "It is immoral to threaten to do what it is immoral to do.",
+      "C": "It is immoral to do anything that causes more harm than good.",
+      "D": "Whether a threat made in self-defense is immoral depends on the circumstances.",
+      "E": "It is immoral to carry out a threat if making the threat is itself immoral."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Beginning in the 1950s, popular music was revolutionized by the electrification of musical instruments, which has enabled musicians to play with increased volume. Because individual musicians can play with increased volume, the average number of musicians per band has decreased. Nevertheless, electrification has increased rather than decreased the overall number of musicians who play popular music professionally.",
+    "questionStem": "Which one of the following is most strongly supported by the statements above, if those statements are true?",
+    "answerChoices": {
+      "A": "The number of amateur musicians who play popular music has decreased.",
+      "B": "Most professional musicians are able to play both electric and nonelectric instruments.",
+      "C": "The number of professional musicians in some bands has increased.",
+      "D": "The total number of professional bands has increased as a result of electrification.",
+      "E": "Many professional musicians play in more than one band."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 3,
+    "stimulus": "Statistics indicating a sudden increase in the incidence of a problem often merely reflect a heightened awareness of the problem or a greater ability to record its occurrence. Hence we should be wary of proposals for radical solutions to problems when those proposals are a reaction to new statistical data.",
+    "questionStem": "The argumentation conforms most closely to which one of the following principles?",
+    "answerChoices": {
+      "A": "A better cognizance of a problem does not warrant the undertaking of a radical solution to the problem.",
+      "B": "Attempts to stop the occurrence of a problem should be preceded by a determination that the problem actually exists.",
+      "C": "Proposals for radical solutions to problems should be based on statistical data alone.",
+      "D": "Statistical data should not be manipulated to make a radical solution to a problem seem more justified than it actually is.",
+      "E": "Radical solutions to problems can cause other problems and end up doing more harm than good."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "Barr: The National Tea Association cites tea's recent visibility in advertising and magazine articles as evidence of tea's increasing popularity. However, a neutral polling company, the Survey Group, has tracked tea sales at numerous stores for the last 20 years and has found no change in the amount of tea sold. We can thus conclude that tea is no more popular now than it ever was.",
+    "questionStem": "Which one of the following, if true, most seriously weakens Barr's argument?",
+    "answerChoices": {
+      "A": "The National Tea Association has announced that it plans to carry out its own retail survey in the next year.",
+      "B": "A survey by an unrelated polling organization shows that the public is generally receptive to the idea of trying new types of tea.",
+      "C": "The Survey Group is funded by a consortium of consumer advocacy groups.",
+      "D": "The stores from which the Survey Group collected information about tea sales are all located in the same small region of the country.",
+      "E": "Tea has been the subject of an expensive and efficient advertising campaign funded, in part, by the National Tea Association."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Doctors urge people to reduce their cholesterol levels through dietary changes. But moderate dietary changes often do not work to lower cholesterol levels. One may need, therefore, to make more dramatic changes, such as switching to a vegetarian diet.",
+    "questionStem": "The statement that moderate dietary changes often do not work to lower cholesterol levels plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "It is presented to counter doctors' suggestions that cholesterol levels can be reduced through dietary changes.",
+      "B": "It is a premise offered in support of the claim that vegetarian diets are more healthful than any diets containing meat.",
+      "C": "It is a premise offered in support of the claim that reducing cholesterol levels may require greater than moderate dietary changes.",
+      "D": "It is offered as an explanation of the success of vegetarian diets in reducing cholesterol levels.",
+      "E": "It is a conclusion for which the claim that dramatic changes in one's diet are sometimes required to reduce cholesterol levels is offered as support."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Since empathy is essential for people to be willing to follow moral codes that sometimes require them to ignore their own welfare to help others, civilized society could not exist without empathy.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Civilized society can exist only if there are people who are willing to at least sometimes ignore their own welfare to help others.",
+      "B": "Failure to empathize with other people usually leads to actions detrimental to civilized society.",
+      "C": "If everyone in a society is sometimes willing to ignore his or her own welfare to help others, that society will be civilized.",
+      "D": "Moral codes that include the requirement that people disregard their own welfare in order to help others have arisen within some civilized societies.",
+      "E": "People who feel empathy tend to ignore their own welfare for the sake of others."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Insurgent political parties that are profoundly dissatisfied with the dominant party's reign and justificatory ideology always produce factions whose views and aims differ as greatly from each other's as they do from the dominant party's. Although these factions ignore their own disagreements for the sake of defeating the dominant party, their disagreements inevitably come forward upon victory. Therefore,",
+    "questionStem": "Which one of the following is the most logical completion of the argument?",
+    "answerChoices": {
+      "A": "no victorious insurgent party ever manages to stay in power for as long as the party it displaces did",
+      "B": "a victorious insurgent party must address the disagreements between its factions if it is to stay in power",
+      "C": "the heretofore insurgent party will not always promulgate a new ideology to justify its own policies, once it is victorious",
+      "D": "a victorious insurgent party always faces opposition from the party it recently ousted",
+      "E": "it is impossible for the different factions of a victorious insurgent party to effect the compromises necessary to keep the new party in power"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Manager: When Sullivan was passed over for promotion, people said that the deciding factor was his being much older than the competition. But this is clearly not the case. Several recent promotions have been given to people older than Sullivan.",
+    "questionStem": "The manager's argument is most vulnerable to criticism because it fails to consider the possibility that",
+    "answerChoices": {
+      "A": "Sullivan was well qualified for the promotion",
+      "B": "age is only one of a number of factors that kept Sullivan from being promoted",
+      "C": "people often associate age with experience and good judgment",
+      "D": "the people older than Sullivan who were promoted had no younger competitors",
+      "E": "Sullivan's employer tries to keep deliberations involving promotion decisions confidential"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Council member P: Alarmists are those who see an instance of pollution and exaggerate its significance into a major character fault of society. Such alarmists fail to distinguish the incident and the behavior that caused it from the disposition of people not to pollute.\nCouncil member Q: To think that there is a lot of pollution based on the discovery of a serious single instance of pollution is simply an application of the widely accepted principle that actions tend to follow the path of least resistance, and it is surely easier to pollute than not to pollute.",
+    "questionStem": "Council members P and Q disagree over whether",
+    "answerChoices": {
+      "A": "pollution should be considered a problem",
+      "B": "actions tend to follow the path of least resistance",
+      "C": "people are responsible for pollution",
+      "D": "people can change their behavior and not pollute",
+      "E": "people are inclined to pollute"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "It is easy to see that the board of directors of the construction company is full of corruption and should be replaced. There are many instances of bribery by various persons on the staff of board member Wagston that are a matter of public record. These bribes perniciously influenced the awarding of government contracts.",
+    "questionStem": "The argument's reasoning is most vulnerable to criticism on the grounds that",
+    "answerChoices": {
+      "A": "the argument fails to show that corruption is not limited to Wagston's staff",
+      "B": "the argument fails to show that Wagston's staff engaged in any bribery other than bribery of government officials",
+      "C": "the argument fails to specify the relation between bribery and corruption",
+      "D": "the argument presumes without giving justification that all of Wagston's staff have engaged in corruption",
+      "E": "the argument attempts to deflect attention away from substantive issues by attacking the character of the board"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Coffee and tea contain methylxanthines, which cause temporary increases in the natural production of vasopressin, a hormone produced by the pituitary gland. Vasopressin causes clumping of blood cells, and the clumping is more pronounced in women than in men. This is probably the explanation of the fact that women face as much as a tenfold higher risk than men do of complications following angioplasty, a technique used to clear clogged arteries.",
+    "questionStem": "Which one of the following statements is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Men, but not women, should be given methylxanthines prior to undergoing angioplasty.",
+      "B": "In spite of the risks, angioplasty is the only effective treatment for clogged arteries.",
+      "C": "Women probably drink more coffee and tea, on average, than do men.",
+      "D": "Prior to undergoing angioplasty, women should avoid coffee and tea.",
+      "E": "Angioplasty should not be used to treat clogged arteries."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Whether a machine performs its intended function is plain for all to see, but recognition of excellence in art requires a rare subtlety of perception. So whereas engineers usually maintain their composure when their work is being evaluated, artists tend to become anxious under such circumstances.",
+    "questionStem": "The reasoning above conforms most closely to which one of the following propositions?",
+    "answerChoices": {
+      "A": "People who have an interest in working as artists are no more likely to have especially anxious personalities than are people who have an interest in working as engineers.",
+      "B": "The value of a machine is independent of the feelings of those who create it, while the value of an artwork is not.",
+      "C": "Evaluation of the work of engineers should be based on a different set of standards than is evaluation of the work of artists.",
+      "D": "People who create things whose success can be easily ascertained worry less about others' opinions of their work than do people who create things whose value cannot be easily ascertained.",
+      "E": "Someone who creates a work that cannot be easily evaluated tends to be less confident about its value than are those who evaluate it."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Scientists hypothesize that a particular type of fat known as \"P-fat\" is required for the development of eyesight. Researchers were led to this hypothesis by observing that babies who are fed formulas low in P-fat tend to have worse eyesight than babies fed mother's milk, which is high in P-fat. It has also been shown that babies that are five to six weeks premature tend to have worse eyesight than babies carried to term.",
+    "questionStem": "Which one of the following, if true, most supports the scientists' hypothesis?",
+    "answerChoices": {
+      "A": "Adults whose diets lack P-fat tend to have worse eyesight than those whose diets are high in P-fat.",
+      "B": "A fetus typically receives high levels of P-fat from the mother during only the last four weeks of pregnancy.",
+      "C": "Babies whose mothers have poor eyesight do not tend to have poor eyesight themselves.",
+      "D": "Babies generally prefer mother's milk to formulas low in P-fat.",
+      "E": "The eyesight of a fetus develops during the last trimester of pregnancy."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Must be True",
+    "questionDifficulty": 2,
+    "stimulus": "Artists have different ways of producing contours and hatching, and analysis of these stylistic features can help to distinguish works by a famous artist both from forgeries and from works genuinely by other artists. Indeed, this analysis has shown that many of the drawings formerly attributed to Michelangelo are actually by the artist Giulio Clovio, Michelangelo's contemporary.",
+    "questionStem": "If the statements above are true, then which one of the following must also be true?",
+    "answerChoices": {
+      "A": "Contours and hatching are the main features that distinguish the drawing styles of different artists.",
+      "B": "Many of the drawings formerly attributed to Michelangelo are actually forgeries.",
+      "C": "No forgery can perfectly duplicate the contour and hatching styles of a famous artist.",
+      "D": "The contour and hatching styles used to identify the drawings of Clovio cited can be shown to be features of all Clovio's works.",
+      "E": "There is an analyzable difference between Clovio's contour and hatching styles and those of Michelangelo."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Moralist: Immoral actions are those that harm other people. But since such actions eventually harm those who perform them, those who act immorally do so only through ignorance of some of their actions' consequences rather than through a character defect.",
+    "questionStem": "Which one of the following is an assumption required by the moralist's argument?",
+    "answerChoices": {
+      "A": "People ignorant of their actions' consequences cannot be held morally responsible for those consequences.",
+      "B": "An action harms those who perform it only if it also eventually harms others.",
+      "C": "Only someone with a character defect would knowingly perform actions that eventually harm others.",
+      "D": "Those who, in acting immorally, eventually harm themselves do not intend that harm.",
+      "E": "None of those who knowingly harm themselves lack character defects."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Climatologists believe they know why Earth has undergone a regular sequence of ice ages beginning around 800,000 years ago. Calculations show that Earth's orbit around the Sun has fluctuations that coincide with the ice-age cycles. The climatologists hypothesize that when the fluctuations occur, Earth passes through clouds of cosmic dust that enters the atmosphere; the cosmic dust thereby dims the Sun, resulting in an ice age. They concede, however, that though cosmic dust clouds are common, the clouds would have to be particularly dense in order to have this effect.",
+    "questionStem": "Each of the following, if true, would lend support to the climatologists' hypothesis except:",
+    "answerChoices": {
+      "A": "Earth did not pass through clouds of cosmic dust earlier than 800,000 years ago.",
+      "B": "Two large asteroids collided 800,000 years ago, producing a tremendous amount of dense cosmic dust that continues to orbit the Sun.",
+      "C": "Earth's average temperature drops slightly shortly after volcanic eruptions spew large amounts of dust into Earth's atmosphere.",
+      "D": "Large bits of cosmic rock periodically enter Earth's atmosphere, raising large amounts of dust from Earth's surface.",
+      "E": "Rare trace elements known to be prevalent in cosmic debris have been discovered in layers of sediment whose ages correspond very closely to the occurrence of ice ages."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Must be False",
+    "questionDifficulty": 4,
+    "stimulus": "Philosopher: The rational pursuit of happiness is quite different from always doing what one most strongly desires to do. This is because the rational pursuit of happiness must include consideration of long-term consequences, whereas our desires are usually focused on the short term. Moreover, desires are sometimes compulsions, and while ordinary desires result in at least momentary happiness when their goals are attained, compulsions strongly drive a person to pursue goals that offer no happiness even when reached.",
+    "questionStem": "If all of the philosopher's statements are true, each of the following could be true except:",
+    "answerChoices": {
+      "A": "The majority of people do not have compulsions.",
+      "B": "Attaining the goal of any desire results in momentary happiness.",
+      "C": "Most people do not pursue happiness rationally.",
+      "D": "Most people want more than their own personal happiness.",
+      "E": "All actions have long-term consequences."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Political scientist: All governments worthy of respect allow their citizens to dissent from governmental policies. No government worthy of respect leaves minorities unprotected. Thus any government that protects minorities permits criticism of its policies.",
+    "questionStem": "The flawed pattern of reasoning in which one of the following most closely parallels that in the political scientist's argument?",
+    "answerChoices": {
+      "A": "Politicians are admirable if they put the interests of those they serve above their own interests. So politicians who sometimes ignore the interests of their own constituents in favor of the nation as a whole deserve admiration, for they are putting the interests of those they serve above their own.",
+      "B": "All jazz musicians are capable of improvising and no jazz musician is incapable of reading music. Therefore all musicians who can read music can improvise.",
+      "C": "Ecosystems with cool, dry climates are populated by large mammals. No ecosystems populated by large mammals have abundant and varied plant life. Thus ecosystems that do not have cool, dry climates have abundant and varied plant life.",
+      "D": "Some intellectuals are not socially active, and no intellectual is a professional athlete. Therefore any professional athlete is socially active.",
+      "E": "First-person narratives reveal the thoughts of the narrator but conceal those of the other characters. Some third-person narratives reveal the motives of every character. Thus books that rely on making all characters' motives apparent should be written in the third person."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Advertisement: Each of the Economic Merit Prize winners from the past 25 years is covered by the Acme retirement plan. Since the winners of the nation's most prestigious award for economists have thus clearly recognized that the Acme plan offers them a financially secure future, it is probably a good plan for anyone with retirement needs similar to theirs.",
+    "questionStem": "The advertisement's argumentation is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It ignores the possibility that the majority of Economic Merit Prize winners from previous years used a retirement plan other than the Acme plan.",
+      "B": "It fails to address adequately the possibility that any of several retirement plans would be good enough for, and offer a financially secure future to, Economic Merit Prize winners.",
+      "C": "It appeals to the fact that supposed experts have endorsed the argument's main conclusion, rather than appealing to direct evidence for that conclusion.",
+      "D": "It takes for granted that some winners of the Economic Merit Prize have deliberately selected the Acme retirement plan, rather than having had it chosen for them by their employers.",
+      "E": "It presumes, without providing justification, that each of the Economic Merit Prize winners has retirement plan needs that are identical to the advertisement's intended audience's retirement plan needs."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Parallel",
+    "questionDifficulty": 4,
+    "stimulus": "A small car offers less protection in an accident than a large car does, but since a smaller car is more maneuverable, it is better to drive a small car because then accidents will be less likely.",
+    "questionStem": "Which one of the following arguments employs reasoning most similar to that employed by the argument above?",
+    "answerChoices": {
+      "A": "An artist's best work is generally that done in the time before the artist becomes very well known. When artists grow famous and are diverted from artistic creation by demands for public appearances, their artistic work suffers. So artists' achieving great fame can diminish their artistic reputations.",
+      "B": "It is best to insist that a child spend at least some time every day reading indoors. Even though it may cause the child some unhappiness to have to stay indoors when others are outside playing, the child can benefit from the time by learning to enjoy books and becoming prepared for lifelong learning.",
+      "C": "For this work, vehicles built of lightweight materials are more practical than vehicles built of heavy materials. This is so because while lighter vehicles do not last as long as heavier vehicles, they are cheaper to replace.",
+      "D": "Although it is important to limit the amount of sugar and fat in one's diet, it would be a mistake to try to follow a diet totally lacking in sugar and fat. It is better to consume sugar and fat in moderation, for then the cravings that lead to uncontrolled binges will be prevented.",
+      "E": "A person who exercises vigorously every day has less body fat than an average person to draw upon in the event of a wasting illness. But one should still endeavor to exercise vigorously every day, because doing so significantly decreases the chances of contracting a wasting illness."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Trainer: Research shows that when dogs are neutered in early puppyhood, their leg bones usually do not develop properly. Improper bone development leads in turn to problems with arthritis as dogs grow older. Thus, if you want to protect your dog from arthritis you should not neuter your dog until it is full-grown.",
+    "questionStem": "Of the following, which one is a criticism to which the reasoning in the trainer's argument is most vulnerable?",
+    "answerChoices": {
+      "A": "It fails to state exactly what percentage of dogs neutered in early puppyhood experience improper bone development.",
+      "B": "It fails to explain the connection between improper bone development and arthritis.",
+      "C": "It fails to address the effects of neutering in middle or late puppyhood.",
+      "D": "It fails to consider the possibility that the benefits of neutering a dog early might outweigh the risk of arthritis.",
+      "E": "It fails to consider the possibility that dogs with properly developed bones can develop arthritis."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Political scientist: One of the most interesting dilemmas in contemporary democratic politics concerns the regulation of political campaign spending. People certainly should be free, within broad limits, to spend their money as they choose. On the other hand, candidates who can vastly outspend all rivals have an unfair advantage in publicizing their platforms. Democratic governments have a strong obligation to ensure that all voices have an equal chance to be heard, but governments should not subsidize expensive campaigns for each candidate. The resolution of the dilemma, therefore, is clear:",
+    "questionStem": "Which one of the following most logically completes the political scientist's argument?",
+    "answerChoices": {
+      "A": "only candidates with significant campaign resources should be permitted to run for public office",
+      "B": "an upper limit on the political campaign spending of each candidate is warranted",
+      "C": "government subsidization of all political campaigns at a low percentage of their total cost is warranted",
+      "D": "all wealthy persons should be prohibited from spending their own money on political campaigns",
+      "E": "each candidate should be allowed to spend as much money on a political campaign as any other candidate chooses to spend"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Some people have maintained that private ownership of the means of production ultimately destroys any society that sanctions it. This may be true of a less technologically advanced society that must share its economic resources to survive. But since only private ownership of the means of production permits individuals to test new technologies without the majority's consent, a technologically advanced society will actually endanger its survival if the means of production become public property.",
+    "questionStem": "The proposition that private ownership of the means of production ultimately destroys any society that sanctions it plays which one of the following roles in the argument above?",
+    "answerChoices": {
+      "A": "It is a generalization that the argument suggests is no more applicable to less technologically advanced societies than to more technologically advanced societies.",
+      "B": "It is a hypothesis for whose widespread acceptance the argument offers an explanation.",
+      "C": "It is a general hypothesis that the argument suggests is inapplicable to societies more dependent for survival upon the introduction of new technologies than upon the sharing of resources.",
+      "D": "It is a contention about the consequences of an economic arrangement that the argument claims is incompatible with the needs of any society.",
+      "E": "It is a generalization about societies that according to the argument is true for any society in which the majority of its citizens does not impede the introduction of new technologies."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "A certain medication that is frequently prescribed to lower a patient's cholesterol level is generally effective. A recent study of 1,000 subjects ranging widely in age indicates, however, that the cholesterol level of someone taking the medication is typically 12 to 15 percent higher than the average for that person's age group.",
+    "questionStem": "Which one of the following, if true, most helps to explain how both of the claims made above could be true?",
+    "answerChoices": {
+      "A": "A recently developed cholesterol-lowering medication is more effective than the medication described above.",
+      "B": "Another medication is prescribed to treat high cholesterol just as often as the medication described above is.",
+      "C": "In most cases, people with high cholesterol levels are not treated with drug therapy but are put on restrictive low-cholesterol diets.",
+      "D": "The medication described above is usually prescribed only for people whose cholesterol level is at least 30 percent above the average for their age group.",
+      "E": "Within the population as a whole, approximately the same number of people have relatively high cholesterol levels as have relatively low cholesterol levels."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT117",
+    "sectionNumber": 4,
+    "questionNumber": 26,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Political theorist: For all of its members to be strong in foreign policy, an alliance of countries must respond aggressively to problems. An alliance will do so only if every member of the alliance perceives the problems as grave. But the European Union countries will not all perceive a problem as grave unless they all agree that it threatens their alliance's economy. Thus, not all of the member countries of the European Union will be strong in foreign policy.",
+    "questionStem": "The conclusion drawn above follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Countries that refuse to join alliances generally respond more aggressively to problems than do countries that do join alliances.",
+      "B": "Countries become less aggressive in foreign policy if greater wealth leads them to think that they have more to lose by responding to problems aggressively.",
+      "C": "Problems that appear to some member countries of the European Union to threaten the alliance's economy will not appear so to others.",
+      "D": "European Union member countries that fail to perceive the economic relevance of problems are generally weak in foreign policy.",
+      "E": "Alliances that are economically beneficial for a given country are not necessarily beneficial with regard to foreign policy."
+    },
+    "correctAnswer": "C"
+  }
+]
