@@ -216,7 +216,7 @@ function DrillContent() {
     if (!question) return;
     
     try {
-      const { error } = await supabase.from('attempts').insert({
+      const { error } = await (supabase as any).from('attempts').insert({
         user_id: user?.id,
         qid: attemptData.qid,
         pt: question.pt,
@@ -354,7 +354,7 @@ function DrillContent() {
       const { logCorrectAnswer } = await import('@/lib/wajService');
       try {
         await logCorrectAnswer({
-          class_id: 'demo-class', // TODO: get from auth context
+          user_id: user?.id || '',
           qid: currentQuestion.qid,
           pt: currentQuestion.pt,
           section: currentQuestion.section,

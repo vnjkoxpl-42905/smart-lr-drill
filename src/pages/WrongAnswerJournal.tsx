@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -22,6 +23,7 @@ function formatTime(ms: number): string {
 
 export default function WrongAnswerJournal() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [entries, setEntries] = React.useState<WAJEntry[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [selectedEntry, setSelectedEntry] = React.useState<WAJEntry | null>(null);
@@ -32,17 +34,20 @@ export default function WrongAnswerJournal() {
     last_status?: 'wrong' | 'right';
   }>({});
 
-  // Mock class_id - in production, get from auth context
-  const class_id = 'demo-class';
+  React.useEffect(() => {
+    if (!user) navigate('/auth');
+  }, [user, navigate]);
 
   React.useEffect(() => {
-    loadEntries();
-  }, [filters]);
+    if (user) loadEntries();
+  }, [filters, user]);
 
   const loadEntries = async () => {
+    if (!user) return;
+    
     setLoading(true);
     try {
-      const data = await getWAJEntries(class_id, filters);
+      const data = await getWAJEntries(user.id, filters);
       setEntries(data);
     } catch (error) {
       console.error('Failed to load WAJ entries:', error);

@@ -76,7 +76,7 @@ export default function Analytics() {
 
     try {
       // Fetch attempts
-      const { data: attempts, error: attemptsError } = await supabase
+      const { data: attempts, error: attemptsError } = await (supabase as any)
         .from("attempts")
         .select("*")
         .eq("user_id", user.id)
