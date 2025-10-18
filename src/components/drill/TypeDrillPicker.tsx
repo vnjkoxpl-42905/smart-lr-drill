@@ -220,7 +220,7 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
             <div>
               <h3 className="font-semibold">Smart Drill Builder</h3>
               <p className="text-sm text-muted-foreground">
-                Let Joshua analyze your weak areas and build an optimal drill
+                Let me analyze your weak areas and build an optimal drill
               </p>
             </div>
           </div>
