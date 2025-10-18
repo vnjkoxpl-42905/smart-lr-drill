@@ -2,9 +2,60 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.75.0';
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "*", // TODO: Restrict to specific domain in production
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+
+// Input validation
+interface QuestionInput {
+  qid: string;
+  pt: number;
+  section: number;
+  qnum: number;
+  qtype: string;
+  level: number;
+  stimulus: string;
+  questionStem: string;
+  answerChoices: { [key: string]: string };
+  correctAnswer: string;
+  userAnswer: string;
+  reasoningType?: string;
+  breakdown?: any;
+  answerChoiceExplanations?: any;
+}
+
+interface MessageInput {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+function validateQuestion(q: any): q is QuestionInput {
+  return (
+    typeof q.qid === 'string' && q.qid.length > 0 && q.qid.length < 50 &&
+    typeof q.pt === 'number' && q.pt >= 1 && q.pt <= 200 &&
+    typeof q.section === 'number' && q.section >= 1 && q.section <= 4 &&
+    typeof q.qnum === 'number' && q.qnum >= 1 && q.qnum <= 30 &&
+    typeof q.qtype === 'string' && q.qtype.length > 0 && q.qtype.length < 100 &&
+    typeof q.level === 'number' && q.level >= 1 && q.level <= 5 &&
+    typeof q.stimulus === 'string' && q.stimulus.length < 10000 &&
+    typeof q.questionStem === 'string' && q.questionStem.length < 1000 &&
+    typeof q.answerChoices === 'object' &&
+    typeof q.correctAnswer === 'string' &&
+    typeof q.userAnswer === 'string'
+  );
+}
+
+function validateMessages(messages: any[]): messages is MessageInput[] {
+  if (!Array.isArray(messages) || messages.length > 50) {
+    return false;
+  }
+  return messages.every(m => 
+    (m.role === 'user' || m.role === 'assistant') &&
+    typeof m.content === 'string' &&
+    m.content.length > 0 &&
+    m.content.length < 10000
+  );
+}
 
 // Helper function to get coaching knowledge from database
 async function getCoachingKnowledge(supabase: any, question: any) {
@@ -60,21 +111,79 @@ serve(async (req) => {
   }
 
   try {
-    const { question, messages } = await req.json();
+    // Verify authentication
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized - No authorization header' }), 
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseAnonKey = Deno.env.get('SUPABASE_ANON_KEY')!;
+    
+    // Create client with user's auth token
+    const supabaseClient = createClient(
+      supabaseUrl,
+      supabaseAnonKey,
+      { global: { headers: { Authorization: authHeader } } }
+    );
+
+    const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
+    if (authError || !user) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized - Invalid session' }), 
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Parse and validate input
+    const body = await req.json();
+    const { question, messages } = body;
+
+    if (!validateQuestion(question)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid question data' }), 
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (!validateMessages(messages)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid messages data (max 50 messages, max 10000 chars each)' }), 
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Verify user attempted this question
+    const { data: attempt } = await supabaseClient
+      .from('attempts')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('qid', question.qid)
+      .maybeSingle();
+
+    if (!attempt) {
+      return new Response(
+        JSON.stringify({ error: 'You must attempt this question before requesting coaching' }), 
+        { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
     const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
     if (!LOVABLE_API_KEY) {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
-    if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-      throw new Error("Supabase credentials not configured");
+    if (!SUPABASE_SERVICE_ROLE_KEY) {
+      throw new Error("Supabase service role key not configured");
     }
 
-    // Initialize Supabase client
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+    // Initialize Supabase client with service role for knowledge base access
+    const supabase = createClient(supabaseUrl, SUPABASE_SERVICE_ROLE_KEY);
 
     // Get coaching knowledge from database
     const knowledge = await getCoachingKnowledge(supabase, question);
@@ -89,10 +198,16 @@ serve(async (req) => {
       phase = 3; // Conversational follow-up
     }
 
-    console.log(`Joshua coaching - Phase ${phase}`, {
-      messageCount: messages.length,
-      qid: `PT${question.pt}-S${question.section}-Q${question.qnum}`,
-    });
+    // Log coaching session to database
+    supabaseClient.from('events').insert({
+      user_id: user.id,
+      event_type: 'coaching_request',
+      metadata: { 
+        phase, 
+        message_count: messages.length,
+        qid: question.qid
+      }
+    }); // Fire and forget - don't await
 
     // Build context strings
     const answerChoicesText = Object.entries(question.answerChoices)
@@ -262,7 +377,6 @@ Answer follow-up questions naturally. Use your knowledge base to provide detaile
       }
     );
   } catch (e) {
-    console.error("tutor-chat error:", e);
     return new Response(
       JSON.stringify({ error: e instanceof Error ? e.message : "Unknown error" }),
       {
