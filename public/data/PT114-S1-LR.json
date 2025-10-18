@@ -1,0 +1,410 @@
+[
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Physician: In itself, exercise does not cause heart attacks; rather, a sudden increase in an exercise regimen can be a cause. When people of any physical condition suddenly increase their amount of exercise, they also increase their risk of heart attack. As a result, there will be an increased risk of heart attack among employees of this company due to the new health program.",
+    "questionStem": "The conclusion drawn by the physician follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Employees will abruptly increase their amount of exercise as a result of the new health program.",
+      "B": "The exercises involved in the new health program are more strenuous than those in the previous health program.",
+      "C": "The new health program will force employees of all levels of health to exercise regularly.",
+      "D": "The new health program constitutes a sudden change in the company's policy.",
+      "E": "All employees, no matter what their physical condition, will participate in the new health program."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Last month OCF, Inc., announced what it described as a unique new product: an adjustable computer workstation. Three days later ErgoTech unveiled an almost identical product. The two companies claim that the similarities are coincidental and occurred because the designers independently reached the same solution to the same problem. The similarities are too fundamental to be mere coincidence, however. The two products not only look alike, but they also work alike. Both are oddly shaped with identically placed control panels with the same types of controls. Both allow the same types of adjustments and the same types of optional enhancements.",
+    "questionStem": "The main point of the argument is that",
+    "answerChoices": {
+      "A": "the two products have many characteristics in common",
+      "B": "ErgoTech must have copied the design of its new product from OCF's design",
+      "C": "the similarities between the two products are not coincidental",
+      "D": "product designers sometimes reach the same solution to a given problem without consulting each other",
+      "E": "new products that at first appear to be unique are sometimes simply variations of other products"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "An anthropologist hypothesized that a certain medicinal powder contained a significant amount of the deadly toxin T. When the test she performed for the presence of toxin T was negative, the anthropologist did not report the results. A chemist who nevertheless learned about the test results charged the anthropologist with fraud. The anthropologist, however, countered that those results were invalid because the powder had inadvertently been tested in an acidic solution.",
+    "questionStem": "In the absence of the anthropologist's reply, which one of the following principles, if established, would most support the chemist's charge?",
+    "answerChoices": {
+      "A": "Reporting results for an experiment that was not conducted and reporting a false result for an actual experiment are both instances of scientific fraud.",
+      "B": "Scientists can commit fraud and yet report some disconfirmations of their hypotheses.",
+      "C": "Scientists can neglect to report some disconfirmations of their hypotheses and yet be innocent of fraud.",
+      "D": "Scientists commit fraud whenever they report as valid any test result they know to be invalid.",
+      "E": "Scientists who neglect to report any experiment that could be interpreted as disconfirming their hypotheses have thereby committed fraud."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "An anthropologist hypothesized that a certain medicinal powder contained a significant amount of the deadly toxin T. When the test she performed for the presence of toxin T was negative, the anthropologist did not report the results. A chemist who nevertheless learned about the test results charged the anthropologist with fraud. The anthropologist, however, countered that those results were invalid because the powder had inadvertently been tested in an acidic solution.",
+    "questionStem": "Which one of the following, if true, most strengthens the anthropologist's counterargument?",
+    "answerChoices": {
+      "A": "The anthropologist had evidence from field work that the medicinal powder was typically prepared using toxin T.",
+      "B": "The activity level of toxin T tends to decline if the powder is stored for a long time.",
+      "C": "When it is put into an acidic solution, toxin T becomes undetectable.",
+      "D": "A fresh batch of powder for a repeat analysis was available at the time of the test.",
+      "E": "The type of analysis used was insensitive to very small amounts of toxin T."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Naima: The proposed new computer system, once we fully implemented it, would operate more smoothly and efficiently than the current system. So we should devote the resources necessary to accomplish the conversion as soon as possible.\nNakai: We should keep the current system for as long as we can. The cost in time and money of converting to the new system would be greater than any predicted benefits.",
+    "questionStem": "Naima and Nakai disagree with each other over whether",
+    "answerChoices": {
+      "A": "the predicted benefits of the new computer system will be realized",
+      "B": "it is essential to have the best computer system available",
+      "C": "accomplishing the conversion is technically impossible",
+      "D": "the current computer system does not work well enough to do what it is supposed to do",
+      "E": "the conversion to a new computer system should be delayed"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Every year, new reports appear concerning the health risks posed by certain substances, such as coffee and sugar. One year an article claimed that coffee is dangerous to one's health. The next year, another article argued that coffee has some benefits for one's health. From these contradictory opinions, we see that experts are useless for guiding one's decisions about one's health.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the argument above?",
+    "answerChoices": {
+      "A": "The argument takes for granted that coffee is dangerous to one's health.",
+      "B": "The argument presumes, without providing warrant, that one always wants expert guidance in making decisions about one's health.",
+      "C": "The argument fails to consider the nature of expert opinion in areas other than health.",
+      "D": "The argument presumes, without providing justification, that because expert opinion is trustworthy in one case, it must therefore be trustworthy in all cases.",
+      "E": "The argument fails to consider that coffee may be harmful to one's health in some respects and beneficial in others."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Because people are generally better at detecting mistakes in others' work than in their own, a prudent principle is that one should always have one's own work checked by someone else.",
+    "questionStem": "Which one of the following provides the best illustration of the principle above?",
+    "answerChoices": {
+      "A": "The best elementary school math teachers are not those for whom math was always easy. Teachers who had to struggle through math themselves are better able to explain math to students.",
+      "B": "One must make a special effort to clearly explain one's views to someone else; people normally find it easier to understand their own views than to understand others' views.",
+      "C": "Juries composed of legal novices, rather than panels of lawyers, should be the final arbiters in legal proceedings. People who are not legal experts are in a better position to detect good legal arguments by lawyers than are other lawyers.",
+      "D": "People should always have their writing proofread by someone else. Someone who does not know in advance what is meant to be said is in a better position to spot typographical errors.",
+      "E": "Two people going out for dinner will have a more enjoyable meal if they order for each other. By allowing someone else to choose, one opens oneself up to new and exciting dining experiences."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Pundit: The only airline providing service for our town announced that because the service is unprofitable it will discontinue this service next year. Town officials have urged the community to use the airline's service more frequently so that the airline will change its decision. There is no reason to comply with their recommendation, however, for just last week these same officials drove to an out-of-town conference instead of flying.",
+    "questionStem": "The pundit's reasoning is most vulnerable to criticism on the grounds that it presumes, without providing justification, that",
+    "answerChoices": {
+      "A": "increasing the number of tickets sold without increasing ticket prices will be sufficient to make continued air service economically feasible",
+      "B": "suspending service and losing money by continuing service are the airline's only options",
+      "C": "the town officials paid for their trip with taxpayers' money rather than their own money",
+      "D": "ground transportation is usually no less expensive than airplane transportation",
+      "E": "if the town officials did not follow their own advice then that advice is not worth following"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "Some scientists believe that 65 million years ago an asteroid struck what is now the Yucatán Peninsula, thereby causing extinction of the dinosaurs. These scientists have established that such a strike could have hurled enough debris into the atmosphere to block sunlight and cool the atmosphere. Without adequate sunlight, food sources for herbivorous dinosaurs would have disappeared, and no dinosaurs could have survived a prolonged period of low temperatures. These same scientists, however, have also established that most debris launched by the asteroid would have settled to the ground within six months, too soon for the plants to disappear or the dinosaurs to freeze.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy between the scientists' beliefs and the scientists' results, as described above?",
+    "answerChoices": {
+      "A": "Loss of the herbivorous dinosaurs would have deprived the carnivorous dinosaurs of their food source.",
+      "B": "Dinosaurs inhabited most landmasses on the planet but were not especially abundant in the area of the asteroid strike.",
+      "C": "A cloud of debris capable of diminishing sunlight by 20 percent would have cooled the earth's surface by 7 to 10 degrees Celsius.",
+      "D": "The asteroid was at least 9.6 km in diameter, large enough for many dinosaurs to be killed by the strike itself and by subsequent tidal waves.",
+      "E": "Dinosaurs were susceptible to fatal respiratory problems caused by contamination of the air by asteroid debris."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Bernard: For which language, and thus which frequency distribution of letters and letter sequences, was the standard typewriter keyboard designed?\nCora: To ask this question, you must be making a mistaken assumption: that typing speed was to be maximized. The real danger with early typewriters was that operators would hit successive keys too quickly, thereby crashing typebars into each other, bending connecting wires, and so on. So the idea was to slow the operator down by making the most common letter sequences awkward to type.\nBernard: This is surely not right! These technological limitations have long since vanished, yet the keyboard is still as it was then.",
+    "questionStem": "Which one of the following, if true, could be used by Cora to counter Bernard's rejection of her explanation?",
+    "answerChoices": {
+      "A": "Typewriters and word-processing equipment are typically sold to people who have learned to use the standard keyboard and who, therefore, demand it in equipment they buy.",
+      "B": "Typewriters have been superseded in most offices by word-processing equipment, which has inherited the standard keyboard from typewriters.",
+      "C": "The standard keyboard allows skilled operators to achieve considerable typing speeds, though it makes acquiring such skills relatively difficult.",
+      "D": "A person who has learned one keyboard layout can readily learn to use a second one in place of the first, but only with difficulty learn to use a second one alongside the first.",
+      "E": "It is now possible to construct typewriters and word-processing equipment in which a single keyboard can accommodate two or even more different keyboard layouts, each accessible to the operator at will."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Some teachers claim that students would not learn curricular content without the incentive of grades. But students with intense interest in the material would learn it without this incentive, while the behavior of students lacking all interest in the material is unaffected by such an incentive. The incentive of grades, therefore, serves no essential academic purpose.",
+    "questionStem": "The reasoning in the argument is flawed because the argument",
+    "answerChoices": {
+      "A": "takes for granted that the only purpose of school is to convey a fixed body of information to students",
+      "B": "takes for granted that students who are indifferent to the grades they receive are genuinely interested in the curricular material",
+      "C": "fails to consider that the incentive of grades may serve some useful nonacademic purpose",
+      "D": "ignores the possibility that students who lack interest in the curricular material would be quite interested in it if allowed to choose their own curricular material",
+      "E": "fails to consider that some students may be neither fascinated by nor completely indifferent to the subject being taught"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Economist: Technology now changes so rapidly that workers need periodic retraining. Such retraining can be efficient only if it allows individual companies to meet their own short-term needs. Hence, large governmental job retraining programs are no longer a viable option in the effort to retrain workers efficiently.",
+    "questionStem": "Which one of the following is an assumption required by the economist's argument?",
+    "answerChoices": {
+      "A": "Workers did not need to be retrained when the pace of technological change was slower than it is currently.",
+      "B": "Large job retraining programs will be less efficient than smaller programs if the pace of technological change slows.",
+      "C": "No single type of retraining program is most efficient at retraining technological workers.",
+      "D": "Large governmental job retraining programs do not meet the short-term needs of different individual companies.",
+      "E": "Technological workers are more likely now than in the past to move in order to find work for which they are already trained."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Recent research indicates that increased consumption of fruits and vegetables by middle-aged people reduces their susceptibility to stroke in later years. The researchers speculate that this may be because fruits and vegetables are rich in folic acid. Low levels of folic acid are associated with high levels of homocysteine, an amino acid that contributes to blocked arteries.",
+    "questionStem": "Which one of the following statements is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "An increased risk of stroke is correlated with low levels of homocysteine.",
+      "B": "A decreased risk of stroke is correlated with increased levels of folic acid.",
+      "C": "An increased propensity for blocked arteries is correlated with decreased levels of homocysteine.",
+      "D": "A decreased propensity for blocked arteries is correlated with low levels of folic acid.",
+      "E": "Stroke is prevented by ingestion of folic acid in quantities sufficient to prevent a decline in the levels of homocysteine."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Thirty years ago, the percentage of the British people who vacationed in foreign countries was very small compared with the large percentage of the British population who travel abroad for vacations now. Foreign travel is, and always has been, expensive from Britain. Therefore, British people must have, on average, more money to spend on vacations now than they did 30 years ago.",
+    "questionStem": "The argument requires assuming which one of the following?",
+    "answerChoices": {
+      "A": "If foreign travel had been less expensive 30 years ago, British people would still not have had enough money to take vacations abroad.",
+      "B": "If travel to Britain were less expensive, more people of other countries would travel to Britain for their vacations.",
+      "C": "If the percentage of British people vacationing abroad was lower 30 years ago, then the British people of 30 years ago must have spent more money on domestic vacations.",
+      "D": "If more of the British people of 30 years ago had had enough money to vacation abroad, more would have done so.",
+      "E": "If British people are now wealthier than they were 30 years ago, then they must have more money to spend on vacations now than they did 30 years ago."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "Mystery stories often feature a brilliant detective and the detective's dull companion. Clues are presented in the story, and the companion wrongly infers an inaccurate solution to the mystery using the same clues that the detective uses to deduce the correct solution. Thus, the author's strategy of including the dull companion gives readers a chance to solve the mystery while also diverting them from the correct solution.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Most mystery stories feature a brilliant detective who solves the mystery presented in the story.",
+      "B": "Mystery readers often solve the mystery in a story simply by spotting the mistakes in the reasoning of the detective's dull companion in that story.",
+      "C": "Some mystery stories give readers enough clues to infer the correct solution to the mystery.",
+      "D": "The actions of the brilliant detective in a mystery story rarely divert readers from the actions of the detective's dull companion.",
+      "E": "The detective's dull companion in a mystery story generally uncovers the misleading clues that divert readers from the mystery's correct solution."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Policy analyst: Increasing the size of a police force is only a stopgap method of crime prevention; it does not get at the root causes of crime. Therefore, city officials should not respond to rising crime rates by increasing the size of their city's police force.",
+    "questionStem": "The flawed reasoning in which one of the following arguments most closely resembles the flawed reasoning in the policy analyst's argument?",
+    "answerChoices": {
+      "A": "Some people think that rules with higher standards than people can live up to, such as those enjoining total honesty, prevent some immoral behavior by giving people a guide to self-improvement. But such rules actually worsen behavior by making people cynical about rules. Thus, societies should not institute overly demanding rules.",
+      "B": "Swamps play an important role in allaying the harsh effects of floods because they absorb a great deal of water. Although dams prevent many floods, they worsen the effects of the greatest floods by drying up swamps. Thus dams should not be built.",
+      "C": "Although less effective in preventing theft than security guards, burglar alarm systems are more affordable to maintain. Because the greater loss from theft when alarms are used is outweighed by their lower cost, companies are advised always to use burglar alarm systems.",
+      "D": "Because taking this drug does not cure the disease for which it is prescribed, but only reduces the disease's most harmful effects, doctors should not continue to prescribe this drug.",
+      "E": "We will never fully understand what causes people to engage in criminal activity. Therefore, we should investigate other ways to improve society's ability to combat crime."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "In order to determine automobile insurance premiums for a driver, insurance companies calculate various risk factors; as the risk factors increase, so does the premium. Certain factors, such as the driver's age and past accident history, play an important role in these calculations. Yet these premiums should also increase with the frequency with which a person drives. After all, a person's chance of being involved in a mishap increases in proportion to the number of times that person drives.",
+    "questionStem": "Which one of the following, if true, most undermines the argument?",
+    "answerChoices": {
+      "A": "People who drive infrequently are more likely to be involved in accidents that occur on small roads than in highway accidents.",
+      "B": "People who drive infrequently are less likely to follow rules for safe driving than are people who drive frequently.",
+      "C": "People who drive infrequently are less likely to violate local speed limits than are people who drive frequently.",
+      "D": "People who drive frequently are more likely to make long-distance trips in the course of a year than are people who drive infrequently.",
+      "E": "People who drive frequently are more likely to become distracted while driving than are people who drive infrequently."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "In order to determine automobile insurance premiums for a driver, insurance companies calculate various risk factors; as the risk factors increase, so does the premium. Certain factors, such as the driver's age and past accident history, play an important role in these calculations. Yet these premiums should also increase with the frequency with which a person drives. After all, a person's chance of being involved in a mishap increases in proportion to the number of times that person drives.",
+    "questionStem": "The claim that insurance premiums should increase as the frequency with which a driver drives increases plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "a premise of the argument",
+      "B": "the conclusion of the argument",
+      "C": "evidence offered in support of one of the premises",
+      "D": "an assertion phrased to preclude an anticipated objection",
+      "E": "a clarification of a key term in the argument"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Essayist: Only happiness is intrinsically valuable; other things are valuable only insofar as they contribute to happiness. Some philosophers argue that the fact that we do not approve of a bad person's being happy shows that we value happiness only when it is deserved. This supposedly shows that we find something besides happiness to be intrinsically valuable. But the happiness people deserve is determined by the amount of happiness they bring to others. Therefore,",
+    "questionStem": "Which one of the following most logically completes the final sentence of the essayist's argument?",
+    "answerChoices": {
+      "A": "the notion that people can be deserving of happiness is ultimately incoherent",
+      "B": "people do not actually value happiness as much as they think they do",
+      "C": "the judgment that a person deserves to be happy is itself to be understood in terms of happiness",
+      "D": "the only way to be assured of happiness is to bring happiness to those who have done something to deserve it",
+      "E": "a truly bad person cannot actually be very happy"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Sociologist: Climate and geology determine where human industry can be established. Drastic shifts in climate always result in migrations, and migrations bring about the intermingling of ideas necessary for rapid advances in civilization.",
+    "questionStem": "The sociologist's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Climate is the primary cause of migration.",
+      "B": "All shifts in climate produce a net gain in human progress.",
+      "C": "A population remains settled only where the climate is fairly stable.",
+      "D": "Populations settle in every place where human industry can be established.",
+      "E": "Every migration is accompanied by rapid advances in civilization."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Some educators claim that it is best that school courses cover only basic subject matter, but cover it in depth. These educators argue that if students achieve a solid grasp of the basic concepts and investigatory techniques in a subject, they will be able to explore the breadth of that subject on their own after the course is over. But if they simply learn a lot of factual information, without truly understanding its significance, they will not be well equipped for further study on their own.",
+    "questionStem": "The educators' reasoning provides grounds for accepting which one of the following statements?",
+    "answerChoices": {
+      "A": "It is easier to understand how plants and animals are classified after learning how plants and animals can be useful.",
+      "B": "It is more difficult to recall the details of a dull and complicated lecture than of a lively and interesting one.",
+      "C": "It is easier to remember new ideas explained personally by a teacher than ideas that one explores independently.",
+      "D": "It is easier to understand any Greek tragedy after one has analyzed a few of them in detail.",
+      "E": "It is easier to learn many simple ideas well than to learn a few complicated ideas well."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Parallel",
+    "questionDifficulty": 4,
+    "stimulus": "Damming the Merv River would provide irrigation for the dry land in its upstream areas; unfortunately, a dam would reduce agricultural productivity in the fertile land downstream by reducing the availability and quality of the water there. The productivity loss in the downstream area would be greater than the productivity gain upstream, so building a dam would yield no overall gain in agricultural productivity in the region as a whole.",
+    "questionStem": "The reasoning in the argument above most closely parallels that in which one of the following?",
+    "answerChoices": {
+      "A": "Disease-causing bacteria in eggs can be destroyed by overcooking the eggs, but the eggs then become much less appetizing; health is more important than taste, however, so it is better to overcook eggs than not to do so.",
+      "B": "Increasing the price of transatlantic telephone calls will discourage many private individuals from making them. But since most transatlantic telephone calls are made by businesses, not by private individuals, a rate increase will not reduce telephone company profits.",
+      "C": "A new highway will allow suburban commuters to reach the city more quickly, but not without causing increased delays within the city that will more than offset any time saved on the highway. Therefore, the highway will not reduce suburban commuters' overall commuting time.",
+      "D": "Doctors can prescribe antibiotics for many minor illnesses, but antibiotics are expensive, and these illnesses can often be cured by rest alone. Therefore, it is better to rest at home than to see a doctor for these illnesses.",
+      "E": "A certain chemical will kill garden pests that damage tomatoes, but that chemical will damage certain other plants more severely than the pests damage the tomatoes, so the only gardens that will benefit from the use of the chemical are those in which only tomatoes are grown."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Activist: Food producers irradiate food in order to prolong its shelf life. Five animal studies were recently conducted to investigate whether this process alters food in a way that could be dangerous to people who eat it. The studies concluded that irradiated food is safe for humans to eat. However, because these studies were subsequently found by a panel of independent scientists to be seriously flawed in their methodology, it follows that irradiated food is not safe for human consumption.",
+    "questionStem": "The reasoning in the activist's argument is flawed because that argument",
+    "answerChoices": {
+      "A": "treats a failure to prove a claim as constituting proof of the denial of that claim",
+      "B": "treats methodological flaws in past studies as proof that it is currently not possible to devise methodologically adequate alternatives",
+      "C": "fails to consider the possibility that even a study whose methodology has no serious flaws nonetheless might provide only weak support for its conclusion",
+      "D": "fails to consider the possibility that what is safe for animals might not always be safe for human beings",
+      "E": "fails to establish that the independent scientists know more about food irradiation than do the people who produced the five studies"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "One-year-olds ordinarily prefer the taste of sweet food to that of salty food. Yet if one feeds a one-year-old salty food rather than sweet food, then over a period of about a year he or she will develop a taste for the salty flavor and choose to eat salty food rather than sweet food. Thus, a young child's taste preferences can be affected by the type of food he or she has been exposed to.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Two-year-olds do not naturally prefer salty food to sweet food.",
+      "B": "A child's taste preferences usually change between age one and age two.",
+      "C": "Two-year-olds do not naturally dislike salty food so much that they would not choose it over some other foods.",
+      "D": "The salty food fed to infants in order to change their taste preferences must taste pleasant.",
+      "E": "Sweet food is better for infant development than is salty food."
+    },
+    "correctAnswer": "A"
+  }
+]

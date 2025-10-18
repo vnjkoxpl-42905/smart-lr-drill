@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Journalist: One reason many people believe in extrasensory perception (ESP) is that they have heard of controlled experiments in which ESP is purportedly demonstrated. However, ESP is a myth and the public is deluded by these experiments, for a prominent researcher has admitted to falsifying data on psychic phenomena in order to obtain additional grants.",
+    "questionStem": "The reasoning in the journalist's argument is flawed because this argument",
+    "answerChoices": {
+      "A": "uses an irrelevant personal attack on the integrity of someone",
+      "B": "infers that something must be a myth from the fact that the general public believes it",
+      "C": "presupposes that, in general, only evidence from experiments can support beliefs",
+      "D": "implies that all scientists who depend on grants to support their research are unreliable",
+      "E": "overgeneralizes from the example of one deceptive researcher"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "One way kidney stones can form is when urine produced in the kidneys is overly concentrated with calcium or oxalate. Reducing dietary calcium has been thought, therefore, to decrease the likelihood that calcium will concentrate and form additional stones. Oddly enough, for many people the chances of recurrence are decreased by increasing calcium intake.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+    "answerChoices": {
+      "A": "Laboratory studies on animals with kidney stones reveal that they rarely get additional stones once calcium supplements are added to the diet.",
+      "B": "Increasing dietary oxalate while reducing dietary calcium does not reduce the chances of kidney stone recurrence.",
+      "C": "Kidney stone development is sometimes the result of an inherited disorder that can result in excessive production of calcium and oxalate.",
+      "D": "Increasing calcium intake increases the amount of calcium eliminated through the intestines, which decreases the amount to be filtered by the kidneys.",
+      "E": "Some kidney stones are composed of uric acid rather than a combination of calcium and oxalate."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "David: Forbidding companies from hiring permanent replacements for striking employees would be profoundly unfair. Such companies would have little leverage in their negotiations with strikers.\nLin: No, the companies would still have sufficient leverage in negotiations if they hired temporary replacements.",
+    "questionStem": "Which one of the following statements is most strongly supported by the exchange between David and Lin?",
+    "answerChoices": {
+      "A": "David does not believe that the freedom to hire temporary replacements gives companies any leverage in their negotiations with strikers.",
+      "B": "David and Lin believe that companies should be allowed as much leverage in negotiations as the striking employees.",
+      "C": "David and Lin disagree over the amount of leverage companies lose in their negotiations with strikers by not being able to hire permanent replacements.",
+      "D": "David and Lin disagree over how much leverage should be accorded companies in their negotiations with strikers.",
+      "E": "Lin believes it is unfair to forbid companies from hiring permanent replacements for their striking employees."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "A favorable biography of a politician omits certain incriminating facts about the politician that were available to anyone when the book was written. The book's author claims that, because he was unaware of these facts when he wrote the book, he is not accountable for the fact that readers were misled by this omission. In a biographer, however, ignorance of this kind cannot be used to evade blame for misleading readers.",
+    "questionStem": "Which one of the following principles, if established, does most to justify the position advanced by the passage?",
+    "answerChoices": {
+      "A": "An author of a biography should not be blamed for whether the book is perceived to be favorable or unfavorable by readers of the biography.",
+      "B": "An author of a biography should be blamed for readers' misperceptions only when facts are omitted deliberately in order to mislead the readers.",
+      "C": "An author of a biography should not be blamed for omitting facts if those facts would have supported the author's view.",
+      "D": "An author of a biography should be blamed for misleading readers only if facts are omitted to which the author alone had access when the biography was written.",
+      "E": "An author of a biography should be blamed for readers' misperceptions caused by omitting facts that were widely available when the biography was written."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Logician: I have studied and thoroughly mastered the laws of logic. So to argue that I sometimes violate the laws of logic in ordinary conversation would be like arguing that some physicist circumvents the laws of physics in everyday life.",
+    "questionStem": "The reasoning in the logician's argument is questionable because this argument",
+    "answerChoices": {
+      "A": "ignores the fact that our conception of physical laws undergoes constant change",
+      "B": "presents no evidence that physics is as difficult to master as logic",
+      "C": "fails to rule out the possibility that some physicist could circumvent the laws of physics in everyday life",
+      "D": "treats two kinds of things that differ in important respects as if they do not differ",
+      "E": "has a conclusion that contradicts what is asserted in its premise"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "One thousand people in Denmark were questioned about their views on banning cigarette advertising. The sample comprised adults who are representative of the general population, and who, ten years previously, had been questioned on the same issue. Interestingly, their opinions changed little. Results show that 31 percent are in favor of such a ban, 24 percent are against it, 38 percent are in favor, but only for certain media, and 7 percent have no opinion.",
+    "questionStem": "The survey results in the passage best support which one of the following conclusions?",
+    "answerChoices": {
+      "A": "People's opinions never change very much.",
+      "B": "A minority of Denmark's population feels that banning cigarette advertising would set a bad precedent.",
+      "C": "Most of Denmark's population is not seriously concerned about cigarette advertising.",
+      "D": "Most of Denmark's population favors some sort of ban on cigarette advertising.",
+      "E": "Most of Denmark's population does not smoke cigarettes."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Passenger volume in the airline industry has declined dramatically over the past two years, and thus fewer travelers and fewer planes are using airports. Since airport expansion can be warranted only by increases in air traffic volume, and since it will probably be at least five years before passenger volume returns to and then exceeds its previous level, it seems surprising that now is the time that airports are going ahead with plans to expand their passenger terminal facilities.",
+    "questionStem": "Which one of the following, if true, provides the best reason in favor of the airports' timing of their planned expansions?",
+    "answerChoices": {
+      "A": "It is generally more difficult to finance major construction projects when the economy is in a period of decline.",
+      "B": "Low volume in passenger air travel permits airport expansion with relatively little inconvenience to the public.",
+      "C": "A rise in fuel costs that is expected in the near future will drive up the cost of all forms of transportation, including airline travel.",
+      "D": "When passenger volume begins to grow again after a period of decline, most airlines can, initially, absorb the increase without adding new routes or new planes.",
+      "E": "A sustained decline in passenger travel could lead to the failure of many airlines and the absorption of their routes by those airlines that survive."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Books updating the classification systems used by many libraries are not free—in fact they are very expensive. The only way to sell copies of them is to make the potential buyers believe they need to adopt the most recent system. Thus, these frequent changes in the classification systems are just a ploy by the publishers to make libraries buy their products.",
+    "questionStem": "The reasoning above is most vulnerable to criticism because it",
+    "answerChoices": {
+      "A": "claims without providing warrant that the books are unreasonably expensive",
+      "B": "concludes that a possible ulterior motive must be the only motive",
+      "C": "fails to consider that there may be potential buyers of these books other than libraries",
+      "D": "concludes that there is no need ever to change classification systems",
+      "E": "fails to consider that the libraries cannot afford to buy every book they want"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "During the three months before and the three months after a major earthquake in California, students at a college there happened to be keeping a record of their dreams. After experiencing the earthquake, half of the students reported dreaming about earthquakes. During the same six months, a group of college students in Ontario who had never experienced an earthquake also recorded their dreams. Almost none of the students in Ontario reported dreaming about earthquakes. So it is clear that experiencing an earthquake can cause people to dream about earthquakes.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Before the California earthquake, no more of the students in California than of those in Ontario recorded dreams about earthquakes.",
+      "B": "The students in California were members of a class studying dreams and dream recollection, but the students in Ontario were not.",
+      "C": "Before they started keeping records of their dreams, many of the students in California had experienced at least one earthquake.",
+      "D": "The students in Ontario reported having more dreams overall, per student, than the students in California did.",
+      "E": "The students in Ontario who reported having dreams about earthquakes recorded the dreams as having occurred after the California earthquake."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "It is wrong to waste our natural resources, and it is an incredible waste of resources to burn huge amounts of trash in incinerators. When trash is recycled, fewer resources are wasted. Because less trash will be recycled if an incinerator is built, the city should not build an incinerator.",
+    "questionStem": "Which one of the following can be properly inferred from the statements above?",
+    "answerChoices": {
+      "A": "All of the city's trash that is not recycled goes into incinerators.",
+      "B": "By recycling more trash, the city can stop wasting resources entirely.",
+      "C": "The most effective way to conserve resources is to recycle trash.",
+      "D": "If the city is to avoid wasting resources, huge amounts of trash cannot be burned in any city incinerator.",
+      "E": "If the city does not burn trash, it will not waste resources."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Human intelligence is not possible without human emotions. A computer is something that can never have emotions, so for that reason alone a computer will never be able to display intelligence.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "A computer could have emotions only if it could display intelligence.",
+      "B": "Computer technology will not greatly advance beyond its current state.",
+      "C": "Someone or something is intelligent only if it can identify its emotions.",
+      "D": "The greater the capacity to feel emotions, the more intelligence there is.",
+      "E": "Being intelligent requires the capacity to have emotions."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Several recent studies establish that most people would want to be informed if they had any serious medical condition. In each study, over 80 percent of the people surveyed indicated that they would want to be told.",
+    "questionStem": "Each of the following, if true, weakens the argument except:",
+    "answerChoices": {
+      "A": "In another recent study, most of the people surveyed indicated that they would not want to be told if they had a serious medical condition.",
+      "B": "People often do not indicate their true feelings when responding to surveys.",
+      "C": "Some of the researchers conducting the studies had no background in medicine.",
+      "D": "Some questions asked in the studies suggested that reasonable people would want to be told if they had a serious medical condition.",
+      "E": "The people surveyed in the studies were all young students in introductory psychology courses."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Historian: Political regimes that routinely censor various forms of expression on the grounds that they undermine public morality inevitably attempt to expand the categories of proscribed expression to include criticisms that these regimes perceive to threaten their power. Accordingly, many totalitarian regimes classify as blasphemous or pornographic those writings that would, if widely influential, reduce public passivity.",
+    "questionStem": "Which one of the following is an assumption on which the historian's reasoning depends?",
+    "answerChoices": {
+      "A": "Unless a piece of writing expresses something that is widely believed, it is unlikely to be very popular.",
+      "B": "Not all political regimes that routinely censor forms of expression on the grounds that they erode public morality are totalitarian regimes.",
+      "C": "A totalitarian regime can perceive loss of public passivity as a threat to its power.",
+      "D": "Widespread public passivity is usually needed for a regime to retain political power.",
+      "E": "Most writings that totalitarian regimes label blasphemous or pornographic would, if widely influential, reduce public passivity."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Ethicist: Both ASA and TPA are clot-dissolving agents. Recent studies show that the more expensive agent, TPA, would save at most two more lives than would ASA out of every 50 cardiac patients to whom they are postoperatively administered. However, since the relatives of the patients who die simply because they were given the less expensive medicine would be particularly grieved, the financial saving involved in using ASA over TPA must also be weighed against such considerations.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the ethicist's argument?",
+    "answerChoices": {
+      "A": "ASA should never be given to postoperative cardiac patients in place of TPA.",
+      "B": "TPA is a slightly more effective clot-dissolving agent than ASA.",
+      "C": "The extra expense of TPA cannot be weighed simply against the few additional lives saved.",
+      "D": "ASA is a less expensive clot-dissolving agent than TPA.",
+      "E": "Relatives of a patient who has died grieve more if the patient received ASA rather than TPA."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Ashley: Words like \"of\" and \"upon,\" unlike \"pencil\" and \"shirt,\" do not refer to anything.\nJoshua: I agree; and since such words are meaningless, they should be abandoned.",
+    "questionStem": "Joshua's remarks indicate that he interpreted Ashley's statement to imply that",
+    "answerChoices": {
+      "A": "only words that refer to something have meaning",
+      "B": "words that are not useful are meaningless",
+      "C": "words that refer to something are meaningful",
+      "D": "if a word is not useful, it should be abandoned",
+      "E": "all words that refer to something are useful"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Ethicist: Some would ban cloning on the grounds that clones would be subpeople, existing to indulge the vanity of their \"originals.\" It is not illegal, however, to use one person as a vehicle for the ambitions of another. Some people push their children to achieve in academics or athletics. You do not have to have been born in a test tube to be an extension of someone else's ego.",
+    "questionStem": "The assertion that it is not illegal to use one person as a vehicle for another's ambitions is used in the ethicist's argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "It supports the ethicist's view that society does not value individuality as much as many opponents of cloning think it does.",
+      "B": "It supports the conclusion that forcing children to pursue academic success is not objectionable.",
+      "C": "It is implied by the ethicist's conviction that clones are not subpeople.",
+      "D": "It supports the ethicist's view that vanity's being the motivation for cloning is not enough of a reason to ban cloning.",
+      "E": "It describes a legal position that the ethicist argues should be changed."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Selena: Asteroid impact on the Earth caused the extinction of the dinosaurs by raising vast clouds of dust, thus blocking the Sun's rays and cooling the planet beyond the capacity of the dinosaurs, or perhaps the vegetation that supported them, to adapt. A worldwide dust layer provides evidence of asteroid impact at approximately the correct time, and a huge crater exists on the edge of the Yucatán peninsula in Mexico.\nTrent: That asteroid crater is not large enough for the requisite amount of dust to have been produced. Besides, the extinction of dinosaur species took many years, not just one or two. So the extinctions must have been due not to asteroid impact on the Earth but to some other kind of cause.",
+    "questionStem": "Trent's argument assumes that",
+    "answerChoices": {
+      "A": "any collision of an asteroid with the Earth would have occurred on a land area rather than an ocean",
+      "B": "dinosaurs in the neighborhood of an asteroid impact but not within the zone of direct impact would have survived such an impact",
+      "C": "any event that takes place over a long period of time has many different kinds of causes",
+      "D": "dust from the impact of an asteroid on the Earth would not have had any cooling effect on the climate",
+      "E": "no more than one large asteroid struck the Earth during the period when the dinosaurs were becoming extinct"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Parallel",
+    "questionDifficulty": 4,
+    "stimulus": "It is impossible to do science without measuring. It is impossible to measure without having first selected units of measurement. Hence, science is arbitrary, since the selection of a unit of measurement—kilometer, mile, fathom, etc.—is always arbitrary.",
+    "questionStem": "The pattern of reasoning in which one of the following is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "Long hours of practice are necessary for developing musical skill. One must develop one's musical skill in order to perform difficult music. But long hours of practice are tedious. So performing difficult music is tedious.",
+      "B": "You have to advertise to run an expanding business, but advertising is expensive. Hence, it is expensive to run a business.",
+      "C": "It is permissible to sit on the park benches. To sit on the park benches one must walk to them. One way to walk to them is by walking on the grass. So it is permissible to walk on the grass.",
+      "D": "It is impossible to be a manager without evaluating people. The process of evaluation is necessarily subjective. Thus, people resent managers because they resent being evaluated subjectively.",
+      "E": "Some farming on the plains requires irrigation. This irrigation now uses water pumped from aquifers. But aquifers have limited capacity and continued pumping will eventually exhaust them. Thus, a new source of water will have to be found in order for such farming to continue indefinitely."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Professor Beckstein: American Sign Language is the native language of many North Americans. Therefore, it is not a foreign language, and for that reason alone, no student should be permitted to satisfy the university's foreign language requirement by learning it.\nProfessor Sedley: According to your argument, students should not be allowed to satisfy the university's foreign language requirement by learning French or Spanish either, since they too are the native languages of many North Americans. Yet many students currently satisfy the requirement by studying French or Spanish, and it would be ridiculous to begin prohibiting them from doing so.",
+    "questionStem": "Their statements commit Professors Beckstein and Sedley to disagreeing about which one of the following?",
+    "answerChoices": {
+      "A": "whether American Sign Language is the native language of a significant number of North Americans",
+      "B": "whether any North American whose native language is not English should be allowed to fulfill the university's foreign language requirement by studying his or her own native language",
+      "C": "whether the university ought to retain a foreign language requirement",
+      "D": "whether any other universities in North America permit their students to fulfill a foreign language requirement by learning American Sign Language",
+      "E": "whether the fact that a language is the native language of many North Americans justifies prohibiting its use to fulfill the university's foreign language requirement"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Professor Beckstein: American Sign Language is the native language of many North Americans. Therefore, it is not a foreign language, and for that reason alone, no student should be permitted to satisfy the university's foreign language requirement by learning it.\nProfessor Sedley: According to your argument, students should not be allowed to satisfy the university's foreign language requirement by learning French or Spanish either, since they too are the native languages of many North Americans. Yet many students currently satisfy the requirement by studying French or Spanish, and it would be ridiculous to begin prohibiting them from doing so.",
+    "questionStem": "Professor Sedley uses which one of the following strategies of argumentation in responding to Professor Beckstein's argument?",
+    "answerChoices": {
+      "A": "attempting to demonstrate that the reasoning used to reach a certain conclusion leads to another conclusion that is undesirable",
+      "B": "trying to show that a certain conclusion contradicts some of the evidence used to support it",
+      "C": "questioning an opponent's authority to address the issue under discussion",
+      "D": "offering an alternative explanation of the facts used to arrive at a specific conclusion",
+      "E": "agreeing with the conclusion of a particular argument while rejecting the evidence used to support the conclusion"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "So-called “engineered foods,\" usually in powder or liquid form, consist of protein that is distilled from natural sources and supplemented with vitamins and minerals. Although the amino acids contained in such products stimulate the production of growth hormones, these hormones produce growth in connective tissue rather than in muscle mass; this does not improve muscle strength. Hence, athletes, who need to improve their muscular strength, should not consume engineered foods.",
+    "questionStem": "The argument depends on assuming which one of the following?",
+    "answerChoices": {
+      "A": "An increase in muscle mass produces an increase in strength.",
+      "B": "People who are not athletes require neither stronger connective tissue nor muscle strength.",
+      "C": "If an engineered food does not improve muscle strength, there is no other substantial advantage to athletes from consuming it.",
+      "D": "Consuming engineered foods that provide nutrients that can be obtained more easily elsewhere is unhealthy.",
+      "E": "Growth of muscle mass enhances muscle strength only when accompanied by growth of connective tissue."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Some types of organisms originated through endosymbiosis, the engulfing of one organism by another so that a part of the former becomes a functioning part of the latter. An unusual nucleomorph, a structure that contains DNA and resembles a cell nucleus, has been discovered within a plant known as a chlorarachniophyte. Two versions of a particular gene have been found in the DNA of this nucleomorph, and one would expect to find only a single version of this gene if the nucleomorph were not the remains of an engulfed organism's nucleus.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Only organisms of types that originated through endosymbiosis contain nucleomorphs.",
+      "B": "A nucleomorph within the chlorarachniophyte holds all of the genetic material of some other organism.",
+      "C": "Nucleomorphs originated when an organism endosymbiotically engulfed a chlorarachniophyte.",
+      "D": "Two organisms will not undergo endosymbiosis unless at least one of them contains a nucleomorph.",
+      "E": "Chlorarachniophytes emerged as the result of two organisms having undergone endosymbiosis."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Reviewer: Although finalism—the view that there are purposes in nature—has been universally rejected, this book launches another attack on that view. Its arguments are based on a complete misunderstanding of the operation of pure chance in nature and so it fails as a critique of finalism. Finalism, therefore, is clearly more plausible than people have thought.",
+    "questionStem": "Which one of the following is most closely parallel in its flawed reasoning to the flawed reasoning in the reviewer's argument?",
+    "answerChoices": {
+      "A": "No literary historian still believes the claim that a single author wrote every word of this collection of works. Evidence on which that claim is based can be shown to be false by manuscript dating techniques, but these dating results have not been cited before. Therefore, it is quite likely that a single author did write every word of this collection of works.",
+      "B": "Few botanists deny that a recently discovered fern is the same species represented in ancient fossils. The botanists who first discovered this specimen deny that it is the same species as the ancient one, but they have spent little time studying the specimen. Therefore, the specimen is likely to be the same species represented in the ancient fossils.",
+      "C": "Bicycle engineers no longer believe that aluminum is as good a frame material as titanium. An engineer at Ace Bicycles has argued that aluminum is not as good as titanium because it breaks under pressure. But he is confused about the kind of pressure exerted on bicycles. Therefore, the claim that aluminum is as good a frame material as titanium makes more sense than bicycle engineers believe.",
+      "D": "Experts agree that red wines from France's Bordeaux region are the best in the world, and five are on this year's list of the world's top ten red wines. However, the best currently available Bordeaux wines are more than one year old, whereas other countries' best are not. Therefore, it is false that Bordeaux red wines are the best in the world this year.",
+      "E": "Sociologists agree that the psychological development of children may be impaired by watching too much television, though researchers argued recently that the quality of the parent-child relationship is more developmentally significant than television viewing. These researchers did not consider the long-term impact of television on children, so it is quite likely that the psychological development of children is impaired by watching too much television."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Appliance dealer: Appliance manufacturers commonly modify existing models without giving the modified versions new model names. Some people have complained that this practice makes it impossible for consumers to be certain that the appliance they are about to purchase is identical to the one they may have seen at a neighbor's or read about in a consumer magazine. Yet manufacturers' modifications to existing models are invariably improvements that benefit the buyer. Therefore, consumers have little reason to object to this practice.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the dealer's argument?",
+    "answerChoices": {
+      "A": "Appliances are generally purchased with the expectation that they will continue to be used for several years.",
+      "B": "Appliances usually carry a model number that provides substantially more detailed information about the product than does the model name.",
+      "C": "Appliance manufacturers frequently sell identical products under several different model names.",
+      "D": "Improved versions of appliances typically become available before vendors have stopped selling the older versions of the appliance with the same model name.",
+      "E": "The high cost of product advertising makes appliance manufacturers generally reluctant to change model names to reflect modifications to their products."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "In our solar system only one of the nine planets—Earth— qualifies as fit to sustain life. Nonetheless, using this ratio, and considering the astonishingly large number of planetary systems in the universe, we must conclude that the number of planets fit to sustain some form of life is extremely large.",
+    "questionStem": "The argument is questionable because it presumes which one of the following without providing justification?",
+    "answerChoices": {
+      "A": "If a planet is Earthlike, then life will arise on it.",
+      "B": "Our solar system is similar to many other planetary systems in the universe.",
+      "C": "The conditions necessary for life to begin are well understood.",
+      "D": "Life similar to Earth's could evolve under conditions very different from those on Earth.",
+      "E": "Most other planetary systems in the universe have nine planets."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT114",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Sociologist: Suggestions for improved efficiency that derive from employers are unlikely to elicit positive responses from employees, who tend to resent suggestions they did not generate. An employer should therefore engage the employee in a nonthreatening dialogue that emphasizes the positive contributions of the employee to the development of such ideas. Then the ideas employers want to try will be implemented more quickly and effectively.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the sociologist's reasoning?",
+    "answerChoices": {
+      "A": "Employees are more likely to accept suggestions for improved efficiency when these suggestions are not obviously directed at them.",
+      "B": "Employees are more likely to carry out ideas for improved efficiency that they believe they have participated in generating.",
+      "C": "Employees are more likely to implement ideas for improved efficiency that derive from a dialogue in which they have participated than from a dialogue in which they have not participated.",
+      "D": "Employees are more likely to generate good ideas for improved efficiency when they do not feel resentment about the process that attempts to formulate such ideas.",
+      "E": "Employees are more likely to resent employers who attempt to implement the employers' rather than the employees' ideas for improved efficiency."
+    },
+    "correctAnswer": "B"
+  }
+]

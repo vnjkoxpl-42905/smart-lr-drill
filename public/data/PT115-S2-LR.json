@@ -1,0 +1,410 @@
+[
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "A distinguished British judge, Justice Upton, said that whether some administrative decision by a government minister is reasonable \"is a question that judges, by their training and experience, should be well-equipped to answer, or else there would be something badly wrong with the legal system, and there is little reason to suppose that there is.\"",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of Justice Upton's argument?",
+    "answerChoices": {
+      "A": "There is nothing much wrong with the legal system.",
+      "B": "Judges should be given a greater part in administrative decision making.",
+      "C": "Judges are qualified to decide upon the reasonableness of a government minister's administrative decision.",
+      "D": "If something were badly wrong with the legal system, judges would be ill-equipped to determine whether a government minister's decisions are reasonable.",
+      "E": "If judges are well-equipped to determine whether an administrative decision is reasonable, there is not anything badly wrong with the legal system."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Any course that teaches students how to write is one that will serve them well in later life. Therefore, since some philosophy courses teach students how to write, any student, whatever his or her major, will be served well in later life by taking any philosophy course.",
+    "questionStem": "A flaw in the reasoning of the argument is that the argument",
+    "answerChoices": {
+      "A": "fails to specify adequately exactly how a course can teach students how to write",
+      "B": "draws a weaker conclusion than is warranted by the strength of its premises",
+      "C": "presumes, without providing justification, that what is true of a whole must also be true of each of its constituent parts",
+      "D": "fails to consider the possibility that some students in certain majors may be required to take a philosophy course",
+      "E": "draws a conclusion about all cases of a certain kind on the basis of evidence that justifies such a conclusion only about some cases of that kind"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Letter to the editor: Allowing everyone to voice personal views can have the effect of inhibiting some from voicing their concerns. Thus, allowing unrestricted free speech really inhibits free speech.",
+    "questionStem": "Which one of the following, if true, does most to justify the apparently contradictory conclusion above?",
+    "answerChoices": {
+      "A": "When free speech is unrestricted, many people will be shocked by the power of the views of others and thereby become afraid to voice their own concerns.",
+      "B": "When there is unrestricted free speech, there will be a greater number of diverse views expressed, but the views expressed will be potentially offensive to many people.",
+      "C": "Since unrestricted free speech can be offensive, free speech should be restricted when the pain that it causes is great.",
+      "D": "Claiming that unrestricted free speech inhibits free speech is like claiming that increasing someone's salary makes the person poorer.",
+      "E": "When free speech is unrestricted, people offended by the views of others are likely to voice their disagreement, leading toward a resolution of conflict."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "Marie: I gave the cashier at my local convenience store a 10-dollar bill to pay for my purchase, and he mistakenly gave me change for a 20-dollar bill. I kept the extra 10 dollars. Since I did not trick, threaten, or physically force the cashier into giving me the extra money, it was not morally wrong for me to keep it.\nJulia: Nonsense. If you mistakenly hand me your coat, thinking it is my coat, then even though I did not get the coat by means of any deception, threats, or violence against you, I am not morally entitled to keep it for myself.",
+    "questionStem": "Julia's response functions in which one of the following ways?",
+    "answerChoices": {
+      "A": "It strongly questions the application of Marie's principle to the case that Marie described, while accepting that principle.",
+      "B": "It offers an additional reason to accept Marie's conclusion.",
+      "C": "It challenges Marie's conclusion by claiming that the proper conclusion to draw in a relevantly similar situation would be the opposite of Marie's.",
+      "D": "It uses Marie's criterion as a means of solving a moral problem Julia herself faces.",
+      "E": "It proposes a radically different principle by which Marie's action might be judged, but reserves judgment as to whether Marie acted rightly."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "We are taught that pedestrians should cross the street at a corner and that jaywalking, in the sense of crossing other than at a corner, is dangerous and illegal. It also seems true that drivers anticipate people crossing at corners more than drivers anticipate people crossing elsewhere. Thus we might infer that crossing at a corner is safer than jaywalking. Nevertheless, statistics show that more pedestrians die crossing at corners than while jaywalking.",
+    "questionStem": "Which one of the following, if true, most helps to explain the statistical claim cited above?",
+    "answerChoices": {
+      "A": "Far more pedestrians cross at corners than jaywalk.",
+      "B": "Some people jaywalk only when there is little traffic.",
+      "C": "Drivers are often unfamiliar with the laws concerning jaywalking.",
+      "D": "Traffic laws in most locations state that the pedestrian always has the right of way, whether or not the pedestrian is crossing at a corner.",
+      "E": "Good drivers anticipate jaywalkers as much as they anticipate pedestrians crossing at corners."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Poor writers often express mundane ideas with elaborate syntax and esoteric vocabulary. Inattentive readers may be impressed but may well misunderstand the writing, while alert readers will easily see through the pretentiousness. Thus, a good principle for writers is:",
+    "questionStem": "Which one of the following completes the passage most logically?",
+    "answerChoices": {
+      "A": "the simpler the style, the better the writing",
+      "B": "inattentive readers are not worth writing for",
+      "C": "only the most talented writers can successfully adopt a complex style",
+      "D": "a writing style should not be more complex than the ideas expressed",
+      "E": "alert readers are the only readers who are sensitive to writing style"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "The kind of thoughts that keep a person from falling asleep can arise in either half of the brain. Therefore, a person being prevented from sleeping solely by such thoughts would be able to fall asleep by closing the eyes and counting sheep, because this activity fully occupies the left half of the brain with counting and the right half of the brain with imagining sheep, thereby excluding the sleep-preventing thoughts.",
+    "questionStem": "According to the hypothesis, for a person to use counting imaginary sheep as an effective method of inducing sleep, which one of the following must be true?",
+    "answerChoices": {
+      "A": "The person is able to imagine a wide variety of things.",
+      "B": "The person normally has a difficult time falling asleep.",
+      "C": "Thoughts of sheep would not keep the person awake at that time.",
+      "D": "Thoughts of sheep would induce sleep in the person whenever those thoughts arose.",
+      "E": "Thoughts of sheep rarely, if ever, arise in the person's dreams."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "The kind of thoughts that keep a person from falling asleep can arise in either half of the brain. Therefore, a person being prevented from sleeping solely by such thoughts would be able to fall asleep by closing the eyes and counting sheep, because this activity fully occupies the left half of the brain with counting and the right half of the brain with imagining sheep, thereby excluding the sleep-preventing thoughts.",
+    "questionStem": "Which one of the following most closely parallels the reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Stucco is a poor insulator but brick and wood are good insulators, so a person who wants to build a house in an area with a cold climate should use brick or wood instead of stucco.",
+      "B": "Cats can damage furniture with either their claws or their teeth, so such damage can be prevented by providing cats with other objects that they will claw and bite, such as toy mice.",
+      "C": "This map indicates two roads of equal length each leading to Centreville, so a person who wants to take the shortest route to Centreville could choose either one.",
+      "D": "These chemicals are harmless by themselves but explosive when mixed together, so in order to be kept in the same laboratory without risk, they should be stored separately.",
+      "E": "This island has two harbors but one of them is too shallow to permit large ships, so this ship will have to dock in the other harbor in order to unload its cargo."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Claude: To introduce greater public accountability into French foreign-policy decisions, France should hold referenda on major foreign-policy issues. Election results are too imprecise to count as a mandate, since elections are decided on multiple issues.\nLorraine: The general public, unlike people in government, is unwilling or unable to become informed about foreign-policy issues. Therefore, the introduction of such referenda would lead to foreign-policy disaster.",
+    "questionStem": "Which one of the following responses by Claude would, if true, most strongly counter Lorraine's objection?",
+    "answerChoices": {
+      "A": "The mechanics of holding a referendum would not, in the computer age, pose insuperable problems.",
+      "B": "Some of the information on which foreign-policy decisions are based comes from intelligence sources that must not be compromised by publicity.",
+      "C": "Foreign proponents and opponents of a particular policy would attempt to sway French public opinion before a referendum.",
+      "D": "The general public has little desire to become informed about foreign-policy issues precisely because it has little or no power to influence foreign-policy decisions.",
+      "E": "Foreign governments friendly to France would be reluctant to share information with France if it might become public in a referendum debate."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Claude: To introduce greater public accountability into French foreign-policy decisions, France should hold referenda on major foreign-policy issues. Election results are too imprecise to count as a mandate, since elections are decided on multiple issues.\nLorraine: The general public, unlike people in government, is unwilling or unable to become informed about foreign-policy issues. Therefore, the introduction of such referenda would lead to foreign-policy disaster.",
+    "questionStem": "Which one of the following, if true, provides the most support for Lorraine's conclusion?",
+    "answerChoices": {
+      "A": "The public would become better informed about an issue in foreign policy if a referendum were held on it.",
+      "B": "Not every issue would be subject to referendum, only the major outlines of policy.",
+      "C": "Decision by referendum would make the overall course of policy unpredictable, and countries friendly to France could not make reasonable decisions based on a consistent French line.",
+      "D": "Requiring a large minimum number of voters' signatures on a petition for a referendum would ensure that many people would consider the issue and treat it as important.",
+      "E": "Elections decided mainly on foreign-policy issues have perhaps constituted ratifications by the public of past decisions, but certainly not judgments about future issues posing new problems."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 4,
+    "stimulus": "A gift is not generous unless it is intended to benefit the recipient and is worth more than what is expected or customary in the situation; a gift is selfish if it is given to benefit the giver or is less valuable than is customary.",
+    "questionStem": "Which one of the following judgments most closely conforms to the principle above?",
+    "answerChoices": {
+      "A": "Charles, who hates opera, was given two expensive tickets to the opera. He in turn gave them to his cousin, who loves opera, as a birthday gift. Charles's gift was selfish because he paid nothing for the tickets.",
+      "B": "Emily gives her brother a year's membership in a health club. She thinks that this will allow her brother to get the exercise he needs. However, the gift is selfish because Emily's brother is hurt and offended by it.",
+      "C": "Amanda gives each of her clients an expensive bottle of wine every year. Amanda's gifts are generous, since they cause the clients to continue giving Amanda business.",
+      "D": "Olga gives her daughter a computer as a graduation gift. Since this is the gift that all children in Olga's family receive for graduation, it is not generous.",
+      "E": "Michael gave his nephew $50 as a birthday gift, more than he had ever given before. Michael's nephew, however, lost the money. Therefore, Michael's gift was not generous because it did not benefit the recipient."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Must be True",
+    "questionDifficulty": 5,
+    "stimulus": "Politician: It is wrong for the government to restrict the liberty of individuals, except perhaps in those cases when to fail to do so would allow individuals to cause harm. Yet, to publish something is a liberty, and to offend is not to cause harm.",
+    "questionStem": "Which one of the following can be properly inferred from the politician's statements?",
+    "answerChoices": {
+      "A": "It is not right for the government to restrict the publication of literature that is only offensive.",
+      "B": "It is not wrong for the government to restrict individuals' liberty when failing to do so would allow individuals to cause harm.",
+      "C": "It is offensive for the government to restrict the liberty of individuals to publish, but it is not harmful.",
+      "D": "It is not wrong for individuals to publish literature that is offensive.",
+      "E": "It is not right for the government to restrict the publication of literature that does not cause serious harm."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 5,
+    "stimulus": "Jenkins: Research on the properties of snow at the North Pole should be conducted in January and February. The weather is then cold enough to ensure that the snow will not melt. It is important that research money not be wasted; if we wait until a later month, we risk sending researchers when they will be unable to carry out research successfully.\nLurano: I disagree. The weather will likely still be quite cold in April and May, and by going later, researchers run less risk of suffering dangerous exposure to the cold.",
+    "questionStem": "The dialogue lends the most support to the claim that Jenkins and Lurano disagree on whether",
+    "answerChoices": {
+      "A": "there is a possibility of snow melting at the North Pole during April and May",
+      "B": "it is impossible to investigate the properties of snow at the North Pole later than February",
+      "C": "funding will be wasted if research on snow is carried out at the North Pole later than February",
+      "D": "the temperatures at the North Pole in January and February are lower than are the temperatures in April and May",
+      "E": "research funding considerations outweigh the risk to researchers posed by the temperatures at the North Pole in January and February"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Activist: Although the environmental bill before the legislature is popular with voters, it will have mainly negative economic consequences if it is passed, especially when we try to lure new businesses to our country. Great leaders have the courage to look beyond popularity to what is sound policy; legislators ought to do the same by not voting for this bill.",
+    "questionStem": "The activist's argumentation is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that most of the legislators are great leaders",
+      "B": "presumes, without providing justification, that a bill is less likely to pass if it is deemed to have negative economic consequences",
+      "C": "fails to consider whether there are noneconomic reasons for supporting the bill that outweigh the reason given for rejecting it",
+      "D": "fails to specify whether legislators usually consider economic consequences when a bill is before the legislature",
+      "E": "takes for granted that if a bill is popular, it will not be sound economically"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "More and more academic institutions are using citation analysis as the main technique for measuring the quality of scientific research. This technique involves a yearly scanning of scientific journals to count the number of references to a researcher's work. Although academic institutions want to encourage good research, use of citation analysis actually works against this goal since scientists seeking to maximize citation counts will avoid multiyear projects in favor of short-term projects in faddish areas.",
+    "questionStem": "Which one of the following, if true, provides the strongest support for the argument?",
+    "answerChoices": {
+      "A": "In general scientific research is not referred to in journals until the research is completed.",
+      "B": "Areas of science that are faddish at some point are not necessarily lacking in significance.",
+      "C": "Research that is initially criticized in scientific journals sometimes turns out to be ground-breaking work.",
+      "D": "Scientists are sometimes hostile to interim assessments of ongoing research, since such assessments might threaten continuity of funding.",
+      "E": "Scientists often cite their colleagues' work when they think it is unfairly neglected by the scientific establishment."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Biologists agree that human beings evolved from a fish, but they disagree about which species of fish. Since biologists agree that frogs are definitely related to the species of fish from which human beings evolved, on the basis of a close match between the mitochondrial DNA of lungfish and that of frogs Dr. Stevens-Hoyt claims that this ancestor must be lungfish. Dr. Grover, on the other hand, contends that mitochondrial DNA evolves too rapidly to be a reliable indicator of relationships between species over long periods of time, and citing the close chemical match between the hemoglobin of coelacanths (a saltwater fish) and that of tadpoles, claims that human beings must be descended from coelacanths.",
+    "questionStem": "Which one of the following most accurately describes the role played in the dispute above by the proposition that frogs are definitely related to the species of fish from which human beings evolved?",
+    "answerChoices": {
+      "A": "Since it implies that human beings are not descended from lungfish, it is cited as evidence against the claim that humans are descended from lungfish.",
+      "B": "Since it implies that human beings are not descended from coelacanths, it is offered as evidence against the claim that human beings are descended from coelacanths.",
+      "C": "It is offered as evidence for the contention that human beings must be descended from either lungfish or coelacanths.",
+      "D": "It is an assumption that both parties to the dispute use as a starting point for their arguments about human evolution.",
+      "E": "It implies that either a match of mitochondrial DNA or a match of hemoglobin between lungfish and coelacanths would show that human beings evolved from one of these two species."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Columnist: Over the last 20 years the demand in North America for Japanese-made automobiles has increased, whereas the Japanese demand for North American-made automobiles has been stagnant. Until recently, this imbalance could plausibly be attributed to Japanese models' superior fuel efficiency and reliability, but now cars made in North America are by these standards the equal of any Japanese model. What North American exporters continue to ignore is that the Japanese drive on the left side of the road. Therefore, one obstacle to reducing the automotive trade imbalance will be removed if North American manufacturers simply produce more cars with right-side steering wheels.",
+    "questionStem": "Which one of the following is an assumption required by the columnist's argument?",
+    "answerChoices": {
+      "A": "The fuel efficiency and reliability of cars made in North America will continue to increase.",
+      "B": "If the Japanese drive on the left side of the road, then they are not inclined to buy cars with left-side steering wheels.",
+      "C": "Japanese automotive safety standards require that all new domestic automobiles have right-side steering wheels.",
+      "D": "Given a choice between similar Japanese and North American models, all with right-side steering wheels, most Japanese would choose the North American model.",
+      "E": "The automotive trade imbalance can be lessened only if North American manufacturers produce automobiles that more effectively meet the needs of Japanese buyers."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "All historians are able to spot trends. But anyone able to spot trends is able to distinguish the significant from the insignificant. Thus anyone who can distinguish the significant from the insignificant is a historian.",
+    "questionStem": "The flawed reasoning in which one of the following arguments most closely resembles that in the argument above?",
+    "answerChoices": {
+      "A": "All expressions used for emotional impact are expressions used by poets. All figures of speech are expressions used for emotional impact. So any expression used by poets is a figure of speech.",
+      "B": "Political systems whose laws originate in elected legislatures are prone to factionalism. Factionalism leads to civil disorder. Thus political systems not run by autocrats have a tendency to fall into civil disorder.",
+      "C": "Animals that possess horns or antlers use them not to attack prey but for intraspecies combat. In fact, animals so equipped never have the claws or fangs that are possessed by predators. Thus any animal that fights with members of its own species is not a predator.",
+      "D": "No one without a deep desire to communicate can be a blues musician. So short-story writers, all of whom have that same desire to communicate, could also have become blues musicians.",
+      "E": "People living in open and democratic countries have customs that are determined at least in part by an inherited past. But no country's past is a product of free choice. Thus people living in open and democratic countries can never be entirely free."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Jeff: Proposed regulations concerning the use of animals in scientific experimentation would prohibit experimentation on those species that humans empathize with: dogs and horses, for example. But extensive neurological research on mammals shows that they are all capable of feeling pain, just as dogs and horses are. Hence, this proposal should be extended to all experimentation on all mammals.\nMiranda: Yet the issue of pain is not the crux of the matter. Experimentation on any nonhuman animal undermines respect for life itself because only humans are capable of consenting to an experiment. Since any activity that undermines respect for life diminishes the quality of all of our lives, the new regulations should ban all such experimentation.",
+    "questionStem": "Which one of the following is a principle that, if established, would best support Jeff's conclusion?",
+    "answerChoices": {
+      "A": "Regulations on the use of animals in scientific experimentation should be primarily concerned with respecting the feelings of the humans who will perform those experiments.",
+      "B": "Whatever means are used to determine whether dogs and horses feel pain should also be used to determine whether other animals feel pain.",
+      "C": "Only those experiments on animals that are known to cause those animals pain should be prohibited.",
+      "D": "Scientists who perform experiments on animals should empathize with any mammal as much as they empathize with dogs or horses.",
+      "E": "Scientific experimentation should be prohibited on any creature that is capable of feeling pain."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Productivity is average output per worker per unit of time. High productivity cannot be achieved without adequate training of workers. So high productivity does not depend on having high-tech equipment.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "confuses a stated requirement for having high-tech equipment with a sufficient condition for having high-tech equipment",
+      "B": "ignores the possibility that having high-tech equipment is required for adequate training of workers",
+      "C": "overlooks the fact that increases in productivity may not be desirable in some circumstances",
+      "D": "presumes without giving justification that educating workers always results in an increase in their productivity",
+      "E": "presumes without giving justification that high-tech equipment cannot contribute to increases in productivity"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Cognitive psychologist: The majority of skilled artists are very creative people, and all people who are very creative are also good at abstract reasoning. However, not all skilled artists are famous. It follows that some people who are good at abstract reasoning are famous.",
+    "questionStem": "The cognitive psychologist's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Most skilled artists are good at abstract reasoning.",
+      "B": "Most people who are very creative are skilled artists.",
+      "C": "Some skilled artists are not famous.",
+      "D": "All people who are good at abstract reasoning are very creative.",
+      "E": "Most skilled artists are famous."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Role",
+    "questionDifficulty": 4,
+    "stimulus": "The relaxation of regulations governing the manufacture and sale of new medicines to increase their availability should not be accompanied by a lifting of all regulations that restrict industrial activity generally. Unless strict environmental regulations are maintained, endangered species of plants and animals will become extinct. And since a large majority of new medicines are derived from plants and animals, a general deregulatory approach could actually undermine the original intent of the relaxation of regulations governing the manufacture and sale of new medicines.",
+    "questionStem": "The statement that a large majority of new medicines are derived from plants and animals plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "a reason for not restricting research into the medical usefulness of plants and animals",
+      "B": "evidence for a point of view that the argument is designed to undermine",
+      "C": "an illustration of the potential disaster that could result from continued overregulation of industrial activity",
+      "D": "a link between the extinction of species and the potentially decreased availability of new medicines",
+      "E": "support for the hypothesis that only very narrowly focused efforts at deregulation of industrial activity actually have beneficial results"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Councilperson X: We have an obligation to help ensure that electricity rates are the lowest possible. Since the proposed design for a new generating station would clearly allow for the lowest rates, it must be the design we endorse if we agree that we have no choice but to approve construction of a new plant.\nCouncilperson Y: Helping to ensure the lowest electricity rates is not the council's only job; we also have an obligation not to lower the quality of life of our community. A plant of the type specified by the design would damage our community's air quality to such an extent that the benefit of lower rates would be outweighed.",
+    "questionStem": "Which one of the following is an issue about which the two councilpersons disagree?",
+    "answerChoices": {
+      "A": "The council should recommend the building of a new generating station.",
+      "B": "It is the council's responsibility to improve the community's quality of life.",
+      "C": "A plant of the type specified by the design in question would damage the air quality of the community.",
+      "D": "If a new generating station is to be built, the council should endorse a plant of the type specified by the design in question.",
+      "E": "A plant of the type specified by the design in question would allow for the lowest electricity rates."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Must be False",
+    "questionDifficulty": 1,
+    "stimulus": "Good students learn more than what their parents and teachers compel them to learn. This requires that these students derive pleasure from the satisfaction of their curiosity, and one cannot experience such pleasure unless one is capable of concentrating on a topic so intently that one loses track of one's own identity.",
+    "questionStem": "If the statements above are true, each of the following could also be true except:",
+    "answerChoices": {
+      "A": "Some people who are capable of becoming so absorbed in a topic that they lose track of their own identities are nevertheless incapable of deriving pleasure from the satisfaction of their curiosity.",
+      "B": "Most good students do not derive pleasure from the satisfaction of their curiosity.",
+      "C": "Many people who derive pleasure simply from the satisfaction of their curiosity are not good students.",
+      "D": "Some people who are not good students derive pleasure from losing track of their own identities.",
+      "E": "Most people who are capable of becoming so absorbed in a topic that they lose track of their own identities are not good students."
+    },
+    "correctAnswer": "B"
+  }
+]```

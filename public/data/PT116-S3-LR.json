@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "The development of new inventions is promoted by the granting of patent rights, which restrict the right of anyone but the patent holders to profit from these inventions for a specified period. Without patent rights, anyone could simply copy another's invention; consequently, inventors would have no financial incentive for investing the time and energy required to develop new products. Thus, it is important to continue to grant patent rights, or else no one will engage in original development and consequently no new inventions will be forthcoming.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Financial reward is the only incentive that will be effective in motivating people to develop new inventions.",
+      "B": "When an inventor sells patent rights to a manufacturer, the manufacturer makes less total profit on the invention than the inventor does.",
+      "C": "Any costs incurred by a typical inventor in applying for patent rights are insignificant in comparison to the financial benefit of holding the patent rights.",
+      "D": "Patent rights should be granted only if an inventor's product is not similar to another invention already covered by patent rights.",
+      "E": "The length of a patent right is usually proportional to the costs involved in inventing the product."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "The Fenwicks returned home from a trip to find two broken bottles on their kitchen floor. There was no sign of forced entry and nothing in the house appeared to have been taken. Although the Fenwicks have a pet cat that had free run of the house while they were away, the Fenwicks hypothesized that they had left a back door unlocked and that neighborhood children had entered through it, attempted to raid the kitchen, and left after breaking the bottles.",
+    "questionStem": "Each of the following, if true, helps to support the Fenwicks' hypothesis except:",
+    "answerChoices": {
+      "A": "A neighbor thought he had seen the Fenwicks' back door closing while the Fenwicks were away.",
+      "B": "When the Fenwicks returned home, they found children's footprints on the back porch that had not been there before their trip.",
+      "C": "The two bottles that the Fenwicks found broken on their kitchen floor had been in the refrigerator when the Fenwicks left on vacation.",
+      "D": "There have been several recent burglaries in the Fenwicks' neighborhood in which neighborhood children were suspected.",
+      "E": "The Fenwicks returned home from their trip later than they had planned."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "In an experiment, tennis players who were told that their performance would be used to assess only the quality of their rackets performed much better than an equally skilled group of tennis players who were told that their tennis-playing talent would be measured.",
+    "questionStem": "The situation described above most closely conforms to which one of the following propositions?",
+    "answerChoices": {
+      "A": "People do less well on a task if they have been told that they will be closely watched while doing it.",
+      "B": "People execute a task more proficiently when they do not believe their abilities are being judged.",
+      "C": "People perform a task more proficiently when they have confidence in their abilities.",
+      "D": "People who assess their talents accurately generally perform near their actual level of proficiency.",
+      "E": "People who think that a superior performance will please those who are testing them generally try harder."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Sydonie: Parents differ in their beliefs about the rules to which their children should be subject. So any disciplinary structure in schools is bound to create resentment because it will contradict some parental approaches to raising children.\nStephanie: Your conclusion is incorrect; educational research shows that when parents list the things that they most want their children's schools to provide, good discipline is always high on the list.",
+    "questionStem": "Stephanie's argument is most vulnerable to criticism on the grounds that",
+    "answerChoices": {
+      "A": "it focuses on educational research rather than educational practice",
+      "B": "it addresses a more general issue than that addressed in Sydonie's argument",
+      "C": "it does not counter Sydonie's suggestion that parents have diverse ideas of what constitutes good discipline",
+      "D": "the phrase \"high on the list\" is not specific enough to give useful information about what parents desire from a school",
+      "E": "it fails to discuss educators' attitudes toward discipline in schools"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Art critic: The aesthetic value of a work of art lies in its ability to impart a stimulating character to the audience's experience of the work.",
+    "questionStem": "Which one of the following judgments most closely conforms with the principle cited above?",
+    "answerChoices": {
+      "A": "This painting is aesthetically deficient because it is an exact copy of a painting done 30 years ago.",
+      "B": "This symphony is beautiful because, even though it does not excite the audience, it is competently performed.",
+      "C": "This sculpted four-inch cube is beautiful because it is carved from material which, although much like marble, is very rare.",
+      "D": "This painting is aesthetically valuable because it was painted by a highly controversial artist.",
+      "E": "This poem is aesthetically deficient because it has little impact on its audience."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Antonia: The stock market is the best place to invest your money these days; although it is often volatile, it provides the opportunity to make a large profit quickly.\nMaria: I agree that the stock market provides the opportunity to make large profits quickly, but one is just as likely to take a huge loss. I think it is better to invest in savings bonds, which provide a constant, reliable income over many years.",
+    "questionStem": "Antonia's and Maria's statements provide the most support for holding that they disagree about whether",
+    "answerChoices": {
+      "A": "the stock market is often volatile but provides the opportunity to make a large profit quickly",
+      "B": "savings bonds can provide a large return on one's investment",
+      "C": "the stock market provides the opportunity for an investor to make a constant, reliable income over many years",
+      "D": "it is safer to invest in savings bonds than to invest in the stock market",
+      "E": "it is preferable to pick an investment offering a reliable income over a riskier opportunity to make a large profit quickly"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Very little is known about prehistoric hominid cave dwellers. However, a recent study of skeletons of these hominids has revealed an important clue about their daily activities: skeletal fractures present are most like the type and distribution of fractures sustained by rodeo riders. Therefore, it is likely that these cave dwellers engaged in activities similar to rodeo riders—chasing and tackling animals.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the argumentation above?",
+    "answerChoices": {
+      "A": "The primary source of clues about the lives of prehistoric hominids is their skeletal remains.",
+      "B": "The most important aspect of prehistoric life to be studied is how food was obtained.",
+      "C": "If direct evidence as to the cause of a phenomenon is available, then indirect evidence should not be sought.",
+      "D": "If there is a similarity between two effects, then there is probably a similarity between their causes.",
+      "E": "The frequency with which a hazardous activity is performed is proportional to the frequency of injuries resulting from that activity."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Studies suggest that, for the vast majority of people who have normal blood pressure, any amount of sodium greater than that required by the body is simply excreted and does not significantly raise blood pressure. So only persons who have high blood pressure and whose bodies are incapable of safely processing excess sodium need to restrict their sodium intake.",
+    "questionStem": "Which one of the following, if true, would most seriously weaken the argument?",
+    "answerChoices": {
+      "A": "High blood pressure is more harmful than was previously believed.",
+      "B": "High blood pressure is sometimes exacerbated by intake of more sodium than the body requires.",
+      "C": "Excess sodium intake over time often destroys the body's ability to process excess sodium.",
+      "D": "Every human being has a physiological need for at least some sodium.",
+      "E": "Any sodium not used by the body will increase blood pressure unless it is excreted."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "Most lecturers who are effective teachers are eccentric, but some noneccentric lecturers are very effective teachers. In addition, every effective teacher is a good communicator.",
+    "questionStem": "Which one of the following statements follows logically from the statements above?",
+    "answerChoices": {
+      "A": "Some good communicators are eccentric.",
+      "B": "All good communicators are effective teachers.",
+      "C": "Some lecturers who are not effective teachers are not eccentric.",
+      "D": "Most lecturers who are good communicators are eccentric.",
+      "E": "Some noneccentric lecturers are effective teachers but are not good communicators."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Recently, photons and neutrinos emitted by a distant supernova, an explosion of a star, reached Earth at virtually the same time. This finding supports Einstein's claim that gravity is a property of space itself, in the sense that a body exerts gravitational pull by curving the space around it. The simultaneous arrival of the photons and neutrinos is evidence that the space through which they traveled was curved.",
+    "questionStem": "Which one of the following, if true, would most strengthen the reasoning above?",
+    "answerChoices": {
+      "A": "Einstein predicted that photons and neutrinos emitted by any one supernova would reach Earth simultaneously.",
+      "B": "If gravity is not a property of space itself, then photons and neutrinos emitted simultaneously by a distant event will reach Earth at different times.",
+      "C": "Photons and neutrinos emitted by distant events would be undetectable on Earth if Einstein's claim that gravity is a property of space itself were correct.",
+      "D": "Photons and neutrinos were the only kinds of particles that reached Earth from the supernova.",
+      "E": "Prior to the simultaneous arrival of photons and neutrinos from the supernova, there was no empirical evidence for Einstein's claim that gravity is a property of space itself."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Geneticist: Billions of dollars are spent each year on high-profile experiments that attempt to link particular human genes with particular personality traits. Though such experiments seem to promise a new understanding of human nature, they have few practical consequences. Meanwhile, more mundane and practical genetic projects—for example, those that look for natural ways to make edible plants hardier or more nutritious—are grossly underfunded. Thus, funding for human gene research should be reduced while funding for other genetic research should be increased.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the geneticist's reasoning?",
+    "answerChoices": {
+      "A": "Experiments that have the potential to help the whole human race are more worthwhile than those that help only a small number of people.",
+      "B": "Experiments that focus on the genetics of plants are more practical than those that focus on the genetics of human nature.",
+      "C": "Experiments that help prevent malnutrition are more worthwhile than those that help prevent merely undesirable personality traits.",
+      "D": "Experiments that have modest but practical goals are more worthwhile than those that have impressive goals but few practical consequences.",
+      "E": "Experiments that get little media attention and are not widely supported by the public are more valuable than are those that get much media coverage and have wide public support."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Some argue that because attaining governmental power in democracies requires building majority coalitions, it is a necessary evil that policymakers do not adhere rigorously to principle when dealing with important issues, but rather shift policies as they try to please different constituents at different times. But it is precisely this behavior that allows a democracy to adapt more easily to serve public interests, and thus it is more a benefit than an evil.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Government policymakers cannot retain power if they ignore any of the various factions of their original winning coalition.",
+      "B": "Democracies are more likely than nondemocratic forms of government to have policymakers who understand the complexity of governmental issues.",
+      "C": "In the formulation of government policy, the advantage conferred by adaptability to diverse or fluctuating public interests outweighs the detriment associated with a lack of strict fidelity to principle.",
+      "D": "In dealing with an important issue, policymakers in a democracy appeal to a principle in dealing with an issue only when that principle has majority support.",
+      "E": "Democracies appear to be more flexible than nondemocratic forms of government, but are not actually so."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "Up until about 2 billion years ago, the sun was 30 percent dimmer than it is now. If the sun were that dim now, our oceans would be completely frozen. According to fossil evidence, however, life and liquid water were both present as early as 3.8 billion years ago.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+    "answerChoices": {
+      "A": "Our atmosphere currently holds in significantly less heat than it did 3.8 billion years ago.",
+      "B": "The liquid water present 3.8 billion years ago later froze, only to melt again about 2 billion years ago.",
+      "C": "A significant source of heat other than the sun contributed to the melting of ice sheets approximately 2 billion years ago.",
+      "D": "Evidence suggests that certain regions of ocean remained frozen until much more recently than 2 billion years ago.",
+      "E": "When large portions of the globe are ice-covered, more of the sun's heat is reflected and not absorbed by the earth than when only the poles are ice-covered."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Social critic: The operas composed by Bizet and Verdi are nineteenth-century European creations, reflecting the attitudes and values in France and Italy at the end of that century. Several recent studies impugn these operas on the grounds that they reinforce in our society many stereotypes about women. But only a small minority of contemporary North Americans, namely opera lovers, have had any significant exposure to these works.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion that the social critic's argument, as it is stated above, is structured to establish?",
+    "answerChoices": {
+      "A": "Bizet and Verdi constructed images of women that have significantly influenced contemporary stereotypes.",
+      "B": "Nineteenth-century French and Italian images of women are quite different from contemporary North American images of women.",
+      "C": "The operas of Bizet and Verdi have not significantly contributed to stereotypical images of women in contemporary North America.",
+      "D": "Opera is not an important factor shaping social attitudes in contemporary North America.",
+      "E": "People cannot be influenced by things they are not directly exposed to."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "In 1975, a province reduced its personal income tax rate by 2 percent for most taxpayers. In 1976, the personal income tax rate for those taxpayers was again reduced by 2 percent. Despite the decreases in the personal income tax rate, the total amount of money collected from personal income taxes remained constant from 1974 to 1975 and rose substantially in 1976.",
+    "questionStem": "Each of the following, if true, could help to resolve the apparent discrepancy described above except:",
+    "answerChoices": {
+      "A": "The years 1975 and 1976 were ones in which the province's economy was especially prosperous.",
+      "B": "The definition of \"personal income\" used by the province was widened during 1975 to include income received from personal investments.",
+      "C": "The personal income tax rate for the wealthiest individuals in the province rose during 1975 and 1976.",
+      "D": "The province's total revenue from all taxes increased during both 1975 and 1976.",
+      "E": "A large number of people from other provinces moved to the province during 1975 and 1976."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Everything that is commonplace and ordinary fails to catch our attention, so there are things that fail to catch our attention but that are miracles of nature.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Only miracles of nature fail to be ordinary and commonplace.",
+      "B": "Some things that are ordinary and commonplace are miracles of nature.",
+      "C": "Some things that are commonplace and ordinary fail to catch our attention.",
+      "D": "Everything that fails to catch our attention is commonplace and ordinary.",
+      "E": "Only extraordinary or unusual things catch our attention."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Must be False",
+    "questionDifficulty": 4,
+    "stimulus": "If one of the effects of a genetic mutation makes a substantial contribution to the survival of the species, then, and only then, will that mutation be favored in natural selection. This process is subject to one proviso, namely that the traits that were not favored, yet were carried along by a trait that was favored, must not be so negative as to annul the benefits of having the new, favored trait.",
+    "questionStem": "If the statements above are true, each of the following could be true except:",
+    "answerChoices": {
+      "A": "A species possesses a trait whose effects are all neutral for the survival of that species.",
+      "B": "All the effects of some genetic mutations contribute substantially to the survival of a species.",
+      "C": "A species possesses a trait that reduces the species' survival potential.",
+      "D": "A genetic mutation that carries along several negative traits is favored in natural selection.",
+      "E": "A genetic mutation whose effects are all neutral to a species is favored in natural selection."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "In a highly publicized kidnapping case in Ontario, the judge barred all media and spectators from the courtroom. Her decision was based on the judgment that the public interest would not be served by allowing spectators. A local citizen argued, \"They pleaded with the public to help find the victim; they pleaded with the public to provide tips; they aroused the public interest, then they claimed that allowing us to attend would not serve the public interest. These actions are inconsistent.”",
+    "questionStem": "The reasoning in the local citizen's argument is flawed because this argument",
+    "answerChoices": {
+      "A": "generalizes from an atypical case",
+      "B": "trades on an ambiguity with respect to the term \"public interest\"",
+      "C": "overlooks the fact that the judge might not be the one who made the plea to the public for help",
+      "D": "attempts to support its conclusion by making sensationalistic appeals",
+      "E": "presumes that the public's right to know is obviously more important than the defendant's right to a fair trial"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Today's farmers plant only a handful of different strains of a given crop. Crops lack the diversity that they had only a few generations ago. Hence, a disease that strikes only a few strains of crops, and that would have had only minor impact on the food supply in the past, would devastate it today.",
+    "questionStem": "Which one of the following, if true, would most weaken the argument?",
+    "answerChoices": {
+      "A": "In the past, crop diseases would often devastate food supplies throughout entire regions.",
+      "B": "Affected crops can quickly be replaced from seed banks that store many strains of those crops.",
+      "C": "Some of the less popular seed strains that were used in the past were more resistant to many diseases than are the strains popular today.",
+      "D": "Humans today have more variety in their diets than in the past, but still rely heavily on cereal crops like rice and wheat.",
+      "E": "Today's crops are much less vulnerable to damage from insects or encroachment by weeds than were crops of a few generations ago."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Interviewer: A certain company released a model of computer whose microprocessor design was flawed, making that computer liable to process information incorrectly. How did this happen?\nIndustry spokesperson: Given the huge number of circuits in the microprocessor of any modern computer, not every circuit can be manually checked before a computer model that contains the microprocessor is released.\nInterviewer: Then what guarantee do we have that new microprocessors will not be similarly flawed?\nIndustry spokesperson: There is no chance of further microprocessor design flaws, since all microprocessors are now entirely computer-designed.",
+    "questionStem": "The industry spokesperson's argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that the microprocessor quality-control procedures of the company mentioned are not representative of those followed throughout the industry",
+      "B": "ignores the possibility that a microprocessor can have a flaw other than a design flaw",
+      "C": "overlooks the possibility that a new computer model is liable to malfunction for reasons other than a microprocessor flaw",
+      "D": "treats a single instance of a microprocessor design flaw as evidence that there will be many such flaws",
+      "E": "takes for granted, despite evidence to the contrary, that some computers are not liable to error"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "Each of the many people who participated in the town's annual spring cleanup received a community recognition certificate. Because the spring cleanup took place at the same time as the downtown arts fair, we know that there are at least some spring cleanup participants who are not active in the town's artistic circles.",
+    "questionStem": "If the statements above are true, which one of the following must be true?",
+    "answerChoices": {
+      "A": "Some of the persons who are active in the town's artistic circles received community recognition certificates.",
+      "B": "Not all of those who received community recognition certificates are active in the town's artistic circles.",
+      "C": "No participants in the downtown arts fair received community recognition certificates.",
+      "D": "No person who received a community recognition certificate has not participated in the spring cleanup.",
+      "E": "Persons who are active in the town's artistic circles are not concerned with the town's environment."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Taking advanced mathematics courses should increase a student's grade point average, for, as numerous studies have shown, students who have taken one or more advanced mathematics courses are far more likely to have high grade point averages than students who have not taken such courses.",
+    "questionStem": "The flawed pattern of reasoning in the argument above is most similar to that in which one of the following?",
+    "answerChoices": {
+      "A": "Fur color is in large measure hereditary, for, as many studies have shown, black cats are more likely than others to have black kittens, and orange cats are more likely to have orange kittens.",
+      "B": "Water can cause intoxication. After all, imbibing scotch and water, whiskey and water, bourbon and water, gin and water, and vodka and water all cause intoxication.",
+      "C": "Eating a diet consisting primarily of fats and carbohydrates may cause weight gain in some people. Studies have shown that many overweight people eat such diets.",
+      "D": "Buying running shoes should increase the frequency with which a person exercises, since those who buy two or more pairs of running shoes each year tend to exercise more often than those who buy at most one pair.",
+      "E": "Reading to children at an early age should inspire them to read on their own later, since studies have shown that children who have not been read to are less likely to develop an interest in reading than children who have been read to."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "Each of many different human hormones can by itself raise the concentration of glucose in the blood. The reason for this is probably a metabolic quirk of the brain. To see this, consider that although most human cells can produce energy from fats and proteins, brain cells can use only glucose. Thus, if blood glucose levels fall too low, brain cells will rapidly starve, leading to unconsciousness and death.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument above?",
+    "answerChoices": {
+      "A": "Each of many different human hormones can by itself raise blood glucose levels.",
+      "B": "The reason that many different hormones can each independently raise blood glucose levels is probably a metabolic quirk of the brain.",
+      "C": "Although most human cells can produce energy from fats and proteins, brain cells can produce energy only from glucose.",
+      "D": "If blood glucose levels fall too low, then brain cells starve, resulting in loss of consciousness and death.",
+      "E": "The reason brain cells starve if deprived of glucose is that they can produce energy only from glucose."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "Human resources director: While only some recent university graduates consider work environment an important factor in choosing a job, they all consider salary an important factor. Further, whereas the only workers who consider stress level an important factor in choosing a job are a few veteran employees, every recent university graduate considers vacation policy an important factor.",
+    "questionStem": "If all of the statements of the human resources director are true, then which one of the following must be true?",
+    "answerChoices": {
+      "A": "All people who consider work environment an important factor in choosing a job also consider salary an important factor.",
+      "B": "At least some people who consider work environment an important factor in choosing a job consider vacation policy an important factor as well.",
+      "C": "At least some veteran employees do not consider work environment an important factor in choosing a job.",
+      "D": "All people who consider vacation policy an important factor in choosing a job also consider salary an important factor.",
+      "E": "No one for whom salary is an important factor in choosing a job also considers stress level an important factor."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Parallel",
+    "questionDifficulty": 5,
+    "stimulus": "Wealth is not a good thing, for good things cause no harm at all, yet wealth is often harmful to people.",
+    "questionStem": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
+    "answerChoices": {
+      "A": "Alex loves to golf, and no one in the chess club loves to golf. It follows that Alex is not in the chess club.",
+      "B": "Isabella must be a contented baby. She smiles a great deal and hardly ever cries, like all happy people.",
+      "C": "Growth in industry is not a good thing for our town. Although the economy might improve, the pollution would be unbearable.",
+      "D": "Sarah's dog is not a dachshund, for he hunts very well, and most dachshunds hunt poorly.",
+      "E": "There is usually more traffic at this time of day, unless it is a holiday. But since today is not a holiday, it is surprising that there is so little traffic."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 3,
+    "questionNumber": 26,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 3,
+    "stimulus": "In the aftermath of the Cold War, international relations between Cold War allies became more difficult. Leaders of previously allied nations were required to conduct tactful economic negotiations in order not to arouse tensions that had previously been overlooked.",
+    "questionStem": "The situation described above conforms most closely to which one of the following propositions?",
+    "answerChoices": {
+      "A": "International economic competition is a greater cause of tension than is international military competition.",
+      "B": "Bonds between allies are stronger when they derive from fear of a common enemy than when they derive from common economic goals.",
+      "C": "When there is a military commitment between countries, fundamental agreement between them on economic matters is more easily reached.",
+      "D": "Economic matters are considered unimportant during periods of actual or threatened war.",
+      "E": "A common enemy contributes to a strengthened bond between nations, enabling them to ignore economic tensions that would otherwise be problematic."
+    },
+    "correctAnswer": "E"
+  }
+]

@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Pettengill: Bebop jazz musicians showed their distaste for jazz classics by taking great liberties with them, as though the songs could be made interesting only through radical reshaping.\nRomney: Only compelling, versatile songs can stand such radical reshaping. Bebop musicians recognized this, and their revolutionary approach to the jazz classics enabled them to discover previously unknown depths in the music.",
+    "questionStem": "Pettengill and Romney disagree over whether",
+    "answerChoices": {
+      "A": "bebop jazz was radically different from the jazz music that preceded it",
+      "B": "bebop jazz was an improvement on the jazz classics that preceded it",
+      "C": "bebop musicians showed appreciation for jazz classics in radically reshaping them",
+      "D": "jazz music requires musicians to adhere closely to the original version in order to be widely popular",
+      "E": "bebop musicians were influenced by the more conservative styles of their predecessors"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Essayist: Earth is a living organism, composed of other organisms much as animals are composed of cells, not merely a thing upon which creatures live. This hypothesis is supported by the fact that, like all organisms, Earth can be said to have a metabolism and to regulate its temperature, humidity, and other characteristics, divorced from the influences of its surroundings. Of course, Earth does not literally breathe, but neither do insects (they have no lungs), though they respire successfully.",
+    "questionStem": "The assertion that insects do not literally breathe plays which one of the following roles in the essayist's argument?",
+    "answerChoices": {
+      "A": "a reason for not rejecting Earth's status as an organism on the basis of its not breathing",
+      "B": "a reason for rejecting as false the belief that Earth is a living organism",
+      "C": "an illustration of the general claim that to be an organism, a creature must have a metabolism",
+      "D": "an example of a type of organism whose status, like Earth's, is unclear",
+      "E": "an illustration of a type of organism out of which Earth is composed"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Cognitive psychologist: In a recent survey, citizens of Country F were asked to state which one of the following two scenarios they would prefer: (1) Country F is the world economic leader, with a gross national product (GNP) of $100 billion, and Country G is second, with a GNP of $90 billion; or (2) Country G is the economic leader, with a GNP of $120 billion, and Country F is second, with a GNP of $110 billion. Despite the fact that, under scenario 2, Country F would have a higher GNP than under scenario 1, the majority of respondents stated that they preferred scenario 1.",
+    "questionStem": "Which one of the following, if true, would most help to explain the survey results described by the cognitive psychologist?",
+    "answerChoices": {
+      "A": "Most citizens of Country F believe their country has a higher economic growth rate than Country G.",
+      "B": "Most citizens of Country F want their country to have a GNP higher than $120 billion.",
+      "C": "Most citizens of Country F believe that their personal welfare is unconnected to GNP.",
+      "D": "Most citizens of Country F believe GNP is a poor measure of a nation's economic health.",
+      "E": "Most citizens of Country F want their country to be more economically powerful than Country G."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "Marie: I gave the cashier at my local convenience store a 10-dollar bill to pay for my purchase, and he mistakenly gave me change for a 20-dollar bill. I kept the extra 10 dollars. Since I did not trick, threaten, or physically force the cashier into giving me the extra money, it was not morally wrong for me to keep it.\nJulia: Nonsense. If you mistakenly hand me your coat, thinking it is my coat, then even though I did not get the coat by means of any deception, threats, or violence against you, I am not morally entitled to keep it for myself.",
+    "questionStem": "Julia's response functions in which one of the following ways?",
+    "answerChoices": {
+      "A": "It strongly questions the application of Marie's principle to the case that Marie described, while accepting that principle.",
+      "B": "It offers an additional reason to accept Marie's conclusion.",
+      "C": "It challenges Marie's conclusion by claiming that the proper conclusion to draw in a relevantly similar situation would be the opposite of Marie's.",
+      "D": "It uses Marie's criterion as a means of solving a moral problem Julia herself faces.",
+      "E": "It proposes a radically different principle by which Marie's action might be judged, but reserves judgment as to whether Marie acted rightly."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "We are taught that pedestrians should cross the street at a corner and that jaywalking, in the sense of crossing other than at a corner, is dangerous and illegal. It also seems true that drivers anticipate people crossing at corners more than drivers anticipate people crossing elsewhere. Thus we might infer that crossing at a corner is safer than jaywalking. Nevertheless, statistics show that more pedestrians die crossing at corners than while jaywalking.",
+    "questionStem": "Which one of the following, if true, most helps to explain the statistical claim cited above?",
+    "answerChoices": {
+      "A": "Far more pedestrians cross at corners than jaywalk.",
+      "B": "Some people jaywalk only when there is little traffic.",
+      "C": "Drivers are often unfamiliar with the laws concerning jaywalking.",
+      "D": "Traffic laws in most locations state that the pedestrian always has the right of way, whether or not the pedestrian is crossing at a corner.",
+      "E": "Good drivers anticipate jaywalkers as much as they anticipate pedestrians crossing at corners."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Poor writers often express mundane ideas with elaborate syntax and esoteric vocabulary. Inattentive readers may be impressed but may well misunderstand the writing, while alert readers will easily see through the pretentiousness. Thus, a good principle for writers is:",
+    "questionStem": "Which one of the following completes the passage most logically?",
+    "answerChoices": {
+      "A": "the simpler the style, the better the writing",
+      "B": "inattentive readers are not worth writing for",
+      "C": "only the most talented writers can successfully adopt a complex style",
+      "D": "a writing style should not be more complex than the ideas expressed",
+      "E": "alert readers are the only readers who are sensitive to writing style"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "The kind of thoughts that keep a person from falling asleep can arise in either half of the brain. Therefore, a person being prevented from sleeping solely by such thoughts would be able to fall asleep by closing the eyes and counting sheep, because this activity fully occupies the left half of the brain with counting and the right half of the brain with imagining sheep, thereby excluding the sleep-preventing thoughts.",
+    "questionStem": "According to the hypothesis, for a person to use counting imaginary sheep as an effective method of inducing sleep, which one of the following must be true?",
+    "answerChoices": {
+      "A": "The person is able to imagine a wide variety of things.",
+      "B": "The person normally has a difficult time falling asleep.",
+      "C": "Thoughts of sheep would not keep the person awake at that time.",
+      "D": "Thoughts of sheep would induce sleep in the person whenever those thoughts arose.",
+      "E": "Thoughts of sheep rarely, if ever, arise in the person's dreams."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "The kind of thoughts that keep a person from falling asleep can arise in either half of the brain. Therefore, a person being prevented from sleeping solely by such thoughts would be able to fall asleep by closing the eyes and counting sheep, because this activity fully occupies the left half of the brain with counting and the right half of the brain with imagining sheep, thereby excluding the sleep-preventing thoughts.",
+    "questionStem": "Which one of the following most closely parallels the reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Stucco is a poor insulator but brick and wood are good insulators, so a person who wants to build a house in an area with a cold climate should use brick or wood instead of stucco.",
+      "B": "Cats can damage furniture with either their claws or their teeth, so such damage can be prevented by providing cats with other objects that they will claw and bite, such as toy mice.",
+      "C": "This map indicates two roads of equal length each leading to Centreville, so a person who wants to take the shortest route to Centreville could choose either one.",
+      "D": "These chemicals are harmless by themselves but explosive when mixed together, so in order to be kept in the same laboratory without risk, they should be stored separately.",
+      "E": "This island has two harbors but one of them is too shallow to permit large ships, so this ship will have to dock in the other harbor in order to unload its cargo."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Activist: As electronic monitoring of employees grows more commonplace and invasive, we hear more and more attempted justifications of this practice by employers. Surveillance, they explain, keeps employees honest, efficient, and polite to customers. Such explanations are obviously self-serving, and so should not be taken to justify these unwarranted invasions of privacy.",
+    "questionStem": "A questionable technique used in the activist's argument is to",
+    "answerChoices": {
+      "A": "attack an argument different from that actually offered by the employers",
+      "B": "presume that employees are never dishonest, inefficient, or rude",
+      "C": "insist that modern business practices meet moral standards far higher than those accepted in the past",
+      "D": "attack employers' motives instead of addressing their arguments",
+      "E": "make a generalization based on a sample that there is reason to believe is biased"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "When students receive negative criticism generated by computer programs, they are less likely to respond positively than when the critic is a human. Since the acceptance of criticism requires that one respond positively to it, students are more likely to learn from criticism by humans than from criticism by computers.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Students are more likely to learn from criticism that they accept than from criticism they do not accept.",
+      "B": "Unlike human critics, computers are incapable of showing compassion.",
+      "C": "Students always know whether their critics are computers or humans.",
+      "D": "Criticism generated by computers is likely to be less favorable than that produced by human critics in response to the same work.",
+      "E": "Criticism generated by computers is likely to be no more or less favorable than that produced by human critics in response to the same work."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "After examining the options, the budget committee discovered that QI's office-phone system would be inexpensive enough to be within the cost limit that had been set for the committee. However, Corelink's system must also be inexpensive enough to be within the limit, since it is even less expensive than QI's system.",
+    "questionStem": "The reasoning in the argument above is most closely paralleled by that in which one of the following?",
+    "answerChoices": {
+      "A": "Marissa is just tall enough that she can touch the ceiling when she jumps as high as she can, and since Jeff is taller than Marissa, he too must be able to touch the ceiling when he jumps.",
+      "B": "By reducing the number of cigarettes she smoked per day, Kate was able to run five miles, and since Lana smokes fewer cigarettes per day than Kate now does, she too must be able to run five miles.",
+      "C": "John's blood-alcohol level was far above the legal limit for driving, so even if it turns out that Paul's blood-alcohol level was lower than John's, it too must have been above the legal limit.",
+      "D": "This chocolate is not quite dark enough for it to be the kind that Luis really likes, but that chocolate over there is darker, so it might be just right.",
+      "E": "Health Dairy's sharp cheddar cheese is low enough in fat to meet the labeling standard for \"low fat\" cheddar cheese, and since its mild cheddar cheese is even lower in fat, it too must meet the labeling standard."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Essayist: People once believed that Earth was at the center of the universe, and that, therefore, Earth and its inhabitants were important. We now know that Earth revolves around a star at the outskirts of a spiral arm of one of countless galaxies. Therefore, people's old belief that Earth and its inhabitants were important was false.",
+    "questionStem": "A flaw in the essayist's argument is that the argument",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that only true statements can have good reasons to be believed",
+      "B": "neglects to consider that a statement that was believed for questionable reasons may nevertheless have been true",
+      "C": "fails to consider that there can be no reason for disbelieving a true statement",
+      "D": "overlooks the fact that people's perception of their importance changed from century to century",
+      "E": "neglects the fact that people's perception of their importance varies from culture to culture"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 4,
+    "stimulus": "Davis: The only relevant factor in determining appropriate compensation for property damage or theft is the value the property loses due to damage or the value of the property stolen; the harm to the victim is directly proportional to the pertinent value.\nHiguchi: I disagree. More than one factor must be considered: A victim who recovers the use of personal property after two years is owed more than a victim who recovers its use after only one year.",
+    "questionStem": "Davis's and Higuchi's statements most strongly support the view that they would disagree with each other about which one of the following?",
+    "answerChoices": {
+      "A": "It is possible to consistently and reliably determine the amount of compensation owed to someone whose property was damaged or stolen.",
+      "B": "Some victims are owed increased compensation because of the greater dollar value of the damage done to their property.",
+      "C": "Victims who are deprived of their property are owed compensation in proportion to the harm they have suffered.",
+      "D": "Some victims are owed increased compensation because of the greater amount of time they are deprived of the use of their property.",
+      "E": "The compensation owed to victims should be determined on a case-by-case basis rather than by some general rule."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "Resident: Residents of this locale should not consider their loss of farming as a way of life to be a tragedy. When this area was a rural area it was economically depressed, but it is now a growing bastion of high-tech industry with high-wage jobs, and supports over 20 times the number of jobs it did then.",
+    "questionStem": "Which one of the following, if true, does the most to justify the conclusion of the resident's argument?",
+    "answerChoices": {
+      "A": "Farming is becoming increasingly efficient, with the result that fewer farms are required to produce the same amount of food.",
+      "B": "The development of high-tech industry is more valuable to national security than is farming.",
+      "C": "Residents of this locale do not value a rural way of life more than they value economic prosperity.",
+      "D": "Many residents of this locale have annual incomes that are twice what they were when the locale was primarily agricultural.",
+      "E": "The loss of a family farm is often perceived as tragic even when no financial hardship results."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Paradox",
+    "questionDifficulty": 5,
+    "stimulus": "Kendrick: Governments that try to prevent cigarettes from being advertised are justified in doing so, since such advertisements encourage people to engage in an unhealthy practice. But cigarette advertisements should remain legal since advertisements for fatty foods are legal, even though those advertisements also encourage people to engage in unhealthy practices.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent conflict between Kendrick's statements?",
+    "answerChoices": {
+      "A": "Any advertisement that encourages people to engage in an unhealthy practice should be made illegal, even though the legality of some such advertisements is currently uncontroversial.",
+      "B": "The advertisement of fattening foods, unlike that of cigarettes, should not be prevented, because fattening foods, unlike cigarettes, are not addictive.",
+      "C": "Most advertisements should be legal, although advertisers are always morally responsible for ensuring that their advertisements do not encourage people to engage in unhealthy practices.",
+      "D": "Governments should try to prevent the advertisement of cigarettes by means of financial disincentives rather than by legal prohibition.",
+      "E": "Governments should place restrictions on cigarette advertisements so as to keep them from encouraging people to engage in unhealthy practices, but should not try to prevent such advertisements."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Environmentalist: Many people prefer to live in regions of natural beauty. Such regions often experience an influx of new residents, and a growing population encourages businesses to relocate to those regions. Thus, governmentally mandated environmental protection in regions of natural beauty can help those regions' economies overall, even if such protection harms some older local industries.",
+    "questionStem": "Which one of the following is an assumption on which the environmentalist's argument depends?",
+    "answerChoices": {
+      "A": "Regions of natural beauty typically are beautiful enough to attract new residents only until governmentally mandated environmental protection that damages local industries is imposed.",
+      "B": "The economies of most regions of natural beauty are not based primarily on local industries that would be harmed by governmentally mandated environmental protection.",
+      "C": "If governmentally mandated environmental protection helps a region's economy, it does so primarily by encouraging people to move into that region.",
+      "D": "Voluntary environmental protection usually does not help a region's economy to the degree that governmentally mandated protection does.",
+      "E": "A factor harmful to some older local industries in a region need not discourage other businesses from relocating to that region."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "No small countries and no countries in the southern hemisphere have permanent seats on the United Nations Security Council. Each of the five countries with a permanent seat on the Security Council is in favor of increased international peacekeeping efforts and a greater role for the United Nations in moderating regional disputes. However, some countries that are in favor of increased international peacekeeping efforts are firmly against increased spending on refugees by the United Nations.",
+    "questionStem": "If the statements above are true, which one of the following must also be true?",
+    "answerChoices": {
+      "A": "Some small countries do not want the United Nations to increase its spending on refugees.",
+      "B": "Some countries in the southern hemisphere are not in favor of increased international peacekeeping efforts.",
+      "C": "Some countries that have permanent seats on the United Nations Security Council are against increased spending on refugees by the United Nations.",
+      "D": "Some small countries are in favor of a greater role for the United Nations in moderating regional disputes.",
+      "E": "Some countries that are in favor of a greater role for the United Nations in moderating regional disputes are not located in the southern hemisphere."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Editorial: It is clear that what is called \"health education\" is usually propaganda rather than education. Propaganda and education are never the same thing. The former is nothing but an attempt to influence behavior through the repetition of simplistic slogans, whereas the latter never involves such a method. Though education does attempt to influence behavior, it does so by offering information in all its complexity, leaving it up to the individual to decide how to act on that information. Sadly, however, propaganda is much more successful than education.",
+    "questionStem": "The conclusion drawn by the editorial follows logically if it is assumed that what is called \"health education\" usually",
+    "answerChoices": {
+      "A": "does not leave it up to the individual to decide how to act on information",
+      "B": "does not offer information in all its complexity",
+      "C": "does not involve the repetition of simplistic slogans",
+      "D": "attempts to influence behavior solely by repeating simplistic slogans",
+      "E": "is very successful in influencing people's behavior"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Marc: The fact that the people of our country look back on the past with a great deal of nostalgia demonstrates that they regret the recent revolution.\nRobert: They are not nostalgic for the recent past, but for the distant past, which the prerevolutionary regime despised; this indicates that although they are troubled, they do not regret the revolution.",
+    "questionStem": "Their dialogue provides the most support for the claim that Marc and Robert agree that the people of their country",
+    "answerChoices": {
+      "A": "tend to underrate past problems when the country faces troubling times",
+      "B": "are looking to the past for solutions to the country's current problems",
+      "C": "are likely to repeat former mistakes if they look to the country's past for solutions to current problems",
+      "D": "are concerned about the country's current situation and this is evidenced by their nostalgia",
+      "E": "tend to be most nostalgic for the things that are the farthest in their past"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Social critic: One of the most important ways in which a society socializes children is by making them feel ashamed of their immoral behavior. But in many people this shame results in deep feelings of guilt and self-loathing that can be a severe hardship. Thus, moral socialization has had a net effect of increasing the total amount of suffering.",
+    "questionStem": "The social critic's argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "overlooks the possibility that the purported source of a problem could be modified to avoid that problem without being eliminated altogether",
+      "B": "fails to address adequately the possibility that one phenomenon may causally contribute to the occurrence of another, even though the two phenomena do not always occur together",
+      "C": "presumes, without providing justification, that a phenomenon that supposedly increases the total amount of suffering in a society should therefore be changed or eliminated, regardless of its beneficial consequences",
+      "D": "takes for granted that a behavior that sometimes leads to a certain phenomenon cannot also significantly reduce the overall occurrence of that phenomenon",
+      "E": "presumes, without providing justification, that if many people have a negative psychological reaction to a phenomenon, then no one can have a positive reaction to that phenomenon"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Curator: A magazine recently ran a very misleading story on the reaction of local residents to our controversial art exhibit. They quoted the responses of three residents, all of whom expressed a sense of moral outrage. These quotations were intended to suggest that most local residents oppose the exhibit; the story failed to mention, however, the fact that the three residents are all close friends.",
+    "questionStem": "Which one of the following principles most helps to justify the curator's argumentation?",
+    "answerChoices": {
+      "A": "It is misleading to present the opinions of people with no special expertise on a subject as though they were experts.",
+      "B": "It is misleading to present the opinions of people on only one side of an issue when the population is likely to be evenly divided on that issue.",
+      "C": "It is misleading to present the opinions of a few people as evidence of what the majority thinks unless the opinions they express are widely held.",
+      "D": "It is misleading to present testimony from close friends and thereby imply that they must agree with each other.",
+      "E": "It is misleading to present the opinions of a potentially nonrepresentative sample of people as if they represent public opinion."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Must be True",
+    "questionDifficulty": 2,
+    "stimulus": "All parrots can learn to speak a few words and phrases. Not all parrots have equally pleasant dispositions, though some of those native to Australia can be counted on for a sweet temper. Almost any parrot, however, will show tremendous affection for an owner who raised the bird from a chick by hand-feeding it.",
+    "questionStem": "If the statements above are true, then which one of the following must be true?",
+    "answerChoices": {
+      "A": "Some parrots that can learn to speak are sweet tempered.",
+      "B": "If a parrot is not native to Australia, then it will be sweet tempered only if it is hand-fed as a chick.",
+      "C": "The sweetest-tempered parrots are those native to Australia.",
+      "D": "Australia is the only place where one can find birds that can both learn to speak and be relied on for a sweet temper.",
+      "E": "All species of pet birds that are native to Australia can be counted on for a sweet temper."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Toxicologist: Recent research has shown that dioxin causes cancer in rats. Although similar research has never been done on humans, and probably never will be, the use of dioxin should be completely banned.",
+    "questionStem": "That dioxin causes cancer in rats figures in the argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "It is presented as the hazard that the researcher is concerned with preventing.",
+      "B": "It is presented as a benefit of not acting on the recommendation in the conclusion.",
+      "C": "It is presented as evidence for the claim that similar research will never be done on humans.",
+      "D": "It is presented as a finding that motivates the course of action advocated in the conclusion.",
+      "E": "It is presented as evidence for the claim that similar research has never been done on humans."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Politician: The law should not require people to wear seat belts in cars. People are allowed to ride motorcycles without seat belts, and riding a motorcycle even while wearing a seat belt would be more dangerous than riding in a car without wearing one.",
+    "questionStem": "Which one of the following arguments is most similar in its flawed reasoning to the politician's argument?",
+    "answerChoices": {
+      "A": "Marielle and Pat should allow their children to have snacks between meals. They currently allow their children to have a large dessert after dinner, and allowing them to have snacks between meals instead would improve their nutrition.",
+      "B": "Any corporation should allow its employees to take time off when they are under too much stress to concentrate on their work. Some corporations allow any employee with a bad cold to take time off, and even a healthy employee under stress may be less productive than an unstressed employee with a bad cold.",
+      "C": "Amusement parks should allow people to stand while riding roller coasters. It is legal for people to stand at the edges of high cliffs, and even sitting at the edge of a high cliff is more likely to result in a fatal fall than standing while riding a roller coaster.",
+      "D": "It should be illegal for anyone to smoke in a public place, for it certainly should be illegal to pollute public drinking water, and smoking even in the privacy of one's home can be more harmful to the health of others than polluting their water would be.",
+      "E": "Vanessa should be allowed to let her dog run around in the park without a leash. She already lets the dog roam around her yard without a leash, and the park differs from her yard only in size."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT116",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "Burying beetles do whatever they can to minimize the size of their competitors' broods without adversely affecting their own. This is why they routinely destroy each other's eggs when two or more beetles inhabit the same breeding location. Yet, after the eggs hatch, the adults treat all of the larvae equally, sharing in the care of the entire population.",
+    "questionStem": "Which one of the following, if true, most helps to explain burying beetles' apparently contradictory behavior?",
+    "answerChoices": {
+      "A": "Burying beetles whose eggs hatch before their competitors' are more likely to have large broods than are burying beetles whose eggs hatch later.",
+      "B": "The cooperation among adult burying beetles ensures that the greatest possible number of larvae survive.",
+      "C": "Burying beetles are unable to discriminate between their own larvae and the larvae of other burying beetles.",
+      "D": "Many of the natural enemies of burying beetles can be repelled only if burying beetles cooperate in defending the breeding site.",
+      "E": "Most breeding sites for burying beetles can accommodate only a limited number of larvae."
+    },
+    "correctAnswer": "C"
+  }
+]

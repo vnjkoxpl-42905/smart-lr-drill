@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "A study comparing infant care revealed that the amount of stimulation babies receive affects their sleep. At six months of age, the babies in the study with a less stimulating daytime routine slept an average of two hours more per day than those with a more stimulating routine. Since sleep plays a very important role in a child's development, parents would be wise to reduce the amount of stimulation their babies receive.",
+    "questionStem": "Which one of the following statements, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Babies' muscular coordination is unaffected by the amount of stimulation they receive.",
+      "B": "Babies with less stimulating routines usually get extra sleep during the day.",
+      "C": "Studies showed no correlation between stimulation and amount of sleep for children three years of age or older.",
+      "D": "The babies who had a less stimulating routine gained weight at an average rate.",
+      "E": "The stimulation that babies receive helps them to develop intellectually."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Tom: Critics of recent high court decisions claim that judges' willingness to abide by earlier decisions is necessary to avoid legal chaos. Since high courts of the past often repudiated legal precedents and no harm to the legal system ensued, these critics' objections must be politically motivated and ought to be ignored.\nMary: High courts have repudiated precedents in the past, but they were careful to do so only when the previous rulings were old and had clearly become outdated. The recently overturned rulings were themselves recent. Overturning any recent legal ruling diminishes the law, which comes to be viewed as unstable and capricious.",
+    "questionStem": "Which one of the following most accurately expresses the point at issue between Tom and Mary?",
+    "answerChoices": {
+      "A": "whether the overturning of recent high court precedents will harm the legal system",
+      "B": "whether the overturning of recent high court precedents was politically motivated",
+      "C": "whether critics of recent high court decisions in fact advanced the claim Tom cites",
+      "D": "whether a precedent that is clearly outdated is in need of being overturned",
+      "E": "whether judicial decisions that seem progressive at first can quickly become outdated"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Tom: Critics of recent high court decisions claim that judges' willingness to abide by earlier decisions is necessary to avoid legal chaos. Since high courts of the past often repudiated legal precedents and no harm to the legal system ensued, these critics' objections must be politically motivated and ought to be ignored.\nMary: High courts have repudiated precedents in the past, but they were careful to do so only when the previous rulings were old and had clearly become outdated. The recently overturned rulings were themselves recent. Overturning any recent legal ruling diminishes the law, which comes to be viewed as unstable and capricious.",
+    "questionStem": "Mary responds to Tom's argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "She questions Tom's claim about the effects of reversals by high courts of the past.",
+      "B": "She agrees to Tom's evaluation of certain critics' motives, but introduces evidence to show that it is usually difficult to discern such motives in practice.",
+      "C": "She defends a practice against Tom's criticisms by citing evidence to show that it has usually been resorted to only after due deliberation.",
+      "D": "She points out that Tom's conclusion rests on an assumption that is contradicted by the evidence Tom presents.",
+      "E": "She introduces a distinction between two kinds of situations in which precedents are overturned, in order to argue for a difference that Tom fails to take into account."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Among North American school-age children, there is a strong positive correlation between obesity and the amount of television watched. Therefore, with the arrival of interactive television, obesity among North American school-age children will increase.",
+    "questionStem": "The argument requires the assumption that",
+    "answerChoices": {
+      "A": "a sedentary lifestyle is among the most important causes of childhood obesity",
+      "B": "obesity among North American school-age children increased as cable television became widely available",
+      "C": "genetics makes no significant contribution to obesity",
+      "D": "North American school-age children will increase their television viewing with the arrival of interactive television",
+      "E": "within a decade of its introduction, interactive television will be almost universally available"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Lactose, a sugar found in milk, aids in the absorption of calcium, which in turn is required for bone repair. In addition to there being shortages of milk in tropical areas, inhabitants of these areas lose the ability to absorb lactose, unlike people from nontropical areas. Yet inhabitants of tropical areas have no more problems with bone repair than do people who inhabit nontropical areas.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent paradox described above?",
+    "answerChoices": {
+      "A": "People living in tropical areas periodically take tablets containing lactose when there are shortages of milk.",
+      "B": "Milk consumption has fallen in both tropical and nontropical areas.",
+      "C": "The abundant sunlight in tropical areas causes the human body to produce vitamin D naturally, which aids in the absorption of calcium.",
+      "D": "Consumption of dairy products other than milk has risen slightly in tropical areas.",
+      "E": "The extent to which people living in tropical areas lose the ability to absorb lactose depends on a genetic predisposition."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "A politician can neither be reelected nor avoid censure by his or her colleagues if that politician is known to be involved in any serious scandals. Several prominent politicians have just now been shown to be involved in a conspiracy that turned into a serious scandal. These politicians will therefore not be reelected.",
+    "questionStem": "If the statements above are all true, which one of the following statements must also be true?",
+    "answerChoices": {
+      "A": "The prominent politicians cannot escape censure by their colleagues.",
+      "B": "If there had been no scandal, the prominent politicians would be reelected.",
+      "C": "No politician is censured unless he or she is known to be involved in a serious scandal.",
+      "D": "The prominent politicians initially benefited from the conspiracy that caused the scandal.",
+      "E": "Some politicians who are involved in scandalous conspiracies avoid detection and censure."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Jorge: You won't be able to write well about the rock music of the 1960s, since you were just an infant then. Rock music of the 1960s was created by and for people who were then in their teens and early twenties.\nRuth: Your reasoning is absurd. There are living writers who write well about ancient Roman culture, even though those writers are obviously not a part of ancient Roman culture. Why should my youth alone prevent me from writing well about the music of a period as recent as the 1960s?",
+    "questionStem": "Which one of the following most accurately represents what is at issue between Jorge and Ruth?",
+    "answerChoices": {
+      "A": "whether only those people who were in their teens or early twenties during the 1960s can be qualified to write about the rock music of that period",
+      "B": "whether people who were in their teens or early twenties during the 1960s can write well about the rock music of that period",
+      "C": "whether only people who are past their early twenties can write well about ancient cultures",
+      "D": "whether people who are not now in their teens or early twenties can write well about the rock music of the 1960s",
+      "E": "whether Ruth's ideas about the rock music of the 1960s are likely to appeal to people who were in their teens or early twenties during that period"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "Jorge: You won't be able to write well about the rock music of the 1960s, since you were just an infant then. Rock music of the 1960s was created by and for people who were then in their teens and early twenties.\nRuth: Your reasoning is absurd. There are living writers who write well about ancient Roman culture, even though those writers are obviously not a part of ancient Roman culture. Why should my youth alone prevent me from writing well about the music of a period as recent as the 1960s?",
+    "questionStem": "Ruth responds to Jorge's criticism by",
+    "answerChoices": {
+      "A": "challenging his claim that she was not in her teens or early twenties during the 1960s",
+      "B": "clarifying a definition of popular culture that is left implicit in Jorge's argument",
+      "C": "using the example of classical culture in order to legitimize contemporary culture as an object worthy of serious consideration",
+      "D": "offering an analogy to counter an unstated assumption of Jorge's argument",
+      "E": "casting doubt on her opponent's qualification to make judgments about popular culture"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "In each of the last ten years, there have been few complaints to law enforcement agencies of telemarketing fraud. Yet, in the last ten years, fraudulent telemarketing schemes have become a more and more serious problem, bilking victims out of millions of dollars annually.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent conflict described above?",
+    "answerChoices": {
+      "A": "Telemarketers convicted of fraud tend to be punished more severely than other people convicted of nonviolent crimes.",
+      "B": "Most complaints of telemarketing fraud that authorities investigate involve the use of credit cards, which makes it extremely difficult for law enforcement agencies to track down the perpetrators.",
+      "C": "Some fraudulent telemarketers have concocted phony investment schemes which make it unlikely that victims will detect the fraud until a year or two after the fact, by which time their swindlers are long gone.",
+      "D": "Fraudulent telemarketers typically base their operations outside the legal jurisdiction inhabited by the people they solicit, so they must be prosecuted in higher courts.",
+      "E": "The majority of those who have been defrauded by telemarketers have been inclined not to seek any legal remedy, out of embarrassment at being duped."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "The wholesale price of one bottle of Veritas Vineyards wine, always a profitable brand, is the same today as it was in 1991. The winegrower's profit is equal to the wholesale price minus the costs of producing the bottled wine, which include the cost to the winegrower of the glass bottles themselves and of the corks. Between 1991 and the present, all of the costs to the winegrower of producing a bottle of Veritas Vineyards wine have remained constant, except that of the corks, which cost nearly twice as much today as they did in 1991.",
+    "questionStem": "If the statements above are true, which one of the following must also be true on the basis of them?",
+    "answerChoices": {
+      "A": "The number of bottles of Veritas Vineyards wine sold has remained unchanged between 1991 and the present.",
+      "B": "Each bottle of Veritas Vineyards wine that is sold today brings the winegrower less profit than did each bottle sold in 1991.",
+      "C": "The cost to the cork maker of producing the corks used in bottles of Veritas Vineyards wine has increased since 1991.",
+      "D": "The aggregate profit generated by the winegrower's sales of Veritas Vineyards wine this year is smaller than the aggregate profit generated in 1991.",
+      "E": "The cost of each cork used in bottling Veritas Vineyards wine is currently greater than the cost of each glass bottle itself."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Letter to the editor: According to your last edition's anonymous article, we should all be required to carry identification cards and show them on demand. This opinion is wrong. After all, the writers of the article should not have asserted that the right to remain anonymous was trivial, unless they were prepared to put their names to that assertion.",
+    "questionStem": "The reasoning above is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "criticizes the editor rather than the writers of the article",
+      "B": "diverts attention from the content of the article by focusing on the writers' actions",
+      "C": "commits the same error in reasoning that it accuses the writers of committing",
+      "D": "attacks the integrity of the writers without knowing anything about them",
+      "E": "confuses two meanings of the term \"anonymous\""
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "The higher a dam, the more exposed it is to forces that can cause it to collapse. Of the world's hundreds of arch dams, more than half are over 100 meters high. Yet all six of the arch dam collapses that have occurred during the past 40 years have occurred in arch dams under 100 meters high.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent paradox?",
+    "answerChoices": {
+      "A": "The higher a dam must be, the greater the likelihood that it will be built as an arch dam.",
+      "B": "Arch dams are generally more complicated and more costly to construct than other types of dams of comparable size.",
+      "C": "The larger the structure, the more careful the attention it received in design and construction.",
+      "D": "The basic engineering principles behind the design and construction of arch dams have been known for more than 100 years.",
+      "E": "Arch dams under 100 meters high are less subject to collapse than are dams of other types also under 100 meters high."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Nearly every criminal trial includes eyewitness testimony, and cognitive psychologists have hypothesized that misidentification by eyewitnesses is a common reason for mistaken convictions in criminal trials.",
+    "questionStem": "Each of the following, if true, supports the cognitive psychologists' hypothesis except:",
+    "answerChoices": {
+      "A": "Eyewitnesses' reports are the most common reason for conviction.",
+      "B": "In most crimes, eyewitnesses have seen the perpetrator only briefly, and people are generally poor at remembering the faces of people they have seen only briefly.",
+      "C": "The shock of witnessing a crime makes it likely that a witness's memory of the perpetrator's face will be distorted.",
+      "D": "Judges often instruct juries about those circumstances under which testimony of eyewitnesses is fallible.",
+      "E": "Jurors are very likely to believe eyewitnesses who appear confident, and unreliable witnesses usually appear very confident."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "The mathematics of the scientific theory known as \"complexity\" describes those phenomena that are not quite stable and not quite chaotic. For example, the mathematics of complexity can be used to describe sand dunes: although sand dunes generally retain their shape, the addition of a tiny amount of sand can cause a sandslide. Certain scientists have concluded that there is good evidence that complexity is correct. After entering complexity-based mathematical models of real-world phenomena in computers, they found that the computerized mathematical models evolve much like the real-world phenomena actually evolve.",
+    "questionStem": "Which one of the following principles, if valid, most justifies the scientists' conclusion?",
+    "answerChoices": {
+      "A": "If computerized models based on a theory behave like their real-world counterparts behave, then that theory is probably correct.",
+      "B": "If a scientific theory is correct, then computerized mathematical models based on that theory behave like their real-world counterparts.",
+      "C": "If actual phenomena can be pictured as computerized models, computers themselves will eventually discover the mathematics of the correct theory explaining those phenomena.",
+      "D": "If they evolve exactly like real-world phenomena, computer models are neither purely stable nor purely chaotic, which is what complexity predicts.",
+      "E": "If computers verify that there are mathematical errors in the calculations of scientists, then the theories of those scientists are probably incorrect."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Ruth: To become a politician, a person should be required to have a diversity of experience. The more diverse one's experience, the more one will understand the need for compromise.\nStephanie: To be worthy of public trust, it is not enough, as you suggest, that one simply have varied experience. Such a person would not necessarily be worthy of public trust.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the reasoning in Stephanie's response to Ruth's statements?",
+    "answerChoices": {
+      "A": "The response simply asserts a point of view opposite to Ruth's without giving reasons for it.",
+      "B": "The response fails to provide evidence for its assumption that experience is not beneficial to the practice of politics.",
+      "C": "The response attributes to Ruth a view that is more vulnerable to criticism than any she actually expresses.",
+      "D": "The response fails to make a needed distinction between personal experience and relevant professional experience.",
+      "E": "The response fails to provide evidence for its assumption that flexibility is unimportant in the practice of politics."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Cézanne's art inspired the next generation of artists, twentieth-century modernist creators of abstract art. While most experts rank Cézanne as an early modernist, a small few reject this idea. Françoise Cachin, for example, bluntly states that such an ascription is \"overplayed,\" and says that Cézanne's work is “too often observed from a modern point of view.\"",
+    "questionStem": "Which one of the following statements is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Cézanne's work is highly controversial.",
+      "B": "Cézanne was an early creator of abstract art.",
+      "C": "Cézanne's work helped to develop modernism.",
+      "D": "Modern art owes less to Cézanne than many experts believe.",
+      "E": "Cézanne's work tends to be misinterpreted as modernist."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Ecologist: Forest fires, the vast majority of which are started by lightning, are not only a natural phenomenon to which all forest ecosystems are well adapted, but are required for many forests to flourish. Forest fires facilitate the opening and spreading of seed pods, prevent an overabundance of insects, and promote the diversity of forests by preventing certain varieties of aggressive weeds from dominating other species. In view of this, systematic attempts by human beings to prevent or control forest fires are ill-advised and shortsighted; forest fires should be left alone and allowed to burn themselves out naturally.",
+    "questionStem": "The conclusion drawn above follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Human intervention in natural processes tends to reduce the biological diversity of ecosystems.",
+      "B": "Protection of forests and their ecosystems is the only legitimate reason for attempting to prevent or control forest fires.",
+      "C": "Forest fires begun by careless campers should be the target of human fire control efforts.",
+      "D": "Humans tend to view forests as well as other ecosystems as instruments for the satisfaction of human needs.",
+      "E": "If the health of an ecosystem is threatened by insects or other predators, human beings should not intervene to block that threat."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Foster: Many species of extremely large North American mammals became extinct during the last ice age, which was also the time of the first human migration to North America. These species could not survive the dramatic changes wrought by this human migration.\nFisch: Those extinctions were caused by the dramatic shift to a harsher climate. The climate changed so rapidly that the species could not adapt.",
+    "questionStem": "Which one of the following, if true, most strengthens Fisch's argument?",
+    "answerChoices": {
+      "A": "Similar species living in parts of the world where there were dramatic changes in climate did not become extinct.",
+      "B": "Most of the mammals that survived in North America migrated from Asia at the same time as the humans migrated.",
+      "C": "Human migration to other previously isolated areas has resulted in mammal species becoming extinct.",
+      "D": "Archaeological evidence reveals that the human migrants had a number of different kinds of large weapons.",
+      "E": "The huge size of the mammals made it difficult for them to migrate the great distances to milder environments."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "It is obvious that one ought to have a will stating how one wishes one's estate to be distributed. This can easily be seen from the fact that, according to current laws, in the absence of a legal will distant relatives whom one has never even met have a greater legal right to one's estate than one's beloved friends do.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "No one wants his or her estate to go to someone he or she has never met.",
+      "B": "One's estate should go only to a person who is deserving.",
+      "C": "Distributions of estates under current inheritance laws are unjust.",
+      "D": "People are generally not indifferent about how their estates are distributed.",
+      "E": "One's beloved friends have a greater legal right to one's estate than one's distant relatives do."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Some people believe that good health is due to luck. However, studies from many countries indicate a strong correlation between good health and high educational levels. Thus research supports the view that good health is largely the result of making informed lifestyle choices.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that only highly educated people make informed lifestyle choices",
+      "B": "overlooks the possibility that people who make informed lifestyle choices may nonetheless suffer from inherited diseases",
+      "C": "presumes, without providing justification, that informed lifestyle choices are available to everyone",
+      "D": "overlooks the possibility that the same thing may causally contribute both to education and to good health",
+      "E": "does not acknowledge that some people who fail to make informed lifestyle choices are in good health"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "In a small town, every complaint filed about a plumber's work was filed against Moore, who has a relatively small business. So there is good evidence that Moore is a poor plumber who cannot be counted on to do a good job.",
+    "questionStem": "The argument is questionable because it fails to consider",
+    "answerChoices": {
+      "A": "the interests of Moore's customers who have not filed complaints",
+      "B": "that there may be few if any other plumbers working in Moore's town",
+      "C": "whether Moore's business is too small to warrant the kind of generalization drawn",
+      "D": "the number of complaints filed in Moore's town about tradespeople other than plumbers",
+      "E": "whether each person who was dissatisfied with Moore's work filed a complaint against Moore"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Drama critic: Audiences will enjoy Warner's latest play, about the disintegration of a family, because of the superb acting. The chemistry between the actors could not be more intense, and Ziegler, who plays the child, captures convincingly the guilt and despair experienced as the family members grow more estranged from each other.",
+    "questionStem": "Each of the following, if true, weakens the argument except:",
+    "answerChoices": {
+      "A": "Generally, audiences enjoy romantic comedies but find tragedies upsetting.",
+      "B": "The company staging the play has an unbroken history of dull performances.",
+      "C": "Insiders with the company staging the play have condemned Ziegler's performance as unexciting.",
+      "D": "The plot of the play is similar in some respects to plots of Warner's other works.",
+      "E": "Audiences usually find drama critics' reviews unreliable."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Editorial: Given the law of supply and demand, maximum total utility is assured only in a pure free market economy, although other types of economies might be able to achieve it. Obviously, then, a country that has a highly controlled economy, and is not trying to bring about a pure free market economy, is not acting in the way that is most likely to bring about maximum total utility.",
+    "questionStem": "The editorial's argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that any country that does not have a pure free market economy has a highly controlled economy",
+      "B": "presumes, without providing justification, that the way in which utility is distributed is less important than the total amount of utility",
+      "C": "fails to consider that the way most likely to achieve a particular end may not be the only way to achieve that end",
+      "D": "presumes, without providing justification, that trying to bring about a condition that will ensure the achievement of an end must always be the way most likely to achieve that end",
+      "E": "ignores the possibility that a pure free market economy will have serious drawbacks that outweigh the benefits of maximum total utility"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "A park's user fees are employed to maintain the park. When fewer people use the park, it suffers less wear. Thus raising user fees improves park maintenance even if the number of people who stop using the park because of higher fees is great enough to reduce the revenues devoted to maintenance.",
+    "questionStem": "Which one of the following conforms most closely to the principle illustrated by the statements above?",
+    "answerChoices": {
+      "A": "To increase its market share, a car company improves the service warranty it provides to those who purchase a new car. Making good on the warranties proves expensive enough that the company's profits decrease even though its market share increases.",
+      "B": "A grocery store's overall revenues increase even though it no longer remains open 24 hours daily. The manager theorizes that customers find the store more pleasant because it can be cleaned well during the hours it is closed.",
+      "C": "Road taxes are raised to encourage more people to use mass transit. But since the fee paid by each commuter does not equal the cost of providing transit for that commuter, a mass transit service will deteriorate even as it takes in more money.",
+      "D": "By spending more on zoo maintenance, a city increases the number of zoo patrons. The extra revenue generated by the sale of memorabilia more than makes up for the extra costs of maintenance.",
+      "E": "Library fees have been increased to raise money for book repair. Since the library now has fewer patrons, the books are in better repair even though the number of library patrons has decreased to such an extent that the money available for book repair has decreased."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Political commentator: Voters tend to elect the candidate whose visual image most evokes positive feelings. Thus, laws designed to increase the fairness of elections should not allow one candidate to buy significantly more media exposure than any rival candidates can afford.",
+    "questionStem": "Which one of the following is an assumption on which the political commentator's argument depends?",
+    "answerChoices": {
+      "A": "Elections are unfair only if at least one of the candidates has more resources than any rival candidate has.",
+      "B": "People have positive feelings toward election candidates only when they find the candidates' visual images familiar.",
+      "C": "The tendency of a candidate's visual image to evoke positive feelings in voters at least sometimes increases as media exposure increases.",
+      "D": "Candidates invariably buy as much media exposure as they can afford and campaign laws allow.",
+      "E": "Any candidate whose visual image does not evoke many positive feelings in voters will not be elected."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT115",
+    "sectionNumber": 4,
+    "questionNumber": 26,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Commentator: Because of teacher hiring freezes, the quality of education in that country will not improve. Thus, it will surely deteriorate.",
+    "questionStem": "The flawed reasoning in which one of the following is most similar to that in the commentator's argument?",
+    "answerChoices": {
+      "A": "Because Raoul is a vegetarian, he will not have the pepperoni pizza for lunch. It follows that he will have the cheese pizza.",
+      "B": "Given that over 250 years of attempts to prove the Goldbach conjecture have failed, it will probably never be proved. Hence, it is more likely to be disproved than proved.",
+      "C": "Since funding levels for social programs are being frozen, our society will not become more harmonious. Thus, it may become more discordant.",
+      "D": "Since there is a storm moving in, the outside temperature cannot rise this afternoon. Therefore, it must fall.",
+      "E": "The starter in Mary's car gave out weeks ago, and so it is impossible for the car to start. Therefore, it will not start."
+    },
+    "correctAnswer": "D"
+  }
+]
