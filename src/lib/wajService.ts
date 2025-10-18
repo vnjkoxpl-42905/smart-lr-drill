@@ -16,7 +16,7 @@ export interface WAJHistoryItem {
 
 export interface WAJEntry {
   id: string;
-  class_id: string;
+  user_id: string;
   qid: string;
   pt: number;
   section: number;
@@ -32,7 +32,7 @@ export interface WAJEntry {
 }
 
 export async function logWrongAnswer(params: {
-  class_id: string;
+  user_id: string;
   qid: string;
   pt: number;
   section: number;
@@ -63,9 +63,9 @@ export async function logWrongAnswer(params: {
   const { data: existing } = await supabase
     .from('wrong_answer_journal')
     .select('*')
-    .eq('class_id', params.class_id)
+    .eq('user_id', params.user_id)
     .eq('qid', params.qid)
-    .single();
+    .maybeSingle();
 
   if (existing) {
     // Append to history
@@ -79,7 +79,7 @@ export async function logWrongAnswer(params: {
         revisit_count: newHistory.length - 1,
         updated_at: new Date().toISOString(),
       })
-      .eq('class_id', params.class_id)
+      .eq('user_id', params.user_id)
       .eq('qid', params.qid);
 
     if (error) throw error;
@@ -88,7 +88,7 @@ export async function logWrongAnswer(params: {
     const { error } = await supabase
       .from('wrong_answer_journal')
       .insert({
-        class_id: params.class_id,
+        user_id: params.user_id,
         qid: params.qid,
         pt: params.pt,
         section: params.section,
@@ -106,7 +106,7 @@ export async function logWrongAnswer(params: {
 }
 
 export async function logCorrectAnswer(params: {
-  class_id: string;
+  user_id: string;
   qid: string;
   pt: number;
   section: number;
@@ -122,9 +122,9 @@ export async function logCorrectAnswer(params: {
   const { data: existing } = await supabase
     .from('wrong_answer_journal')
     .select('*')
-    .eq('class_id', params.class_id)
+    .eq('user_id', params.user_id)
     .eq('qid', params.qid)
-    .single();
+    .maybeSingle();
 
   if (existing) {
     const historyItem: WAJHistoryItem = {
@@ -146,14 +146,14 @@ export async function logCorrectAnswer(params: {
         revisit_count: newHistory.length - 1,
         updated_at: new Date().toISOString(),
       })
-      .eq('class_id', params.class_id)
+      .eq('user_id', params.user_id)
       .eq('qid', params.qid);
 
     if (error) throw error;
   }
 }
 
-export async function getWAJEntries(class_id: string, filters?: {
+export async function getWAJEntries(user_id: string, filters?: {
   qtype?: string;
   level?: number;
   pt?: number;
@@ -162,7 +162,7 @@ export async function getWAJEntries(class_id: string, filters?: {
   let query = supabase
     .from('wrong_answer_journal')
     .select('*')
-    .eq('class_id', class_id)
+    .eq('user_id', user_id)
     .order('first_wrong_at_iso', { ascending: false });
 
   if (filters?.qtype) {

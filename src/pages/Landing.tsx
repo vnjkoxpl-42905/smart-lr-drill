@@ -1,16 +1,27 @@
 import * as React from "react";
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
 import { useQuestionBank } from '@/contexts/QuestionBankContext';
 import { ModeSelector } from '@/components/drill/ModeSelector';
 import { SectionSelector } from '@/components/drill/SectionSelector';
 import { TypeDrillPicker } from '@/components/drill/TypeDrillPicker';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { User } from 'lucide-react';
 import type { DrillMode, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
 
 export default function Landing() {
   const navigate = useNavigate();
+  const { user, loading: authLoading } = useAuth();
   const { manifest, isLoading, error } = useQuestionBank();
   const [selectedMode, setSelectedMode] = React.useState<DrillMode | null>(null);
+
+  // Redirect to auth if not logged in
+  React.useEffect(() => {
+    if (!authLoading && !user) {
+      navigate('/auth');
+    }
+  }, [user, authLoading, navigate]);
 
   if (isLoading) {
     return (
@@ -40,20 +51,42 @@ export default function Landing() {
     navigate('/drill', { state: { mode: 'type-drill', config } });
   };
 
+  if (authLoading || isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-lg">Loading...</p>
+      </div>
+    );
+  }
+
+  const userInitials = user?.email?.slice(0, 2).toUpperCase() || 'U';
+
   return (
     <div className="min-h-screen p-8">
       <div className="text-center mb-12">
-        <div className="flex justify-end gap-3 mb-4">
-          <Button variant="outline" onClick={() => navigate('/analytics')}>
-            Analytics
+        <div className="flex justify-between items-center mb-4">
+          <Button 
+            variant="ghost" 
+            className="gap-2"
+            onClick={() => navigate('/profile')}
+          >
+            <Avatar className="h-8 w-8">
+              <AvatarFallback>{userInitials}</AvatarFallback>
+            </Avatar>
+            <span>Profile</span>
           </Button>
-          <Button variant="outline" onClick={() => navigate('/waj')}>
-            Wrong Answer Journal
-          </Button>
+          <div className="flex gap-3">
+            <Button variant="outline" onClick={() => navigate('/analytics')}>
+              Analytics
+            </Button>
+            <Button variant="outline" onClick={() => navigate('/waj')}>
+              Wrong Answer Journal
+            </Button>
+          </div>
         </div>
-        <h1 className="text-4xl font-bold mb-4">LR smart drill</h1>
+        <h1 className="text-4xl font-bold mb-4">LR Smart Drill</h1>
         <p className="text-lg text-muted-foreground">
-          Logical Reasoning practice
+          Welcome back! Ready to practice?
         </p>
       </div>
 

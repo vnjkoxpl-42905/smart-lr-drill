@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import * as React from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -40,10 +42,14 @@ interface AnalyticsData {
 
 export default function Analytics() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [data, setData] = useState<AnalyticsData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [coachInsight, setCoachInsight] = useState(0);
-  const classId = 'demo_user'; // TODO: Get from auth context
+
+  React.useEffect(() => {
+    if (!user) navigate('/auth');
+  }, [user, navigate]);
 
   const coachInsights = [
     "Your accuracy on 'Flaw' questions has improved 23% this week! 🎯",
@@ -62,27 +68,27 @@ export default function Analytics() {
   }, [coachInsights.length]);
 
   useEffect(() => {
-    loadAnalytics();
-  }, [classId]);
+    if (user) loadAnalytics();
+  }, [user]);
 
   const loadAnalytics = async () => {
-    if (!classId) return;
+    if (!user) return;
 
     try {
       // Fetch attempts
       const { data: attempts, error: attemptsError } = await supabase
         .from("attempts")
         .select("*")
-        .eq("class_id", classId)
+        .eq("user_id", user.id)
         .order("timestamp_iso", { ascending: false });
 
       if (attemptsError) throw attemptsError;
 
       // Fetch profile
-      const { data: profile, error: profileError } = await supabase
+      const { data: profile, error: profileError } = await (supabase as any)
         .from("profiles")
         .select("*")
-        .eq("class_id", classId)
+        .eq("id", user.id)
         .maybeSingle();
 
       if (profileError) throw profileError;

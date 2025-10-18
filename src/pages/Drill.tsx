@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -27,10 +28,15 @@ const adaptiveEngine = new AdaptiveEngine();
 function DrillContent() {
   const location = useLocation();
   const navigate = useNavigate();
+  const { user } = useAuth();
   const state = location.state as { 
     mode: DrillMode; 
     config?: FullSectionConfig | TypeDrillConfig;
   };
+
+  React.useEffect(() => {
+    if (!user) navigate('/auth');
+  }, [user, navigate]);
 
   const [session, setSession] = React.useState<DrillSession | null>(null);
   const [currentQuestion, setCurrentQuestion] = React.useState<LRQuestion | null>(null);
@@ -211,7 +217,7 @@ function DrillContent() {
     
     try {
       const { error } = await supabase.from('attempts').insert({
-        class_id: 'demo-class', // TODO: Get from auth context
+        user_id: user?.id,
         qid: attemptData.qid,
         pt: question.pt,
         section: question.section,
@@ -253,7 +259,7 @@ function DrillContent() {
     const { logWrongAnswer } = await import('@/lib/wajService');
     try {
       await logWrongAnswer({
-        class_id: 'demo-class',
+        user_id: user?.id || '',
         qid: currentQuestion.qid,
         pt: currentQuestion.pt,
         section: currentQuestion.section,

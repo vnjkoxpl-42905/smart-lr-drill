@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
@@ -22,6 +23,7 @@ interface TypeDrillPickerProps {
 type Step = 1 | 2 | 3;
 
 export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillPickerProps) {
+  const { user } = useAuth();
   const [currentStep, setCurrentStep] = useState<Step>(1);
   const [selectedQTypes, setSelectedQTypes] = useState<string[]>([]);
   const [selectedDifficulties, setSelectedDifficulties] = useState<number[]>([]);
@@ -134,11 +136,12 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
   };
 
   const handleSmartBuild = async () => {
+    if (!user) return;
+    
     setIsAnalyzing(true);
-    const classId = 'demo-class'; // TODO: Get from auth context
     
     try {
-      const analysis = await adaptiveEngine.analyzeWeakAreas(classId);
+      const analysis = await adaptiveEngine.analyzeWeakAreas(user.id);
       
       if (!analysis) {
         toast({
@@ -188,6 +191,8 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
   };
 
   const handleSaveTemplate = async () => {
+    if (!user) return;
+    
     if (!templateName.trim()) {
       toast({
         title: "Name required",
@@ -199,7 +204,7 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
 
     try {
       await templateService.saveTemplate({
-        class_id: 'demo_user', // TODO: Get from auth
+        user_id: user.id,
         template_name: templateName,
         qtypes: selectedQTypes,
         difficulties: selectedDifficulties,
