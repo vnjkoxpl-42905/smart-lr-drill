@@ -178,7 +178,15 @@ function DrillContent() {
     }
   }, [confidence, answerLocked, showSolution, tutorChatOpen]);
 
-  const handleJoshuaDone = () => {
+  const handleTryAgain = () => {
+    setTutorChatOpen(false);
+    setSelectedAnswer('');
+    setConfidence(null);
+    setAnswerLocked(false);
+    setQuestionStartTime(performance.now());
+  };
+
+  const handleContinueToReview = () => {
     setTutorChatOpen(false);
     setWajModalOpen(true);
   };
@@ -529,7 +537,8 @@ function DrillContent() {
                         open={tutorChatOpen}
                         question={currentQuestion}
                         userAnswer={selectedAnswer}
-                        onClose={handleJoshuaDone}
+                        onClose={handleContinueToReview}
+                        onTryAgain={handleTryAgain}
                       />
                     </div>
 

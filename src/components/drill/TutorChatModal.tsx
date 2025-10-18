@@ -5,7 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
 import { supabase } from '@/integrations/supabase/client';
-import { Loader2, Sparkles } from 'lucide-react';
+import { Loader2, Sparkles, RefreshCw } from 'lucide-react';
 import type { LRQuestion } from '@/lib/questionLoader';
 
 interface Message {
@@ -18,9 +18,10 @@ interface TutorChatModalProps {
   question: LRQuestion | null;
   userAnswer: string;
   onClose: () => void;
+  onTryAgain: () => void;
 }
 
-export function TutorChatModal({ open, question, userAnswer, onClose }: TutorChatModalProps) {
+export function TutorChatModal({ open, question, userAnswer, onClose, onTryAgain }: TutorChatModalProps) {
   const [messages, setMessages] = React.useState<Message[]>([]);
   const [input, setInput] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
@@ -220,12 +221,20 @@ export function TutorChatModal({ open, question, userAnswer, onClose }: TutorCha
             Send
           </Button>
           <Button 
+            onClick={onTryAgain}
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300"
+            size="sm"
+          >
+            <RefreshCw className="w-4 h-4 mr-1" />
+            Try Again
+          </Button>
+          <Button 
             variant="outline" 
             onClick={onClose} 
             className="flex-1 border-cyan-500/30 hover:bg-cyan-500/10"
             size="sm"
           >
-            Done
+            Continue
           </Button>
         </div>
       </CardFooter>
