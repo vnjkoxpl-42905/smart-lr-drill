@@ -43,7 +43,10 @@ export default function Landing() {
   return (
     <div className="min-h-screen p-8">
       <div className="text-center mb-12">
-        <div className="flex justify-end mb-4">
+        <div className="flex justify-end gap-3 mb-4">
+          <Button variant="outline" onClick={() => navigate('/analytics')}>
+            Analytics
+          </Button>
           <Button variant="outline" onClick={() => navigate('/waj')}>
             Wrong Answer Journal
           </Button>
