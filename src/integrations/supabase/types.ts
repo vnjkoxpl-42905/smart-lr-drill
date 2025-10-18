@@ -68,6 +68,45 @@ export type Database = {
         }
         Relationships: []
       }
+      concept_library: {
+        Row: {
+          application: string | null
+          category: string | null
+          concept_name: string
+          created_at: string | null
+          examples: string | null
+          explanation: string
+          id: string
+          keywords: string[] | null
+          reasoning_type: string | null
+          related_concepts: string[] | null
+        }
+        Insert: {
+          application?: string | null
+          category?: string | null
+          concept_name: string
+          created_at?: string | null
+          examples?: string | null
+          explanation: string
+          id?: string
+          keywords?: string[] | null
+          reasoning_type?: string | null
+          related_concepts?: string[] | null
+        }
+        Update: {
+          application?: string | null
+          category?: string | null
+          concept_name?: string
+          created_at?: string | null
+          examples?: string | null
+          explanation?: string
+          id?: string
+          keywords?: string[] | null
+          reasoning_type?: string | null
+          related_concepts?: string[] | null
+        }
+        Relationships: []
+      }
       events: {
         Row: {
           class_id: string
@@ -128,6 +167,90 @@ export type Database = {
           streak_current?: number | null
           updated_at?: string | null
           xp_total?: number | null
+        }
+        Relationships: []
+      }
+      question_type_strategies: {
+        Row: {
+          answer_strategy: string
+          category: string
+          correct_answer_patterns: string | null
+          created_at: string | null
+          difficulty_indicators: string | null
+          id: string
+          prephrase_goal: string | null
+          question_type: string
+          reading_strategy: string
+          related_reasoning_types: string[] | null
+          stem_keywords: string[] | null
+          wrong_answer_patterns: string | null
+        }
+        Insert: {
+          answer_strategy: string
+          category: string
+          correct_answer_patterns?: string | null
+          created_at?: string | null
+          difficulty_indicators?: string | null
+          id?: string
+          prephrase_goal?: string | null
+          question_type: string
+          reading_strategy: string
+          related_reasoning_types?: string[] | null
+          stem_keywords?: string[] | null
+          wrong_answer_patterns?: string | null
+        }
+        Update: {
+          answer_strategy?: string
+          category?: string
+          correct_answer_patterns?: string | null
+          created_at?: string | null
+          difficulty_indicators?: string | null
+          id?: string
+          prephrase_goal?: string | null
+          question_type?: string
+          reading_strategy?: string
+          related_reasoning_types?: string[] | null
+          stem_keywords?: string[] | null
+          wrong_answer_patterns?: string | null
+        }
+        Relationships: []
+      }
+      reasoning_type_guidance: {
+        Row: {
+          common_flaws: string[] | null
+          created_at: string | null
+          description: string
+          examples: string | null
+          id: string
+          key_indicators: string[] | null
+          reasoning_type: string
+          relevant_question_types: string[] | null
+          strengthen_tactics: string | null
+          weaken_tactics: string | null
+        }
+        Insert: {
+          common_flaws?: string[] | null
+          created_at?: string | null
+          description: string
+          examples?: string | null
+          id?: string
+          key_indicators?: string[] | null
+          reasoning_type: string
+          relevant_question_types?: string[] | null
+          strengthen_tactics?: string | null
+          weaken_tactics?: string | null
+        }
+        Update: {
+          common_flaws?: string[] | null
+          created_at?: string | null
+          description?: string
+          examples?: string | null
+          id?: string
+          key_indicators?: string[] | null
+          reasoning_type?: string
+          relevant_question_types?: string[] | null
+          strengthen_tactics?: string | null
+          weaken_tactics?: string | null
         }
         Relationships: []
       }
@@ -236,6 +359,45 @@ export type Database = {
           schema_version?: number | null
           student_label?: string | null
           token_hash?: string
+        }
+        Relationships: []
+      }
+      tactical_patterns: {
+        Row: {
+          application: string | null
+          created_at: string | null
+          description: string
+          examples: string | null
+          formula: string | null
+          id: string
+          pattern_name: string
+          pattern_type: string
+          question_types: string[] | null
+          reasoning_type: string | null
+        }
+        Insert: {
+          application?: string | null
+          created_at?: string | null
+          description: string
+          examples?: string | null
+          formula?: string | null
+          id?: string
+          pattern_name: string
+          pattern_type: string
+          question_types?: string[] | null
+          reasoning_type?: string | null
+        }
+        Update: {
+          application?: string | null
+          created_at?: string | null
+          description?: string
+          examples?: string | null
+          formula?: string | null
+          id?: string
+          pattern_name?: string
+          pattern_type?: string
+          question_types?: string[] | null
+          reasoning_type?: string | null
         }
         Relationships: []
       }
