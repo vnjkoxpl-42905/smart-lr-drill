@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter } from '@/components/ui/sheet';
+import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Badge } from '@/components/ui/badge';
 import { supabase } from '@/integrations/supabase/client';
-import { Loader2, Eye } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { Loader2, Sparkles } from 'lucide-react';
 import type { LRQuestion } from '@/lib/questionLoader';
 
 interface Message {
@@ -18,17 +18,14 @@ interface TutorChatModalProps {
   question: LRQuestion | null;
   userAnswer: string;
   onClose: () => void;
-  onPeek?: (peeking: boolean) => void;
 }
 
-export function TutorChatModal({ open, question, userAnswer, onClose, onPeek }: TutorChatModalProps) {
+export function TutorChatModal({ open, question, userAnswer, onClose }: TutorChatModalProps) {
   const [messages, setMessages] = React.useState<Message[]>([]);
   const [input, setInput] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
   const [initializing, setInitializing] = React.useState(true);
-  const [isPeeking, setIsPeeking] = React.useState(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
-  const peekTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
   // Auto-scroll to bottom when messages change
   React.useEffect(() => {
@@ -51,45 +48,8 @@ export function TutorChatModal({ open, question, userAnswer, onClose, onPeek }: 
       setInput('');
       setInitializing(true);
       setIsLoading(false);
-      setIsPeeking(false);
-      if (peekTimeoutRef.current) {
-        clearTimeout(peekTimeoutRef.current);
-      }
     }
   }, [open]);
-
-  // Peek functionality
-  const handlePeek = React.useCallback(() => {
-    setIsPeeking(true);
-    onPeek?.(true);
-    
-    // Clear existing timeout
-    if (peekTimeoutRef.current) {
-      clearTimeout(peekTimeoutRef.current);
-    }
-    
-    // Auto-reset after 5 seconds
-    peekTimeoutRef.current = setTimeout(() => {
-      setIsPeeking(false);
-      onPeek?.(false);
-    }, 5000);
-  }, [onPeek]);
-
-  // Spacebar shortcut for peek
-  React.useEffect(() => {
-    if (!open) return;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Only trigger if not in textarea
-      if (e.code === 'Space' && document.activeElement?.tagName !== 'TEXTAREA') {
-        e.preventDefault();
-        handlePeek();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [open, handlePeek]);
 
   const loadInitialQuestion = async () => {
     if (!question) return;
@@ -191,49 +151,39 @@ export function TutorChatModal({ open, question, userAnswer, onClose, onPeek }: 
     }
   };
 
-  return (
-    <Sheet open={open} onOpenChange={() => {}}>
-      <SheetContent 
-        side="bottom" 
-        className="h-[60vh] flex flex-col p-0 sm:h-[60vh]"
-        onInteractOutside={(e) => e.preventDefault()}
-      >
-        <SheetHeader className="px-6 pt-6 pb-4 border-b">
-          <div className="flex items-center justify-between">
-            <SheetTitle>Chat with Joshua - Your LSAT Coach</SheetTitle>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handlePeek}
-              className={cn(
-                "gap-2 transition-all",
-                isPeeking && "bg-primary text-primary-foreground"
-              )}
-            >
-              <Eye className="w-4 h-4" />
-              {isPeeking ? "Peeking..." : "Peek at Question"}
-            </Button>
-          </div>
-          <p className="text-xs text-muted-foreground mt-1">
-            Press <kbd className="px-1.5 py-0.5 text-xs bg-muted rounded border">Space</kbd> to peek at the question
-          </p>
-        </SheetHeader>
+  if (!open) return null;
 
-        <ScrollArea ref={scrollRef} className="flex-1 px-6">
-          <div className="space-y-4 py-4">
+  return (
+    <Card className="relative overflow-hidden rounded-xl border border-cyan-500/30 bg-gradient-to-br from-slate-900/95 via-purple-900/30 to-slate-900/95 shadow-[0_0_30px_rgba(6,182,212,0.2)] animate-in slide-in-from-top-2 duration-500">
+      {/* Subtle background glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 pointer-events-none" />
+      
+      <CardHeader className="relative px-4 py-3 border-b border-cyan-500/20 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
+        <div className="flex items-center gap-2">
+          <Sparkles className="w-5 h-5 text-cyan-400" />
+          <h3 className="text-base font-semibold text-foreground">Joshua - Your LSAT Coach</h3>
+          <Badge variant="secondary" className="ml-auto text-xs bg-cyan-500/10 text-cyan-400 border-cyan-500/30">
+            AI Tutor
+          </Badge>
+        </div>
+      </CardHeader>
+
+      <CardContent className="relative p-0">
+        <ScrollArea ref={scrollRef} className="h-[250px]">
+          <div className="space-y-3 p-4">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
                 className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[80%] rounded-lg p-3 ${
+                  className={`max-w-[85%] rounded-lg p-2.5 text-sm ${
                     msg.role === 'user'
-                      ? 'bg-primary text-primary-foreground ml-auto'
-                      : 'bg-muted'
+                      ? 'bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.15)] ml-auto'
+                      : 'bg-purple-500/10 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.15)]'
                   }`}
                 >
-                  <div className="text-sm font-semibold mb-1">
+                  <div className="text-xs font-semibold mb-1 opacity-70">
                     {msg.role === 'user' ? 'You' : 'Joshua'}
                   </div>
                   <div className="text-sm whitespace-pre-wrap leading-relaxed">
@@ -244,34 +194,44 @@ export function TutorChatModal({ open, question, userAnswer, onClose, onPeek }: 
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-muted rounded-lg p-3">
-                  <Loader2 className="w-4 h-4 animate-spin" />
+                <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-2.5">
+                  <Loader2 className="w-4 h-4 animate-spin text-purple-400" />
                 </div>
               </div>
             )}
           </div>
         </ScrollArea>
+      </CardContent>
 
-        <div className="space-y-3 px-6 pb-6 pt-4 border-t bg-background">
-          <Textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="Ask a follow-up question..."
-            rows={2}
-            disabled={isLoading}
-            className="resize-none"
-          />
-          <SheetFooter className="flex-row gap-2 sm:gap-2">
-            <Button onClick={handleSend} disabled={!input.trim() || isLoading} className="flex-1">
-              Send
-            </Button>
-            <Button variant="outline" onClick={onClose} className="flex-1">
-              Done
-            </Button>
-          </SheetFooter>
+      <CardFooter className="relative p-3 border-t border-cyan-500/20 bg-slate-900/50 flex-col gap-2">
+        <Textarea
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyPress={handleKeyPress}
+          placeholder="Ask a follow-up question..."
+          rows={1}
+          disabled={isLoading}
+          className="resize-none border-cyan-500/30 focus-visible:ring-cyan-500/50 bg-slate-900/50 text-sm"
+        />
+        <div className="flex gap-2 w-full">
+          <Button 
+            onClick={handleSend} 
+            disabled={!input.trim() || isLoading} 
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300"
+            size="sm"
+          >
+            Send
+          </Button>
+          <Button 
+            variant="outline" 
+            onClick={onClose} 
+            className="flex-1 border-cyan-500/30 hover:bg-cyan-500/10"
+            size="sm"
+          >
+            Done
+          </Button>
         </div>
-      </SheetContent>
-    </Sheet>
+      </CardFooter>
+    </Card>
   );
 }

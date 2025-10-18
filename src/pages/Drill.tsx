@@ -8,6 +8,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
+import { ReviewModal } from '@/components/drill/ReviewModal';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
@@ -33,7 +34,7 @@ function DrillContent() {
   const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
-  const [isPeeking, setIsPeeking] = React.useState(false);
+  const [wajModalOpen, setWajModalOpen] = React.useState(false);
   const [questionStartTime, setQuestionStartTime] = React.useState(performance.now());
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
@@ -177,23 +178,17 @@ function DrillContent() {
     }
   }, [confidence, answerLocked, showSolution, tutorChatOpen]);
 
-  const handleReviewComplete = async () => {
-    if (!currentQuestion || !selectedAnswer || !session || confidence === null) return;
+  const handleJoshuaDone = () => {
+    setTutorChatOpen(false);
+    setWajModalOpen(true);
+  };
 
+  const handleWAJSave = async (review: { whyWrong: string; whyEliminated: string; plan: string }) => {
+    if (!currentQuestion || !session) return;
+    
     const timeMs = Math.floor(performance.now() - questionStartTime);
-    const correct = selectedAnswer === currentQuestion.correctAnswer;
-
-    const newAttempts = new Map(session.attempts);
-    newAttempts.set(currentQuestion.qid, {
-      selectedAnswer,
-      correct,
-      timeMs,
-      timestamp: Date.now(),
-      confidence,
-      reviewDone: true,
-    });
-
-    // Auto-log to WAJ
+    
+    // Save to WAJ database with real review data
     const { logWrongAnswer } = await import('@/lib/wajService');
     try {
       await logWrongAnswer({
@@ -209,18 +204,30 @@ function DrillContent() {
         time_ms: timeMs,
         confidence_1_5: confidence,
         review: {
-          q1: 'Reviewed with Joshua',
-          q2: 'AI-assisted review',
-          q3: 'Received personalized coaching',
+          q1: review.whyWrong,
+          q2: review.whyEliminated,
+          q3: review.plan,
         },
       });
     } catch (error) {
       console.error('Failed to log to WAJ:', error);
     }
 
+    // Update session
+    const newAttempts = new Map(session.attempts);
+    newAttempts.set(currentQuestion.qid, {
+      selectedAnswer,
+      correct: false,
+      timeMs,
+      timestamp: Date.now(),
+      confidence,
+      reviewDone: true,
+    });
+
+    // Record with adaptive engine
     adaptiveEngine.recordAttempt({
       qid: currentQuestion.qid,
-      correct,
+      correct: false,
       time_ms: timeMs,
       qtype: currentQuestion.qtype,
       difficulty: currentQuestion.difficulty,
@@ -228,8 +235,13 @@ function DrillContent() {
     });
 
     setSession({ ...session, attempts: newAttempts });
-    setTutorChatOpen(false);
+    setWajModalOpen(false);
     setShowSolution(true);
+    
+    // Auto-advance to next question after 1.5 seconds
+    setTimeout(() => {
+      handleNext();
+    }, 1500);
   };
 
   const handleSubmit = async () => {
@@ -344,6 +356,66 @@ function DrillContent() {
   const isAnswered = session.attempts.has(currentQuestion.qid);
   const previousAttempt = session.attempts.get(currentQuestion.qid);
 
+  // Helper function to get answer groups split by selected answer
+  const getAnswerGroups = () => {
+    const answerEntries = Object.entries(currentQuestion.answerChoices);
+    const selectedIndex = answerEntries.findIndex(([key]) => key === selectedAnswer);
+    
+    return {
+      before: answerEntries.slice(0, selectedIndex),
+      selected: answerEntries[selectedIndex],
+      after: answerEntries.slice(selectedIndex + 1),
+    };
+  };
+
+  // Helper function to render a single answer choice
+  const renderAnswerChoice = (
+    key: string, 
+    text: string, 
+    options: {
+      isSelected?: boolean;
+      showRadio?: boolean;
+    } = {}
+  ) => {
+    const { isSelected = false, showRadio = true } = options;
+    const isCorrect = key === currentQuestion.correctAnswer;
+    const showFeedback = answerLocked && isSelected && confidence !== null;
+
+    return (
+      <div
+        key={key}
+        className={cn(
+          "flex items-start space-x-3 p-4 rounded-lg border transition-all duration-300",
+          showFeedback && isCorrect && 'border-[#16A34A] bg-[#16A34A]/10',
+          showFeedback && !isCorrect && 'border-[#DC2626] bg-[#DC2626]/10',
+          !showFeedback && 'border-border hover:bg-muted/50',
+          isSelected && tutorChatOpen && 'ring-2 ring-cyan-500/50 shadow-lg shadow-cyan-500/20',
+        )}
+      >
+        {showRadio ? (
+          <RadioGroupItem value={key} id={`answer-${key}`} />
+        ) : (
+          <div className="w-4 h-4" />
+        )}
+        <Label
+          htmlFor={`answer-${key}`}
+          className="flex-1 cursor-pointer text-base leading-relaxed"
+        >
+          <span className="font-semibold mr-2">({key})</span>
+          {text}
+          {showFeedback && (
+            <Badge
+              variant={isCorrect ? 'default' : 'destructive'}
+              className="ml-2"
+            >
+              {isCorrect ? 'Correct' : 'Wrong'}
+            </Badge>
+          )}
+        </Label>
+      </div>
+    );
+  };
+
   return (
     <div className="min-h-screen p-6">
       {/* Header */}
@@ -374,12 +446,7 @@ function DrillContent() {
       </div>
 
       {/* Question */}
-      <Card 
-        className={cn(
-          "max-w-4xl mx-auto p-8 transition-all duration-300",
-          tutorChatOpen && !isPeeking && "opacity-40 pointer-events-none"
-        )}
-      >
+      <Card className="max-w-4xl mx-auto p-8">
         <div className="space-y-6">
           {/* Question metadata */}
           <div className="flex items-center gap-3 flex-wrap">
@@ -423,49 +490,68 @@ function DrillContent() {
             ))}
           </div>
 
-          {/* Answer choices */}
-          <RadioGroup
-            value={selectedAnswer}
-            onValueChange={handleAnswerSelect}
-            disabled={answerLocked}
-          >
-            {Object.entries(currentQuestion.answerChoices).map(([key, text]) => {
-              const isCorrect = key === currentQuestion.correctAnswer;
-              const isSelected = key === selectedAnswer;
-              const showFeedback = answerLocked && isSelected && confidence !== null;
-              const minimalMode = tutorChatOpen && !isPeeking;
-
-              return (
-                <div
-                  key={key}
-                  className={`flex items-start space-x-3 p-4 rounded-lg border transition-colors ${
-                    showFeedback && isCorrect
-                      ? 'border-[#16A34A] bg-[#16A34A]/10'
-                      : showFeedback && !isCorrect
-                      ? 'border-[#DC2626] bg-[#DC2626]/10'
-                      : 'border-border hover:bg-muted/50'
-                  }`}
-                >
-                  <RadioGroupItem value={key} id={`answer-${key}`} />
-                  <Label
-                    htmlFor={`answer-${key}`}
-                    className="flex-1 cursor-pointer text-base leading-relaxed"
-                  >
-                    <span className="font-semibold mr-2">({key})</span>
-                    {minimalMode ? '' : text}
-                    {showFeedback && (
-                      <Badge
-                        variant={isCorrect ? 'default' : 'destructive'}
-                        className="ml-2"
-                      >
-                        {isCorrect ? 'Correct' : 'Wrong'}
-                      </Badge>
+          {/* Answer choices - Adaptive layout based on tutor state */}
+          {tutorChatOpen ? (
+            // FOCUSED LAYOUT: Highlight selected answer + Joshua
+            <div className="space-y-4">
+              {(() => {
+                const { before, selected, after } = getAnswerGroups();
+                
+                return (
+                  <>
+                    {/* Answers before selected - blurred */}
+                    {before.length > 0 && (
+                      <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
+                        {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false }))}
+                      </div>
                     )}
-                  </Label>
-                </div>
-              );
-            })}
-          </RadioGroup>
+
+                    {/* Selected answer - clear and prominent */}
+                    <div className="relative">
+                      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg blur-sm" />
+                      <div className="relative">
+                        {renderAnswerChoice(selected[0], selected[1], { 
+                          isSelected: true, 
+                          showRadio: true 
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Joshua chat - right below selected answer */}
+                    <div className="pl-7">
+                      <TutorChatModal
+                        open={tutorChatOpen}
+                        question={currentQuestion}
+                        userAnswer={selectedAnswer}
+                        onClose={handleJoshuaDone}
+                      />
+                    </div>
+
+                    {/* Answers after selected - blurred */}
+                    {after.length > 0 && (
+                      <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
+                        {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false }))}
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
+            </div>
+          ) : (
+            // NORMAL LAYOUT: Standard RadioGroup
+            <RadioGroup
+              value={selectedAnswer}
+              onValueChange={handleAnswerSelect}
+              disabled={answerLocked}
+            >
+              {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
+                renderAnswerChoice(key, text, { 
+                  isSelected: key === selectedAnswer,
+                  showRadio: true 
+                })
+              )}
+            </RadioGroup>
+          )}
 
           {/* Confidence selector */}
           {answerLocked && !tutorChatOpen && (
@@ -518,12 +604,9 @@ function DrillContent() {
         </div>
       </Card>
 
-      <TutorChatModal
-        open={tutorChatOpen}
-        question={currentQuestion}
-        userAnswer={selectedAnswer}
-        onClose={handleReviewComplete}
-        onPeek={setIsPeeking}
+      <ReviewModal
+        open={wajModalOpen}
+        onSave={handleWAJSave}
       />
     </div>
   );

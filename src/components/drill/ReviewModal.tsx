@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { useToast } from '@/hooks/use-toast';
 
 interface ReviewModalProps {
   open: boolean;
@@ -13,8 +14,18 @@ export function ReviewModal({ open, onSave }: ReviewModalProps) {
   const [whyWrong, setWhyWrong] = React.useState('');
   const [whyEliminated, setWhyEliminated] = React.useState('');
   const [plan, setPlan] = React.useState('');
+  const { toast } = useToast();
 
   const handleSave = () => {
+    if (!whyWrong.trim() || !whyEliminated.trim() || !plan.trim()) {
+      toast({
+        title: "All fields required",
+        description: "Please fill out all three reflection questions before continuing.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     onSave({ whyWrong, whyEliminated, plan });
     setWhyWrong('');
     setWhyEliminated('');
