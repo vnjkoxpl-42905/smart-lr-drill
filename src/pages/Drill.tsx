@@ -13,6 +13,7 @@ import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import type { LRQuestion } from '@/lib/questionLoader';
 import type { DrillMode, DrillSession, FullSectionConfig, TypeDrillConfig, TimerMode } from '@/types/drill';
 
@@ -32,6 +33,7 @@ function DrillContent() {
   const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
+  const [isPeeking, setIsPeeking] = React.useState(false);
   const [questionStartTime, setQuestionStartTime] = React.useState(performance.now());
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
@@ -372,7 +374,12 @@ function DrillContent() {
       </div>
 
       {/* Question */}
-      <Card className="max-w-4xl mx-auto p-8">
+      <Card 
+        className={cn(
+          "max-w-4xl mx-auto p-8 transition-all duration-300",
+          tutorChatOpen && !isPeeking && "opacity-40 pointer-events-none"
+        )}
+      >
         <div className="space-y-6">
           {/* Question metadata */}
           <div className="flex items-center gap-3 flex-wrap">
@@ -426,6 +433,7 @@ function DrillContent() {
               const isCorrect = key === currentQuestion.correctAnswer;
               const isSelected = key === selectedAnswer;
               const showFeedback = answerLocked && isSelected && confidence !== null;
+              const minimalMode = tutorChatOpen && !isPeeking;
 
               return (
                 <div
@@ -444,7 +452,7 @@ function DrillContent() {
                     className="flex-1 cursor-pointer text-base leading-relaxed"
                   >
                     <span className="font-semibold mr-2">({key})</span>
-                    {text}
+                    {minimalMode ? '' : text}
                     {showFeedback && (
                       <Badge
                         variant={isCorrect ? 'default' : 'destructive'}
@@ -460,7 +468,7 @@ function DrillContent() {
           </RadioGroup>
 
           {/* Confidence selector */}
-          {answerLocked && (
+          {answerLocked && !tutorChatOpen && (
             <div className="space-y-3 pt-4">
               <Label>Confidence (1–5)</Label>
               <div className="flex gap-2">
@@ -515,6 +523,7 @@ function DrillContent() {
         question={currentQuestion}
         userAnswer={selectedAnswer}
         onClose={handleReviewComplete}
+        onPeek={setIsPeeking}
       />
     </div>
   );

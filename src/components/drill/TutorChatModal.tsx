@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { supabase } from '@/integrations/supabase/client';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Eye } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import type { LRQuestion } from '@/lib/questionLoader';
 
 interface Message {
@@ -17,14 +18,17 @@ interface TutorChatModalProps {
   question: LRQuestion | null;
   userAnswer: string;
   onClose: () => void;
+  onPeek?: (peeking: boolean) => void;
 }
 
-export function TutorChatModal({ open, question, userAnswer, onClose }: TutorChatModalProps) {
+export function TutorChatModal({ open, question, userAnswer, onClose, onPeek }: TutorChatModalProps) {
   const [messages, setMessages] = React.useState<Message[]>([]);
   const [input, setInput] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
   const [initializing, setInitializing] = React.useState(true);
+  const [isPeeking, setIsPeeking] = React.useState(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
+  const peekTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
   // Auto-scroll to bottom when messages change
   React.useEffect(() => {
@@ -47,8 +51,45 @@ export function TutorChatModal({ open, question, userAnswer, onClose }: TutorCha
       setInput('');
       setInitializing(true);
       setIsLoading(false);
+      setIsPeeking(false);
+      if (peekTimeoutRef.current) {
+        clearTimeout(peekTimeoutRef.current);
+      }
     }
   }, [open]);
+
+  // Peek functionality
+  const handlePeek = React.useCallback(() => {
+    setIsPeeking(true);
+    onPeek?.(true);
+    
+    // Clear existing timeout
+    if (peekTimeoutRef.current) {
+      clearTimeout(peekTimeoutRef.current);
+    }
+    
+    // Auto-reset after 5 seconds
+    peekTimeoutRef.current = setTimeout(() => {
+      setIsPeeking(false);
+      onPeek?.(false);
+    }, 5000);
+  }, [onPeek]);
+
+  // Spacebar shortcut for peek
+  React.useEffect(() => {
+    if (!open) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Only trigger if not in textarea
+      if (e.code === 'Space' && document.activeElement?.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        handlePeek();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [open, handlePeek]);
 
   const loadInitialQuestion = async () => {
     if (!question) return;
@@ -151,13 +192,34 @@ export function TutorChatModal({ open, question, userAnswer, onClose }: TutorCha
   };
 
   return (
-    <Dialog open={open} onOpenChange={() => {}}>
-      <DialogContent className="max-w-2xl max-h-[80vh] flex flex-col" onInteractOutside={(e) => e.preventDefault()}>
-        <DialogHeader>
-          <DialogTitle>Chat with Joshua - Your LSAT Coach</DialogTitle>
-        </DialogHeader>
+    <Sheet open={open} onOpenChange={() => {}}>
+      <SheetContent 
+        side="bottom" 
+        className="h-[60vh] flex flex-col p-0 sm:h-[60vh]"
+        onInteractOutside={(e) => e.preventDefault()}
+      >
+        <SheetHeader className="px-6 pt-6 pb-4 border-b">
+          <div className="flex items-center justify-between">
+            <SheetTitle>Chat with Joshua - Your LSAT Coach</SheetTitle>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handlePeek}
+              className={cn(
+                "gap-2 transition-all",
+                isPeeking && "bg-primary text-primary-foreground"
+              )}
+            >
+              <Eye className="w-4 h-4" />
+              {isPeeking ? "Peeking..." : "Peek at Question"}
+            </Button>
+          </div>
+          <p className="text-xs text-muted-foreground mt-1">
+            Press <kbd className="px-1.5 py-0.5 text-xs bg-muted rounded border">Space</kbd> to peek at the question
+          </p>
+        </SheetHeader>
 
-        <ScrollArea ref={scrollRef} className="flex-1 pr-4">
+        <ScrollArea ref={scrollRef} className="flex-1 px-6">
           <div className="space-y-4 py-4">
             {messages.map((msg, idx) => (
               <div
@@ -190,7 +252,7 @@ export function TutorChatModal({ open, question, userAnswer, onClose }: TutorCha
           </div>
         </ScrollArea>
 
-        <div className="space-y-3 pt-4 border-t">
+        <div className="space-y-3 px-6 pb-6 pt-4 border-t bg-background">
           <Textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -198,17 +260,18 @@ export function TutorChatModal({ open, question, userAnswer, onClose }: TutorCha
             placeholder="Ask a follow-up question..."
             rows={2}
             disabled={isLoading}
+            className="resize-none"
           />
-          <DialogFooter className="flex gap-2 sm:gap-2">
-            <Button onClick={handleSend} disabled={!input.trim() || isLoading}>
+          <SheetFooter className="flex-row gap-2 sm:gap-2">
+            <Button onClick={handleSend} disabled={!input.trim() || isLoading} className="flex-1">
               Send
             </Button>
-            <Button variant="outline" onClick={onClose}>
+            <Button variant="outline" onClick={onClose} className="flex-1">
               Done
             </Button>
-          </DialogFooter>
+          </SheetFooter>
         </div>
-      </DialogContent>
-    </Dialog>
+      </SheetContent>
+    </Sheet>
   );
 }
