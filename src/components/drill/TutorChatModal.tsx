@@ -162,9 +162,6 @@ export function TutorChatModal({ open, question, userAnswer, onClose }: TutorCha
         <div className="flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-cyan-400" />
           <h3 className="text-base font-semibold text-foreground">Joshua - Your LSAT Coach</h3>
-          <Badge variant="secondary" className="ml-auto text-xs bg-cyan-500/10 text-cyan-400 border-cyan-500/30">
-            AI Tutor
-          </Badge>
         </div>
       </CardHeader>
 

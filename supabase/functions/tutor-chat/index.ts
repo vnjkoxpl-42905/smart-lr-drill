@@ -240,7 +240,7 @@ Answer follow-up questions naturally. Use your knowledge base to provide detaile
       }
 
       return new Response(
-        JSON.stringify({ error: "AI gateway error" }),
+        JSON.stringify({ error: "Joshua is having trouble connecting. Please try again." }),
         {
           status: 500,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -252,7 +252,7 @@ Answer follow-up questions naturally. Use your knowledge base to provide detaile
     const content = data.choices?.[0]?.message?.content;
 
     if (!content) {
-      throw new Error("No content in AI response");
+      throw new Error("Joshua couldn't generate a response. Please try again.");
     }
 
     return new Response(
