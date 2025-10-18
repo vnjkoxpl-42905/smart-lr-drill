@@ -14,6 +14,34 @@ export function HighlightedText({
   onHighlightClick, 
   eraserMode 
 }: HighlightedTextProps) {
+  // Detect 2-speaker pattern (e.g., "Speaker1: text\n\nSpeaker2: text")
+  const twoSpeakerPattern = /^([A-Z][a-z]+):\s+([\s\S]+?)\n\n([A-Z][a-z]+):\s+([\s\S]+)$/;
+  const match = text.match(twoSpeakerPattern);
+  
+  if (match) {
+    const [, speaker1, text1, speaker2, text2] = match;
+    
+    // For 2-speaker, render side-by-side with vertical separator
+    return (
+      <div className="grid grid-cols-2 gap-6 relative">
+        {/* Speaker 1 */}
+        <div>
+          <div className="font-semibold mb-2">{speaker1}:</div>
+          <div style={{ lineHeight: 1.6 }}>{text1}</div>
+        </div>
+        
+        {/* Vertical Separator */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border transform -translate-x-1/2" />
+        
+        {/* Speaker 2 */}
+        <div>
+          <div className="font-semibold mb-2">{speaker2}:</div>
+          <div style={{ lineHeight: 1.6 }}>{text2}</div>
+        </div>
+      </div>
+    );
+  }
+  
   // Split text into paragraphs while preserving structure
   const paragraphs = text.split('\n\n');
   

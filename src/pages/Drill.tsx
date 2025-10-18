@@ -7,6 +7,8 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
+import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from '@/components/ui/resizable';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
 import { ReviewModal } from '@/components/drill/ReviewModal';
@@ -535,10 +537,10 @@ function DrillContent() {
   };
 
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <div className="max-w-4xl mx-auto mb-6">
-        <div className="flex items-center justify-between mb-4">
+      <div className="px-6 py-4 border-b">
+        <div className="flex items-center justify-between">
           <Button
             variant="ghost"
             size="sm"
@@ -559,197 +561,215 @@ function DrillContent() {
         </div>
 
         {progress !== undefined && (
-          <Progress value={progress} className="h-2" />
+          <Progress value={progress} className="h-2 mt-4" />
         )}
       </div>
 
       {/* Highlight Toolbar */}
-      <div className="max-w-4xl mx-auto mb-4 flex justify-end">
+      <div className="px-6 py-2 flex justify-end border-b">
         <HighlightToolbar mode={highlightMode} onModeChange={setHighlightMode} />
       </div>
 
-      {/* Question */}
-      <Card className="max-w-4xl mx-auto p-8">
-        <div className="space-y-6">
-          {/* Question metadata */}
-          <div className="flex items-center gap-3 flex-wrap">
-            <Badge variant="outline">
-              PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
-            </Badge>
-            <Badge variant="secondary">{currentQuestion.qtype}</Badge>
-            <Badge>Difficulty {currentQuestion.difficulty}</Badge>
-            {isAnswered && (
-              <Badge variant={previousAttempt?.correct ? 'default' : 'destructive'}>
-                {previousAttempt?.correct ? (
-                  <>
-                    <CheckCircle className="w-3 h-3 mr-1" /> Correct
-                  </>
-                ) : (
-                  <>
-                    <XCircle className="w-3 h-3 mr-1" /> Incorrect
-                  </>
-                )}
-              </Badge>
-            )}
-          </div>
+      {/* Main Content - Resizable Panels */}
+      <div className="flex-1 overflow-hidden">
+        <ResizablePanelGroup direction="horizontal" className="h-full">
+          {/* Left Panel - Question and Stimulus */}
+          <ResizablePanel defaultSize={50} minSize={30}>
+            <ScrollArea className="h-full">
+              <div className="p-6 space-y-6">
+                {/* Question metadata */}
+                <div className="flex items-center gap-3 flex-wrap">
+                  <Badge variant="outline">
+                    PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
+                  </Badge>
+                  <Badge variant="secondary">{currentQuestion.qtype}</Badge>
+                  <Badge>Difficulty {currentQuestion.difficulty}</Badge>
+                  {isAnswered && (
+                    <Badge variant={previousAttempt?.correct ? 'default' : 'destructive'}>
+                      {previousAttempt?.correct ? (
+                        <>
+                          <CheckCircle className="w-3 h-3 mr-1" /> Correct
+                        </>
+                      ) : (
+                        <>
+                          <XCircle className="w-3 h-3 mr-1" /> Incorrect
+                        </>
+                      )}
+                    </Badge>
+                  )}
+                </div>
 
-          {/* Stimulus */}
-          {currentQuestion.stimulus && (() => {
-            const fullText = normalizeText(currentQuestion.stimulus);
-            const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
-            
-            return (
-              <div 
-                className="p-4 bg-muted/50 rounded-lg stimulus"
-                onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
-                style={{ userSelect: 'text', cursor: highlightMode === 'highlight' ? 'text' : 'default' }}
-              >
-                <HighlightedText
-                  text={fullText}
-                  highlights={stimulusHighlights}
-                  onHighlightClick={handleHighlightClick}
-                  eraserMode={highlightMode === 'erase'}
-                />
-              </div>
-            );
-          })()}
-
-          {/* Question stem */}
-          {(() => {
-            const fullText = normalizeText(currentQuestion.questionStem);
-            const stemHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stem') || [];
-            
-            return (
-              <div 
-                className="text-lg font-semibold question-stem" 
-                style={{ marginTop: '16px', userSelect: 'text', cursor: highlightMode === 'highlight' ? 'text' : 'default' }}
-                onMouseUp={(e) => handleTextSelection(e, 'stem')}
-              >
-                <HighlightedText
-                  text={fullText}
-                  highlights={stemHighlights}
-                  onHighlightClick={handleHighlightClick}
-                  eraserMode={highlightMode === 'erase'}
-                />
-              </div>
-            );
-          })()}
-
-          {/* Answer choices - Adaptive layout based on tutor state */}
-          {tutorChatOpen ? (
-            // FOCUSED LAYOUT: Highlight selected answer + Joshua
-            <div className="space-y-4">
-              {(() => {
-                const { before, selected, after } = getAnswerGroups();
-                
-                return (
-                  <>
-                    {/* Answers before selected - blurred */}
-                    {before.length > 0 && (
-                      <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
-                        {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
-                      </div>
-                    )}
-
-                    {/* Selected answer - clear and prominent */}
-                    <div className="relative">
-                      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg blur-sm" />
-                      <div className="relative">
-                        {renderAnswerChoice(selected[0], selected[1], { 
-                          isSelected: true, 
-                          showRadio: false,
-                          inFocusedMode: true
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Joshua chat - right below selected answer */}
-                    <div className="pl-7">
-                      <TutorChatModal
-                        open={tutorChatOpen}
-                        question={currentQuestion}
-                        userAnswer={selectedAnswer}
-                        onClose={handleContinueToReview}
-                        onTryAgain={handleTryAgain}
+                {/* Stimulus */}
+                {currentQuestion.stimulus && (() => {
+                  const fullText = normalizeText(currentQuestion.stimulus);
+                  const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
+                  
+                  return (
+                    <div 
+                      className="p-4 bg-muted/50 rounded-lg stimulus"
+                      onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
+                      style={{ userSelect: 'text', cursor: highlightMode === 'highlight' ? 'text' : 'default' }}
+                    >
+                      <HighlightedText
+                        text={fullText}
+                        highlights={stimulusHighlights}
+                        onHighlightClick={handleHighlightClick}
+                        eraserMode={highlightMode === 'erase'}
                       />
                     </div>
+                  );
+                })()}
 
-                    {/* Answers after selected - blurred */}
-                    {after.length > 0 && (
-                      <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
-                        {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
+                {/* Question stem */}
+                {(() => {
+                  const fullText = normalizeText(currentQuestion.questionStem);
+                  const stemHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stem') || [];
+                  
+                  return (
+                    <div 
+                      className="text-lg font-semibold question-stem" 
+                      style={{ marginTop: '16px', userSelect: 'text', cursor: highlightMode === 'highlight' ? 'text' : 'default' }}
+                      onMouseUp={(e) => handleTextSelection(e, 'stem')}
+                    >
+                      <HighlightedText
+                        text={fullText}
+                        highlights={stemHighlights}
+                        onHighlightClick={handleHighlightClick}
+                        eraserMode={highlightMode === 'erase'}
+                      />
+                    </div>
+                  );
+                })()}
+              </div>
+            </ScrollArea>
+          </ResizablePanel>
+
+          <ResizableHandle withHandle />
+
+          {/* Right Panel - Answer Choices */}
+          <ResizablePanel defaultSize={50} minSize={30}>
+            <ScrollArea className="h-full">
+              <div className="p-6">
+                <Card className="p-6">
+                  {/* Answer choices - Adaptive layout based on tutor state */}
+                  {tutorChatOpen ? (
+                    // FOCUSED LAYOUT: Highlight selected answer + Joshua
+                    <div className="space-y-4">
+                      {(() => {
+                        const { before, selected, after } = getAnswerGroups();
+                        
+                        return (
+                          <>
+                            {/* Answers before selected - blurred */}
+                            {before.length > 0 && (
+                              <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
+                                {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
+                              </div>
+                            )}
+
+                            {/* Selected answer - clear and prominent */}
+                            <div className="relative">
+                              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg blur-sm" />
+                              <div className="relative">
+                                {renderAnswerChoice(selected[0], selected[1], { 
+                                  isSelected: true, 
+                                  showRadio: false,
+                                  inFocusedMode: true
+                                })}
+                              </div>
+                            </div>
+
+                            {/* Joshua chat - right below selected answer */}
+                            <div className="pl-7">
+                              <TutorChatModal
+                                open={tutorChatOpen}
+                                question={currentQuestion}
+                                userAnswer={selectedAnswer}
+                                onClose={handleContinueToReview}
+                                onTryAgain={handleTryAgain}
+                              />
+                            </div>
+
+                            {/* Answers after selected - blurred */}
+                            {after.length > 0 && (
+                              <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
+                                {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
+                              </div>
+                            )}
+                          </>
+                        );
+                      })()}
+                    </div>
+                  ) : (
+                    // NORMAL LAYOUT: Standard RadioGroup
+                    <RadioGroup
+                      value={selectedAnswer}
+                      onValueChange={handleAnswerSelect}
+                      disabled={answerLocked}
+                    >
+                      {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
+                        renderAnswerChoice(key, text, { 
+                          isSelected: key === selectedAnswer,
+                          showRadio: true 
+                        })
+                      )}
+                    </RadioGroup>
+                  )}
+
+                  {/* Confidence selector */}
+                  {answerLocked && !tutorChatOpen && (
+                    <div className="space-y-3 pt-4">
+                      <Label>Confidence (1–5)</Label>
+                      <div className="flex gap-2">
+                        {[1, 2, 3, 4, 5].map((level) => (
+                          <Button
+                            key={level}
+                            variant={confidence === level ? 'default' : 'outline'}
+                            onClick={() => setConfidence(level)}
+                            className="flex-1"
+                            disabled={showSolution}
+                          >
+                            {level}
+                          </Button>
+                        ))}
                       </div>
-                    )}
-                  </>
-                );
-              })()}
-            </div>
-          ) : (
-            // NORMAL LAYOUT: Standard RadioGroup
-            <RadioGroup
-              value={selectedAnswer}
-              onValueChange={handleAnswerSelect}
-              disabled={answerLocked}
-            >
-              {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
-                renderAnswerChoice(key, text, { 
-                  isSelected: key === selectedAnswer,
-                  showRadio: true 
-                })
-              )}
-            </RadioGroup>
-          )}
+                    </div>
+                  )}
 
-          {/* Confidence selector */}
-          {answerLocked && !tutorChatOpen && (
-            <div className="space-y-3 pt-4">
-              <Label>Confidence (1–5)</Label>
-              <div className="flex gap-2">
-                {[1, 2, 3, 4, 5].map((level) => (
-                  <Button
-                    key={level}
-                    variant={confidence === level ? 'default' : 'outline'}
-                    onClick={() => setConfidence(level)}
-                    className="flex-1"
-                    disabled={showSolution}
-                  >
-                    {level}
-                  </Button>
-                ))}
+                  {/* Actions */}
+                  <div className="flex gap-3 pt-4">
+                    <Button
+                      onClick={handleNext}
+                      disabled={!showSolution || timer?.isPaused}
+                      size="lg"
+                    >
+                      Next question
+                    </Button>
+                  </div>
+
+                  {/* Solution */}
+                  {showSolution && (
+                    <div className="mt-6 p-4 border-t">
+                      <div className="flex items-center gap-2 mb-2">
+                        {selectedAnswer === currentQuestion.correctAnswer ? (
+                          <CheckCircle className="w-5 h-5 text-[#16A34A]" />
+                        ) : (
+                          <XCircle className="w-5 h-5 text-[#DC2626]" />
+                        )}
+                        <span className="font-semibold">
+                          {selectedAnswer === currentQuestion.correctAnswer
+                            ? 'Correct!'
+                            : `The correct answer is (${currentQuestion.correctAnswer}).`}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </Card>
               </div>
-            </div>
-          )}
-
-          {/* Actions */}
-          <div className="flex gap-3 pt-4">
-            <Button
-              onClick={handleNext}
-              disabled={!showSolution || timer?.isPaused}
-              size="lg"
-            >
-              Next question
-            </Button>
-          </div>
-
-          {/* Solution */}
-          {showSolution && (
-            <div className="mt-6 p-4 border-t">
-              <div className="flex items-center gap-2 mb-2">
-                {selectedAnswer === currentQuestion.correctAnswer ? (
-                  <CheckCircle className="w-5 h-5 text-[#16A34A]" />
-                ) : (
-                  <XCircle className="w-5 h-5 text-[#DC2626]" />
-                )}
-                <span className="font-semibold">
-                  {selectedAnswer === currentQuestion.correctAnswer
-                    ? 'Correct!'
-                    : `The correct answer is (${currentQuestion.correctAnswer}).`}
-                </span>
-              </div>
-            </div>
-          )}
-        </div>
-      </Card>
+            </ScrollArea>
+          </ResizablePanel>
+        </ResizablePanelGroup>
+      </div>
 
       <ReviewModal
         open={wajModalOpen}
