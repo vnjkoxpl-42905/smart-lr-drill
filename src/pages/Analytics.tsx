@@ -1,6 +1,5 @@
-import * as React from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useQuestionBank } from "@/contexts/QuestionBankContext";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -41,9 +40,9 @@ interface AnalyticsData {
 
 export default function Analytics() {
   const navigate = useNavigate();
-  const [data, setData] = React.useState<AnalyticsData | null>(null);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [coachInsight, setCoachInsight] = React.useState(0);
+  const [data, setData] = useState<AnalyticsData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [coachInsight, setCoachInsight] = useState(0);
   const classId = 'demo_user'; // TODO: Get from auth context
 
   const coachInsights = [
@@ -55,16 +54,16 @@ export default function Analytics() {
     "You've mastered Level 3 questions - time to level up! 🚀",
   ];
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setCoachInsight((prev) => (prev + 1) % coachInsights.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [coachInsights.length]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     loadAnalytics();
-  }, []);
+  }, [classId]);
 
   const loadAnalytics = async () => {
     if (!classId) return;
@@ -84,9 +83,9 @@ export default function Analytics() {
         .from("profiles")
         .select("*")
         .eq("class_id", classId)
-        .single();
+        .maybeSingle();
 
-      if (profileError && profileError.code !== 'PGRST116') throw profileError;
+      if (profileError) throw profileError;
 
       if (!attempts || attempts.length === 0) {
         setData({
