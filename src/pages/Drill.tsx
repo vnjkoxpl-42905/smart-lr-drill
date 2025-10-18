@@ -15,6 +15,7 @@ import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { supabase } from '@/integrations/supabase/client';
 import type { LRQuestion } from '@/lib/questionLoader';
 import type { DrillMode, DrillSession, FullSectionConfig, TypeDrillConfig, TimerMode } from '@/types/drill';
 
@@ -191,10 +192,57 @@ function DrillContent() {
     setWajModalOpen(true);
   };
 
+  const saveAttemptToDatabase = async (attemptData: {
+    qid: string;
+    correct: boolean;
+    time_ms: number;
+    qtype: string;
+    level: number;
+    confidence: number | null;
+    mode: DrillMode;
+  }) => {
+    const question = questionBank.getQuestion(attemptData.qid);
+    if (!question) return;
+    
+    try {
+      const { error } = await supabase.from('attempts').insert({
+        class_id: 'demo-class', // TODO: Get from auth context
+        qid: attemptData.qid,
+        pt: question.pt,
+        section: question.section,
+        qnum: question.qnum,
+        qtype: attemptData.qtype,
+        level: attemptData.level,
+        correct: attemptData.correct,
+        time_ms: attemptData.time_ms,
+        confidence: attemptData.confidence,
+        mode: attemptData.mode,
+        timestamp_iso: new Date().toISOString(),
+      });
+
+      if (error) {
+        console.error('Failed to save attempt to database:', error);
+      }
+    } catch (err) {
+      console.error('Error saving attempt:', err);
+    }
+  };
+
   const handleWAJSave = async (review: { whyWrong: string; whyEliminated: string; plan: string }) => {
     if (!currentQuestion || !session) return;
     
     const timeMs = Math.floor(performance.now() - questionStartTime);
+    
+    // Save to attempts database (final attempt after review)
+    await saveAttemptToDatabase({
+      qid: currentQuestion.qid,
+      correct: false,
+      time_ms: timeMs,
+      qtype: currentQuestion.qtype,
+      level: currentQuestion.difficulty,
+      confidence,
+      mode: session.mode,
+    });
     
     // Save to WAJ database with real review data
     const { logWrongAnswer } = await import('@/lib/wajService');
@@ -232,7 +280,7 @@ function DrillContent() {
       reviewDone: true,
     });
 
-    // Record with adaptive engine
+    // Record with adaptive engine (in-memory)
     adaptiveEngine.recordAttempt({
       qid: currentQuestion.qid,
       correct: false,
@@ -261,6 +309,17 @@ function DrillContent() {
     if (!correct) {
       setTutorChatOpen(true);
     } else {
+      // Save correct attempt to database
+      await saveAttemptToDatabase({
+        qid: currentQuestion.qid,
+        correct: true,
+        time_ms: timeMs,
+        qtype: currentQuestion.qtype,
+        level: currentQuestion.difficulty,
+        confidence,
+        mode: session.mode,
+      });
+
       const newAttempts = new Map(session.attempts);
       newAttempts.set(currentQuestion.qid, {
         selectedAnswer,

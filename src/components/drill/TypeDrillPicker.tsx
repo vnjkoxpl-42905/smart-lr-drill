@@ -135,38 +135,56 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
 
   const handleSmartBuild = async () => {
     setIsAnalyzing(true);
-    const classId = 'demo_user'; // TODO: Get from auth context
+    const classId = 'demo-class'; // TODO: Get from auth context
     
-    const analysis = await adaptiveEngine.analyzeWeakAreas(classId);
-    
-    if (!analysis) {
+    try {
+      const analysis = await adaptiveEngine.analyzeWeakAreas(classId);
+      
+      if (!analysis) {
+        toast({
+          title: "Not enough data",
+          description: "Complete at least 10 questions to use Smart Build. The more you practice, the smarter the recommendations!",
+          variant: "destructive",
+        });
+        setIsAnalyzing(false);
+        return;
+      }
+
+      setAnalysisResult(analysis);
+      
+      // Auto-populate selections based on analysis
+      if (analysis.weakQTypes.length > 0) {
+        setSelectedQTypes(analysis.weakQTypes);
+      } else {
+        // If no specific weak types, select a diverse set
+        const diverseTypes = allQTypes.slice(0, 5);
+        setSelectedQTypes(diverseTypes);
+      }
+      
+      setSelectedDifficulties(analysis.weakDifficulties);
+      setSetSize(analysis.recommendedSize);
+      
+      // Auto-advance to step 2
+      setCurrentStep(2);
+      
+      const confidenceEmoji = (analysis.confidence || 0.5) > 0.8 ? '🎯' : 
+                            (analysis.confidence || 0.5) > 0.6 ? '📊' : '💡';
+      
       toast({
-        title: "Not enough data",
-        description: "Complete at least 10 questions to use Smart Build.",
+        title: `${confidenceEmoji} Smart drill built!`,
+        description: analysis.explanation,
+        duration: 5000,
+      });
+    } catch (err) {
+      console.error('Smart build error:', err);
+      toast({
+        title: "Error",
+        description: "Failed to analyze your performance. Please try again.",
         variant: "destructive",
       });
+    } finally {
       setIsAnalyzing(false);
-      return;
     }
-
-    setAnalysisResult(analysis);
-    
-    // Auto-populate selections
-    if (analysis.weakQTypes.length > 0) {
-      setSelectedQTypes(analysis.weakQTypes);
-    }
-    setSelectedDifficulties(analysis.weakDifficulties);
-    setSetSize(analysis.recommendedSize);
-    
-    // Auto-advance to step 2
-    setCurrentStep(2);
-    
-    toast({
-      title: "Smart drill built!",
-      description: analysis.explanation,
-    });
-    
-    setIsAnalyzing(false);
   };
 
   const handleSaveTemplate = async () => {
@@ -220,7 +238,7 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
             <div>
               <h3 className="font-semibold">Smart Drill Builder</h3>
               <p className="text-sm text-muted-foreground">
-                Let me analyze your weak areas and build an optimal drill
+                AI analyzes your performance to build the perfect drill
               </p>
             </div>
           </div>
@@ -229,26 +247,92 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
             disabled={isAnalyzing}
             className="bg-cyan-500 hover:bg-cyan-600"
           >
-            {isAnalyzing ? 'Analyzing...' : '🎯 Build Smart Drill'}
+            {isAnalyzing ? (
+              <>
+                <Sparkles className="w-4 h-4 mr-2 animate-spin" />
+                Analyzing...
+              </>
+            ) : (
+              '🎯 Build Smart Drill'
+            )}
           </Button>
         </div>
         
         {analysisResult && (
-          <div className="mt-3 p-3 bg-background/50 rounded-lg border border-cyan-500/20">
-            <p className="text-sm text-muted-foreground">{analysisResult.explanation}</p>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="mt-2 text-xs"
-              onClick={() => {
-                setAnalysisResult(null);
-                setSelectedQTypes([]);
-                setSelectedDifficulties([]);
-                setCurrentStep(1);
-              }}
-            >
-              Edit manually
-            </Button>
+          <div className="mt-4 p-4 bg-background/50 rounded-lg border border-cyan-500/20 space-y-3">
+            {/* Data Quality Indicator */}
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-muted-foreground">
+                Based on <strong>{analysisResult.sampleSize} attempts</strong>
+              </span>
+              <Badge 
+                variant="outline" 
+                className={
+                  (analysisResult.confidence || 0.5) > 0.8 
+                    ? 'bg-green-500/10 text-green-400 border-green-500/30' 
+                    : (analysisResult.confidence || 0.5) > 0.6
+                    ? 'bg-yellow-500/10 text-yellow-400 border-yellow-500/30'
+                    : 'bg-orange-500/10 text-orange-400 border-orange-500/30'
+                }
+              >
+                Confidence: {
+                  (analysisResult.confidence || 0.5) > 0.8 ? 'High' :
+                  (analysisResult.confidence || 0.5) > 0.6 ? 'Medium' : 'Low'
+                }
+              </Badge>
+            </div>
+
+            {/* Explanation */}
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {analysisResult.explanation}
+            </p>
+
+            {/* Weak Areas Breakdown */}
+            {analysisResult.weakQTypes.length > 0 && (
+              <div className="pt-2 border-t border-border/50">
+                <div className="text-xs font-medium text-muted-foreground mb-2">
+                  Target Question Types:
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {analysisResult.weakQTypes.map(qtype => (
+                    <Badge key={qtype} variant="secondary" className="text-xs">
+                      {qtype}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Actions */}
+            <div className="flex gap-2 pt-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-xs flex-1"
+                onClick={() => {
+                  setAnalysisResult(null);
+                  setSelectedQTypes([]);
+                  setSelectedDifficulties([]);
+                  setCurrentStep(1);
+                }}
+              >
+                Edit Manually
+              </Button>
+              <Button
+                size="sm"
+                className="text-xs flex-1 bg-cyan-500 hover:bg-cyan-600"
+                onClick={handleBuild}
+              >
+                Start This Drill
+              </Button>
+            </div>
+          </div>
+        )}
+
+        {/* Data Quality Note */}
+        {!analysisResult && (
+          <div className="mt-3 text-xs text-muted-foreground/70 italic">
+            💡 The more questions you practice, the smarter your recommendations become
           </div>
         )}
       </Card>
