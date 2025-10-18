@@ -6,13 +6,19 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
+import { Eye, EyeOff } from 'lucide-react';
 
 export default function Auth() {
   const navigate = useNavigate();
-  const { user, signUp, signIn } = useAuth();
+  const { user, signUp, signIn, resetPassword } = useAuth();
   const { toast } = useToast();
   const [loading, setLoading] = React.useState(false);
+  const [showSignInPassword, setShowSignInPassword] = React.useState(false);
+  const [showSignUpPassword, setShowSignUpPassword] = React.useState(false);
+  const [forgotPasswordOpen, setForgotPasswordOpen] = React.useState(false);
+  const [resetEmail, setResetEmail] = React.useState('');
 
   // Redirect if already logged in
   React.useEffect(() => {
@@ -75,6 +81,19 @@ export default function Auth() {
     }
   };
 
+  const handleForgotPassword = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const { error } = await resetPassword(resetEmail);
+
+    if (!error) {
+      setForgotPasswordOpen(false);
+      setResetEmail('');
+    }
+    setLoading(false);
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-4">
       <Card className="w-full max-w-md">
@@ -103,13 +122,57 @@ export default function Auth() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="signin-password">Password</Label>
-                  <Input
-                    id="signin-password"
-                    name="signin-password"
-                    type="password"
-                    placeholder="••••••••"
-                    required
-                  />
+                  <div className="relative">
+                    <Input
+                      id="signin-password"
+                      name="signin-password"
+                      type={showSignInPassword ? "text" : "password"}
+                      placeholder="••••••••"
+                      required
+                      className="pr-10"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowSignInPassword(!showSignInPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label={showSignInPassword ? "Hide password" : "Show password"}
+                    >
+                      {showSignInPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </button>
+                  </div>
+                </div>
+                <div className="flex items-center justify-end">
+                  <Dialog open={forgotPasswordOpen} onOpenChange={setForgotPasswordOpen}>
+                    <DialogTrigger asChild>
+                      <Button type="button" variant="link" className="px-0 text-sm">
+                        Forgot password?
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>Reset Password</DialogTitle>
+                        <DialogDescription>
+                          Enter your email address and we'll send you a link to reset your password.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <form onSubmit={handleForgotPassword} className="space-y-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="reset-email">Email</Label>
+                          <Input
+                            id="reset-email"
+                            type="email"
+                            placeholder="you@example.com"
+                            value={resetEmail}
+                            onChange={(e) => setResetEmail(e.target.value)}
+                            required
+                          />
+                        </div>
+                        <Button type="submit" className="w-full" disabled={loading}>
+                          {loading ? 'Sending...' : 'Send Reset Link'}
+                        </Button>
+                      </form>
+                    </DialogContent>
+                  </Dialog>
                 </div>
                 <Button type="submit" className="w-full" disabled={loading}>
                   {loading ? 'Signing in...' : 'Sign In'}
@@ -153,14 +216,25 @@ export default function Auth() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="signup-password">Password *</Label>
-                  <Input
-                    id="signup-password"
-                    name="signup-password"
-                    type="password"
-                    placeholder="••••••••"
-                    required
-                    minLength={6}
-                  />
+                  <div className="relative">
+                    <Input
+                      id="signup-password"
+                      name="signup-password"
+                      type={showSignUpPassword ? "text" : "password"}
+                      placeholder="••••••••"
+                      required
+                      minLength={6}
+                      className="pr-10"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowSignUpPassword(!showSignUpPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label={showSignUpPassword ? "Hide password" : "Show password"}
+                    >
+                      {showSignUpPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </button>
+                  </div>
                 </div>
                 <Button type="submit" className="w-full" disabled={loading}>
                   {loading ? 'Creating account...' : 'Create Account'}
