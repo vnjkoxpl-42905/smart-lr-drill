@@ -2,6 +2,8 @@
 
 export type DrillMode = 'adaptive' | 'full-section' | 'type-drill';
 
+export type { Highlight } from '@/lib/highlightUtils';
+
 export type TimerMode = '35' | '52.5' | '70' | 'custom' | 'unlimited';
 
 export interface TimerConfig {

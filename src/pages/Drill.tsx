@@ -9,10 +9,13 @@ import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
 import { ReviewModal } from '@/components/drill/ReviewModal';
+import { HighlightToolbar } from '@/components/drill/HighlightToolbar';
+import { HighlightedText } from '@/components/drill/HighlightedText';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
+import { captureTextSelection, mergeOverlappingHighlights, type Highlight } from '@/lib/highlightUtils';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
@@ -39,6 +42,8 @@ function DrillContent() {
   const [questionStartTime, setQuestionStartTime] = React.useState(performance.now());
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
+  const [highlightMode, setHighlightMode] = React.useState<'none' | 'highlight' | 'erase'>('none');
+  const [highlights, setHighlights] = React.useState<Map<string, Highlight[]>>(new Map());
   
   const timer = hasTimer ? useTimerContext() : null;
 
@@ -380,6 +385,41 @@ function DrillContent() {
     }
   };
 
+  const handleTextSelection = (e: React.MouseEvent, section: 'stimulus' | 'stem') => {
+    if (highlightMode !== 'highlight') return;
+    
+    const container = e.currentTarget as HTMLElement;
+    const selection = captureTextSelection(container);
+    
+    if (!selection || !currentQuestion) return;
+    
+    const newHighlight: Highlight = {
+      id: crypto.randomUUID(),
+      start: selection.start,
+      end: selection.end,
+      text: selection.text,
+      color: 'yellow',
+      section
+    };
+    
+    const currentHighlights = highlights.get(currentQuestion.qid) || [];
+    const updatedHighlights = mergeOverlappingHighlights([...currentHighlights, newHighlight]);
+    
+    setHighlights(new Map(highlights.set(currentQuestion.qid, updatedHighlights)));
+    
+    // Clear selection
+    window.getSelection()?.removeAllRanges();
+  };
+
+  const handleHighlightClick = (highlightId: string) => {
+    if (highlightMode !== 'erase' || !currentQuestion) return;
+    
+    const currentHighlights = highlights.get(currentQuestion.qid) || [];
+    const updated = currentHighlights.filter(h => h.id !== highlightId);
+    
+    setHighlights(new Map(highlights.set(currentQuestion.qid, updated)));
+  };
+
   // Start timer on mount if applicable
   React.useEffect(() => {
     if (hasTimer && timer && !timer.running) {
@@ -517,6 +557,11 @@ function DrillContent() {
         )}
       </div>
 
+      {/* Highlight Toolbar */}
+      <div className="max-w-4xl mx-auto mb-4 flex justify-end">
+        <HighlightToolbar mode={highlightMode} onModeChange={setHighlightMode} />
+      </div>
+
       {/* Question */}
       <Card className="max-w-4xl mx-auto p-8">
         <div className="space-y-6">
@@ -544,22 +589,46 @@ function DrillContent() {
 
           {/* Stimulus */}
           {currentQuestion.stimulus && (
-            <div className="p-4 bg-muted/50 rounded-lg stimulus">
-              {normalizeText(currentQuestion.stimulus).split('\n\n').map((para, i) => (
-                <p key={i} style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
-                  {para}
-                </p>
-              ))}
+            <div 
+              className="p-4 bg-muted/50 rounded-lg stimulus"
+              onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
+              style={{ userSelect: 'text' }}
+            >
+              {normalizeText(currentQuestion.stimulus).split('\n\n').map((para, i) => {
+                const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
+                return (
+                  <p key={i} style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
+                    <HighlightedText
+                      text={para}
+                      highlights={stimulusHighlights}
+                      onHighlightClick={handleHighlightClick}
+                      eraserMode={highlightMode === 'erase'}
+                    />
+                  </p>
+                );
+              })}
             </div>
           )}
 
           {/* Question stem */}
-          <div className="text-lg font-semibold question-stem" style={{ marginTop: '16px' }}>
-            {normalizeText(currentQuestion.questionStem).split('\n\n').map((para, i) => (
-              <p key={i} style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
-                {para}
-              </p>
-            ))}
+          <div 
+            className="text-lg font-semibold question-stem" 
+            style={{ marginTop: '16px' }}
+            onMouseUp={(e) => handleTextSelection(e, 'stem')}
+          >
+            {normalizeText(currentQuestion.questionStem).split('\n\n').map((para, i) => {
+              const stemHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stem') || [];
+              return (
+                <p key={i} style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
+                  <HighlightedText
+                    text={para}
+                    highlights={stemHighlights}
+                    onHighlightClick={handleHighlightClick}
+                    eraserMode={highlightMode === 'erase'}
+                  />
+                </p>
+              );
+            })}
           </div>
 
           {/* Answer choices - Adaptive layout based on tutor state */}
