@@ -58,10 +58,12 @@ export function TutorChatModal({ open, question, userAnswer, onClose, onTryAgain
     setIsLoading(true);
     try {
       const questionData = {
+        qid: question.qid,
         pt: question.pt,
         section: question.section,
         qnum: question.qnum,
         qtype: question.qtype,
+        level: question.difficulty,
         stimulus: question.stimulus,
         questionStem: question.questionStem,
         answerChoices: question.answerChoices,
@@ -107,10 +109,12 @@ export function TutorChatModal({ open, question, userAnswer, onClose, onTryAgain
 
     try {
       const questionData = {
+        qid: question.qid,
         pt: question.pt,
         section: question.section,
         qnum: question.qnum,
         qtype: question.qtype,
+        level: question.difficulty,
         stimulus: question.stimulus,
         questionStem: question.questionStem,
         answerChoices: question.answerChoices,
