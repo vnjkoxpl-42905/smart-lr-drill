@@ -588,48 +588,46 @@ function DrillContent() {
           </div>
 
           {/* Stimulus */}
-          {currentQuestion.stimulus && (
-            <div 
-              className="p-4 bg-muted/50 rounded-lg stimulus"
-              onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
-              style={{ userSelect: 'text' }}
-            >
-              {normalizeText(currentQuestion.stimulus).split('\n\n').map((para, i) => {
-                const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
-                return (
-                  <p key={i} style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
-                    <HighlightedText
-                      text={para}
-                      highlights={stimulusHighlights}
-                      onHighlightClick={handleHighlightClick}
-                      eraserMode={highlightMode === 'erase'}
-                    />
-                  </p>
-                );
-              })}
-            </div>
-          )}
+          {currentQuestion.stimulus && (() => {
+            const fullText = normalizeText(currentQuestion.stimulus);
+            const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
+            
+            return (
+              <div 
+                className="p-4 bg-muted/50 rounded-lg stimulus"
+                onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
+                style={{ userSelect: 'text', cursor: highlightMode === 'highlight' ? 'text' : 'default' }}
+              >
+                <HighlightedText
+                  text={fullText}
+                  highlights={stimulusHighlights}
+                  onHighlightClick={handleHighlightClick}
+                  eraserMode={highlightMode === 'erase'}
+                />
+              </div>
+            );
+          })()}
 
           {/* Question stem */}
-          <div 
-            className="text-lg font-semibold question-stem" 
-            style={{ marginTop: '16px' }}
-            onMouseUp={(e) => handleTextSelection(e, 'stem')}
-          >
-            {normalizeText(currentQuestion.questionStem).split('\n\n').map((para, i) => {
-              const stemHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stem') || [];
-              return (
-                <p key={i} style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
-                  <HighlightedText
-                    text={para}
-                    highlights={stemHighlights}
-                    onHighlightClick={handleHighlightClick}
-                    eraserMode={highlightMode === 'erase'}
-                  />
-                </p>
-              );
-            })}
-          </div>
+          {(() => {
+            const fullText = normalizeText(currentQuestion.questionStem);
+            const stemHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stem') || [];
+            
+            return (
+              <div 
+                className="text-lg font-semibold question-stem" 
+                style={{ marginTop: '16px', userSelect: 'text', cursor: highlightMode === 'highlight' ? 'text' : 'default' }}
+                onMouseUp={(e) => handleTextSelection(e, 'stem')}
+              >
+                <HighlightedText
+                  text={fullText}
+                  highlights={stemHighlights}
+                  onHighlightClick={handleHighlightClick}
+                  eraserMode={highlightMode === 'erase'}
+                />
+              </div>
+            );
+          })()}
 
           {/* Answer choices - Adaptive layout based on tutor state */}
           {tutorChatOpen ? (

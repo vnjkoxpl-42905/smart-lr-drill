@@ -7,26 +7,6 @@ export interface Highlight {
   section: 'stimulus' | 'stem';
 }
 
-export function getTextOffset(node: Node, offset: number, root: Node): number {
-  let currentOffset = 0;
-  const walker = document.createTreeWalker(
-    root,
-    NodeFilter.SHOW_TEXT,
-    null
-  );
-
-  let currentNode = walker.nextNode();
-  while (currentNode) {
-    if (currentNode === node) {
-      return currentOffset + offset;
-    }
-    currentOffset += (currentNode.textContent || '').length;
-    currentNode = walker.nextNode();
-  }
-
-  return currentOffset;
-}
-
 export function captureTextSelection(container: HTMLElement): { start: number; end: number; text: string } | null {
   const selection = window.getSelection();
   if (!selection || selection.rangeCount === 0 || selection.isCollapsed) {
@@ -40,13 +20,28 @@ export function captureTextSelection(container: HTMLElement): { start: number; e
     return null;
   }
 
-  const start = getTextOffset(range.startContainer, range.startOffset, container);
-  const end = getTextOffset(range.endContainer, range.endOffset, container);
+  // Get the full text content of the container
+  const fullText = container.textContent || '';
+  const selectedText = selection.toString();
+  
+  // Create a range for the entire container
+  const containerRange = document.createRange();
+  containerRange.selectNodeContents(container);
+  
+  // Get text before the selection
+  const beforeRange = containerRange.cloneRange();
+  beforeRange.setEnd(range.startContainer, range.startOffset);
+  const textBefore = beforeRange.toString();
+  
+  const start = textBefore.length;
+  const end = start + selectedText.length;
+
+  console.log('Captured selection:', { start, end, text: selectedText, fullTextLength: fullText.length });
 
   return {
     start,
     end,
-    text: selection.toString()
+    text: selectedText
   };
 }
 
