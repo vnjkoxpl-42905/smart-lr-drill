@@ -1,15 +1,75 @@
+import { useEffect, useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Brain, Clock, Filter } from 'lucide-react';
 import type { DrillMode } from '@/types/drill';
+import { templateService, type DrillTemplate } from '@/lib/templateService';
+import { TemplateCard } from './TemplateCard';
+import { useToast } from '@/hooks/use-toast';
 
 interface ModeSelectorProps {
   onSelectMode: (mode: DrillMode) => void;
 }
 
 export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
+  const [templates, setTemplates] = useState<DrillTemplate[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    const loadTemplates = async () => {
+      try {
+        const data = await templateService.getTemplates('demo_user');
+        setTemplates(data);
+      } catch (err) {
+        console.error('Failed to load templates:', err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadTemplates();
+  }, []);
+
+  const handleStartTemplate = (template: DrillTemplate) => {
+    // Will pass template data to the drill mode
+    onSelectMode('type-drill');
+    // TODO: Need to pass template config to parent
+  };
+
+  const handleDeleteTemplate = async (id: string) => {
+    try {
+      await templateService.deleteTemplate(id);
+      setTemplates(prev => prev.filter(t => t.id !== id));
+      toast({ title: "Template deleted" });
+    } catch (err) {
+      toast({ 
+        title: "Failed to delete", 
+        variant: "destructive" 
+      });
+    }
+  };
+
   return (
-    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="max-w-5xl mx-auto space-y-8">
+      {/* Saved Templates Section */}
+      {templates.length > 0 && (
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Your Saved Drills</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {templates.map(template => (
+              <TemplateCard
+                key={template.id}
+                template={template}
+                onStart={handleStartTemplate}
+                onDelete={handleDeleteTemplate}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Mode Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       <Card className="p-6 flex flex-col min-h-[280px]">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-4">
@@ -54,6 +114,7 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
           Build drill
         </Button>
       </Card>
+      </div>
     </div>
   );
 }

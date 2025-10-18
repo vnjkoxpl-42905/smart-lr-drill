@@ -107,6 +107,42 @@ export type Database = {
         }
         Relationships: []
       }
+      drill_templates: {
+        Row: {
+          class_id: string
+          created_at: string | null
+          difficulties: number[]
+          id: string
+          pts: number[]
+          qtypes: string[]
+          set_size: number
+          template_name: string
+          updated_at: string | null
+        }
+        Insert: {
+          class_id: string
+          created_at?: string | null
+          difficulties: number[]
+          id?: string
+          pts: number[]
+          qtypes: string[]
+          set_size?: number
+          template_name: string
+          updated_at?: string | null
+        }
+        Update: {
+          class_id?: string
+          created_at?: string | null
+          difficulties?: number[]
+          id?: string
+          pts?: number[]
+          qtypes?: string[]
+          set_size?: number
+          template_name?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       events: {
         Row: {
           class_id: string

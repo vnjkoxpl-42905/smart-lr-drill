@@ -1,6 +1,7 @@
 // Deterministic adaptive question selection engine
 
 import { LRQuestion } from './questionLoader';
+import { supabase } from '@/integrations/supabase/client';
 
 export interface StudentAbility {
   overall: number;
@@ -14,6 +15,14 @@ export interface AttemptRecord {
   qtype: string;
   difficulty: number;
   timestamp: Date;
+}
+
+export interface WeakAreaAnalysis {
+  weakQTypes: string[];
+  weakDifficulties: number[];
+  recommendedSize: number;
+  explanation: string;
+  sampleSize: number;
 }
 
 export class AdaptiveEngine {
@@ -125,5 +134,82 @@ export class AdaptiveEngine {
     }
 
     return { overall, byQType };
+  }
+
+  async analyzeWeakAreas(classId: string): Promise<WeakAreaAnalysis | null> {
+    try {
+      const { data: attempts, error } = await supabase
+        .from('attempts')
+        .select('qtype, level, correct, timestamp_iso')
+        .eq('class_id', classId)
+        .order('timestamp_iso', { ascending: false })
+        .limit(100);
+
+      if (error || !attempts || attempts.length < 10) {
+        return null; // Not enough data
+      }
+
+      // Calculate accuracy by question type
+      const qtypeStats: Record<string, { correct: number; total: number }> = {};
+      attempts.forEach(a => {
+        if (!qtypeStats[a.qtype]) {
+          qtypeStats[a.qtype] = { correct: 0, total: 0 };
+        }
+        qtypeStats[a.qtype].total++;
+        if (a.correct) qtypeStats[a.qtype].correct++;
+      });
+
+      // Find weakest question types (accuracy < 60% and at least 5 attempts)
+      const weakQTypes = Object.entries(qtypeStats)
+        .filter(([_, stats]) => stats.total >= 5)
+        .map(([qtype, stats]) => ({
+          qtype,
+          accuracy: stats.correct / stats.total,
+          total: stats.total,
+        }))
+        .sort((a, b) => a.accuracy - b.accuracy)
+        .slice(0, 3)
+        .filter(q => q.accuracy < 0.6)
+        .map(q => q.qtype);
+
+      // Calculate accuracy by difficulty (using 'level' field)
+      const diffStats: Record<number, { correct: number; total: number }> = {};
+      attempts.forEach(a => {
+        if (!diffStats[a.level]) {
+          diffStats[a.level] = { correct: 0, total: 0 };
+        }
+        diffStats[a.level].total++;
+        if (a.correct) diffStats[a.level].correct++;
+      });
+
+      // Find difficulty range where accuracy dips
+      const weakDifficulties = Object.entries(diffStats)
+        .filter(([_, stats]) => stats.total >= 3)
+        .map(([diff, stats]) => ({
+          diff: parseInt(diff),
+          accuracy: stats.correct / stats.total,
+        }))
+        .filter(d => d.accuracy < 0.65)
+        .map(d => d.diff);
+
+      // Generate explanation
+      const qtypeList = weakQTypes.length > 0 
+        ? weakQTypes.join(', ')
+        : 'various types';
+      const diffRange = weakDifficulties.length > 0
+        ? `levels ${Math.min(...weakDifficulties)}-${Math.max(...weakDifficulties)}`
+        : 'mixed difficulties';
+
+      return {
+        weakQTypes: weakQTypes.length > 0 ? weakQTypes : [],
+        weakDifficulties: weakDifficulties.length > 0 ? weakDifficulties : [2, 3, 4],
+        recommendedSize: Math.min(20, Math.max(10, Math.floor(attempts.length / 5))),
+        explanation: `Based on your last ${attempts.length} attempts, focusing on ${qtypeList} at ${diffRange} will help strengthen your weak areas.`,
+        sampleSize: attempts.length,
+      };
+    } catch (err) {
+      console.error('Error analyzing weak areas:', err);
+      return null;
+    }
   }
 }

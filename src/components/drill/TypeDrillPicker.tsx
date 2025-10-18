@@ -4,10 +4,14 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { X, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { X, ChevronRight, ChevronLeft, Sparkles, Save } from 'lucide-react';
 import type { TypeDrillConfig } from '@/types/drill';
 import type { QuestionManifest } from '@/lib/questionLoader';
 import { questionBank } from '@/lib/questionLoader';
+import { AdaptiveEngine, type WeakAreaAnalysis } from '@/lib/adaptiveEngine';
+import { templateService } from '@/lib/templateService';
+import { useToast } from '@/hooks/use-toast';
 
 interface TypeDrillPickerProps {
   manifest: QuestionManifest;
@@ -23,9 +27,15 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
   const [selectedDifficulties, setSelectedDifficulties] = useState<number[]>([]);
   const [selectedPTs, setSelectedPTs] = useState<number[]>([]);
   const [setSize, setSetSize] = useState(10);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResult, setAnalysisResult] = useState<WeakAreaAnalysis | null>(null);
+  const [showSaveDialog, setShowSaveDialog] = useState(false);
+  const [templateName, setTemplateName] = useState('');
 
   const step2Ref = useRef<HTMLDivElement>(null);
   const step3Ref = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
+  const adaptiveEngine = new AdaptiveEngine();
 
   // Available options
   const allQTypes = Object.keys(manifest.byQType).sort();
@@ -123,12 +133,125 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
     return false;
   };
 
+  const handleSmartBuild = async () => {
+    setIsAnalyzing(true);
+    const classId = 'demo_user'; // TODO: Get from auth context
+    
+    const analysis = await adaptiveEngine.analyzeWeakAreas(classId);
+    
+    if (!analysis) {
+      toast({
+        title: "Not enough data",
+        description: "Complete at least 10 questions to use Smart Build.",
+        variant: "destructive",
+      });
+      setIsAnalyzing(false);
+      return;
+    }
+
+    setAnalysisResult(analysis);
+    
+    // Auto-populate selections
+    if (analysis.weakQTypes.length > 0) {
+      setSelectedQTypes(analysis.weakQTypes);
+    }
+    setSelectedDifficulties(analysis.weakDifficulties);
+    setSetSize(analysis.recommendedSize);
+    
+    // Auto-advance to step 2
+    setCurrentStep(2);
+    
+    toast({
+      title: "Smart drill built!",
+      description: analysis.explanation,
+    });
+    
+    setIsAnalyzing(false);
+  };
+
+  const handleSaveTemplate = async () => {
+    if (!templateName.trim()) {
+      toast({
+        title: "Name required",
+        description: "Please enter a name for this template.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      await templateService.saveTemplate({
+        class_id: 'demo_user', // TODO: Get from auth
+        template_name: templateName,
+        qtypes: selectedQTypes,
+        difficulties: selectedDifficulties,
+        pts: selectedPTs,
+        set_size: setSize,
+      });
+
+      toast({
+        title: "Template saved!",
+        description: `"${templateName}" is now available in your saved drills.`,
+      });
+
+      setShowSaveDialog(false);
+      setTemplateName('');
+    } catch (err) {
+      toast({
+        title: "Failed to save",
+        description: "Could not save template. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <div className="max-w-4xl mx-auto space-y-6 pb-32">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">Build Your Type Drill</h1>
         <Button variant="ghost" onClick={onCancel}>Cancel</Button>
       </div>
+
+      {/* Smart Build Button */}
+      <Card className="p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-cyan-500/30">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Sparkles className="w-6 h-6 text-cyan-400" />
+            <div>
+              <h3 className="font-semibold">Smart Drill Builder</h3>
+              <p className="text-sm text-muted-foreground">
+                Let Joshua analyze your weak areas and build an optimal drill
+              </p>
+            </div>
+          </div>
+          <Button
+            onClick={handleSmartBuild}
+            disabled={isAnalyzing}
+            className="bg-cyan-500 hover:bg-cyan-600"
+          >
+            {isAnalyzing ? 'Analyzing...' : '🎯 Build Smart Drill'}
+          </Button>
+        </div>
+        
+        {analysisResult && (
+          <div className="mt-3 p-3 bg-background/50 rounded-lg border border-cyan-500/20">
+            <p className="text-sm text-muted-foreground">{analysisResult.explanation}</p>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="mt-2 text-xs"
+              onClick={() => {
+                setAnalysisResult(null);
+                setSelectedQTypes([]);
+                setSelectedDifficulties([]);
+                setCurrentStep(1);
+              }}
+            >
+              Edit manually
+            </Button>
+          </div>
+        )}
+      </Card>
 
       {/* Step 1: Question Types */}
       <Card className="p-6">
@@ -327,8 +450,49 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
               className="max-w-xs"
             />
           </div>
+
+          {/* Save Template Button */}
+          <div className="mt-4 pt-4 border-t">
+            <Button
+              variant="outline"
+              onClick={() => setShowSaveDialog(true)}
+              className="w-full"
+            >
+              <Save className="w-4 h-4 mr-2" />
+              Save as Template
+            </Button>
+          </div>
         </Card>
       )}
+
+      {/* Save Template Dialog */}
+      <Dialog open={showSaveDialog} onOpenChange={setShowSaveDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Save Drill Template</DialogTitle>
+            <DialogDescription>
+              Save this configuration to quickly build similar drills in the future.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <Label htmlFor="template-name">Template Name</Label>
+              <Input
+                id="template-name"
+                value={templateName}
+                onChange={(e) => setTemplateName(e.target.value)}
+                placeholder="e.g., Flaw Questions Practice"
+              />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setShowSaveDialog(false)}>
+              Cancel
+            </Button>
+            <Button onClick={handleSaveTemplate}>Save Template</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       {/* Sticky footer navigation */}
       <div className="fixed bottom-0 left-0 right-0 bg-background border-t p-4 z-10">
