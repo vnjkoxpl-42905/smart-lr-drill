@@ -204,12 +204,12 @@ export class AdaptiveEngine {
     return { overall, byQType };
   }
 
-  async analyzeWeakAreas(classId: string): Promise<WeakAreaAnalysis | null> {
+  async analyzeWeakAreas(userId: string): Promise<WeakAreaAnalysis | null> {
     try {
-      const { data: attempts, error } = await supabase
+      const { data: attempts, error } = await (supabase as any)
         .from('attempts')
         .select('qtype, level, correct, timestamp_iso, time_ms')
-        .eq('class_id', classId)
+        .eq('user_id', userId)
         .order('timestamp_iso', { ascending: false })
         .limit(150); // Increased from 100 for better analysis
 

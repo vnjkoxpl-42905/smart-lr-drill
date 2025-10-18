@@ -35,11 +35,11 @@ export class DrillIntelligence {
   /**
    * Detect patterns in user performance
    */
-  async detectPatterns(classId: string): Promise<LearningPattern[]> {
-    const { data: attempts, error } = await supabase
+  async detectPatterns(userId: string): Promise<LearningPattern[]> {
+    const { data: attempts, error } = await (supabase as any)
       .from('attempts')
       .select('*')
-      .eq('class_id', classId)
+      .eq('user_id', userId)
       .order('timestamp_iso', { ascending: true })
       .limit(200);
 
@@ -71,11 +71,11 @@ export class DrillIntelligence {
   /**
    * Generate personalized drill recommendations
    */
-  async generateRecommendations(classId: string): Promise<DrillRecommendation[]> {
-    const { data: attempts, error } = await supabase
+  async generateRecommendations(userId: string): Promise<DrillRecommendation[]> {
+    const { data: attempts, error } = await (supabase as any)
       .from('attempts')
       .select('*')
-      .eq('class_id', classId)
+      .eq('user_id', userId)
       .order('timestamp_iso', { ascending: false })
       .limit(100);
 
@@ -136,11 +136,11 @@ export class DrillIntelligence {
   /**
    * Track learning velocity per question type
    */
-  async trackLearningVelocity(classId: string): Promise<LearningVelocity[]> {
-    const { data: attempts, error } = await supabase
+  async trackLearningVelocity(userId: string): Promise<LearningVelocity[]> {
+    const { data: attempts, error } = await (supabase as any)
       .from('attempts')
       .select('*')
-      .eq('class_id', classId)
+      .eq('user_id', userId)
       .order('timestamp_iso', { ascending: true });
 
     if (error || !attempts || attempts.length < 30) {
