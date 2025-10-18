@@ -375,9 +375,10 @@ function DrillContent() {
     options: {
       isSelected?: boolean;
       showRadio?: boolean;
+      inFocusedMode?: boolean;
     } = {}
   ) => {
-    const { isSelected = false, showRadio = true } = options;
+    const { isSelected = false, showRadio = true, inFocusedMode = false } = options;
     const isCorrect = key === currentQuestion.correctAnswer;
     const showFeedback = answerLocked && isSelected && confidence !== null;
 
@@ -392,7 +393,11 @@ function DrillContent() {
           isSelected && tutorChatOpen && 'ring-2 ring-cyan-500/50 shadow-lg shadow-cyan-500/20',
         )}
       >
-        {showRadio ? (
+        {inFocusedMode && isSelected ? (
+          <div className="w-4 h-4 mt-1 rounded-full bg-cyan-500 flex items-center justify-center">
+            <div className="w-2 h-2 rounded-full bg-white" />
+          </div>
+        ) : showRadio ? (
           <RadioGroupItem value={key} id={`answer-${key}`} />
         ) : (
           <div className="w-4 h-4" />
@@ -502,7 +507,7 @@ function DrillContent() {
                     {/* Answers before selected - blurred */}
                     {before.length > 0 && (
                       <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
-                        {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false }))}
+                        {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
                       </div>
                     )}
 
@@ -512,7 +517,8 @@ function DrillContent() {
                       <div className="relative">
                         {renderAnswerChoice(selected[0], selected[1], { 
                           isSelected: true, 
-                          showRadio: true 
+                          showRadio: false,
+                          inFocusedMode: true
                         })}
                       </div>
                     </div>
@@ -530,7 +536,7 @@ function DrillContent() {
                     {/* Answers after selected - blurred */}
                     {after.length > 0 && (
                       <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
-                        {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false }))}
+                        {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
                       </div>
                     )}
                   </>
