@@ -83,6 +83,7 @@ export default function Auth() {
 
   const handleForgotPassword = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    e.stopPropagation(); // Prevent bubbling to parent form
     setLoading(true);
 
     const { error } = await resetPassword(resetEmail);
