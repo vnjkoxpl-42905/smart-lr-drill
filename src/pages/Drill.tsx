@@ -489,9 +489,10 @@ function DrillContent() {
       isSelected?: boolean;
       showRadio?: boolean;
       inFocusedMode?: boolean;
+      isLast?: boolean;
     } = {}
   ) => {
-    const { isSelected = false, showRadio = true, inFocusedMode = false } = options;
+    const { isSelected = false, showRadio = true, inFocusedMode = false, isLast = false } = options;
     const isCorrect = key === currentQuestion.correctAnswer;
     const showFeedback = answerLocked && isSelected && confidence !== null;
 
@@ -499,25 +500,36 @@ function DrillContent() {
       <div
         key={key}
         className={cn(
-          "flex items-start space-x-3 p-4 rounded-lg border transition-all duration-300",
-          showFeedback && isCorrect && 'border-[#16A34A] bg-[#16A34A]/10',
-          showFeedback && !isCorrect && 'border-[#DC2626] bg-[#DC2626]/10',
-          !showFeedback && 'border-border hover:bg-muted/50',
-          isSelected && tutorChatOpen && 'ring-2 ring-cyan-500/50 shadow-lg shadow-cyan-500/20',
+          "group relative flex items-start gap-3 py-4 px-0 min-h-[60px]",
+          "border-b border-[#E5E7EB]",
+          "transition-colors duration-150",
+          isLast && "border-b-0",
+          !answerLocked && "hover:bg-gray-50/50 cursor-pointer",
+          "focus-within:outline focus-within:outline-2 focus-within:outline-gray-900 focus-within:outline-offset-2",
+          showFeedback && isCorrect && "bg-green-50 border-green-200",
+          showFeedback && !isCorrect && "bg-red-50 border-red-200",
+          isSelected && tutorChatOpen && "bg-cyan-50/50 border-cyan-200",
         )}
       >
-        {inFocusedMode && isSelected ? (
-          <div className="w-4 h-4 mt-1 rounded-full bg-cyan-500 flex items-center justify-center">
-            <div className="w-2 h-2 rounded-full bg-white" />
-          </div>
-        ) : showRadio ? (
-          <RadioGroupItem value={key} id={`answer-${key}`} />
-        ) : (
-          <div className="w-4 h-4" />
-        )}
+        <div className="flex items-center h-6 mt-0.5">
+          {inFocusedMode && isSelected ? (
+            <div className="w-4 h-4 rounded-full bg-cyan-500 flex items-center justify-center">
+              <div className="w-2 h-2 rounded-full bg-white" />
+            </div>
+          ) : showRadio ? (
+            <RadioGroupItem value={key} id={`answer-${key}`} className="mt-0" />
+          ) : (
+            <div className="w-4 h-4" />
+          )}
+        </div>
         <Label
           htmlFor={`answer-${key}`}
-          className="flex-1 cursor-pointer text-base leading-relaxed"
+          className={cn(
+            "flex-1 cursor-pointer",
+            "text-[16px] leading-[1.6]",
+            "font-normal text-foreground",
+            "select-none"
+          )}
         >
           <span className="font-semibold mr-2">({key})</span>
           {text}
@@ -603,7 +615,10 @@ function DrillContent() {
               
               return (
                 <div 
-                  className={`p-4 bg-muted/50 rounded-lg stimulus ${highlightMode === 'highlight' ? 'select-text' : 'select-none'}`}
+                  className={cn(
+                    "pl-4 border-l-2 border-gray-300 py-2 stimulus",
+                    highlightMode === 'highlight' ? 'select-text' : 'select-none'
+                  )}
                   contentEditable={false}
                   tabIndex={-1}
                   draggable={false}
@@ -637,10 +652,10 @@ function DrillContent() {
 
         {/* Right Panel - Answer Choices */}
         <div className="flex-1 overflow-y-auto border-l">
-          <div className="p-6 space-y-6">
+          <div className="px-8 py-6 space-y-6">
             {/* Question Stem - Static Display */}
-            <div className="mb-8">
-              <h2 className="text-xl font-semibold text-foreground leading-relaxed">
+            <div className="mb-6 max-w-3xl">
+              <h2 className="text-[18px] font-semibold text-foreground leading-[1.5]">
                 {currentQuestion.questionStem}
               </h2>
             </div>
@@ -700,11 +715,13 @@ function DrillContent() {
                 value={selectedAnswer}
                 onValueChange={handleAnswerSelect}
                 disabled={answerLocked}
+                className="space-y-0"
               >
-                {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
+                {Object.entries(currentQuestion.answerChoices).map(([key, text], index, arr) => 
                   renderAnswerChoice(key, text, { 
                     isSelected: key === selectedAnswer,
-                    showRadio: true 
+                    showRadio: true,
+                    isLast: index === arr.length - 1
                   })
                 )}
               </RadioGroup>
@@ -712,8 +729,8 @@ function DrillContent() {
 
             {/* Confidence selector */}
             {answerLocked && !tutorChatOpen && (
-              <div className="space-y-3 pt-4">
-                <Label>Confidence (1–5)</Label>
+              <div className="space-y-3 pt-6 border-t border-[#E5E7EB]">
+                <Label className="text-sm font-medium">Confidence (1–5)</Label>
                 <div className="flex gap-2">
                   {[1, 2, 3, 4, 5].map((level) => (
                     <Button
@@ -731,7 +748,7 @@ function DrillContent() {
             )}
 
             {/* Actions */}
-            <div className="flex gap-3 pt-4">
+            <div className="flex gap-3 pt-6 mt-2">
               <Button
                 onClick={handleNext}
                 disabled={!showSolution || timer?.isPaused}
