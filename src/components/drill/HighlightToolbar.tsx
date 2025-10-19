@@ -87,7 +87,7 @@ export function HighlightToolbar({
         className={cn(
           "h-8 w-8 shrink-0 transition-all",
           mode === 'underline' 
-            ? "bg-blue-600 hover:bg-blue-700 ring-4 ring-blue-500/30 shadow-lg scale-105" 
+            ? "bg-black hover:bg-gray-800 ring-4 ring-black/20 shadow-lg scale-105" 
             : "opacity-60 hover:opacity-100"
         )}
         title="Underline"
