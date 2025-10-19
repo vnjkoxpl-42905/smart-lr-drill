@@ -10,6 +10,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
+import { TalkModeModal } from '@/components/drill/TalkModeModal';
 import { ReviewModal } from '@/components/drill/ReviewModal';
 import { VoiceCoachChip } from '@/components/drill/VoiceCoachChip';
 import { VoiceCoachModal } from '@/components/drill/VoiceCoachModal';
@@ -48,6 +49,8 @@ function DrillContent() {
   const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
+  const [talkModeOpen, setTalkModeOpen] = React.useState(false);
+  const [tutorMessages, setTutorMessages] = React.useState<Array<{role: 'user' | 'assistant'; content: string}>>([]);
   const [wajModalOpen, setWajModalOpen] = React.useState(false);
   const [voiceCoachOpen, setVoiceCoachOpen] = React.useState(false);
   const [showVoiceChip, setShowVoiceChip] = React.useState(false);
@@ -180,6 +183,8 @@ function DrillContent() {
     setConfidence(null);
     setShowSolution(false);
     setTutorChatOpen(false);
+    setTalkModeOpen(false);
+    setTutorMessages([]);
     setVoiceCoachOpen(false);
     setShowVoiceChip(false);
     setAnswerLocked(false);
@@ -228,6 +233,8 @@ function DrillContent() {
 
   const handleTryAgain = () => {
     setTutorChatOpen(false);
+    setTalkModeOpen(false);
+    setTutorMessages([]);
     setVoiceCoachOpen(false);
     setShowVoiceChip(false);
     setSelectedAnswer('');
@@ -715,9 +722,25 @@ function DrillContent() {
                   userAnswer={selectedAnswer}
                   onClose={handleContinueToReview}
                   onTryAgain={handleTryAgain}
+                  onOpenTalkMode={() => {
+                    setTalkModeOpen(true);
+                    setTutorChatOpen(false);
+                  }}
+                  messages={tutorMessages}
+                  onMessagesUpdate={setTutorMessages}
                 />
               </div>
             )}
+
+            {/* Talk Mode Modal */}
+            <TalkModeModal
+              open={talkModeOpen}
+              question={currentQuestion}
+              userAnswer={selectedAnswer}
+              existingMessages={tutorMessages}
+              onClose={() => setTalkModeOpen(false)}
+              onMessagesUpdate={setTutorMessages}
+            />
 
           </div>
         </div>
