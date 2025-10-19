@@ -196,6 +196,10 @@ function DrillContent() {
       const newSet = new Set(prev);
       if (newSet.has(key)) {
         newSet.delete(key);
+        // If this answer is currently selected, deselect it
+        if (selectedAnswer === key) {
+          setSelectedAnswer('');
+        }
       } else {
         newSet.add(key);
       }
@@ -574,8 +578,7 @@ function DrillContent() {
               }}
               className={cn(
                 "h-6 w-6 p-0 text-gray-400 hover:text-gray-600 shrink-0",
-                "opacity-0 group-hover:opacity-100 transition-opacity",
-                eliminatedAnswers.has(key) && "opacity-100 text-gray-500"
+                eliminatedAnswers.has(key) && "text-gray-500"
               )}
             >
               ×
