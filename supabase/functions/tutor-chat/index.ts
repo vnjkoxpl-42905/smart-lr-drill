@@ -111,31 +111,23 @@ serve(async (req) => {
   }
 
   try {
-    // Verify authentication
-    const authHeader = req.headers.get('Authorization');
-    if (!authHeader) {
-      return new Response(
-        JSON.stringify({ error: 'Unauthorized - No authorization header' }), 
-        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
-    }
+    // Optional authentication (phase 1 can be public)
+    const authHeader = req.headers.get('Authorization') || null;
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseAnonKey = Deno.env.get('SUPABASE_ANON_KEY')!;
     
-    // Create client with user's auth token
-    const supabaseClient = createClient(
-      supabaseUrl,
-      supabaseAnonKey,
-      { global: { headers: { Authorization: authHeader } } }
-    );
-
-    const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
-    if (authError || !user) {
-      return new Response(
-        JSON.stringify({ error: 'Unauthorized - Invalid session' }), 
-        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    // Create client with user's auth token only if provided
+    let supabaseClient: any = null;
+    let user: any = null;
+    if (authHeader) {
+      supabaseClient = createClient(
+        supabaseUrl,
+        supabaseAnonKey,
+        { global: { headers: { Authorization: authHeader } } }
       );
+      const { data, error: authError } = await supabaseClient.auth.getUser();
+      if (!authError) user = data.user;
     }
 
     // Parse and validate input
@@ -156,20 +148,7 @@ serve(async (req) => {
       );
     }
 
-    // Verify user attempted this question
-    const { data: attempt } = await supabaseClient
-      .from('attempts')
-      .select('id')
-      .eq('user_id', user.id)
-      .eq('qid', question.qid)
-      .maybeSingle();
-
-    if (!attempt) {
-      return new Response(
-        JSON.stringify({ error: 'You must attempt this question before requesting coaching' }), 
-        { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
-    }
+    // Attempt verification moved below after phase detection (only required for phases >= 2)
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -198,16 +177,42 @@ serve(async (req) => {
       phase = 3; // Conversational follow-up
     }
 
-    // Log coaching session to database
-    supabaseClient.from('events').insert({
-      user_id: user.id,
-      event_type: 'coaching_request',
-      metadata: { 
-        phase, 
-        message_count: messages.length,
-        qid: question.qid
+    // Gate phases >= 2 behind auth + prior attempt
+    if (phase >= 2) {
+      if (!user || !supabaseClient) {
+        return new Response(
+          JSON.stringify({ error: 'Please sign in to continue coaching.' }),
+          { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
       }
-    }); // Fire and forget - don't await
+
+      const { data: attempt } = await supabaseClient
+        .from('attempts')
+        .select('id')
+        .eq('user_id', user.id)
+        .eq('qid', question.qid)
+        .maybeSingle();
+
+      if (!attempt) {
+        return new Response(
+          JSON.stringify({ error: 'You must attempt this question before requesting coaching' }),
+          { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
+    // Log coaching session to database (only if we have a user)
+    if (user && supabaseClient) {
+      supabaseClient.from('events').insert({
+        user_id: user.id,
+        event_type: 'coaching_request',
+        metadata: { 
+          phase, 
+          message_count: messages.length,
+          qid: question.qid
+        }
+      }); // Fire and forget - don't await
+    }
 
     // Build context strings
     const answerChoicesText = Object.entries(question.answerChoices)

@@ -199,9 +199,10 @@ export function TalkModeModal({
         onMessagesUpdate(finalMessages);
         setHasGreeted(true);
         speakResponse(data.content);
-      } catch (e) {
+      } catch (e: any) {
         console.error('Failed to start talk mode:', e);
-        toast.error('Could not start voice coaching. Please try again.');
+        const msg = e?.message || e?.error || 'Could not start voice coaching. Please try again.';
+        toast.error(msg);
       }
     };
     run();
