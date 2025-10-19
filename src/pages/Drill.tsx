@@ -606,16 +606,24 @@ function DrillContent() {
                   
                   return (
                     <div 
-                      className="p-4 bg-muted/50 rounded-lg stimulus"
+                      className={`p-4 bg-muted/50 rounded-lg stimulus ${highlightMode === 'highlight' ? 'select-text' : 'select-none'}`}
                       contentEditable={false}
                       tabIndex={-1}
+                      draggable={false}
                       onKeyDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                      onDragStart={(e) => e.preventDefault()}
+                      onDrop={(e) => e.preventDefault()}
+                      onMouseDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                      onTouchStart={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                      onContextMenu={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
                       onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
                       style={{ 
                         userSelect: highlightMode === 'highlight' ? 'text' : 'none',
+                        WebkitUserSelect: highlightMode === 'highlight' ? 'text' : 'none',
+                        WebkitTouchCallout: highlightMode === 'highlight' ? 'default' : 'none',
                         cursor: highlightMode === 'highlight' ? 'text' : 'default',
                         caretColor: highlightMode === 'highlight' ? 'auto' : 'transparent'
-                      }}
+                      } as React.CSSProperties}
                     >
                       <HighlightedText
                         text={fullText}
@@ -634,16 +642,24 @@ function DrillContent() {
                   
                   return (
                     <div 
-                      className="text-lg font-semibold question-stem"
+                      className={`text-lg font-semibold question-stem ${highlightMode === 'highlight' ? 'select-text' : 'select-none'}`}
                       contentEditable={false}
                       tabIndex={-1}
+                      draggable={false}
                       onKeyDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                      onDragStart={(e) => e.preventDefault()}
+                      onDrop={(e) => e.preventDefault()}
+                      onMouseDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                      onTouchStart={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                      onContextMenu={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
                       style={{ 
                         marginTop: '16px',
                         userSelect: highlightMode === 'highlight' ? 'text' : 'none',
+                        WebkitUserSelect: highlightMode === 'highlight' ? 'text' : 'none',
+                        WebkitTouchCallout: highlightMode === 'highlight' ? 'default' : 'none',
                         cursor: highlightMode === 'highlight' ? 'text' : 'default',
                         caretColor: highlightMode === 'highlight' ? 'auto' : 'transparent'
-                      }}
+                      } as React.CSSProperties}
                       onMouseUp={(e) => handleTextSelection(e, 'stem')}
                     >
                       <HighlightedText
