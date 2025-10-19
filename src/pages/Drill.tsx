@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
+import { useUserSettings } from '@/contexts/UserSettingsContext';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +30,7 @@ function DrillContent() {
   const location = useLocation();
   const navigate = useNavigate();
   const { user } = useAuth();
+  const { settings } = useUserSettings();
   const state = location.state as { 
     mode: DrillMode; 
     config?: FullSectionConfig | TypeDrillConfig;
@@ -49,7 +51,7 @@ function DrillContent() {
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
   const [eliminatedAnswers, setEliminatedAnswers] = React.useState<Set<string>>(new Set());
-  const [highlightMode, setHighlightMode] = React.useState<'none' | 'highlight' | 'erase'>('none');
+  const [highlightMode, setHighlightMode] = React.useState<'none' | 'highlight' | 'underline' | 'erase'>('none');
   const [highlights, setHighlights] = React.useState<Map<string, Highlight[]>>(new Map());
   
   const timer = hasTimer ? useTimerContext() : null;
@@ -202,6 +204,10 @@ function DrillContent() {
         }
       } else {
         newSet.add(key);
+        // Also deselect when eliminating if currently selected
+        if (selectedAnswer === key) {
+          setSelectedAnswer('');
+        }
       }
       return newSet;
     });
@@ -341,8 +347,12 @@ function DrillContent() {
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    if (!correct) {
+    // Only show tutor if enabled in settings
+    if (!correct && settings.tutorEnabled) {
       setTutorChatOpen(true);
+    } else if (!correct) {
+      // Skip tutor, go straight to WAJ review
+      setWajModalOpen(true);
     } else {
       // Save correct attempt to database
       await saveAttemptToDatabase({
@@ -416,7 +426,7 @@ function DrillContent() {
   };
 
   const handleTextSelection = (e: React.MouseEvent, section: 'stimulus' | 'stem') => {
-    if (highlightMode !== 'highlight') return;
+    if (highlightMode !== 'highlight' && highlightMode !== 'underline') return;
     
     const container = e.currentTarget as HTMLElement;
     const selection = captureTextSelection(container);
@@ -428,7 +438,7 @@ function DrillContent() {
       start: selection.start,
       end: selection.end,
       text: selection.text,
-      color: 'yellow',
+      color: highlightMode === 'underline' ? 'underline' : 'yellow',
       section
     };
     
@@ -659,7 +669,7 @@ function DrillContent() {
                 <div 
                   className={cn(
                     "pl-4 py-2 stimulus",
-                    highlightMode === 'highlight' ? 'select-text cursor-text' : 'select-none cursor-default'
+                    (highlightMode === 'highlight' || highlightMode === 'underline') ? 'select-text cursor-text' : 'select-none cursor-default'
                   )}
                   onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
                 >
@@ -672,6 +682,19 @@ function DrillContent() {
                 </div>
               );
             })()}
+
+            {/* Joshua Tutor - appears under stimulus when active */}
+            {tutorChatOpen && settings.tutorEnabled && (
+              <div className="pl-4 mt-4">
+                <TutorChatModal
+                  open={tutorChatOpen}
+                  question={currentQuestion}
+                  userAnswer={selectedAnswer}
+                  onClose={handleContinueToReview}
+                  onTryAgain={handleTryAgain}
+                />
+              </div>
+            )}
 
           </div>
         </div>
@@ -712,17 +735,6 @@ function DrillContent() {
                             inFocusedMode: true
                           })}
                         </div>
-                      </div>
-
-                      {/* Joshua chat - right below selected answer */}
-                      <div className="pl-7">
-                        <TutorChatModal
-                          open={tutorChatOpen}
-                          question={currentQuestion}
-                          userAnswer={selectedAnswer}
-                          onClose={handleContinueToReview}
-                          onTryAgain={handleTryAgain}
-                        />
                       </div>
 
                       {/* Answers after selected - blurred */}
@@ -776,7 +788,7 @@ function DrillContent() {
             )}
 
             {/* Actions */}
-            <div className="flex gap-3 pt-6 mt-2">
+            <div className="flex justify-end gap-3 pt-6 mt-2">
               <Button
                 onClick={handleNext}
                 disabled={!showSolution || timer?.isPaused}

@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QuestionBankProvider } from "./contexts/QuestionBankContext";
 import { AuthProvider } from "./contexts/AuthContext";
+import { UserSettingsProvider } from "./contexts/UserSettingsContext";
 import Landing from "./pages/Landing";
 import Drill from "./pages/Drill";
 import Dashboard from "./pages/Dashboard";
@@ -16,25 +17,27 @@ import NotFound from "./pages/NotFound";
 
 const App = () => (
   <AuthProvider>
-    <QuestionBankProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/drill" element={<Drill />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/waj" element={<WrongAnswerJournal />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/auth" element={<Auth />} />
-            <Route path="/profile" element={<Profile />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QuestionBankProvider>
+    <UserSettingsProvider>
+      <QuestionBankProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/drill" element={<Drill />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/waj" element={<WrongAnswerJournal />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/profile" element={<Profile />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QuestionBankProvider>
+    </UserSettingsProvider>
   </AuthProvider>
 );
 

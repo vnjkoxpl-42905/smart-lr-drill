@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
+import { useUserSettings } from '@/contexts/UserSettingsContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { ArrowLeft, LogOut, User } from 'lucide-react';
+import { Switch } from '@/components/ui/switch';
+import { ArrowLeft, LogOut, User, MessageSquare } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 
 interface ProfileData {
@@ -22,6 +24,7 @@ interface ProfileData {
 export default function Profile() {
   const navigate = useNavigate();
   const { user, signOut } = useAuth();
+  const { settings, updateSettings } = useUserSettings();
   const [profile, setProfile] = React.useState<ProfileData | null>(null);
   const [loading, setLoading] = React.useState(true);
 
@@ -124,6 +127,23 @@ export default function Profile() {
                       ? Math.round((profile.overall_correct || 0) / profile.overall_answered * 100)
                       : 0}%
                   </span>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-lg bg-muted/50">
+                <div className="text-sm font-semibold mb-3 flex items-center gap-2">
+                  <MessageSquare className="h-4 w-4" />
+                  Settings
+                </div>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <div className="font-medium">AI Tutor "Joshua"</div>
+                    <div className="text-sm text-muted-foreground">Enable real-time tutoring assistance</div>
+                  </div>
+                  <Switch 
+                    checked={settings.tutorEnabled} 
+                    onCheckedChange={(checked) => updateSettings({ tutorEnabled: checked })}
+                  />
                 </div>
               </div>
 

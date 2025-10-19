@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Highlighter, Eraser } from "lucide-react";
+import { Highlighter, Underline, Eraser } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type HighlightMode = 'none' | 'highlight' | 'erase';
+type HighlightMode = 'none' | 'highlight' | 'underline' | 'erase';
 
 interface HighlightToolbarProps {
   mode: HighlightMode;
@@ -12,6 +12,10 @@ interface HighlightToolbarProps {
 export function HighlightToolbar({ mode, onModeChange }: HighlightToolbarProps) {
   const toggleHighlight = () => {
     onModeChange(mode === 'highlight' ? 'none' : 'highlight');
+  };
+
+  const toggleUnderline = () => {
+    onModeChange(mode === 'underline' ? 'none' : 'underline');
   };
 
   const toggleEraser = () => {
@@ -32,6 +36,20 @@ export function HighlightToolbar({ mode, onModeChange }: HighlightToolbarProps) 
       >
         <Highlighter className="w-4 h-4 mr-2" />
         Highlight
+      </Button>
+
+      <Button
+        variant={mode === 'underline' ? 'default' : 'outline'}
+        size="sm"
+        onClick={toggleUnderline}
+        className={cn(
+          "transition-all",
+          mode === 'underline' && 
+          "bg-gradient-to-r from-blue-500 to-blue-600 hover:shadow-lg hover:from-blue-600 hover:to-blue-700"
+        )}
+      >
+        <Underline className="w-4 h-4 mr-2" />
+        Underline
       </Button>
 
       <Button
