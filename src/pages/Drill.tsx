@@ -607,8 +607,15 @@ function DrillContent() {
                   return (
                     <div 
                       className="p-4 bg-muted/50 rounded-lg stimulus"
+                      contentEditable={false}
+                      tabIndex={-1}
+                      onKeyDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
                       onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
-                      style={{ userSelect: 'text', cursor: highlightMode === 'highlight' ? 'text' : 'default' }}
+                      style={{ 
+                        userSelect: highlightMode === 'highlight' ? 'text' : 'none',
+                        cursor: highlightMode === 'highlight' ? 'text' : 'default',
+                        caretColor: highlightMode === 'highlight' ? 'auto' : 'transparent'
+                      }}
                     >
                       <HighlightedText
                         text={fullText}
@@ -627,8 +634,16 @@ function DrillContent() {
                   
                   return (
                     <div 
-                      className="text-lg font-semibold question-stem" 
-                      style={{ marginTop: '16px', userSelect: 'text', cursor: highlightMode === 'highlight' ? 'text' : 'default' }}
+                      className="text-lg font-semibold question-stem"
+                      contentEditable={false}
+                      tabIndex={-1}
+                      onKeyDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                      style={{ 
+                        marginTop: '16px',
+                        userSelect: highlightMode === 'highlight' ? 'text' : 'none',
+                        cursor: highlightMode === 'highlight' ? 'text' : 'default',
+                        caretColor: highlightMode === 'highlight' ? 'auto' : 'transparent'
+                      }}
                       onMouseUp={(e) => handleTextSelection(e, 'stem')}
                     >
                       <HighlightedText
