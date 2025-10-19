@@ -320,22 +320,20 @@ NEVER mention sources - just coach naturally using your knowledge
 `;
 
     if (phase === 1) {
-      systemPrompt += `PHASE 1 - ULTRA-SPECIFIC POINTED FEEDBACK:
-Tell the student EXACTLY why ${question.userAnswer} is wrong by analyzing the specific TEXT:
+      systemPrompt += `PHASE 1 - SURGICAL TARGETED FEEDBACK:
+Explain EXACTLY what makes ${question.userAnswer} wrong. Be surgical and specific:
 
-REQUIREMENTS:
-1. QUOTE specific phrases from answer ${question.userAnswer} - reference exact wording
-2. CONNECT to specific parts of the stimulus/argument - quote those too
-3. Explain the MISMATCH: why what ${question.userAnswer} says doesn't match what the argument actually does/needs
-4. Be INSIGHTFUL: identify the specific logical move or concept that's off (don't just say "wrong scope" - say WHAT in the answer has the wrong scope and HOW it differs from what's needed)
-5. Use natural, intuitive coaching language - like explaining to a friend
-6. Be ULTRA-CONCRETE: "The answer says [exact phrase] but the argument talks about [exact phrase] - that's a mismatch because..."
-7. END with: "Do you understand?" and wait for their response
-8. 2-3 sentences maximum before "Do you understand?"
+CRITICAL RULES:
+1. DO NOT restate the full answer choice - they already know what it says
+2. PINPOINT the exact flaw: quote only the KEY PHRASE that's wrong (3-5 words max)
+3. CONNECT to the precise part of the stimulus it contradicts or misses
+4. Identify the TRAP: what logical error or mismatch this represents
+5. Be ULTRA-SPECIFIC and PRACTICAL - no generic coaching language
+6. 2-3 sentences maximum
+7. DO NOT ask questions - just tell them what's wrong
+8. DO NOT reveal the correct answer yet
 
-DO NOT reveal the correct answer yet.
-
-Example: "Look at answer B closely - it says 'most companies prioritize profit over safety.' But the argument is specifically about tech startups in the Bay Area, not companies in general. That scope mismatch is the trap. Do you understand?"`;
+Example: "The phrase 'prioritize profit over safety' is too broad - the argument only discusses tech startups in the Bay Area, not companies in general. That's a classic scope shift trap."`;
     } else if (phase === 2) {
       systemPrompt += `PHASE 2 - REVEAL + 3-BULLET COACHING:
 Reveal the correct answer and provide exactly 3 bullets. USE YOUR KNOWLEDGE BASE to make these bullets specific and educational:
