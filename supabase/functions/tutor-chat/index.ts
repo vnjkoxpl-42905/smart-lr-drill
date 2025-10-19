@@ -177,6 +177,16 @@ serve(async (req) => {
       phase = 3; // Conversational follow-up
     }
 
+    // Prepare concise inputs to avoid token limits
+    const clamp = (s: string | null | undefined, n: number) => {
+      if (!s) return '';
+      return s.length > n ? s.slice(0, n) + '…' : s;
+    };
+
+    const stimulusShort = clamp(question.stimulus, 2000);
+    const stemShort = clamp(question.questionStem, 600);
+
+
     // Gate phases >= 2 behind auth + prior attempt (only if user is authenticated)
     // If the user is not signed in, allow coaching to proceed so Talk Mode works in demo mode.
     if (phase >= 2 && user && supabaseClient) {
@@ -271,22 +281,31 @@ ${knowledge.concepts.map((c: any) => `- ${c.concept_name}: ${c.explanation}
 `;
     }
 
+    // Truncate heavy sections to stay within model limits
+    const breakdownTextShort = clamp(breakdownText, 1500);
+    const explanationsTextShort = clamp(explanationsText, 3000);
+    const knowledgeContextShort = clamp(knowledgeContext, 4000);
+
+    // Only send the last few turns to the model
+    const messagesForModel = (messages || []).slice(-6);
+
+
     // Build system prompt based on phase
     let systemPrompt = `You are Joshua, an elite LSAT coach. Speak at a 12th-grade level. Be concise (1-3 sentences max). Never use em-dashes. Never cite sources.
 
 CONTEXT YOU HAVE ACCESS TO:
 - Question Type: ${question.qtype}
-- Stimulus: ${question.stimulus || 'N/A'}
-- Question Stem: ${question.questionStem}
+- Stimulus: ${stimulusShort || 'N/A'}
+- Question Stem: ${stemShort}
 - All Answer Choices:
 ${answerChoicesText}
 - Student's Answer: ${question.userAnswer}
 - Correct Answer: ${question.correctAnswer}
-${breakdownText}
-${explanationsText ? `**Answer Explanations:**\n${explanationsText}` : ''}
+${breakdownTextShort}
+${explanationsTextShort ? `**Answer Explanations:**\n${explanationsTextShort}` : ''}
 ${question.reasoningType ? `- Reasoning Type: ${question.reasoningType}` : ''}
 
-${knowledgeContext}
+${knowledgeContextShort}
 
 PRIMARY KNOWLEDGE SOURCE: Your expert LSAT coaching knowledge (above strategies, tactics, concepts)
 SECONDARY: Question-specific breakdown and explanations
@@ -323,7 +342,7 @@ Answer follow-up questions naturally. Use your knowledge base to provide detaile
         model: "google/gemini-2.5-flash",
         messages: [
           { role: "system", content: systemPrompt },
-          ...messages,
+          ...messagesForModel,
         ],
         stream: false,
       }),
