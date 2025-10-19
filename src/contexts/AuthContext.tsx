@@ -29,6 +29,7 @@ interface AuthContextValue {
   signIn: (email: string, password: string) => Promise<{ error: any }>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error: any }>;
+  updatePassword: (newPassword: string) => Promise<{ error: any }>;
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -105,29 +106,40 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await supabase.auth.signOut();
   };
 
-  const resetPassword = async (email: string) => {
-    try {
-      const redirectUrl = `${window.location.origin}/auth`;
-      
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: redirectUrl,
-      });
+const resetPassword = async (email: string) => {
+  try {
+    const redirectUrl = `${window.location.origin}/auth`;
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: redirectUrl,
+    });
 
-      if (error) throw error;
-      
-      toast.success('Password reset email sent! Check your inbox.');
-      return { error: null };
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to send reset email');
-      return { error };
-    }
-  };
+    if (error) throw error;
 
-  return (
-    <AuthContext.Provider value={{ user, session, loading, signUp, signIn, signOut, resetPassword }}>
-      {children}
-    </AuthContext.Provider>
-  );
+    toast.success('Password reset email sent! Check your inbox.');
+    return { error: null };
+  } catch (error: any) {
+    toast.error(error.message || 'Failed to send reset email');
+    return { error };
+  }
+};
+
+const updatePassword = async (newPassword: string) => {
+  try {
+    const { error } = await supabase.auth.updateUser({ password: newPassword });
+    if (error) throw error;
+    toast.success('Password updated successfully.');
+    return { error: null };
+  } catch (error: any) {
+    toast.error(error.message || 'Failed to update password');
+    return { error };
+  }
+};
+
+return (
+  <AuthContext.Provider value={{ user, session, loading, signUp, signIn, signOut, resetPassword, updatePassword }}>
+    {children}
+  </AuthContext.Provider>
+);
 }
 
 export function useAuth() {
