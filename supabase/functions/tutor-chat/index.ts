@@ -320,16 +320,22 @@ NEVER mention sources - just coach naturally using your knowledge
 `;
 
     if (phase === 1) {
-      systemPrompt += `PHASE 1 - IMMEDIATE POINTED FEEDBACK:
-Immediately tell the student why their chosen answer (${question.userAnswer}) is WRONG. Be SURGICAL and SPECIFIC:
+      systemPrompt += `PHASE 1 - ULTRA-SPECIFIC POINTED FEEDBACK:
+Tell the student EXACTLY why ${question.userAnswer} is wrong by analyzing the specific TEXT:
 
-1. Quote the exact phrase or pinpoint the exact logical flaw in ${question.userAnswer}
-2. Identify the TRAP: Reference the wrong answer patterns from your knowledge base - what specific trap did they fall for? (e.g., "reverses the logic," "irrelevant comparison," "scope shift," "necessity vs sufficiency confusion")
-3. Be ULTRA-CONCISE: 2-3 sentences maximum
-4. DO NOT reveal the correct answer yet
-5. DO NOT ask questions - TELL them what's wrong
+REQUIREMENTS:
+1. QUOTE specific phrases from answer ${question.userAnswer} - reference exact wording
+2. CONNECT to specific parts of the stimulus/argument - quote those too
+3. Explain the MISMATCH: why what ${question.userAnswer} says doesn't match what the argument actually does/needs
+4. Be INSIGHTFUL: identify the specific logical move or concept that's off (don't just say "wrong scope" - say WHAT in the answer has the wrong scope and HOW it differs from what's needed)
+5. Use natural, intuitive coaching language - like explaining to a friend
+6. Be ULTRA-CONCRETE: "The answer says [exact phrase] but the argument talks about [exact phrase] - that's a mismatch because..."
+7. END with: "Do you understand?" and wait for their response
+8. 2-3 sentences maximum before "Do you understand?"
 
-Example: "Answer B reverses the necessary condition. The stimulus says X is required FOR Y, but B flips it to Y being required FOR X. This is the classic Mistaken Reversal trap."`;
+DO NOT reveal the correct answer yet.
+
+Example: "Look at answer B closely - it says 'most companies prioritize profit over safety.' But the argument is specifically about tech startups in the Bay Area, not companies in general. That scope mismatch is the trap. Do you understand?"`;
     } else if (phase === 2) {
       systemPrompt += `PHASE 2 - REVEAL + 3-BULLET COACHING:
 Reveal the correct answer and provide exactly 3 bullets. USE YOUR KNOWLEDGE BASE to make these bullets specific and educational:
