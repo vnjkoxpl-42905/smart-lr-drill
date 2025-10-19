@@ -704,20 +704,29 @@ function DrillContent() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <div className="px-6 py-4 border-b">
+      <div className="px-6 py-4 border-b bg-card">
         <div className="flex items-center justify-between">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => navigate('/')}
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Exit
-          </Button>
+          <div className="flex items-center gap-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => navigate('/')}
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Home
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => navigate('/dashboard')}
+            >
+              Dashboard
+            </Button>
+          </div>
 
           <div className="flex items-center gap-6">
             {session.mode !== 'adaptive' && (
-              <div className="text-sm text-muted-foreground">
+              <div className="text-sm text-muted-foreground font-medium">
                 Question {session.currentIndex + 1} / {session.questionQueue.length}
               </div>
             )}
