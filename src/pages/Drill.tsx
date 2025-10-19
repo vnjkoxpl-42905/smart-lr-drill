@@ -635,42 +635,6 @@ function DrillContent() {
                   );
                 })()}
 
-                {/* Question stem */}
-                {(() => {
-                  const fullText = normalizeText(currentQuestion.questionStem);
-                  const stemHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stem') || [];
-                  
-                  return (
-                    <div 
-                      className={`text-lg font-semibold question-stem ${highlightMode === 'highlight' ? 'select-text' : 'select-none'}`}
-                      contentEditable={false}
-                      tabIndex={-1}
-                      draggable={false}
-                      onKeyDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                      onDragStart={(e) => e.preventDefault()}
-                      onDrop={(e) => e.preventDefault()}
-                      onMouseDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                      onTouchStart={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                      onContextMenu={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                      style={{ 
-                        marginTop: '16px',
-                        userSelect: highlightMode === 'highlight' ? 'text' : 'none',
-                        WebkitUserSelect: highlightMode === 'highlight' ? 'text' : 'none',
-                        WebkitTouchCallout: highlightMode === 'highlight' ? 'default' : 'none',
-                        cursor: highlightMode === 'highlight' ? 'text' : 'default',
-                        caretColor: highlightMode === 'highlight' ? 'auto' : 'transparent'
-                      } as React.CSSProperties}
-                      onMouseUp={(e) => handleTextSelection(e, 'stem')}
-                    >
-                      <HighlightedText
-                        text={fullText}
-                        highlights={stemHighlights}
-                        onHighlightClick={handleHighlightClick}
-                        eraserMode={highlightMode === 'erase'}
-                      />
-                    </div>
-                  );
-                })()}
               </div>
             </ScrollArea>
           </ResizablePanel>
@@ -682,6 +646,13 @@ function DrillContent() {
             <ScrollArea className="h-full">
               <div className="p-6">
                 <Card className="p-6">
+                  {/* Question Stem - Static Display */}
+                  <div className="mb-6 pb-4 border-b border-border">
+                    <p className="text-lg font-semibold text-foreground leading-relaxed">
+                      {currentQuestion.questionStem}
+                    </p>
+                  </div>
+
                   {/* Answer choices - Adaptive layout based on tutor state */}
                   {tutorChatOpen ? (
                     // FOCUSED LAYOUT: Highlight selected answer + Joshua
