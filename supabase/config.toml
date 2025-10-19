@@ -2,3 +2,6 @@ project_id = "zoxdxwpftbktipqqrzmc"
 
 [functions.tutor-chat]
 verify_jwt = false
+
+[functions.parse-drill-request]
+verify_jwt = false

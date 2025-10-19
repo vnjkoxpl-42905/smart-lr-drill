@@ -5,6 +5,7 @@ import { useQuestionBank } from '@/contexts/QuestionBankContext';
 import { ModeSelector } from '@/components/drill/ModeSelector';
 import { SectionSelector } from '@/components/drill/SectionSelector';
 import { TypeDrillPicker } from '@/components/drill/TypeDrillPicker';
+import { NaturalDrillCreator } from '@/components/drill/NaturalDrillCreator';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { User } from 'lucide-react';
@@ -111,6 +112,13 @@ export default function Landing() {
       {selectedMode === 'type-drill' && manifest && (
         <TypeDrillPicker
           manifest={manifest}
+          onStartDrill={handleStartTypeDrill}
+          onCancel={() => setSelectedMode(null)}
+        />
+      )}
+
+      {selectedMode === 'natural-drill' && (
+        <NaturalDrillCreator
           onStartDrill={handleStartTypeDrill}
           onCancel={() => setSelectedMode(null)}
         />

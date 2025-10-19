@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Brain, Clock, Filter } from 'lucide-react';
+import { Brain, Clock, Filter, Sparkles } from 'lucide-react';
 import type { DrillMode } from '@/types/drill';
 import { templateService, type DrillTemplate } from '@/lib/templateService';
 import { TemplateCard } from './TemplateCard';
@@ -93,7 +93,7 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
       )}
 
       {/* Mode Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <Card className="p-6 flex flex-col min-h-[280px]">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-4">
@@ -121,6 +121,21 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
         </div>
         <Button onClick={() => onSelectMode('full-section')} size="lg" className="w-full mt-6">
           Start section
+        </Button>
+      </Card>
+
+      <Card className="p-6 flex flex-col min-h-[280px] bg-gradient-to-br from-purple-500/10 to-blue-500/10 border-purple-500/30">
+        <div className="flex-1">
+          <div className="flex items-center gap-3 mb-4">
+            <Sparkles className="w-8 h-8 text-purple-400" />
+            <h3 className="text-xl font-semibold">AI Drill Creator</h3>
+          </div>
+          <p className="text-muted-foreground">
+            Describe what you want to practice in plain English
+          </p>
+        </div>
+        <Button onClick={() => onSelectMode('natural-drill')} size="lg" className="w-full mt-6 bg-purple-600 hover:bg-purple-700">
+          Create with AI
         </Button>
       </Card>
 

@@ -1,6 +1,6 @@
 // Drill mode types and interfaces
 
-export type DrillMode = 'adaptive' | 'full-section' | 'type-drill';
+export type DrillMode = 'adaptive' | 'full-section' | 'type-drill' | 'natural-drill';
 
 export type { Highlight } from '@/lib/highlightUtils';
 
