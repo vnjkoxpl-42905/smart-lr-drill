@@ -492,7 +492,7 @@ function DrillContent() {
       isLast?: boolean;
     } = {}
   ) => {
-    const { isSelected = false, showRadio = true, inFocusedMode = false, isLast = false } = options;
+    const { isSelected = false, showRadio = true, inFocusedMode = false } = options;
     const isCorrect = key === currentQuestion.correctAnswer;
     const showFeedback = answerLocked && isSelected && confidence !== null;
 
@@ -500,15 +500,13 @@ function DrillContent() {
       <div
         key={key}
         className={cn(
-          "group relative flex items-start gap-3 py-4 px-0 min-h-[60px]",
-          "border-b border-[#E5E7EB]",
+          "group relative flex items-start gap-4 py-3 px-0",
           "transition-colors duration-150",
-          isLast && "border-b-0",
           !answerLocked && "hover:bg-gray-50/50 cursor-pointer",
           "focus-within:outline focus-within:outline-2 focus-within:outline-gray-900 focus-within:outline-offset-2",
-          showFeedback && isCorrect && "bg-green-50 border-green-200",
-          showFeedback && !isCorrect && "bg-red-50 border-red-200",
-          isSelected && tutorChatOpen && "bg-cyan-50/50 border-cyan-200",
+          showFeedback && isCorrect && "bg-green-50",
+          showFeedback && !isCorrect && "bg-red-50",
+          isSelected && tutorChatOpen && "bg-cyan-50/50",
         )}
       >
         <div className="flex items-center h-6 mt-0.5">
@@ -717,11 +715,10 @@ function DrillContent() {
                 disabled={answerLocked}
                 className="space-y-0"
               >
-                {Object.entries(currentQuestion.answerChoices).map(([key, text], index, arr) => 
+                {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
                   renderAnswerChoice(key, text, { 
                     isSelected: key === selectedAnswer,
-                    showRadio: true,
-                    isLast: index === arr.length - 1
+                    showRadio: true
                   })
                 )}
               </RadioGroup>
@@ -729,7 +726,7 @@ function DrillContent() {
 
             {/* Confidence selector */}
             {answerLocked && !tutorChatOpen && (
-              <div className="space-y-3 pt-6 border-t border-[#E5E7EB]">
+              <div className="space-y-3 pt-8">
                 <Label className="text-sm font-medium">Confidence (1–5)</Label>
                 <div className="flex gap-2">
                   {[1, 2, 3, 4, 5].map((level) => (
