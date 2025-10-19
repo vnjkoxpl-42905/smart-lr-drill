@@ -229,6 +229,9 @@ serve(async (req) => {
       .map(([key, text]) => `(${key}) ${text}`)
       .join('\n');
 
+    const chosenAnswerText = question.answerChoices?.[question.userAnswer] || '';
+    const chosenAnswerShort = clamp(chosenAnswerText, 80);
+
     const breakdownText = question.breakdown
       ? `**Breakdown:**
 - Conclusion: ${question.breakdown.conclusion}
@@ -297,14 +300,18 @@ ${knowledge.concepts.map((c: any) => `- ${c.concept_name}: ${c.explanation}
 
 
     // Build system prompt based on phase
+    const answersSection = phase === 1
+      ? `- Chosen Answer (${question.userAnswer}) snippet: ${chosenAnswerShort}`
+      : `- All Answer Choices:\n${answerChoicesText}`;
+
     let systemPrompt = `You are Joshua, an elite LSAT coach. Speak at a 12th-grade level. Be concise (1-3 sentences max). Never use em-dashes. Never cite sources.
 
 CONTEXT YOU HAVE ACCESS TO:
 - Question Type: ${question.qtype}
 - Stimulus: ${stimulusShort || 'N/A'}
 - Question Stem: ${stemShort}
-- All Answer Choices:
-${answerChoicesText}
+${answersSection}
+
 - Student's Answer: ${question.userAnswer}
 - Correct Answer: ${question.correctAnswer}
 ${breakdownTextShort}
