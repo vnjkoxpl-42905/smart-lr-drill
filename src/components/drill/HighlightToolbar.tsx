@@ -45,8 +45,10 @@ export function HighlightToolbar({
         onClick={() => onModeChange(mode === 'yellow' ? 'none' : 'yellow')}
         title="Yellow Highlight"
         className={cn(
-          "h-8 w-8 rounded-full bg-yellow-400 hover:bg-yellow-500 transition-all shrink-0",
-          mode === 'yellow' && "ring-2 ring-offset-2 ring-yellow-500 scale-110"
+          "h-8 w-8 rounded-full transition-all shrink-0",
+          mode === 'yellow' 
+            ? "bg-yellow-500 ring-4 ring-yellow-500/30 scale-110 shadow-lg" 
+            : "bg-yellow-400 hover:bg-yellow-500 opacity-60 hover:opacity-100"
         )}
         aria-label="Yellow highlight"
       />
@@ -55,8 +57,10 @@ export function HighlightToolbar({
         onClick={() => onModeChange(mode === 'pink' ? 'none' : 'pink')}
         title="Pink Highlight"
         className={cn(
-          "h-8 w-8 rounded-full bg-pink-400 hover:bg-pink-500 transition-all shrink-0",
-          mode === 'pink' && "ring-2 ring-offset-2 ring-pink-500 scale-110"
+          "h-8 w-8 rounded-full transition-all shrink-0",
+          mode === 'pink' 
+            ? "bg-pink-500 ring-4 ring-pink-500/30 scale-110 shadow-lg" 
+            : "bg-pink-400 hover:bg-pink-500 opacity-60 hover:opacity-100"
         )}
         aria-label="Pink highlight"
       />
@@ -65,8 +69,10 @@ export function HighlightToolbar({
         onClick={() => onModeChange(mode === 'orange' ? 'none' : 'orange')}
         title="Orange Highlight"
         className={cn(
-          "h-8 w-8 rounded-full bg-orange-400 hover:bg-orange-500 transition-all shrink-0",
-          mode === 'orange' && "ring-2 ring-offset-2 ring-orange-500 scale-110"
+          "h-8 w-8 rounded-full transition-all shrink-0",
+          mode === 'orange' 
+            ? "bg-orange-500 ring-4 ring-orange-500/30 scale-110 shadow-lg" 
+            : "bg-orange-400 hover:bg-orange-500 opacity-60 hover:opacity-100"
         )}
         aria-label="Orange highlight"
       />
@@ -80,11 +86,13 @@ export function HighlightToolbar({
         onClick={() => onModeChange(mode === 'underline' ? 'none' : 'underline')}
         className={cn(
           "h-8 w-8 shrink-0 transition-all",
-          mode === 'underline' && "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
+          mode === 'underline' 
+            ? "bg-blue-600 hover:bg-blue-700 ring-4 ring-blue-500/30 shadow-lg scale-105" 
+            : "opacity-60 hover:opacity-100"
         )}
         title="Underline"
       >
-        <Underline className="w-4 h-4" />
+        <Underline className={cn("w-4 h-4", mode === 'underline' && "text-white")} />
       </Button>
 
       <Button
@@ -93,11 +101,13 @@ export function HighlightToolbar({
         onClick={() => onModeChange(mode === 'erase' ? 'none' : 'erase')}
         className={cn(
           "h-8 w-8 shrink-0 transition-all",
-          mode === 'erase' && "bg-gradient-to-r from-red-500 to-rose-500 hover:from-red-600 hover:to-rose-600"
+          mode === 'erase' 
+            ? "bg-red-600 hover:bg-red-700 ring-4 ring-red-500/30 shadow-lg scale-105" 
+            : "opacity-60 hover:opacity-100"
         )}
         title="Erase Highlights"
       >
-        <Eraser className="w-4 h-4" />
+        <Eraser className={cn("w-4 h-4", mode === 'erase' && "text-white")} />
       </Button>
 
       {/* Flag Button */}
@@ -110,11 +120,13 @@ export function HighlightToolbar({
             onClick={onToggleFlag}
             className={cn(
               "h-8 w-8 shrink-0 transition-all",
-              isFlagged && "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
+              isFlagged 
+                ? "bg-black hover:bg-gray-800 ring-4 ring-black/20 shadow-lg scale-105" 
+                : "opacity-60 hover:opacity-100"
             )}
             title={isFlagged ? "Unflag Question" : "Flag for Review"}
           >
-            <Flag className="w-4 h-4" />
+            <Flag className={cn("w-4 h-4", isFlagged ? "text-white fill-white" : "")} />
           </Button>
         </>
       )}
