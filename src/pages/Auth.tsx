@@ -21,10 +21,13 @@ export default function Auth() {
   const [forgotPasswordOpen, setForgotPasswordOpen] = React.useState(false);
   const [resetEmail, setResetEmail] = React.useState('');
   const [isRecovery, setIsRecovery] = React.useState(false);
+  const [recoveryEmail, setRecoveryEmail] = React.useState('');
+  const [isInvalidToken, setIsInvalidToken] = React.useState(false);
   const [newPassword, setNewPassword] = React.useState('');
   const [confirmPassword, setConfirmPassword] = React.useState('');
   const [showNewPassword, setShowNewPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
+  const [passwordError, setPasswordError] = React.useState('');
 
   // Redirect if already logged in
   React.useEffect(() => {
@@ -35,18 +38,35 @@ export default function Auth() {
 
   // Detect recovery mode from URL or auth event
   React.useEffect(() => {
-    try {
-      const url = new URL(window.location.href);
-      const hashParams = new URLSearchParams(window.location.hash.replace('#', ''));
-      const type = url.searchParams.get('type') || hashParams.get('type');
-      if (type === 'recovery') {
-        setIsRecovery(true);
+    const checkRecoveryMode = async () => {
+      try {
+        const url = new URL(window.location.href);
+        const hashParams = new URLSearchParams(window.location.hash.replace('#', ''));
+        const type = url.searchParams.get('type') || hashParams.get('type');
+        
+        if (type === 'recovery') {
+          // Verify the recovery token is valid
+          const { data: { session }, error } = await supabase.auth.getSession();
+          
+          if (error || !session) {
+            setIsInvalidToken(true);
+            setIsRecovery(true);
+          } else {
+            setIsRecovery(true);
+            setRecoveryEmail(session.user.email || '');
+          }
+        }
+      } catch (err) {
+        console.error('Recovery check error:', err);
       }
-    } catch {}
+    };
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+    checkRecoveryMode();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (event === 'PASSWORD_RECOVERY') {
         setIsRecovery(true);
+        setRecoveryEmail(session?.user?.email || '');
       }
     });
     return () => subscription.unsubscribe();
@@ -122,96 +142,226 @@ export default function Auth() {
 
   const handlePasswordResetSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setPasswordError('');
     setLoading(true);
 
+    // Validation
     if (newPassword.length < 8) {
-      toast({ title: 'Weak password', description: 'Use at least 8 characters.', variant: 'destructive' });
+      setPasswordError('Password must be at least 8 characters');
       setLoading(false);
       return;
     }
     if (newPassword !== confirmPassword) {
-      toast({ title: 'Passwords do not match', description: 'Please confirm your password.', variant: 'destructive' });
+      setPasswordError('Passwords do not match');
       setLoading(false);
       return;
     }
 
+    // Update password
     const { error } = await updatePassword(newPassword);
+    
     if (error) {
-      toast({ title: 'Update failed', description: error.message, variant: 'destructive' });
+      // Handle specific error cases
+      if (error.message?.includes('expired') || error.message?.includes('invalid')) {
+        setIsInvalidToken(true);
+        toast({ 
+          title: 'Link expired', 
+          description: 'Please request a new password reset link.', 
+          variant: 'destructive' 
+        });
+      } else {
+        toast({ title: 'Update failed', description: error.message, variant: 'destructive' });
+      }
       setLoading(false);
       return;
     }
 
-    toast({ title: 'Password updated', description: 'You can now continue.' });
-    // Optional: clean URL and redirect
+    // Password updated successfully - user is now authenticated
+    toast({ 
+      title: 'Password updated successfully', 
+      description: 'Redirecting to dashboard...' 
+    });
+    
+    // Clean URL and redirect to dashboard
     try {
       window.history.replaceState(null, '', '/');
     } catch {}
-    navigate('/');
+    
+    setTimeout(() => {
+      navigate('/');
+    }, 500);
+  };
+
+  const handleResendResetLink = async () => {
+    if (!recoveryEmail && !resetEmail) {
+      toast({ 
+        title: 'Email required', 
+        description: 'Please enter your email address.', 
+        variant: 'destructive' 
+      });
+      return;
+    }
+    
+    setLoading(true);
+    const email = recoveryEmail || resetEmail;
+    const { error } = await resetPassword(email);
+    
+    if (!error) {
+      setIsInvalidToken(false);
+      setIsRecovery(false);
+      toast({ 
+        title: 'Reset link sent', 
+        description: 'Check your email for the new password reset link.' 
+      });
+    }
+    setLoading(false);
+  };
+
+  const handleBackToLogin = () => {
+    setIsRecovery(false);
+    setIsInvalidToken(false);
+    setNewPassword('');
+    setConfirmPassword('');
+    setPasswordError('');
+    try {
+      window.history.replaceState(null, '', '/auth');
+    } catch {}
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl font-bold">LSAT Smart Drill</CardTitle>
-          <CardDescription>Sign in to track your progress</CardDescription>
+          <CardTitle className="text-3xl font-bold">
+            {isRecovery ? (isInvalidToken ? 'Link Expired' : 'Create New Password') : 'LSAT Smart Drill'}
+          </CardTitle>
+          <CardDescription>
+            {isRecovery 
+              ? (isInvalidToken 
+                  ? 'Request a new password reset link' 
+                  : 'Enter your new password to continue')
+              : 'Sign in to track your progress'}
+          </CardDescription>
         </CardHeader>
         <CardContent>
           {isRecovery ? (
-            <form onSubmit={handlePasswordResetSubmit} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="new-password">New Password</Label>
-                <div className="relative">
+            isInvalidToken ? (
+              <div className="space-y-4">
+                <div className="rounded-lg border border-destructive/50 bg-destructive/10 p-4">
+                  <p className="text-sm text-destructive font-medium">
+                    This password reset link is invalid or has already been used.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="resend-email">Email</Label>
                   <Input
-                    id="new-password"
-                    name="new-password"
-                    type={showNewPassword ? 'text' : 'password'}
-                    placeholder="••••••••"
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
+                    id="resend-email"
+                    type="email"
+                    placeholder="you@example.com"
+                    value={recoveryEmail || resetEmail}
+                    onChange={(e) => setResetEmail(e.target.value)}
                     required
-                    minLength={8}
-                    className="pr-10"
                   />
-                  <button
-                    type="button"
-                    onClick={() => setShowNewPassword(!showNewPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
-                    aria-label={showNewPassword ? 'Hide password' : 'Show password'}
+                </div>
+                <div className="space-y-2">
+                  <Button 
+                    onClick={handleResendResetLink} 
+                    className="w-full"
+                    disabled={loading}
                   >
-                    {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                  </button>
+                    {loading ? 'Sending...' : 'Resend Reset Link'}
+                  </Button>
+                  <Button 
+                    onClick={handleBackToLogin} 
+                    variant="outline"
+                    className="w-full"
+                    type="button"
+                  >
+                    Back to Login
+                  </Button>
                 </div>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="confirm-password">Confirm Password</Label>
-                <div className="relative">
-                  <Input
-                    id="confirm-password"
-                    name="confirm-password"
-                    type={showConfirmPassword ? 'text' : 'password'}
-                    placeholder="••••••••"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    required
-                    minLength={8}
-                    className="pr-10"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
-                    aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
-                  >
-                    {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                  </button>
+            ) : (
+              <form onSubmit={handlePasswordResetSubmit} className="space-y-4">
+                {recoveryEmail && (
+                  <div className="rounded-lg bg-muted p-3">
+                    <p className="text-sm text-muted-foreground">
+                      Resetting password for: <span className="font-medium text-foreground">{recoveryEmail}</span>
+                    </p>
+                  </div>
+                )}
+                <div className="space-y-2">
+                  <Label htmlFor="new-password">New Password</Label>
+                  <div className="relative">
+                    <Input
+                      id="new-password"
+                      name="new-password"
+                      type={showNewPassword ? 'text' : 'password'}
+                      placeholder="••••••••"
+                      value={newPassword}
+                      onChange={(e) => {
+                        setNewPassword(e.target.value);
+                        setPasswordError('');
+                      }}
+                      required
+                      minLength={8}
+                      className="pr-10"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowNewPassword(!showNewPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label={showNewPassword ? 'Hide password' : 'Show password'}
+                    >
+                      {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? 'Updating...' : 'Update Password'}
-              </Button>
-            </form>
+                <div className="space-y-2">
+                  <Label htmlFor="confirm-password">Confirm Password</Label>
+                  <div className="relative">
+                    <Input
+                      id="confirm-password"
+                      name="confirm-password"
+                      type={showConfirmPassword ? 'text' : 'password'}
+                      placeholder="••••••••"
+                      value={confirmPassword}
+                      onChange={(e) => {
+                        setConfirmPassword(e.target.value);
+                        setPasswordError('');
+                      }}
+                      required
+                      minLength={8}
+                      className="pr-10"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
+                    >
+                      {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </button>
+                  </div>
+                </div>
+                {passwordError && (
+                  <p className="text-sm text-destructive">{passwordError}</p>
+                )}
+                <div className="space-y-2">
+                  <Button type="submit" className="w-full" disabled={loading}>
+                    {loading ? 'Updating...' : 'Save New Password'}
+                  </Button>
+                  <Button 
+                    onClick={handleBackToLogin} 
+                    variant="outline"
+                    className="w-full"
+                    type="button"
+                  >
+                    Back to Login
+                  </Button>
+                </div>
+              </form>
+            )
           ) : (
             <Tabs defaultValue="signin" className="w-full">
               <TabsList className="grid w-full grid-cols-2">
