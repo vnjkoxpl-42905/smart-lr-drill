@@ -755,34 +755,26 @@ function DrillContent() {
       <div className="flex-1 flex overflow-hidden">
         {/* Left Panel - Question and Stimulus */}
         <div className="flex-1 overflow-y-auto relative">
-          <div className="p-6 space-y-6">
+          <div className="p-6 space-y-6 pb-20">
             {/* Stimulus */}
             {currentQuestion.stimulus && (() => {
               const fullText = normalizeText(currentQuestion.stimulus);
               const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
               
               return (
-                <div className="relative">
-                  <div 
-                    className={cn(
-                      "pl-4 py-2 stimulus",
-                      (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
-                    )}
-                    onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
-                  >
-                    <HighlightedText
-                      text={fullText}
-                      highlights={stimulusHighlights}
-                      onHighlightClick={handleHighlightClick}
-                      eraserMode={highlightMode === 'erase'}
-                    />
-                  </div>
-                  
-                  {/* Question metadata - bottom left corner */}
-                  <div className="absolute bottom-2 left-4 text-xs text-muted-foreground/40 italic font-light select-none pointer-events-none">
-                    PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
-                    {isFlagged && <Flag className="w-3 h-3 ml-1.5 inline-block fill-blue-500/40 text-blue-500/40" />}
-                  </div>
+                <div 
+                  className={cn(
+                    "pl-4 py-2 stimulus",
+                    (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
+                  )}
+                  onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
+                >
+                  <HighlightedText
+                    text={fullText}
+                    highlights={stimulusHighlights}
+                    onHighlightClick={handleHighlightClick}
+                    eraserMode={highlightMode === 'erase'}
+                  />
                 </div>
               );
             })()}
@@ -822,6 +814,12 @@ function DrillContent() {
               onMessagesUpdate={setTutorMessages}
             />
 
+          </div>
+          
+          {/* Question metadata - fixed at bottom left */}
+          <div className="absolute bottom-6 left-6 text-sm text-muted-foreground/50 italic font-medium select-none pointer-events-none">
+            PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
+            {isFlagged && <Flag className="w-3.5 h-3.5 ml-2 inline-block fill-blue-500/50 text-blue-500/50" />}
           </div>
         </div>
 
