@@ -11,6 +11,8 @@ import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
 import { ReviewModal } from '@/components/drill/ReviewModal';
+import { VoiceCoachChip } from '@/components/drill/VoiceCoachChip';
+import { VoiceCoachModal } from '@/components/drill/VoiceCoachModal';
 import { HighlightToolbar } from '@/components/drill/HighlightToolbar';
 import { HighlightedText } from '@/components/drill/HighlightedText';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
@@ -47,6 +49,8 @@ function DrillContent() {
   const [showSolution, setShowSolution] = React.useState(false);
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
   const [wajModalOpen, setWajModalOpen] = React.useState(false);
+  const [voiceCoachOpen, setVoiceCoachOpen] = React.useState(false);
+  const [showVoiceChip, setShowVoiceChip] = React.useState(false);
   const [questionStartTime, setQuestionStartTime] = React.useState(performance.now());
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
@@ -176,6 +180,8 @@ function DrillContent() {
     setConfidence(null);
     setShowSolution(false);
     setTutorChatOpen(false);
+    setVoiceCoachOpen(false);
+    setShowVoiceChip(false);
     setAnswerLocked(false);
     setEliminatedAnswers(new Set());
     setQuestionStartTime(performance.now());
@@ -222,6 +228,8 @@ function DrillContent() {
 
   const handleTryAgain = () => {
     setTutorChatOpen(false);
+    setVoiceCoachOpen(false);
+    setShowVoiceChip(false);
     setSelectedAnswer('');
     setConfidence(null);
     setAnswerLocked(false);
@@ -347,11 +355,14 @@ function DrillContent() {
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // Only show tutor if enabled in settings
-    if (!correct && settings.tutorEnabled) {
+    // After wrong answer, show voice coach option first if enabled
+    if (!correct && settings.voiceCoachEnabled) {
+      setShowVoiceChip(true);
+    } else if (!correct && settings.tutorEnabled) {
+      // Fall back to text tutor if voice coach disabled
       setTutorChatOpen(true);
     } else if (!correct) {
-      // Skip tutor, go straight to WAJ review
+      // Skip both, go straight to WAJ review
       setWajModalOpen(true);
     } else {
       // Save correct attempt to database
@@ -683,6 +694,18 @@ function DrillContent() {
               );
             })()}
 
+            {/* Voice Coach Chip - appears after wrong answer */}
+            {showVoiceChip && (
+              <div className="pl-4 mt-4 flex justify-center">
+                <VoiceCoachChip
+                  onActivate={() => {
+                    setShowVoiceChip(false);
+                    setVoiceCoachOpen(true);
+                  }}
+                />
+              </div>
+            )}
+
             {/* Joshua Tutor - appears under stimulus when active */}
             {tutorChatOpen && settings.tutorEnabled && (
               <div className="pl-4 mt-4">
@@ -833,6 +856,30 @@ function DrillContent() {
       <ReviewModal
         open={wajModalOpen}
         onSave={handleWAJSave}
+      />
+
+      <VoiceCoachModal
+        open={voiceCoachOpen}
+        question={currentQuestion}
+        selectedAnswer={selectedAnswer}
+        onTryAgain={handleTryAgain}
+        onMicroDrill={(questions) => {
+          // Navigate to micro-drill with the 2 generated questions
+          navigate('/drill', {
+            state: {
+              mode: 'type-drill',
+              config: {
+                qtypes: [currentQuestion.qtype],
+                difficulties: [currentQuestion.difficulty],
+                pts: questions.map(q => q.pt),
+                count: 2
+              }
+            }
+          });
+        }}
+        onSaveToJournal={handleContinueToReview}
+        onClose={() => setVoiceCoachOpen(false)}
+        showContrast={settings.showContrast}
       />
     </div>
   );

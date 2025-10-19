@@ -70,6 +70,7 @@ export type Database = {
           set_id: string | null
           time_ms: number
           timestamp_iso: string | null
+          voice_used: boolean | null
         }
         Insert: {
           app_version?: string | null
@@ -87,6 +88,7 @@ export type Database = {
           set_id?: string | null
           time_ms: number
           timestamp_iso?: string | null
+          voice_used?: boolean | null
         }
         Update: {
           app_version?: string | null
@@ -104,6 +106,7 @@ export type Database = {
           set_id?: string | null
           time_ms?: number
           timestamp_iso?: string | null
+          voice_used?: boolean | null
         }
         Relationships: []
       }
@@ -623,6 +626,87 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      user_voice_settings: {
+        Row: {
+          class_id: string
+          created_at: string | null
+          section_debrief_enabled: boolean | null
+          show_contrast: boolean | null
+          store_full_transcript: boolean | null
+          teach_back_on_correct: boolean | null
+          updated_at: string | null
+          voice_coach_enabled: boolean | null
+        }
+        Insert: {
+          class_id: string
+          created_at?: string | null
+          section_debrief_enabled?: boolean | null
+          show_contrast?: boolean | null
+          store_full_transcript?: boolean | null
+          teach_back_on_correct?: boolean | null
+          updated_at?: string | null
+          voice_coach_enabled?: boolean | null
+        }
+        Update: {
+          class_id?: string
+          created_at?: string | null
+          section_debrief_enabled?: boolean | null
+          show_contrast?: boolean | null
+          store_full_transcript?: boolean | null
+          teach_back_on_correct?: boolean | null
+          updated_at?: string | null
+          voice_coach_enabled?: boolean | null
+        }
+        Relationships: []
+      }
+      voice_coaching_sessions: {
+        Row: {
+          action_taken: string | null
+          attempt_id: string | null
+          class_id: string
+          coach_reply_id: string
+          coach_reply_text: string
+          contrast_shown: boolean | null
+          created_at: string | null
+          id: string
+          qid: string
+          spoken_words: string | null
+          teach_back_given: boolean | null
+          transcript_full: string | null
+          voice_duration_ms: number
+        }
+        Insert: {
+          action_taken?: string | null
+          attempt_id?: string | null
+          class_id: string
+          coach_reply_id: string
+          coach_reply_text: string
+          contrast_shown?: boolean | null
+          created_at?: string | null
+          id?: string
+          qid: string
+          spoken_words?: string | null
+          teach_back_given?: boolean | null
+          transcript_full?: string | null
+          voice_duration_ms: number
+        }
+        Update: {
+          action_taken?: string | null
+          attempt_id?: string | null
+          class_id?: string
+          coach_reply_id?: string
+          coach_reply_text?: string
+          contrast_shown?: boolean | null
+          created_at?: string | null
+          id?: string
+          qid?: string
+          spoken_words?: string | null
+          teach_back_given?: boolean | null
+          transcript_full?: string | null
+          voice_duration_ms?: number
+        }
+        Relationships: []
       }
       wrong_answer_journal: {
         Row: {

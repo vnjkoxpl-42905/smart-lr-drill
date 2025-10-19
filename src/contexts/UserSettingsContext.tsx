@@ -2,6 +2,11 @@ import * as React from 'react';
 
 interface UserSettings {
   tutorEnabled: boolean;
+  voiceCoachEnabled: boolean;
+  showContrast: boolean;
+  teachBackOnCorrect: boolean;
+  sectionDebriefEnabled: boolean;
+  storeFullTranscript: boolean;
 }
 
 interface UserSettingsContextType {
@@ -19,10 +24,24 @@ export function UserSettingsProvider({ children }: { children: React.ReactNode }
       try {
         return JSON.parse(stored);
       } catch {
-        return { tutorEnabled: true };
+        return { 
+          tutorEnabled: true,
+          voiceCoachEnabled: true,
+          showContrast: false,
+          teachBackOnCorrect: false,
+          sectionDebriefEnabled: false,
+          storeFullTranscript: false
+        };
       }
     }
-    return { tutorEnabled: true };
+    return { 
+      tutorEnabled: true,
+      voiceCoachEnabled: true,
+      showContrast: false,
+      teachBackOnCorrect: false,
+      sectionDebriefEnabled: false,
+      storeFullTranscript: false
+    };
   });
 
   const updateSettings = React.useCallback((updates: Partial<UserSettings>) => {

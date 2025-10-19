@@ -163,15 +163,63 @@ export default function Profile() {
                   <MessageSquare className="h-4 w-4" />
                   Settings
                 </div>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <div className="font-medium">AI Tutor "Joshua"</div>
-                    <div className="text-sm text-muted-foreground">Enable real-time tutoring assistance</div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-medium">AI Tutor "Joshua"</div>
+                      <div className="text-sm text-muted-foreground">Enable real-time tutoring assistance</div>
+                    </div>
+                    <Switch 
+                      checked={settings.tutorEnabled} 
+                      onCheckedChange={(checked) => updateSettings({ tutorEnabled: checked })}
+                    />
                   </div>
-                  <Switch 
-                    checked={settings.tutorEnabled} 
-                    onCheckedChange={(checked) => updateSettings({ tutorEnabled: checked })}
-                  />
+
+                  <div className="pt-3 border-t border-border/50">
+                    <div className="flex justify-between items-center mb-3">
+                      <div>
+                        <div className="font-medium">Voice Coach</div>
+                        <div className="text-sm text-muted-foreground">Speak your reasoning, get targeted feedback</div>
+                      </div>
+                      <Switch 
+                        checked={settings.voiceCoachEnabled} 
+                        onCheckedChange={(checked) => updateSettings({ voiceCoachEnabled: checked })}
+                      />
+                    </div>
+
+                    {settings.voiceCoachEnabled && (
+                      <div className="ml-4 space-y-3 mt-3 pt-3 border-t border-border/30">
+                        <div className="flex justify-between items-center">
+                          <div className="text-sm text-muted-foreground">Show answer contrast</div>
+                          <Switch 
+                            checked={settings.showContrast} 
+                            onCheckedChange={(checked) => updateSettings({ showContrast: checked })}
+                          />
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <div className="text-sm text-muted-foreground">Teach-back on correct</div>
+                          <Switch 
+                            checked={settings.teachBackOnCorrect} 
+                            onCheckedChange={(checked) => updateSettings({ teachBackOnCorrect: checked })}
+                          />
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <div className="text-sm text-muted-foreground">Section debrief</div>
+                          <Switch 
+                            checked={settings.sectionDebriefEnabled} 
+                            onCheckedChange={(checked) => updateSettings({ sectionDebriefEnabled: checked })}
+                          />
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <div className="text-sm text-muted-foreground">Store full transcripts</div>
+                          <Switch 
+                            checked={settings.storeFullTranscript} 
+                            onCheckedChange={(checked) => updateSettings({ storeFullTranscript: checked })}
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 
