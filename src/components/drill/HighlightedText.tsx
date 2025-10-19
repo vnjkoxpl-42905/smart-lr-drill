@@ -94,7 +94,7 @@ export function HighlightedText({
                   key={`highlight-${highlight.id}`}
                   className={cn(
                     "bg-yellow-300/60 transition-colors",
-                    eraserMode && "cursor-pointer hover:bg-red-300/60 hover:line-through"
+                    eraserMode && "cursor-pointer hover:bg-red-400/70"
                   )}
                   style={{
                     padding: 0,
@@ -205,7 +205,7 @@ export function HighlightedText({
               key={`highlight-${highlight.id}`}
               className={cn(
                 "bg-yellow-300/60 transition-colors",
-                eraserMode && "cursor-pointer hover:bg-red-300/60 hover:line-through"
+                eraserMode && "cursor-pointer hover:bg-red-400/70"
               )}
               style={{
                 padding: 0,
