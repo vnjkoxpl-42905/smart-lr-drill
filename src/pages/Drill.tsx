@@ -58,7 +58,7 @@ function DrillContent() {
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
   const [eliminatedAnswers, setEliminatedAnswers] = React.useState<Set<string>>(new Set());
-  const [highlightMode, setHighlightMode] = React.useState<'none' | 'yellow' | 'orange' | 'green' | 'underline' | 'erase'>('none');
+  const [highlightMode, setHighlightMode] = React.useState<'none' | 'yellow' | 'pink' | 'orange' | 'underline' | 'erase'>('none');
   const [highlights, setHighlights] = React.useState<Map<string, Highlight[]>>(new Map());
   const [highlightHistory, setHighlightHistory] = React.useState<Map<string, Highlight[]>[]>([]);
   const [isFlagged, setIsFlagged] = React.useState(false);

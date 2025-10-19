@@ -92,8 +92,8 @@ export function HighlightedText({
               const getHighlightClass = (color: string) => {
                 switch(color) {
                   case 'yellow': return 'bg-yellow-300/60';
+                  case 'pink': return 'bg-pink-300/60';
                   case 'orange': return 'bg-orange-300/60';
-                  case 'green': return 'bg-green-300/60';
                   case 'underline': return 'underline decoration-blue-500 decoration-2';
                   default: return 'bg-yellow-300/60';
                 }
@@ -215,8 +215,8 @@ export function HighlightedText({
           const getHighlightClass = (color: string) => {
             switch(color) {
               case 'yellow': return 'bg-yellow-300/60';
+              case 'pink': return 'bg-pink-300/60';
               case 'orange': return 'bg-orange-300/60';
-              case 'green': return 'bg-green-300/60';
               case 'underline': return 'underline decoration-blue-500 decoration-2';
               default: return 'bg-yellow-300/60';
             }

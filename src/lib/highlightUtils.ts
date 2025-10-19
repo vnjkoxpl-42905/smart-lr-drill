@@ -1,4 +1,4 @@
-export type HighlightColor = 'yellow' | 'orange' | 'green' | 'underline';
+export type HighlightColor = 'yellow' | 'pink' | 'orange' | 'underline';
 
 export interface Highlight {
   id: string;
