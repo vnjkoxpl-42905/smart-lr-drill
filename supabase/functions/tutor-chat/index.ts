@@ -177,15 +177,9 @@ serve(async (req) => {
       phase = 3; // Conversational follow-up
     }
 
-    // Gate phases >= 2 behind auth + prior attempt
-    if (phase >= 2) {
-      if (!user || !supabaseClient) {
-        return new Response(
-          JSON.stringify({ error: 'Please sign in to continue coaching.' }),
-          { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-
+    // Gate phases >= 2 behind auth + prior attempt (only if user is authenticated)
+    // If the user is not signed in, allow coaching to proceed so Talk Mode works in demo mode.
+    if (phase >= 2 && user && supabaseClient) {
       const { data: attempt } = await supabaseClient
         .from('attempts')
         .select('id')

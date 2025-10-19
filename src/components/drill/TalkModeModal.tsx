@@ -347,9 +347,10 @@ export function TalkModeModal({
       onMessagesUpdate(finalMessages);
       
       speakResponse(data.content);
-    } catch (error) {
-      console.error('Failed to process voice message:', error);
-      toast.error('Failed to process your message. Please try again.');
+    } catch (e: any) {
+      console.error('Failed to process voice message:', e);
+      const msg = e?.message || e?.error || 'Failed to process your message. Please try again.';
+      toast.error(msg);
     } finally {
       setIsProcessing(false);
     }
