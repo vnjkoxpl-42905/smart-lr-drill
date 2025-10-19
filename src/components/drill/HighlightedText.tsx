@@ -114,7 +114,7 @@ export function HighlightedText({
               aria-label={`${turnRange.turn.speaker} ${turnLabel}`}
               className="mb-6"
             >
-              <div className="font-semibold text-base mb-2 text-gray-900">
+              <div className="font-bold text-base mb-2 text-gray-900">
                 {turnRange.turn.speaker}:
               </div>
               <div 
