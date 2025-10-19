@@ -48,6 +48,7 @@ function DrillContent() {
   const [questionStartTime, setQuestionStartTime] = React.useState(performance.now());
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
+  const [eliminatedAnswers, setEliminatedAnswers] = React.useState<Set<string>>(new Set());
   const [highlightMode, setHighlightMode] = React.useState<'none' | 'highlight' | 'erase'>('none');
   const [highlights, setHighlights] = React.useState<Map<string, Highlight[]>>(new Map());
   
@@ -174,6 +175,7 @@ function DrillContent() {
     setShowSolution(false);
     setTutorChatOpen(false);
     setAnswerLocked(false);
+    setEliminatedAnswers(new Set());
     setQuestionStartTime(performance.now());
   }, [session]);
 
@@ -187,6 +189,18 @@ function DrillContent() {
     } else {
       setSelectedAnswer(answer);
     }
+  };
+
+  const handleEliminateAnswer = (key: string) => {
+    setEliminatedAnswers(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(key)) {
+        newSet.delete(key);
+      } else {
+        newSet.add(key);
+      }
+      return newSet;
+    });
   };
 
   // Auto-submit when confidence is selected
@@ -513,6 +527,7 @@ function DrillContent() {
           showFeedback && isCorrect && "bg-green-50",
           showFeedback && !isCorrect && "bg-red-50",
           isSelected && tutorChatOpen && "bg-cyan-50/50",
+          eliminatedAnswers.has(key) && "opacity-50",
         )}
       >
         <div className="flex items-center h-6 mt-0.5">
@@ -526,26 +541,47 @@ function DrillContent() {
             <div className="w-4 h-4" />
           )}
         </div>
-        <Label
-          htmlFor={`answer-${key}`}
-          className={cn(
-            "flex-1 cursor-pointer",
-            "text-[16px] leading-[1.6]",
-            "font-normal text-foreground",
-            "select-none"
-          )}
-        >
-          <span className="font-semibold mr-2">({key})</span>
-          {text}
-          {showFeedback && (
-            <Badge
-              variant={isCorrect ? 'default' : 'destructive'}
-              className="ml-2"
+        <div className="flex items-start gap-2 flex-1">
+          <Label
+            htmlFor={`answer-${key}`}
+            className={cn(
+              "flex-1 cursor-pointer",
+              "text-[16px] leading-[1.6]",
+              "font-normal text-foreground",
+              "select-none",
+              eliminatedAnswers.has(key) && "line-through"
+            )}
+          >
+            <span className="font-semibold mr-2">({key})</span>
+            {text}
+            {showFeedback && (
+              <Badge
+                variant={isCorrect ? 'default' : 'destructive'}
+                className="ml-2"
+              >
+                {isCorrect ? 'Correct' : 'Wrong'}
+              </Badge>
+            )}
+          </Label>
+          {confidence === null && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleEliminateAnswer(key);
+              }}
+              className={cn(
+                "h-6 w-6 p-0 text-gray-400 hover:text-gray-600 shrink-0",
+                "opacity-0 group-hover:opacity-100 transition-opacity",
+                eliminatedAnswers.has(key) && "opacity-100 text-gray-500"
+              )}
             >
-              {isCorrect ? 'Correct' : 'Wrong'}
-            </Badge>
+              ×
+            </Button>
           )}
-        </Label>
+        </div>
       </div>
     );
   };
