@@ -6,9 +6,11 @@ import { ModeSelector } from '@/components/drill/ModeSelector';
 import { SectionSelector } from '@/components/drill/SectionSelector';
 import { TypeDrillPicker } from '@/components/drill/TypeDrillPicker';
 import { NaturalDrillCreator } from '@/components/drill/NaturalDrillCreator';
+import { LoginIntro } from '@/components/LoginIntro';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { User } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import type { DrillMode, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
 
 export default function Landing() {
@@ -16,6 +18,8 @@ export default function Landing() {
   const { user, loading: authLoading } = useAuth();
   const { manifest, isLoading, error } = useQuestionBank();
   const [selectedMode, setSelectedMode] = React.useState<DrillMode | null>(null);
+  const [showIntro, setShowIntro] = React.useState(false);
+  const [introComplete, setIntroComplete] = React.useState(false);
 
   // Redirect to auth if not logged in
   React.useEffect(() => {
@@ -23,6 +27,39 @@ export default function Landing() {
       navigate('/auth');
     }
   }, [user, authLoading, navigate]);
+
+  // Show intro only once per session
+  React.useEffect(() => {
+    if (!authLoading && user) {
+      const introKey = `login_intro_shown_${user.id}`;
+      const hasShownIntro = sessionStorage.getItem(introKey);
+      
+      if (!hasShownIntro) {
+        setShowIntro(true);
+        sessionStorage.setItem(introKey, Date.now().toString());
+      } else {
+        setIntroComplete(true);
+      }
+    }
+  }, [user, authLoading]);
+
+  const handleIntroComplete = () => {
+    setShowIntro(false);
+    setIntroComplete(true);
+  };
+
+  const getFirstName = () => {
+    if (!user) return 'there';
+    
+    const displayName = user.user_metadata?.display_name || 
+                       user.user_metadata?.username || 
+                       user.email?.split('@')[0] || 
+                       'there';
+    
+    // Extract first name and capitalize
+    const firstName = displayName.split(/[\s._-]/)[0].replace(/[^a-zA-Z]/g, '');
+    return firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase() || 'there';
+  };
 
   if (isLoading) {
     return (
@@ -55,7 +92,20 @@ export default function Landing() {
   const userInitials = user?.email?.slice(0, 2).toUpperCase() || 'U';
 
   return (
-    <div className="min-h-screen p-8">
+    <>
+      {showIntro && (
+        <LoginIntro 
+          firstName={getFirstName()} 
+          onComplete={handleIntroComplete} 
+        />
+      )}
+      
+      <div 
+        className={cn(
+          "min-h-screen p-8 transition-opacity duration-300",
+          !introComplete && "opacity-0"
+        )}
+      >
       <div className="text-center mb-12">
         <div className="flex justify-between items-center mb-4">
           <Button 
@@ -123,6 +173,7 @@ export default function Landing() {
           onCancel={() => setSelectedMode(null)}
         />
       )}
-    </div>
+      </div>
+    </>
   );
 }
