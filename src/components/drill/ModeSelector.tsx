@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Brain, Clock, Filter, Sparkles } from 'lucide-react';
+import { Brain, Clock, Filter, Wand2 } from 'lucide-react';
 import type { DrillMode } from '@/types/drill';
 import { templateService, type DrillTemplate } from '@/lib/templateService';
 import { TemplateCard } from './TemplateCard';
@@ -124,18 +124,22 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
         </Button>
       </Card>
 
-      <Card className="p-6 flex flex-col min-h-[280px] bg-gradient-to-br from-purple-500/10 to-blue-500/10 border-purple-500/30">
+      <Card className="p-6 flex flex-col min-h-[280px] bg-gradient-to-br from-slate-50 to-zinc-100 dark:from-slate-900 dark:to-zinc-900 border-slate-300 dark:border-slate-700">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-4">
-            <Sparkles className="w-8 h-8 text-purple-400" />
-            <h3 className="text-xl font-semibold">AI Drill Creator</h3>
+            <Wand2 className="w-8 h-8 text-slate-700 dark:text-slate-300" />
+            <h3 className="text-xl font-semibold">Smart Builder</h3>
           </div>
           <p className="text-muted-foreground">
-            Describe what you want to practice in plain English
+            Describe what you want to practice in plain language
           </p>
         </div>
-        <Button onClick={() => onSelectMode('natural-drill')} size="lg" className="w-full mt-6 bg-purple-600 hover:bg-purple-700">
-          Create with AI
+        <Button 
+          onClick={() => onSelectMode('natural-drill')} 
+          size="lg" 
+          className="w-full mt-6 bg-slate-800 hover:bg-slate-900 dark:bg-slate-200 dark:hover:bg-slate-100 dark:text-slate-900"
+        >
+          Build Drill
         </Button>
       </Card>
 
