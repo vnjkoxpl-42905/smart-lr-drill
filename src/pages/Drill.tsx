@@ -704,9 +704,20 @@ function DrillContent() {
           <div className="px-8 py-6 space-y-6">
             {/* Question Stem - Static Display */}
             <div className="mb-6 max-w-3xl">
-              <h2 className="text-[18px] font-semibold text-foreground leading-[1.5]">
-                {currentQuestion.questionStem}
-              </h2>
+              <div 
+                className={cn(
+                  "text-[18px] font-semibold text-foreground leading-[1.5]",
+                  (highlightMode === 'highlight' || highlightMode === 'underline') ? 'select-text cursor-text' : 'select-none cursor-default'
+                )}
+                onMouseUp={(e) => handleTextSelection(e, 'stem')}
+              >
+                <HighlightedText
+                  text={currentQuestion.questionStem}
+                  highlights={highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stem') || []}
+                  onHighlightClick={handleHighlightClick}
+                  eraserMode={highlightMode === 'erase'}
+                />
+              </div>
             </div>
 
             {/* Answer choices - Adaptive layout based on tutor state */}
