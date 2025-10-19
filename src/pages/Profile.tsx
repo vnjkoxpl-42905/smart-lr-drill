@@ -9,23 +9,19 @@ import { Switch } from '@/components/ui/switch';
 import { ArrowLeft, LogOut, User, MessageSquare } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 
-interface ProfileData {
-  id: string;
-  username: string;
-  display_name?: string;
-  email?: string;
+interface StatsData {
   xp_total?: number;
   streak_current?: number;
   overall_answered?: number;
   overall_correct?: number;
-  created_at?: string;
+  class_id?: string;
 }
 
 export default function Profile() {
   const navigate = useNavigate();
   const { user, signOut } = useAuth();
   const { settings, updateSettings } = useUserSettings();
-  const [profile, setProfile] = React.useState<ProfileData | null>(null);
+  const [stats, setStats] = React.useState<StatsData | null>(null);
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
@@ -41,19 +37,30 @@ export default function Profile() {
     if (!user) return;
 
     try {
-      const { data } = await (supabase as any)
-        .from('profiles')
-        .select('*')
+      // First get class_id from students table
+      const { data: student } = await supabase
+        .from('students')
+        .select('class_id')
         .eq('id', user.id)
         .maybeSingle();
 
-      if (data) {
-        setProfile(data);
+      if (student?.class_id) {
+        // Then get stats from profiles table using class_id
+        const { data: profileStats } = await supabase
+          .from('profiles')
+          .select('xp_total, streak_current, overall_answered, overall_correct, class_id')
+          .eq('class_id', student.class_id)
+          .maybeSingle();
+
+        if (profileStats) {
+          setStats(profileStats);
+        }
       }
     } catch (err) {
       console.error('Error loading profile:', err);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const handleSignOut = async () => {
@@ -61,7 +68,7 @@ export default function Profile() {
     navigate('/auth');
   };
 
-  if (loading || !profile) {
+  if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-muted-foreground">Loading profile...</div>
@@ -69,7 +76,10 @@ export default function Profile() {
     );
   }
 
-  const initials = profile.username?.slice(0, 2).toUpperCase() || 'U';
+  const email = user?.email ?? 'user@example.com';
+  const displayName = email.split('@')[0] || 'User';
+  const initials = displayName.slice(0, 2).toUpperCase() || 'U';
+  const memberSince = user?.created_at || stats?.class_id;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
@@ -90,8 +100,8 @@ export default function Profile() {
                 <AvatarFallback className="text-3xl">{initials}</AvatarFallback>
               </Avatar>
             </div>
-            <CardTitle className="text-2xl">{profile.display_name || profile.username}</CardTitle>
-            <CardDescription>@{profile.username}</CardDescription>
+            <CardTitle className="text-2xl">{displayName}</CardTitle>
+            <CardDescription>{email}</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-4">
@@ -99,17 +109,17 @@ export default function Profile() {
                 <User className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <div className="font-medium">{profile.email}</div>
+                  <div className="font-medium">{email}</div>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 rounded-lg bg-primary/10 text-center">
-                  <div className="text-3xl font-bold text-primary">{profile.xp_total || 0}</div>
+                  <div className="text-3xl font-bold text-primary">{stats?.xp_total || 0}</div>
                   <div className="text-sm text-muted-foreground mt-1">Total XP</div>
                 </div>
                 <div className="p-4 rounded-lg bg-primary/10 text-center">
-                  <div className="text-3xl font-bold text-primary">{profile.streak_current || 0}</div>
+                  <div className="text-3xl font-bold text-primary">{stats?.streak_current || 0}</div>
                   <div className="text-sm text-muted-foreground mt-1">Day Streak</div>
                 </div>
               </div>
@@ -118,13 +128,13 @@ export default function Profile() {
                 <div className="text-sm text-muted-foreground mb-2">Overall Performance</div>
                 <div className="flex justify-between items-center">
                   <span className="font-medium">Questions Answered</span>
-                  <span className="text-lg font-bold">{profile.overall_answered || 0}</span>
+                  <span className="text-lg font-bold">{stats?.overall_answered || 0}</span>
                 </div>
                 <div className="flex justify-between items-center mt-2">
                   <span className="font-medium">Accuracy</span>
                   <span className="text-lg font-bold text-primary">
-                    {profile.overall_answered && profile.overall_answered > 0 
-                      ? Math.round((profile.overall_correct || 0) / profile.overall_answered * 100)
+                    {stats?.overall_answered && stats.overall_answered > 0 
+                      ? Math.round((stats.overall_correct || 0) / stats.overall_answered * 100)
                       : 0}%
                   </span>
                 </div>
@@ -147,9 +157,9 @@ export default function Profile() {
                 </div>
               </div>
 
-              {profile.created_at && (
+              {memberSince && (
                 <div className="text-center text-sm text-muted-foreground">
-                  Member since {new Date(profile.created_at).toLocaleDateString('en-US', {
+                  Member since {new Date(memberSince).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
