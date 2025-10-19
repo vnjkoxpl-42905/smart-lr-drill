@@ -754,50 +754,35 @@ function DrillContent() {
       {/* Main Content - Fixed Two-Column Layout */}
       <div className="flex-1 flex overflow-hidden">
         {/* Left Panel - Question and Stimulus */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto relative">
           <div className="p-6 space-y-6">
-            {/* Question metadata */}
-            <div className="flex items-center gap-3 flex-wrap">
-              <Badge variant="outline" className="flex items-center gap-1">
-                {isFlagged && <Flag className="w-3 h-3 fill-blue-500 text-blue-500" />}
-                PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
-              </Badge>
-              <Badge variant="secondary">{currentQuestion.qtype}</Badge>
-              <Badge>Difficulty {currentQuestion.difficulty}</Badge>
-              {isAnswered && (
-                <Badge variant={previousAttempt?.correct ? 'default' : 'destructive'}>
-                  {previousAttempt?.correct ? (
-                    <>
-                      <CheckCircle className="w-3 h-3 mr-1" /> Correct
-                    </>
-                  ) : (
-                    <>
-                      <XCircle className="w-3 h-3 mr-1" /> Incorrect
-                    </>
-                  )}
-                </Badge>
-              )}
-            </div>
-
             {/* Stimulus */}
             {currentQuestion.stimulus && (() => {
               const fullText = normalizeText(currentQuestion.stimulus);
               const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
               
               return (
-                <div 
-                  className={cn(
-                    "pl-4 py-2 stimulus",
-                    (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
-                  )}
-                  onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
-                >
-                  <HighlightedText
-                    text={fullText}
-                    highlights={stimulusHighlights}
-                    onHighlightClick={handleHighlightClick}
-                    eraserMode={highlightMode === 'erase'}
-                  />
+                <div className="relative">
+                  <div 
+                    className={cn(
+                      "pl-4 py-2 stimulus",
+                      (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
+                    )}
+                    onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
+                  >
+                    <HighlightedText
+                      text={fullText}
+                      highlights={stimulusHighlights}
+                      onHighlightClick={handleHighlightClick}
+                      eraserMode={highlightMode === 'erase'}
+                    />
+                  </div>
+                  
+                  {/* Question metadata - bottom left corner */}
+                  <div className="absolute bottom-2 left-4 text-xs text-muted-foreground/40 italic font-light select-none pointer-events-none">
+                    PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
+                    {isFlagged && <Flag className="w-3 h-3 ml-1.5 inline-block fill-blue-500/40 text-blue-500/40" />}
+                  </div>
                 </div>
               );
             })()}
