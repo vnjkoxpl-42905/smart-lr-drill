@@ -15,12 +15,15 @@ export function HighlightedText({
   onHighlightClick, 
   eraserMode 
 }: HighlightedTextProps) {
-  // Detect multi-speaker dialogue pattern (e.g., "Speaker: text\n\nSpeaker: text")
-  const speakerPattern = /^([A-Z][a-z]+):\s+/;
-  const segments = text.split('\n\n');
+  // Detect multi-speaker dialogue pattern (e.g., "P: text\nQ: text")
+  const speakerPattern = /^([A-Z]):\s+/;
   
-  // Check if this is a dialogue (at least 2 segments starting with speaker names)
-  const dialogueTurns = segments
+  // Split text by speaker turns (e.g., "P: text\nQ: text")
+  const turnSplitPattern = /(?=^[A-Z]:\s)/gm;
+  const rawSegments = text.split(turnSplitPattern).filter(s => s.trim());
+  
+  // Parse each segment to extract speaker and text
+  const dialogueTurns = rawSegments
     .map(seg => {
       const match = seg.match(speakerPattern);
       if (match) {
@@ -33,30 +36,31 @@ export function HighlightedText({
     })
     .filter(Boolean);
   
-  const isDialogue = dialogueTurns.length >= 2 && dialogueTurns.length === segments.length;
+  const isDialogue = dialogueTurns.length >= 2 && 
+                     dialogueTurns.length === rawSegments.length &&
+                     dialogueTurns.every(t => t !== null);
   
   if (isDialogue) {
     // Calculate text offsets for each turn
     let currentOffset = 0;
-    const turnRanges = dialogueTurns.map(turn => {
-      // Find the turn's position in original text including "Speaker: " prefix
+    const turnRanges = dialogueTurns.map((turn, idx) => {
       const speakerPrefix = `${turn!.speaker}: `;
       const turnText = turn!.text;
-      const start = currentOffset + speakerPrefix.length;
+      
+      // Find where this turn starts in original text
+      const turnStart = text.indexOf(speakerPrefix, currentOffset);
+      const start = turnStart + speakerPrefix.length;
       const end = start + turnText.length;
-      currentOffset = text.indexOf('\n\n', currentOffset);
-      if (currentOffset === -1) currentOffset = text.length;
-      else currentOffset += 2; // Skip '\n\n'
+      
+      currentOffset = end;
       
       return { turn: turn!, start, end };
     });
     
-    // Render as dialogue layout
+    // Render as clean vertical stack
     return (
-      <div className="space-y-6 mb-6">
+      <div className="space-y-4">
         {turnRanges.map((turnRange, idx) => {
-          const turnLabel = idx === 0 ? 'says' : 'replies';
-          
           // Find highlights that overlap with this turn
           const turnHighlights = highlights.filter(h => 
             h.start < turnRange.end && h.end > turnRange.start
@@ -79,7 +83,9 @@ export function HighlightedText({
             sorted.forEach((highlight, i) => {
               if (highlight.start > lastIndex) {
                 segments.push(
-                  <span key={`text-${i}`}>{turnRange.turn.text.slice(lastIndex, highlight.start)}</span>
+                  <span key={`text-${i}`}>
+                    {turnRange.turn.text.slice(lastIndex, highlight.start)}
+                  </span>
                 );
               }
               
@@ -101,7 +107,9 @@ export function HighlightedText({
             
             if (lastIndex < turnRange.turn.text.length) {
               segments.push(
-                <span key="text-end">{turnRange.turn.text.slice(lastIndex)}</span>
+                <span key="text-end">
+                  {turnRange.turn.text.slice(lastIndex)}
+                </span>
               );
             }
             
@@ -109,24 +117,14 @@ export function HighlightedText({
           }
           
           return (
-            <section 
+            <div 
               key={idx}
-              aria-label={`${turnRange.turn.speaker} ${turnLabel}`}
-              className="mb-6"
+              className="leading-relaxed"
+              style={{ lineHeight: 1.7 }}
             >
-              <div className="font-bold text-base mb-2 text-gray-900">
-                {turnRange.turn.speaker}:
-              </div>
-              <div 
-                className="text-base leading-relaxed pl-4"
-                style={{ 
-                  borderLeft: '2px solid #e5e7eb',
-                  lineHeight: 1.7
-                }}
-              >
-                {content}
-              </div>
-            </section>
+              <span className="font-bold">{turnRange.turn.speaker}:</span>{' '}
+              <span className="inline">{content}</span>
+            </div>
           );
         })}
       </div>
