@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { cn } from '@/lib/utils';
 
 interface LoginIntroProps {
@@ -8,7 +8,41 @@ interface LoginIntroProps {
 
 export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
   const [phase, setPhase] = useState<'fade-in' | 'line-sweep' | 'text-reveal' | 'fade-out'>('fade-in');
+  const [typedText, setTypedText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+  const fullText = `Welcome back, ${firstName}.`;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Typewriter effect
+  const typeCharacter = useCallback(() => {
+    let currentIndex = 0;
+    const typingTimers: NodeJS.Timeout[] = [];
+    
+    const scheduleNextChar = () => {
+      if (currentIndex < fullText.length) {
+        const char = fullText[currentIndex];
+        let delay = 45; // Base delay for letters (22 chars/sec)
+        
+        if (char === ',' || char === '.') delay = 150; // Pause at punctuation
+        else if (char === ' ') delay = 30; // Faster for spaces
+        
+        const timer = setTimeout(() => {
+          setTypedText(fullText.substring(0, currentIndex + 1));
+          currentIndex++;
+          scheduleNextChar();
+        }, delay);
+        
+        typingTimers.push(timer);
+      } else {
+        // Typing complete, hold cursor for 150ms then stop it
+        const cursorTimer = setTimeout(() => setShowCursor(false), 150);
+        typingTimers.push(cursorTimer);
+      }
+    };
+    
+    scheduleNextChar();
+    return typingTimers;
+  }, [fullText]);
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -21,12 +55,23 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
     const timers = [
       setTimeout(() => setPhase('line-sweep'), 150),
       setTimeout(() => setPhase('text-reveal'), 450),
-      setTimeout(() => setPhase('fade-out'), 850),
-      setTimeout(onComplete, 1000),
+      setTimeout(() => setPhase('fade-out'), 1650),
+      setTimeout(onComplete, 1800),
     ];
 
     return () => timers.forEach(clearTimeout);
   }, [onComplete, prefersReducedMotion]);
+
+  // Start typewriter when text-reveal phase begins
+  useEffect(() => {
+    let typingTimers: NodeJS.Timeout[] = [];
+    
+    if (phase === 'text-reveal' && !prefersReducedMotion) {
+      typingTimers = typeCharacter();
+    }
+    
+    return () => typingTimers.forEach(clearTimeout);
+  }, [phase, prefersReducedMotion, typeCharacter]);
 
   if (prefersReducedMotion) {
     return (
@@ -62,6 +107,14 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
           background: 'linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(0 0% 100%) 100%)'
         }}
       />
+      
+      {/* Vignette overlay for depth */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle at center, transparent 0%, hsl(0 0% 0% / 0.02) 100%)'
+        }}
+      />
 
       {/* Lattice grid - fades in with line sweep */}
       {(phase === 'line-sweep' || phase === 'text-reveal') && (
@@ -94,17 +147,41 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
         </div>
       )}
 
-      {/* Text reveal */}
+      {/* Text reveal - Typewriter effect */}
       {(phase === 'text-reveal' || phase === 'fade-out') && (
-        <p 
-          className="relative z-10 animate-[text-fade_400ms_cubic-bezier(0.4,0,0.2,1)] text-2xl font-semibold text-foreground"
-          style={{ 
-            fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif',
-            lineHeight: '2rem'
-          }}
-        >
-          Welcome back, {firstName}.
-        </p>
+        <div className="relative z-10">
+          <p 
+            className="text-4xl font-semibold text-foreground"
+            style={{ 
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif',
+              letterSpacing: '-0.02em',
+              lineHeight: '1.2',
+              fontFeatureSettings: '"ss01" on, "cv05" on',
+              WebkitFontSmoothing: 'antialiased',
+              textRendering: 'optimizeLegibility'
+            }}
+          >
+            {typedText.split('').map((char, i) => (
+              <span 
+                key={i}
+                className={cn(
+                  "inline-block",
+                  i === typedText.length - 1 && "animate-[char-appear_120ms_cubic-bezier(0.34,1.56,0.64,1)]"
+                )}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </span>
+            ))}
+            {showCursor && typedText.length < fullText.length && (
+              <span 
+                className="inline-block ml-1 animate-[cursor-blink_800ms_step-end_infinite]"
+                style={{ opacity: 0.7 }}
+              >
+                |
+              </span>
+            )}
+          </p>
+        </div>
       )}
 
       <span className="sr-only">Welcome back, {firstName}. Loading your dashboard.</span>
@@ -132,17 +209,20 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
           to { opacity: 0.15; }
         }
 
-        @keyframes text-fade {
-          from { 
-            opacity: 0; 
-            letter-spacing: 0.1em;
-            transform: translateY(8px);
+        @keyframes char-appear {
+          from {
+            opacity: 0.5;
+            transform: translateY(4px) scale(0.95);
           }
-          to { 
-            opacity: 1; 
-            letter-spacing: 0.025em;
-            transform: translateY(0);
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
           }
+        }
+
+        @keyframes cursor-blink {
+          0%, 49% { opacity: 0.7; }
+          50%, 100% { opacity: 0; }
         }
 
         @keyframes fade-out {
