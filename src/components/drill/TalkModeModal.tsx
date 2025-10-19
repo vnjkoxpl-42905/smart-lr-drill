@@ -34,6 +34,7 @@ export function TalkModeModal({
   const [isSpeaking, setIsSpeaking] = React.useState(false);
   const [userTranscript, setUserTranscript] = React.useState('');
   const [isProcessing, setIsProcessing] = React.useState(false);
+  const [recordingError, setRecordingError] = React.useState<string | null>(null);
   
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const recognitionRef = React.useRef<any>(null);
@@ -41,6 +42,7 @@ export function TalkModeModal({
   const analyserRef = React.useRef<AnalyserNode | null>(null);
   const animationFrameRef = React.useRef<number | null>(null);
   const mediaStreamRef = React.useRef<MediaStream | null>(null);
+  const currentTranscriptRef = React.useRef<string>('');
 
   // Sync messages with parent
   React.useEffect(() => {
@@ -49,43 +51,88 @@ export function TalkModeModal({
 
   // Initialize speech recognition
   React.useEffect(() => {
-    if ('webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = true;
-      recognitionRef.current.lang = 'en-US';
-      
-      recognitionRef.current.onresult = (event: any) => {
-        const transcript = Array.from(event.results)
-          .map((result: any) => result[0].transcript)
-          .join('');
-        setUserTranscript(transcript);
-      };
-      
-      recognitionRef.current.onend = async () => {
-        setIsRecording(false);
-        if (userTranscript.trim()) {
-          await sendVoiceMessage(userTranscript);
-        }
-      };
-
-      recognitionRef.current.onerror = () => {
-        setIsRecording(false);
-        toast.error('Voice recognition error. Please try again.');
-      };
+    if (!('webkitSpeechRecognition' in window)) {
+      setRecordingError('Voice recognition is not supported in your browser. Please use Chrome, Edge, or Safari.');
+      return;
     }
     
+    const SpeechRecognition = (window as any).webkitSpeechRecognition;
+    recognitionRef.current = new SpeechRecognition();
+    recognitionRef.current.continuous = false;
+    recognitionRef.current.interimResults = true;
+    recognitionRef.current.lang = 'en-US';
+    recognitionRef.current.maxAlternatives = 1;
+    
+    recognitionRef.current.onresult = (event: any) => {
+      let finalTranscript = '';
+      let interimTranscript = '';
+      
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          finalTranscript += transcript + ' ';
+        } else {
+          interimTranscript += transcript;
+        }
+      }
+      
+      const fullTranscript = finalTranscript || interimTranscript;
+      setUserTranscript(fullTranscript);
+      currentTranscriptRef.current = fullTranscript;
+    };
+    
+    recognitionRef.current.onend = async () => {
+      setIsRecording(false);
+      const transcript = currentTranscriptRef.current.trim();
+      
+      if (transcript) {
+        await sendVoiceMessage(transcript);
+        currentTranscriptRef.current = '';
+      } else {
+        setRecordingError('No speech detected. Please try again.');
+        toast.error('No speech detected. Please speak clearly.');
+      }
+    };
+
+    recognitionRef.current.onerror = (event: any) => {
+      console.error('Speech recognition error:', event.error);
+      setIsRecording(false);
+      
+      let errorMessage = 'Voice recognition error. Please try again.';
+      if (event.error === 'no-speech') {
+        errorMessage = 'No speech detected. Please try speaking again.';
+      } else if (event.error === 'audio-capture') {
+        errorMessage = 'Microphone access denied. Please allow microphone access.';
+      } else if (event.error === 'not-allowed') {
+        errorMessage = 'Microphone permission denied. Please enable microphone access in your browser settings.';
+      } else if (event.error === 'network') {
+        errorMessage = 'Network error. Please check your connection.';
+      }
+      
+      setRecordingError(errorMessage);
+      toast.error(errorMessage);
+    };
+    
     return () => {
-      if (recognitionRef.current) recognitionRef.current.stop();
-      if (audioContextRef.current) audioContextRef.current.close();
-      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop();
+        } catch (e) {
+          console.error('Error stopping recognition:', e);
+        }
+      }
+      if (audioContextRef.current) {
+        audioContextRef.current.close();
+      }
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
       if (mediaStreamRef.current) {
         mediaStreamRef.current.getTracks().forEach(track => track.stop());
       }
       window.speechSynthesis.cancel();
     };
-  }, [userTranscript]);
+  }, []);
 
   // Initialize audio visualization
   React.useEffect(() => {
@@ -178,17 +225,39 @@ export function TalkModeModal({
 
   const startRecording = () => {
     if (!recognitionRef.current) {
-      toast.error('Voice recognition is not supported in your browser.');
+      const errorMsg = 'Voice recognition is not supported in your browser. Please use Chrome, Edge, or Safari.';
+      setRecordingError(errorMsg);
+      toast.error(errorMsg);
       return;
     }
+    
+    if (isProcessing || isSpeaking) {
+      toast.error('Please wait for the current action to complete.');
+      return;
+    }
+    
     setIsRecording(true);
     setUserTranscript('');
-    recognitionRef.current.start();
+    setRecordingError(null);
+    currentTranscriptRef.current = '';
+    
+    try {
+      recognitionRef.current.start();
+    } catch (error) {
+      console.error('Error starting recognition:', error);
+      setIsRecording(false);
+      toast.error('Failed to start voice recognition. Please try again.');
+    }
   };
 
   const stopRecording = () => {
     if (recognitionRef.current) {
-      recognitionRef.current.stop();
+      try {
+        recognitionRef.current.stop();
+      } catch (error) {
+        console.error('Error stopping recognition:', error);
+        setIsRecording(false);
+      }
     }
   };
 
@@ -243,20 +312,46 @@ export function TalkModeModal({
   };
 
   const speakResponse = (text: string) => {
-    if (!('speechSynthesis' in window)) return;
+    if (!('speechSynthesis' in window)) {
+      console.warn('Speech synthesis not supported');
+      return;
+    }
     
+    // Cancel any ongoing speech
     window.speechSynthesis.cancel();
     
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 0.95;
     utterance.pitch = 1.0;
     utterance.volume = 1.0;
+    utterance.lang = 'en-US';
     
-    utterance.onstart = () => setIsSpeaking(true);
-    utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => setIsSpeaking(false);
+    utterance.onstart = () => {
+      console.log('Speech started');
+      setIsSpeaking(true);
+    };
     
-    window.speechSynthesis.speak(utterance);
+    utterance.onend = () => {
+      console.log('Speech ended');
+      setIsSpeaking(false);
+    };
+    
+    utterance.onerror = (event) => {
+      console.error('Speech synthesis error:', event);
+      setIsSpeaking(false);
+      toast.error('Failed to play audio response. Please check your device audio settings.');
+    };
+    
+    // Small delay to ensure cancellation completed
+    setTimeout(() => {
+      try {
+        window.speechSynthesis.speak(utterance);
+      } catch (error) {
+        console.error('Error speaking:', error);
+        setIsSpeaking(false);
+        toast.error('Failed to play audio response.');
+      }
+    }, 100);
   };
 
   if (!open) return null;
@@ -300,6 +395,31 @@ export function TalkModeModal({
           {isProcessing && (
             <div className="mt-4 text-sm text-purple-400 animate-pulse">
               Processing your response...
+            </div>
+          )}
+          
+          {recordingError && !isRecording && (
+            <div className="mt-4 max-w-md text-center">
+              <p className="text-sm text-red-400">{recordingError}</p>
+            </div>
+          )}
+          
+          {/* Messages Display */}
+          {messages.length > 0 && !isRecording && !userTranscript && (
+            <div className="mt-6 max-w-lg max-h-40 overflow-y-auto space-y-3">
+              {messages.slice(-3).map((msg, idx) => (
+                <div key={idx} className={cn(
+                  "p-3 rounded-lg text-sm",
+                  msg.role === 'user' 
+                    ? 'bg-cyan-500/20 text-cyan-100 ml-8' 
+                    : 'bg-purple-500/20 text-purple-100 mr-8'
+                )}>
+                  <p className="font-medium text-xs mb-1 opacity-70">
+                    {msg.role === 'user' ? 'You' : 'Joshua'}
+                  </p>
+                  <p>{msg.content}</p>
+                </div>
+              ))}
             </div>
           )}
         </div>
