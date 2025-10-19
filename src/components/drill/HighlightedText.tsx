@@ -94,7 +94,7 @@ export function HighlightedText({
                   case 'yellow': return 'bg-yellow-300/60';
                   case 'pink': return 'bg-pink-300/60';
                   case 'orange': return 'bg-orange-300/60';
-                  case 'underline': return 'underline decoration-blue-500 decoration-2';
+                  case 'underline': return 'underline decoration-black decoration-2';
                   default: return 'bg-yellow-300/60';
                 }
               };
@@ -217,7 +217,7 @@ export function HighlightedText({
               case 'yellow': return 'bg-yellow-300/60';
               case 'pink': return 'bg-pink-300/60';
               case 'orange': return 'bg-orange-300/60';
-              case 'underline': return 'underline decoration-blue-500 decoration-2';
+              case 'underline': return 'underline decoration-black decoration-2';
               default: return 'bg-yellow-300/60';
             }
           };
