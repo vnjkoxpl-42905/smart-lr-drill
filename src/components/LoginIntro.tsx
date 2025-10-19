@@ -51,12 +51,12 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
       return () => clearTimeout(timer);
     }
 
-    // Precise animation timing
+    // Precise animation timing - LONGER duration for better readability
     const timers = [
-      setTimeout(() => setPhase('line-sweep'), 150),
-      setTimeout(() => setPhase('text-reveal'), 450),
-      setTimeout(() => setPhase('fade-out'), 1650),
-      setTimeout(onComplete, 1800),
+      setTimeout(() => setPhase('line-sweep'), 200),
+      setTimeout(() => setPhase('text-reveal'), 600),
+      setTimeout(() => setPhase('fade-out'), 2800), // Hold text longer
+      setTimeout(onComplete, 3000), // Total: 3 seconds
     ];
 
     return () => timers.forEach(clearTimeout);
@@ -134,14 +134,15 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
         </svg>
       )}
 
-      {/* Line sweep */}
+      {/* Line sweep - MORE VISIBLE with thicker, darker line */}
       {(phase === 'line-sweep' || phase === 'text-reveal') && (
         <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
           <div 
-            className="w-full animate-[sweep_300ms_cubic-bezier(0.4,0,0.2,1)]"
+            className="w-full animate-[sweep_400ms_cubic-bezier(0.4,0,0.2,1)]"
             style={{
-              height: '1px',
-              background: 'linear-gradient(90deg, transparent 0%, hsl(220 13% 9%) 50%, transparent 100%)'
+              height: '2px', // Thicker line
+              background: 'linear-gradient(90deg, transparent 0%, hsl(220 13% 9% / 0.4) 50%, transparent 100%)', // More visible
+              boxShadow: '0 0 8px hsl(220 13% 9% / 0.2)' // Add glow
             }}
           />
         </div>

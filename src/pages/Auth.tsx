@@ -150,13 +150,8 @@ export default function Auth() {
         variant: 'destructive',
       });
       setLoading(false);
-    } else {
-      toast({
-        title: 'Welcome back!',
-        description: 'You have signed in successfully.',
-      });
-      // Will auto-redirect via useEffect when user state updates
     }
+    // Will auto-redirect via useEffect when user state updates
   };
 
   const handleForgotPassword = async (e: React.FormEvent<HTMLFormElement>) => {
