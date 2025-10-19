@@ -28,6 +28,7 @@ export default function Auth() {
   const [showNewPassword, setShowNewPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
   const [passwordError, setPasswordError] = React.useState('');
+  const [hasRecoverySession, setHasRecoverySession] = React.useState(false);
 
   // Redirect if already logged in (but never during recovery)
   React.useEffect(() => {
@@ -47,26 +48,58 @@ export default function Auth() {
         const url = new URL(window.location.href);
         const hashParams = new URLSearchParams(window.location.hash.replace('#', ''));
         const type = url.searchParams.get('type') || hashParams.get('type');
+        
         if (type === 'recovery') {
-          // Enter recovery mode immediately; let auth listener populate email
+          // Enter recovery mode immediately to prevent auto-redirect
           setIsRecovery(true);
-          // Try to read session just to prefill email if already available (non-blocking)
-          const { data: { session } } = await supabase.auth.getSession();
+          
+          // First, try to get existing session
+          const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+          
           if (session?.user?.email) {
             setRecoveryEmail(session.user.email);
+            setHasRecoverySession(true);
+          } else {
+            // If no session, try to establish one from URL tokens
+            const accessToken = hashParams.get('access_token');
+            const refreshToken = hashParams.get('refresh_token');
+            
+            if (accessToken && refreshToken) {
+              const { data, error } = await supabase.auth.setSession({
+                access_token: accessToken,
+                refresh_token: refreshToken,
+              });
+              
+              if (error) {
+                console.error('Failed to set recovery session:', error);
+                setIsInvalidToken(true);
+              } else if (data.session) {
+                setRecoveryEmail(data.session.user.email || '');
+                setHasRecoverySession(true);
+              } else {
+                setIsInvalidToken(true);
+              }
+            } else {
+              // No tokens available, mark as invalid
+              setIsInvalidToken(true);
+            }
           }
         }
       } catch (err) {
         console.error('Recovery check error:', err);
+        setIsInvalidToken(true);
       }
     };
 
     checkRecoveryMode();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'PASSWORD_RECOVERY') {
         setIsRecovery(true);
-        setRecoveryEmail(session?.user?.email || '');
+        if (session?.user?.email) {
+          setRecoveryEmail(session.user.email);
+          setHasRecoverySession(true);
+        }
       }
     });
     return () => subscription.unsubscribe();
@@ -162,10 +195,17 @@ export default function Auth() {
     
     if (error) {
       // Handle specific error cases
-      if (error.message?.includes('expired') || error.message?.includes('invalid')) {
+      const errorMsg = error.message?.toLowerCase() || '';
+      if (
+        errorMsg.includes('auth session missing') ||
+        errorMsg.includes('not authenticated') ||
+        errorMsg.includes('session not found') ||
+        errorMsg.includes('expired') ||
+        errorMsg.includes('invalid')
+      ) {
         setIsInvalidToken(true);
         toast({ 
-          title: 'Link expired', 
+          title: 'Session expired', 
           description: 'Please request a new password reset link.', 
           variant: 'destructive' 
         });
@@ -283,7 +323,14 @@ export default function Auth() {
               </div>
             ) : (
               <form onSubmit={handlePasswordResetSubmit} className="space-y-4">
-                {recoveryEmail && (
+                {!hasRecoverySession && (
+                  <div className="rounded-lg bg-muted p-3">
+                    <p className="text-sm text-muted-foreground">
+                      Securely connecting your reset link...
+                    </p>
+                  </div>
+                )}
+                {recoveryEmail && hasRecoverySession && (
                   <div className="rounded-lg bg-muted p-3">
                     <p className="text-sm text-muted-foreground">
                       Resetting password for: <span className="font-medium text-foreground">{recoveryEmail}</span>
@@ -348,7 +395,11 @@ export default function Auth() {
                   <p className="text-sm text-destructive">{passwordError}</p>
                 )}
                 <div className="space-y-2">
-                  <Button type="submit" className="w-full" disabled={loading}>
+                  <Button 
+                    type="submit" 
+                    className="w-full" 
+                    disabled={loading || !hasRecoverySession}
+                  >
                     {loading ? 'Updating...' : 'Save New Password'}
                   </Button>
                   <Button 
