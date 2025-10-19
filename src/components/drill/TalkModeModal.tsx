@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import { X, Mic } from 'lucide-react';
@@ -19,6 +19,7 @@ interface TalkModeModalProps {
   existingMessages: Message[];
   onClose: () => void;
   onMessagesUpdate: (messages: Message[]) => void;
+  inlineMode?: boolean;
 }
 
 export function TalkModeModal({ 
@@ -27,7 +28,8 @@ export function TalkModeModal({
   userAnswer, 
   existingMessages,
   onClose,
-  onMessagesUpdate 
+  onMessagesUpdate,
+  inlineMode = false,
 }: TalkModeModalProps) {
   const [messages, setMessages] = React.useState<Message[]>(existingMessages);
   const [isRecording, setIsRecording] = React.useState(false);
@@ -45,6 +47,7 @@ export function TalkModeModal({
   const animationFrameRef = React.useRef<number | null>(null);
   const mediaStreamRef = React.useRef<MediaStream | null>(null);
   const currentTranscriptRef = React.useRef<string>('');
+  const panelRef = React.useRef<HTMLDivElement | null>(null);
 
   // Helper to extract detailed error from Supabase Edge Function responses
   const extractFunctionError = async (err: any): Promise<string> => {
@@ -158,10 +161,24 @@ export function TalkModeModal({
     };
   }, []);
 
-  // Initialize audio visualization
+  // Initialize audio visualization or visibility observer based on mode
   React.useEffect(() => {
     if (!open) return;
-    
+
+    // In inline mode, set up an IntersectionObserver to stop recording when panel is out of view
+    if (inlineMode) {
+      const el = panelRef.current;
+      if (!el) return;
+      const observer = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting && isRecording) {
+          stopRecording();
+        }
+      }, { threshold: 0 });
+      observer.observe(el);
+      return () => observer.disconnect();
+    }
+
+    // Dialog mode: set up audio visualization (kept for fallback)
     const setupAudio = async () => {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -171,22 +188,18 @@ export function TalkModeModal({
         const source = audioContextRef.current.createMediaStreamSource(stream);
         source.connect(analyserRef.current);
         analyserRef.current.fftSize = 256;
-        
         drawWaveform();
       } catch (err) {
         console.error('Audio setup failed:', err);
         toast.error('Microphone access denied. Please enable microphone permissions.');
       }
     };
-    
     setupAudio();
 
     return () => {
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
+      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
     };
-  }, [open]);
+  }, [open, inlineMode, isRecording]);
 
   // Initial assistant greeting when modal opens
   React.useEffect(() => {
@@ -421,125 +434,104 @@ export function TalkModeModal({
 
   if (!open) return null;
 
-  return (
-    <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl h-[80vh] bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 border border-cyan-500/30 p-0 gap-0">
+  // Inline mode: small tinted panel under the stimulus, keeping question in view
+  if (inlineMode) {
+    return (
+      <div ref={panelRef} className="mt-4 ml-4 max-w-sm w-full rounded-md border bg-card shadow-md animate-fade-in">
         {/* Header */}
-        <div className="px-6 py-4 border-b border-cyan-500/20 flex items-center justify-between">
+        <div className="px-4 py-3 border-b flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className={cn(
-              "w-3 h-3 rounded-full animate-pulse",
-              isRecording ? "bg-cyan-500" : isSpeaking ? "bg-purple-500" : "bg-slate-600"
+              'w-2.5 h-2.5 rounded-full',
+              isRecording ? 'bg-[hsl(var(--primary))]' : isSpeaking ? 'bg-[hsl(var(--muted-foreground))]' : 'bg-[hsl(var(--muted))]'
+            )} />
+            <h3 className="text-sm font-medium">Talk Mode</h3>
+          </div>
+          <Button variant="ghost" size="sm" onClick={onClose}>Close</Button>
+        </div>
+
+        {/* Vortex visualization */}
+        <div className="p-4">
+          <div className="w-full h-32 flex items-center justify-center">
+            <div className="relative w-24 h-24">
+              <div className={cn('absolute inset-0 rounded-full border', isRecording ? 'border-[hsl(var(--primary))] pulse' : 'border-[hsl(var(--muted-foreground))]')} />
+              <div className="absolute inset-3 rounded-full border border-[hsl(var(--muted-foreground))]/40" />
+              <div className="absolute inset-6 rounded-full border border-[hsl(var(--muted-foreground))]/30" />
+            </div>
+          </div>
+
+          {/* Transcript */}
+          {userTranscript && (
+            <div className="mt-3 text-sm text-muted-foreground">
+              <p className="text-xs">You're saying:</p>
+              <p className="mt-1 text-foreground">{userTranscript}</p>
+            </div>
+          )}
+
+          {isProcessing && (
+            <div className="mt-2 text-xs text-muted-foreground animate-pulse">Processing your response...</div>
+          )}
+
+          {recordingError && !isRecording && (
+            <div className="mt-2 text-xs text-destructive">{recordingError}</div>
+          )}
+
+          {/* Controls */}
+          {supportsSpeech ? (
+            <div className="mt-4 space-y-2">
+              <Button onClick={() => (isRecording ? stopRecording() : startRecording())} disabled={isProcessing || isSpeaking} className="w-full h-10">
+                <Mic className={cn('w-4 h-4 mr-2', isRecording && 'animate-pulse')} />
+                {isRecording ? 'Stop and Send' : 'Speak now'}
+              </Button>
+              <Button onClick={onClose} variant="outline" className="w-full h-9">Return to Question</Button>
+            </div>
+          ) : (
+            <div className="mt-4 space-y-2">
+              <textarea
+                value={userTranscript}
+                onChange={(e) => setUserTranscript(e.target.value)}
+                placeholder="Type your response..."
+                className="w-full min-h-[48px] rounded-md border bg-background px-3 py-2 text-sm"
+              />
+              <div className="flex gap-2">
+                <Button onClick={() => sendVoiceMessage(userTranscript)} disabled={!userTranscript.trim() || isProcessing || isSpeaking} className="h-9 px-4">
+                  Send
+                </Button>
+                <Button onClick={onClose} variant="outline" className="h-9">Return</Button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // Fallback: dialog mode (kept for other contexts). Includes a11y header.
+  return (
+    <Dialog open={open} onOpenChange={onClose}>
+      <DialogContent className="max-w-2xl h-[80vh] bg-card border p-0 gap-0">
+        <DialogHeader>
+          <DialogTitle>Talk Mode</DialogTitle>
+          <DialogDescription>Speak your reasoning and receive guidance.</DialogDescription>
+        </DialogHeader>
+        <div className="px-6 py-4 border-b flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className={cn(
+              'w-3 h-3 rounded-full',
+              isRecording ? 'bg-[hsl(var(--primary))]' : isSpeaking ? 'bg-[hsl(var(--muted-foreground))]' : 'bg-[hsl(var(--muted))]'
             )} />
             <h2 className="text-lg font-semibold">
-              {isRecording ? 'Listening...' : isSpeaking ? 'Joshua is speaking...' : 'Talk Mode'}
+              {isRecording ? 'Listening...' : isSpeaking ? 'Speaking...' : 'Talk Mode'}
             </h2>
           </div>
           <Button variant="ghost" size="sm" onClick={onClose}>
             <X className="w-4 h-4" />
           </Button>
         </div>
-
-        {/* Wavelength Visualization */}
+        {/* Keep previous dialog body minimal to reduce visual noise */}
         <div className="flex-1 flex flex-col items-center justify-center p-6">
-          <canvas
-            ref={canvasRef}
-            width={600}
-            height={200}
-            className="rounded-lg border border-cyan-500/20 shadow-[0_0_30px_rgba(6,182,212,0.15)]"
-          />
-          
-          {/* Transcript Overlay */}
-          {userTranscript && (
-            <div className="mt-4 max-w-md text-center">
-              <p className="text-sm text-cyan-400 opacity-70">You're saying:</p>
-              <p className="text-base text-foreground mt-1">{userTranscript}</p>
-            </div>
-          )}
-          
-          {isProcessing && (
-            <div className="mt-4 text-sm text-purple-400 animate-pulse">
-              Processing your response...
-            </div>
-          )}
-          
-          {recordingError && !isRecording && (
-            <div className="mt-4 max-w-md text-center">
-              <p className="text-sm text-red-400">{recordingError}</p>
-            </div>
-          )}
-          
-          {/* Messages Display */}
-          {messages.length > 0 && !isRecording && !userTranscript && (
-            <div className="mt-6 max-w-lg max-h-40 overflow-y-auto space-y-3">
-              {messages.slice(-3).map((msg, idx) => (
-                <div key={idx} className={cn(
-                  "p-3 rounded-lg text-sm",
-                  msg.role === 'user' 
-                    ? 'bg-cyan-500/20 text-cyan-100 ml-8' 
-                    : 'bg-purple-500/20 text-purple-100 mr-8'
-                )}>
-                  <p className="font-medium text-xs mb-1 opacity-70">
-                    {msg.role === 'user' ? 'You' : 'Joshua'}
-                  </p>
-                  <p>{msg.content}</p>
-                </div>
-              ))}
-            </div>
-          )}
+          <canvas ref={canvasRef} width={600} height={200} className="rounded-lg border" />
         </div>
-
-        {/* Reply Controls */}
-        {supportsSpeech ? (
-          <div className="px-6 py-4 border-t border-cyan-500/20 space-y-3">
-            <Button
-              onClick={() => (isRecording ? stopRecording() : startRecording())}
-              disabled={isProcessing || isSpeaking}
-              className={cn(
-                "w-full h-16 text-lg font-semibold transition-all duration-200",
-                isRecording 
-                  ? "bg-gradient-to-r from-red-500 to-red-600 shadow-[0_0_30px_rgba(239,68,68,0.5)]" 
-                  : "bg-gradient-to-r from-cyan-500 to-purple-500 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]"
-              )}
-            >
-              <Mic className={cn("w-6 h-6 mr-2", isRecording && "animate-pulse")} />
-              {isRecording ? 'Stop and Send' : 'Speak now'}
-            </Button>
-            <Button
-              onClick={onClose}
-              variant="outline"
-              className="w-full h-12"
-            >
-              Return to Question
-            </Button>
-          </div>
-        ) : (
-          <div className="px-6 py-4 border-t border-cyan-500/20 space-y-3">
-            <div className="flex items-end gap-3">
-              <textarea
-                value={userTranscript}
-                onChange={(e) => setUserTranscript(e.target.value)}
-                placeholder="Type your response..."
-                className="flex-1 min-h-[48px] rounded-md border border-cyan-500/20 bg-slate-900/40 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cyan-500/40"
-              />
-              <Button
-                onClick={() => sendVoiceMessage(userTranscript)}
-                disabled={!userTranscript.trim() || isProcessing || isSpeaking}
-                className="h-12 px-6 bg-gradient-to-r from-cyan-500 to-purple-500"
-              >
-                Send
-              </Button>
-            </div>
-            <p className="text-xs text-muted-foreground">Your browser doesn't support voice input. You can type your reply.</p>
-            <Button
-              onClick={onClose}
-              variant="outline"
-              className="w-full h-12"
-            >
-              Return to Question
-            </Button>
-          </div>
-        )}
       </DialogContent>
     </Dialog>
   );

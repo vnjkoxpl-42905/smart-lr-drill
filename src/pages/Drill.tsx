@@ -804,13 +804,14 @@ function DrillContent() {
               </div>
             )}
 
-            {/* Voice Coach (Talk Mode) - full-screen voice with wavelength */}
+            {/* Voice Coach (Talk Mode) - inline panel under stimulus */}
             <TalkModeModal
               open={talkModeOpen}
               question={currentQuestion}
               userAnswer={selectedAnswer}
               existingMessages={tutorMessages}
-              onClose={handleContinueToReview}
+              inlineMode
+              onClose={handleTryAgain}
               onMessagesUpdate={setTutorMessages}
             />
 
