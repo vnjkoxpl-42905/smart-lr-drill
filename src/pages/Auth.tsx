@@ -279,7 +279,7 @@ export default function Auth() {
             {isRecovery 
               ? (isInvalidToken 
                   ? 'Request a new password reset link' 
-                  : 'Enter your new password to continue')
+                  : 'Choose a strong password for your account')
               : 'Sign in to track your progress'}
           </CardDescription>
         </CardHeader>
@@ -327,13 +327,6 @@ export default function Auth() {
                   <div className="rounded-lg bg-muted p-3">
                     <p className="text-sm text-muted-foreground">
                       Securely connecting your reset link...
-                    </p>
-                  </div>
-                )}
-                {recoveryEmail && hasRecoverySession && (
-                  <div className="rounded-lg bg-muted p-3">
-                    <p className="text-sm text-muted-foreground">
-                      Resetting password for: <span className="font-medium text-foreground">{recoveryEmail}</span>
                     </p>
                   </div>
                 )}
