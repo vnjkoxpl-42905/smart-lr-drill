@@ -35,6 +35,8 @@ export function TalkModeModal({
   const [userTranscript, setUserTranscript] = React.useState('');
   const [isProcessing, setIsProcessing] = React.useState(false);
   const [recordingError, setRecordingError] = React.useState<string | null>(null);
+  const [supportsSpeech, setSupportsSpeech] = React.useState(false);
+  const [hasGreeted, setHasGreeted] = React.useState(false);
   
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const recognitionRef = React.useRef<any>(null);
@@ -47,17 +49,19 @@ export function TalkModeModal({
   // Sync messages with parent
   React.useEffect(() => {
     setMessages(existingMessages);
+    if (existingMessages && existingMessages.length > 0) setHasGreeted(true);
   }, [existingMessages]);
 
   // Initialize speech recognition
   React.useEffect(() => {
     if (!('webkitSpeechRecognition' in window)) {
+      setSupportsSpeech(false);
       setRecordingError('Voice recognition is not supported in your browser. Please use Chrome, Edge, or Safari.');
       return;
     }
-    
-    const SpeechRecognition = (window as any).webkitSpeechRecognition;
-    recognitionRef.current = new SpeechRecognition();
+    setSupportsSpeech(true);
+    const SR = (window as any).webkitSpeechRecognition;
+    recognitionRef.current = new SR();
     recognitionRef.current.continuous = false;
     recognitionRef.current.interimResults = true;
     recognitionRef.current.lang = 'en-US';
@@ -163,6 +167,45 @@ export function TalkModeModal({
       }
     };
   }, [open]);
+
+  // Initial assistant greeting when modal opens
+  React.useEffect(() => {
+    if (!open || !question || hasGreeted) return;
+    const run = async () => {
+      try {
+        const questionData = {
+          qid: question.qid,
+          pt: question.pt,
+          section: question.section,
+          qnum: question.qnum,
+          qtype: question.qtype,
+          level: question.difficulty,
+          stimulus: question.stimulus,
+          questionStem: question.questionStem,
+          answerChoices: question.answerChoices,
+          userAnswer,
+          correctAnswer: question.correctAnswer,
+          breakdown: question.breakdown,
+          answerChoiceExplanations: question.answerChoiceExplanations,
+          reasoningType: question.reasoningType,
+        };
+        const { data, error } = await supabase.functions.invoke('tutor-chat', {
+          body: { question: questionData, messages: [] },
+        });
+        if (error) throw error;
+        const assistantMessage: Message = { role: 'assistant', content: data.content };
+        const finalMessages = [assistantMessage];
+        setMessages(finalMessages);
+        onMessagesUpdate(finalMessages);
+        setHasGreeted(true);
+        speakResponse(data.content);
+      } catch (e) {
+        console.error('Failed to start talk mode:', e);
+        toast.error('Could not start voice coaching. Please try again.');
+      }
+    };
+    run();
+  }, [open, question, hasGreeted]);
 
   // Wavelength visualization
   const drawWaveform = () => {
@@ -424,25 +467,43 @@ export function TalkModeModal({
           )}
         </div>
 
-        {/* Press & Hold Button */}
-        <div className="px-6 py-4 border-t border-cyan-500/20">
-          <Button
-            onMouseDown={startRecording}
-            onMouseUp={stopRecording}
-            onTouchStart={startRecording}
-            onTouchEnd={stopRecording}
-            disabled={isProcessing || isSpeaking}
-            className={cn(
-              "w-full h-16 text-lg font-semibold transition-all duration-200",
-              isRecording 
-                ? "bg-gradient-to-r from-red-500 to-red-600 shadow-[0_0_30px_rgba(239,68,68,0.5)]" 
-                : "bg-gradient-to-r from-cyan-500 to-purple-500 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]"
-            )}
-          >
-            <Mic className={cn("w-6 h-6 mr-2", isRecording && "animate-pulse")} />
-            {isRecording ? 'Release to Send' : 'Press & Hold to Speak'}
-          </Button>
-        </div>
+        {/* Reply Controls */}
+        {supportsSpeech ? (
+          <div className="px-6 py-4 border-t border-cyan-500/20">
+            <Button
+              onClick={() => (isRecording ? stopRecording() : startRecording())}
+              disabled={isProcessing || isSpeaking}
+              className={cn(
+                "w-full h-16 text-lg font-semibold transition-all duration-200",
+                isRecording 
+                  ? "bg-gradient-to-r from-red-500 to-red-600 shadow-[0_0_30px_rgba(239,68,68,0.5)]" 
+                  : "bg-gradient-to-r from-cyan-500 to-purple-500 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]"
+              )}
+            >
+              <Mic className={cn("w-6 h-6 mr-2", isRecording && "animate-pulse")} />
+              {isRecording ? 'Stop and Send' : 'Speak now'}
+            </Button>
+          </div>
+        ) : (
+          <div className="px-6 py-4 border-t border-cyan-500/20">
+            <div className="flex items-end gap-3">
+              <textarea
+                value={userTranscript}
+                onChange={(e) => setUserTranscript(e.target.value)}
+                placeholder="Type your response..."
+                className="flex-1 min-h-[48px] rounded-md border border-cyan-500/20 bg-slate-900/40 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cyan-500/40"
+              />
+              <Button
+                onClick={() => sendVoiceMessage(userTranscript)}
+                disabled={!userTranscript.trim() || isProcessing || isSpeaking}
+                className="h-12 px-6 bg-gradient-to-r from-cyan-500 to-purple-500"
+              >
+                Send
+              </Button>
+            </div>
+            <p className="text-xs text-muted-foreground mt-2">Your browser doesn't support voice input. You can type your reply.</p>
+          </div>
+        )}
       </DialogContent>
     </Dialog>
   );
