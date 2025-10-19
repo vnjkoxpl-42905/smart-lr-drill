@@ -575,7 +575,6 @@ function DrillContent() {
 
       {/* Highlight Toolbar */}
       <div className="px-6 py-2 flex justify-end items-center gap-3 border-b">
-        <span className="text-sm text-muted-foreground">Stimulus Controls:</span>
         <HighlightToolbar mode={highlightMode} onModeChange={setHighlightMode} />
       </div>
 
@@ -613,27 +612,11 @@ function DrillContent() {
               
               return (
                 <div 
-              className={cn(
-                "pl-4 py-2 stimulus",
-                highlightMode === 'highlight' ? 'select-text' : 'select-none'
-              )}
-                  contentEditable={false}
-                  tabIndex={-1}
-                  draggable={false}
-                  onKeyDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                  onDragStart={(e) => e.preventDefault()}
-                  onDrop={(e) => e.preventDefault()}
-                  onMouseDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                  onTouchStart={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                  onContextMenu={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                  className={cn(
+                    "pl-4 py-2 stimulus",
+                    highlightMode === 'highlight' ? 'select-text cursor-text' : 'select-none cursor-default'
+                  )}
                   onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
-                  style={{ 
-                    userSelect: highlightMode === 'highlight' ? 'text' : 'none',
-                    WebkitUserSelect: highlightMode === 'highlight' ? 'text' : 'none',
-                    WebkitTouchCallout: highlightMode === 'highlight' ? 'default' : 'none',
-                    cursor: highlightMode === 'highlight' ? 'text' : 'default',
-                    caretColor: highlightMode === 'highlight' ? 'auto' : 'transparent'
-                  } as React.CSSProperties}
                 >
                   <HighlightedText
                     text={fullText}
