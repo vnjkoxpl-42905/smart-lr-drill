@@ -7,8 +7,6 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from '@/components/ui/resizable';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
 import { ReviewModal } from '@/components/drill/ReviewModal';
@@ -566,211 +564,202 @@ function DrillContent() {
       </div>
 
       {/* Highlight Toolbar */}
-      <div className="px-6 py-2 flex justify-end border-b">
+      <div className="px-6 py-2 flex justify-end items-center gap-3 border-b">
+        <span className="text-sm text-muted-foreground">Stimulus Controls:</span>
         <HighlightToolbar mode={highlightMode} onModeChange={setHighlightMode} />
       </div>
 
-      {/* Main Content - Resizable Panels */}
-      <div className="flex-1 overflow-hidden">
-        <ResizablePanelGroup direction="horizontal" className="h-full">
-          {/* Left Panel - Question and Stimulus */}
-          <ResizablePanel defaultSize={50} minSize={30}>
-            <ScrollArea className="h-full">
-              <div className="p-6 space-y-6">
-                {/* Question metadata */}
-                <div className="flex items-center gap-3 flex-wrap">
-                  <Badge variant="outline">
-                    PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
-                  </Badge>
-                  <Badge variant="secondary">{currentQuestion.qtype}</Badge>
-                  <Badge>Difficulty {currentQuestion.difficulty}</Badge>
-                  {isAnswered && (
-                    <Badge variant={previousAttempt?.correct ? 'default' : 'destructive'}>
-                      {previousAttempt?.correct ? (
-                        <>
-                          <CheckCircle className="w-3 h-3 mr-1" /> Correct
-                        </>
-                      ) : (
-                        <>
-                          <XCircle className="w-3 h-3 mr-1" /> Incorrect
-                        </>
-                      )}
-                    </Badge>
+      {/* Main Content - Fixed Two-Column Layout */}
+      <div className="flex-1 flex overflow-hidden">
+        {/* Left Panel - Question and Stimulus */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="p-6 space-y-6">
+            {/* Question metadata */}
+            <div className="flex items-center gap-3 flex-wrap">
+              <Badge variant="outline">
+                PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
+              </Badge>
+              <Badge variant="secondary">{currentQuestion.qtype}</Badge>
+              <Badge>Difficulty {currentQuestion.difficulty}</Badge>
+              {isAnswered && (
+                <Badge variant={previousAttempt?.correct ? 'default' : 'destructive'}>
+                  {previousAttempt?.correct ? (
+                    <>
+                      <CheckCircle className="w-3 h-3 mr-1" /> Correct
+                    </>
+                  ) : (
+                    <>
+                      <XCircle className="w-3 h-3 mr-1" /> Incorrect
+                    </>
                   )}
-                </div>
+                </Badge>
+              )}
+            </div>
 
-                {/* Stimulus */}
-                {currentQuestion.stimulus && (() => {
-                  const fullText = normalizeText(currentQuestion.stimulus);
-                  const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
+            {/* Stimulus */}
+            {currentQuestion.stimulus && (() => {
+              const fullText = normalizeText(currentQuestion.stimulus);
+              const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
+              
+              return (
+                <div 
+                  className={`p-4 bg-muted/50 rounded-lg stimulus ${highlightMode === 'highlight' ? 'select-text' : 'select-none'}`}
+                  contentEditable={false}
+                  tabIndex={-1}
+                  draggable={false}
+                  onKeyDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                  onDragStart={(e) => e.preventDefault()}
+                  onDrop={(e) => e.preventDefault()}
+                  onMouseDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                  onTouchStart={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                  onContextMenu={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
+                  onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
+                  style={{ 
+                    userSelect: highlightMode === 'highlight' ? 'text' : 'none',
+                    WebkitUserSelect: highlightMode === 'highlight' ? 'text' : 'none',
+                    WebkitTouchCallout: highlightMode === 'highlight' ? 'default' : 'none',
+                    cursor: highlightMode === 'highlight' ? 'text' : 'default',
+                    caretColor: highlightMode === 'highlight' ? 'auto' : 'transparent'
+                  } as React.CSSProperties}
+                >
+                  <HighlightedText
+                    text={fullText}
+                    highlights={stimulusHighlights}
+                    onHighlightClick={handleHighlightClick}
+                    eraserMode={highlightMode === 'erase'}
+                  />
+                </div>
+              );
+            })()}
+
+          </div>
+        </div>
+
+        {/* Right Panel - Answer Choices */}
+        <div className="flex-1 overflow-y-auto border-l">
+          <div className="p-6 space-y-6">
+            {/* Question Stem - Static Display */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-foreground leading-relaxed">
+                {currentQuestion.questionStem}
+              </h2>
+            </div>
+
+            {/* Answer choices - Adaptive layout based on tutor state */}
+            {tutorChatOpen ? (
+              // FOCUSED LAYOUT: Highlight selected answer + Joshua
+              <div className="space-y-4">
+                {(() => {
+                  const { before, selected, after } = getAnswerGroups();
                   
                   return (
-                    <div 
-                      className={`p-4 bg-muted/50 rounded-lg stimulus ${highlightMode === 'highlight' ? 'select-text' : 'select-none'}`}
-                      contentEditable={false}
-                      tabIndex={-1}
-                      draggable={false}
-                      onKeyDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                      onDragStart={(e) => e.preventDefault()}
-                      onDrop={(e) => e.preventDefault()}
-                      onMouseDown={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                      onTouchStart={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                      onContextMenu={(e) => { if (highlightMode !== 'highlight') e.preventDefault(); }}
-                      onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
-                      style={{ 
-                        userSelect: highlightMode === 'highlight' ? 'text' : 'none',
-                        WebkitUserSelect: highlightMode === 'highlight' ? 'text' : 'none',
-                        WebkitTouchCallout: highlightMode === 'highlight' ? 'default' : 'none',
-                        cursor: highlightMode === 'highlight' ? 'text' : 'default',
-                        caretColor: highlightMode === 'highlight' ? 'auto' : 'transparent'
-                      } as React.CSSProperties}
-                    >
-                      <HighlightedText
-                        text={fullText}
-                        highlights={stimulusHighlights}
-                        onHighlightClick={handleHighlightClick}
-                        eraserMode={highlightMode === 'erase'}
-                      />
-                    </div>
+                    <>
+                      {/* Answers before selected - blurred */}
+                      {before.length > 0 && (
+                        <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
+                          {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
+                        </div>
+                      )}
+
+                      {/* Selected answer - clear and prominent */}
+                      <div className="relative">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg blur-sm" />
+                        <div className="relative">
+                          {renderAnswerChoice(selected[0], selected[1], { 
+                            isSelected: true, 
+                            showRadio: false,
+                            inFocusedMode: true
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Joshua chat - right below selected answer */}
+                      <div className="pl-7">
+                        <TutorChatModal
+                          open={tutorChatOpen}
+                          question={currentQuestion}
+                          userAnswer={selectedAnswer}
+                          onClose={handleContinueToReview}
+                          onTryAgain={handleTryAgain}
+                        />
+                      </div>
+
+                      {/* Answers after selected - blurred */}
+                      {after.length > 0 && (
+                        <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
+                          {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
+                        </div>
+                      )}
+                    </>
                   );
                 })()}
-
               </div>
-            </ScrollArea>
-          </ResizablePanel>
+            ) : (
+              // NORMAL LAYOUT: Standard RadioGroup
+              <RadioGroup
+                value={selectedAnswer}
+                onValueChange={handleAnswerSelect}
+                disabled={answerLocked}
+              >
+                {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
+                  renderAnswerChoice(key, text, { 
+                    isSelected: key === selectedAnswer,
+                    showRadio: true 
+                  })
+                )}
+              </RadioGroup>
+            )}
 
-          <ResizableHandle withHandle />
-
-          {/* Right Panel - Answer Choices */}
-          <ResizablePanel defaultSize={50} minSize={30}>
-            <ScrollArea className="h-full">
-              <div className="p-6">
-                <Card className="p-6">
-                  {/* Question Stem - Static Display */}
-                  <div className="mb-6 pb-4 border-b border-border">
-                    <p className="text-lg font-semibold text-foreground leading-relaxed">
-                      {currentQuestion.questionStem}
-                    </p>
-                  </div>
-
-                  {/* Answer choices - Adaptive layout based on tutor state */}
-                  {tutorChatOpen ? (
-                    // FOCUSED LAYOUT: Highlight selected answer + Joshua
-                    <div className="space-y-4">
-                      {(() => {
-                        const { before, selected, after } = getAnswerGroups();
-                        
-                        return (
-                          <>
-                            {/* Answers before selected - blurred */}
-                            {before.length > 0 && (
-                              <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
-                                {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
-                              </div>
-                            )}
-
-                            {/* Selected answer - clear and prominent */}
-                            <div className="relative">
-                              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg blur-sm" />
-                              <div className="relative">
-                                {renderAnswerChoice(selected[0], selected[1], { 
-                                  isSelected: true, 
-                                  showRadio: false,
-                                  inFocusedMode: true
-                                })}
-                              </div>
-                            </div>
-
-                            {/* Joshua chat - right below selected answer */}
-                            <div className="pl-7">
-                              <TutorChatModal
-                                open={tutorChatOpen}
-                                question={currentQuestion}
-                                userAnswer={selectedAnswer}
-                                onClose={handleContinueToReview}
-                                onTryAgain={handleTryAgain}
-                              />
-                            </div>
-
-                            {/* Answers after selected - blurred */}
-                            {after.length > 0 && (
-                              <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
-                                {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
-                              </div>
-                            )}
-                          </>
-                        );
-                      })()}
-                    </div>
-                  ) : (
-                    // NORMAL LAYOUT: Standard RadioGroup
-                    <RadioGroup
-                      value={selectedAnswer}
-                      onValueChange={handleAnswerSelect}
-                      disabled={answerLocked}
-                    >
-                      {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
-                        renderAnswerChoice(key, text, { 
-                          isSelected: key === selectedAnswer,
-                          showRadio: true 
-                        })
-                      )}
-                    </RadioGroup>
-                  )}
-
-                  {/* Confidence selector */}
-                  {answerLocked && !tutorChatOpen && (
-                    <div className="space-y-3 pt-4">
-                      <Label>Confidence (1–5)</Label>
-                      <div className="flex gap-2">
-                        {[1, 2, 3, 4, 5].map((level) => (
-                          <Button
-                            key={level}
-                            variant={confidence === level ? 'default' : 'outline'}
-                            onClick={() => setConfidence(level)}
-                            className="flex-1"
-                            disabled={showSolution}
-                          >
-                            {level}
-                          </Button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Actions */}
-                  <div className="flex gap-3 pt-4">
+            {/* Confidence selector */}
+            {answerLocked && !tutorChatOpen && (
+              <div className="space-y-3 pt-4">
+                <Label>Confidence (1–5)</Label>
+                <div className="flex gap-2">
+                  {[1, 2, 3, 4, 5].map((level) => (
                     <Button
-                      onClick={handleNext}
-                      disabled={!showSolution || timer?.isPaused}
-                      size="lg"
+                      key={level}
+                      variant={confidence === level ? 'default' : 'outline'}
+                      onClick={() => setConfidence(level)}
+                      className="flex-1"
+                      disabled={showSolution}
                     >
-                      Next question
+                      {level}
                     </Button>
-                  </div>
-
-                  {/* Solution */}
-                  {showSolution && (
-                    <div className="mt-6 p-4 border-t">
-                      <div className="flex items-center gap-2 mb-2">
-                        {selectedAnswer === currentQuestion.correctAnswer ? (
-                          <CheckCircle className="w-5 h-5 text-[#16A34A]" />
-                        ) : (
-                          <XCircle className="w-5 h-5 text-[#DC2626]" />
-                        )}
-                        <span className="font-semibold">
-                          {selectedAnswer === currentQuestion.correctAnswer
-                            ? 'Correct!'
-                            : `The correct answer is (${currentQuestion.correctAnswer}).`}
-                        </span>
-                      </div>
-                    </div>
-                  )}
-                </Card>
+                  ))}
+                </div>
               </div>
-            </ScrollArea>
-          </ResizablePanel>
-        </ResizablePanelGroup>
+            )}
+
+            {/* Actions */}
+            <div className="flex gap-3 pt-4">
+              <Button
+                onClick={handleNext}
+                disabled={!showSolution || timer?.isPaused}
+                size="lg"
+              >
+                Next question
+              </Button>
+            </div>
+
+            {/* Solution */}
+            {showSolution && (
+              <div className="mt-6 p-4 border-t">
+                <div className="flex items-center gap-2 mb-2">
+                  {selectedAnswer === currentQuestion.correctAnswer ? (
+                    <CheckCircle className="w-5 h-5 text-[#16A34A]" />
+                  ) : (
+                    <XCircle className="w-5 h-5 text-[#DC2626]" />
+                  )}
+                  <span className="font-semibold">
+                    {selectedAnswer === currentQuestion.correctAnswer
+                      ? 'Correct!'
+                      : `The correct answer is (${currentQuestion.correctAnswer}).`}
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
       <ReviewModal
