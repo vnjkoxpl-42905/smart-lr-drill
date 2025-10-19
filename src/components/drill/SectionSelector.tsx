@@ -25,10 +25,13 @@ export function SectionSelector({ manifest, onStartSection, onCancel }: SectionS
   ).sort((a, b) => a - b);
 
   const availableSections = selectedPT
-    ? manifest.sections
-        .filter(s => s.pt === selectedPT)
-        .map(s => s.section)
-        .sort((a, b) => a - b)
+    ? Array.from(
+        new Set(
+          manifest.sections
+            .filter(s => s.pt === selectedPT)
+            .map(s => s.section)
+        )
+      ).sort((a, b) => a - b)
     : [];
 
   const handleStart = () => {
