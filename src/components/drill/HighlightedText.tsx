@@ -53,7 +53,7 @@ export function HighlightedText({
     
     // Render as dialogue layout
     return (
-      <div className="space-y-3 mb-5">
+      <div className="space-y-6 mb-6">
         {turnRanges.map((turnRange, idx) => {
           const turnLabel = idx === 0 ? 'says' : 'replies';
           
@@ -112,23 +112,16 @@ export function HighlightedText({
             <section 
               key={idx}
               aria-label={`${turnRange.turn.speaker} ${turnLabel}`}
-              className="flex gap-3"
+              className="mb-6"
             >
-              <div 
-                className="w-[72px] flex-shrink-0 text-right font-semibold text-sm"
-                style={{ 
-                  color: '#111827',
-                  fontVariant: 'small-caps',
-                  paddingTop: '2px'
-                }}
-              >
+              <div className="font-semibold text-base mb-2 text-gray-900">
                 {turnRange.turn.speaker}:
               </div>
               <div 
-                className="flex-1 pl-3"
+                className="text-base leading-relaxed pl-4"
                 style={{ 
-                  borderLeft: '1px solid #E5E7EB',
-                  lineHeight: 1.6 
+                  borderLeft: '2px solid #e5e7eb',
+                  lineHeight: 1.7
                 }}
               >
                 {content}
