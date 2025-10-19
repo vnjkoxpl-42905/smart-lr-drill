@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { X, ChevronRight, ChevronLeft, Sparkles, Save } from 'lucide-react';
 import type { TypeDrillConfig } from '@/types/drill';
 import type { QuestionManifest } from '@/lib/questionLoader';
@@ -192,12 +193,28 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
   };
 
   const handleSaveTemplate = async () => {
-    if (!user) return;
+    if (!user) {
+      toast({
+        title: "Not logged in",
+        description: "You must be logged in to save templates.",
+        variant: "destructive",
+      });
+      return;
+    }
     
     if (!templateName.trim()) {
       toast({
         title: "Name required",
         description: "Please enter a name for this template.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (selectedQTypes.length === 0) {
+      toast({
+        title: "Select question types",
+        description: "Please select at least one question type.",
         variant: "destructive",
       });
       return;
@@ -211,31 +228,36 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
         .eq('id', user.id)
         .maybeSingle();
 
-      if (studentError) throw studentError;
+      if (studentError) {
+        console.error('Student lookup error:', studentError);
+        throw new Error('Failed to retrieve user information');
+      }
+      
       if (!student?.class_id) {
-        throw new Error('User class_id not found');
+        throw new Error('User class_id not found. Please try logging out and back in.');
       }
 
       await templateService.saveTemplate({
         class_id: student.class_id,
         template_name: templateName,
         qtypes: selectedQTypes,
-        difficulties: selectedDifficulties,
-        pts: selectedPTs,
+        difficulties: selectedDifficulties.length > 0 ? selectedDifficulties : [1, 2, 3, 4, 5],
+        pts: selectedPTs.length > 0 ? selectedPTs : allPTs,
         set_size: setSize,
       });
 
       toast({
-        title: "Template saved!",
+        title: "✓ Template saved!",
         description: `"${templateName}" is now available in your saved drills.`,
       });
 
       setShowSaveDialog(false);
       setTemplateName('');
     } catch (err) {
+      console.error('Template save error:', err);
       toast({
         title: "Failed to save",
-        description: "Could not save template. Please try again.",
+        description: err instanceof Error ? err.message : "Could not save template. Please try again.",
         variant: "destructive",
       });
     }
@@ -369,42 +391,88 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
           )}
         </div>
 
+        {/* Dropdown selector with counts */}
+        <div className="mb-4">
+          <Label htmlFor="qtype-select" className="text-sm font-medium mb-2 block">
+            Add Question Type
+          </Label>
+          <Select
+            value=""
+            onValueChange={(qtype) => {
+              if (qtype && !selectedQTypes.includes(qtype)) {
+                toggleQType(qtype);
+              }
+            }}
+            disabled={currentStep !== 1}
+          >
+            <SelectTrigger id="qtype-select" className="w-full">
+              <SelectValue placeholder="Choose a question type..." />
+            </SelectTrigger>
+            <SelectContent className="max-h-[300px] z-50 bg-popover">
+              {allQTypes.map(qtype => {
+                const count = manifest.byQType[qtype] || 0;
+                const isSelected = selectedQTypes.includes(qtype);
+                return (
+                  <SelectItem 
+                    key={qtype} 
+                    value={qtype}
+                    disabled={isSelected}
+                    className="cursor-pointer"
+                  >
+                    {qtype} ({count} questions)
+                  </SelectItem>
+                );
+              })}
+            </SelectContent>
+          </Select>
+        </div>
+
         {/* Selected types */}
         {selectedQTypes.length > 0 && (
           <div className="mb-4 p-3 bg-muted/50 rounded-lg">
             <div className="text-xs font-medium text-muted-foreground mb-2">Selected:</div>
             <div className="flex flex-wrap gap-2">
-              {selectedQTypes.map(qtype => (
-                <Badge
-                  key={qtype}
-                  variant="secondary"
-                  className="pl-2 pr-1 py-1 cursor-pointer hover:bg-secondary/80"
-                  onClick={() => toggleQType(qtype)}
-                >
-                  {qtype}
-                  <X className="w-3 h-3 ml-1" />
-                </Badge>
-              ))}
+              {selectedQTypes.map(qtype => {
+                const count = manifest.byQType[qtype] || 0;
+                return (
+                  <Badge
+                    key={qtype}
+                    variant="secondary"
+                    className="pl-2 pr-1 py-1 cursor-pointer hover:bg-secondary/80 flex items-center gap-1"
+                    onClick={() => toggleQType(qtype)}
+                  >
+                    <span>{qtype}</span>
+                    <span className="text-xs opacity-70">({count})</span>
+                    <X className="w-3 h-3 ml-1" />
+                  </Badge>
+                );
+              })}
             </div>
           </div>
         )}
 
-        {/* Type chips */}
-        <div className="flex flex-wrap gap-2">
-          {allQTypes.map(qtype => (
-            <button
-              key={qtype}
-              onClick={() => toggleQType(qtype)}
-              disabled={currentStep !== 1}
-              className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${
-                selectedQTypes.includes(qtype)
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-background border-border hover:bg-muted/50'
-              } ${currentStep !== 1 ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
-            >
-              {qtype}
-            </button>
-          ))}
+        {/* Type chips - Quick selection */}
+        <div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">Quick select:</div>
+          <div className="flex flex-wrap gap-2">
+            {allQTypes.slice(0, 10).map(qtype => {
+              const count = manifest.byQType[qtype] || 0;
+              return (
+                <button
+                  key={qtype}
+                  onClick={() => toggleQType(qtype)}
+                  disabled={currentStep !== 1}
+                  className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors ${
+                    selectedQTypes.includes(qtype)
+                      ? 'bg-primary text-primary-foreground border-primary'
+                      : 'bg-background border-border hover:bg-muted/50'
+                  } ${currentStep !== 1 ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
+                >
+                  {qtype} ({count})
+                </button>
+              );
+            })}
+          </div>
         </div>
       </Card>
 
