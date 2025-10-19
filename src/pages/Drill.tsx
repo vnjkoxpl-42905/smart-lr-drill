@@ -178,9 +178,15 @@ function DrillContent() {
   }, [session]);
 
   const handleAnswerSelect = (answer: string) => {
-    if (answerLocked) return;
-    setSelectedAnswer(answer);
-    setAnswerLocked(true);
+    // Prevent changes after confidence is selected (truly locked)
+    if (confidence !== null) return;
+    
+    // Toggle behavior: clicking same answer deselects it
+    if (selectedAnswer === answer) {
+      setSelectedAnswer('');
+    } else {
+      setSelectedAnswer(answer);
+    }
   };
 
   // Auto-submit when confidence is selected
@@ -502,7 +508,7 @@ function DrillContent() {
         className={cn(
           "group relative flex items-start gap-4 py-3 px-0",
           "transition-colors duration-150",
-          !answerLocked && "hover:bg-gray-50/50 cursor-pointer",
+          confidence === null && "hover:bg-gray-50/50 cursor-pointer",
           "focus-within:outline focus-within:outline-2 focus-within:outline-gray-900 focus-within:outline-offset-2",
           showFeedback && isCorrect && "bg-green-50",
           showFeedback && !isCorrect && "bg-red-50",
@@ -695,7 +701,7 @@ function DrillContent() {
               <RadioGroup
                 value={selectedAnswer}
                 onValueChange={handleAnswerSelect}
-                disabled={answerLocked}
+                disabled={confidence !== null}
                 className="space-y-0"
               >
                 {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
@@ -708,7 +714,7 @@ function DrillContent() {
             )}
 
             {/* Confidence selector */}
-            {answerLocked && !tutorChatOpen && (
+            {selectedAnswer && !tutorChatOpen && (
               <div className="space-y-3 pt-8">
                 <Label className="text-sm font-medium">Confidence (1–5)</Label>
                 <div className="flex gap-2">
@@ -716,7 +722,10 @@ function DrillContent() {
                     <Button
                       key={level}
                       variant={confidence === level ? 'default' : 'outline'}
-                      onClick={() => setConfidence(level)}
+                      onClick={() => {
+                        setConfidence(level);
+                        setAnswerLocked(true);
+                      }}
                       className="flex-1"
                       disabled={showSolution}
                     >
