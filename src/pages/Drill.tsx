@@ -245,6 +245,8 @@ function DrillContent() {
 
   const handleContinueToReview = () => {
     setTutorChatOpen(false);
+    setTalkModeOpen(false);
+    setTutorMessages([]);
     setWajModalOpen(true);
   };
 
@@ -362,11 +364,12 @@ function DrillContent() {
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // After wrong answer, show voice coach option first if enabled
+    // After wrong answer, determine which coaching mode to use
     if (!correct && settings.voiceCoachEnabled) {
-      setShowVoiceChip(true);
+      // Open Talk Mode (voice with wavelength)
+      setTalkModeOpen(true);
     } else if (!correct && settings.tutorEnabled) {
-      // Fall back to text tutor if voice coach disabled
+      // Open text tutor (Socratic questioning)
       setTutorChatOpen(true);
     } else if (!correct) {
       // Skip both, go straight to WAJ review
@@ -713,7 +716,7 @@ function DrillContent() {
               </div>
             )}
 
-            {/* Joshua Tutor - appears under stimulus when active */}
+            {/* Joshua Tutor (Text) - appears under stimulus when active */}
             {tutorChatOpen && settings.tutorEnabled && (
               <div className="pl-4 mt-4">
                 <TutorChatModal
@@ -722,23 +725,17 @@ function DrillContent() {
                   userAnswer={selectedAnswer}
                   onClose={handleContinueToReview}
                   onTryAgain={handleTryAgain}
-                  onOpenTalkMode={() => {
-                    setTalkModeOpen(true);
-                    setTutorChatOpen(false);
-                  }}
-                  messages={tutorMessages}
-                  onMessagesUpdate={setTutorMessages}
                 />
               </div>
             )}
 
-            {/* Talk Mode Modal */}
+            {/* Voice Coach (Talk Mode) - full-screen voice with wavelength */}
             <TalkModeModal
               open={talkModeOpen}
               question={currentQuestion}
               userAnswer={selectedAnswer}
               existingMessages={tutorMessages}
-              onClose={() => setTalkModeOpen(false)}
+              onClose={handleContinueToReview}
               onMessagesUpdate={setTutorMessages}
             />
 

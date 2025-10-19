@@ -5,7 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
 import { supabase } from '@/integrations/supabase/client';
-import { Loader2, Sparkles, RefreshCw, Mic, Volume2, Waves } from 'lucide-react';
+import { Loader2, Sparkles, RefreshCw } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { LRQuestion } from '@/lib/questionLoader';
 import { toast } from 'sonner';
@@ -21,9 +21,6 @@ interface TutorChatModalProps {
   userAnswer: string;
   onClose: () => void;
   onTryAgain: () => void;
-  onOpenTalkMode?: () => void;
-  messages?: Message[];
-  onMessagesUpdate?: (messages: Message[]) => void;
 }
 
 export function TutorChatModal({ 
@@ -31,36 +28,13 @@ export function TutorChatModal({
   question, 
   userAnswer, 
   onClose, 
-  onTryAgain, 
-  onOpenTalkMode,
-  messages: externalMessages,
-  onMessagesUpdate 
+  onTryAgain 
 }: TutorChatModalProps) {
-  const [messages, setMessages] = React.useState<Message[]>(externalMessages || []);
+  const [messages, setMessages] = React.useState<Message[]>([]);
   const [input, setInput] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
   const [initializing, setInitializing] = React.useState(true);
-  const [voiceInputEnabled, setVoiceInputEnabled] = React.useState(false);
-  const [voiceOutputEnabled, setVoiceOutputEnabled] = React.useState(false);
-  const [isRecording, setIsRecording] = React.useState(false);
-  const [isSpeaking, setIsSpeaking] = React.useState(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
-  const recognitionRef = React.useRef<any>(null);
-  const synthRef = React.useRef<SpeechSynthesisUtterance | null>(null);
-
-  // Sync external messages
-  React.useEffect(() => {
-    if (externalMessages) {
-      setMessages(externalMessages);
-    }
-  }, [externalMessages]);
-
-  // Notify parent of message updates
-  React.useEffect(() => {
-    if (onMessagesUpdate) {
-      onMessagesUpdate(messages);
-    }
-  }, [messages, onMessagesUpdate]);
 
   // Auto-scroll to bottom when messages change
   React.useEffect(() => {
@@ -68,85 +42,6 @@ export function TutorChatModal({
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages]);
-
-  // Initialize speech recognition
-  React.useEffect(() => {
-    if ('webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = 'en-US';
-      
-      recognitionRef.current.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setInput(transcript);
-        setIsRecording(false);
-      };
-      
-      recognitionRef.current.onerror = () => {
-        setIsRecording(false);
-        toast.error('Voice input failed. Please try again.');
-      };
-
-      recognitionRef.current.onend = () => {
-        setIsRecording(false);
-      };
-    }
-    
-    return () => {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop();
-      }
-      window.speechSynthesis.cancel();
-    };
-  }, []);
-
-  // Auto-speak assistant messages when voice output is enabled
-  React.useEffect(() => {
-    if (voiceOutputEnabled && messages.length > 0) {
-      const lastMsg = messages[messages.length - 1];
-      if (lastMsg.role === 'assistant' && !isSpeaking) {
-        speakMessage(lastMsg.content);
-      }
-    }
-  }, [messages, voiceOutputEnabled]);
-
-  const startRecording = () => {
-    if (!recognitionRef.current) {
-      toast.error('Voice input is not supported in your browser.');
-      return;
-    }
-    if (voiceInputEnabled && !isRecording) {
-      setIsRecording(true);
-      recognitionRef.current.start();
-    }
-  };
-
-  const stopRecording = () => {
-    if (recognitionRef.current) {
-      recognitionRef.current.stop();
-      setIsRecording(false);
-    }
-  };
-
-  const speakMessage = (text: string) => {
-    if (!voiceOutputEnabled || !('speechSynthesis' in window)) return;
-    
-    window.speechSynthesis.cancel();
-    
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.rate = 0.95;
-    utterance.pitch = 1.0;
-    utterance.volume = 1.0;
-    
-    utterance.onstart = () => setIsSpeaking(true);
-    utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => setIsSpeaking(false);
-    
-    synthRef.current = utterance;
-    window.speechSynthesis.speak(utterance);
-  };
 
   // Initialize with Socratic question
   React.useEffect(() => {
@@ -277,55 +172,9 @@ export function TutorChatModal({
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 pointer-events-none" />
       
       <CardHeader className="relative px-4 py-3 border-b border-cyan-500/20 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-cyan-400" />
-            <h3 className="text-base font-semibold text-foreground">Joshua - Your LSAT Coach</h3>
-          </div>
-          
-          <div className="flex items-center gap-2">
-            {/* Voice Input Toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setVoiceInputEnabled(!voiceInputEnabled)}
-              className={cn(
-                "transition-colors duration-200",
-                voiceInputEnabled && "bg-cyan-500/20 text-cyan-400"
-              )}
-              title="Voice Input"
-            >
-              <Mic className={cn("w-4 h-4", isRecording && "animate-pulse")} />
-            </Button>
-            
-            {/* Voice Output Toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setVoiceOutputEnabled(!voiceOutputEnabled)}
-              className={cn(
-                "transition-colors duration-200",
-                voiceOutputEnabled && "bg-purple-500/20 text-purple-400"
-              )}
-              title="Voice Output"
-            >
-              <Volume2 className={cn("w-4 h-4", isSpeaking && "animate-pulse")} />
-            </Button>
-            
-            {/* Talk Mode Button */}
-            {onOpenTalkMode && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={onOpenTalkMode}
-                className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
-                title="Switch to Talk Mode"
-              >
-                <Waves className="w-4 h-4 mr-1" />
-                Talk Mode
-              </Button>
-            )}
-          </div>
+        <div className="flex items-center gap-2">
+          <Sparkles className="w-5 h-5 text-cyan-400" />
+          <h3 className="text-base font-semibold text-foreground">Joshua - Your LSAT Coach</h3>
         </div>
       </CardHeader>
 
@@ -365,39 +214,15 @@ export function TutorChatModal({
       </CardContent>
 
       <CardFooter className="relative p-3 border-t border-cyan-500/20 bg-slate-900/50 flex-col gap-2">
-        {!voiceInputEnabled ? (
-          <Textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="Ask a follow-up question..."
-            rows={1}
-            disabled={isLoading}
-            className="resize-none border-cyan-500/30 focus-visible:ring-cyan-500/50 bg-slate-900/50 text-sm"
-          />
-        ) : (
-          <Button
-            onMouseDown={startRecording}
-            onMouseUp={stopRecording}
-            onTouchStart={startRecording}
-            onTouchEnd={stopRecording}
-            disabled={isLoading}
-            className={cn(
-              "w-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30",
-              isRecording && "bg-red-500/20 border-red-500/50 animate-pulse"
-            )}
-            size="lg"
-          >
-            <Mic className="w-5 h-5 mr-2" />
-            {isRecording ? 'Listening...' : 'Press & Hold to Speak'}
-          </Button>
-        )}
-        
-        {voiceInputEnabled && input && (
-          <div className="text-xs text-cyan-400 bg-cyan-500/10 rounded p-2 border border-cyan-500/30">
-            <strong>Transcribed:</strong> {input}
-          </div>
-        )}
+        <Textarea
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyPress={handleKeyPress}
+          placeholder="Ask a follow-up question..."
+          rows={1}
+          disabled={isLoading}
+          className="resize-none border-cyan-500/30 focus-visible:ring-cyan-500/50 bg-slate-900/50 text-sm"
+        />
         
         <div className="flex gap-2 w-full">
           <Button 
