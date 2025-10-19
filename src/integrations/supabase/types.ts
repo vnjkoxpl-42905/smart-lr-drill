@@ -278,6 +278,39 @@ export type Database = {
         }
         Relationships: []
       }
+      flagged_questions: {
+        Row: {
+          class_id: string
+          flagged_at: string | null
+          id: string
+          note: string | null
+          pt: number
+          qid: string
+          qnum: number
+          section: number
+        }
+        Insert: {
+          class_id: string
+          flagged_at?: string | null
+          id?: string
+          note?: string | null
+          pt: number
+          qid: string
+          qnum: number
+          section: number
+        }
+        Update: {
+          class_id?: string
+          flagged_at?: string | null
+          id?: string
+          note?: string | null
+          pt?: number
+          qid?: string
+          qnum?: number
+          section?: number
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           by_level_json: Json | null

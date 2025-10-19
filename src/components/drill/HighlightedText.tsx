@@ -89,13 +89,21 @@ export function HighlightedText({
                 );
               }
               
+              const getHighlightClass = (color: string) => {
+                switch(color) {
+                  case 'yellow': return 'bg-yellow-300/60';
+                  case 'orange': return 'bg-orange-300/60';
+                  case 'green': return 'bg-green-300/60';
+                  case 'underline': return 'underline decoration-blue-500 decoration-2';
+                  default: return 'bg-yellow-300/60';
+                }
+              };
+
               segments.push(
                 <mark
                   key={`highlight-${highlight.id}`}
                   className={cn(
-                    highlight.color === 'underline' 
-                      ? "underline decoration-blue-500 decoration-2" 
-                      : "bg-yellow-300/60",
+                    getHighlightClass(highlight.color),
                     "transition-colors",
                     eraserMode && "cursor-pointer hover:bg-red-400/70"
                   )}
@@ -106,6 +114,7 @@ export function HighlightedText({
                     lineHeight: 'inherit',
                     boxDecorationBreak: 'clone',
                     WebkitBoxDecorationBreak: 'clone',
+                    ...(highlight.color === 'underline' ? { background: 'transparent' } : {})
                   }}
                   onClick={() => eraserMode && onHighlightClick?.(highlight.id)}
                 >
@@ -203,13 +212,21 @@ export function HighlightedText({
           }
           
           // Add highlighted text
+          const getHighlightClass = (color: string) => {
+            switch(color) {
+              case 'yellow': return 'bg-yellow-300/60';
+              case 'orange': return 'bg-orange-300/60';
+              case 'green': return 'bg-green-300/60';
+              case 'underline': return 'underline decoration-blue-500 decoration-2';
+              default: return 'bg-yellow-300/60';
+            }
+          };
+
           segments.push(
             <mark
               key={`highlight-${highlight.id}`}
               className={cn(
-                highlight.color === 'underline' 
-                  ? "underline decoration-blue-500 decoration-2" 
-                  : "bg-yellow-300/60",
+                getHighlightClass(highlight.color),
                 "transition-colors",
                 eraserMode && "cursor-pointer hover:bg-red-400/70"
               )}
@@ -220,6 +237,7 @@ export function HighlightedText({
                 lineHeight: 'inherit',
                 boxDecorationBreak: 'clone',
                 WebkitBoxDecorationBreak: 'clone',
+                ...(highlight.color === 'underline' ? { background: 'transparent' } : {})
               }}
               onClick={() => eraserMode && onHighlightClick?.(highlight.id)}
             >

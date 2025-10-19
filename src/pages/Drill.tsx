@@ -20,8 +20,8 @@ import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
-import { captureTextSelection, mergeOverlappingHighlights, type Highlight } from '@/lib/highlightUtils';
-import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
+import { captureTextSelection, replaceOverlappingHighlights, type Highlight, type HighlightColor } from '@/lib/highlightUtils';
+import { ArrowLeft, CheckCircle, XCircle, Flag } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import type { LRQuestion } from '@/lib/questionLoader';
@@ -58,8 +58,10 @@ function DrillContent() {
   const [hasTimer, setHasTimer] = React.useState(false);
   const [answerLocked, setAnswerLocked] = React.useState(false);
   const [eliminatedAnswers, setEliminatedAnswers] = React.useState<Set<string>>(new Set());
-  const [highlightMode, setHighlightMode] = React.useState<'none' | 'highlight' | 'underline' | 'erase'>('none');
+  const [highlightMode, setHighlightMode] = React.useState<'none' | 'yellow' | 'orange' | 'green' | 'underline' | 'erase'>('none');
   const [highlights, setHighlights] = React.useState<Map<string, Highlight[]>>(new Map());
+  const [highlightHistory, setHighlightHistory] = React.useState<Map<string, Highlight[]>[]>([]);
+  const [isFlagged, setIsFlagged] = React.useState(false);
   
   const timer = hasTimer ? useTimerContext() : null;
 
@@ -190,7 +192,35 @@ function DrillContent() {
     setAnswerLocked(false);
     setEliminatedAnswers(new Set());
     setQuestionStartTime(performance.now());
+    setHighlightHistory([]);
+    
+    // Check if current question is flagged
+    checkIfFlagged();
   }, [session]);
+
+  const checkIfFlagged = async () => {
+    if (!currentQuestion || !user) {
+      setIsFlagged(false);
+      return;
+    }
+    
+    try {
+      const { data, error } = await supabase
+        .from('flagged_questions')
+        .select('id')
+        .eq('qid', currentQuestion.qid)
+        .maybeSingle();
+      
+      if (error && error.code !== 'PGRST116') {
+        console.error('Error checking flag status:', error);
+      }
+      
+      setIsFlagged(!!data);
+    } catch (err) {
+      console.error('Error checking flag:', err);
+      setIsFlagged(false);
+    }
+  };
 
   const handleAnswerSelect = (answer: string) => {
     // Prevent changes after confidence is selected (truly locked)
@@ -447,7 +477,7 @@ function DrillContent() {
   };
 
   const handleTextSelection = (e: React.MouseEvent, section: 'stimulus' | 'stem') => {
-    if (highlightMode !== 'highlight' && highlightMode !== 'underline') return;
+    if (highlightMode === 'none' || highlightMode === 'erase') return;
     
     const container = e.currentTarget as HTMLElement;
     const selection = captureTextSelection(container);
@@ -459,12 +489,21 @@ function DrillContent() {
       start: selection.start,
       end: selection.end,
       text: selection.text,
-      color: highlightMode === 'underline' ? 'underline' : 'yellow',
+      color: highlightMode as HighlightColor,
       section
     };
     
     const currentHighlights = highlights.get(currentQuestion.qid) || [];
-    const updatedHighlights = mergeOverlappingHighlights([...currentHighlights, newHighlight]);
+    
+    // Save to history before making changes
+    const MAX_HISTORY = 20;
+    setHighlightHistory(prev => {
+      const newHistory = [...prev, new Map(highlights)];
+      return newHistory.slice(-MAX_HISTORY);
+    });
+    
+    // Use replaceOverlappingHighlights to implement "last action wins"
+    const updatedHighlights = replaceOverlappingHighlights(currentHighlights, newHighlight);
     
     setHighlights(new Map(highlights.set(currentQuestion.qid, updatedHighlights)));
     
@@ -475,10 +514,58 @@ function DrillContent() {
   const handleHighlightClick = (highlightId: string) => {
     if (highlightMode !== 'erase' || !currentQuestion) return;
     
+    // Save to history before erasing
+    setHighlightHistory(prev => {
+      const newHistory = [...prev, new Map(highlights)];
+      return newHistory.slice(-20);
+    });
+    
     const currentHighlights = highlights.get(currentQuestion.qid) || [];
     const updated = currentHighlights.filter(h => h.id !== highlightId);
     
     setHighlights(new Map(highlights.set(currentQuestion.qid, updated)));
+  };
+
+  const handleUndo = () => {
+    if (highlightHistory.length === 0) return;
+    
+    const previousState = highlightHistory[highlightHistory.length - 1];
+    setHighlights(new Map(previousState));
+    setHighlightHistory(prev => prev.slice(0, -1));
+  };
+
+  const handleToggleFlag = async () => {
+    if (!currentQuestion || !user) return;
+    
+    try {
+      if (isFlagged) {
+        // Unflag
+        const { error } = await supabase
+          .from('flagged_questions')
+          .delete()
+          .eq('qid', currentQuestion.qid);
+        
+        if (error) throw error;
+        setIsFlagged(false);
+      } else {
+        // Flag - class_id is auto-populated by RLS
+        const { error } = await supabase
+          .from('flagged_questions')
+          .insert({
+            qid: currentQuestion.qid,
+            pt: currentQuestion.pt,
+            section: currentQuestion.section,
+            qnum: currentQuestion.qnum,
+          } as any);
+        
+        if (error && error.code !== '23505') { // Ignore unique constraint violation
+          throw error;
+        }
+        setIsFlagged(true);
+      }
+    } catch (err) {
+      console.error('Error toggling flag:', err);
+    }
   };
 
   // Start timer on mount if applicable
@@ -651,7 +738,14 @@ function DrillContent() {
 
       {/* Highlight Toolbar */}
       <div className="px-6 py-2 flex justify-end items-center gap-3 border-b">
-        <HighlightToolbar mode={highlightMode} onModeChange={setHighlightMode} />
+        <HighlightToolbar 
+          mode={highlightMode} 
+          onModeChange={setHighlightMode}
+          isFlagged={isFlagged}
+          onToggleFlag={handleToggleFlag}
+          onUndo={handleUndo}
+          canUndo={highlightHistory.length > 0}
+        />
       </div>
 
       {/* Main Content - Fixed Two-Column Layout */}
@@ -661,7 +755,8 @@ function DrillContent() {
           <div className="p-6 space-y-6">
             {/* Question metadata */}
             <div className="flex items-center gap-3 flex-wrap">
-              <Badge variant="outline">
+              <Badge variant="outline" className="flex items-center gap-1">
+                {isFlagged && <Flag className="w-3 h-3 fill-blue-500 text-blue-500" />}
                 PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
               </Badge>
               <Badge variant="secondary">{currentQuestion.qtype}</Badge>
@@ -690,7 +785,7 @@ function DrillContent() {
                 <div 
                   className={cn(
                     "pl-4 py-2 stimulus",
-                    (highlightMode === 'highlight' || highlightMode === 'underline') ? 'select-text cursor-text' : 'select-none cursor-default'
+                    (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
                   )}
                   onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
                 >
@@ -750,7 +845,7 @@ function DrillContent() {
               <div 
                 className={cn(
                   "text-[18px] font-semibold text-foreground leading-[1.5]",
-                  (highlightMode === 'highlight' || highlightMode === 'underline') ? 'select-text cursor-text' : 'select-none cursor-default'
+                  (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
                 )}
                 onMouseUp={(e) => handleTextSelection(e, 'stem')}
               >

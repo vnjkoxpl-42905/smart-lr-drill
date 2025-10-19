@@ -1,9 +1,11 @@
+export type HighlightColor = 'yellow' | 'orange' | 'green' | 'underline';
+
 export interface Highlight {
   id: string;
   start: number;
   end: number;
   text: string;
-  color: string;
+  color: HighlightColor;
   section: 'stimulus' | 'stem';
 }
 
@@ -45,6 +47,17 @@ export function captureTextSelection(container: HTMLElement): { start: number; e
   };
 }
 
+export function replaceOverlappingHighlights(
+  existing: Highlight[], 
+  newHighlight: Highlight
+): Highlight[] {
+  // Remove any highlights that overlap with the new one (last action wins)
+  const nonOverlapping = existing.filter(h => 
+    h.end <= newHighlight.start || h.start >= newHighlight.end
+  );
+  return [...nonOverlapping, newHighlight];
+}
+
 export function mergeOverlappingHighlights(highlights: Highlight[]): Highlight[] {
   if (highlights.length <= 1) return highlights;
 
@@ -55,12 +68,12 @@ export function mergeOverlappingHighlights(highlights: Highlight[]): Highlight[]
   for (let i = 1; i < sorted.length; i++) {
     const next = sorted[i];
     
-    // If overlapping or adjacent, merge
+    // If overlapping or adjacent, merge and prefer the latest color
     if (next.start <= current.end) {
       current = {
-        ...current,
+        ...next, // Use next highlight's properties (newer)
+        start: Math.min(current.start, next.start),
         end: Math.max(current.end, next.end),
-        text: current.text // Keep first highlight's text
       };
     } else {
       merged.push(current);
