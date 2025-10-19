@@ -1,3 +1,4 @@
+import React from "react";
 import { cn } from "@/lib/utils";
 import type { Highlight } from "@/lib/highlightUtils";
 
@@ -14,30 +15,127 @@ export function HighlightedText({
   onHighlightClick, 
   eraserMode 
 }: HighlightedTextProps) {
-  // Detect 2-speaker pattern (e.g., "Speaker1: text\n\nSpeaker2: text")
-  const twoSpeakerPattern = /^([A-Z][a-z]+):\s+([\s\S]+?)\n\n([A-Z][a-z]+):\s+([\s\S]+)$/;
-  const match = text.match(twoSpeakerPattern);
+  // Detect multi-speaker dialogue pattern (e.g., "Speaker: text\n\nSpeaker: text")
+  const speakerPattern = /^([A-Z][a-z]+):\s+/;
+  const segments = text.split('\n\n');
   
-  if (match) {
-    const [, speaker1, text1, speaker2, text2] = match;
+  // Check if this is a dialogue (at least 2 segments starting with speaker names)
+  const dialogueTurns = segments
+    .map(seg => {
+      const match = seg.match(speakerPattern);
+      if (match) {
+        return {
+          speaker: match[1],
+          text: seg.slice(match[0].length).trim()
+        };
+      }
+      return null;
+    })
+    .filter(Boolean);
+  
+  const isDialogue = dialogueTurns.length >= 2 && dialogueTurns.length === segments.length;
+  
+  if (isDialogue) {
+    // Calculate text offsets for each turn
+    let currentOffset = 0;
+    const turnRanges = dialogueTurns.map(turn => {
+      // Find the turn's position in original text including "Speaker: " prefix
+      const speakerPrefix = `${turn!.speaker}: `;
+      const turnText = turn!.text;
+      const start = currentOffset + speakerPrefix.length;
+      const end = start + turnText.length;
+      currentOffset = text.indexOf('\n\n', currentOffset);
+      if (currentOffset === -1) currentOffset = text.length;
+      else currentOffset += 2; // Skip '\n\n'
+      
+      return { turn: turn!, start, end };
+    });
     
-    // For 2-speaker, render side-by-side with vertical separator
+    // Render as dialogue layout
     return (
-      <div className="grid grid-cols-2 gap-6 relative">
-        {/* Speaker 1 */}
-        <div>
-          <div className="font-semibold mb-2">{speaker1}:</div>
-          <div style={{ lineHeight: 1.6 }}>{text1}</div>
-        </div>
-        
-        {/* Vertical Separator */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border transform -translate-x-1/2" />
-        
-        {/* Speaker 2 */}
-        <div>
-          <div className="font-semibold mb-2">{speaker2}:</div>
-          <div style={{ lineHeight: 1.6 }}>{text2}</div>
-        </div>
+      <div className="space-y-3 mb-5">
+        {turnRanges.map((turnRange, idx) => {
+          const turnLabel = idx === 0 ? 'says' : 'replies';
+          
+          // Find highlights that overlap with this turn
+          const turnHighlights = highlights.filter(h => 
+            h.start < turnRange.end && h.end > turnRange.start
+          ).map(h => ({
+            ...h,
+            start: Math.max(0, h.start - turnRange.start),
+            end: Math.min(turnRange.turn.text.length, h.end - turnRange.start)
+          }));
+          
+          let content: React.ReactNode;
+          
+          if (turnHighlights.length === 0) {
+            content = turnRange.turn.text;
+          } else {
+            // Build segments with highlights
+            const sorted = turnHighlights.sort((a, b) => a.start - b.start);
+            const segments: JSX.Element[] = [];
+            let lastIndex = 0;
+            
+            sorted.forEach((highlight, i) => {
+              if (highlight.start > lastIndex) {
+                segments.push(
+                  <span key={`text-${i}`}>{turnRange.turn.text.slice(lastIndex, highlight.start)}</span>
+                );
+              }
+              
+              segments.push(
+                <mark
+                  key={`highlight-${highlight.id}`}
+                  className={cn(
+                    "bg-yellow-300/60 rounded-sm px-0.5 transition-all",
+                    eraserMode && "cursor-pointer hover:bg-red-300/60 hover:line-through"
+                  )}
+                  onClick={() => eraserMode && onHighlightClick?.(highlight.id)}
+                >
+                  {turnRange.turn.text.slice(highlight.start, highlight.end)}
+                </mark>
+              );
+              
+              lastIndex = highlight.end;
+            });
+            
+            if (lastIndex < turnRange.turn.text.length) {
+              segments.push(
+                <span key="text-end">{turnRange.turn.text.slice(lastIndex)}</span>
+              );
+            }
+            
+            content = <>{segments}</>;
+          }
+          
+          return (
+            <section 
+              key={idx}
+              aria-label={`${turnRange.turn.speaker} ${turnLabel}`}
+              className="flex gap-3"
+            >
+              <div 
+                className="w-[72px] flex-shrink-0 text-right font-semibold text-sm"
+                style={{ 
+                  color: '#111827',
+                  fontVariant: 'small-caps',
+                  paddingTop: '2px'
+                }}
+              >
+                {turnRange.turn.speaker}:
+              </div>
+              <div 
+                className="flex-1 pl-3"
+                style={{ 
+                  borderLeft: '1px solid #E5E7EB',
+                  lineHeight: 1.6 
+                }}
+              >
+                {content}
+              </div>
+            </section>
+          );
+        })}
       </div>
     );
   }
