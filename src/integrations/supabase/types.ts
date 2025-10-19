@@ -280,7 +280,7 @@ export type Database = {
       }
       flagged_questions: {
         Row: {
-          class_id: string
+          class_id: string | null
           flagged_at: string | null
           id: string
           note: string | null
@@ -291,7 +291,7 @@ export type Database = {
           user_id: string | null
         }
         Insert: {
-          class_id: string
+          class_id?: string | null
           flagged_at?: string | null
           id?: string
           note?: string | null
@@ -302,7 +302,7 @@ export type Database = {
           user_id?: string | null
         }
         Update: {
-          class_id?: string
+          class_id?: string | null
           flagged_at?: string | null
           id?: string
           note?: string | null
