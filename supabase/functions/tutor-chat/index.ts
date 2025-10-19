@@ -188,20 +188,26 @@ serve(async (req) => {
 
 
     // Gate phases >= 2 behind auth + prior attempt (only if user is authenticated)
-    // If the user is not signed in, allow coaching to proceed so Talk Mode works in demo mode.
+    // UPDATE: Do not hard-block coaching if no attempt is found. Some classes don't log
+    // attempts per-user. We'll try to detect an attempt but fall back to allowing coaching
+    // so users can always proceed.
     if (phase >= 2 && user && supabaseClient) {
-      const { data: attempt } = await supabaseClient
-        .from('attempts')
-        .select('id')
-        .eq('user_id', user.id)
-        .eq('qid', question.qid)
-        .maybeSingle();
+      try {
+        const { data: attempt, error: attemptErr } = await supabaseClient
+          .from('attempts')
+          .select('id')
+          .eq('qid', question.qid)
+          .limit(1)
+          .maybeSingle();
 
-      if (!attempt) {
-        return new Response(
-          JSON.stringify({ error: 'You must attempt this question before requesting coaching' }),
-          { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
+        // If the query explicitly says "no rows" or returns null, we still allow coaching.
+        // We only block on unexpected auth errors in the future if needed.
+        if (attemptErr) {
+          console.warn('Attempt lookup failed, proceeding without gating:', attemptErr);
+        }
+        // No 403 here anymore — proceed regardless.
+      } catch (err) {
+        console.warn('Attempt lookup exception, proceeding without gating:', err);
       }
     }
 
