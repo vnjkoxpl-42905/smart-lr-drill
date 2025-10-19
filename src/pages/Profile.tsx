@@ -6,8 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Switch } from '@/components/ui/switch';
-import { ArrowLeft, LogOut, User, MessageSquare } from 'lucide-react';
+import { ArrowLeft, LogOut, User, MessageSquare, Award } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import { XPBar } from '@/components/gamification/XPBar';
+import { BadgeGallery } from '@/components/gamification/BadgeGallery';
 
 interface StatsData {
   xp_total?: number;
@@ -15,6 +17,8 @@ interface StatsData {
   overall_answered?: number;
   overall_correct?: number;
   class_id?: string;
+  level?: number;
+  longest_streak?: number;
 }
 
 export default function Profile() {
@@ -48,7 +52,7 @@ export default function Profile() {
         // Then get stats from profiles table using class_id
         const { data: profileStats } = await supabase
           .from('profiles')
-          .select('xp_total, streak_current, overall_answered, overall_correct, class_id')
+          .select('xp_total, streak_current, overall_answered, overall_correct, class_id, level, longest_streak')
           .eq('class_id', student.class_id)
           .maybeSingle();
 
@@ -113,14 +117,28 @@ export default function Profile() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-lg bg-primary/10 text-center">
-                  <div className="text-3xl font-bold text-primary">{stats?.xp_total || 0}</div>
-                  <div className="text-sm text-muted-foreground mt-1">Total XP</div>
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+                <CardContent className="pt-6">
+                  <XPBar 
+                    level={stats?.level || 1} 
+                    totalXP={stats?.xp_total || 0} 
+                    showDetails={true}
+                  />
+                </CardContent>
+              </Card>
+
+              <div className="grid grid-cols-3 gap-4">
+                <div className="p-4 rounded-lg bg-muted/50 text-center">
+                  <div className="text-2xl font-bold">{stats?.streak_current || 0}</div>
+                  <div className="text-xs text-muted-foreground mt-1">Current Streak</div>
                 </div>
-                <div className="p-4 rounded-lg bg-primary/10 text-center">
-                  <div className="text-3xl font-bold text-primary">{stats?.streak_current || 0}</div>
-                  <div className="text-sm text-muted-foreground mt-1">Day Streak</div>
+                <div className="p-4 rounded-lg bg-muted/50 text-center">
+                  <div className="text-2xl font-bold">{stats?.longest_streak || 0}</div>
+                  <div className="text-xs text-muted-foreground mt-1">Best Streak</div>
+                </div>
+                <div className="p-4 rounded-lg bg-muted/50 text-center">
+                  <Award className="w-6 h-6 mx-auto mb-1 text-primary" />
+                  <div className="text-xs text-muted-foreground">Badges</div>
                 </div>
               </div>
 
@@ -178,6 +196,10 @@ export default function Profile() {
             </Button>
           </CardContent>
         </Card>
+
+        <div className="mt-8">
+          <BadgeGallery />
+        </div>
       </div>
     </div>
   );

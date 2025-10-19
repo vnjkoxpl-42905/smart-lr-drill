@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      achievements: {
+        Row: {
+          badge_id: string
+          category: string
+          created_at: string
+          description: string
+          icon: string
+          id: string
+          name: string
+          requirement: Json
+          tier: string
+          xp_reward: number
+        }
+        Insert: {
+          badge_id: string
+          category: string
+          created_at?: string
+          description: string
+          icon: string
+          id?: string
+          name: string
+          requirement: Json
+          tier: string
+          xp_reward?: number
+        }
+        Update: {
+          badge_id?: string
+          category?: string
+          created_at?: string
+          description?: string
+          icon?: string
+          id?: string
+          name?: string
+          requirement?: Json
+          tier?: string
+          xp_reward?: number
+        }
+        Relationships: []
+      }
       attempts: {
         Row: {
           app_version: string | null
@@ -68,6 +107,45 @@ export type Database = {
         }
         Relationships: []
       }
+      challenges: {
+        Row: {
+          active: boolean
+          bonus_rewards: Json | null
+          challenge_type: string
+          description: string
+          ends_at: string
+          id: string
+          name: string
+          requirements: Json
+          starts_at: string
+          xp_reward: number
+        }
+        Insert: {
+          active?: boolean
+          bonus_rewards?: Json | null
+          challenge_type: string
+          description: string
+          ends_at: string
+          id?: string
+          name: string
+          requirements: Json
+          starts_at?: string
+          xp_reward?: number
+        }
+        Update: {
+          active?: boolean
+          bonus_rewards?: Json | null
+          challenge_type?: string
+          description?: string
+          ends_at?: string
+          id?: string
+          name?: string
+          requirements?: Json
+          starts_at?: string
+          xp_reward?: number
+        }
+        Relationships: []
+      }
       concept_library: {
         Row: {
           application: string | null
@@ -104,6 +182,36 @@ export type Database = {
           keywords?: string[] | null
           reasoning_type?: string | null
           related_concepts?: string[] | null
+        }
+        Relationships: []
+      }
+      daily_stats: {
+        Row: {
+          class_id: string
+          correct_answers: number
+          date: string
+          id: string
+          questions_answered: number
+          time_spent_ms: number
+          xp_earned: number
+        }
+        Insert: {
+          class_id: string
+          correct_answers?: number
+          date: string
+          id?: string
+          questions_answered?: number
+          time_spent_ms?: number
+          xp_earned?: number
+        }
+        Update: {
+          class_id?: string
+          correct_answers?: number
+          date?: string
+          id?: string
+          questions_answered?: number
+          time_spent_ms?: number
+          xp_earned?: number
         }
         Relationships: []
       }
@@ -172,7 +280,11 @@ export type Database = {
           by_level_json: Json | null
           by_qtype_json: Json | null
           class_id: string
+          daily_goal_questions: number | null
           daily_goal_streak: number | null
+          last_practice_date: string | null
+          level: number | null
+          longest_streak: number | null
           overall_answered: number | null
           overall_avg_ms: number | null
           overall_correct: number | null
@@ -184,7 +296,11 @@ export type Database = {
           by_level_json?: Json | null
           by_qtype_json?: Json | null
           class_id: string
+          daily_goal_questions?: number | null
           daily_goal_streak?: number | null
+          last_practice_date?: string | null
+          level?: number | null
+          longest_streak?: number | null
           overall_answered?: number | null
           overall_avg_ms?: number | null
           overall_correct?: number | null
@@ -196,7 +312,11 @@ export type Database = {
           by_level_json?: Json | null
           by_qtype_json?: Json | null
           class_id?: string
+          daily_goal_questions?: number | null
           daily_goal_streak?: number | null
+          last_practice_date?: string | null
+          level?: number | null
+          longest_streak?: number | null
           overall_answered?: number | null
           overall_avg_ms?: number | null
           overall_correct?: number | null
@@ -436,6 +556,73 @@ export type Database = {
           reasoning_type?: string | null
         }
         Relationships: []
+      }
+      user_achievements: {
+        Row: {
+          achievement_id: string
+          class_id: string
+          earned_at: string
+          id: string
+          progress: number | null
+        }
+        Insert: {
+          achievement_id: string
+          class_id: string
+          earned_at?: string
+          id?: string
+          progress?: number | null
+        }
+        Update: {
+          achievement_id?: string
+          class_id?: string
+          earned_at?: string
+          id?: string
+          progress?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_achievements_achievement_id_fkey"
+            columns: ["achievement_id"]
+            isOneToOne: false
+            referencedRelation: "achievements"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_challenges: {
+        Row: {
+          challenge_id: string
+          claimed: boolean
+          class_id: string
+          completed_at: string | null
+          id: string
+          progress: Json
+        }
+        Insert: {
+          challenge_id: string
+          claimed?: boolean
+          class_id: string
+          completed_at?: string | null
+          id?: string
+          progress?: Json
+        }
+        Update: {
+          challenge_id?: string
+          claimed?: boolean
+          class_id?: string
+          completed_at?: string | null
+          id?: string
+          progress?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_challenges_challenge_id_fkey"
+            columns: ["challenge_id"]
+            isOneToOne: false
+            referencedRelation: "challenges"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       wrong_answer_journal: {
         Row: {
