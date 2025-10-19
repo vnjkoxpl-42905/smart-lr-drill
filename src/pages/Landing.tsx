@@ -128,6 +128,9 @@ export default function Landing() {
             <Button variant="outline" onClick={() => navigate('/waj')}>
               Wrong Answer Journal
             </Button>
+            <Button variant="outline" onClick={() => navigate('/dashboard')}>
+              Dashboard
+            </Button>
           </div>
         </div>
         <h1 className="text-4xl font-bold mb-4">LR Smart Drill</h1>

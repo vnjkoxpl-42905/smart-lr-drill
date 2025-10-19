@@ -1,560 +1,420 @@
-import { useState, useEffect } from "react";
-import * as React from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/contexts/AuthContext";
-import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import {
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  Radar,
-  ResponsiveContainer,
-  ScatterChart,
-  Scatter,
-  XAxis,
-  YAxis,
-  ZAxis,
-  Tooltip,
-  Cell,
-  BarChart,
-  Bar,
-  PieChart,
-  Pie,
-  Legend,
-} from "recharts";
-import { Flame, TrendingUp, Award, Brain, Target, Zap } from "lucide-react";
+import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { ChevronLeft } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { questionBank } from '@/lib/questionLoader';
 
 interface AnalyticsData {
-  radarData: Array<{ dimension: string; value: number; max: number }>;
-  questionTypeStats: Array<{ type: string; accuracy: number; count: number; avgTime: number }>;
-  difficultyStats: Array<{ level: number; accuracy: number; count: number }>;
-  recentAttempts: Array<{ date: string; correct: number; total: number }>;
-  totalAttempts: number;
-  overallAccuracy: number;
-  avgTimeMs: number;
-  streak: number;
-  xp: number;
+  accuracyByType: Record<string, { correct: number; total: number; accuracy: number }>;
+  accuracyByLevel: Record<number, { correct: number; total: number; accuracy: number }>;
+  accuracyByTypeLevel: Record<string, Record<number, { correct: number; total: number; accuracy: number }>>;
+  trend7d: Record<string, number>;
 }
 
-export default function Analytics() {
+interface OpportunityArea {
+  type: string;
+  level: number;
+  impact: number;
+  currentAccuracy: number;
+  gap: number;
+}
+
+const Analytics = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const [data, setData] = useState<AnalyticsData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [coachInsight, setCoachInsight] = useState(0);
+  const [data, setData] = React.useState<AnalyticsData | null>(null);
+  const [opportunities, setOpportunities] = React.useState<OpportunityArea[]>([]);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    if (!user) navigate('/auth');
-  }, [user, navigate]);
-
-  const coachInsights = [
-    "Your accuracy on 'Flaw' questions has improved 23% this week! 🎯",
-    "Try tackling Level 4 questions - you're ready for the challenge! 💪",
-    "Speed tip: You're fastest on 'Must be True' - use that confidence! ⚡",
-    "Your consistency streak is growing - keep the momentum! 🔥",
-    "Weakness identified: 'Parallel Reasoning' - revisit those strategies! 📚",
-    "You've mastered Level 3 questions - time to level up! 🚀",
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCoachInsight((prev) => (prev + 1) % coachInsights.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [coachInsights.length]);
-
-  useEffect(() => {
-    if (user) loadAnalytics();
+    if (!user) {
+      navigate('/auth');
+      return;
+    }
+    loadAnalytics();
   }, [user]);
 
   const loadAnalytics = async () => {
-    if (!user) return;
-
     try {
-      // Fetch attempts
-      const { data: attempts, error: attemptsError } = await (supabase as any)
-        .from("attempts")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("timestamp_iso", { ascending: false });
+      const now = new Date();
+      const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      const fourteenDaysAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
 
-      if (attemptsError) throw attemptsError;
+      // Fetch attempts from last 30 days
+      const { data: attempts, error } = await supabase
+        .from('attempts')
+        .select('qtype, level, correct, timestamp_iso')
+        .gte('timestamp_iso', thirtyDaysAgo.toISOString())
+        .order('timestamp_iso', { ascending: false });
 
-      // Fetch profile
-      const { data: profile, error: profileError } = await (supabase as any)
-        .from("profiles")
-        .select("*")
-        .eq("id", user.id)
-        .maybeSingle();
+      if (error) throw error;
 
-      if (profileError) throw profileError;
+      // Calculate accuracy by type
+      const typeStats: Record<string, { correct: number; total: number }> = {};
+      const levelStats: Record<number, { correct: number; total: number }> = {};
+      const typeLevelStats: Record<string, Record<number, { correct: number; total: number }>> = {};
+      
+      // For 7-day trend
+      const type7d: Record<string, { correct: number; total: number }> = {};
+      const typePrev7d: Record<string, { correct: number; total: number }> = {};
 
-      if (!attempts || attempts.length === 0) {
-        setData({
-          radarData: [],
-          questionTypeStats: [],
-          difficultyStats: [],
-          recentAttempts: [],
-          totalAttempts: 0,
-          overallAccuracy: 0,
-          avgTimeMs: 0,
-          streak: profile?.streak_current || 0,
-          xp: profile?.xp_total || 0,
+      attempts?.forEach(attempt => {
+        const { qtype, level, correct, timestamp_iso } = attempt;
+        const timestamp = new Date(timestamp_iso);
+
+        // All 30 days
+        if (!typeStats[qtype]) typeStats[qtype] = { correct: 0, total: 0 };
+        typeStats[qtype].total++;
+        if (correct) typeStats[qtype].correct++;
+
+        if (!levelStats[level]) levelStats[level] = { correct: 0, total: 0 };
+        levelStats[level].total++;
+        if (correct) levelStats[level].correct++;
+
+        if (!typeLevelStats[qtype]) typeLevelStats[qtype] = {};
+        if (!typeLevelStats[qtype][level]) typeLevelStats[qtype][level] = { correct: 0, total: 0 };
+        typeLevelStats[qtype][level].total++;
+        if (correct) typeLevelStats[qtype][level].correct++;
+
+        // Last 7 days vs previous 7 days
+        if (timestamp >= sevenDaysAgo) {
+          if (!type7d[qtype]) type7d[qtype] = { correct: 0, total: 0 };
+          type7d[qtype].total++;
+          if (correct) type7d[qtype].correct++;
+        } else if (timestamp >= fourteenDaysAgo) {
+          if (!typePrev7d[qtype]) typePrev7d[qtype] = { correct: 0, total: 0 };
+          typePrev7d[qtype].total++;
+          if (correct) typePrev7d[qtype].correct++;
+        }
+      });
+
+      // Calculate accuracy percentages
+      const accuracyByType: Record<string, { correct: number; total: number; accuracy: number }> = {};
+      Object.entries(typeStats).forEach(([type, stats]) => {
+        accuracyByType[type] = {
+          ...stats,
+          accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0,
+        };
+      });
+
+      const accuracyByLevel: Record<number, { correct: number; total: number; accuracy: number }> = {};
+      Object.entries(levelStats).forEach(([level, stats]) => {
+        accuracyByLevel[Number(level)] = {
+          ...stats,
+          accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0,
+        };
+      });
+
+      const accuracyByTypeLevel: Record<string, Record<number, { correct: number; total: number; accuracy: number }>> = {};
+      Object.entries(typeLevelStats).forEach(([type, levels]) => {
+        accuracyByTypeLevel[type] = {};
+        Object.entries(levels).forEach(([level, stats]) => {
+          accuracyByTypeLevel[type][Number(level)] = {
+            ...stats,
+            accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0,
+          };
         });
-        setIsLoading(false);
-        return;
-      }
+      });
 
-      // Calculate radar data
-      const totalAttempts = attempts.length;
-      const correctAttempts = attempts.filter((a) => a.correct).length;
-      const overallAccuracy = (correctAttempts / totalAttempts) * 100;
-      const avgTime = attempts.reduce((sum, a) => sum + a.time_ms, 0) / totalAttempts;
-
-      // Calculate consistency (std dev of accuracy over time)
-      const dailyAccuracy = calculateDailyAccuracy(attempts);
-      const consistency = 100 - Math.min(calculateStdDev(dailyAccuracy.map(d => d.accuracy)), 30);
-
-      // Question type diversity
-      const uniqueTypes = new Set(attempts.map((a) => a.qtype)).size;
-      const typeDiversity = Math.min((uniqueTypes / 15) * 100, 100);
-
-      // Difficulty mastery
-      const avgDifficulty = attempts.reduce((sum, a) => sum + a.level, 0) / totalAttempts;
-      const difficultyMastery = Math.min((avgDifficulty / 5) * 100, 100);
-
-      // Speed score (faster is better, normalized)
-      const speedScore = Math.max(0, 100 - ((avgTime - 60000) / 1000));
-
-      // Growth trajectory (last 20 vs first 20)
-      const growthScore = calculateGrowthScore(attempts);
-
-      const radarData = [
-        { dimension: "Accuracy", value: overallAccuracy, max: 100 },
-        { dimension: "Speed", value: Math.max(0, Math.min(speedScore, 100)), max: 100 },
-        { dimension: "Consistency", value: consistency, max: 100 },
-        { dimension: "Difficulty", value: difficultyMastery, max: 100 },
-        { dimension: "Breadth", value: typeDiversity, max: 100 },
-        { dimension: "Growth", value: growthScore, max: 100 },
-      ];
-
-      // Question type stats
-      const typeStats = calculateTypeStats(attempts);
-
-      // Difficulty stats
-      const diffStats = calculateDifficultyStats(attempts);
-
-      // Recent attempts for heatmap
-      const recentAttempts = dailyAccuracy.slice(0, 90).reverse();
+      // Calculate 7-day trends
+      const trend7d: Record<string, number> = {};
+      Object.keys(accuracyByType).forEach(type => {
+        const current7d = type7d[type] ? (type7d[type].correct / type7d[type].total) * 100 : 0;
+        const prev7d = typePrev7d[type] ? (typePrev7d[type].correct / typePrev7d[type].total) * 100 : 0;
+        trend7d[type] = current7d - prev7d;
+      });
 
       setData({
-        radarData,
-        questionTypeStats: typeStats,
-        difficultyStats: diffStats,
-        recentAttempts,
-        totalAttempts,
-        overallAccuracy,
-        avgTimeMs: avgTime,
-        streak: profile?.streak_current || 0,
-        xp: profile?.xp_total || 0,
+        accuracyByType,
+        accuracyByLevel,
+        accuracyByTypeLevel,
+        trend7d,
       });
+
+      // Calculate impact scores and find top 3 opportunities
+      const targetAccuracy = 85;
+      const totalAttempts = attempts?.length || 1;
+      const impactScores: OpportunityArea[] = [];
+
+      Object.entries(accuracyByTypeLevel).forEach(([type, levels]) => {
+        Object.entries(levels).forEach(([level, stats]) => {
+          const currentAccuracy = stats.accuracy;
+          const gap = Math.max(0, targetAccuracy - currentAccuracy);
+          const recentShare = stats.total / totalAttempts;
+          const impact = Math.round(100 * gap * recentShare);
+
+          if (impact > 0) {
+            impactScores.push({
+              type,
+              level: Number(level),
+              impact,
+              currentAccuracy,
+              gap,
+            });
+          }
+        });
+      });
+
+      // Sort by impact and take top 3
+      const topOpportunities = impactScores
+        .sort((a, b) => b.impact - a.impact)
+        .slice(0, 3);
+
+      setOpportunities(topOpportunities);
+      setLoading(false);
     } catch (error) {
-      console.error("Error loading analytics:", error);
-    } finally {
-      setIsLoading(false);
+      console.error('Error loading analytics:', error);
+      setLoading(false);
     }
   };
 
-  const calculateDailyAccuracy = (attempts: any[]) => {
-    const dailyMap = new Map<string, { correct: number; total: number }>();
-    attempts.forEach((a) => {
-      const date = new Date(a.timestamp_iso).toISOString().split("T")[0];
-      const existing = dailyMap.get(date) || { correct: 0, total: 0 };
-      dailyMap.set(date, {
-        correct: existing.correct + (a.correct ? 1 : 0),
-        total: existing.total + 1,
-      });
+  const startDrill = (type?: string, level?: number, count = 6) => {
+    const manifest = questionBank.getManifest();
+    const pts = Object.keys(manifest.byPT).map(Number);
+    
+    navigate('/drill', {
+      state: {
+        mode: 'type-drill',
+        config: {
+          qtypes: type ? [type] : [],
+          difficulties: level ? [level] : [],
+          pts,
+          count,
+        },
+      },
     });
-
-    return Array.from(dailyMap.entries())
-      .map(([date, stats]) => ({
-        date,
-        accuracy: (stats.correct / stats.total) * 100,
-        correct: stats.correct,
-        total: stats.total,
-      }))
-      .sort((a, b) => b.date.localeCompare(a.date));
   };
 
-  const calculateStdDev = (values: number[]) => {
-    if (values.length === 0) return 0;
-    const avg = values.reduce((sum, v) => sum + v, 0) / values.length;
-    const squareDiffs = values.map((v) => Math.pow(v - avg, 2));
-    const avgSquareDiff = squareDiffs.reduce((sum, v) => sum + v, 0) / values.length;
-    return Math.sqrt(avgSquareDiff);
-  };
-
-  const calculateGrowthScore = (attempts: any[]) => {
-    if (attempts.length < 20) return 50;
-    const recent = attempts.slice(0, 20);
-    const old = attempts.slice(-20);
-    const recentAcc = recent.filter((a) => a.correct).length / recent.length;
-    const oldAcc = old.filter((a) => a.correct).length / old.length;
-    return Math.min(Math.max(((recentAcc - oldAcc) + 0.5) * 100, 0), 100);
-  };
-
-  const calculateTypeStats = (attempts: any[]) => {
-    const typeMap = new Map<string, { correct: number; total: number; timeSum: number }>();
-    attempts.forEach((a) => {
-      const existing = typeMap.get(a.qtype) || { correct: 0, total: 0, timeSum: 0 };
-      typeMap.set(a.qtype, {
-        correct: existing.correct + (a.correct ? 1 : 0),
-        total: existing.total + 1,
-        timeSum: existing.timeSum + a.time_ms,
-      });
-    });
-
-    return Array.from(typeMap.entries())
-      .map(([type, stats]) => ({
-        type,
-        accuracy: (stats.correct / stats.total) * 100,
-        count: stats.total,
-        avgTime: stats.timeSum / stats.total,
-      }))
-      .sort((a, b) => b.count - a.count);
-  };
-
-  const calculateDifficultyStats = (attempts: any[]) => {
-    const diffMap = new Map<number, { correct: number; total: number }>();
-    attempts.forEach((a) => {
-      const existing = diffMap.get(a.level) || { correct: 0, total: 0 };
-      diffMap.set(a.level, {
-        correct: existing.correct + (a.correct ? 1 : 0),
-        total: existing.total + 1,
-      });
-    });
-
-    return Array.from(diffMap.entries())
-      .map(([level, stats]) => ({
-        level,
-        accuracy: (stats.correct / stats.total) * 100,
-        count: stats.total,
-      }))
-      .sort((a, b) => a.level - b.level);
-  };
-
-  const getHeatmapColor = (accuracy: number, total: number) => {
-    if (total === 0) return "hsl(var(--muted))";
-    if (accuracy >= 80) return "hsl(142 71% 45%)";
-    if (accuracy >= 60) return "hsl(142 71% 65%)";
-    if (accuracy >= 40) return "hsl(38 92% 50%)";
-    return "hsl(0 72% 51%)";
-  };
-
-  const getMasteryLevel = (accuracy: number) => {
-    if (accuracy >= 90) return { label: "Mastered", color: "hsl(142 71% 45%)" };
-    if (accuracy >= 75) return { label: "Proficient", color: "hsl(142 71% 65%)" };
-    if (accuracy >= 60) return { label: "Developing", color: "hsl(38 92% 50%)" };
-    return { label: "Needs Work", color: "hsl(0 72% 51%)" };
-  };
-
-  if (isLoading) {
+  if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-lg">Loading analytics...</p>
-      </div>
-    );
-  }
-
-  if (!data || data.totalAttempts === 0) {
-    return (
-      <div className="min-h-screen p-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="text-4xl font-bold">Analytics Dashboard</h1>
-            <Button variant="outline" onClick={() => navigate("/")}>
-              Back to Home
-            </Button>
-          </div>
-          <Card className="p-12 text-center">
-            <Brain className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-            <h2 className="text-2xl font-bold mb-2">No Data Yet</h2>
-            <p className="text-muted-foreground mb-6">
-              Complete some drills to see your analytics and track your progress!
-            </p>
-            <Button onClick={() => navigate("/")}>Start Your First Drill</Button>
-          </Card>
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-gray-300 border-t-gray-900 rounded-full animate-spin" />
+          <p className="text-sm text-gray-600">Loading analytics...</p>
         </div>
       </div>
     );
   }
+
+  if (!data) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <p className="text-gray-600">No data available</p>
+      </div>
+    );
+  }
+
+  const sortedTypes = Object.keys(data.accuracyByType).sort();
 
   return (
-    <div className="min-h-screen p-8 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-4xl font-bold mb-2">Analytics Dashboard</h1>
-            <p className="text-muted-foreground">Track your progress and master logical reasoning</p>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <div className="border-b border-gray-200">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => navigate('/')}
+              className="gap-2 text-gray-900"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              Back
+            </Button>
+            <h1 className="text-xl font-semibold text-gray-900">Analytics</h1>
+            <div className="w-20" />
           </div>
-          <Button variant="outline" onClick={() => navigate("/")}>
-            Back to Home
-          </Button>
         </div>
+      </div>
 
-        {/* Top Stats Row */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <Card className="p-6 bg-gradient-to-br from-background to-muted/50">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-muted-foreground mb-1">Total XP</p>
-                <p className="text-3xl font-bold">{data.xp.toLocaleString()}</p>
-              </div>
-              <Award className="w-10 h-10 text-primary" />
-            </div>
-          </Card>
-
-          <Card className="p-6 bg-gradient-to-br from-background to-success/10">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-muted-foreground mb-1">Accuracy</p>
-                <p className="text-3xl font-bold">{data.overallAccuracy.toFixed(1)}%</p>
-              </div>
-              <Target className="w-10 h-10" style={{ color: "hsl(142 71% 45%)" }} />
-            </div>
-          </Card>
-
-          <Card className="p-6 bg-gradient-to-br from-background to-warning/10">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-muted-foreground mb-1">Current Streak</p>
-                <p className="text-3xl font-bold">{data.streak} days</p>
-              </div>
-              <Flame className="w-10 h-10" style={{ color: "hsl(38 92% 50%)" }} />
-            </div>
-          </Card>
-
-          <Card className="p-6 bg-gradient-to-br from-background to-muted/50">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-muted-foreground mb-1">Avg Speed</p>
-                <p className="text-3xl font-bold">{(data.avgTimeMs / 1000).toFixed(0)}s</p>
-              </div>
-              <Zap className="w-10 h-10 text-primary" />
-            </div>
-          </Card>
-        </div>
-
-        {/* AI Coach Insight */}
-        <Card className="p-6 mb-8 bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 animate-fade-in">
-          <div className="flex items-start gap-4">
-            <div className="p-3 bg-primary rounded-lg">
-              <Brain className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <div className="flex-1">
-              <h3 className="font-semibold mb-1 flex items-center gap-2">
-                AI Coach Insight
-                <TrendingUp className="w-4 h-4 text-success" />
-              </h3>
-              <p className="text-muted-foreground">{coachInsights[coachInsight]}</p>
-            </div>
-          </div>
-        </Card>
-
-        {/* Main Charts Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Performance Radar */}
-          <Card className="p-6">
-            <h3 className="text-xl font-bold mb-4">Performance Radar</h3>
-            <ResponsiveContainer width="100%" height={300}>
-              <RadarChart data={data.radarData}>
-                <PolarGrid stroke="hsl(var(--border))" />
-                <PolarAngleAxis dataKey="dimension" tick={{ fill: "hsl(var(--foreground))", fontSize: 12 }} />
-                <PolarRadiusAxis angle={90} domain={[0, 100]} tick={{ fill: "hsl(var(--muted-foreground))" }} />
-                <Radar
-                  name="Performance"
-                  dataKey="value"
-                  stroke="hsl(var(--primary))"
-                  fill="hsl(var(--primary))"
-                  fillOpacity={0.5}
-                />
-              </RadarChart>
-            </ResponsiveContainer>
-          </Card>
-
-          {/* Speed vs Accuracy Scatter */}
-          <Card className="p-6">
-            <h3 className="text-xl font-bold mb-4">Speed vs Accuracy by Type</h3>
-            <ResponsiveContainer width="100%" height={300}>
-              <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-                <XAxis
-                  type="number"
-                  dataKey="avgTime"
-                  name="Avg Time (ms)"
-                  tickFormatter={(value) => `${(value / 1000).toFixed(0)}s`}
-                  tick={{ fill: "hsl(var(--muted-foreground))" }}
-                />
-                <YAxis
-                  type="number"
-                  dataKey="accuracy"
-                  name="Accuracy"
-                  domain={[0, 100]}
-                  tick={{ fill: "hsl(var(--muted-foreground))" }}
-                />
-                <ZAxis type="number" dataKey="count" range={[50, 400]} />
-                <Tooltip
-                  content={({ payload }) => {
-                    if (!payload || payload.length === 0) return null;
-                    const data = payload[0].payload;
-                    return (
-                      <div className="bg-popover border rounded-md p-3 shadow-md">
-                        <p className="font-semibold">{data.type}</p>
-                        <p className="text-sm">Accuracy: {data.accuracy.toFixed(1)}%</p>
-                        <p className="text-sm">Avg Time: {(data.avgTime / 1000).toFixed(1)}s</p>
-                        <p className="text-sm">Attempts: {data.count}</p>
-                      </div>
-                    );
-                  }}
-                />
-                <Scatter data={data.questionTypeStats} fill="hsl(var(--primary))">
-                  {data.questionTypeStats.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={
-                        entry.accuracy >= 80
-                          ? "hsl(142 71% 45%)"
-                          : entry.accuracy >= 60
-                          ? "hsl(38 92% 50%)"
-                          : "hsl(0 72% 51%)"
-                      }
-                    />
-                  ))}
-                </Scatter>
-              </ScatterChart>
-            </ResponsiveContainer>
-          </Card>
-        </div>
-
-        {/* Question Type Mastery Rings */}
-        <Card className="p-6 mb-8">
-          <h3 className="text-xl font-bold mb-6">Question Type Mastery</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {data.questionTypeStats.slice(0, 10).map((stat) => {
-              const mastery = getMasteryLevel(stat.accuracy);
-              return (
-                <div key={stat.type} className="text-center">
-                  <div className="relative w-24 h-24 mx-auto mb-3">
-                    <svg className="transform -rotate-90 w-24 h-24">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
+        {/* Opportunity Rings */}
+        <div className="mb-12">
+          <h2 className="text-lg font-semibold text-gray-900 mb-6">Top Opportunities</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {opportunities.map((opp, idx) => (
+              <Card
+                key={idx}
+                className="p-6 bg-gray-50 border-gray-200 hover:border-gray-900 transition-colors cursor-pointer"
+                onClick={() => startDrill(opp.type, opp.level)}
+              >
+                <div className="flex flex-col items-center">
+                  <div className="relative w-32 h-32 mb-4">
+                    <svg viewBox="0 0 100 100" className="transform -rotate-90">
                       <circle
-                        cx="48"
-                        cy="48"
+                        cx="50"
+                        cy="50"
                         r="40"
-                        stroke="hsl(var(--muted))"
-                        strokeWidth="8"
                         fill="none"
+                        stroke="#E5E7EB"
+                        strokeWidth="8"
                       />
                       <circle
-                        cx="48"
-                        cy="48"
+                        cx="50"
+                        cy="50"
                         r="40"
-                        stroke={mastery.color}
-                        strokeWidth="8"
                         fill="none"
-                        strokeDasharray={`${(stat.accuracy / 100) * 251.2} 251.2`}
-                        strokeLinecap="round"
+                        stroke="#111827"
+                        strokeWidth="8"
+                        strokeDasharray={`${(opp.currentAccuracy / 100) * 251.2} 251.2`}
                       />
                     </svg>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-lg font-bold">{stat.accuracy.toFixed(0)}%</span>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <div className="text-2xl font-bold text-gray-900">{opp.impact}</div>
+                      <div className="text-xs text-gray-600">Impact</div>
                     </div>
                   </div>
-                  <p className="font-semibold text-sm truncate">{stat.type}</p>
-                  <p className="text-xs text-muted-foreground">{mastery.label}</p>
-                  <p className="text-xs text-muted-foreground">{stat.count} attempts</p>
+                  <div className="text-center">
+                    <div className="font-semibold text-gray-900">{opp.type} · L{opp.level}</div>
+                    <div className="text-sm text-gray-600 mt-1">Start focused drill</div>
+                  </div>
                 </div>
-              );
-            })}
+              </Card>
+            ))}
           </div>
-        </Card>
+        </div>
 
-        {/* Difficulty Distribution */}
-        <Card className="p-6 mb-8">
-          <h3 className="text-xl font-bold mb-4">Difficulty Level Performance</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={data.difficultyStats}>
-              <XAxis
-                dataKey="level"
-                tick={{ fill: "hsl(var(--muted-foreground))" }}
-                tickFormatter={(value) => `Level ${value}`}
-              />
-              <YAxis tick={{ fill: "hsl(var(--muted-foreground))" }} domain={[0, 100]} />
-              <Tooltip
-                content={({ payload }) => {
-                  if (!payload || payload.length === 0) return null;
-                  const data = payload[0].payload;
-                  return (
-                    <div className="bg-popover border rounded-md p-3 shadow-md">
-                      <p className="font-semibold">Level {data.level}</p>
-                      <p className="text-sm">Accuracy: {data.accuracy.toFixed(1)}%</p>
-                      <p className="text-sm">Attempts: {data.count}</p>
+        {/* Type Bars & Matrix Layout */}
+        <div className="grid lg:grid-cols-[1fr_auto] gap-8">
+          {/* Type Bars */}
+          <div>
+            <h2 className="text-lg font-semibold text-gray-900 mb-6">Performance by Type</h2>
+            <div className="space-y-4">
+              {sortedTypes.map(type => {
+                const stats = data.accuracyByType[type];
+                const trend = data.trend7d[type] || 0;
+                
+                return (
+                  <div
+                    key={type}
+                    className="group cursor-pointer"
+                    onClick={() => startDrill(type, undefined)}
+                  >
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="w-48 text-sm text-gray-900 font-medium">{type}</div>
+                      <div className="flex-1 h-8 bg-gray-50 border border-gray-200 rounded relative overflow-hidden group-hover:border-gray-900 transition-colors">
+                        <div
+                          className="h-full bg-gray-900 transition-all"
+                          style={{ width: `${stats.accuracy}%` }}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-end pr-2">
+                          <span className="text-xs text-gray-600 font-medium">
+                            {Math.round(stats.accuracy)}%
+                          </span>
+                        </div>
+                      </div>
+                      <div className="w-12 text-xs text-gray-600 text-right">
+                        {trend > 0 ? '↑' : trend < 0 ? '↓' : '—'}
+                      </div>
                     </div>
-                  );
-                }}
-              />
-              <Bar dataKey="accuracy" radius={[8, 8, 0, 0]}>
-                {data.difficultyStats.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={
-                      entry.accuracy >= 80
-                        ? "hsl(142 71% 45%)"
-                        : entry.accuracy >= 60
-                        ? "hsl(38 92% 50%)"
-                        : "hsl(0 72% 51%)"
-                    }
-                  />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </Card>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
-        {/* Practice Heatmap */}
-        <Card className="p-6">
-          <h3 className="text-xl font-bold mb-4">Practice Activity (Last 90 Days)</h3>
-          <div className="grid grid-cols-10 gap-2">
-            {data.recentAttempts.map((day, index) => {
-              const accuracy = (day.correct / day.total) * 100;
+          {/* Matrix */}
+          <div className="lg:w-80">
+            <h2 className="text-lg font-semibold text-gray-900 mb-6">Type × Level Matrix</h2>
+            <Card className="p-4 bg-gray-50 border-gray-200">
+              <div className="space-y-2">
+                <div className="flex gap-2 mb-4">
+                  <div className="w-24" />
+                  {[1, 2, 3, 4, 5].map(level => (
+                    <div key={level} className="w-10 text-center text-xs text-gray-600 font-medium">
+                      L{level}
+                    </div>
+                  ))}
+                </div>
+                {sortedTypes.map(type => (
+                  <div key={type} className="flex gap-2 items-center">
+                    <div className="w-24 text-xs text-gray-900 truncate">{type}</div>
+                    {[1, 2, 3, 4, 5].map(level => {
+                      const stats = data.accuracyByTypeLevel[type]?.[level];
+                      const accuracy = stats?.accuracy || 0;
+                      const size = Math.max(4, (accuracy / 100) * 24);
+                      const opacity = stats ? 1 - (accuracy / 100) * 0.5 : 0.2;
+                      
+                      return (
+                        <div
+                          key={level}
+                          className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-gray-200 rounded transition-colors"
+                          onClick={() => startDrill(type, level)}
+                        >
+                          <div
+                            className="rounded-full bg-gray-900 transition-all"
+                            style={{
+                              width: `${size}px`,
+                              height: `${size}px`,
+                              opacity,
+                            }}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        {/* Difficulty Circles */}
+        <div className="mt-12">
+          <h2 className="text-lg font-semibold text-gray-900 mb-6">Performance by Difficulty</h2>
+          <div className="grid grid-cols-5 gap-6">
+            {[1, 2, 3, 4, 5].map(level => {
+              const stats = data.accuracyByLevel[level] || { accuracy: 0 };
+              
               return (
-                <div
-                  key={index}
-                  className="aspect-square rounded transition-all hover:scale-110 cursor-pointer"
-                  style={{
-                    backgroundColor: getHeatmapColor(accuracy, day.total),
-                  }}
-                  title={`${day.date}: ${day.correct}/${day.total} (${accuracy.toFixed(0)}%)`}
-                />
+                <Card
+                  key={level}
+                  className="p-6 bg-gray-50 border-gray-200 hover:border-gray-900 transition-colors cursor-pointer"
+                  onClick={() => startDrill(undefined, level)}
+                >
+                  <div className="flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-4">
+                      <svg viewBox="0 0 100 100" className="transform -rotate-90">
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="40"
+                          fill="none"
+                          stroke="#E5E7EB"
+                          strokeWidth="6"
+                        />
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="40"
+                          fill="none"
+                          stroke="#111827"
+                          strokeWidth="6"
+                          strokeDasharray={`${(stats.accuracy / 100) * 251.2} 251.2`}
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-xl font-bold text-gray-900">
+                          {Math.round(stats.accuracy)}%
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold text-gray-900">Level {level}</div>
+                    </div>
+                  </div>
+                </Card>
               );
             })}
           </div>
-          <div className="flex items-center justify-end gap-4 mt-4 text-xs text-muted-foreground">
-            <span>Less</span>
-            <div className="flex gap-1">
-              <div className="w-4 h-4 rounded" style={{ backgroundColor: "hsl(var(--muted))" }} />
-              <div className="w-4 h-4 rounded" style={{ backgroundColor: "hsl(0 72% 51%)" }} />
-              <div className="w-4 h-4 rounded" style={{ backgroundColor: "hsl(38 92% 50%)" }} />
-              <div className="w-4 h-4 rounded" style={{ backgroundColor: "hsl(142 71% 65%)" }} />
-              <div className="w-4 h-4 rounded" style={{ backgroundColor: "hsl(142 71% 45%)" }} />
-            </div>
-            <span>More</span>
-          </div>
-        </Card>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default Analytics;
