@@ -18,25 +18,31 @@ import NotFound from "./pages/NotFound";
 const App = () => (
   <AuthProvider>
     <UserSettingsProvider>
-      <QuestionBankProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Landing />} />
-              <Route path="/drill" element={<Drill />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/waj" element={<WrongAnswerJournal />} />
-              <Route path="/analytics" element={<Analytics />} />
-              <Route path="/auth" element={<Auth />} />
-              <Route path="/profile" element={<Profile />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </QuestionBankProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            {/* Auth route - NO question bank needed */}
+            <Route path="/auth" element={<Auth />} />
+            
+            {/* All other routes - wrapped with QuestionBankProvider */}
+            <Route path="/*" element={
+              <QuestionBankProvider>
+                <Routes>
+                  <Route path="/" element={<Landing />} />
+                  <Route path="/drill" element={<Drill />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/waj" element={<WrongAnswerJournal />} />
+                  <Route path="/analytics" element={<Analytics />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </QuestionBankProvider>
+            } />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
     </UserSettingsProvider>
   </AuthProvider>
 );

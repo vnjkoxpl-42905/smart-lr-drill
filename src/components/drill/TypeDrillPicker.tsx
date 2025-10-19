@@ -13,6 +13,7 @@ import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine, type WeakAreaAnalysis } from '@/lib/adaptiveEngine';
 import { templateService } from '@/lib/templateService';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 interface TypeDrillPickerProps {
   manifest: QuestionManifest;
@@ -203,8 +204,20 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
     }
 
     try {
+      // Fetch class_id from students table
+      const { data: student, error: studentError } = await supabase
+        .from('students')
+        .select('class_id')
+        .eq('id', user.id)
+        .maybeSingle();
+
+      if (studentError) throw studentError;
+      if (!student?.class_id) {
+        throw new Error('User class_id not found');
+      }
+
       await templateService.saveTemplate({
-        user_id: user.id,
+        class_id: student.class_id,
         template_name: templateName,
         qtypes: selectedQTypes,
         difficulties: selectedDifficulties,

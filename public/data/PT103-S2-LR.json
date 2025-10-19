@@ -1,1 +1,444 @@
-[{"practiceTest":"PT103","sectionNumber":2,"questionNumber":1,"questionType":"Flaw","questionDifficulty":1,"stimulus":"Insurance that was to become effective at 9 A.M. on a certain date was taken out on the life of a flight attendant. He died on that date at 10 A.M. local time, which was two hours before 9 A.M. in the time zone where the policy had been purchased. The insurance company contended that the policy had not become effective; a representative of the flight attendant’s beneficiary, his mother, countered by arguing that the policy amount should be paid because the attendant had been his mother’s sole support, and she was ill.","questionStem":"The representative’s argument is flawed as a counter to the insurance company’s contention because","answerChoices":{"A":"the conclusion is no more than a paraphrase of the evidence offered in support of it","B":"it appeals to the emotion of pity rather than addressing the issue raised","C":"it makes an unwarranted distinction between family obligations and business obligations","D":"it substitutes an attack on a person for the giving of reasons","E":"a cause and its effect are mistaken for each other"},"correctAnswer":"B"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":2,"questionType":"Most Supported","questionDifficulty":1,"stimulus":"Once a child’s imagination becomes developed, a host of imaginary creatures may torment the child. But this newly developed cognitive capacity may also be used to render these creatures harmless. For instance, a child’s new toy may be imagined as an ally, powerful enough to ward off any imaginary threats.","questionStem":"The type of situation described above most closely conforms to which one of the following propositions?","answerChoices":{"A":"Some newly developed capacities only give rise to problems.","B":"Sometimes the cause of a problem may also provide its solution.","C":"Children are not able to distinguish between real and imaginary threats.","D":"The most effective way for children to address their fears is to acknowledge them.","E":"Most problems associated with child-rearing can be solved with a little imagination."},"correctAnswer":"B"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":3,"questionType":"Agree/Disagree","questionDifficulty":1,"stimulus":"Trisha: Today’s family is declining in its ability to carry out its functions of child-rearing and providing stability for adult life. There must be a return to the traditional values of commitment and responsibility.\nJerod: We ought to leave what is good enough alone. Contemporary families may be less stable than traditionally, but most people do not find that to be bad. Contemporary criticisms of the family are overblown and destructive.","questionStem":"Trisha and Jerod disagree over whether the institution of the family is","answerChoices":{"A":"adequate as it is","B":"changing over time","C":"valued by most people","D":"not going to survive","E":"no longer traditional"},"correctAnswer":"A"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":4,"questionType":"Flaw","questionDifficulty":2,"stimulus":"Politician P: My opponent claims that the government is obligated to raise taxes to increase funding for\nschools and health care. Because raising taxes to increase funding for schools and health care would make taxpayers upset over their loss of buying power, my opponent is simply mistaken.","questionStem":"Politician P’s reasoning is questionable because it involves","answerChoices":{"A":"presupposing that a claim is mistaken on the grounds that the person defending it advocates other unpopular views","B":"assuming that a claim is false on the grounds that the person defending it is of questionable character","C":"concluding that a view is false on the grounds that its implementation would lead to unhappiness","D":"appealing to wholly irrelevant issues to deflect attention away from the real issue","E":"insisting that an obligation exists without offering any evidence that it exists"},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":5,"questionType":"Weaken","questionDifficulty":3,"stimulus":"In defending the Hyperion School of Journalism from charges that its program is of little or no value to its students, the dean of the school pointed to its recent success in placing students: 65 percent of its graduates went on to internships or jobs in print or broadcast journalism.","questionStem":"Which one of the following, if true, most seriously undermines the defense offered by the dean?","answerChoices":{"A":"More than half of the school’s students came from jobs in journalism to improve their skills.","B":"Some newspaper editors do not regard journalism school as a necessary part of the training of a journalist.","C":"The number of cities with more than one major newspaper has declined sharply over the last 25 years.","D":"The program offered by the Hyperion School of Journalism is similar in quality and content to those offered by its peer institutions.","E":"The proportion of applicants to the Hyperion School of Journalism that are admitted is lower than it was ten years ago."},"correctAnswer":"A"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":6,"questionType":"Must be True","questionDifficulty":2,"stimulus":"The largest volcano on Mars rises 27 kilometers above the surrounding plain and covers an area roughly the size of Romania. Even if the Earth’s gravity were as low as the gravity of Mars is, no volcano of such size could exist on Earth, for the Earth’s crust, although of essentially the same composition as that of Mars, is too thin to support even a small fraction of that mass and would buckle under it, causing the mountain to sink.","questionStem":"If the statements above are true, which one of the following must also be true on the basis of them?","answerChoices":{"A":"The surface of Mars is less subject to forces of erosion than is the surface of the Earth.","B":"The highest volcanoes on Mars occur where its crust is thickest.","C":"On average, volcanoes on Mars are higher than those on Earth.","D":"The crust of Mars, at least at certain points on the planet, is thicker than the crust of the Earth.","E":"At least some of the Earth’s volcanoes would be larger than they actually are if the Earth’s crust were thicker than it is."},"correctAnswer":"D"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":7,"questionType":"Necessary Assumption","questionDifficulty":2,"stimulus":"Speakers of the Caronian language constitute a minority of the population in several large countries. An\ninternational body has recommended that the regions where Caronian-speakers live be granted autonomy as an independent nation in which Caronian-speakers would form a majority. But Caronian-speakers live in several, widely scattered areas that cannot be united within a single continuous boundary while at the same time allowing Caronian-speakers to be the majority population. Hence, the recommendation cannot be satisfied.","questionStem":"The argument relies on which one of the following assumptions?","answerChoices":{"A":"A nation once existed in which Caronianspeakers formed the majority of the population.","B":"Caronian-speakers tend to perceive themselves as constituting a single community.","C":"The recommendation would not be satisfied by the creation of a nation formed of disconnected regions.","D":"The new Caronian nation will not include as citizens anyone who does not speak Caronian.","E":"In most nations several different languages are spoken."},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":8,"questionType":"Main Conclusion","questionDifficulty":3,"stimulus":"Sociologist: The welfare state cannot be successfully implemented because it rests on the assumption that human beings are unselfish—a seemingly false assumption. The welfare state is feasible only if wage earners are prepared to have their hard-earned funds used to help others in greater need, and that requires an unselfish attitude. But people innately seek their own well-being, especially when the interests of others threaten it.","questionStem":"Which one of the following most accurately expresses the main conclusion of the sociologist’s argument?","answerChoices":{"A":"The welfare state will not work.","B":"The welfare state unfairly asks those who work hard to help those in greater need.","C":"The assumption that human beings are unselfish is false.","D":"The interests of the less fortunate impinge on the interests of others.","E":"The welfare state relies on the generosity of wage earners."},"correctAnswer":"A"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":9,"questionType":"Most Supported","questionDifficulty":3,"stimulus":"Early pencil leads were made of solid graphite mined in Cumberland, in Britain. Modern methods of manufacturing pencil leads from powdered graphite are the result of research sponsored by the government of France in the 1790s, when France was at war with Britain and thus had no access to Cumberland graphite.","questionStem":"The information above most strongly supports which one of the following?","answerChoices":{"A":"The world’s only deposit of graphite suitable for manufacture of pencils is in Cumberland, in Britain.","B":"In the 1790s, France’s government did not know of any accessible source of solid graphite appropriate to meet France’s need for pencils.","C":"One of the causes of war between France and Britain in the 1790s was the British government’s attempt to limit the amount of Cumberland graphite being exported to France.","D":"Government-sponsored research frequently gives rise to inventions that are of great benefit to society.","E":"Even today, all pencil leads contain Cumberland graphite."},"correctAnswer":"B"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":10,"questionType":"Necessary Assumption","questionDifficulty":3,"stimulus":"Commercial passenger airplanes can be equipped with a collision-avoidance radar system that provides pilots with information about the proximity of other airplanes. Because the system warns pilots to take evasive action when it indicates a possible collision, passengers are safer on airplanes equipped with the system than on comparable airplanes not so equipped, even though the system frequently warns pilots to evade phantom airplanes.","questionStem":"Which one of the following is an assumption on which the argument depends?","answerChoices":{"A":"Passengers feel no safer on airplanes equipped with the radar system than on comparable airplanes not so equipped.","B":"Warnings given by a collision-avoidance system about phantom airplanes are not caused by distorted radar signals.","C":"The frequency of invalid warnings will not cause pilots routinely to disregard the system’s warnings.","D":"Commercial passenger airplanes are not the only planes that can be equipped with a collisionavoidance system.","E":"The greatest safety risk for passengers traveling on commercial passenger airplanes is that of a midair collision."},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":11,"questionType":"Strengthen","questionDifficulty":2,"stimulus":"Which one of the following, if true, most strengthens the argument?","questionStem":"","answerChoices":{"A":"Evasive action taken in response to the system’s warnings poses no risk to the passengers.","B":"Commercial passenger airplanes are in greater danger of colliding with other airplanes while on the ground than they are while in flight.","C":"Commercial passenger airplanes are rarely involved in collisions while in flight.","D":"A study by ground-based air traffic controllers found that 63 percent of the warnings by the system were invalid.","E":"The collision-avoidance radar system is run by a computerized device on the plane that scans the sky and calculates the distances between planes."},"correctAnswer":"A"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":12,"questionType":"Weaken","questionDifficulty":5,"stimulus":"The higher the average fat intake among the residents of a country, the higher the incidence of cancer in that country; the lower the average fat intake, the lower the incidence of cancer. So individuals who want to reduce their risk of cancer should reduce their fat intake.","questionStem":"Which one of the following, if true, most weakens the argument?","answerChoices":{"A":"The differences in average fat intake between countries are often due to the varying makeup of traditional diets.","B":"The countries with a high average fat intake tend to be among the wealthiest in the world.","C":"Cancer is a prominent cause of death in countries with a low average fat intake.","D":"The countries with high average fat intake are also the countries with the highest levels of environmental pollution.","E":"An individual resident of a country whose population has a high average fat intake may have a diet with a low fat intake."},"correctAnswer":"D"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":13,"questionType":"Necessary Assumption","questionDifficulty":1,"stimulus":"A local television station is considering a plan to create a panel of child psychologists to review programs in advance of their airing and rate the level of violence. A program that portrays a high level of violence would be listed in newspapers with four guns after the title. On the other hand, if a show has little violence, one gun would appear after its listing. The station believes that this remedy would forewarn parents about the level of violence in any given program.","questionStem":"Which one of the following must the television station assume in order to conclude that the plan will meet its stated purpose?","answerChoices":{"A":"Parents would read and pay attention to the ratings listed in the newspapers.","B":"There would be fewer shows rated with one gun than with four guns.","C":"The rating system described in the passage is the most effective system available.","D":"The local television station has an obligation to forewarn parents of the level of violence in television shows.","E":"Television producers of programs rated as having high levels of violence would make an effort to reduce those levels."},"correctAnswer":"A"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":14,"questionType":"Paradox","questionDifficulty":2,"stimulus":"The common ancestors of Australian land- and treedwelling kangaroos had prehensile (grasping) tails and long opposable thumbs, attributes that are well-adapted to tree-dwelling but offer kangaroos few advantages on land. It is hardly surprising, therefore, that landdwelling kangaroos eventually lost these attributes; what is puzzling is the fact that all modern tree-dwelling kangaroos now lack them as well.","questionStem":"Which one of the following, if true, most helps explain\nthe puzzling fact cited above?","answerChoices":{"A":"Modern tree-dwelling kangaroos must back down tree trunks slowly and carefully, but the common ancestors of modern tree- and landdwelling kangaroos used their opposable thumbs to descend trees quickly headfirst.","B":"Modern tree-dwelling kangaroos are smaller than most modern land-dwelling kangaroos but larger than their common ancestors.","C":"Modern tree-dwelling kangaroos’ tails cannot grasp branches, but they are somewhat longer and more flexible than those of modern landdwelling kangaroos.","D":"Modern tree-dwelling kangaroos are descended from species of land-dwelling kangaroos that had been land-dwellers for many generations before modern tree-dwelling kangaroos started to develop.","E":"Modern tree-dwelling kangaroos have smaller and weaker hind legs than modern land-dwelling kangaroos, and they move more slowly on land than do modern land-dwelling kangaroos."},"correctAnswer":"D"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":15,"questionType":"Flaw","questionDifficulty":5,"stimulus":"Editorialist: Society is obliged to bestow the privileges of adulthood upon its members once they are mature enough to accept the corresponding responsibilities. But science has established that physiological development is completed in most persons by age seventeen. Since this maturing process has been completed by most seventeenyear-olds, there is no reason not to grant these citizens all of the privileges of adulthood.","questionStem":"The editorialist’s argument is most vulnerable to criticism on the ground that it","answerChoices":{"A":"assumes what it is trying to prove","B":"too hastily reaches a general conclusion on the basis of a few examples","C":"equivocates with respect to a central concept","D":"too readily accepts a claim by appeal to inappropriate authority","E":"ignores the fact that some people are mature at age sixteen"},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":16,"questionType":"Parallel","questionDifficulty":2,"stimulus":"Every new play that runs for more than three months is either a commercial or a critical success. Last year, all new plays that were critical successes were also commercial successes. Therefore, every new play that ran for more than three months last year was a commercial success.","questionStem":"The pattern of reasoning in which one of the following arguments is most similar to that in the argument above?","answerChoices":{"A":"Most new restaurants require either good publicity or a good location in order to succeed. But most restaurants with a good location also receive good publicity. Hence, a restaurant that has a good location is guaranteed to succeed.","B":"Every best-selling cookbook published last year is both well written and contains beautiful photographs. The cookbook Cynthia Cleveland published last year is well written and contains beautiful photographs. Therefore, Cleveland’s cookbook is a best seller.","C":"All students at the Freeman School of Cooking study either desserts or soups in their second year. This year, all Freeman students studying soups are also studying desserts. Therefore, every second-year student at Freeman is studying desserts this year.","D":"Chefs who become celebrities either open their own restaurants or write books about their craft, but not both. John Endicott is a celebrated chef who opened his own restaurant. Therefore, Endicott does not write books about his craft.","E":"Every catering service in Woodside Township will accept both residential and business catering assignments. Peggy’s Fine Foods is a catering service that will not accept business catering assignments. Hence, Peggy’s Fine Foods is not in Woodside Township."},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":17,"questionType":"Flaw","questionDifficulty":4,"stimulus":"Commissioner: I have been incorrectly criticized for having made my decision on the power plant issue prematurely. I based my decision on the report prepared by the neighborhood association and, although I have not studied it thoroughly, I am sure that the information it contains is accurate. Moreover, you may recall that when I received input from the neighborhood association on jail relocation, I agreed with its recommendation.","questionStem":"The commissioner’s argument is least vulnerable to which one of the following criticisms?","answerChoices":{"A":"It takes for granted that the association’s information is not distorted by bias.","B":"It draws a conclusion about the recommendations of the association from incomplete recollections.","C":"It takes for granted that the association’s report is the only direct evidence that needed to be considered.","D":"It hastily concludes that the association’s report is accurate, without having studied it in detail.","E":"It takes for granted that agreeing with the association’s past recommendation helps to justify agreeing with its current recommendation."},"correctAnswer":"B"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":18,"questionType":"Paradox","questionDifficulty":4,"stimulus":"Each child in a group of young children read aloud both a short paragraph and a list of randomly ordered words from the paragraph. The more experienced readers among them made fewer pronunciation errors in whichever task they performed second, whether it was the list or the paragraph. The order in which the two tasks were performed, however, had no effect on the performance of beginning readers, who always made fewer pronunciation errors when reading the paragraph than when reading the list.","questionStem":"Which one of the following, if true, most helps to explain why the order in which the tasks were performed was not significant for the beginning readers?","answerChoices":{"A":"Because several words were used more than once in the paragraph but only once in the list, the list was shorter than the paragraph.","B":"In reading the paragraph, the more experienced readers were better at using context to guess at difficult words than were the beginning readers.","C":"The more experienced readers sounded out difficult words, while the beginning readers relied solely on context to guess at difficult words.","D":"Both tasks used the same words, so that the words the children read in whichever task was performed first would be recognized in the second task.","E":"The beginning readers made more pronunciation errors than the more experienced readers did in reading both the paragraph and the list."},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":19,"questionType":"Must be True","questionDifficulty":4,"stimulus":"Anthropologist: Violence is an extreme form of aggression, and is distinct from the self-expression sufficient for survival under normal conditions. Human beings in certain situations react to unpleasant stimuli with violence—but only because they are conditioned by their culture to react in this manner.","questionStem":"Each of the following can be logically inferred from the\nanthropologist’s statements except:","answerChoices":{"A":"Not all aggression is violent.","B":"The self-expression required for survival is generally nonaggressive.","C":"Some behaviors are influenced by the cultures in which human beings live.","D":"In normal circumstances, human beings can survive by responding nonviolently.","E":"Violent behavior is a product of one’s cultural environment."},"correctAnswer":"B"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":20,"questionType":"Parallel Flaw","questionDifficulty":4,"stimulus":"Martha’s friend, who is very knowledgeable about edible flowers, told Martha that there are no edible daisies, at least not any that are palatable. Martha, however, reasons that since there are daisies that are a kind of chrysanthemum and since there are edible chrysanthemums that are quite palatable, what her friend told her must be incorrect.","questionStem":"Which one of the following has a flawed pattern of reasoning most like that in Martha’s reasoning?","answerChoices":{"A":"Jeanne is a member of the city chorus, and the city chorus is renowned. So Jeanne is an excellent singer.","B":"Rolfe belongs to the library reading group, and all members of that group are avid readers. So Rolfe is an avid reader.","C":"Some of Noriko’s sisters are on the debate team, and some members of the debate team are poor students. So at least one of Noriko’s sisters must be a poor student.","D":"Most of Leon’s friends are good swimmers, and good swimmers are quite strong. So it is likely that at least some of Leon’s friends are quite strong.","E":"Many of Teresa’s colleagues have written books. Most of the books they have written are on good writing. So some of Teresa’s colleagues are good writers."},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":21,"questionType":"Flaw","questionDifficulty":5,"stimulus":"Attorney for Ziegler: My client continued to do consulting work between the time of his arrest for attempted murder and the start of this trial. But I contend that Ziegler was insane at the time that he fired the shot. This is the only reasonable conclusion to draw from the fact that the accusers have submitted no evidence that he was sane at the time he pulled the trigger, only that he was sane some time after he did so.","questionStem":"Which one of the following most accurately describes a flaw in the reasoning of Ziegler’s attorney?","answerChoices":{"A":"It presumes that being a well-educated professional is relevant to being guilty or innocent.","B":"It concludes on the basis of evidence against Ziegler’s being sane that there is a lack of evidence for Ziegler’s being sane.","C":"It fails to consider that Ziegler might have been insane when he worked as a consultant.","D":"It presumes that whether one is sane is relevant to whether one is morally responsible for one’s actions.","E":"It fails to consider the possibility that Ziegler’s being sane after the shooting is an indication that he was sane at the time of the shooting."},"correctAnswer":"E"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":22,"questionType":"Necessary Assumption","questionDifficulty":5,"stimulus":"Most students are bored by history courses as they are usually taught, primarily because a large amount of\ntime is spent teaching dates and statistics. The best way to teach history, therefore, is to spend most class time recounting the lives of historical figures and very little on dates and statistics.","questionStem":"Each of the following is an assumption on which the argument depends except:","answerChoices":{"A":"One should avoid boring one’s students when teaching a history course.","B":"It is not incompatible with the attainable goals of teaching history to spend very little class time on dates and statistics.","C":"It is possible to recount the lives of historical figures without referring to dates and statistics.","D":"It is compatible with the attainable goals of teaching history to spend most class time recounting the lives of historical figures.","E":"Students are more bored by history courses as they are usually taught than they would be by courses that spend most class time recounting the lives of historical figures."},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":23,"questionType":"Principle-Strengthen","questionDifficulty":4,"stimulus":"In a certain municipality, a judge overturned a suspect’s conviction for possession of an illegal weapon. The suspect had fled upon seeing police and subsequently discarded the illegal weapon after the police gave chase. The judge reasoned as follows: the only cause for the police giving chase was the suspect’s flight; by itself, flight from the police does not create a reasonable suspicion of a criminal act; evidence collected during an illegal chase is inadmissible; therefore, the evidence in this case was inadmissible.","questionStem":"Which one of the following principles, if valid, most helps to justify the judge’s decision that the evidence was inadmissible?","answerChoices":{"A":"Flight from the police could create a reasonable suspicion of a criminal act as long as other significant factors are involved.","B":"People can legally flee from the police only when those people are not involved in a criminal act at the time.","C":"Police can legally give chase to a person only when the person’s actions have created a reasonable suspicion of a criminal act.","D":"Flight from the police should not itself be considered a criminal act.","E":"In all cases in which a person’s actions have created a reasonable suspicion of a criminal act, police can legally give chase to that person."},"correctAnswer":"C"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":24,"questionType":"Agree/Disagree","questionDifficulty":5,"stimulus":"Monica: The sculpture commissioned for our town plaza has been scorned by the public ever since it went up. But since the people in our town do not know very much about contemporary art, the unpopularity of the work says nothing about its artistic merit and thus gives no reason for removing it.\nHector: You may be right about what the sculpture’s popularity means about its artistic merit. However, a work of art that was commissioned for a public space ought to benefit the public, and popular opinion is ultimately the only way of determining what the public feels is to its benefit. Thus, if public opinion of this sculpture is what you say, then it certainly ought to be removed.","questionStem":"Monica’s and Hector’s statements commit them to disagreeing about which one of the following principles?","answerChoices":{"A":"Public opinion of a work of art is an important consideration in determining the work’s artistic merit.","B":"Works of art commissioned for public spaces ought at least to have sufficient artistic merit to benefit the public.","C":"The only reason for removing a work of art commissioned for a public space would be that the balance of public opinion is against the work.","D":"The sculpture cannot benefit the public by remaining in the town plaza unless the sculpture has artistic merit.","E":"In determining whether the sculpture should remain in the town plaza, the artistic merit of the sculpture should be a central consideration."},"correctAnswer":"E"},{"practiceTest":"PT103","sectionNumber":2,"questionNumber":25,"questionType":"Necessary Assumption","questionDifficulty":5,"stimulus":"The argument Hector makes in responding to Monica depends on the assumption that","questionStem":"","answerChoices":{"A":"no matter what the public’s opinion is on an issue affecting the public good, that public opinion ought to be acted on, even though the opinion may not be a knowledgeable one","B":"Monica’s assessment of the public’s opinion of the sculpture is accurate","C":"if the sculpture had artistic merit, then even a public that was not knowledgeable about modern art would not scorn the sculpture","D":"works of art commissioned for public spaces ought not to be expected to have artistic merit","E":"if the public feels that it does not benefit from the sculpture, this shows that the public does not in fact benefit from the sculpture"},"correctAnswer":"E"}]
+[
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Insurance that was to become effective at 9 A.M. on a certain date was taken out on the life of a flight attendant. He died on that date at 10 A.M. local time, which was two hours before 9 A.M. in the time zone where the policy had been purchased. The insurance company contended that the policy had not become effective; a representative of the flight attendant's beneficiary, his mother, countered by arguing that the policy amount should be paid because the attendant had been his mother's sole support, and she was ill.",
+    "questionStem": "The representative's argument is flawed as a counter to the insurance company's contention because",
+    "answerChoices": {
+      "A": "the conclusion is no more than a paraphrase of the evidence offered in support of it",
+      "B": "it appeals to the emotion of pity rather than addressing the issue raised",
+      "C": "it makes an unwarranted distinction between family obligations and business obligations",
+      "D": "it substitutes an attack on a person for the giving of reasons",
+      "E": "a cause and its effect are mistaken for each other"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "Once a child's imagination becomes developed, a host of imaginary creatures may torment the child. But this newly developed cognitive capacity may also be used to render these creatures harmless. For instance, a child's new toy may be imagined as an ally, powerful enough to ward off any imaginary threats.",
+    "questionStem": "The type of situation described above most closely conforms to which one of the following propositions?",
+    "answerChoices": {
+      "A": "Some newly developed capacities only give rise to problems.",
+      "B": "Sometimes the cause of a problem may also provide its solution.",
+      "C": "Children are not able to distinguish between real and imaginary threats.",
+      "D": "The most effective way for children to address their fears is to acknowledge them.",
+      "E": "Most problems associated with child-rearing can be solved with a little imagination."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 1,
+    "stimulus": "Trisha: Today's family is declining in its ability to carry out its functions of child-rearing and providing stability for adult life. There must be a return to the traditional values of commitment and responsibility.\nJerod: We ought to leave what is good enough alone. Contemporary families may be less stable than traditionally, but most people do not find that to be bad. Contemporary criticisms of the family are overblown and destructive.",
+    "questionStem": "Trisha and Jerod disagree over whether the institution of the family is",
+    "answerChoices": {
+      "A": "adequate as it is",
+      "B": "changing over time",
+      "C": "valued by most people",
+      "D": "not going to survive",
+      "E": "no longer traditional"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Politician P: My opponent claims that the government is obligated to raise taxes to increase funding for\nschools and health care. Because raising taxes to increase funding for schools and health care would make taxpayers upset over their loss of buying power, my opponent is simply mistaken.",
+    "questionStem": "Politician P's reasoning is questionable because it involves",
+    "answerChoices": {
+      "A": "presupposing that a claim is mistaken on the grounds that the person defending it advocates other unpopular views",
+      "B": "assuming that a claim is false on the grounds that the person defending it is of questionable character",
+      "C": "concluding that a view is false on the grounds that its implementation would lead to unhappiness",
+      "D": "appealing to wholly irrelevant issues to deflect attention away from the real issue",
+      "E": "insisting that an obligation exists without offering any evidence that it exists"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "In defending the Hyperion School of Journalism from charges that its program is of little or no value to its students, the dean of the school pointed to its recent success in placing students: 65 percent of its graduates went on to internships or jobs in print or broadcast journalism.",
+    "questionStem": "Which one of the following, if true, most seriously undermines the defense offered by the dean?",
+    "answerChoices": {
+      "A": "More than half of the school's students came from jobs in journalism to improve their skills.",
+      "B": "Some newspaper editors do not regard journalism school as a necessary part of the training of a journalist.",
+      "C": "The number of cities with more than one major newspaper has declined sharply over the last 25 years.",
+      "D": "The program offered by the Hyperion School of Journalism is similar in quality and content to those offered by its peer institutions.",
+      "E": "The proportion of applicants to the Hyperion School of Journalism that are admitted is lower than it was ten years ago."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Must be True",
+    "questionDifficulty": 2,
+    "stimulus": "The largest volcano on Mars rises 27 kilometers above the surrounding plain and covers an area roughly the size of Romania. Even if the Earth's gravity were as low as the gravity of Mars is, no volcano of such size could exist on Earth, for the Earth's crust, although of essentially the same composition as that of Mars, is too thin to support even a small fraction of that mass and would buckle under it, causing the mountain to sink.",
+    "questionStem": "If the statements above are true, which one of the following must also be true on the basis of them?",
+    "answerChoices": {
+      "A": "The surface of Mars is less subject to forces of erosion than is the surface of the Earth.",
+      "B": "The highest volcanoes on Mars occur where its crust is thickest.",
+      "C": "On average, volcanoes on Mars are higher than those on Earth.",
+      "D": "The crust of Mars, at least at certain points on the planet, is thicker than the crust of the Earth.",
+      "E": "At least some of the Earth's volcanoes would be larger than they actually are if the Earth's crust were thicker than it is."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Speakers of the Caronian language constitute a minority of the population in several large countries. An\ninternational body has recommended that the regions where Caronian-speakers live be granted autonomy as an independent nation in which Caronian-speakers would form a majority. But Caronian-speakers live in several, widely scattered areas that cannot be united within a single continuous boundary while at the same time allowing Caronian-speakers to be the majority population. Hence, the recommendation cannot be satisfied.",
+    "questionStem": "The argument relies on which one of the following assumptions?",
+    "answerChoices": {
+      "A": "A nation once existed in which Caronianspeakers formed the majority of the population.",
+      "B": "Caronian-speakers tend to perceive themselves as constituting a single community.",
+      "C": "The recommendation would not be satisfied by the creation of a nation formed of disconnected regions.",
+      "D": "The new Caronian nation will not include as citizens anyone who does not speak Caronian.",
+      "E": "In most nations several different languages are spoken."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "Sociologist: The welfare state cannot be successfully implemented because it rests on the assumption that human beings are unselfish—a seemingly false assumption. The welfare state is feasible only if wage earners are prepared to have their hard-earned funds used to help others in greater need, and that requires an unselfish attitude. But people innately seek their own well-being, especially when the interests of others threaten it.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the sociologist's argument?",
+    "answerChoices": {
+      "A": "The welfare state will not work.",
+      "B": "The welfare state unfairly asks those who work hard to help those in greater need.",
+      "C": "The assumption that human beings are unselfish is false.",
+      "D": "The interests of the less fortunate impinge on the interests of others.",
+      "E": "The welfare state relies on the generosity of wage earners."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Early pencil leads were made of solid graphite mined in Cumberland, in Britain. Modern methods of manufacturing pencil leads from powdered graphite are the result of research sponsored by the government of France in the 1790s, when France was at war with Britain and thus had no access to Cumberland graphite.",
+    "questionStem": "The information above most strongly supports which one of the following?",
+    "answerChoices": {
+      "A": "The world's only deposit of graphite suitable for manufacture of pencils is in Cumberland, in Britain.",
+      "B": "In the 1790s, France's government did not know of any accessible source of solid graphite appropriate to meet France's need for pencils.",
+      "C": "One of the causes of war between France and Britain in the 1790s was the British government's attempt to limit the amount of Cumberland graphite being exported to France.",
+      "D": "Government-sponsored research frequently gives rise to inventions that are of great benefit to society.",
+      "E": "Even today, all pencil leads contain Cumberland graphite."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Commercial passenger airplanes can be equipped with a collision-avoidance radar system that provides pilots with information about the proximity of other airplanes. Because the system warns pilots to take evasive action when it indicates a possible collision, passengers are safer on airplanes equipped with the system than on comparable airplanes not so equipped, even though the system frequently warns pilots to evade phantom airplanes.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Passengers feel no safer on airplanes equipped with the radar system than on comparable airplanes not so equipped.",
+      "B": "Warnings given by a collision-avoidance system about phantom airplanes are not caused by distorted radar signals.",
+      "C": "The frequency of invalid warnings will not cause pilots routinely to disregard the system's warnings.",
+      "D": "Commercial passenger airplanes are not the only planes that can be equipped with a collisionavoidance system.",
+      "E": "The greatest safety risk for passengers traveling on commercial passenger airplanes is that of a midair collision."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Commercial passenger airplanes can be equipped with a collision-avoidance radar system that provides pilots with information about the proximity of other airplanes. Because the system warns pilots to take evasive action when it indicates a possible collision, passengers are safer on airplanes equipped with the system than on comparable airplanes not so equipped, even though the system frequently warns pilots to evade phantom airplanes.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Evasive action taken in response to the system's warnings poses no risk to the passengers.",
+      "B": "Commercial passenger airplanes are in greater danger of colliding with other airplanes while on the ground than they are while in flight.",
+      "C": "Commercial passenger airplanes are rarely involved in collisions while in flight.",
+      "D": "A study by ground-based air traffic controllers found that 63 percent of the warnings by the system were invalid.",
+      "E": "The collision-avoidance radar system is run by a computerized device on the plane that scans the sky and calculates the distances between planes."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "The higher the average fat intake among the residents of a country, the higher the incidence of cancer in that country; the lower the average fat intake, the lower the incidence of cancer. So individuals who want to reduce their risk of cancer should reduce their fat intake.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "The differences in average fat intake between countries are often due to the varying makeup of traditional diets.",
+      "B": "The countries with a high average fat intake tend to be among the wealthiest in the world.",
+      "C": "Cancer is a prominent cause of death in countries with a low average fat intake.",
+      "D": "The countries with high average fat intake are also the countries with the highest levels of environmental pollution.",
+      "E": "An individual resident of a country whose population has a high average fat intake may have a diet with a low fat intake."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "A local television station is considering a plan to create a panel of child psychologists to review programs in advance of their airing and rate the level of violence. A program that portrays a high level of violence would be listed in newspapers with four guns after the title. On the other hand, if a show has little violence, one gun would appear after its listing. The station believes that this remedy would forewarn parents about the level of violence in any given program.",
+    "questionStem": "Which one of the following must the television station assume in order to conclude that the plan will meet its stated purpose?",
+    "answerChoices": {
+      "A": "Parents would read and pay attention to the ratings listed in the newspapers.",
+      "B": "There would be fewer shows rated with one gun than with four guns.",
+      "C": "The rating system described in the passage is the most effective system available.",
+      "D": "The local television station has an obligation to forewarn parents of the level of violence in television shows.",
+      "E": "Television producers of programs rated as having high levels of violence would make an effort to reduce those levels."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "The common ancestors of Australian land- and treedwelling kangaroos had prehensile (grasping) tails and long opposable thumbs, attributes that are well-adapted to tree-dwelling but offer kangaroos few advantages on land. It is hardly surprising, therefore, that landdwelling kangaroos eventually lost these attributes; what is puzzling is the fact that all modern tree-dwelling kangaroos now lack them as well.",
+    "questionStem": "Which one of the following, if true, most helps explain\nthe puzzling fact cited above?",
+    "answerChoices": {
+      "A": "Modern tree-dwelling kangaroos must back down tree trunks slowly and carefully, but the common ancestors of modern tree- and landdwelling kangaroos used their opposable thumbs to descend trees quickly headfirst.",
+      "B": "Modern tree-dwelling kangaroos are smaller than most modern land-dwelling kangaroos but larger than their common ancestors.",
+      "C": "Modern tree-dwelling kangaroos' tails cannot grasp branches, but they are somewhat longer and more flexible than those of modern landdwelling kangaroos.",
+      "D": "Modern tree-dwelling kangaroos are descended from species of land-dwelling kangaroos that had been land-dwellers for many generations before modern tree-dwelling kangaroos started to develop.",
+      "E": "Modern tree-dwelling kangaroos have smaller and weaker hind legs than modern land-dwelling kangaroos, and they move more slowly on land than do modern land-dwelling kangaroos."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Editorialist: Society is obliged to bestow the privileges of adulthood upon its members once they are mature enough to accept the corresponding responsibilities. But science has established that physiological development is completed in most persons by age seventeen. Since this maturing process has been completed by most seventeenyear-olds, there is no reason not to grant these citizens all of the privileges of adulthood.",
+    "questionStem": "The editorialist's argument is most vulnerable to criticism on the ground that it",
+    "answerChoices": {
+      "A": "assumes what it is trying to prove",
+      "B": "too hastily reaches a general conclusion on the basis of a few examples",
+      "C": "equivocates with respect to a central concept",
+      "D": "too readily accepts a claim by appeal to inappropriate authority",
+      "E": "ignores the fact that some people are mature at age sixteen"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "Every new play that runs for more than three months is either a commercial or a critical success. Last year, all new plays that were critical successes were also commercial successes. Therefore, every new play that ran for more than three months last year was a commercial success.",
+    "questionStem": "The pattern of reasoning in which one of the following arguments is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "Most new restaurants require either good publicity or a good location in order to succeed. But most restaurants with a good location also receive good publicity. Hence, a restaurant that has a good location is guaranteed to succeed.",
+      "B": "Every best-selling cookbook published last year is both well written and contains beautiful photographs. The cookbook Cynthia Cleveland published last year is well written and contains beautiful photographs. Therefore, Cleveland's cookbook is a best seller.",
+      "C": "All students at the Freeman School of Cooking study either desserts or soups in their second year. This year, all Freeman students studying soups are also studying desserts. Therefore, every second-year student at Freeman is studying desserts this year.",
+      "D": "Chefs who become celebrities either open their own restaurants or write books about their craft, but not both. John Endicott is a celebrated chef who opened his own restaurant. Therefore, Endicott does not write books about his craft.",
+      "E": "Every catering service in Woodside Township will accept both residential and business catering assignments. Peggy's Fine Foods is a catering service that will not accept business catering assignments. Hence, Peggy's Fine Foods is not in Woodside Township."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Commissioner: I have been incorrectly criticized for having made my decision on the power plant issue prematurely. I based my decision on the report prepared by the neighborhood association and, although I have not studied it thoroughly, I am sure that the information it contains is accurate. Moreover, you may recall that when I received input from the neighborhood association on jail relocation, I agreed with its recommendation.",
+    "questionStem": "The commissioner's argument is least vulnerable to which one of the following criticisms?",
+    "answerChoices": {
+      "A": "It takes for granted that the association's information is not distorted by bias.",
+      "B": "It draws a conclusion about the recommendations of the association from incomplete recollections.",
+      "C": "It takes for granted that the association's report is the only direct evidence that needed to be considered.",
+      "D": "It hastily concludes that the association's report is accurate, without having studied it thoroughly.",
+      "E": "It takes for granted that the association's information is not distorted by bias."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Some people believe that witnessing violence in movies will discharge aggressive energy. Does watching someone else eat fill one's own stomach?",
+    "questionStem": "In which one of the following does the reasoning most closely parallel that employed in the passage?",
+    "answerChoices": {
+      "A": "Some people think appropriating supplies at work for their own personal use is morally wrong. Isn't shoplifting morally wrong?",
+      "B": "Some people think nationalism is defensible. Hasn't nationalism been the excuse for committing abominable crimes?",
+      "C": "Some people think that boxing is fixed just because wrestling usually is. Are the two sports managed by the same sort of people?",
+      "D": "Some people think that economists can control inflation. Can meteorologists make the sun shine?",
+      "E": "Some people think workaholics are compensating for a lack of interpersonal skills. However, aren't most doctors workaholics?"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Principle",
+    "questionDifficulty": 2,
+    "stimulus": "Geneticist: Billions of dollars are spent each year on high-profile experiments that attempt to link particular human genes with particular personality traits. Though such experiments seem to promise a new understanding of human nature, they have few practical consequences. Meanwhile, more mundane and practical genetic projects—for example, those that look for natural ways to make edible plants hardier or more nutritious—are grossly underfunded. Thus, funding for human gene research should be reduced while funding for other genetic research should be increased.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the geneticist's reasoning?",
+    "answerChoices": {
+      "A": "Experiments that have the potential to help the whole human race are more worthwhile than those that help only a small number of people.",
+      "B": "Scientific experiments that have little practical value should not receive public funding.",
+      "C": "Money spent on expensive research projects would be better spent on ameliorating present ills than on satisfying scientific curiosity.",
+      "D": "At a time when money is limited, scientific research projects that have immediate practical consequences should be given priority over projects that have few or no such consequences.",
+      "E": "In allocating funds for scientific research, projects that seek to unravel fundamental mysteries should be given priority over projects that seek only immediate practical applications."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Commentator: Although the present freshwater supply is adequate for today's patterns of water use, the human population is increasing so rapidly that in the not-too-distant future our demand for freshwater will outstrip its supply. So a permanent solution to the impending crisis is not better methods of desalinating seawater, but rather population control.",
+    "questionStem": "Which one of the following, if true, would most seriously weaken the commentator's argument?",
+    "answerChoices": {
+      "A": "For the indefinite future, it will be cheaper to desalinate seawater than to control population growth.",
+      "B": "Even if population growth were halted immediately, freshwater demand would continue to increase for at least several decades.",
+      "C": "Most of the freshwater on Earth is contained in glaciers and polar icecaps.",
+      "D": "If the technology is developed to make desalination economically feasible, fresh water could be made available for those needs not satisfied by the natural supply.",
+      "E": "The decline in freshwater supply is much less severe than is the decline in the quality of the freshwater supply."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "A group of citizens opposes developing a nearby abandoned railroad grade into a hiking trail. Its members argue that trail users will likely litter the area with food wrappers and other debris and that the waste will attract animals that will damage flora and fauna. However, this objection is groundless. Most trail users have great concern for the environment and are careful not to litter.",
+    "questionStem": "The argument depends on which one of the following assumptions?",
+    "answerChoices": {
+      "A": "Animals are not attracted to certain kinds of trash, such as food wrappers and other debris.",
+      "B": "If trail users do litter near the trail, then the likely environmental damage will be negligible.",
+      "C": "There is a more reasonable basis for objecting to developing the abandoned railroad grade into a hiking trail.",
+      "D": "Concern for the environment is the primary motive for most trail users not to litter.",
+      "E": "Most trail users are representative of trail users in general with regard to concern for the environment."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Doctor: It would benefit public health if junk food were taxed. Not only in this country but in many other countries, junk food is the cheapest food available. So if junk food were taxed, it would no longer be so cheap, and people would be encouraged to eat more nutritious foods.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the doctor's argument?",
+    "answerChoices": {
+      "A": "It presumes that people will continue to consume junk food even if it is heavily taxed.",
+      "B": "It fails to consider that even if junk food were taxed, it might still be the cheapest food available.",
+      "C": "It presumes, without providing justification, that the tax on junk food would be used to subsidize the cost of more nutritious food.",
+      "D": "It overlooks the possibility that taxing junk food would encourage people to consume even more junk food.",
+      "E": "It confuses something that is conducive to public health with something that is required for public health."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "The population of elephant seals on the Farallon Islands is now three times greater than it was in 1960. This is due in large part to a reduction in the use of pesticides, since pesticides were weakening the shells of the sea bird eggs that make up a large part of the elephant seals' diet.",
+    "questionStem": "Which one of the following can be properly inferred from the information above?",
+    "answerChoices": {
+      "A": "The eggshells of seabird eggs were thicker in 1960 than they are now.",
+      "B": "The elephant seals were eating eggs with weakened shells in 1960.",
+      "C": "Before 1960, pesticides were more widely used than they are now.",
+      "D": "The diet of elephant seals consists primarily of seabird eggs.",
+      "E": "Elephant seals do not themselves ingest pesticides."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "In an experiment, researchers played a series of musical intervals—pairs of notes that were either harmonious or dissonant. Each time, subjects indicated whether they found the notes pleasant or unpleasant. Most subjects found harmonious intervals pleasant and dissonant intervals unpleasant. However, when the same pairs of notes were played to members of an isolated tribe living in a remote area, these people showed no preference for harmonious notes over dissonant ones.",
+    "questionStem": "Which one of the following, if true, most helps to explain the differing preferences described above?",
+    "answerChoices": {
+      "A": "The characteristic of harmonies that Western subjects found pleasant is a characteristic that all harmonious pairs of notes have in common.",
+      "B": "Several subjects who took part in the experiment had no formal training in music.",
+      "C": "The types of musical intervals that are considered harmonious in Western music are considered dissonant in the music of some other cultures.",
+      "D": "Because of the remoteness of the tribe, its members have never been exposed to Western music.",
+      "E": "Perception of harmony is strongly influenced by the music one has previously been exposed to, even when the exposure occurred early in life."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Market analyst: According to my analysis, the attempt to regulate Playtime's recent fare increase will fail. If Playtime does not get the increase, it will be unable to meet its expenses and so will discontinue service. People in the community will be angered by the loss of service, and those in the government responsible for regulating fares will be blamed. Once the public understands this, no one will support the opposition to Playtime's fare hike.",
+    "questionStem": "Which one of the following, if assumed, allows the market analyst's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "The government officials who are responsible for regulating the fares charged by companies like Playtime desire to continue holding their positions.",
+      "B": "Those who stand to be blamed for Playtime's going out of business will support whatever course of action would prevent that result.",
+      "C": "Playtime's expense reports have always been accurate in the past.",
+      "D": "Playtime operates with a narrow profit margin.",
+      "E": "Preventing Playtime from going out of business depends on not opposing Playtime's fare increase."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT103",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Linguist: Only if a sentence can be diagrammed is it grammatical. Any grammatical sentence is easily understood by speakers of the language.",
+    "questionStem": "Which one of the following conclusions can be correctly drawn from the linguist's statements?",
+    "answerChoices": {
+      "A": "If a sentence is not easily understood by most speakers of the language, then it cannot be diagrammed.",
+      "B": "If a sentence cannot be diagrammed, then it will not be easily understood by most speakers of the language.",
+      "C": "A sentence that cannot be diagrammed is not a grammatical sentence.",
+      "D": "A sentence that can be diagrammed will be easily understood by most speakers of the language.",
+      "E": "Any sentence that is not easily understood by most speakers of the language is not grammatical."
+    },
+    "correctAnswer": "A"
+  }
+]

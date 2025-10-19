@@ -6,6 +6,8 @@ import type { DrillMode } from '@/types/drill';
 import { templateService, type DrillTemplate } from '@/lib/templateService';
 import { TemplateCard } from './TemplateCard';
 import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/integrations/supabase/client';
 
 interface ModeSelectorProps {
   onSelectMode: (mode: DrillMode) => void;
@@ -15,20 +17,42 @@ export function ModeSelector({ onSelectMode }: ModeSelectorProps) {
   const [templates, setTemplates] = useState<DrillTemplate[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
+  const { user } = useAuth();
 
   useEffect(() => {
     const loadTemplates = async () => {
+      if (!user) {
+        setIsLoading(false);
+        return;
+      }
+
       try {
-        const data = await templateService.getTemplates('demo_user');
-        setTemplates(data);
+        // Fetch class_id from students table
+        const { data: student, error: studentError } = await supabase
+          .from('students')
+          .select('class_id')
+          .eq('id', user.id)
+          .maybeSingle();
+
+        if (studentError) throw studentError;
+        
+        if (student?.class_id) {
+          const data = await templateService.getTemplates(student.class_id);
+          setTemplates(data);
+        }
       } catch (err) {
         console.error('Failed to load templates:', err);
+        toast({
+          title: "Failed to load templates",
+          description: "Could not load your saved drills.",
+          variant: "destructive",
+        });
       } finally {
         setIsLoading(false);
       }
     };
     loadTemplates();
-  }, []);
+  }, [user, toast]);
 
   const handleStartTemplate = (template: DrillTemplate) => {
     // Will pass template data to the drill mode

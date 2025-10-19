@@ -2,7 +2,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 export interface DrillTemplate {
   id: string;
-  user_id: string;
+  class_id: string;
   template_name: string;
   qtypes: string[];
   difficulties: number[];
@@ -12,11 +12,11 @@ export interface DrillTemplate {
 }
 
 export const templateService = {
-  async getTemplates(userId: string): Promise<DrillTemplate[]> {
+  async getTemplates(classId: string): Promise<DrillTemplate[]> {
     const { data, error } = await (supabase as any)
       .from('drill_templates')
       .select('*')
-      .eq('user_id', userId)
+      .eq('class_id', classId)
       .order('created_at', { ascending: false });
 
     if (error) throw error;
