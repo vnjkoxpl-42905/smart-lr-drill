@@ -288,6 +288,7 @@ export type Database = {
           qid: string
           qnum: number
           section: number
+          user_id: string | null
         }
         Insert: {
           class_id: string
@@ -298,6 +299,7 @@ export type Database = {
           qid: string
           qnum: number
           section: number
+          user_id?: string | null
         }
         Update: {
           class_id?: string
@@ -308,6 +310,7 @@ export type Database = {
           qid?: string
           qnum?: number
           section?: number
+          user_id?: string | null
         }
         Relationships: []
       }

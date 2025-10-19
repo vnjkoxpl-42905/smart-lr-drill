@@ -209,6 +209,7 @@ function DrillContent() {
         .from('flagged_questions')
         .select('id')
         .eq('qid', currentQuestion.qid)
+        .eq('user_id', user.id)
         .maybeSingle();
       
       if (error && error.code !== 'PGRST116') {
@@ -543,12 +544,13 @@ function DrillContent() {
         const { error } = await supabase
           .from('flagged_questions')
           .delete()
-          .eq('qid', currentQuestion.qid);
+          .eq('qid', currentQuestion.qid)
+          .eq('user_id', user.id);
         
         if (error) throw error;
         setIsFlagged(false);
       } else {
-        // Flag - class_id is auto-populated by RLS
+        // Flag
         const { error } = await supabase
           .from('flagged_questions')
           .insert({
@@ -556,6 +558,7 @@ function DrillContent() {
             pt: currentQuestion.pt,
             section: currentQuestion.section,
             qnum: currentQuestion.qnum,
+            user_id: user.id,
           } as any);
         
         if (error && error.code !== '23505') { // Ignore unique constraint violation

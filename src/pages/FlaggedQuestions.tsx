@@ -33,10 +33,13 @@ export default function FlaggedQuestions() {
   }, [user, navigate]);
 
   const loadFlaggedQuestions = async () => {
+    if (!user) return;
+    
     try {
       const { data, error } = await supabase
         .from('flagged_questions')
         .select('*')
+        .eq('user_id', user.id)
         .order('flagged_at', { ascending: false });
 
       if (error) throw error;

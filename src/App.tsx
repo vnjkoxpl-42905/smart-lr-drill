@@ -10,6 +10,7 @@ import Landing from "./pages/Landing";
 import Drill from "./pages/Drill";
 import Dashboard from "./pages/Dashboard";
 import WrongAnswerJournal from "./pages/WrongAnswerJournal";
+import FlaggedQuestions from "./pages/FlaggedQuestions";
 import Analytics from "./pages/Analytics";
 import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
@@ -34,6 +35,7 @@ const App = () => (
                   <Route path="/drill" element={<Drill />} />
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/waj" element={<WrongAnswerJournal />} />
+                  <Route path="/flagged" element={<FlaggedQuestions />} />
                   <Route path="/analytics" element={<Analytics />} />
                   <Route path="/profile" element={<Profile />} />
                   <Route path="*" element={<NotFound />} />

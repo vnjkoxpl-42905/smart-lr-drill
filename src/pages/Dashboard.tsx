@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useQuestionBank } from '@/contexts/QuestionBankContext';
 import { useNavigate } from 'react-router-dom';
-import { ChevronLeft, BookOpen, Target, Clock } from 'lucide-react';
+import { ChevronLeft, BookOpen, Target, Clock, Flag, XCircle } from 'lucide-react';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -50,6 +50,39 @@ const Dashboard = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 py-8 max-w-6xl space-y-8">
+        {/* Review Tools */}
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card 
+            className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
+            onClick={() => navigate('/flagged')}
+          >
+            <div className="flex items-center gap-3">
+              <Flag className="w-8 h-8 text-blue-500" />
+              <div>
+                <h3 className="font-semibold">Flagged Questions</h3>
+                <p className="text-sm text-muted-foreground">
+                  Review questions you marked during practice
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card 
+            className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
+            onClick={() => navigate('/waj')}
+          >
+            <div className="flex items-center gap-3">
+              <XCircle className="w-8 h-8 text-orange-500" />
+              <div>
+                <h3 className="font-semibold">Wrong Answer Journal</h3>
+                <p className="text-sm text-muted-foreground">
+                  Track and learn from incorrect answers
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
         {/* Overview Cards */}
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="p-6 space-y-2">
