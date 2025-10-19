@@ -16,6 +16,9 @@ import { VoiceCoachChip } from '@/components/drill/VoiceCoachChip';
 import { VoiceCoachModal } from '@/components/drill/VoiceCoachModal';
 import { HighlightToolbar } from '@/components/drill/HighlightToolbar';
 import { HighlightedText } from '@/components/drill/HighlightedText';
+import { BlindReviewSelection } from '@/components/drill/BlindReviewSelection';
+import { BlindReviewFlow, type BlindReviewResult } from '@/components/drill/BlindReviewFlow';
+import { BlindReviewResults } from '@/components/drill/BlindReviewResults';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
@@ -74,8 +77,17 @@ function DrillContent() {
   const [isFlagged, setIsFlagged] = React.useState(false);
   const [showExitDialog, setShowExitDialog] = React.useState(false);
   const [exitDestination, setExitDestination] = React.useState<'/' | '/dashboard'>('/');
+  const [brMarked, setBrMarked] = React.useState<Set<string>>(new Set());
+  const [showBRSelection, setShowBRSelection] = React.useState(false);
+  const [showBRFlow, setShowBRFlow] = React.useState(false);
+  const [brSelectedQids, setBrSelectedQids] = React.useState<string[]>([]);
+  const [brResults, setBrResults] = React.useState<any[]>([]);
+  const [showBRResults, setShowBRResults] = React.useState(false);
   
   const timer = hasTimer ? useTimerContext() : null;
+
+  // BR only for Full Section and Type Drill modes
+  const brEnabled = session?.mode === 'full-section' || session?.mode === 'type-drill';
 
   // Initialize session
   React.useEffect(() => {
@@ -583,6 +595,37 @@ function DrillContent() {
     navigate(exitDestination);
   };
 
+  const handleToggleBR = () => {
+    if (!currentQuestion || !brEnabled) return;
+    
+    setBrMarked(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(currentQuestion.qid)) {
+        newSet.delete(currentQuestion.qid);
+      } else {
+        newSet.add(currentQuestion.qid);
+      }
+      return newSet;
+    });
+  };
+
+  // Keyboard shortcut for BR marking
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === 'b' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        // Only trigger if not in an input field
+        const target = e.target as HTMLElement;
+        if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
+          e.preventDefault();
+          handleToggleBR();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentQuestion, brEnabled]);
+
   // Start timer on mount if applicable
   React.useEffect(() => {
     if (hasTimer && timer && !timer.running) {
@@ -590,7 +633,68 @@ function DrillContent() {
     }
   }, [hasTimer, timer]);
 
+  // Handle session completion with BR
   if (!session || !currentQuestion) {
+    // Check if we should show BR selection
+    if (session && brEnabled && brMarked.size > 0 && !showBRSelection && !showBRFlow && !showBRResults) {
+      setShowBRSelection(true);
+    }
+
+    // Show BR Selection screen
+    if (showBRSelection) {
+      return (
+        <BlindReviewSelection
+          session={{
+            ...session!,
+            attempts: new Map(
+              Array.from(session!.attempts.entries()).map(([qid, attempt]) => [
+                qid,
+                { ...attempt, brMarked: brMarked.has(qid) }
+              ])
+            )
+          }}
+          onStartBlindReview={(selectedQids) => {
+            setBrSelectedQids(selectedQids);
+            setShowBRSelection(false);
+            setShowBRFlow(true);
+          }}
+          onSkip={() => {
+            navigate('/');
+          }}
+        />
+      );
+    }
+
+    // Show BR Flow
+    if (showBRFlow) {
+      return (
+        <BlindReviewFlow
+          session={session!}
+          selectedQids={brSelectedQids}
+          onComplete={async (results: BlindReviewResult[]) => {
+            setBrResults(results);
+            setShowBRFlow(false);
+            setShowBRResults(true);
+            
+            // Save BR results to database
+            await saveBRResults(session!, results);
+          }}
+        />
+      );
+    }
+
+    // Show BR Results
+    if (showBRResults) {
+      return (
+        <BlindReviewResults
+          session={session!}
+          results={brResults}
+          onFinish={() => navigate('/')}
+        />
+      );
+    }
+
+    // Regular session complete screen
     return (
       <div className="min-h-screen flex items-center justify-center">
         <Card className="p-8 max-w-2xl">
@@ -618,6 +722,77 @@ function DrillContent() {
       </div>
     );
   }
+
+  // Helper function to save BR results
+  const saveBRResults = async (session: DrillSession, results: BlindReviewResult[]) => {
+    if (!user) return;
+
+    try {
+      const sessionId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+
+      // Calculate summary stats
+      const correctedCount = results.filter(r => !session.attempts.get(r.qid)?.correct && r.correct).length;
+      const stuckCount = results.filter(r => !session.attempts.get(r.qid)?.correct && !r.correct).length;
+      const regretCount = results.filter(r => session.attempts.get(r.qid)?.correct && !r.correct).length;
+      const confirmedCount = results.filter(r => session.attempts.get(r.qid)?.correct && r.correct).length;
+      
+      const times = results.map(r => r.brTimeMs).sort((a, b) => a - b);
+      const medianTimeMs = times.length > 0 ? times[Math.floor(times.length / 2)] : 0;
+
+      // Save BR session
+      const classId = (user as any).user_metadata?.class_id || user.id;
+      await supabase.from('blind_review_sessions').insert({
+        class_id: classId,
+        session_id: sessionId,
+        br_items_count: results.length,
+        br_corrected_count: correctedCount,
+        br_stuck_count: stuckCount,
+        br_regret_count: regretCount,
+        br_confirmed_count: confirmedCount,
+        br_median_time_ms: medianTimeMs,
+      });
+
+      // Update attempts with BR data
+      for (const result of results) {
+        const previousAttempt = session.attempts.get(result.qid);
+        const preCorrect = previousAttempt?.correct || false;
+        
+        let brDelta: string;
+        if (!preCorrect && result.correct) brDelta = 'corrected';
+        else if (!preCorrect && !result.correct) brDelta = 'stuck';
+        else if (preCorrect && !result.correct) brDelta = 'regret';
+        else brDelta = 'confirmed';
+
+        const question = questionBank.getQuestion(result.qid);
+        if (!question) continue;
+
+        await supabase.from('attempts').insert({
+          user_id: user.id,
+          class_id: classId,
+          qid: result.qid,
+          pt: question.pt,
+          section: question.section,
+          qnum: question.qnum,
+          qtype: question.qtype,
+          level: question.difficulty,
+          correct: result.correct,
+          time_ms: result.brTimeMs,
+          mode: session.mode,
+          br_marked: brMarked.has(result.qid),
+          pre_answer: result.preAnswer,
+          br_selected: true,
+          br_answer: result.brAnswer,
+          br_rationale: result.brRationale,
+          br_time_ms: result.brTimeMs,
+          br_changed: result.brChanged,
+          br_outcome: result.correct ? 'correct' : 'incorrect',
+          br_delta: brDelta,
+        });
+      }
+    } catch (error) {
+      console.error('Error saving BR results:', error);
+    }
+  };
 
   const progress = session.mode !== 'adaptive'
     ? (session.currentIndex / session.questionQueue.length) * 100
@@ -777,15 +952,33 @@ function DrillContent() {
       </div>
 
       {/* Highlight Toolbar */}
-      <div className="px-6 py-2 flex justify-end items-center gap-3 border-b">
-        <HighlightToolbar 
-          mode={highlightMode} 
-          onModeChange={setHighlightMode}
-          isFlagged={isFlagged}
-          onToggleFlag={handleToggleFlag}
-          onUndo={handleUndo}
-          canUndo={highlightHistory.length > 0}
-        />
+      <div className="px-6 py-2 flex justify-between items-center gap-3 border-b">
+        <div className="flex items-center gap-2">
+          {brEnabled && brMarked.has(currentQuestion.qid) && (
+            <Badge variant="secondary" className="text-xs">
+              Marked for BR
+            </Badge>
+          )}
+        </div>
+        <div className="flex items-center gap-3">
+          {brEnabled && (
+            <Button
+              variant={brMarked.has(currentQuestion.qid) ? 'default' : 'outline'}
+              size="sm"
+              onClick={handleToggleBR}
+            >
+              {brMarked.has(currentQuestion.qid) ? 'Unmark BR' : 'Mark for BR'} (B)
+            </Button>
+          )}
+          <HighlightToolbar 
+            mode={highlightMode} 
+            onModeChange={setHighlightMode}
+            isFlagged={isFlagged}
+            onToggleFlag={handleToggleFlag}
+            onUndo={handleUndo}
+            canUndo={highlightHistory.length > 0}
+          />
+        </div>
       </div>
 
       {/* Main Content - Fixed Two-Column Layout */}

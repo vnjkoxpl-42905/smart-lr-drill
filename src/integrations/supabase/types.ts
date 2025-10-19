@@ -56,12 +56,21 @@ export type Database = {
       attempts: {
         Row: {
           app_version: string | null
+          br_answer: string | null
+          br_changed: boolean | null
+          br_delta: string | null
+          br_marked: boolean | null
+          br_outcome: string | null
+          br_rationale: string | null
+          br_selected: boolean | null
+          br_time_ms: number | null
           class_id: string
           confidence: number | null
           correct: boolean
           id: string
           level: number
           mode: string
+          pre_answer: string | null
           pt: number
           qid: string
           qnum: number
@@ -74,12 +83,21 @@ export type Database = {
         }
         Insert: {
           app_version?: string | null
+          br_answer?: string | null
+          br_changed?: boolean | null
+          br_delta?: string | null
+          br_marked?: boolean | null
+          br_outcome?: string | null
+          br_rationale?: string | null
+          br_selected?: boolean | null
+          br_time_ms?: number | null
           class_id: string
           confidence?: number | null
           correct: boolean
           id?: string
           level: number
           mode: string
+          pre_answer?: string | null
           pt: number
           qid: string
           qnum: number
@@ -92,12 +110,21 @@ export type Database = {
         }
         Update: {
           app_version?: string | null
+          br_answer?: string | null
+          br_changed?: boolean | null
+          br_delta?: string | null
+          br_marked?: boolean | null
+          br_outcome?: string | null
+          br_rationale?: string | null
+          br_selected?: boolean | null
+          br_time_ms?: number | null
           class_id?: string
           confidence?: number | null
           correct?: boolean
           id?: string
           level?: number
           mode?: string
+          pre_answer?: string | null
           pt?: number
           qid?: string
           qnum?: number
@@ -107,6 +134,45 @@ export type Database = {
           time_ms?: number
           timestamp_iso?: string | null
           voice_used?: boolean | null
+        }
+        Relationships: []
+      }
+      blind_review_sessions: {
+        Row: {
+          br_confirmed_count: number
+          br_corrected_count: number
+          br_items_count: number
+          br_median_time_ms: number | null
+          br_regret_count: number
+          br_stuck_count: number
+          class_id: string
+          created_at: string | null
+          id: string
+          session_id: string
+        }
+        Insert: {
+          br_confirmed_count?: number
+          br_corrected_count?: number
+          br_items_count?: number
+          br_median_time_ms?: number | null
+          br_regret_count?: number
+          br_stuck_count?: number
+          class_id: string
+          created_at?: string | null
+          id?: string
+          session_id: string
+        }
+        Update: {
+          br_confirmed_count?: number
+          br_corrected_count?: number
+          br_items_count?: number
+          br_median_time_ms?: number | null
+          br_regret_count?: number
+          br_stuck_count?: number
+          class_id?: string
+          created_at?: string | null
+          id?: string
+          session_id?: string
         }
         Relationships: []
       }

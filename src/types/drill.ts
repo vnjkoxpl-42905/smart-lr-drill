@@ -40,7 +40,9 @@ export interface DrillSession {
     timestamp: number;
     confidence?: number; // 1-5
     reviewDone?: boolean;
+    brMarked?: boolean; // Marked for Blind Review
   }>;
+  sessionId?: string; // For tracking BR sessions
 }
 
 export interface DrillSummary {
