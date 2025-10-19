@@ -46,12 +46,32 @@ export function TalkModeModal({
   const mediaStreamRef = React.useRef<MediaStream | null>(null);
   const currentTranscriptRef = React.useRef<string>('');
 
+  // Helper to extract detailed error from Supabase Edge Function responses
+  const extractFunctionError = async (err: any): Promise<string> => {
+    try {
+      const ctx = (err as any)?.context;
+      if (ctx && typeof (ctx as any).text === 'function') {
+        const status = (ctx as any).status;
+        const raw = await (ctx as any).text();
+        try {
+          const json = JSON.parse(raw);
+          const msg = json.error || json.message || raw;
+          return status ? `${msg} (HTTP ${status})` : msg;
+        } catch {
+          return status ? `${raw} (HTTP ${status})` : raw;
+        }
+      }
+      return (err as any)?.message || 'Unexpected error from coaching service.';
+    } catch {
+      return (err as any)?.message || 'Unexpected error from coaching service.';
+    }
+  };
+
   // Sync messages with parent
   React.useEffect(() => {
     setMessages(existingMessages);
     if (existingMessages && existingMessages.length > 0) setHasGreeted(true);
   }, [existingMessages]);
-
   // Initialize speech recognition
   React.useEffect(() => {
     if (!('webkitSpeechRecognition' in window)) {
@@ -201,7 +221,7 @@ export function TalkModeModal({
         speakResponse(data.content);
       } catch (e: any) {
         console.error('Failed to start talk mode:', e);
-        const msg = e?.message || e?.error || 'Could not start voice coaching. Please try again.';
+        const msg = await extractFunctionError(e);
         toast.error(msg);
       }
     };
@@ -349,7 +369,7 @@ export function TalkModeModal({
       speakResponse(data.content);
     } catch (e: any) {
       console.error('Failed to process voice message:', e);
-      const msg = e?.message || e?.error || 'Failed to process your message. Please try again.';
+      const msg = await extractFunctionError(e);
       toast.error(msg);
     } finally {
       setIsProcessing(false);

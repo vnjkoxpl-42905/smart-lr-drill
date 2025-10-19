@@ -60,6 +60,27 @@ export function TutorChatModal({
     }
   }, [open]);
 
+  // Helper to extract detailed error from Supabase Edge Function responses
+  const extractFunctionError = async (err: any): Promise<string> => {
+    try {
+      const ctx = (err as any)?.context;
+      if (ctx && typeof (ctx as any).text === 'function') {
+        const status = (ctx as any).status;
+        const raw = await (ctx as any).text();
+        try {
+          const json = JSON.parse(raw);
+          const msg = json.error || json.message || raw;
+          return status ? `${msg} (HTTP ${status})` : msg;
+        } catch {
+          return status ? `${raw} (HTTP ${status})` : raw;
+        }
+      }
+      return (err as any)?.message || 'Unexpected error from coaching service.';
+    } catch {
+      return (err as any)?.message || 'Unexpected error from coaching service.';
+    }
+  };
+
   const loadInitialQuestion = async () => {
     if (!question) return;
 
@@ -93,15 +114,17 @@ export function TutorChatModal({
 
       setMessages([{ role: 'assistant', content: data.content }]);
       setInitializing(false);
-    } catch (error) {
-      console.error('Failed to load initial question:', error);
+    } catch (e: any) {
+      console.error('Failed to load initial question:', e);
+      const msg = await extractFunctionError(e);
       setMessages([
         {
           role: 'assistant',
-          content: "I'm having trouble connecting right now. Please try again.",
+          content: msg,
         },
       ]);
       setInitializing(false);
+      toast.error(msg);
     } finally {
       setIsLoading(false);
     }
@@ -143,15 +166,17 @@ export function TutorChatModal({
       if (error) throw error;
 
       setMessages((prev) => [...prev, { role: 'assistant', content: data.content }]);
-    } catch (error) {
-      console.error('Failed to send message:', error);
+    } catch (e: any) {
+      console.error('Failed to send message:', e);
+      const msg = await extractFunctionError(e);
       setMessages((prev) => [
         ...prev,
         {
           role: 'assistant',
-          content: "I'm having trouble responding right now. Please try again.",
+          content: msg,
         },
       ]);
+      toast.error(msg);
     } finally {
       setIsLoading(false);
     }
