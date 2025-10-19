@@ -192,36 +192,33 @@ export function TutorChatModal({
   if (!open) return null;
 
   return (
-    <Card className="relative overflow-hidden rounded-xl border border-cyan-500/30 bg-gradient-to-br from-slate-900/95 via-purple-900/30 to-slate-900/95 shadow-[0_0_30px_rgba(6,182,212,0.2)] animate-in slide-in-from-top-2 duration-500">
-      {/* Subtle background glow effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 pointer-events-none" />
-      
-      <CardHeader className="relative px-4 py-3 border-b border-cyan-500/20 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
+    <Card className="relative overflow-hidden rounded-lg border bg-card shadow-sm animate-in slide-in-from-top-2 duration-300">
+      <CardHeader className="relative px-4 py-3 border-b">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-cyan-400" />
-          <h3 className="text-base font-semibold text-foreground">Joshua - Your LSAT Coach</h3>
+          <Sparkles className="w-4 h-4 text-primary" />
+          <h3 className="text-sm font-semibold text-foreground">Joshua</h3>
         </div>
       </CardHeader>
 
       <CardContent className="relative p-0">
-        <ScrollArea ref={scrollRef} className="h-[250px]">
-          <div className="space-y-3 p-4">
+        <ScrollArea ref={scrollRef} className="h-[220px]">
+          <div className="space-y-2.5 p-3">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
                 className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-lg p-2.5 text-sm ${
+                  className={`max-w-[85%] rounded-md p-2 text-sm ${
                     msg.role === 'user'
-                      ? 'bg-cyan-500/10 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.15)] ml-auto'
-                      : 'bg-purple-500/10 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.15)]'
+                      ? 'bg-primary/10 border border-primary/20'
+                      : 'bg-muted border border-border'
                   }`}
                 >
-                  <div className="text-xs font-semibold mb-1 opacity-70">
+                  <div className="text-xs font-medium mb-1 text-muted-foreground">
                     {msg.role === 'user' ? 'You' : 'Joshua'}
                   </div>
-                  <div className="text-sm whitespace-pre-wrap leading-relaxed">
+                  <div className="text-sm whitespace-pre-wrap leading-relaxed text-foreground">
                     {msg.content}
                   </div>
                 </div>
@@ -229,8 +226,8 @@ export function TutorChatModal({
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-2.5">
-                  <Loader2 className="w-4 h-4 animate-spin text-purple-400" />
+                <div className="bg-muted border border-border rounded-md p-2">
+                  <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
                 </div>
               </div>
             )}
@@ -238,7 +235,7 @@ export function TutorChatModal({
         </ScrollArea>
       </CardContent>
 
-      <CardFooter className="relative p-3 border-t border-cyan-500/20 bg-slate-900/50 flex-col gap-2">
+      <CardFooter className="relative p-3 border-t flex-col gap-2">
         <Textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -246,21 +243,22 @@ export function TutorChatModal({
           placeholder="Ask a follow-up question..."
           rows={1}
           disabled={isLoading}
-          className="resize-none border-cyan-500/30 focus-visible:ring-cyan-500/50 bg-slate-900/50 text-sm"
+          className="resize-none text-sm"
         />
         
         <div className="flex gap-2 w-full">
           <Button 
             onClick={handleSend} 
             disabled={!input.trim() || isLoading} 
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300"
+            className="flex-1"
             size="sm"
           >
             Send
           </Button>
           <Button 
             onClick={onTryAgain}
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300"
+            variant="outline"
+            className="flex-1"
             size="sm"
           >
             <RefreshCw className="w-4 h-4 mr-1" />
@@ -269,7 +267,7 @@ export function TutorChatModal({
           <Button 
             variant="outline" 
             onClick={onClose} 
-            className="flex-1 border-cyan-500/30 hover:bg-cyan-500/10"
+            className="flex-1"
             size="sm"
           >
             Continue
