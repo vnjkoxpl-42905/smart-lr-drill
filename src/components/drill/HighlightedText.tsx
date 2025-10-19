@@ -93,9 +93,17 @@ export function HighlightedText({
                 <mark
                   key={`highlight-${highlight.id}`}
                   className={cn(
-                    "bg-yellow-300/60 rounded-sm px-0.5 transition-all",
+                    "bg-yellow-300/60 transition-colors",
                     eraserMode && "cursor-pointer hover:bg-red-300/60 hover:line-through"
                   )}
+                  style={{
+                    padding: 0,
+                    margin: 0,
+                    border: 'none',
+                    lineHeight: 'inherit',
+                    boxDecorationBreak: 'clone',
+                    WebkitBoxDecorationBreak: 'clone',
+                  }}
                   onClick={() => eraserMode && onHighlightClick?.(highlight.id)}
                 >
                   {turnRange.turn.text.slice(highlight.start, highlight.end)}
@@ -196,9 +204,17 @@ export function HighlightedText({
             <mark
               key={`highlight-${highlight.id}`}
               className={cn(
-                "bg-yellow-300/60 rounded-sm px-0.5 transition-all",
+                "bg-yellow-300/60 transition-colors",
                 eraserMode && "cursor-pointer hover:bg-red-300/60 hover:line-through"
               )}
+              style={{
+                padding: 0,
+                margin: 0,
+                border: 'none',
+                lineHeight: 'inherit',
+                boxDecorationBreak: 'clone',
+                WebkitBoxDecorationBreak: 'clone',
+              }}
               onClick={() => eraserMode && onHighlightClick?.(highlight.id)}
             >
               {paraRange.text.slice(highlight.start, highlight.end)}
