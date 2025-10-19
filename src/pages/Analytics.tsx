@@ -12,6 +12,7 @@ interface AnalyticsData {
   accuracyByLevel: Record<number, { correct: number; total: number; accuracy: number }>;
   accuracyByTypeLevel: Record<string, Record<number, { correct: number; total: number; accuracy: number }>>;
   trend7d: Record<string, number>;
+  recentMissShare: Record<string, Record<number, number>>;
 }
 
 interface OpportunityArea {
@@ -20,6 +21,7 @@ interface OpportunityArea {
   impact: number;
   currentAccuracy: number;
   gap: number;
+  attempts: number;
 }
 
 const Analytics = () => {
@@ -128,11 +130,32 @@ const Analytics = () => {
         trend7d[type] = current7d - prev7d;
       });
 
+      // Calculate recent miss share
+      const totalMisses = attempts?.filter(a => !a.correct).length || 1;
+      const recentMissShare: Record<string, Record<number, number>> = {};
+      
+      attempts?.forEach(attempt => {
+        if (!attempt.correct) {
+          const { qtype, level } = attempt;
+          if (!recentMissShare[qtype]) recentMissShare[qtype] = {};
+          if (!recentMissShare[qtype][level]) recentMissShare[qtype][level] = 0;
+          recentMissShare[qtype][level]++;
+        }
+      });
+
+      // Normalize miss share
+      Object.keys(recentMissShare).forEach(type => {
+        Object.keys(recentMissShare[type]).forEach(level => {
+          recentMissShare[type][Number(level)] /= totalMisses;
+        });
+      });
+
       setData({
         accuracyByType,
         accuracyByLevel,
         accuracyByTypeLevel,
         trend7d,
+        recentMissShare,
       });
 
       // Calculate impact scores and find top 3 opportunities
@@ -147,13 +170,14 @@ const Analytics = () => {
           const recentShare = stats.total / totalAttempts;
           const impact = Math.round(100 * gap * recentShare);
 
-          if (impact > 0) {
+          if (stats.total >= 3 && impact > 0) {
             impactScores.push({
               type,
               level: Number(level),
               impact,
               currentAccuracy,
               gap,
+              attempts: stats.total,
             });
           }
         });
@@ -200,15 +224,8 @@ const Analytics = () => {
     );
   }
 
-  if (!data) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
-        <p className="text-gray-600">No data available</p>
-      </div>
-    );
-  }
-
-  const sortedTypes = Object.keys(data.accuracyByType).sort();
+  const hasData = data && Object.keys(data.accuracyByType).length > 0;
+  const sortedTypes = hasData ? Object.keys(data.accuracyByType).sort() : [];
 
   return (
     <div className="min-h-screen bg-white">
@@ -232,186 +249,234 @@ const Analytics = () => {
       </div>
 
       <div className="container mx-auto px-4 py-8 max-w-7xl">
-        {/* Opportunity Rings */}
-        <div className="mb-12">
-          <h2 className="text-lg font-semibold text-gray-900 mb-6">Top Opportunities</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {opportunities.map((opp, idx) => (
-              <Card
-                key={idx}
-                className="p-6 bg-gray-50 border-gray-200 hover:border-gray-900 transition-colors cursor-pointer"
-                onClick={() => startDrill(opp.type, opp.level)}
-              >
-                <div className="flex flex-col items-center">
-                  <div className="relative w-32 h-32 mb-4">
-                    <svg viewBox="0 0 100 100" className="transform -rotate-90">
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="40"
-                        fill="none"
-                        stroke="#E5E7EB"
-                        strokeWidth="8"
-                      />
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="40"
-                        fill="none"
-                        stroke="#111827"
-                        strokeWidth="8"
-                        strokeDasharray={`${(opp.currentAccuracy / 100) * 251.2} 251.2`}
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      <div className="text-2xl font-bold text-gray-900">{opp.impact}</div>
-                      <div className="text-xs text-gray-600">Impact</div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-semibold text-gray-900">{opp.type} · L{opp.level}</div>
-                    <div className="text-sm text-gray-600 mt-1">Start focused drill</div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Type Bars & Matrix Layout */}
-        <div className="grid lg:grid-cols-[1fr_auto] gap-8">
-          {/* Type Bars */}
-          <div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-6">Performance by Type</h2>
-            <div className="space-y-4">
-              {sortedTypes.map(type => {
-                const stats = data.accuracyByType[type];
-                const trend = data.trend7d[type] || 0;
-                
-                return (
-                  <div
-                    key={type}
-                    className="group cursor-pointer"
-                    onClick={() => startDrill(type, undefined)}
-                  >
-                    <div className="flex items-center gap-4 mb-2">
-                      <div className="w-48 text-sm text-gray-900 font-medium">{type}</div>
-                      <div className="flex-1 h-8 bg-gray-50 border border-gray-200 rounded relative overflow-hidden group-hover:border-gray-900 transition-colors">
-                        <div
-                          className="h-full bg-gray-900 transition-all"
-                          style={{ width: `${stats.accuracy}%` }}
-                        />
-                        <div className="absolute inset-0 flex items-center justify-end pr-2">
-                          <span className="text-xs text-gray-600 font-medium">
-                            {Math.round(stats.accuracy)}%
-                          </span>
+        {!hasData ? (
+          <Card className="p-12 bg-gray-50 border-gray-200 text-center">
+            <p className="text-gray-600">No data yet for this period</p>
+            <p className="text-sm text-gray-500 mt-2">Complete some drills to see your analytics</p>
+          </Card>
+        ) : (
+          <>
+            {/* Opportunity Rings */}
+            <div className="mb-12">
+              <h2 className="text-lg font-semibold text-gray-900 mb-6">Top Opportunities</h2>
+              {opportunities.length === 0 ? (
+                <Card className="p-8 bg-gray-50 border-gray-200 text-center">
+                  <p className="text-gray-600 text-sm">Great work! No significant improvement areas detected.</p>
+                </Card>
+              ) : (
+                <div className="grid md:grid-cols-3 gap-6">
+                  {opportunities.map((opp, idx) => (
+                    <Card
+                      key={idx}
+                      className="p-6 bg-gray-50 border-gray-200 hover:border-gray-900 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-900"
+                      onClick={() => startDrill(opp.type, opp.level)}
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          startDrill(opp.type, opp.level);
+                        }
+                      }}
+                    >
+                      <div className="flex flex-col items-center">
+                        <div className="relative w-32 h-32 mb-4">
+                          <svg viewBox="0 0 100 100" className="transform -rotate-90">
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="40"
+                              fill="none"
+                              stroke="#E5E7EB"
+                              strokeWidth="8"
+                            />
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="40"
+                              fill="none"
+                              stroke="#111827"
+                              strokeWidth="8"
+                              strokeDasharray={`${(opp.currentAccuracy / 100) * 251.2} 251.2`}
+                            />
+                          </svg>
+                          <div className="absolute inset-0 flex flex-col items-center justify-center">
+                            <div className="text-2xl font-bold text-gray-900">{opp.impact}</div>
+                            <div className="text-xs text-gray-600">Impact</div>
+                          </div>
+                        </div>
+                        <div className="text-center">
+                          <div className="font-semibold text-gray-900">{opp.type} · L{opp.level}</div>
+                          <div className="text-sm text-gray-600 mt-1">Start focused drill</div>
                         </div>
                       </div>
-                      <div className="w-12 text-xs text-gray-600 text-right">
-                        {trend > 0 ? '↑' : trend < 0 ? '↓' : '—'}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Matrix */}
-          <div className="lg:w-80">
-            <h2 className="text-lg font-semibold text-gray-900 mb-6">Type × Level Matrix</h2>
-            <Card className="p-4 bg-gray-50 border-gray-200">
-              <div className="space-y-2">
-                <div className="flex gap-2 mb-4">
-                  <div className="w-24" />
-                  {[1, 2, 3, 4, 5].map(level => (
-                    <div key={level} className="w-10 text-center text-xs text-gray-600 font-medium">
-                      L{level}
-                    </div>
+                    </Card>
                   ))}
                 </div>
-                {sortedTypes.map(type => (
-                  <div key={type} className="flex gap-2 items-center">
-                    <div className="w-24 text-xs text-gray-900 truncate">{type}</div>
-                    {[1, 2, 3, 4, 5].map(level => {
-                      const stats = data.accuracyByTypeLevel[type]?.[level];
-                      const accuracy = stats?.accuracy || 0;
-                      const size = Math.max(4, (accuracy / 100) * 24);
-                      const opacity = stats ? 1 - (accuracy / 100) * 0.5 : 0.2;
-                      
-                      return (
-                        <div
-                          key={level}
-                          className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-gray-200 rounded transition-colors"
-                          onClick={() => startDrill(type, level)}
-                        >
-                          <div
-                            className="rounded-full bg-gray-900 transition-all"
-                            style={{
-                              width: `${size}px`,
-                              height: `${size}px`,
-                              opacity,
-                            }}
-                          />
-                        </div>
-                      );
-                    })}
-                  </div>
-                ))}
-              </div>
-            </Card>
-          </div>
-        </div>
+              )}
+            </div>
 
-        {/* Difficulty Circles */}
-        <div className="mt-12">
-          <h2 className="text-lg font-semibold text-gray-900 mb-6">Performance by Difficulty</h2>
-          <div className="grid grid-cols-5 gap-6">
-            {[1, 2, 3, 4, 5].map(level => {
-              const stats = data.accuracyByLevel[level] || { accuracy: 0 };
-              
-              return (
-                <Card
-                  key={level}
-                  className="p-6 bg-gray-50 border-gray-200 hover:border-gray-900 transition-colors cursor-pointer"
-                  onClick={() => startDrill(undefined, level)}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-4">
-                      <svg viewBox="0 0 100 100" className="transform -rotate-90">
-                        <circle
-                          cx="50"
-                          cy="50"
-                          r="40"
-                          fill="none"
-                          stroke="#E5E7EB"
-                          strokeWidth="6"
-                        />
-                        <circle
-                          cx="50"
-                          cy="50"
-                          r="40"
-                          fill="none"
-                          stroke="#111827"
-                          strokeWidth="6"
-                          strokeDasharray={`${(stats.accuracy / 100) * 251.2} 251.2`}
-                        />
-                      </svg>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-xl font-bold text-gray-900">
-                          {Math.round(stats.accuracy)}%
+            {/* Type Bars & Matrix Layout */}
+            <div className="grid lg:grid-cols-[1fr_auto] gap-8">
+              {/* Type Bars */}
+              <div>
+                <h2 className="text-lg font-semibold text-gray-900 mb-6">Performance by Type</h2>
+                <div className="space-y-3">
+                  {sortedTypes.map(type => {
+                    const stats = data.accuracyByType[type];
+                    const trend = data.trend7d[type] || 0;
+                    
+                    return (
+                      <div
+                        key={type}
+                        className="group cursor-pointer focus:outline-none"
+                        onClick={() => startDrill(type, undefined)}
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            startDrill(type, undefined);
+                          }
+                        }}
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-44 text-sm text-gray-900 font-medium truncate">{type}</div>
+                          <div className="flex-1 h-8 bg-gray-50 border border-gray-200 rounded relative overflow-hidden group-hover:border-gray-900 group-focus:ring-2 group-focus:ring-gray-900 transition-all">
+                            <div
+                              className="h-full bg-gray-900 transition-all"
+                              style={{ width: `${stats.accuracy}%` }}
+                            />
+                            <div className="absolute inset-0 flex items-center justify-end pr-2">
+                              <span className="text-xs text-gray-600 font-medium">
+                                {Math.round(stats.accuracy)}%
+                              </span>
+                            </div>
+                          </div>
+                          <div className="w-8 text-xs text-gray-600 text-center font-medium">
+                            {trend > 0 ? '↑' : trend < 0 ? '↓' : '—'}
+                          </div>
                         </div>
                       </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Matrix */}
+              <div className="lg:w-96">
+                <h2 className="text-lg font-semibold text-gray-900 mb-6">Type × Level Matrix</h2>
+                <Card className="p-4 bg-gray-50 border-gray-200">
+                  <div className="space-y-2">
+                    <div className="flex gap-2 mb-3">
+                      <div className="w-28" />
+                      {[1, 2, 3, 4, 5].map(level => (
+                        <div key={level} className="w-10 text-center text-xs text-gray-600 font-medium">
+                          L{level}
+                        </div>
+                      ))}
                     </div>
-                    <div className="text-center">
-                      <div className="font-semibold text-gray-900">Level {level}</div>
-                    </div>
+                    {sortedTypes.map(type => (
+                      <div key={type} className="flex gap-2 items-center">
+                        <div className="w-28 text-xs text-gray-900 truncate" title={type}>{type}</div>
+                        {[1, 2, 3, 4, 5].map(level => {
+                          const stats = data.accuracyByTypeLevel[type]?.[level];
+                          const accuracy = stats?.accuracy || 0;
+                          const missShare = data.recentMissShare[type]?.[level] || 0;
+                          const size = stats ? Math.max(6, Math.min(28, (accuracy / 100) * 28)) : 4;
+                          const opacity = stats ? 0.3 + (missShare * 0.7) : 0.15;
+                          
+                          return (
+                            <div
+                              key={level}
+                              className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-gray-200 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900"
+                              onClick={() => stats && startDrill(type, level)}
+                              tabIndex={stats ? 0 : -1}
+                              onKeyDown={(e) => {
+                                if (stats && (e.key === 'Enter' || e.key === ' ')) {
+                                  e.preventDefault();
+                                  startDrill(type, level);
+                                }
+                              }}
+                              title={stats ? `${type} L${level}: ${Math.round(accuracy)}% (${stats.total} attempts)` : 'No data'}
+                            >
+                              <div
+                                className="rounded-full bg-gray-900 transition-all"
+                                style={{
+                                  width: `${size}px`,
+                                  height: `${size}px`,
+                                  opacity,
+                                }}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ))}
                   </div>
                 </Card>
-              );
-            })}
-          </div>
-        </div>
+              </div>
+            </div>
+
+            {/* Difficulty Circles */}
+            <div className="mt-12">
+              <h2 className="text-lg font-semibold text-gray-900 mb-6">Performance by Difficulty</h2>
+              <div className="grid grid-cols-5 gap-4">
+                {[1, 2, 3, 4, 5].map(level => {
+                  const stats = data.accuracyByLevel[level] || { accuracy: 0, total: 0 };
+                  
+                  return (
+                    <Card
+                      key={level}
+                      className="p-6 bg-gray-50 border-gray-200 hover:border-gray-900 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-900"
+                      onClick={() => startDrill(undefined, level)}
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          startDrill(undefined, level);
+                        }
+                      }}
+                    >
+                      <div className="flex flex-col items-center">
+                        <div className="relative w-24 h-24 mb-3">
+                          <svg viewBox="0 0 100 100" className="transform -rotate-90">
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="40"
+                              fill="none"
+                              stroke="#E5E7EB"
+                              strokeWidth="6"
+                            />
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="40"
+                              fill="none"
+                              stroke="#111827"
+                              strokeWidth="6"
+                              strokeDasharray={`${(stats.accuracy / 100) * 251.2} 251.2`}
+                            />
+                          </svg>
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="text-xl font-bold text-gray-900">
+                              {Math.round(stats.accuracy)}%
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-center">
+                          <div className="font-semibold text-gray-900">Level {level}</div>
+                          {stats.total > 0 && (
+                            <div className="text-xs text-gray-500 mt-1">{stats.total} attempts</div>
+                          )}
+                        </div>
+                      </div>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
