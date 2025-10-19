@@ -29,12 +29,16 @@ export default function Auth() {
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
   const [passwordError, setPasswordError] = React.useState('');
 
-  // Redirect if already logged in
+  // Redirect if already logged in (but never during recovery)
   React.useEffect(() => {
-    if (user) {
+    const url = new URL(window.location.href);
+    const hashParams = new URLSearchParams(window.location.hash.replace('#', ''));
+    const type = url.searchParams.get('type') || hashParams.get('type');
+    const inRecoveryURL = type === 'recovery';
+    if (user && !isRecovery && !inRecoveryURL) {
       navigate('/');
     }
-  }, [user, navigate]);
+  }, [user, navigate, isRecovery]);
 
   // Detect recovery mode from URL or auth event
   React.useEffect(() => {
@@ -43,17 +47,13 @@ export default function Auth() {
         const url = new URL(window.location.href);
         const hashParams = new URLSearchParams(window.location.hash.replace('#', ''));
         const type = url.searchParams.get('type') || hashParams.get('type');
-        
         if (type === 'recovery') {
-          // Verify the recovery token is valid
-          const { data: { session }, error } = await supabase.auth.getSession();
-          
-          if (error || !session) {
-            setIsInvalidToken(true);
-            setIsRecovery(true);
-          } else {
-            setIsRecovery(true);
-            setRecoveryEmail(session.user.email || '');
+          // Enter recovery mode immediately; let auth listener populate email
+          setIsRecovery(true);
+          // Try to read session just to prefill email if already available (non-blocking)
+          const { data: { session } } = await supabase.auth.getSession();
+          if (session?.user?.email) {
+            setRecoveryEmail(session.user.email);
           }
         }
       } catch (err) {
