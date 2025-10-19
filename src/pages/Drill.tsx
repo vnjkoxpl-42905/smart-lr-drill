@@ -613,10 +613,10 @@ function DrillContent() {
               
               return (
                 <div 
-                  className={cn(
-                    "pl-4 border-l-2 border-gray-300 py-2 stimulus",
-                    highlightMode === 'highlight' ? 'select-text' : 'select-none'
-                  )}
+              className={cn(
+                "pl-4 py-2 stimulus",
+                highlightMode === 'highlight' ? 'select-text' : 'select-none'
+              )}
                   contentEditable={false}
                   tabIndex={-1}
                   draggable={false}
