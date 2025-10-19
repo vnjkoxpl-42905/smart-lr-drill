@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
-import { TalkModeModal } from '@/components/drill/TalkModeModal';
+
 import { ReviewModal } from '@/components/drill/ReviewModal';
 import { VoiceCoachChip } from '@/components/drill/VoiceCoachChip';
 import { VoiceCoachModal } from '@/components/drill/VoiceCoachModal';
@@ -49,7 +49,7 @@ function DrillContent() {
   const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
-  const [talkModeOpen, setTalkModeOpen] = React.useState(false);
+  
   const [tutorMessages, setTutorMessages] = React.useState<Array<{role: 'user' | 'assistant'; content: string}>>([]);
   const [wajModalOpen, setWajModalOpen] = React.useState(false);
   const [voiceCoachOpen, setVoiceCoachOpen] = React.useState(false);
@@ -185,7 +185,6 @@ function DrillContent() {
     setConfidence(null);
     setShowSolution(false);
     setTutorChatOpen(false);
-    setTalkModeOpen(false);
     setTutorMessages([]);
     setVoiceCoachOpen(false);
     setShowVoiceChip(false);
@@ -264,7 +263,6 @@ function DrillContent() {
 
   const handleTryAgain = () => {
     setTutorChatOpen(false);
-    setTalkModeOpen(false);
     setTutorMessages([]);
     setVoiceCoachOpen(false);
     setShowVoiceChip(false);
@@ -276,7 +274,6 @@ function DrillContent() {
 
   const handleContinueToReview = () => {
     setTutorChatOpen(false);
-    setTalkModeOpen(false);
     setTutorMessages([]);
     setWajModalOpen(true);
   };
@@ -395,16 +392,10 @@ function DrillContent() {
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // After wrong answer, determine which coaching mode to use
-    if (!correct && settings.voiceCoachEnabled) {
-      // Open Talk Mode (voice with wavelength)
-      setTalkModeOpen(true);
-    } else if (!correct && settings.tutorEnabled) {
-      // Open text tutor (Socratic questioning)
+    // After wrong answer, show Joshua's feedback automatically
+    if (!correct) {
+      // Open text tutor with specific feedback
       setTutorChatOpen(true);
-    } else if (!correct) {
-      // Skip both, go straight to WAJ review
-      setWajModalOpen(true);
     } else {
       // Save correct attempt to database
       await saveAttemptToDatabase({
@@ -792,7 +783,7 @@ function DrillContent() {
             )}
 
             {/* Joshua Tutor (Text) - appears under stimulus when active */}
-            {tutorChatOpen && settings.tutorEnabled && (
+            {tutorChatOpen && (
               <div className="pl-4 mt-4">
                 <TutorChatModal
                   open={tutorChatOpen}
@@ -804,16 +795,7 @@ function DrillContent() {
               </div>
             )}
 
-            {/* Voice Coach (Talk Mode) - inline panel under stimulus */}
-            <TalkModeModal
-              open={talkModeOpen}
-              question={currentQuestion}
-              userAnswer={selectedAnswer}
-              existingMessages={tutorMessages}
-              inlineMode
-              onClose={handleTryAgain}
-              onMessagesUpdate={setTutorMessages}
-            />
+            {/* Joshua's text-based coaching */}
 
           </div>
           
