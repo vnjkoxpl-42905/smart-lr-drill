@@ -320,10 +320,16 @@ NEVER mention sources - just coach naturally using your knowledge
 `;
 
     if (phase === 1) {
-      systemPrompt += `PHASE 1 - SOCRATIC QUESTION:
-Ask ONE Socratic question that points the student toward the flaw in their chosen answer (${question.userAnswer}). Use the knowledge base above to inform your question. Reference specific concepts, tactics, or patterns when relevant. Do NOT reveal the correct answer (${question.correctAnswer}) yet. Be direct, clear, simple.
+      systemPrompt += `PHASE 1 - IMMEDIATE POINTED FEEDBACK:
+Immediately tell the student why their chosen answer (${question.userAnswer}) is WRONG. Be SURGICAL and SPECIFIC:
 
-Example: "What specific group does answer B actually talk about, and does that match what the conclusion needs?"`;
+1. Quote the exact phrase or pinpoint the exact logical flaw in ${question.userAnswer}
+2. Identify the TRAP: Reference the wrong answer patterns from your knowledge base - what specific trap did they fall for? (e.g., "reverses the logic," "irrelevant comparison," "scope shift," "necessity vs sufficiency confusion")
+3. Be ULTRA-CONCISE: 2-3 sentences maximum
+4. DO NOT reveal the correct answer yet
+5. DO NOT ask questions - TELL them what's wrong
+
+Example: "Answer B reverses the necessary condition. The stimulus says X is required FOR Y, but B flips it to Y being required FOR X. This is the classic Mistaken Reversal trap."`;
     } else if (phase === 2) {
       systemPrompt += `PHASE 2 - REVEAL + 3-BULLET COACHING:
 Reveal the correct answer and provide exactly 3 bullets. USE YOUR KNOWLEDGE BASE to make these bullets specific and educational:
