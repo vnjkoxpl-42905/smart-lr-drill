@@ -24,6 +24,16 @@ import { captureTextSelection, replaceOverlappingHighlights, type Highlight, typ
 import { ArrowLeft, CheckCircle, XCircle, Flag } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import type { LRQuestion } from '@/lib/questionLoader';
 import type { DrillMode, DrillSession, FullSectionConfig, TypeDrillConfig, TimerMode } from '@/types/drill';
 
@@ -62,6 +72,8 @@ function DrillContent() {
   const [highlights, setHighlights] = React.useState<Map<string, Highlight[]>>(new Map());
   const [highlightHistory, setHighlightHistory] = React.useState<Map<string, Highlight[]>[]>([]);
   const [isFlagged, setIsFlagged] = React.useState(false);
+  const [showExitDialog, setShowExitDialog] = React.useState(false);
+  const [exitDestination, setExitDestination] = React.useState<'/' | '/dashboard'>('/');
   
   const timer = hasTimer ? useTimerContext() : null;
 
@@ -562,6 +574,15 @@ function DrillContent() {
     }
   };
 
+  const handleNavigation = (destination: '/' | '/dashboard') => {
+    setExitDestination(destination);
+    setShowExitDialog(true);
+  };
+
+  const confirmExit = () => {
+    navigate(exitDestination);
+  };
+
   // Start timer on mount if applicable
   React.useEffect(() => {
     if (hasTimer && timer && !timer.running) {
@@ -702,27 +723,43 @@ function DrillContent() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <div className="px-6 py-4 border-b bg-card">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => navigate('/')}
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Home
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => navigate('/dashboard')}
-            >
-              Dashboard
-            </Button>
-          </div>
+    <>
+      <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Leave drill session?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Are you sure you want to leave? Your progress in this session will be saved.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmExit}>Yes, leave</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <div className="min-h-screen flex flex-col">
+        {/* Header */}
+        <div className="px-6 py-4 border-b bg-card">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => handleNavigation('/')}
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Home
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleNavigation('/')}
+              >
+                Dashboard
+              </Button>
+            </div>
 
           <div className="flex items-center gap-6">
             {session.mode !== 'adaptive' && (
@@ -975,6 +1012,7 @@ function DrillContent() {
         showContrast={settings.showContrast}
       />
     </div>
+    </>
   );
 }
 
