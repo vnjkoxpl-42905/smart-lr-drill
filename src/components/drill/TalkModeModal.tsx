@@ -491,7 +491,7 @@ export function TalkModeModal({
 
         {/* Reply Controls */}
         {supportsSpeech ? (
-          <div className="px-6 py-4 border-t border-cyan-500/20">
+          <div className="px-6 py-4 border-t border-cyan-500/20 space-y-3">
             <Button
               onClick={() => (isRecording ? stopRecording() : startRecording())}
               disabled={isProcessing || isSpeaking}
@@ -505,9 +505,16 @@ export function TalkModeModal({
               <Mic className={cn("w-6 h-6 mr-2", isRecording && "animate-pulse")} />
               {isRecording ? 'Stop and Send' : 'Speak now'}
             </Button>
+            <Button
+              onClick={onClose}
+              variant="outline"
+              className="w-full h-12"
+            >
+              Return to Question
+            </Button>
           </div>
         ) : (
-          <div className="px-6 py-4 border-t border-cyan-500/20">
+          <div className="px-6 py-4 border-t border-cyan-500/20 space-y-3">
             <div className="flex items-end gap-3">
               <textarea
                 value={userTranscript}
@@ -523,7 +530,14 @@ export function TalkModeModal({
                 Send
               </Button>
             </div>
-            <p className="text-xs text-muted-foreground mt-2">Your browser doesn't support voice input. You can type your reply.</p>
+            <p className="text-xs text-muted-foreground">Your browser doesn't support voice input. You can type your reply.</p>
+            <Button
+              onClick={onClose}
+              variant="outline"
+              className="w-full h-12"
+            >
+              Return to Question
+            </Button>
           </div>
         )}
       </DialogContent>
