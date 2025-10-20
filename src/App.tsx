@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QuestionBankProvider } from "./contexts/QuestionBankContext";
 import { AuthProvider } from "./contexts/AuthContext";
 import { UserSettingsProvider } from "./contexts/UserSettingsContext";
-import Landing from "./pages/Landing";
+import Home from "./pages/Home";
 import Drill from "./pages/Drill";
 import Dashboard from "./pages/Dashboard";
 import WrongAnswerJournal from "./pages/WrongAnswerJournal";
@@ -31,7 +31,7 @@ const App = () => (
             <Route path="/*" element={
               <QuestionBankProvider>
                 <Routes>
-                  <Route path="/" element={<Landing />} />
+                  <Route path="/" element={<Home />} />
                   <Route path="/drill" element={<Drill />} />
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/waj" element={<WrongAnswerJournal />} />
