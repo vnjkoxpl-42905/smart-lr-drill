@@ -263,10 +263,10 @@ export default function Home() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <button
                       onClick={() => navigate('/waj')}
-                      className="group flex items-start gap-4 p-6 rounded-lg bg-card border border-border text-left transition-all duration-200 hover:shadow-md hover:border-primary/20 hover:-translate-y-0.5"
+                      className="group flex items-start gap-4 p-6 rounded-lg bg-card border border-border text-left transition-all duration-200 hover:shadow-md hover:shadow-glow-sm hover:border-accent-bronze/30 hover:-translate-y-0.5"
                     >
-                      <div className="rounded-lg bg-secondary/50 p-3 transition-colors duration-200 group-hover:bg-secondary">
-                        <XCircle className="w-5 h-5 text-primary" />
+                      <div className="rounded-lg bg-secondary/50 p-3 transition-all duration-200 group-hover:bg-accent-bronze/10 group-hover:shadow-glow-sm">
+                        <XCircle className="w-5 h-5 text-primary transition-colors duration-200 group-hover:text-accent-bronze" />
                       </div>
                       <div>
                         <p className="text-sm font-medium text-text-primary mb-1">Wrong Answer Journal</p>
@@ -276,10 +276,10 @@ export default function Home() {
 
                     <button
                       onClick={() => navigate('/flagged')}
-                      className="group flex items-start gap-4 p-6 rounded-lg bg-card border border-border text-left transition-all duration-200 hover:shadow-md hover:border-primary/20 hover:-translate-y-0.5"
+                      className="group flex items-start gap-4 p-6 rounded-lg bg-card border border-border text-left transition-all duration-200 hover:shadow-md hover:shadow-glow-sm hover:border-accent-bronze/30 hover:-translate-y-0.5"
                     >
-                      <div className="rounded-lg bg-secondary/50 p-3 transition-colors duration-200 group-hover:bg-secondary">
-                        <Flag className="w-5 h-5 text-primary" />
+                      <div className="rounded-lg bg-secondary/50 p-3 transition-all duration-200 group-hover:bg-accent-bronze/10 group-hover:shadow-glow-sm">
+                        <Flag className="w-5 h-5 text-primary transition-colors duration-200 group-hover:text-accent-bronze" />
                       </div>
                       <div>
                         <p className="text-sm font-medium text-text-primary mb-1">Flagged Questions</p>

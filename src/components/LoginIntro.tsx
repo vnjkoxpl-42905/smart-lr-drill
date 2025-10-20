@@ -97,52 +97,44 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
         phase === 'fade-out' && "animate-[fade-out_150ms_ease-in_forwards]"
       )}
     >
-      {/* Surface with fade-in */}
+      {/* Warm ambient gradient backdrop */}
       <div 
         className={cn(
           "absolute inset-0",
           phase === 'fade-in' && "animate-[surface-fade_150ms_ease-out]"
         )}
         style={{
-          background: 'linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(0 0% 100%) 100%)'
+          background: 'linear-gradient(135deg, hsl(30 15% 99%) 0%, hsl(30 10% 98%) 50%, hsl(25 20% 96%) 100%)'
         }}
       />
       
-      {/* Vignette overlay for depth */}
+      {/* Warm vignette overlay for depth */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle at center, transparent 0%, hsl(0 0% 0% / 0.02) 100%)'
+          background: 'radial-gradient(circle at center, transparent 0%, hsl(30 8% 8% / 0.03) 100%)'
         }}
       />
-
-      {/* Lattice grid - fades in with line sweep */}
-      {(phase === 'line-sweep' || phase === 'text-reveal') && (
-        <svg className="absolute inset-0 pointer-events-none animate-[lattice-reveal_300ms_cubic-bezier(0.4,0,0.2,1)]">
-          <defs>
-            <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
-              <path 
-                d="M 8 0 L 0 0 0 8" 
-                fill="none" 
-                stroke="hsl(220 13% 91%)" 
-                strokeWidth="0.5"
-                opacity="0.3"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+      
+      {/* Subtle bronze glow pulse */}
+      {(phase === 'text-reveal' || phase === 'fade-out') && (
+        <div 
+          className="absolute inset-0 pointer-events-none animate-glow-pulse"
+          style={{
+            background: 'radial-gradient(circle at 50% 45%, hsl(25 65% 48% / 0.08) 0%, transparent 50%)'
+          }}
+        />
       )}
 
-      {/* Line sweep - MORE VISIBLE with thicker, darker line */}
+      {/* Warm line sweep with bronze glow */}
       {(phase === 'line-sweep' || phase === 'text-reveal') && (
         <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
           <div 
             className="w-full animate-[sweep_400ms_cubic-bezier(0.4,0,0.2,1)]"
             style={{
-              height: '2px', // Thicker line
-              background: 'linear-gradient(90deg, transparent 0%, hsl(220 13% 9% / 0.4) 50%, transparent 100%)', // More visible
-              boxShadow: '0 0 8px hsl(220 13% 9% / 0.2)' // Add glow
+              height: '2px',
+              background: 'linear-gradient(90deg, transparent 0%, hsl(25 65% 48% / 0.6) 50%, transparent 100%)',
+              boxShadow: '0 0 12px hsl(25 75% 60% / 0.4)'
             }}
           />
         </div>
@@ -176,7 +168,10 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
             {showCursor && typedText.length < fullText.length && (
               <span 
                 className="inline-block ml-1 animate-[cursor-blink_800ms_step-end_infinite]"
-                style={{ opacity: 0.7 }}
+                style={{ 
+                  opacity: 0.7,
+                  color: 'hsl(25 65% 48%)'
+                }}
               >
                 |
               </span>

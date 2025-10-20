@@ -7,9 +7,12 @@ interface QuickStartProps {
 
 export function QuickStart({ onStart }: QuickStartProps) {
   return (
-    <div className="relative overflow-hidden rounded-xl bg-surface-elevated p-12 shadow-lg transition-shadow hover:shadow-xl">
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent pointer-events-none" />
+    <div className="relative overflow-hidden rounded-xl bg-surface-elevated p-12 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+      {/* Warm bronze gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-bronze/[0.03] via-accent-warm/[0.02] to-transparent pointer-events-none" />
+      
+      {/* Bronze glow on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-bronze/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       
       <div className="relative z-10 max-w-xl">
         <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-text-tertiary mb-4">
@@ -28,10 +31,9 @@ export function QuickStart({ onStart }: QuickStartProps) {
         <Button 
           onClick={onStart}
           size="lg"
-          className="relative overflow-hidden group h-12 px-8 text-base font-medium transition-all duration-200 hover:scale-[1.02] hover:shadow-md"
+          className="relative overflow-hidden h-12 px-8 text-base font-medium shadow-md hover:shadow-glow"
         >
           <span className="relative z-10">Begin Practice</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
         </Button>
       </div>
     </div>
