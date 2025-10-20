@@ -24,7 +24,7 @@ import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
 import { captureTextSelection, replaceOverlappingHighlights, type Highlight, type HighlightColor } from '@/lib/highlightUtils';
-import { ArrowLeft, CheckCircle, XCircle, Flag, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, Flag, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import {
@@ -290,15 +290,17 @@ function DrillContent() {
       const newSet = new Set(prev);
       if (newSet.has(key)) {
         newSet.delete(key);
-        // If this answer is currently selected, deselect it
-        if (selectedAnswer === key) {
-          setSelectedAnswer('');
-        }
       } else {
         newSet.add(key);
-        // Also deselect when eliminating if currently selected
+        // Deselect when eliminating if currently selected
         if (selectedAnswer === key) {
           setSelectedAnswer('');
+          // Clear saved answer in section mode
+          if (session?.mode === 'full-section' && currentQuestion) {
+            const newAttempts = new Map(session.attempts);
+            newAttempts.delete(currentQuestion.qid);
+            setSession({ ...session, attempts: newAttempts });
+          }
         }
       }
       return newSet;
@@ -585,26 +587,36 @@ function DrillContent() {
     alert('Section complete! Results will be shown here.');
   };
 
-  // Keyboard navigation for section mode
+  // Enhanced keyboard navigation for section mode
   React.useEffect(() => {
     if (session?.mode !== 'full-section') return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Prevent navigation if user is typing in an input
+      // Prevent if user is typing in an input
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
       
-      if (e.key === 'ArrowRight') {
+      // Arrow keys for navigation
+      if (e.key === 'ArrowRight' || e.key === 'Enter') {
         e.preventDefault();
         handleNext();
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
         handlePrevious();
       }
+      // Number keys 1-5 for selecting A-E
+      else if (['1', '2', '3', '4', '5'].includes(e.key)) {
+        e.preventDefault();
+        const answerKeys = Object.keys(currentQuestion.answerChoices);
+        const answerIndex = parseInt(e.key) - 1;
+        if (answerIndex < answerKeys.length) {
+          handleAnswerSelect(answerKeys[answerIndex]);
+        }
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [session, handleNext, handlePrevious]);
+  }, [session, handleNext, handlePrevious, currentQuestion]);
 
   const handleTextSelection = (e: React.MouseEvent, section: 'stimulus' | 'stem') => {
     if (highlightMode === 'none' || highlightMode === 'erase') return;
@@ -944,47 +956,52 @@ function DrillContent() {
     const showFeedback = session?.mode !== 'full-section' && answerLocked && isSelected && confidence !== null;
 
     const isSectionMode = session?.mode === 'full-section';
+    const isEliminated = eliminatedAnswers.has(key);
     
     return (
       <div
         key={key}
+        onClick={() => !isEliminated && handleAnswerSelect(key)}
         className={cn(
-          "group relative flex items-start gap-3 py-4 px-4 -mx-4 rounded-sm border-b border-border/30 last:border-b-0",
-          "transition-all duration-150",
-          !isSectionMode && confidence === null && "hover:bg-accent/30 cursor-pointer",
-          isSectionMode && "hover:bg-accent/20 cursor-pointer",
-          !isSectionMode && "focus-within:outline focus-within:outline-1 focus-within:outline-foreground focus-within:outline-offset-2",
-          isSectionMode && isSelected && "bg-accent/40 border-l-2 border-l-foreground -ml-4 pl-[14px]",
-          !isSectionMode && showFeedback && isCorrect && "bg-green-50",
-          !isSectionMode && showFeedback && !isCorrect && "bg-red-50",
+          "group relative flex items-start gap-4 py-5 px-5 -mx-5 cursor-pointer",
+          "transition-all duration-150 ease-out",
+          "border-b border-border",
+          // Section mode styles
+          isSectionMode && !isEliminated && "hover:bg-accent/20 active:bg-accent/30",
+          isSectionMode && isSelected && !isEliminated && "bg-accent/30 border-l-[3px] border-l-primary -ml-5 pl-[17px]",
+          // Non-section styles
+          !isSectionMode && confidence === null && !isEliminated && "hover:bg-accent/30",
+          !isSectionMode && showFeedback && isCorrect && "bg-success/10",
+          !isSectionMode && showFeedback && !isCorrect && "bg-destructive/10",
           !isSectionMode && isSelected && tutorChatOpen && "bg-cyan-50/50",
-          eliminatedAnswers.has(key) && "opacity-40",
+          // Eliminated styles
+          isEliminated && "opacity-40 cursor-not-allowed"
         )}
       >
-        <div className="flex items-center h-6 mt-0.5">
+        <div className="flex items-center h-6 mt-0.5 shrink-0">
           {inFocusedMode && isSelected ? (
-            <div className="w-4 h-4 rounded-full bg-cyan-500 flex items-center justify-center">
-              <div className="w-2 h-2 rounded-full bg-white" />
+            <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
+              <div className="w-2 h-2 rounded-full bg-primary-foreground" />
             </div>
           ) : showRadio ? (
-            <RadioGroupItem value={key} id={`answer-${key}`} className="mt-0" />
+            <RadioGroupItem value={key} id={`answer-${key}`} className="mt-0 pointer-events-none" />
           ) : (
-            <div className="w-4 h-4" />
+            <div className="w-5 h-5" />
           )}
         </div>
-        <div className="flex items-start gap-2 flex-1">
+        <div className="flex items-start gap-3 flex-1 min-w-0">
           <Label
             htmlFor={`answer-${key}`}
             className={cn(
               "flex-1 cursor-pointer",
-              "text-[17px] leading-[1.7]",
+              "text-[18px] leading-[1.75]",
               "font-normal text-foreground",
               "select-none",
-              eliminatedAnswers.has(key) && "line-through opacity-60"
+              isEliminated && "line-through decoration-2 decoration-muted-foreground/60"
             )}
           >
-            <span className="font-bold mr-2.5 text-foreground/70">({key})</span>
-            <span className={cn(eliminatedAnswers.has(key) && "text-muted-foreground")}>{text}</span>
+            <span className="font-semibold mr-3 text-muted-foreground">({key})</span>
+            <span className={cn(isEliminated && "text-muted-foreground/70")}>{text}</span>
             {!isSectionMode && showFeedback && (
               <Badge
                 variant={isCorrect ? 'default' : 'destructive'}
@@ -994,23 +1011,6 @@ function DrillContent() {
               </Badge>
             )}
           </Label>
-          {confidence === null && (
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleEliminateAnswer(key);
-              }}
-              className={cn(
-                "h-6 w-6 p-0 text-gray-400 hover:text-gray-600 shrink-0",
-                eliminatedAnswers.has(key) && "text-gray-500"
-              )}
-            >
-              ×
-            </Button>
-          )}
         </div>
       </div>
     );
@@ -1033,98 +1033,106 @@ function DrillContent() {
         </AlertDialogContent>
       </AlertDialog>
 
-      <div className="min-h-screen flex flex-col relative">
-        {/* Pause Overlay - Blurs background when paused */}
+      <div className={cn(
+        "min-h-screen flex flex-col relative",
+        session.mode === 'full-section' && "pb-20"
+      )}>
+        {/* Pause Overlay */}
         {timer?.isPaused && (
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center">
-            <Card className="p-8 text-center">
-              <h2 className="text-2xl font-bold mb-2">Timer Paused</h2>
-              <p className="text-muted-foreground mb-4">Click Resume to continue</p>
-              <Button onClick={timer.resume} size="lg">
-                Resume Timer
+          <div className="absolute inset-0 bg-background/90 backdrop-blur-md z-50 flex items-center justify-center animate-fade-in">
+            <Card className="p-10 text-center shadow-lg border-border/50 rounded-lg">
+              <h2 className="text-2xl font-semibold mb-3 text-foreground">Timer Paused</h2>
+              <p className="text-muted-foreground mb-6">Click Resume to continue</p>
+              <Button onClick={timer.resume} size="lg" className="min-w-[140px]">
+                <Play className="w-4 h-4 mr-2" />
+                Resume
               </Button>
             </Card>
           </div>
         )}
 
-        {/* Header */}
-        <div className="px-6 py-4 border-b bg-card">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+        {/* Header - Clean and minimal */}
+        <div className="px-8 py-4 border-b border-border bg-background/95 backdrop-blur-sm sticky top-0 z-40">
+          <div className="flex items-center justify-between max-w-[1800px] mx-auto">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => handleNavigation('/')}
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Exit
+            </Button>
+
+            <div className="flex items-center gap-6">
+              {hasTimer && timer && (
+                <div className="flex items-center gap-3">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={timer.isPaused ? timer.resume : timer.pause}
+                    className="h-8 w-8 p-0"
+                  >
+                    {timer.isPaused ? <Play className="w-4 h-4" /> : <Pause className="w-4 h-4" />}
+                  </Button>
+                  <div className="text-lg font-mono font-semibold tabular-nums text-foreground">
+                    {timer.label}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+      {/* Compact toolbar - icon-only */}
+      {session.mode === 'full-section' && (
+        <div className="px-8 py-2 border-b border-border/50 bg-background/60">
+          <div className="flex items-center justify-between max-w-[1800px] mx-auto">
+            <div className="flex items-center gap-1.5">
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => handleNavigation('/')}
+                onClick={handleToggleFlag}
+                className={cn(
+                  "h-7 w-7 p-0 transition-colors",
+                  isFlagged ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                )}
+                title="Flag for review"
               >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Home
+                <Flag className={cn("w-3.5 h-3.5", isFlagged && "fill-current")} />
               </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => handleNavigation('/')}
-              >
-                Dashboard
-              </Button>
+              {brEnabled && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleToggleBR}
+                  className={cn(
+                    "h-7 px-2 text-xs font-medium",
+                    brMarked.has(currentQuestion.qid) ? "text-primary" : "text-muted-foreground"
+                  )}
+                  title="Mark for blind review"
+                >
+                  BR
+                </Button>
+              )}
             </div>
-
-          <div className="flex items-center gap-6">
-            {session.mode !== 'adaptive' && (
-              <div className="text-base text-foreground font-semibold tracking-tight">
-                Q {session.currentIndex + 1}/{session.questionQueue.length}
-              </div>
-            )}
-            {hasTimer && <TimerControls />}
-          </div>
-        </div>
-
-        {progress !== undefined && (
-          <div className="h-[1px] bg-border/40 mt-3">
-            <div 
-              className="h-full bg-foreground/60 transition-all duration-300" 
-              style={{ width: `${progress}%` }}
+            <HighlightToolbar 
+              mode={highlightMode} 
+              onModeChange={setHighlightMode}
+              isFlagged={isFlagged}
+              onToggleFlag={handleToggleFlag}
+              onUndo={handleUndo}
+              canUndo={highlightHistory.length > 0}
             />
           </div>
-        )}
-      </div>
-
-      {/* Highlight Toolbar */}
-      <div className="px-6 py-2.5 flex justify-between items-center gap-3 border-b border-border/30">
-        <div className="flex items-center gap-2">
-          {brEnabled && brMarked.has(currentQuestion.qid) && (
-            <Badge variant="secondary" className="text-xs font-normal">
-              BR
-            </Badge>
-          )}
         </div>
-        <div className="flex items-center gap-2">
-          {brEnabled && (
-            <Button
-              variant={brMarked.has(currentQuestion.qid) ? 'default' : 'ghost'}
-              size="sm"
-              onClick={handleToggleBR}
-              className="text-xs"
-            >
-              {brMarked.has(currentQuestion.qid) ? 'B' : 'B'}
-            </Button>
-          )}
-          <HighlightToolbar 
-            mode={highlightMode} 
-            onModeChange={setHighlightMode}
-            isFlagged={isFlagged}
-            onToggleFlag={handleToggleFlag}
-            onUndo={handleUndo}
-            canUndo={highlightHistory.length > 0}
-          />
-        </div>
-      </div>
+      )}
 
-      {/* Main Content - Fixed Two-Column Layout */}
+      {/* Main Content */}
       <div className="flex-1 flex overflow-hidden">
-        {/* Left Panel - Question and Stimulus */}
-        <div className="flex-1 overflow-y-auto relative">
-          <div className="p-6 space-y-6 pb-20">
-            {/* Stimulus */}
+        {/* Left Panel - Stimulus */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="p-8 max-w-4xl mx-auto pb-32">
             {currentQuestion.stimulus && (() => {
               const fullText = normalizeText(currentQuestion.stimulus);
               const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
@@ -1132,7 +1140,8 @@ function DrillContent() {
               return (
                 <div 
                   className={cn(
-                    "pl-4 py-2 stimulus",
+                    "prose prose-lg max-w-none",
+                    "text-[17px] leading-[1.8] text-foreground",
                     (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
                   )}
                   onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
@@ -1147,9 +1156,9 @@ function DrillContent() {
               );
             })()}
 
-            {/* Voice Coach Chip - appears after wrong answer */}
+            {/* Voice Coach & Tutor */}
             {showVoiceChip && (
-              <div className="pl-4 mt-4 flex justify-center">
+              <div className="mt-6 flex justify-center">
                 <VoiceCoachChip
                   onActivate={() => {
                     setShowVoiceChip(false);
@@ -1159,9 +1168,8 @@ function DrillContent() {
               </div>
             )}
 
-            {/* Joshua Tutor (Text) - appears under stimulus when active */}
             {tutorChatOpen && (
-              <div className="pl-4 mt-4">
+              <div className="mt-6">
                 <TutorChatModal
                   open={tutorChatOpen}
                   question={currentQuestion}
@@ -1171,60 +1179,22 @@ function DrillContent() {
                 />
               </div>
             )}
-
-            {/* Joshua's text-based coaching */}
-
           </div>
           
-          {/* Question metadata - fixed at bottom left */}
-          <div className="absolute bottom-6 left-6 text-sm text-muted-foreground/50 italic font-medium select-none pointer-events-none">
+          {/* Question metadata */}
+          <div className="absolute bottom-24 left-8 text-xs text-muted-foreground/60 font-medium select-none">
             PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
-            {isFlagged && <Flag className="w-3.5 h-3.5 ml-2 inline-block fill-blue-500/50 text-blue-500/50" />}
           </div>
-
-          {/* Navigation arrows - fixed at bottom right (section mode only) */}
-          {session.mode === 'full-section' && (
-            <div className="absolute bottom-8 right-8 flex gap-3 pointer-events-auto">
-              {session.currentIndex > 0 && (
-                <Button
-                  variant="outline"
-                  size="lg"
-                  onClick={handlePrevious}
-                  disabled={timer?.isPaused}
-                  className="rounded-sm shadow-md border-foreground/20 hover:bg-accent"
-                >
-                  <ChevronLeft className="w-5 h-5 mr-1" />
-                  Prev
-                </Button>
-              )}
-              <Button
-                variant="default"
-                size="lg"
-                onClick={handleNext}
-                disabled={timer?.isPaused}
-                className="rounded-sm shadow-md min-w-[100px]"
-              >
-                {session.currentIndex < session.questionQueue.length - 1 ? (
-                  <>
-                    Next
-                    <ChevronRight className="w-5 h-5 ml-1" />
-                  </>
-                ) : (
-                  'Finish'
-                )}
-              </Button>
-            </div>
-          )}
         </div>
 
-        {/* Right Panel - Answer Choices */}
-        <div className="flex-1 overflow-y-auto border-l">
-          <div className="px-8 py-6 space-y-6">
-            {/* Question Stem - Static Display */}
-            <div className="mb-8 max-w-3xl">
+        {/* Right Panel - Question & Answers */}
+        <div className="flex-1 overflow-y-auto border-l border-border">
+          <div className="p-8 max-w-3xl pb-32">
+            {/* Question Stem - Large and confident */}
+            <div className="mb-10">
               <div 
                 className={cn(
-                  "text-[19px] font-bold text-foreground leading-[1.6] tracking-tight",
+                  "text-[22px] font-semibold text-foreground leading-[1.65] tracking-tight",
                   (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
                 )}
                 onMouseUp={(e) => handleTextSelection(e, 'stem')}
@@ -1238,25 +1208,22 @@ function DrillContent() {
               </div>
             </div>
 
-            {/* Answer choices - Adaptive layout based on tutor state */}
+            {/* Answer choices */}
             {tutorChatOpen ? (
-              // FOCUSED LAYOUT: Highlight selected answer + Joshua
-              <div className="space-y-4">
+              <div className="space-y-0">
                 {(() => {
                   const { before, selected, after } = getAnswerGroups();
                   
                   return (
                     <>
-                      {/* Answers before selected - blurred */}
                       {before.length > 0 && (
-                        <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
+                        <div className="opacity-20 blur-[1px] pointer-events-none">
                           {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
                         </div>
                       )}
 
-                      {/* Selected answer - clear and prominent */}
-                      <div className="relative">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg blur-sm" />
+                      <div className="relative my-4">
+                        <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-accent-bronze/10 rounded-lg blur-sm" />
                         <div className="relative">
                           {renderAnswerChoice(selected[0], selected[1], { 
                             isSelected: true, 
@@ -1266,9 +1233,8 @@ function DrillContent() {
                         </div>
                       </div>
 
-                      {/* Answers after selected - blurred */}
                       {after.length > 0 && (
-                        <div className="space-y-2 blur-[2px] opacity-30 pointer-events-none transition-all duration-500">
+                        <div className="opacity-20 blur-[1px] pointer-events-none">
                           {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
                         </div>
                       )}
@@ -1277,12 +1243,11 @@ function DrillContent() {
                 })()}
               </div>
             ) : (
-              // NORMAL LAYOUT: Standard RadioGroup
               <RadioGroup
                 value={selectedAnswer}
                 onValueChange={handleAnswerSelect}
                 disabled={confidence !== null}
-                className="space-y-0"
+                className="space-y-0 -mx-5"
               >
                 {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
                   renderAnswerChoice(key, text, { 
@@ -1334,9 +1299,9 @@ function DrillContent() {
               <div className="mt-6 p-4 border-t">
                 <div className="flex items-center gap-2 mb-2">
                   {selectedAnswer === currentQuestion.correctAnswer ? (
-                    <CheckCircle className="w-5 h-5 text-[#16A34A]" />
+                    <CheckCircle className="w-5 h-5 text-success" />
                   ) : (
-                    <XCircle className="w-5 h-5 text-[#DC2626]" />
+                    <XCircle className="w-5 h-5 text-destructive" />
                   )}
                   <span className="font-semibold">
                     {selectedAnswer === currentQuestion.correctAnswer
@@ -1349,6 +1314,80 @@ function DrillContent() {
           </div>
         </div>
       </div>
+
+      {/* Sticky Bottom Navigation Bar - Section Mode Only */}
+      {session.mode === 'full-section' && (
+        <div className="fixed bottom-0 left-0 right-0 bg-background/98 backdrop-blur-sm border-t border-border shadow-lg z-50 animate-slide-up">
+          <div className="px-6 py-3 flex items-center justify-between gap-6 max-w-[1800px] mx-auto">
+            {/* Previous Button */}
+            <Button
+              variant="ghost"
+              size="lg"
+              onClick={handlePrevious}
+              disabled={session.currentIndex === 0 || timer?.isPaused}
+              className={cn(
+                "rounded-lg transition-all duration-150 min-w-[100px]",
+                session.currentIndex === 0 && "invisible"
+              )}
+            >
+              <ChevronLeft className="w-5 h-5 mr-1" />
+              <span className="font-medium">Prev</span>
+            </Button>
+
+            {/* Question Circles with Progress */}
+            <div className="flex-1 flex items-center justify-center gap-1 overflow-x-auto py-1 scrollbar-hide">
+              <div className="flex items-center gap-1">
+                {session.questionQueue.map((qid, index) => {
+                  const isAnswered = session.attempts.has(qid);
+                  const isCurrent = index === session.currentIndex;
+                  const isFlaggedQ = isFlagged && isCurrent;
+                  
+                  return (
+                    <button
+                      key={qid}
+                      onClick={() => {
+                        if (!timer?.isPaused) {
+                          setSession({ ...session, currentIndex: index });
+                        }
+                      }}
+                      disabled={timer?.isPaused}
+                      className={cn(
+                        "flex items-center justify-center rounded-full transition-all duration-150",
+                        "text-xs font-semibold tabular-nums",
+                        "hover:scale-110 active:scale-95",
+                        isCurrent && "w-9 h-9 bg-primary text-primary-foreground shadow-sm ring-2 ring-primary/20",
+                        !isCurrent && isAnswered && "w-7 h-7 bg-accent text-foreground",
+                        !isCurrent && !isAnswered && "w-7 h-7 border border-border text-muted-foreground hover:bg-accent/50"
+                      )}
+                      title={`Question ${index + 1}${isAnswered ? ' (answered)' : ''}`}
+                    >
+                      {index + 1}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Next Button */}
+            <Button
+              variant="default"
+              size="lg"
+              onClick={handleNext}
+              disabled={timer?.isPaused}
+              className="rounded-lg shadow-md min-w-[100px] font-medium transition-all duration-150 hover:shadow-lg"
+            >
+              {session.currentIndex < session.questionQueue.length - 1 ? (
+                <>
+                  <span>Next</span>
+                  <ChevronRight className="w-5 h-5 ml-1" />
+                </>
+              ) : (
+                <span>Finish</span>
+              )}
+            </Button>
+          </div>
+        </div>
+      )}
 
       <ReviewModal
         open={wajModalOpen}
