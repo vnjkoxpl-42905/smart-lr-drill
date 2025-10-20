@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,8 +6,10 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { X, ChevronRight, ChevronLeft, Sparkles, Save } from 'lucide-react';
+import { X, ChevronRight, ChevronLeft, Sparkles, Save, ChevronDown, Check } from 'lucide-react';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Switch } from '@/components/ui/switch';
 import type { TypeDrillConfig } from '@/types/drill';
 import type { QuestionManifest } from '@/lib/questionLoader';
 import { questionBank } from '@/lib/questionLoader';
@@ -15,6 +17,7 @@ import { AdaptiveEngine, type WeakAreaAnalysis } from '@/lib/adaptiveEngine';
 import { templateService } from '@/lib/templateService';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { cn } from '@/lib/utils';
 
 interface TypeDrillPickerProps {
   manifest: QuestionManifest;
@@ -23,6 +26,12 @@ interface TypeDrillPickerProps {
 }
 
 type Step = 1 | 2 | 3;
+
+interface QuestionType {
+  id: string;
+  label: string;
+  count: number;
+}
 
 export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillPickerProps) {
   const { user } = useAuth();
@@ -35,14 +44,34 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
   const [analysisResult, setAnalysisResult] = useState<WeakAreaAnalysis | null>(null);
   const [showSaveDialog, setShowSaveDialog] = useState(false);
   const [templateName, setTemplateName] = useState('');
+  const [showZeroCount, setShowZeroCount] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const step2Ref = useRef<HTMLDivElement>(null);
   const step3Ref = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
   const adaptiveEngine = new AdaptiveEngine();
 
+  // Single source of truth: Question types with counts and proper labels
+  const QUESTION_TYPES: QuestionType[] = useMemo(() => {
+    const types = Object.entries(manifest.byQType).map(([id, count]) => ({
+      id,
+      label: id, // Already normalized to Title Case in questionLoader
+      count,
+    }));
+    return types.sort((a, b) => b.count - a.count); // Sort by count descending
+  }, [manifest.byQType]);
+
+  // Top types for chips (8-10 by count)
+  const topTypes = useMemo(() => QUESTION_TYPES.slice(0, 10), [QUESTION_TYPES]);
+
+  // Filtered types for dropdown
+  const filteredTypes = useMemo(() => {
+    const types = showZeroCount ? QUESTION_TYPES : QUESTION_TYPES.filter(t => t.count > 0);
+    return types.sort((a, b) => a.label.localeCompare(b.label)); // A-Z sorting
+  }, [QUESTION_TYPES, showZeroCount]);
+
   // Available options
-  const allQTypes = Object.keys(manifest.byQType).sort();
   const allDifficulties = [1, 2, 3, 4, 5];
   const allPTs = Array.from(
     new Set(manifest.sections.map(s => s.pt))
@@ -137,6 +166,10 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
     return false;
   };
 
+  const getTypeCount = (typeId: string): number => {
+    return manifest.byQType[typeId] || 0;
+  };
+
   const handleSmartBuild = async () => {
     if (!user) return;
     
@@ -162,7 +195,7 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
         setSelectedQTypes(analysis.weakQTypes);
       } else {
         // If no specific weak types, select a diverse set
-        const diverseTypes = allQTypes.slice(0, 5);
+        const diverseTypes = QUESTION_TYPES.slice(0, 5).map(t => t.id);
         setSelectedQTypes(diverseTypes);
       }
       
@@ -386,64 +419,124 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
           </div>
           {selectedQTypes.length > 0 && (
             <Button variant="ghost" size="sm" onClick={() => clearStep(1)}>
-              Clear all
+              Clear All
             </Button>
           )}
         </div>
 
-        {/* Dropdown selector with counts */}
+        {/* Quick select chips - top 8-10 types by count */}
         <div className="mb-4">
-          <Label htmlFor="qtype-select" className="text-sm font-medium mb-2 block">
-            Add Question Type
-          </Label>
-          <Select
-            value=""
-            onValueChange={(qtype) => {
-              if (qtype && !selectedQTypes.includes(qtype)) {
-                toggleQType(qtype);
-              }
-            }}
-            disabled={currentStep !== 1}
-          >
-            <SelectTrigger id="qtype-select" className="w-full">
-              <SelectValue placeholder="Choose a question type..." />
-            </SelectTrigger>
-            <SelectContent className="max-h-[300px] z-50 bg-popover">
-              {allQTypes.map(qtype => {
-                const count = manifest.byQType[qtype] || 0;
-                const isSelected = selectedQTypes.includes(qtype);
-                return (
-                  <SelectItem 
-                    key={qtype} 
-                    value={qtype}
-                    disabled={isSelected}
-                    className="cursor-pointer"
-                  >
-                    {qtype} ({count} questions)
-                  </SelectItem>
-                );
-              })}
-            </SelectContent>
-          </Select>
+          <div className="flex items-center justify-between mb-2">
+            <Label className="text-sm font-medium">Quick Select (Top Types)</Label>
+            <Popover open={dropdownOpen} onOpenChange={setDropdownOpen}>
+              <PopoverTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  className="text-xs h-7 px-2"
+                  disabled={currentStep !== 1}
+                >
+                  View All Types
+                  <ChevronDown className="ml-1 h-3 w-3" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent 
+                className="w-[400px] p-4 z-[100]" 
+                align="end"
+                side="bottom"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-semibold text-sm">All Question Types</h4>
+                    <div className="flex items-center gap-2">
+                      <Label htmlFor="show-zero" className="text-xs text-muted-foreground cursor-pointer">
+                        Show 0-count
+                      </Label>
+                      <Switch
+                        id="show-zero"
+                        checked={showZeroCount}
+                        onCheckedChange={setShowZeroCount}
+                        className="scale-75"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="text-xs text-muted-foreground">
+                    A–Z sorted • {selectedQTypes.length} selected
+                  </div>
+
+                  <div className="max-h-[300px] overflow-y-auto space-y-1 pr-2">
+                    {filteredTypes.map(type => (
+                      <div
+                        key={type.id}
+                        className={cn(
+                          "flex items-center gap-2 p-2 rounded-md hover:bg-muted/50 cursor-pointer transition-colors",
+                          selectedQTypes.includes(type.id) && "bg-muted"
+                        )}
+                        onClick={() => toggleQType(type.id)}
+                      >
+                        <Checkbox
+                          checked={selectedQTypes.includes(type.id)}
+                          onCheckedChange={() => toggleQType(type.id)}
+                          className="pointer-events-none"
+                        />
+                        <div className="flex-1 flex items-center justify-between">
+                          <span className="text-sm">{type.label}</span>
+                          <span className="text-xs text-muted-foreground ml-2">
+                            {type.count}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </PopoverContent>
+            </Popover>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {topTypes.map(type => (
+              <button
+                key={type.id}
+                onClick={() => toggleQType(type.id)}
+                disabled={currentStep !== 1}
+                className={cn(
+                  "px-3 py-1.5 rounded-lg border text-xs font-medium transition-all",
+                  selectedQTypes.includes(type.id)
+                    ? "bg-primary text-primary-foreground border-primary shadow-sm"
+                    : "bg-background border-border hover:bg-muted/50 hover:border-border",
+                  currentStep !== 1 && "opacity-50 cursor-not-allowed"
+                )}
+              >
+                {type.label}
+                <span className="ml-1.5 opacity-70">({type.count})</span>
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Selected types */}
+        {/* Selected types display */}
         {selectedQTypes.length > 0 && (
-          <div className="mb-4 p-3 bg-muted/50 rounded-lg">
-            <div className="text-xs font-medium text-muted-foreground mb-2">Selected:</div>
+          <div className="p-3 bg-muted/50 rounded-lg border border-border/50">
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-xs font-medium text-muted-foreground">
+                Selected ({selectedQTypes.length})
+              </div>
+            </div>
             <div className="flex flex-wrap gap-2">
               {selectedQTypes.map(qtype => {
-                const count = manifest.byQType[qtype] || 0;
+                const count = getTypeCount(qtype);
                 return (
                   <Badge
                     key={qtype}
                     variant="secondary"
-                    className="pl-2 pr-1 py-1 cursor-pointer hover:bg-secondary/80 flex items-center gap-1"
+                    className="pl-2.5 pr-1.5 py-1 cursor-pointer hover:bg-secondary/80 flex items-center gap-1.5 transition-colors"
                     onClick={() => toggleQType(qtype)}
                   >
+                    <Check className="w-3 h-3" />
                     <span>{qtype}</span>
                     <span className="text-xs opacity-70">({count})</span>
-                    <X className="w-3 h-3 ml-1" />
+                    <X className="w-3 h-3 ml-0.5 hover:text-destructive transition-colors" />
                   </Badge>
                 );
               })}
@@ -451,29 +544,14 @@ export function TypeDrillPicker({ manifest, onStartDrill, onCancel }: TypeDrillP
           </div>
         )}
 
-        {/* Type chips - Quick selection */}
-        <div>
-          <div className="text-xs font-medium text-muted-foreground mb-2">Quick select:</div>
-          <div className="flex flex-wrap gap-2">
-            {allQTypes.slice(0, 10).map(qtype => {
-              const count = manifest.byQType[qtype] || 0;
-              return (
-                <button
-                  key={qtype}
-                  onClick={() => toggleQType(qtype)}
-                  disabled={currentStep !== 1}
-                  className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors ${
-                    selectedQTypes.includes(qtype)
-                      ? 'bg-primary text-primary-foreground border-primary'
-                      : 'bg-background border-border hover:bg-muted/50'
-                  } ${currentStep !== 1 ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
-                >
-                  {qtype} ({count})
-                </button>
-              );
-            })}
+        {/* Helper message when empty */}
+        {selectedQTypes.length === 0 && (
+          <div className="mt-4 p-3 bg-muted/30 rounded-lg border border-dashed border-border">
+            <p className="text-sm text-muted-foreground text-center">
+              Select at least one question type to continue
+            </p>
           </div>
-        </div>
+        )}
       </Card>
 
       {/* Step 2: Difficulty Levels */}
