@@ -9,36 +9,31 @@ import { HighlightedText } from './HighlightedText';
 import { HighlightToolbar } from './HighlightToolbar';
 import { questionBank } from '@/lib/questionLoader';
 import { normalizeText, cn } from '@/lib/utils';
-import type { DrillSession } from '@/types/drill';
-import type { Highlight } from '@/lib/highlightUtils';
+import { QuestionTimer } from '@/lib/questionTimer';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/contexts/AuthContext';
+import type { DrillSession, BlindReviewResult } from '@/types/drill';
+import type { Highlight, HighlightColor } from '@/lib/highlightUtils';
 
 interface EnhancedBlindReviewProps {
   session: DrillSession;
   reviewQids: string[];
-  onComplete: (results: BRResult[]) => void;
+  onComplete: (results: BlindReviewResult[]) => void;
   onBack: () => void;
 }
 
-export interface BRResult {
-  qid: string;
-  preAnswer: string;
-  brAnswer: string;
-  brRationale: string;
-  brTimeMs: number;
-  brChanged: boolean;
-  correct: boolean;
-}
-
 export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }: EnhancedBlindReviewProps) {
+  const { user } = useAuth();
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [brAnswers, setBrAnswers] = React.useState<Map<string, string>>(new Map());
   const [brRationales, setBrRationales] = React.useState<Map<string, string>>(new Map());
-  const [brTimes, setBrTimes] = React.useState<Map<string, number>>(new Map());
-  const [questionStartTime, setQuestionStartTime] = React.useState(performance.now());
-  const [eliminatedAnswers, setEliminatedAnswers] = React.useState<Set<string>>(new Set());
+  const [eliminatedAnswers, setEliminatedAnswers] = React.useState<Map<string, Set<string>>>(new Map());
   const [highlightMode, setHighlightMode] = React.useState<'none' | 'yellow' | 'pink' | 'orange' | 'underline' | 'erase'>('none');
   const [highlights, setHighlights] = React.useState<Map<string, Highlight[]>>(new Map());
+  const [highlightHistory, setHighlightHistory] = React.useState<Map<string, Highlight[]>[]>([]);
+  const [flaggedQuestions, setFlaggedQuestions] = React.useState<Set<string>>(new Set());
   const [jumpToInput, setJumpToInput] = React.useState('');
+  const timerRef = React.useRef(new QuestionTimer());
 
   const currentQid = reviewQids[currentIndex];
   const currentQuestion = questionBank.getQuestion(currentQid);
@@ -48,20 +43,43 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   const currentAnswer = brAnswers.get(currentQid) || '';
   const currentRationale = brRationales.get(currentQid) || '';
 
+  // Load flagged questions on mount
   React.useEffect(() => {
-    setQuestionStartTime(performance.now());
-  }, [currentIndex]);
+    const loadFlaggedQuestions = async () => {
+      if (!user) return;
+      
+      try {
+        const { data } = await supabase
+          .from('flagged_questions')
+          .select('qid')
+          .eq('user_id', user.id)
+          .in('qid', reviewQids);
+        
+        if (data) {
+          setFlaggedQuestions(new Set(data.map(d => d.qid)));
+        }
+      } catch (err) {
+        console.error('Error loading flagged questions:', err);
+      }
+    };
+    
+    loadFlaggedQuestions();
+  }, [user, reviewQids]);
 
-  const saveCurrentTime = () => {
-    if (!brTimes.has(currentQid)) {
-      const elapsed = Math.floor(performance.now() - questionStartTime);
-      setBrTimes(new Map(brTimes.set(currentQid, elapsed)));
-    }
-  };
+  // Start timing when question changes
+  React.useEffect(() => {
+    timerRef.current.start(currentQid);
+    
+    return () => {
+      timerRef.current.pause();
+    };
+  }, [currentIndex, currentQid]);
 
   const handleAnswerSelect = (answer: string) => {
-    setBrAnswers(new Map(brAnswers.set(currentQid, answer)));
-    saveCurrentTime();
+    // Toggle behavior: clicking same answer deselects it
+    const newAnswer = brAnswers.get(currentQid) === answer ? '' : answer;
+    setBrAnswers(new Map(brAnswers.set(currentQid, newAnswer)));
+    timerRef.current.recordAnswer(currentQid, newAnswer);
   };
 
   const handleRationaleChange = (rationale: string) => {
@@ -69,13 +87,15 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   };
 
   const handlePrevious = () => {
-    saveCurrentTime();
-    if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
+    if (currentIndex > 0) {
+      timerRef.current.pause();
+      setCurrentIndex(currentIndex - 1);
+    }
   };
 
   const handleNext = () => {
-    saveCurrentTime();
     if (currentIndex < reviewQids.length - 1) {
+      timerRef.current.pause();
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -83,21 +103,21 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   const handleJumpTo = () => {
     const num = parseInt(jumpToInput);
     if (num >= 1 && num <= reviewQids.length) {
-      saveCurrentTime();
+      timerRef.current.pause();
       setCurrentIndex(num - 1);
       setJumpToInput('');
     }
   };
 
   const handleFinish = () => {
-    saveCurrentTime();
+    timerRef.current.pause();
     
-    const results: BRResult[] = reviewQids.map(qid => {
+    const results: BlindReviewResult[] = reviewQids.map(qid => {
       const question = questionBank.getQuestion(qid);
       const previousAttempt = session.attempts.get(qid);
       const brAnswer = brAnswers.get(qid) || '';
       const brRationale = brRationales.get(qid) || '';
-      const brTimeMs = brTimes.get(qid) || 0;
+      const metrics = timerRef.current.getMetrics(qid);
       
       if (!question || !previousAttempt) return null;
 
@@ -106,23 +126,79 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
         preAnswer: previousAttempt.selectedAnswer,
         brAnswer,
         brRationale,
-        brTimeMs,
+        brTimeMs: metrics.totalTimeMs,
         brChanged: brAnswer !== previousAttempt.selectedAnswer,
         correct: brAnswer === question.correctAnswer,
+        preCorrect: previousAttempt.correct,
+        switchCount: metrics.answerSwitchCount,
+        revisitCount: metrics.revisitCount,
       };
-    }).filter(Boolean) as BRResult[];
+    }).filter(Boolean) as BlindReviewResult[];
 
     onComplete(results);
   };
 
   const handleEliminateAnswer = (answer: string) => {
-    const newEliminated = new Set(eliminatedAnswers);
-    if (newEliminated.has(answer)) {
-      newEliminated.delete(answer);
+    const qidEliminated = eliminatedAnswers.get(currentQid) || new Set<string>();
+    const newQidEliminated = new Set(qidEliminated);
+    
+    if (newQidEliminated.has(answer)) {
+      newQidEliminated.delete(answer);
     } else {
-      newEliminated.add(answer);
+      newQidEliminated.add(answer);
+      // Deselect if currently selected
+      if (brAnswers.get(currentQid) === answer) {
+        setBrAnswers(new Map(brAnswers.set(currentQid, '')));
+        timerRef.current.recordAnswer(currentQid, '');
+      }
     }
-    setEliminatedAnswers(newEliminated);
+    
+    setEliminatedAnswers(new Map(eliminatedAnswers.set(currentQid, newQidEliminated)));
+  };
+
+  const handleToggleFlag = async () => {
+    if (!user || !currentQuestion) return;
+    
+    const isCurrentlyFlagged = flaggedQuestions.has(currentQid);
+    
+    try {
+      if (isCurrentlyFlagged) {
+        await supabase
+          .from('flagged_questions')
+          .delete()
+          .eq('qid', currentQid)
+          .eq('user_id', user.id);
+        
+        setFlaggedQuestions(prev => {
+          const next = new Set(prev);
+          next.delete(currentQid);
+          return next;
+        });
+      } else {
+        await supabase
+          .from('flagged_questions')
+          .insert({
+            qid: currentQid,
+            user_id: user.id,
+            pt: currentQuestion.pt,
+            section: currentQuestion.section,
+            qnum: currentQuestion.qnum,
+            class_id: user.user_metadata?.class_id || '',
+          });
+        
+        setFlaggedQuestions(prev => new Set([...prev, currentQid]));
+      }
+    } catch (err) {
+      console.error('Error toggling flag:', err);
+    }
+  };
+
+  const handleUndo = () => {
+    if (highlightHistory.length === 0) return;
+    
+    const previous = highlightHistory[highlightHistory.length - 1];
+    setHighlights(new Map(previous));
+    setHighlightHistory(highlightHistory.slice(0, -1));
   };
 
   if (!currentQuestion) {
@@ -130,6 +206,8 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   }
 
   const questionHighlights = highlights.get(currentQid) || [];
+  const currentEliminated = eliminatedAnswers.get(currentQid) || new Set<string>();
+  const isFlagged = flaggedQuestions.has(currentQid);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -182,10 +260,10 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
           <HighlightToolbar
             mode={highlightMode}
             onModeChange={setHighlightMode}
-            onUndo={() => {}}
-            canUndo={false}
-            onToggleFlag={() => {}}
-            isFlagged={false}
+            onUndo={handleUndo}
+            canUndo={highlightHistory.length > 0}
+            onToggleFlag={handleToggleFlag}
+            isFlagged={isFlagged}
           />
 
           {/* Question Card */}
@@ -220,7 +298,7 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
             {/* Answer Choices */}
             <RadioGroup value={currentAnswer} onValueChange={handleAnswerSelect}>
               {Object.entries(currentQuestion.answerChoices).map(([key, text]) => {
-                const isEliminated = eliminatedAnswers.has(key);
+                const isEliminated = currentEliminated.has(key);
                 
                 return (
                   <div
@@ -249,9 +327,9 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
                         e.stopPropagation();
                         handleEliminateAnswer(key);
                       }}
-                      className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-xs text-muted-foreground hover:text-foreground transition-colors px-2 py-1 rounded hover:bg-accent"
                     >
-                      {isEliminated ? 'Restore' : 'Eliminate'}
+                      {isEliminated ? 'Restore' : 'Cross out'}
                     </button>
                   </div>
                 );
@@ -297,7 +375,7 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
                 <button
                   key={qid}
                   onClick={() => {
-                    saveCurrentTime();
+                    timerRef.current.pause();
                     setCurrentIndex(idx);
                   }}
                   className={cn(

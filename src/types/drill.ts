@@ -41,8 +41,24 @@ export interface DrillSession {
     confidence?: number; // 1-5
     reviewDone?: boolean;
     brMarked?: boolean; // Marked for Blind Review
+    switchCount?: number; // Number of answer changes
+    revisitCount?: number; // Number of times returned to question
   }>;
   sessionId?: string; // For tracking BR sessions
+}
+
+// Unified Blind Review Result interface
+export interface BlindReviewResult {
+  qid: string;
+  preAnswer: string;
+  brAnswer: string;
+  brRationale: string;
+  brTimeMs: number;
+  brChanged: boolean;
+  correct: boolean;
+  preCorrect: boolean;
+  switchCount?: number;
+  revisitCount?: number;
 }
 
 export interface DrillSummary {

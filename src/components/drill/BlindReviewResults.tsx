@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import { questionBank } from '@/lib/questionLoader';
-import type { BlindReviewResult } from './BlindReviewFlow';
+import type { BlindReviewResult } from '@/types/drill';
 import type { DrillSession } from '@/types/drill';
 
 interface BlindReviewResultsProps {
@@ -17,20 +17,16 @@ type BRDelta = 'corrected' | 'stuck' | 'regret' | 'confirmed';
 
 interface ProcessedResult extends BlindReviewResult {
   delta: BRDelta;
-  preCorrect: boolean;
 }
 
 export function BlindReviewResults({ session, results, onFinish }: BlindReviewResultsProps) {
   const processedResults: ProcessedResult[] = results.map(result => {
-    const previousAttempt = session.attempts.get(result.qid);
-    const preCorrect = previousAttempt?.correct || false;
-
     let delta: BRDelta;
-    if (!preCorrect && result.correct) {
+    if (!result.preCorrect && result.correct) {
       delta = 'corrected';
-    } else if (!preCorrect && !result.correct) {
+    } else if (!result.preCorrect && !result.correct) {
       delta = 'stuck';
-    } else if (preCorrect && !result.correct) {
+    } else if (result.preCorrect && !result.correct) {
       delta = 'regret';
     } else {
       delta = 'confirmed';
@@ -39,7 +35,6 @@ export function BlindReviewResults({ session, results, onFinish }: BlindReviewRe
     return {
       ...result,
       delta,
-      preCorrect,
     };
   });
 

@@ -21,7 +21,7 @@ import { BlindReviewFlow, type BlindReviewResult } from '@/components/drill/Blin
 import { BlindReviewResults } from '@/components/drill/BlindReviewResults';
 import { SectionComplete } from '@/components/drill/SectionComplete';
 import { ScoreReport } from '@/components/drill/ScoreReport';
-import { EnhancedBlindReview, type BRResult } from '@/components/drill/EnhancedBlindReview';
+import { EnhancedBlindReview } from '@/components/drill/EnhancedBlindReview';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
@@ -836,7 +836,7 @@ function DrillContent() {
       <EnhancedBlindReview
         session={session}
         reviewQids={autoReviewQids}
-        onComplete={async (results: BRResult[]) => {
+        onComplete={async (results: BlindReviewResult[]) => {
           setBrResults(results);
           setPostSectionScreen(null);
           setShowBRResults(true);
