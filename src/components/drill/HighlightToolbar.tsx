@@ -22,7 +22,7 @@ export function HighlightToolbar({
   canUndo = false 
 }: HighlightToolbarProps) {
   return (
-    <div className="flex flex-wrap items-center gap-1 p-1 bg-muted/30 rounded-lg">
+    <div className="flex flex-wrap items-center gap-1">
       {/* Undo Button */}
       {onUndo && (
         <>
@@ -31,102 +31,102 @@ export function HighlightToolbar({
             size="icon"
             onClick={onUndo}
             disabled={!canUndo}
-            title="Undo last highlight (Ctrl+Z)"
-            className="h-8 w-8 shrink-0"
+            title="Undo"
+            className="h-7 w-7 shrink-0 opacity-50 hover:opacity-100"
           >
-            <Undo2 className="w-4 h-4" />
+            <Undo2 className="w-3.5 h-3.5" />
           </Button>
-          <div className="w-px h-5 bg-border/50 mx-1" />
+          <div className="w-px h-4 bg-border/30 mx-0.5" />
         </>
       )}
 
-      {/* Color Dot Buttons */}
+      {/* Color Dot Buttons - Smaller and quieter */}
       <button
         onClick={() => onModeChange(mode === 'yellow' ? 'none' : 'yellow')}
-        title="Yellow Highlight"
+        title="Yellow"
         className={cn(
-          "h-8 w-8 rounded-full transition-all shrink-0",
+          "h-6 w-6 rounded-full transition-all shrink-0",
           mode === 'yellow' 
-            ? "bg-yellow-500 ring-4 ring-yellow-500/30 scale-110 shadow-lg" 
-            : "bg-yellow-400 hover:bg-yellow-500 opacity-60 hover:opacity-100"
+            ? "bg-yellow-500 ring-2 ring-yellow-500/40 scale-105" 
+            : "bg-yellow-400/70 hover:bg-yellow-500 opacity-50 hover:opacity-100"
         )}
         aria-label="Yellow highlight"
       />
 
       <button
         onClick={() => onModeChange(mode === 'pink' ? 'none' : 'pink')}
-        title="Pink Highlight"
+        title="Pink"
         className={cn(
-          "h-8 w-8 rounded-full transition-all shrink-0",
+          "h-6 w-6 rounded-full transition-all shrink-0",
           mode === 'pink' 
-            ? "bg-pink-500 ring-4 ring-pink-500/30 scale-110 shadow-lg" 
-            : "bg-pink-400 hover:bg-pink-500 opacity-60 hover:opacity-100"
+            ? "bg-pink-500 ring-2 ring-pink-500/40 scale-105" 
+            : "bg-pink-400/70 hover:bg-pink-500 opacity-50 hover:opacity-100"
         )}
         aria-label="Pink highlight"
       />
 
       <button
         onClick={() => onModeChange(mode === 'orange' ? 'none' : 'orange')}
-        title="Orange Highlight"
+        title="Orange"
         className={cn(
-          "h-8 w-8 rounded-full transition-all shrink-0",
+          "h-6 w-6 rounded-full transition-all shrink-0",
           mode === 'orange' 
-            ? "bg-orange-500 ring-4 ring-orange-500/30 scale-110 shadow-lg" 
-            : "bg-orange-400 hover:bg-orange-500 opacity-60 hover:opacity-100"
+            ? "bg-orange-500 ring-2 ring-orange-500/40 scale-105" 
+            : "bg-orange-400/70 hover:bg-orange-500 opacity-50 hover:opacity-100"
         )}
         aria-label="Orange highlight"
       />
 
-      <div className="w-px h-5 bg-border/50 mx-1" />
+      <div className="w-px h-4 bg-border/30 mx-0.5" />
 
-      {/* Utility Icon Buttons */}
+      {/* Utility Icon Buttons - Smaller and quieter */}
       <Button
-        variant={mode === 'underline' ? 'default' : 'ghost'}
+        variant="ghost"
         size="icon"
         onClick={() => onModeChange(mode === 'underline' ? 'none' : 'underline')}
         className={cn(
-          "h-8 w-8 shrink-0 transition-all",
+          "h-7 w-7 shrink-0 transition-all",
           mode === 'underline' 
-            ? "bg-black hover:bg-gray-800 ring-4 ring-black/20 shadow-lg scale-105" 
-            : "opacity-60 hover:opacity-100"
+            ? "bg-foreground/90 hover:bg-foreground" 
+            : "opacity-50 hover:opacity-100"
         )}
         title="Underline"
       >
-        <Underline className={cn("w-4 h-4", mode === 'underline' && "text-white")} />
+        <Underline className={cn("w-3.5 h-3.5", mode === 'underline' && "text-background")} />
       </Button>
 
       <Button
-        variant={mode === 'erase' ? 'default' : 'ghost'}
+        variant="ghost"
         size="icon"
         onClick={() => onModeChange(mode === 'erase' ? 'none' : 'erase')}
         className={cn(
-          "h-8 w-8 shrink-0 transition-all",
+          "h-7 w-7 shrink-0 transition-all",
           mode === 'erase' 
-            ? "bg-red-600 hover:bg-red-700 ring-4 ring-red-500/30 shadow-lg scale-105" 
-            : "opacity-60 hover:opacity-100"
+            ? "bg-destructive hover:bg-destructive/90" 
+            : "opacity-50 hover:opacity-100"
         )}
-        title="Erase Highlights"
+        title="Erase"
       >
-        <Eraser className={cn("w-4 h-4", mode === 'erase' && "text-white")} />
+        <Eraser className={cn("w-3.5 h-3.5", mode === 'erase' && "text-background")} />
       </Button>
 
-      {/* Flag Button */}
+      {/* Flag Button - Smaller and quieter */}
       {onToggleFlag && (
         <>
-          <div className="w-px h-5 bg-border/50 mx-1" />
+          <div className="w-px h-4 bg-border/30 mx-0.5" />
           <Button
-            variant={isFlagged ? 'default' : 'ghost'}
+            variant="ghost"
             size="icon"
             onClick={onToggleFlag}
             className={cn(
-              "h-8 w-8 shrink-0 transition-all",
+              "h-7 w-7 shrink-0 transition-all",
               isFlagged 
-                ? "bg-black hover:bg-gray-800 ring-4 ring-black/20 shadow-lg scale-105" 
-                : "opacity-60 hover:opacity-100"
+                ? "bg-foreground/90 hover:bg-foreground" 
+                : "opacity-50 hover:opacity-100"
             )}
-            title={isFlagged ? "Unflag Question" : "Flag for Review"}
+            title={isFlagged ? "Unflag" : "Flag"}
           >
-            <Flag className={cn("w-4 h-4", isFlagged ? "text-white fill-white" : "")} />
+            <Flag className={cn("w-3.5 h-3.5", isFlagged && "text-background fill-background")} />
           </Button>
         </>
       )}

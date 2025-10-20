@@ -217,6 +217,14 @@ function DrillContent() {
     setQuestionStartTime(performance.now());
     setHighlightHistory([]);
     
+    // For section mode, restore the saved answer if navigating back
+    if (session?.mode === 'full-section' && currentQuestion) {
+      const savedAttempt = session.attempts.get(currentQuestion.qid);
+      if (savedAttempt) {
+        setSelectedAnswer(savedAttempt.selectedAnswer);
+      }
+    }
+    
     // Check if current question is flagged
     checkIfFlagged();
   }, [session]);
@@ -253,8 +261,27 @@ function DrillContent() {
     // Toggle behavior: clicking same answer deselects it
     if (selectedAnswer === answer) {
       setSelectedAnswer('');
+      // For section mode, clear the saved answer
+      if (session?.mode === 'full-section' && currentQuestion) {
+        const newAttempts = new Map(session.attempts);
+        newAttempts.delete(currentQuestion.qid);
+        setSession({ ...session, attempts: newAttempts });
+      }
     } else {
       setSelectedAnswer(answer);
+      // For section mode, auto-save the answer (no feedback)
+      if (session?.mode === 'full-section' && currentQuestion) {
+        const newAttempts = new Map(session.attempts);
+        newAttempts.set(currentQuestion.qid, {
+          selectedAnswer: answer,
+          correct: false, // Will be evaluated at the end
+          timeMs: 0,
+          timestamp: Date.now(),
+          confidence: null,
+          reviewDone: false,
+        });
+        setSession({ ...session, attempts: newAttempts });
+      }
     }
   };
 
@@ -528,10 +555,15 @@ function DrillContent() {
       setSession({ ...session });
     } else {
       // Move to next in queue
-      setSession({
-        ...session,
-        currentIndex: session.currentIndex + 1,
-      });
+      if (session.currentIndex < session.questionQueue.length - 1) {
+        setSession({
+          ...session,
+          currentIndex: session.currentIndex + 1,
+        });
+      } else {
+        // Reached the end - show results
+        handleFinishSection();
+      }
     }
   };
 
@@ -546,6 +578,33 @@ function DrillContent() {
       });
     }
   };
+
+  const handleFinishSection = () => {
+    // Navigate to review with results
+    // For now, just show an alert - you can implement a proper results page
+    alert('Section complete! Results will be shown here.');
+  };
+
+  // Keyboard navigation for section mode
+  React.useEffect(() => {
+    if (session?.mode !== 'full-section') return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Prevent navigation if user is typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        handleNext();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        handlePrevious();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [session, handleNext, handlePrevious]);
 
   const handleTextSelection = (e: React.MouseEvent, section: 'stimulus' | 'stem') => {
     if (highlightMode === 'none' || highlightMode === 'erase') return;
@@ -881,20 +940,25 @@ function DrillContent() {
   ) => {
     const { isSelected = false, showRadio = true, inFocusedMode = false } = options;
     const isCorrect = key === currentQuestion.correctAnswer;
-    const showFeedback = answerLocked && isSelected && confidence !== null;
+    // Hide feedback during section mode
+    const showFeedback = session?.mode !== 'full-section' && answerLocked && isSelected && confidence !== null;
 
+    const isSectionMode = session?.mode === 'full-section';
+    
     return (
       <div
         key={key}
         className={cn(
-          "group relative flex items-start gap-4 py-3 px-0",
-          "transition-colors duration-150",
-          confidence === null && "hover:bg-gray-50/50 cursor-pointer",
-          "focus-within:outline focus-within:outline-2 focus-within:outline-gray-900 focus-within:outline-offset-2",
-          showFeedback && isCorrect && "bg-green-50",
-          showFeedback && !isCorrect && "bg-red-50",
-          isSelected && tutorChatOpen && "bg-cyan-50/50",
-          eliminatedAnswers.has(key) && "opacity-50",
+          "group relative flex items-start gap-3 py-4 px-4 -mx-4 rounded-sm border-b border-border/30 last:border-b-0",
+          "transition-all duration-150",
+          !isSectionMode && confidence === null && "hover:bg-accent/30 cursor-pointer",
+          isSectionMode && "hover:bg-accent/20 cursor-pointer",
+          !isSectionMode && "focus-within:outline focus-within:outline-1 focus-within:outline-foreground focus-within:outline-offset-2",
+          isSectionMode && isSelected && "bg-accent/40 border-l-2 border-l-foreground -ml-4 pl-[14px]",
+          !isSectionMode && showFeedback && isCorrect && "bg-green-50",
+          !isSectionMode && showFeedback && !isCorrect && "bg-red-50",
+          !isSectionMode && isSelected && tutorChatOpen && "bg-cyan-50/50",
+          eliminatedAnswers.has(key) && "opacity-40",
         )}
       >
         <div className="flex items-center h-6 mt-0.5">
@@ -913,15 +977,15 @@ function DrillContent() {
             htmlFor={`answer-${key}`}
             className={cn(
               "flex-1 cursor-pointer",
-              "text-[16px] leading-[1.6]",
+              "text-[17px] leading-[1.7]",
               "font-normal text-foreground",
               "select-none",
-              eliminatedAnswers.has(key) && "line-through"
+              eliminatedAnswers.has(key) && "line-through opacity-60"
             )}
           >
-            <span className="font-semibold mr-2">({key})</span>
-            {text}
-            {showFeedback && (
+            <span className="font-bold mr-2.5 text-foreground/70">({key})</span>
+            <span className={cn(eliminatedAnswers.has(key) && "text-muted-foreground")}>{text}</span>
+            {!isSectionMode && showFeedback && (
               <Badge
                 variant={isCorrect ? 'default' : 'destructive'}
                 className="ml-2"
@@ -1006,8 +1070,8 @@ function DrillContent() {
 
           <div className="flex items-center gap-6">
             {session.mode !== 'adaptive' && (
-              <div className="text-sm text-muted-foreground font-medium">
-                Question {session.currentIndex + 1} / {session.questionQueue.length}
+              <div className="text-base text-foreground font-semibold tracking-tight">
+                Q {session.currentIndex + 1}/{session.questionQueue.length}
               </div>
             )}
             {hasTimer && <TimerControls />}
@@ -1015,27 +1079,33 @@ function DrillContent() {
         </div>
 
         {progress !== undefined && (
-          <Progress value={progress} className="h-2 mt-4" />
+          <div className="h-[1px] bg-border/40 mt-3">
+            <div 
+              className="h-full bg-foreground/60 transition-all duration-300" 
+              style={{ width: `${progress}%` }}
+            />
+          </div>
         )}
       </div>
 
       {/* Highlight Toolbar */}
-      <div className="px-6 py-2 flex justify-between items-center gap-3 border-b">
+      <div className="px-6 py-2.5 flex justify-between items-center gap-3 border-b border-border/30">
         <div className="flex items-center gap-2">
           {brEnabled && brMarked.has(currentQuestion.qid) && (
-            <Badge variant="secondary" className="text-xs">
-              Marked for BR
+            <Badge variant="secondary" className="text-xs font-normal">
+              BR
             </Badge>
           )}
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           {brEnabled && (
             <Button
-              variant={brMarked.has(currentQuestion.qid) ? 'default' : 'outline'}
+              variant={brMarked.has(currentQuestion.qid) ? 'default' : 'ghost'}
               size="sm"
               onClick={handleToggleBR}
+              className="text-xs"
             >
-              {brMarked.has(currentQuestion.qid) ? 'Unmark BR' : 'Mark for BR'} (B)
+              {brMarked.has(currentQuestion.qid) ? 'B' : 'B'}
             </Button>
           )}
           <HighlightToolbar 
@@ -1112,31 +1182,37 @@ function DrillContent() {
             {isFlagged && <Flag className="w-3.5 h-3.5 ml-2 inline-block fill-blue-500/50 text-blue-500/50" />}
           </div>
 
-          {/* Navigation arrows - fixed at bottom right (non-adaptive modes only) */}
-          {session.mode !== 'adaptive' && (
-            <div className="absolute bottom-6 right-6 flex gap-2 pointer-events-auto">
+          {/* Navigation arrows - fixed at bottom right (section mode only) */}
+          {session.mode === 'full-section' && (
+            <div className="absolute bottom-8 right-8 flex gap-3 pointer-events-auto">
               {session.currentIndex > 0 && (
                 <Button
                   variant="outline"
-                  size="icon"
+                  size="lg"
                   onClick={handlePrevious}
                   disabled={timer?.isPaused}
-                  className="rounded-full w-10 h-10"
+                  className="rounded-sm shadow-md border-foreground/20 hover:bg-accent"
                 >
-                  <ChevronLeft className="w-5 h-5" />
+                  <ChevronLeft className="w-5 h-5 mr-1" />
+                  Prev
                 </Button>
               )}
-              {session.currentIndex < session.questionQueue.length - 1 && (
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={handleNext}
-                  disabled={timer?.isPaused}
-                  className="rounded-full w-10 h-10"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </Button>
-              )}
+              <Button
+                variant="default"
+                size="lg"
+                onClick={handleNext}
+                disabled={timer?.isPaused}
+                className="rounded-sm shadow-md min-w-[100px]"
+              >
+                {session.currentIndex < session.questionQueue.length - 1 ? (
+                  <>
+                    Next
+                    <ChevronRight className="w-5 h-5 ml-1" />
+                  </>
+                ) : (
+                  'Finish'
+                )}
+              </Button>
             </div>
           )}
         </div>
@@ -1145,10 +1221,10 @@ function DrillContent() {
         <div className="flex-1 overflow-y-auto border-l">
           <div className="px-8 py-6 space-y-6">
             {/* Question Stem - Static Display */}
-            <div className="mb-6 max-w-3xl">
+            <div className="mb-8 max-w-3xl">
               <div 
                 className={cn(
-                  "text-[18px] font-semibold text-foreground leading-[1.5]",
+                  "text-[19px] font-bold text-foreground leading-[1.6] tracking-tight",
                   (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
                 )}
                 onMouseUp={(e) => handleTextSelection(e, 'stem')}
@@ -1240,8 +1316,8 @@ function DrillContent() {
               </div>
             )}
 
-            {/* Submit button for non-adaptive modes */}
-            {session.mode !== 'adaptive' && selectedAnswer && !showSolution && (
+            {/* Submit button for non-adaptive, non-section modes */}
+            {session.mode !== 'adaptive' && session.mode !== 'full-section' && selectedAnswer && !showSolution && (
               <div className="flex justify-end gap-3 pt-6 mt-2">
                 <Button
                   onClick={handleSubmitNonAdaptive}
