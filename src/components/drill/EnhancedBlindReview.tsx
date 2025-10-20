@@ -120,17 +120,21 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
       const brRationale = brRationales.get(qid) || '';
       const metrics = timerRef.current.getMetrics(qid);
       
-      if (!question || !previousAttempt) return null;
+      if (!question) return null;
+
+      // Handle unanswered questions (no previous attempt)
+      const preAnswer = previousAttempt?.selectedAnswer || '';
+      const preCorrect = previousAttempt?.correct || false;
 
       return {
         qid,
-        preAnswer: previousAttempt.selectedAnswer,
+        preAnswer,
         brAnswer,
         brRationale,
         brTimeMs: metrics.totalTimeMs,
-        brChanged: brAnswer !== previousAttempt.selectedAnswer,
+        brChanged: brAnswer !== preAnswer,
         correct: brAnswer === question.correctAnswer,
-        preCorrect: previousAttempt.correct,
+        preCorrect,
         switchCount: metrics.answerSwitchCount,
         revisitCount: metrics.revisitCount,
       };

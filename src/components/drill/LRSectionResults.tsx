@@ -59,23 +59,24 @@ export function LRSectionResults({ session, brResults, onBack }: LRSectionResult
       const attempt = session.attempts.get(qid);
       const brResult = brResults?.find(br => br.qid === qid);
       
-      if (!question || !attempt) return null;
+      if (!question) return null;
 
+      // Handle unanswered questions (no attempt = treated as wrong)
       return {
         qid,
         qnum: idx + 1,
         qtype: question.qtype,
         difficulty: question.difficulty,
-        initialAnswer: attempt.selectedAnswer || '—',
+        initialAnswer: attempt?.selectedAnswer || '—',
         correctAnswer: question.correctAnswer,
-        initialCorrect: attempt.correct,
+        initialCorrect: attempt?.correct || false,
         brAnswer: brResult?.brAnswer,
         brCorrect: brResult?.correct,
         brChanged: brResult?.brChanged,
-        timeMs: attempt.timeMs,
+        timeMs: attempt?.timeMs || 0,
         brTimeMs: brResult?.brTimeMs,
-        switchCount: attempt.switchCount || 0,
-        flagged: attempt.brMarked || false,
+        switchCount: attempt?.switchCount || 0,
+        flagged: attempt?.brMarked || false,
       };
     }).filter(Boolean) as QuestionStat[];
   }, [session, brResults]);

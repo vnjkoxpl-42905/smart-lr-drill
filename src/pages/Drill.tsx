@@ -693,23 +693,52 @@ function DrillContent() {
   const handleFinishSection = () => {
     if (!session) return;
     
-    // Build automatic review set based on rules
-    const reviewSet = buildAutoReviewSet(session);
+    // Evaluate correctness for all attempted questions
+    const updatedAttempts = new Map(session.attempts);
+    for (const [qid, attempt] of updatedAttempts) {
+      const question = questionBank.getQuestion(qid);
+      if (question) {
+        // Update correctness based on actual answer
+        updatedAttempts.set(qid, {
+          ...attempt,
+          correct: attempt.selectedAnswer === question.correctAnswer,
+        });
+      }
+    }
+    
+    // Create updated session with evaluated attempts
+    const updatedSession = {
+      ...session,
+      attempts: updatedAttempts,
+    };
+    
+    // Build automatic review set based on rules (using updated session)
+    const reviewSet = buildAutoReviewSet(updatedSession);
     setAutoReviewQids(reviewSet);
+    
+    // Update session state
+    setSession(updatedSession);
     
     // Show section complete screen
     setPostSectionScreen('complete');
   };
 
-  // Build automatic review set: all wrong + all flagged + 2 longest-time + 3 hard-right
+  // Build automatic review set: all wrong + all flagged + all unanswered + 2 longest-time + 3 hard-right
   const buildAutoReviewSet = (session: DrillSession): string[] => {
     const qids: string[] = [];
     const wrongQids: string[] = [];
+    const unansweredQids: string[] = [];
     const flaggedQids: string[] = [];
     const correctQids: { qid: string; timeMs: number; difficulty: number }[] = [];
     
-    for (const [qid, attempt] of session.attempts) {
-      if (!attempt.correct) {
+    // Check all questions in the queue
+    for (const qid of session.questionQueue) {
+      const attempt = session.attempts.get(qid);
+      
+      if (!attempt) {
+        // Unanswered questions are treated as wrong
+        unansweredQids.push(qid);
+      } else if (!attempt.correct) {
         wrongQids.push(qid);
       } else {
         const question = questionBank.getQuestion(qid);
@@ -718,13 +747,13 @@ function DrillContent() {
         }
       }
       
-      if (attempt.brMarked) {
+      if (attempt?.brMarked) {
         flaggedQids.push(qid);
       }
     }
     
-    // Add all wrong
-    qids.push(...wrongQids);
+    // Add all wrong and unanswered
+    qids.push(...wrongQids, ...unansweredQids);
     
     // Add all flagged (if not already added)
     for (const qid of flaggedQids) {
