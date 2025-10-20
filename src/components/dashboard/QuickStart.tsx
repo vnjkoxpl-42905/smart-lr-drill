@@ -7,12 +7,12 @@ interface QuickStartProps {
 
 export function QuickStart({ onStart }: QuickStartProps) {
   return (
-    <div className="relative overflow-hidden rounded-xl bg-surface-elevated p-10 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group">
+    <div className="relative overflow-hidden rounded-xl bg-surface-elevated/40 backdrop-blur-sm border border-border/50 p-8 transition-all duration-150 ease-out hover:border-accent-bronze/30 hover:shadow-glow-sm hover:scale-[1.005] group animate-fade-in">
       {/* Warm bronze gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent-bronze/[0.03] via-accent-warm/[0.02] to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-bronze/[0.02] via-accent-warm/[0.01] to-transparent pointer-events-none" />
       
       {/* Bronze glow on hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent-bronze/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-bronze/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none" />
       
       <div className="relative z-10 max-w-xl">
         <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-text-tertiary mb-4">
@@ -20,11 +20,11 @@ export function QuickStart({ onStart }: QuickStartProps) {
           Quick Start
         </div>
         
-        <h2 className="text-[32px] font-semibold leading-tight mb-3 text-text-primary">
+        <h2 className="text-[28px] font-semibold leading-tight mb-2 text-text-primary">
           Start Adaptive Drill
         </h2>
         
-        <p className="text-base text-text-secondary mb-8 leading-relaxed">
+        <p className="text-sm text-text-secondary mb-6 leading-relaxed">
           Jump into an intelligent practice session tailored to your performance.
         </p>
         

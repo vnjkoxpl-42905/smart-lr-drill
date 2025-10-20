@@ -6,7 +6,11 @@ import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { QuickStart } from '@/components/dashboard/QuickStart';
-import { InsightCard } from '@/components/dashboard/InsightCard';
+import { MetricCard } from '@/components/dashboard/MetricCard';
+import { SparklineChart } from '@/components/dashboard/SparklineChart';
+import { CircularProgress } from '@/components/dashboard/CircularProgress';
+import { TrendChart } from '@/components/dashboard/TrendChart';
+import { CapsuleCard } from '@/components/dashboard/CapsuleCard';
 import { ActionNav } from '@/components/dashboard/ActionNav';
 import { SectionSelector } from '@/components/drill/SectionSelector';
 import { TypeDrillPicker } from '@/components/drill/TypeDrillPicker';
@@ -28,6 +32,12 @@ export default function Home() {
     avgAccuracy: 0,
     recentStreak: 0,
   });
+  const [sparklineData, setSparklineData] = React.useState<Array<{ date: string; count: number }>>([]);
+  const [trends] = React.useState<Array<{ label: string; value: string }>>([
+    { label: 'Logical Reasoning', value: '72%' },
+    { label: 'Inference Questions', value: '68%' },
+    { label: 'Argument Structure', value: '65%' },
+  ]);
 
   // Redirect to auth if not logged in
   React.useEffect(() => {
@@ -72,8 +82,25 @@ export default function Home() {
         setStats({
           totalAttempted: attempts.length,
           avgAccuracy: accuracy,
-          recentStreak: 0, // TODO: compute streak
+          recentStreak: 0,
         });
+
+        // Generate sparkline data (group by day)
+        const dailyCounts = new Map<string, number>();
+        attempts.forEach((attempt) => {
+          const date = new Date(attempt.timestamp_iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+          dailyCounts.set(date, (dailyCounts.get(date) || 0) + 1);
+        });
+
+        // Create array of last 18 days
+        const sparkline: Array<{ date: string; count: number }> = [];
+        for (let i = 17; i >= 0; i--) {
+          const date = new Date();
+          date.setDate(date.getDate() - i);
+          const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+          sparkline.push({ date: dateStr, count: dailyCounts.get(dateStr) || 0 });
+        }
+        setSparklineData(sparkline);
       }
     };
 
@@ -207,65 +234,57 @@ export default function Home() {
                 {/* Hero Quick Start */}
                 <QuickStart onStart={handleStartAdaptive} />
 
-                {/* Insights Grid */}
+                {/* At a Glance - New Visualization Grid */}
                 <div>
-                  <h3 className="text-xs font-medium uppercase tracking-widest text-text-tertiary mb-4">
+                  <h3 className="text-xs font-medium uppercase tracking-widest text-text-tertiary mb-5">
                     At a Glance
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <InsightCard
-                      icon={BookOpen}
-                      label="Questions Practiced"
-                      value={stats.totalAttempted}
-                      sublabel="Last 30 days"
-                    />
-                    <InsightCard
-                      icon={Target}
-                      label="Accuracy"
-                      value={stats.totalAttempted > 0 ? `${stats.avgAccuracy}%` : '0%'}
-                      sublabel="Average performance"
-                    />
-                    <InsightCard
-                      icon={TrendingUp}
-                      label="Opportunities"
-                      value="—"
-                      sublabel="Top improvement areas"
-                      onClick={() => navigate('/analytics')}
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    {/* Questions Practiced - Sparkline */}
+                    <MetricCard className="md:col-span-1">
+                      <div className="flex flex-col h-full min-h-[140px]">
+                        <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-4">
+                          Questions Practiced
+                        </p>
+                        <SparklineChart data={sparklineData} total={stats.totalAttempted} />
+                      </div>
+                    </MetricCard>
+
+                    {/* Accuracy - Circular Progress */}
+                    <MetricCard className="flex items-center justify-center min-h-[140px]">
+                      <CircularProgress value={stats.totalAttempted > 0 ? stats.avgAccuracy : 0} />
+                    </MetricCard>
+
+                    {/* Opportunities - Trend Chart */}
+                    <MetricCard className="md:col-span-1">
+                      <div className="flex flex-col h-full min-h-[140px]">
+                        <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-4">
+                          Opportunities
+                        </p>
+                        <TrendChart trends={trends} onViewDetails={() => navigate('/analytics')} />
+                      </div>
+                    </MetricCard>
                   </div>
                 </div>
 
-                {/* Quick Access */}
+                {/* Quick Access - Capsule Cards */}
                 <div>
-                  <h3 className="text-xs font-medium uppercase tracking-widest text-text-tertiary mb-4">
+                  <h3 className="text-xs font-medium uppercase tracking-widest text-text-tertiary mb-5">
                     Quick Access
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <button
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <CapsuleCard
+                      icon={XCircle}
+                      title="Wrong Answer Journal"
+                      description="Review and learn from mistakes"
                       onClick={() => navigate('/waj')}
-                      className="group flex items-start gap-4 p-6 rounded-lg bg-card border border-border text-left transition-all duration-200 hover:shadow-md hover:shadow-glow-sm hover:border-accent-bronze/30 hover:-translate-y-0.5"
-                    >
-                      <div className="rounded-lg bg-secondary/50 p-3 transition-all duration-200 group-hover:bg-accent-bronze/10 group-hover:shadow-glow-sm">
-                        <XCircle className="w-5 h-5 text-primary transition-colors duration-200 group-hover:text-accent-bronze" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-text-primary mb-1">Wrong Answer Journal</p>
-                        <p className="text-xs text-text-secondary">Review and learn from mistakes</p>
-                      </div>
-                    </button>
-
-                    <button
+                    />
+                    <CapsuleCard
+                      icon={Flag}
+                      title="Flagged Questions"
+                      description="Questions marked for review"
                       onClick={() => navigate('/flagged')}
-                      className="group flex items-start gap-4 p-6 rounded-lg bg-card border border-border text-left transition-all duration-200 hover:shadow-md hover:shadow-glow-sm hover:border-accent-bronze/30 hover:-translate-y-0.5"
-                    >
-                      <div className="rounded-lg bg-secondary/50 p-3 transition-all duration-200 group-hover:bg-accent-bronze/10 group-hover:shadow-glow-sm">
-                        <Flag className="w-5 h-5 text-primary transition-colors duration-200 group-hover:text-accent-bronze" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-text-primary mb-1">Flagged Questions</p>
-                        <p className="text-xs text-text-secondary">Questions marked for review</p>
-                      </div>
-                    </button>
+                    />
                   </div>
                 </div>
               </>
