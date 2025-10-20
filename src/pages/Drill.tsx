@@ -90,6 +90,7 @@ function DrillContent() {
   // New post-section flow states
   const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
   const [autoReviewQids, setAutoReviewQids] = React.useState<string[]>([]);
+  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
   
   const timer = hasTimer ? useTimerContext() : null;
 
@@ -312,6 +313,20 @@ function DrillContent() {
       }
       return newSet;
     });
+  };
+
+  const handleLongPressStart = (key: string) => {
+    const timer = setTimeout(() => {
+      handleEliminateAnswer(key);
+    }, 500); // 500ms for long press
+    setLongPressTimer(timer);
+  };
+
+  const handleLongPressEnd = () => {
+    if (longPressTimer) {
+      clearTimeout(longPressTimer);
+      setLongPressTimer(null);
+    }
   };
 
   // Auto-submit when confidence is selected (adaptive only)
@@ -1039,23 +1054,6 @@ function DrillContent() {
       selected: answerEntries[selectedIndex],
       after: answerEntries.slice(selectedIndex + 1),
     };
-  };
-
-  // Long-press handler for cross-out gesture
-  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
-
-  const handleLongPressStart = (key: string) => {
-    const timer = setTimeout(() => {
-      handleEliminateAnswer(key);
-    }, 500); // 500ms for long press
-    setLongPressTimer(timer);
-  };
-
-  const handleLongPressEnd = () => {
-    if (longPressTimer) {
-      clearTimeout(longPressTimer);
-      setLongPressTimer(null);
-    }
   };
 
   // Helper function to render a single answer choice
