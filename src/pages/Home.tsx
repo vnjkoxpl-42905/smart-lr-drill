@@ -12,6 +12,7 @@ import { CircularProgress } from '@/components/dashboard/CircularProgress';
 import { TrendChart } from '@/components/dashboard/TrendChart';
 import { CapsuleCard } from '@/components/dashboard/CapsuleCard';
 import { ActionNav } from '@/components/dashboard/ActionNav';
+import { RecentPerformanceWidget } from '@/components/dashboard/RecentPerformanceWidget';
 import { SectionSelector } from '@/components/drill/SectionSelector';
 import { TypeDrillPicker } from '@/components/drill/TypeDrillPicker';
 import { NaturalDrillCreator } from '@/components/drill/NaturalDrillCreator';
@@ -266,6 +267,9 @@ export default function Home() {
                     </MetricCard>
                   </div>
                 </div>
+
+                {/* Recent Performance Widget */}
+                <RecentPerformanceWidget />
 
                 {/* Quick Access - Capsule Cards */}
                 <div>

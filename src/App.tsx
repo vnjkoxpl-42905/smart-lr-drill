@@ -8,7 +8,6 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { UserSettingsProvider } from "./contexts/UserSettingsContext";
 import Home from "./pages/Home";
 import Drill from "./pages/Drill";
-import Dashboard from "./pages/Dashboard";
 import WrongAnswerJournal from "./pages/WrongAnswerJournal";
 import FlaggedQuestions from "./pages/FlaggedQuestions";
 import Analytics from "./pages/Analytics";
@@ -33,7 +32,6 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/drill" element={<Drill />} />
-                  <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/waj" element={<WrongAnswerJournal />} />
                   <Route path="/flagged" element={<FlaggedQuestions />} />
                   <Route path="/analytics" element={<Analytics />} />

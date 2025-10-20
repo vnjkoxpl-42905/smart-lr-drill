@@ -258,7 +258,7 @@ export function LRSectionResults({ session, brResults, onBack }: LRSectionResult
           <div className="flex items-center justify-between mb-6">
             <Button variant="ghost" size="sm" onClick={onBack}>
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back
+              Back to Home
             </Button>
             <h1 className="text-2xl font-bold">Section Results</h1>
             <div className="w-24" />

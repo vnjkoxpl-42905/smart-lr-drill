@@ -984,7 +984,7 @@ function DrillContent() {
         <LRSectionResults
           session={session}
           brResults={brResults}
-          onBack={() => navigate('/dashboard')}
+          onBack={() => navigate('/')}
         />
       );
     }
@@ -998,7 +998,7 @@ function DrillContent() {
           setAutoReviewQids(session.questionQueue);
           setPostSectionScreen('review');
         }}
-        onBack={() => setPostSectionScreen('complete')}
+        onBack={() => navigate('/')}
       />
     );
   }
