@@ -86,6 +86,7 @@ export function ScoreReport({ session, onStartReview, onFullReview, onBack }: Sc
   const totalTimeMs = stats.reduce((sum, s) => sum + s.timedTimeMs, 0);
   const avgTimeMs = Math.round(totalTimeMs / totalQuestions);
   const medianTimeMs = React.useMemo(() => {
+    if (stats.length === 0) return 0;
     const sorted = [...stats].sort((a, b) => a.timedTimeMs - b.timedTimeMs);
     const mid = Math.floor(sorted.length / 2);
     return sorted.length % 2 === 0
