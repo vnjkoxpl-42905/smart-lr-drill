@@ -85,10 +85,7 @@ const JSON_FILES = [
   '/data/PT116-S3-LR.json',
   '/data/PT117-S2-LR.json',
   '/data/PT117-S3-LR.json',
-  '/data/PT117-S4-LR.json',
   '/data/PT118-S1-LR.json',
-  '/data/PT118-S2-LR.json',
-  '/data/PT118-S3-LR.json',
   '/data/PT118-S4-LR.json',
 ];
 
