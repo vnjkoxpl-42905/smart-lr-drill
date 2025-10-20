@@ -19,6 +19,9 @@ import { HighlightedText } from '@/components/drill/HighlightedText';
 import { BlindReviewSelection } from '@/components/drill/BlindReviewSelection';
 import { BlindReviewFlow, type BlindReviewResult } from '@/components/drill/BlindReviewFlow';
 import { BlindReviewResults } from '@/components/drill/BlindReviewResults';
+import { SectionComplete } from '@/components/drill/SectionComplete';
+import { ScoreReport } from '@/components/drill/ScoreReport';
+import { EnhancedBlindReview, type BRResult } from '@/components/drill/EnhancedBlindReview';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
@@ -83,6 +86,10 @@ function DrillContent() {
   const [brSelectedQids, setBrSelectedQids] = React.useState<string[]>([]);
   const [brResults, setBrResults] = React.useState<any[]>([]);
   const [showBRResults, setShowBRResults] = React.useState(false);
+  
+  // New post-section flow states
+  const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
+  const [autoReviewQids, setAutoReviewQids] = React.useState<string[]>([]);
   
   const timer = hasTimer ? useTimerContext() : null;
 
@@ -582,9 +589,63 @@ function DrillContent() {
   };
 
   const handleFinishSection = () => {
-    // Navigate to review with results
-    // For now, just show an alert - you can implement a proper results page
-    alert('Section complete! Results will be shown here.');
+    if (!session) return;
+    
+    // Build automatic review set based on rules
+    const reviewSet = buildAutoReviewSet(session);
+    setAutoReviewQids(reviewSet);
+    
+    // Show section complete screen
+    setPostSectionScreen('complete');
+  };
+
+  // Build automatic review set: all wrong + all flagged + 2 longest-time + 3 hard-right
+  const buildAutoReviewSet = (session: DrillSession): string[] => {
+    const qids: string[] = [];
+    const wrongQids: string[] = [];
+    const flaggedQids: string[] = [];
+    const correctQids: { qid: string; timeMs: number; difficulty: number }[] = [];
+    
+    for (const [qid, attempt] of session.attempts) {
+      if (!attempt.correct) {
+        wrongQids.push(qid);
+      } else {
+        const question = questionBank.getQuestion(qid);
+        if (question) {
+          correctQids.push({ qid, timeMs: attempt.timeMs, difficulty: question.difficulty });
+        }
+      }
+      
+      if (attempt.brMarked) {
+        flaggedQids.push(qid);
+      }
+    }
+    
+    // Add all wrong
+    qids.push(...wrongQids);
+    
+    // Add all flagged (if not already added)
+    for (const qid of flaggedQids) {
+      if (!qids.includes(qid)) qids.push(qid);
+    }
+    
+    // If no flagged, add 2 longest-time correct answers
+    if (flaggedQids.length === 0) {
+      const longestTime = [...correctQids]
+        .filter(c => !qids.includes(c.qid))
+        .sort((a, b) => b.timeMs - a.timeMs)
+        .slice(0, 2);
+      qids.push(...longestTime.map(c => c.qid));
+    }
+    
+    // Add 3 hard-right (difficulty 4-5, correct)
+    const hardRight = [...correctQids]
+      .filter(c => !qids.includes(c.qid) && c.difficulty >= 4)
+      .sort((a, b) => b.difficulty - a.difficulty)
+      .slice(0, 3);
+    qids.push(...hardRight.map(c => c.qid));
+    
+    return qids;
   };
 
   // Enhanced keyboard navigation for section mode
@@ -761,6 +822,46 @@ function DrillContent() {
 
   // Handle session completion with BR
   if (!session || !currentQuestion) {
+    // Show new post-section flow
+    if (postSectionScreen === 'complete') {
+      return (
+        <SectionComplete
+          onReview={() => setPostSectionScreen('review')}
+          onScoreReport={() => setPostSectionScreen('score-report')}
+        />
+      );
+    }
+    
+    if (postSectionScreen === 'review') {
+      return (
+        <EnhancedBlindReview
+          session={session!}
+          reviewQids={autoReviewQids}
+          onComplete={async (results: BRResult[]) => {
+            setBrResults(results);
+            setPostSectionScreen(null);
+            setShowBRResults(true);
+            await saveBRResults(session!, results);
+          }}
+          onBack={() => setPostSectionScreen('complete')}
+        />
+      );
+    }
+    
+    if (postSectionScreen === 'score-report') {
+      return (
+        <ScoreReport
+          session={session!}
+          onStartReview={() => setPostSectionScreen('review')}
+          onFullReview={() => {
+            setAutoReviewQids(session!.questionQueue);
+            setPostSectionScreen('review');
+          }}
+          onBack={() => setPostSectionScreen('complete')}
+        />
+      );
+    }
+
     // Check if we should show BR selection
     if (session && brEnabled && brMarked.size > 0 && !showBRSelection && !showBRFlow && !showBRResults) {
       setShowBRSelection(true);

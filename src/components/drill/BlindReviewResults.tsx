@@ -48,6 +48,10 @@ export function BlindReviewResults({ session, results, onFinish }: BlindReviewRe
   const regretCount = processedResults.filter(r => r.delta === 'regret').length;
   const confirmedCount = processedResults.filter(r => r.delta === 'confirmed').length;
 
+  const totalReviewed = processedResults.length;
+  const brScore = processedResults.filter(r => r.correct).length;
+  const brPercent = Math.round((brScore / totalReviewed) * 100);
+
   const getDeltaBadge = (delta: BRDelta) => {
     const configs: Record<BRDelta, { label: string; variant: 'default' | 'destructive' | 'secondary' | 'outline'; className?: string }> = {
       corrected: { label: 'Corrected', variant: 'default', className: 'bg-green-600' },
@@ -64,45 +68,70 @@ export function BlindReviewResults({ session, results, onFinish }: BlindReviewRe
   };
 
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen p-6 bg-background">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Summary */}
-        <Card className="p-6">
+        <Card className="p-6 border rounded-xl">
           <h2 className="text-2xl font-bold mb-4">Blind Review Results</h2>
-          <p className="text-lg">
-            {correctedCount > 0 && <span className="text-green-600 font-semibold">{correctedCount} corrected</span>}
-            {correctedCount > 0 && (stuckCount > 0 || regretCount > 0) && ' · '}
-            {stuckCount > 0 && <span className="text-destructive font-semibold">{stuckCount} stuck</span>}
-            {stuckCount > 0 && regretCount > 0 && ' · '}
-            {regretCount > 0 && <span className="text-orange-600 font-semibold">{regretCount} regret</span>}
-            {(correctedCount > 0 || stuckCount > 0 || regretCount > 0) && confirmedCount > 0 && ' · '}
-            {confirmedCount > 0 && <span className="text-blue-600 font-semibold">{confirmedCount} confirmed</span>}
-          </p>
+          
+          <div className="grid grid-cols-2 gap-6 mb-6">
+            <div className="space-y-1">
+              <div className="text-sm text-muted-foreground">BR Score</div>
+              <div className="text-3xl font-bold">{brScore}/{totalReviewed}</div>
+              <div className="text-sm text-muted-foreground">{brPercent}% correct</div>
+            </div>
+            <div className="space-y-2">
+              {correctedCount > 0 && (
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-green-600" />
+                  <span className="text-sm"><span className="font-semibold">{correctedCount}</span> corrected</span>
+                </div>
+              )}
+              {stuckCount > 0 && (
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-destructive" />
+                  <span className="text-sm"><span className="font-semibold">{stuckCount}</span> stuck</span>
+                </div>
+              )}
+              {regretCount > 0 && (
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-orange-600" />
+                  <span className="text-sm"><span className="font-semibold">{regretCount}</span> regret</span>
+                </div>
+              )}
+              {confirmedCount > 0 && (
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-blue-600" />
+                  <span className="text-sm"><span className="font-semibold">{confirmedCount}</span> confirmed</span>
+                </div>
+              )}
+            </div>
+          </div>
         </Card>
 
         {/* Detailed Results */}
-        <div className="space-y-4">
+        <div className="space-y-2">
           {processedResults.map(result => {
             const question = questionBank.getQuestion(result.qid);
             if (!question) return null;
 
             return (
-              <Card key={result.qid} className="p-4">
+              <Card key={result.qid} className="p-4 border rounded-lg">
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="font-semibold">
+                    <h3 className="font-semibold font-mono text-sm">
                       PT{question.pt}-S{question.section}-Q{question.qnum}
                     </h3>
-                    <p className="text-sm text-muted-foreground">{question.qtype}</p>
+                    <p className="text-xs text-muted-foreground">{question.qtype}</p>
                   </div>
                   {getDeltaBadge(result.delta)}
                 </div>
 
                 {/* Answer Comparison */}
-                <div className="flex items-center gap-4 py-3 px-4 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-4 py-3 px-4 bg-accent/20 rounded-lg border">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm text-muted-foreground">Before:</span>
-                    <Badge variant={result.preCorrect ? 'default' : 'destructive'}>
+                    <span className="text-xs text-muted-foreground w-12">Before</span>
+                    <Badge variant={result.preCorrect ? 'default' : 'destructive'} className="font-mono">
                       ({result.preAnswer})
                     </Badge>
                   </div>
@@ -110,15 +139,15 @@ export function BlindReviewResults({ session, results, onFinish }: BlindReviewRe
                   <ArrowRight className="w-4 h-4 text-muted-foreground" />
                   
                   <div className="flex items-center gap-2">
-                    <span className="text-sm text-muted-foreground">After:</span>
-                    <Badge variant={result.correct ? 'default' : 'destructive'}>
+                    <span className="text-xs text-muted-foreground w-10">After</span>
+                    <Badge variant={result.correct ? 'default' : 'destructive'} className="font-mono">
                       ({result.brAnswer})
                     </Badge>
                   </div>
                   
                   <div className="ml-auto flex items-center gap-2">
-                    <span className="text-sm text-muted-foreground">Correct:</span>
-                    <Badge variant="outline">
+                    <span className="text-xs text-muted-foreground">Correct</span>
+                    <Badge variant="outline" className="font-mono">
                       ({question.correctAnswer})
                     </Badge>
                   </div>
@@ -126,9 +155,9 @@ export function BlindReviewResults({ session, results, onFinish }: BlindReviewRe
 
                 {/* Rationale */}
                 {result.brRationale && (
-                  <div className="mt-3 p-3 bg-accent/30 rounded-lg">
+                  <div className="mt-3 p-3 bg-accent/20 rounded-lg border">
                     <p className="text-sm">
-                      <span className="font-medium">Your rationale: </span>
+                      <span className="font-medium text-xs text-muted-foreground">Rationale: </span>
                       {result.brRationale}
                     </p>
                   </div>
@@ -139,7 +168,7 @@ export function BlindReviewResults({ session, results, onFinish }: BlindReviewRe
         </div>
 
         {/* Actions */}
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center gap-4 pt-4">
           <Button onClick={onFinish} size="lg">
             Return Home
           </Button>
