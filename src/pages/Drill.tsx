@@ -130,8 +130,8 @@ function DrillContent() {
 
   // Initialize session with question pool filtering
   React.useEffect(() => {
-    if (!state?.mode || !classId) {
-      if (!state?.mode) navigate('/');
+    if (!state?.mode) {
+      navigate('/');
       return;
     }
 
@@ -155,28 +155,36 @@ function DrillContent() {
         });
       }
 
-      // Apply question pool filtering
-      const usage = await QuestionPoolService.getQuestionUsage(classId, mode);
-      const poolSettings = {
-        allowRepeats: settings.allowRepeats,
-        preferUnseen: settings.preferUnseen,
-        recycleAfterDays: settings.recycleAfterDays
-      };
+      // Apply question pool filtering only if classId is available
+      let available = rawQuestions;
+      let exhausted = false;
       
-      const { available, exhausted } = QuestionPoolService.filterQuestionPool(
-        rawQuestions,
-        usage,
-        poolSettings
-      );
+      if (classId) {
+        const usage = await QuestionPoolService.getQuestionUsage(classId, mode);
+        const poolSettings = {
+          allowRepeats: settings.allowRepeats,
+          preferUnseen: settings.preferUnseen,
+          recycleAfterDays: settings.recycleAfterDays
+        };
+        
+        const filtered = QuestionPoolService.filterQuestionPool(
+          rawQuestions,
+          usage,
+          poolSettings
+        );
+        
+        available = filtered.available;
+        exhausted = filtered.exhausted;
 
-      setTotalPoolSize(rawQuestions.length);
-      setAvailablePoolSize(available.length);
-      setPoolExhausted(exhausted);
-      setPoolStatus(QuestionPoolService.getPoolStatus(rawQuestions.length, available.length, poolSettings));
+        setTotalPoolSize(rawQuestions.length);
+        setAvailablePoolSize(available.length);
+        setPoolExhausted(exhausted);
+        setPoolStatus(QuestionPoolService.getPoolStatus(rawQuestions.length, available.length, poolSettings));
 
-      if (exhausted) {
-        // Don't initialize session if pool is exhausted
-        return;
+        if (exhausted) {
+          // Don't initialize session if pool is exhausted
+          return;
+        }
       }
 
       // For type-drill, apply balanced selection from available pool
