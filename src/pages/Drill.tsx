@@ -24,7 +24,7 @@ import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
 import { captureTextSelection, replaceOverlappingHighlights, type Highlight, type HighlightColor } from '@/lib/highlightUtils';
-import { ArrowLeft, CheckCircle, XCircle, Flag } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, Flag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import {
@@ -278,20 +278,15 @@ function DrillContent() {
     });
   };
 
-  // Auto-submit when confidence is selected (adaptive) or answer selected (non-adaptive)
+  // Auto-submit when confidence is selected (adaptive only)
   React.useEffect(() => {
     if (session?.mode === 'adaptive') {
       // Adaptive: wait for confidence
       if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
         handleSubmit();
       }
-    } else {
-      // Non-adaptive: submit immediately when answer is selected
-      if (selectedAnswer && !showSolution) {
-        handleSubmitNonAdaptive();
-      }
     }
-  }, [confidence, answerLocked, showSolution, tutorChatOpen, selectedAnswer, session?.mode]);
+  }, [confidence, answerLocked, showSolution, tutorChatOpen, session?.mode]);
 
   const handleTryAgain = () => {
     setTutorChatOpen(false);
@@ -536,6 +531,18 @@ function DrillContent() {
       setSession({
         ...session,
         currentIndex: session.currentIndex + 1,
+      });
+    }
+  };
+
+  const handlePrevious = () => {
+    if (!session || session.mode === 'adaptive') return;
+    
+    // Move to previous in queue
+    if (session.currentIndex > 0) {
+      setSession({
+        ...session,
+        currentIndex: session.currentIndex - 1,
       });
     }
   };
@@ -1104,6 +1111,34 @@ function DrillContent() {
             PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
             {isFlagged && <Flag className="w-3.5 h-3.5 ml-2 inline-block fill-blue-500/50 text-blue-500/50" />}
           </div>
+
+          {/* Navigation arrows - fixed at bottom right (non-adaptive modes only) */}
+          {session.mode !== 'adaptive' && (
+            <div className="absolute bottom-6 right-6 flex gap-2 pointer-events-auto">
+              {session.currentIndex > 0 && (
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={handlePrevious}
+                  disabled={timer?.isPaused}
+                  className="rounded-full w-10 h-10"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </Button>
+              )}
+              {session.currentIndex < session.questionQueue.length - 1 && (
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={handleNext}
+                  disabled={timer?.isPaused}
+                  className="rounded-full w-10 h-10"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </Button>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Right Panel - Answer Choices */}
@@ -1205,16 +1240,18 @@ function DrillContent() {
               </div>
             )}
 
-            {/* Actions */}
-            <div className="flex justify-end gap-3 pt-6 mt-2">
-              <Button
-                onClick={handleNext}
-                disabled={!showSolution || timer?.isPaused}
-                size="lg"
-              >
-                Next question
-              </Button>
-            </div>
+            {/* Submit button for non-adaptive modes */}
+            {session.mode !== 'adaptive' && selectedAnswer && !showSolution && (
+              <div className="flex justify-end gap-3 pt-6 mt-2">
+                <Button
+                  onClick={handleSubmitNonAdaptive}
+                  size="lg"
+                  disabled={timer?.isPaused}
+                >
+                  Check Answer
+                </Button>
+              </div>
+            )}
 
             {/* Solution */}
             {showSolution && (
