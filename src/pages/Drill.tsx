@@ -43,6 +43,10 @@ import {
 } from '@/components/ui/alert-dialog';
 import type { LRQuestion } from '@/lib/questionLoader';
 import type { DrillMode, DrillSession, FullSectionConfig, TypeDrillConfig, TimerMode } from '@/types/drill';
+import { QuestionPoolService } from '@/lib/questionPoolService';
+import { QuestionPoolChip } from '@/components/drill/QuestionPoolChip';
+import { QuestionPoolExhausted } from '@/components/drill/QuestionPoolExhausted';
+import { toast } from 'sonner';
 
 const adaptiveEngine = new AdaptiveEngine();
 
@@ -93,86 +97,145 @@ function DrillContent() {
   const [autoReviewQids, setAutoReviewQids] = React.useState<string[]>([]);
   const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
   
+  // Question pool state
+  const [poolStatus, setPoolStatus] = React.useState<string>('');
+  const [totalPoolSize, setTotalPoolSize] = React.useState(0);
+  const [availablePoolSize, setAvailablePoolSize] = React.useState(0);
+  const [poolExhausted, setPoolExhausted] = React.useState(false);
+  const [classId, setClassId] = React.useState<string>('');
+  
   const timer = hasTimer ? useTimerContext() : null;
 
   // BR only for Full Section and Type Drill modes
   const brEnabled = session?.mode === 'full-section' || session?.mode === 'type-drill';
 
-  // Initialize session
+  // Get class_id for question pool tracking
   React.useEffect(() => {
-    if (!state?.mode) {
-      navigate('/');
+    const fetchClassId = async () => {
+      if (!user) return;
+      
+      const { data: student } = await supabase
+        .from('students')
+        .select('class_id')
+        .eq('id', user.id)
+        .maybeSingle();
+      
+      if (student?.class_id) {
+        setClassId(student.class_id);
+      }
+    };
+    
+    fetchClassId();
+  }, [user]);
+
+  // Initialize session with question pool filtering
+  React.useEffect(() => {
+    if (!state?.mode || !classId) {
+      if (!state?.mode) navigate('/');
       return;
     }
 
-    const mode = state.mode;
-    let questionQueue: string[] = [];
+    const initializeSession = async () => {
+      const mode = state.mode;
+      let questionQueue: string[] = [];
+      let rawQuestions: LRQuestion[] = [];
 
-    if (mode === 'adaptive') {
-      // Adaptive: start with random pool, engine will select
-      const allQuestions = questionBank.getAllQuestions();
-      questionQueue = allQuestions.map(q => q.qid);
-    } else if (mode === 'full-section' && state.config) {
-      const config = state.config as FullSectionConfig;
-      const sectionQuestions = questionBank.getSection(config.pt, config.section);
-      questionQueue = sectionQuestions.map(q => q.qid);
-      setHasTimer(config.timer.mode !== 'unlimited');
-    } else if (mode === 'type-drill' && state.config) {
-      const config = state.config as TypeDrillConfig;
-      const filtered = questionBank.getQuestionsByFilter({
-        qtypes: config.qtypes.length > 0 ? config.qtypes : undefined,
-        difficulties: config.difficulties.length > 0 ? config.difficulties : undefined,
-        pts: config.pts.length > 0 ? config.pts : undefined,
-      });
-      
-      // Balanced mix: group by type × level, round-robin select
-      const groups = new Map<string, LRQuestion[]>();
-      
-      // Group questions by type-level combo
-      for (const q of filtered) {
-        const key = `${q.qtype}-${q.difficulty}`;
-        if (!groups.has(key)) groups.set(key, []);
-        groups.get(key)!.push(q);
+      if (mode === 'adaptive') {
+        rawQuestions = questionBank.getAllQuestions();
+      } else if (mode === 'full-section' && state.config) {
+        const config = state.config as FullSectionConfig;
+        rawQuestions = questionBank.getSection(config.pt, config.section);
+        setHasTimer(config.timer.mode !== 'unlimited');
+      } else if (mode === 'type-drill' && state.config) {
+        const config = state.config as TypeDrillConfig;
+        rawQuestions = questionBank.getQuestionsByFilter({
+          qtypes: config.qtypes.length > 0 ? config.qtypes : undefined,
+          difficulties: config.difficulties.length > 0 ? config.difficulties : undefined,
+          pts: config.pts.length > 0 ? config.pts : undefined,
+        });
       }
+
+      // Apply question pool filtering
+      const usage = await QuestionPoolService.getQuestionUsage(classId, mode);
+      const poolSettings = {
+        allowRepeats: settings.allowRepeats,
+        preferUnseen: settings.preferUnseen,
+        recycleAfterDays: settings.recycleAfterDays
+      };
       
-      // Shuffle each group
-      for (const [, questions] of groups) {
-        for (let i = questions.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [questions[i], questions[j]] = [questions[j], questions[i]];
+      const { available, exhausted } = QuestionPoolService.filterQuestionPool(
+        rawQuestions,
+        usage,
+        poolSettings
+      );
+
+      setTotalPoolSize(rawQuestions.length);
+      setAvailablePoolSize(available.length);
+      setPoolExhausted(exhausted);
+      setPoolStatus(QuestionPoolService.getPoolStatus(rawQuestions.length, available.length, poolSettings));
+
+      if (exhausted) {
+        // Don't initialize session if pool is exhausted
+        return;
+      }
+
+      // For type-drill, apply balanced selection from available pool
+      let finalQuestions = available;
+      if (mode === 'type-drill' && state.config) {
+        const config = state.config as TypeDrillConfig;
+        
+        // Balanced mix: group by type × level, round-robin select
+        const groups = new Map<string, LRQuestion[]>();
+        
+        for (const q of available) {
+          const key = `${q.qtype}-${q.difficulty}`;
+          if (!groups.has(key)) groups.set(key, []);
+          groups.get(key)!.push(q);
         }
-      }
-      
-      // Round-robin select
-      let selected: LRQuestion[] = [];
-      const groupArrays = Array.from(groups.values());
-      
-      while (selected.length < config.count && groupArrays.some(g => g.length > 0)) {
-        for (const group of groupArrays) {
-          if (group.length > 0 && selected.length < config.count) {
-            selected.push(group.shift()!);
+        
+        // Shuffle each group
+        for (const [, questions] of groups) {
+          for (let i = questions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [questions[i], questions[j]] = [questions[j], questions[i]];
           }
         }
+        
+        // Round-robin select
+        let selected: LRQuestion[] = [];
+        const groupArrays = Array.from(groups.values());
+        
+        while (selected.length < config.count && groupArrays.some(g => g.length > 0)) {
+          for (const group of groupArrays) {
+            if (group.length > 0 && selected.length < config.count) {
+              selected.push(group.shift()!);
+            }
+          }
+        }
+        
+        // Final shuffle for variety
+        for (let i = selected.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [selected[i], selected[j]] = [selected[j], selected[i]];
+        }
+        
+        finalQuestions = selected;
       }
-      
-      // Final shuffle for variety
-      for (let i = selected.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [selected[i], selected[j]] = [selected[j], selected[i]];
-      }
-      
-      questionQueue = selected.map(q => q.qid);
-    }
 
-    setSession({
-      mode,
-      fullSectionConfig: mode === 'full-section' ? (state.config as FullSectionConfig) : undefined,
-      typeDrillConfig: mode === 'type-drill' ? (state.config as TypeDrillConfig) : undefined,
-      questionQueue,
-      currentIndex: 0,
-      attempts: new Map(),
-    });
-  }, [state, navigate]);
+      questionQueue = finalQuestions.map(q => q.qid);
+
+      setSession({
+        mode,
+        fullSectionConfig: mode === 'full-section' ? (state.config as FullSectionConfig) : undefined,
+        typeDrillConfig: mode === 'type-drill' ? (state.config as TypeDrillConfig) : undefined,
+        questionQueue,
+        currentIndex: 0,
+        attempts: new Map(),
+      });
+    };
+
+    initializeSession();
+  }, [state, navigate, classId, settings.allowRepeats, settings.preferUnseen, settings.recycleAfterDays]);
 
   // Load current question
   React.useEffect(() => {
@@ -459,6 +522,11 @@ function DrillContent() {
     setWajModalOpen(false);
     setShowSolution(true);
     
+    // Track question usage
+    if (classId && session?.mode) {
+      QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
+    }
+    
     // Auto-advance to next question after 1.5 seconds
     setTimeout(() => {
       handleNext();
@@ -500,6 +568,11 @@ function DrillContent() {
       difficulty: currentQuestion.difficulty,
       timestamp: new Date(),
     });
+
+    // Track question usage
+    if (classId && session?.mode) {
+      QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
+    }
 
     setSession({ ...session, attempts: newAttempts });
     setShowSolution(true);
@@ -545,6 +618,11 @@ function DrillContent() {
         difficulty: currentQuestion.difficulty,
         timestamp: new Date(),
       });
+
+      // Track question usage
+      if (classId && session?.mode) {
+        QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
+      }
 
       // Log correct answer to WAJ if there's an existing wrong entry
       const { logCorrectAnswer } = await import('@/lib/wajService');
@@ -1235,6 +1313,14 @@ function DrillContent() {
             </Button>
 
             <div className="flex items-center gap-6">
+              {poolStatus && (
+                <QuestionPoolChip
+                  status={poolStatus}
+                  totalQuestions={totalPoolSize}
+                  availableQuestions={availablePoolSize}
+                />
+              )}
+              
               {hasTimer && timer && (
                 <div className="flex items-center gap-3">
                   <Button
@@ -1272,6 +1358,27 @@ function DrillContent() {
 
       {/* Main Content */}
       <div className="flex-1 flex overflow-hidden">
+        {poolExhausted ? (
+          <div className="flex-1 overflow-y-auto p-8">
+            <QuestionPoolExhausted
+              onReset={async () => {
+                if (classId) {
+                  await QuestionPoolService.resetPool(classId, session?.mode);
+                  toast.success('Question pool reset');
+                  window.location.reload();
+                }
+              }}
+              onExpandCriteria={() => {
+                navigate('/');
+              }}
+              onSettings={() => {
+                navigate('/profile');
+              }}
+              mode={session?.mode || 'drill'}
+            />
+          </div>
+        ) : (
+          <>
         {/* Left Panel - Stimulus */}
         <div className="flex-1 overflow-y-auto">
           <div className="p-8 max-w-4xl mx-auto pb-32">
@@ -1455,6 +1562,8 @@ function DrillContent() {
             )}
           </div>
         </div>
+        </>
+        )}
       </div>
 
       {/* Sticky Bottom Navigation Bar - Section Mode Only */}

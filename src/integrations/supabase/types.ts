@@ -476,6 +476,36 @@ export type Database = {
         }
         Relationships: []
       }
+      question_usage: {
+        Row: {
+          class_id: string
+          created_at: string
+          id: string
+          last_seen_at: string
+          mode: string
+          qid: string
+          times_seen: number
+        }
+        Insert: {
+          class_id: string
+          created_at?: string
+          id?: string
+          last_seen_at?: string
+          mode: string
+          qid: string
+          times_seen?: number
+        }
+        Update: {
+          class_id?: string
+          created_at?: string
+          id?: string
+          last_seen_at?: string
+          mode?: string
+          qid?: string
+          times_seen?: number
+        }
+        Relationships: []
+      }
       reasoning_type_guidance: {
         Row: {
           common_flaws: string[] | null

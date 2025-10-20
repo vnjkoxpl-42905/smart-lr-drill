@@ -8,6 +8,9 @@ interface UserSettings {
   sectionDebriefEnabled: boolean;
   storeFullTranscript: boolean;
   defaultTimingMode: '35' | '52.5' | '70' | 'unlimited';
+  allowRepeats: boolean;
+  preferUnseen: boolean;
+  recycleAfterDays: number;
 }
 
 interface UserSettingsContextType {
@@ -25,15 +28,18 @@ export function UserSettingsProvider({ children }: { children: React.ReactNode }
       try {
         return JSON.parse(stored);
       } catch {
-        return { 
-          tutorEnabled: true,
-          voiceCoachEnabled: true,
-          showContrast: false,
-          teachBackOnCorrect: false,
-          sectionDebriefEnabled: false,
-          storeFullTranscript: false,
-          defaultTimingMode: '35'
-        };
+    return { 
+      tutorEnabled: true,
+      voiceCoachEnabled: true,
+      showContrast: false,
+      teachBackOnCorrect: false,
+      sectionDebriefEnabled: false,
+      storeFullTranscript: false,
+      defaultTimingMode: '35',
+      allowRepeats: false,
+      preferUnseen: true,
+      recycleAfterDays: 30
+    };
       }
     }
     return { 
@@ -43,7 +49,10 @@ export function UserSettingsProvider({ children }: { children: React.ReactNode }
       teachBackOnCorrect: false,
       sectionDebriefEnabled: false,
       storeFullTranscript: false,
-      defaultTimingMode: '35'
+      defaultTimingMode: '35',
+      allowRepeats: false,
+      preferUnseen: true,
+      recycleAfterDays: 30
     };
   });
 

@@ -7,7 +7,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Switch } from '@/components/ui/switch';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { ArrowLeft, LogOut, User, MessageSquare, Award, Clock } from 'lucide-react';
+import { ArrowLeft, LogOut, User, MessageSquare, Award, Clock, Library, RefreshCw } from 'lucide-react';
+import { toast } from 'sonner';
+import { QuestionPoolService } from '@/lib/questionPoolService';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 import { supabase } from '@/integrations/supabase/client';
 import { XPBar } from '@/components/gamification/XPBar';
 import { BadgeGallery } from '@/components/gamification/BadgeGallery';
@@ -71,6 +75,17 @@ export default function Profile() {
   const handleSignOut = async () => {
     await signOut();
     navigate('/auth');
+  };
+
+  const handleResetPool = async () => {
+    if (!stats?.class_id) return;
+    
+    try {
+      await QuestionPoolService.resetPool(stats.class_id);
+      toast.success('Question pool reset successfully');
+    } catch (error) {
+      toast.error('Failed to reset question pool');
+    }
   };
 
   if (loading) {
@@ -188,6 +203,64 @@ export default function Profile() {
                       Used when selecting "Standard" timing in Full Section mode
                     </p>
                   </div>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-lg bg-muted/50">
+                <div className="text-sm font-semibold mb-3 flex items-center gap-2">
+                  <Library className="h-4 w-4" />
+                  Question Pool
+                </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-medium">Allow Repeats</div>
+                      <div className="text-sm text-muted-foreground">Practice the same questions multiple times</div>
+                    </div>
+                    <Switch 
+                      checked={settings.allowRepeats} 
+                      onCheckedChange={(checked) => updateSettings({ allowRepeats: checked })}
+                    />
+                  </div>
+
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="font-medium">Prefer Unseen</div>
+                      <div className="text-sm text-muted-foreground">Prioritize questions you haven't seen yet</div>
+                    </div>
+                    <Switch 
+                      checked={settings.preferUnseen} 
+                      onCheckedChange={(checked) => updateSettings({ preferUnseen: checked })}
+                      disabled={!settings.allowRepeats}
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="recycleAfterDays" className="font-medium">
+                      Recycle After Days
+                    </Label>
+                    <Input
+                      id="recycleAfterDays"
+                      type="number"
+                      min="1"
+                      max="365"
+                      value={settings.recycleAfterDays}
+                      onChange={(e) => updateSettings({ recycleAfterDays: parseInt(e.target.value) || 30 })}
+                      className="w-full"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Questions become available again after this many days
+                    </p>
+                  </div>
+
+                  <Button 
+                    variant="outline" 
+                    className="w-full" 
+                    onClick={handleResetPool}
+                  >
+                    <RefreshCw className="mr-2 h-4 w-4" />
+                    Reset Question Pool
+                  </Button>
                 </div>
               </div>
 
