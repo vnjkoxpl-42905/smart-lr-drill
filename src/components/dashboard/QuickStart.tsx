@@ -7,7 +7,7 @@ interface QuickStartProps {
 
 export function QuickStart({ onStart }: QuickStartProps) {
   return (
-    <div className="relative overflow-hidden rounded-xl bg-surface-elevated p-12 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+    <div className="relative overflow-hidden rounded-xl bg-surface-elevated p-10 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 group">
       {/* Warm bronze gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-accent-bronze/[0.03] via-accent-warm/[0.02] to-transparent pointer-events-none" />
       
@@ -31,9 +31,9 @@ export function QuickStart({ onStart }: QuickStartProps) {
         <Button 
           onClick={onStart}
           size="lg"
-          className="relative overflow-hidden h-12 px-8 text-base font-medium shadow-md hover:shadow-glow"
+          className="relative overflow-hidden h-12 px-8 text-base font-medium shadow-sm hover:shadow-md"
         >
-          <span className="relative z-10">Begin Practice</span>
+          <span className="relative z-10">Start Adaptive Drill</span>
         </Button>
       </div>
     </div>

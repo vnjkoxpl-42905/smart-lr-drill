@@ -157,26 +157,6 @@ export default function Home() {
             />
           </div>
 
-          <div className="p-4 border-t border-border space-y-2">
-            <Button 
-              variant="ghost" 
-              size="sm"
-              className="w-full justify-start gap-2 text-sm"
-              onClick={() => navigate('/waj')}
-            >
-              <XCircle className="w-4 h-4" />
-              Wrong Answers
-            </Button>
-            <Button 
-              variant="ghost" 
-              size="sm"
-              className="w-full justify-start gap-2 text-sm"
-              onClick={() => navigate('/flagged')}
-            >
-              <Flag className="w-4 h-4" />
-              Flagged
-            </Button>
-          </div>
         </aside>
 
         {/* Main Content */}
@@ -242,13 +222,13 @@ export default function Home() {
                     <InsightCard
                       icon={Target}
                       label="Accuracy"
-                      value={stats.avgAccuracy ? `${stats.avgAccuracy}%` : '—'}
+                      value={stats.totalAttempted > 0 ? `${stats.avgAccuracy}%` : '0%'}
                       sublabel="Average performance"
                     />
                     <InsightCard
                       icon={TrendingUp}
                       label="Opportunities"
-                      value="View"
+                      value="—"
                       sublabel="Top improvement areas"
                       onClick={() => navigate('/analytics')}
                     />
