@@ -515,6 +515,72 @@ export type Database = {
         }
         Relationships: []
       }
+      section_history: {
+        Row: {
+          avg_time_ms: number
+          br_delta: number | null
+          br_percent: number | null
+          br_score: number | null
+          br_total: number | null
+          br_used: boolean
+          by_difficulty_json: Json
+          by_qtype_json: Json
+          class_id: string
+          created_at: string | null
+          id: string
+          initial_percent: number
+          initial_score: number
+          initial_total: number
+          pt: number
+          section: number
+          section_mode: string
+          total_time_ms: number
+          unanswered_count: number
+        }
+        Insert: {
+          avg_time_ms: number
+          br_delta?: number | null
+          br_percent?: number | null
+          br_score?: number | null
+          br_total?: number | null
+          br_used?: boolean
+          by_difficulty_json?: Json
+          by_qtype_json?: Json
+          class_id: string
+          created_at?: string | null
+          id?: string
+          initial_percent: number
+          initial_score: number
+          initial_total: number
+          pt: number
+          section: number
+          section_mode: string
+          total_time_ms: number
+          unanswered_count?: number
+        }
+        Update: {
+          avg_time_ms?: number
+          br_delta?: number | null
+          br_percent?: number | null
+          br_score?: number | null
+          br_total?: number | null
+          br_used?: boolean
+          by_difficulty_json?: Json
+          by_qtype_json?: Json
+          class_id?: string
+          created_at?: string | null
+          id?: string
+          initial_percent?: number
+          initial_score?: number
+          initial_total?: number
+          pt?: number
+          section?: number
+          section_mode?: string
+          total_time_ms?: number
+          unanswered_count?: number
+        }
+        Relationships: []
+      }
       sessions: {
         Row: {
           class_id: string

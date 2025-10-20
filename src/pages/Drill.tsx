@@ -21,6 +21,7 @@ import { BlindReviewFlow, type BlindReviewResult } from '@/components/drill/Blin
 import { BlindReviewResults } from '@/components/drill/BlindReviewResults';
 import { SectionComplete } from '@/components/drill/SectionComplete';
 import { ScoreReport } from '@/components/drill/ScoreReport';
+import { LRSectionResults } from '@/components/drill/LRSectionResults';
 import { EnhancedBlindReview } from '@/components/drill/EnhancedBlindReview';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
@@ -840,8 +841,8 @@ function DrillContent() {
   if (postSectionScreen === 'complete') {
     return (
       <SectionComplete
-        onReview={() => setPostSectionScreen('review')}
-        onScoreReport={() => setPostSectionScreen('score-report')}
+        onBlindReview={() => setPostSectionScreen('review')}
+        onSeeResults={() => setPostSectionScreen('score-report')}
       />
     );
   }
@@ -853,8 +854,7 @@ function DrillContent() {
         reviewQids={autoReviewQids}
         onComplete={async (results: BlindReviewResult[]) => {
           setBrResults(results);
-          setPostSectionScreen(null);
-          setShowBRResults(true);
+          setPostSectionScreen('score-report');
           await saveBRResults(session, results);
         }}
         onBack={() => setPostSectionScreen('complete')}
@@ -863,6 +863,18 @@ function DrillContent() {
   }
   
   if (postSectionScreen === 'score-report' && session) {
+    // Use new LR Section Results for full-section mode
+    if (session.mode === 'full-section') {
+      return (
+        <LRSectionResults
+          session={session}
+          brResults={brResults}
+          onBack={() => navigate('/dashboard')}
+        />
+      );
+    }
+    
+    // Fall back to old ScoreReport for other modes
     return (
       <ScoreReport
         session={session}

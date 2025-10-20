@@ -4,11 +4,11 @@ import { ClipboardList, BarChart3 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface SectionCompleteProps {
-  onReview: () => void;
-  onScoreReport: () => void;
+  onBlindReview: () => void;
+  onSeeResults: () => void;
 }
 
-export function SectionComplete({ onReview, onScoreReport }: SectionCompleteProps) {
+export function SectionComplete({ onBlindReview, onSeeResults }: SectionCompleteProps) {
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-background">
       <div className="w-full max-w-4xl space-y-8">
@@ -16,15 +16,15 @@ export function SectionComplete({ onReview, onScoreReport }: SectionCompleteProp
         <div className="text-center space-y-3">
           <h1 className="text-4xl font-bold tracking-tight">Section Complete</h1>
           <p className="text-lg text-muted-foreground">
-            Choose how to review your performance
+            What would you like to do next?
           </p>
         </div>
 
         {/* Two large choices */}
         <div className="grid md:grid-cols-2 gap-6">
-          {/* Review */}
+          {/* Blind Review */}
           <button
-            onClick={onReview}
+            onClick={onBlindReview}
             className={cn(
               "group relative overflow-hidden rounded-xl border transition-all duration-150",
               "bg-card hover:bg-accent/30 hover:border-primary/50",
@@ -39,23 +39,23 @@ export function SectionComplete({ onReview, onScoreReport }: SectionCompleteProp
               </div>
               
               <div className="space-y-2">
-                <h2 className="text-2xl font-bold">Review</h2>
+                <h2 className="text-2xl font-bold">Start Blind Review</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Revisit selected questions without seeing correctness. Re-answer with fresh eyes and rationale.
+                  Review your answers without seeing correctness. Untimed pass where you can change answers and provide rationale.
                 </p>
               </div>
 
               <div className="text-xs text-muted-foreground space-y-1 pt-2 border-t">
-                <div>• All wrong answers</div>
-                <div>• All flagged questions</div>
-                <div>• Hardest correct answers</div>
+                <div>• Untimed review session</div>
+                <div>• Change answers with rationale</div>
+                <div>• See results with BR comparison</div>
               </div>
             </div>
           </button>
 
-          {/* Score Report */}
+          {/* See Results */}
           <button
-            onClick={onScoreReport}
+            onClick={onSeeResults}
             className={cn(
               "group relative overflow-hidden rounded-xl border transition-all duration-150",
               "bg-card hover:bg-accent/30 hover:border-primary/50",
@@ -70,16 +70,16 @@ export function SectionComplete({ onReview, onScoreReport }: SectionCompleteProp
               </div>
               
               <div className="space-y-2">
-                <h2 className="text-2xl font-bold">Score Report</h2>
+                <h2 className="text-2xl font-bold">See Results</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  View detailed performance data, timing breakdowns, and question-by-question analytics.
+                  View your score report immediately. This will lock Blind Review for this section.
                 </p>
               </div>
 
               <div className="text-xs text-muted-foreground space-y-1 pt-2 border-t">
-                <div>• Raw score and accuracy</div>
-                <div>• Timing analysis per question</div>
-                <div>• Filters and expandable details</div>
+                <div>• Immediate score report</div>
+                <div>• Detailed performance data</div>
+                <div>• No Blind Review available</div>
               </div>
             </div>
           </button>
