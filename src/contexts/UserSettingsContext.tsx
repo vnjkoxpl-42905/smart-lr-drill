@@ -7,6 +7,7 @@ interface UserSettings {
   teachBackOnCorrect: boolean;
   sectionDebriefEnabled: boolean;
   storeFullTranscript: boolean;
+  defaultTimingMode: '35' | '52.5' | '70' | 'unlimited';
 }
 
 interface UserSettingsContextType {
@@ -30,7 +31,8 @@ export function UserSettingsProvider({ children }: { children: React.ReactNode }
           showContrast: false,
           teachBackOnCorrect: false,
           sectionDebriefEnabled: false,
-          storeFullTranscript: false
+          storeFullTranscript: false,
+          defaultTimingMode: '35'
         };
       }
     }
@@ -40,7 +42,8 @@ export function UserSettingsProvider({ children }: { children: React.ReactNode }
       showContrast: false,
       teachBackOnCorrect: false,
       sectionDebriefEnabled: false,
-      storeFullTranscript: false
+      storeFullTranscript: false,
+      defaultTimingMode: '35'
     };
   });
 

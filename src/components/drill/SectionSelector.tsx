@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
+import { useUserSettings } from '@/contexts/UserSettingsContext';
 import type { FullSectionConfig, TimerMode } from '@/types/drill';
 import type { QuestionManifest } from '@/lib/questionLoader';
 
@@ -11,9 +12,10 @@ interface SectionSelectorProps {
 }
 
 export function SectionSelector({ manifest, onStartSection, onCancel }: SectionSelectorProps) {
+  const { settings } = useUserSettings();
   const [selectedPT, setSelectedPT] = useState<number | null>(null);
   const [selectedSection, setSelectedSection] = useState<number | null>(null);
-  const [timerMode, setTimerMode] = useState<TimerMode>('35');
+  const [useStandardTiming, setUseStandardTiming] = useState(true);
   const [customMinutes, setCustomMinutes] = useState(35);
 
   const availablePTs = Array.from(
@@ -32,6 +34,7 @@ export function SectionSelector({ manifest, onStartSection, onCancel }: SectionS
 
   const handleStart = () => {
     if (selectedPT && selectedSection) {
+      const timerMode = useStandardTiming ? settings.defaultTimingMode : 'custom';
       onStartSection({
         pt: selectedPT,
         section: selectedSection,
@@ -46,15 +49,15 @@ export function SectionSelector({ manifest, onStartSection, onCancel }: SectionS
     }
   };
 
-  const timingOptions = [
-    { value: '35', label: '35:00', sublabel: 'Standard' },
-    { value: '52.5', label: '52:30', sublabel: '1.5×' },
-    { value: '70', label: '70:00', sublabel: '2×' },
-    { value: 'custom', label: 'Custom', sublabel: '' },
-    { value: 'unlimited', label: 'Stopwatch', sublabel: '' },
-  ];
+  const getStandardTimingLabel = () => {
+    const mode = settings.defaultTimingMode;
+    if (mode === '35') return '35:00';
+    if (mode === '52.5') return '52:30 (1.5×)';
+    if (mode === '70') return '70:00 (2×)';
+    return 'Stopwatch';
+  };
 
-  const isReadyToStart = selectedPT && selectedSection && (timerMode !== 'custom' || customMinutes > 0);
+  const isReadyToStart = selectedPT && selectedSection && (useStandardTiming || customMinutes > 0);
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center p-4">
@@ -143,37 +146,48 @@ export function SectionSelector({ manifest, onStartSection, onCancel }: SectionS
             )}
           </div>
 
-          {/* Timing Segmented Control */}
+          {/* Timing Selector */}
           <div className="space-y-4 mb-12">
             <label className="text-sm font-medium text-foreground/60 uppercase tracking-wider">
               Timing
             </label>
-            <div className="grid grid-cols-5 gap-2 p-1.5 bg-muted/30 rounded-xl">
-              {timingOptions.map((option) => (
-                <button
-                  key={option.value}
-                  type="button"
-                  onClick={() => setTimerMode(option.value as TimerMode)}
-                  className={cn(
-                    "relative px-4 py-3.5 rounded-lg text-sm font-medium transition-all duration-150",
-                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20",
-                    timerMode === option.value
-                      ? "bg-background shadow-sm text-foreground"
-                      : "text-muted-foreground hover:text-foreground hover:bg-background/50"
-                  )}
-                >
-                  <div className="flex flex-col items-center gap-0.5">
-                    <span className="font-semibold">{option.label}</span>
-                    {option.sublabel && (
-                      <span className="text-xs opacity-60">{option.sublabel}</span>
-                    )}
-                  </div>
-                </button>
-              ))}
+            <div className="grid grid-cols-2 gap-3 p-1.5 bg-muted/30 rounded-xl">
+              <button
+                type="button"
+                onClick={() => setUseStandardTiming(true)}
+                className={cn(
+                  "relative px-6 py-4 rounded-lg text-sm font-medium transition-all duration-150",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20",
+                  useStandardTiming
+                    ? "bg-background shadow-sm text-foreground"
+                    : "text-muted-foreground hover:text-foreground hover:bg-background/50"
+                )}
+              >
+                <div className="flex flex-col items-center gap-1">
+                  <span className="font-semibold">Standard</span>
+                  <span className="text-xs opacity-60">{getStandardTimingLabel()}</span>
+                </div>
+              </button>
+              <button
+                type="button"
+                onClick={() => setUseStandardTiming(false)}
+                className={cn(
+                  "relative px-6 py-4 rounded-lg text-sm font-medium transition-all duration-150",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20",
+                  !useStandardTiming
+                    ? "bg-background shadow-sm text-foreground"
+                    : "text-muted-foreground hover:text-foreground hover:bg-background/50"
+                )}
+              >
+                <div className="flex flex-col items-center gap-1">
+                  <span className="font-semibold">Custom</span>
+                  <span className="text-xs opacity-60">Set your time</span>
+                </div>
+              </button>
             </div>
 
             {/* Custom Time Input */}
-            {timerMode === 'custom' && (
+            {!useStandardTiming && (
               <div className="animate-in fade-in slide-in-from-top-1 duration-150">
                 <input
                   type="number"

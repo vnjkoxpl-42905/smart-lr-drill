@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Switch } from '@/components/ui/switch';
-import { ArrowLeft, LogOut, User, MessageSquare, Award } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { ArrowLeft, LogOut, User, MessageSquare, Award, Clock } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { XPBar } from '@/components/gamification/XPBar';
 import { BadgeGallery } from '@/components/gamification/BadgeGallery';
@@ -161,7 +162,39 @@ export default function Profile() {
               <div className="p-4 rounded-lg bg-muted/50">
                 <div className="text-sm font-semibold mb-3 flex items-center gap-2">
                   <MessageSquare className="h-4 w-4" />
-                  Settings
+                  Practice Settings
+                </div>
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Clock className="h-4 w-4 text-muted-foreground" />
+                      <div className="font-medium">Default Timing Mode</div>
+                    </div>
+                    <Select
+                      value={settings.defaultTimingMode}
+                      onValueChange={(value) => updateSettings({ defaultTimingMode: value as '35' | '52.5' | '70' | 'unlimited' })}
+                    >
+                      <SelectTrigger className="w-full">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="35">35:00 - Standard</SelectItem>
+                        <SelectItem value="52.5">52:30 - 1.5× Speed</SelectItem>
+                        <SelectItem value="70">70:00 - 2× Speed</SelectItem>
+                        <SelectItem value="unlimited">Stopwatch - No Timer</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <p className="text-xs text-muted-foreground">
+                      Used when selecting "Standard" timing in Full Section mode
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-lg bg-muted/50">
+                <div className="text-sm font-semibold mb-3 flex items-center gap-2">
+                  <MessageSquare className="h-4 w-4" />
+                  AI Features
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
