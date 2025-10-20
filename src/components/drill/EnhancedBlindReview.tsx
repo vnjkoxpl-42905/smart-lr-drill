@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Progress } from '@/components/ui/progress';
-import { ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowLeft, XCircle } from 'lucide-react';
 import { HighlightedText } from './HighlightedText';
 import { HighlightToolbar } from './HighlightToolbar';
 import { questionBank } from '@/lib/questionLoader';
@@ -34,6 +34,7 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   const [flaggedQuestions, setFlaggedQuestions] = React.useState<Set<string>>(new Set());
   const [jumpToInput, setJumpToInput] = React.useState('');
   const timerRef = React.useRef(new QuestionTimer());
+  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
 
   const currentQid = reviewQids[currentIndex];
   const currentQuestion = questionBank.getQuestion(currentQid);
@@ -201,6 +202,20 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
     setHighlightHistory(highlightHistory.slice(0, -1));
   };
 
+  const handleLongPressStart = (answer: string) => {
+    const timer = setTimeout(() => {
+      handleEliminateAnswer(answer);
+    }, 500); // 500ms for long press
+    setLongPressTimer(timer);
+  };
+
+  const handleLongPressEnd = () => {
+    if (longPressTimer) {
+      clearTimeout(longPressTimer);
+      setLongPressTimer(null);
+    }
+  };
+
   if (!currentQuestion) {
     return <div>Loading...</div>;
   }
@@ -304,19 +319,32 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
                   <div
                     key={key}
                     className={cn(
-                      "flex items-start gap-4 py-4 px-4 rounded-lg border transition-all duration-150",
+                      "flex items-start gap-4 py-4 px-4 rounded-lg border",
+                      "transition-all duration-[120ms] ease-out",
                       "hover:bg-accent/30 cursor-pointer",
                       currentAnswer === key && "bg-primary/5 border-primary/50",
-                      isEliminated && "opacity-40"
+                      isEliminated && "opacity-55"
                     )}
                     onClick={() => !isEliminated && handleAnswerSelect(key)}
+                    onMouseDown={() => handleLongPressStart(key)}
+                    onMouseUp={handleLongPressEnd}
+                    onMouseLeave={handleLongPressEnd}
+                    onTouchStart={() => handleLongPressStart(key)}
+                    onTouchEnd={handleLongPressEnd}
+                    onTouchCancel={handleLongPressEnd}
                   >
-                    <RadioGroupItem value={key} id={`answer-${key}`} disabled={isEliminated} />
+                    <RadioGroupItem 
+                      value={key} 
+                      id={`answer-${key}`} 
+                      disabled={isEliminated}
+                      className="mt-1"
+                    />
                     <Label
                       htmlFor={`answer-${key}`}
                       className={cn(
-                        "flex-1 cursor-pointer leading-relaxed",
-                        isEliminated && "line-through"
+                        "flex-1 cursor-pointer leading-relaxed select-none",
+                        "transition-all duration-[120ms]",
+                        isEliminated && "line-through decoration-2 decoration-muted-foreground"
                       )}
                     >
                       <span className="font-semibold mr-3">({key})</span>
@@ -327,9 +355,23 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
                         e.stopPropagation();
                         handleEliminateAnswer(key);
                       }}
-                      className="text-xs text-muted-foreground hover:text-foreground transition-colors px-2 py-1 rounded hover:bg-accent"
+                      className={cn(
+                        "shrink-0 flex items-center justify-center",
+                        "w-11 h-11 -my-2 -mr-2",
+                        "rounded-md transition-all duration-[120ms]",
+                        "hover:bg-accent/50 active:scale-95",
+                        "text-muted-foreground hover:text-foreground"
+                      )}
+                      aria-pressed={isEliminated}
+                      aria-label={`Cross out choice ${key}`}
+                      title={isEliminated ? `Restore choice ${key}` : `Cross out choice ${key}`}
                     >
-                      {isEliminated ? 'Restore' : 'Cross out'}
+                      <XCircle 
+                        className={cn(
+                          "w-5 h-5 transition-all duration-[120ms]",
+                          isEliminated ? "fill-current" : "fill-none"
+                        )} 
+                      />
                     </button>
                   </div>
                 );

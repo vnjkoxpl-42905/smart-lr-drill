@@ -1041,6 +1041,23 @@ function DrillContent() {
     };
   };
 
+  // Long-press handler for cross-out gesture
+  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
+
+  const handleLongPressStart = (key: string) => {
+    const timer = setTimeout(() => {
+      handleEliminateAnswer(key);
+    }, 500); // 500ms for long press
+    setLongPressTimer(timer);
+  };
+
+  const handleLongPressEnd = () => {
+    if (longPressTimer) {
+      clearTimeout(longPressTimer);
+      setLongPressTimer(null);
+    }
+  };
+
   // Helper function to render a single answer choice
   const renderAnswerChoice = (
     key: string, 
@@ -1065,8 +1082,9 @@ function DrillContent() {
         key={key}
         className={cn(
           "group relative flex items-start gap-4 py-5 px-5 -mx-5",
-          "transition-all duration-150 ease-out",
-          "border-b border-border"
+          "transition-all duration-[120ms] ease-out",
+          "border-b border-border",
+          isEliminated && "opacity-55"
         )}
       >
         {/* Radio or selected indicator */}
@@ -1088,11 +1106,17 @@ function DrillContent() {
           )}
         </div>
         
-        {/* Answer text - clickable for selection */}
+        {/* Answer text - clickable for selection with long-press support */}
         <div 
           onClick={() => !isEliminated && handleAnswerSelect(key)}
+          onMouseDown={() => isSectionMode && handleLongPressStart(key)}
+          onMouseUp={handleLongPressEnd}
+          onMouseLeave={handleLongPressEnd}
+          onTouchStart={() => isSectionMode && handleLongPressStart(key)}
+          onTouchEnd={handleLongPressEnd}
+          onTouchCancel={handleLongPressEnd}
           className={cn(
-            "flex items-start gap-3 flex-1 min-w-0 cursor-pointer",
+            "flex items-start gap-3 flex-1 min-w-0 cursor-pointer touch-manipulation",
             // Section mode styles
             isSectionMode && !isEliminated && "hover:opacity-70 active:opacity-50",
             isSectionMode && isSelected && !isEliminated && "opacity-100"
@@ -1105,11 +1129,12 @@ function DrillContent() {
               "text-[18px] leading-[1.75]",
               "font-normal text-foreground",
               "select-none",
-              isEliminated && "line-through decoration-2 decoration-muted-foreground/60"
+              "transition-all duration-[120ms]",
+              isEliminated && "line-through decoration-2 decoration-muted-foreground"
             )}
           >
             <span className="font-semibold mr-3 text-muted-foreground">({key})</span>
-            <span className={cn(isEliminated && "text-muted-foreground/70")}>{text}</span>
+            <span>{text}</span>
             {!isSectionMode && showFeedback && (
               <Badge
                 variant={isCorrect ? 'default' : 'destructive'}
@@ -1121,7 +1146,7 @@ function DrillContent() {
           </Label>
         </div>
         
-        {/* Eliminate button - only in section mode */}
+        {/* × elimination toggle - only in section mode */}
         {isSectionMode && (
           <button
             onClick={(e) => {
@@ -1129,15 +1154,22 @@ function DrillContent() {
               handleEliminateAnswer(key);
             }}
             className={cn(
-              "shrink-0 px-2 py-1 text-xs rounded transition-all duration-150",
-              "hover:bg-accent",
-              isEliminated 
-                ? "text-primary font-medium" 
-                : "text-muted-foreground/60 hover:text-muted-foreground"
+              "shrink-0 flex items-center justify-center",
+              "w-11 h-11 -my-3 -mr-3",
+              "rounded-md transition-all duration-[120ms]",
+              "hover:bg-accent/50 active:scale-95",
+              "text-muted-foreground hover:text-foreground"
             )}
-            title={isEliminated ? "Restore answer" : "Cross out answer"}
+            aria-pressed={isEliminated}
+            aria-label={`Cross out choice ${key}`}
+            title={isEliminated ? `Restore choice ${key}` : `Cross out choice ${key}`}
           >
-            {isEliminated ? "Restore" : "Cross out"}
+            <XCircle 
+              className={cn(
+                "w-5 h-5 transition-all duration-[120ms]",
+                isEliminated ? "fill-current" : "fill-none"
+              )} 
+            />
           </button>
         )}
       </div>
