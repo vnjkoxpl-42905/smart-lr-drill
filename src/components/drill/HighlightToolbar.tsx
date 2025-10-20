@@ -110,7 +110,7 @@ export function HighlightToolbar({
         <Eraser className={cn("w-3.5 h-3.5", mode === 'erase' && "text-background")} />
       </Button>
 
-      {/* Flag Button - Smaller and quieter */}
+      {/* Flag Button - 44x44px hit area */}
       {onToggleFlag && (
         <>
           <div className="w-px h-4 bg-border/30 mx-0.5" />
@@ -118,15 +118,18 @@ export function HighlightToolbar({
             variant="ghost"
             size="icon"
             onClick={onToggleFlag}
+            role="button"
+            aria-pressed={isFlagged}
+            aria-label="Flag question"
             className={cn(
-              "h-7 w-7 shrink-0 transition-all",
+              "h-11 w-11 shrink-0 transition-all",
               isFlagged 
-                ? "bg-foreground/90 hover:bg-foreground" 
-                : "opacity-50 hover:opacity-100"
+                ? "text-foreground hover:text-foreground/80" 
+                : "text-muted-foreground hover:text-foreground"
             )}
-            title={isFlagged ? "Unflag" : "Flag"}
+            title={isFlagged ? "Unflag question" : "Flag question"}
           >
-            <Flag className={cn("w-3.5 h-3.5", isFlagged && "text-background fill-background")} />
+            <Flag className={cn("w-5 h-5 transition-all", isFlagged && "fill-current")} />
           </Button>
         </>
       )}

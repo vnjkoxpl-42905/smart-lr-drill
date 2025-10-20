@@ -27,7 +27,7 @@ import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
 import { captureTextSelection, replaceOverlappingHighlights, type Highlight, type HighlightColor } from '@/lib/highlightUtils';
-import { ArrowLeft, CheckCircle, XCircle, Flag, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import {
@@ -1245,35 +1245,7 @@ function DrillContent() {
       {/* Compact toolbar - icon-only */}
       {session.mode === 'full-section' && (
         <div className="px-8 py-2 border-b border-border/50 bg-background/60">
-          <div className="flex items-center justify-between max-w-[1800px] mx-auto">
-            <div className="flex items-center gap-1.5">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleToggleFlag}
-                className={cn(
-                  "h-7 w-7 p-0 transition-colors",
-                  isFlagged ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                )}
-                title="Flag for review"
-              >
-                <Flag className={cn("w-3.5 h-3.5", isFlagged && "fill-current")} />
-              </Button>
-              {brEnabled && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={handleToggleBR}
-                  className={cn(
-                    "h-7 px-2 text-xs font-medium",
-                    brMarked.has(currentQuestion.qid) ? "text-primary" : "text-muted-foreground"
-                  )}
-                  title="Mark for blind review"
-                >
-                  BR
-                </Button>
-              )}
-            </div>
+          <div className="flex items-center justify-end max-w-[1800px] mx-auto">
             <HighlightToolbar 
               mode={highlightMode} 
               onModeChange={setHighlightMode}

@@ -5,7 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { 
   ChevronDown, 
   ChevronUp, 
-  Flag, 
   FileText, 
   CheckCircle2, 
   XCircle,
@@ -332,9 +331,6 @@ export function ScoreReport({ session, onStartReview, onFullReview, onBack }: Sc
 
                 {/* Icons */}
                 <div className="flex items-center gap-2 flex-shrink-0">
-                  {stat.wasFlagged && (
-                    <Flag className="w-3 h-3 text-muted-foreground" />
-                  )}
                   {stat.hasNote && (
                     <FileText className="w-3 h-3 text-muted-foreground" />
                   )}
