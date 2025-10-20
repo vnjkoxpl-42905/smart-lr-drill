@@ -820,48 +820,49 @@ function DrillContent() {
     }
   }, [hasTimer, timer]);
 
-  // Handle session completion with BR
-  if (!session || !currentQuestion) {
-    // Show new post-section flow
-    if (postSectionScreen === 'complete') {
-      return (
-        <SectionComplete
-          onReview={() => setPostSectionScreen('review')}
-          onScoreReport={() => setPostSectionScreen('score-report')}
-        />
-      );
-    }
-    
-    if (postSectionScreen === 'review') {
-      return (
-        <EnhancedBlindReview
-          session={session!}
-          reviewQids={autoReviewQids}
-          onComplete={async (results: BRResult[]) => {
-            setBrResults(results);
-            setPostSectionScreen(null);
-            setShowBRResults(true);
-            await saveBRResults(session!, results);
-          }}
-          onBack={() => setPostSectionScreen('complete')}
-        />
-      );
-    }
-    
-    if (postSectionScreen === 'score-report') {
-      return (
-        <ScoreReport
-          session={session!}
-          onStartReview={() => setPostSectionScreen('review')}
-          onFullReview={() => {
-            setAutoReviewQids(session!.questionQueue);
-            setPostSectionScreen('review');
-          }}
-          onBack={() => setPostSectionScreen('complete')}
-        />
-      );
-    }
+  // Handle session completion and post-section flow
+  // Show post-section screens (must be BEFORE the session/currentQuestion check)
+  if (postSectionScreen === 'complete') {
+    return (
+      <SectionComplete
+        onReview={() => setPostSectionScreen('review')}
+        onScoreReport={() => setPostSectionScreen('score-report')}
+      />
+    );
+  }
+  
+  if (postSectionScreen === 'review' && session) {
+    return (
+      <EnhancedBlindReview
+        session={session}
+        reviewQids={autoReviewQids}
+        onComplete={async (results: BRResult[]) => {
+          setBrResults(results);
+          setPostSectionScreen(null);
+          setShowBRResults(true);
+          await saveBRResults(session, results);
+        }}
+        onBack={() => setPostSectionScreen('complete')}
+      />
+    );
+  }
+  
+  if (postSectionScreen === 'score-report' && session) {
+    return (
+      <ScoreReport
+        session={session}
+        onStartReview={() => setPostSectionScreen('review')}
+        onFullReview={() => {
+          setAutoReviewQids(session.questionQueue);
+          setPostSectionScreen('review');
+        }}
+        onBack={() => setPostSectionScreen('complete')}
+      />
+    );
+  }
 
+  // Handle session completion with BR (old flow)
+  if (!session || !currentQuestion) {
     // Check if we should show BR selection
     if (session && brEnabled && brMarked.size > 0 && !showBRSelection && !showBRFlow && !showBRResults) {
       setShowBRSelection(true);
@@ -1062,24 +1063,20 @@ function DrillContent() {
     return (
       <div
         key={key}
-        onClick={() => !isEliminated && handleAnswerSelect(key)}
         className={cn(
-          "group relative flex items-start gap-4 py-5 px-5 -mx-5 cursor-pointer",
+          "group relative flex items-start gap-4 py-5 px-5 -mx-5",
           "transition-all duration-150 ease-out",
-          "border-b border-border",
-          // Section mode styles
-          isSectionMode && !isEliminated && "hover:bg-accent/20 active:bg-accent/30",
-          isSectionMode && isSelected && !isEliminated && "bg-accent/30 border-l-[3px] border-l-primary -ml-5 pl-[17px]",
-          // Non-section styles
-          !isSectionMode && confidence === null && !isEliminated && "hover:bg-accent/30",
-          !isSectionMode && showFeedback && isCorrect && "bg-success/10",
-          !isSectionMode && showFeedback && !isCorrect && "bg-destructive/10",
-          !isSectionMode && isSelected && tutorChatOpen && "bg-cyan-50/50",
-          // Eliminated styles
-          isEliminated && "opacity-40 cursor-not-allowed"
+          "border-b border-border"
         )}
       >
-        <div className="flex items-center h-6 mt-0.5 shrink-0">
+        {/* Radio or selected indicator */}
+        <div 
+          onClick={() => !isEliminated && handleAnswerSelect(key)}
+          className={cn(
+            "flex items-center h-6 mt-0.5 shrink-0 cursor-pointer",
+            isSectionMode && !isEliminated && "hover:opacity-70"
+          )}
+        >
           {inFocusedMode && isSelected ? (
             <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
               <div className="w-2 h-2 rounded-full bg-primary-foreground" />
@@ -1090,7 +1087,17 @@ function DrillContent() {
             <div className="w-5 h-5" />
           )}
         </div>
-        <div className="flex items-start gap-3 flex-1 min-w-0">
+        
+        {/* Answer text - clickable for selection */}
+        <div 
+          onClick={() => !isEliminated && handleAnswerSelect(key)}
+          className={cn(
+            "flex items-start gap-3 flex-1 min-w-0 cursor-pointer",
+            // Section mode styles
+            isSectionMode && !isEliminated && "hover:opacity-70 active:opacity-50",
+            isSectionMode && isSelected && !isEliminated && "opacity-100"
+          )}
+        >
           <Label
             htmlFor={`answer-${key}`}
             className={cn(
@@ -1113,6 +1120,26 @@ function DrillContent() {
             )}
           </Label>
         </div>
+        
+        {/* Eliminate button - only in section mode */}
+        {isSectionMode && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleEliminateAnswer(key);
+            }}
+            className={cn(
+              "shrink-0 px-2 py-1 text-xs rounded transition-all duration-150",
+              "hover:bg-accent",
+              isEliminated 
+                ? "text-primary font-medium" 
+                : "text-muted-foreground/60 hover:text-muted-foreground"
+            )}
+            title={isEliminated ? "Restore answer" : "Cross out answer"}
+          >
+            {isEliminated ? "Restore" : "Cross out"}
+          </button>
+        )}
       </div>
     );
   };
