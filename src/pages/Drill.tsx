@@ -278,12 +278,20 @@ function DrillContent() {
     });
   };
 
-  // Auto-submit when confidence is selected
+  // Auto-submit when confidence is selected (adaptive) or answer selected (non-adaptive)
   React.useEffect(() => {
-    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
-      handleSubmit();
+    if (session?.mode === 'adaptive') {
+      // Adaptive: wait for confidence
+      if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
+        handleSubmit();
+      }
+    } else {
+      // Non-adaptive: submit immediately when answer is selected
+      if (selectedAnswer && !showSolution) {
+        handleSubmitNonAdaptive();
+      }
     }
-  }, [confidence, answerLocked, showSolution, tutorChatOpen]);
+  }, [confidence, answerLocked, showSolution, tutorChatOpen, selectedAnswer, session?.mode]);
 
   const handleTryAgain = () => {
     setTutorChatOpen(false);
@@ -410,14 +418,54 @@ function DrillContent() {
     }, 1500);
   };
 
+  const handleSubmitNonAdaptive = async () => {
+    if (!currentQuestion || !selectedAnswer || !session) return;
+
+    const correct = selectedAnswer === currentQuestion.correctAnswer;
+    const timeMs = Math.floor(performance.now() - questionStartTime);
+
+    // Save attempt to database (no confidence for non-adaptive)
+    await saveAttemptToDatabase({
+      qid: currentQuestion.qid,
+      correct,
+      time_ms: timeMs,
+      qtype: currentQuestion.qtype,
+      level: currentQuestion.difficulty,
+      confidence: null,
+      mode: session.mode,
+    });
+
+    const newAttempts = new Map(session.attempts);
+    newAttempts.set(currentQuestion.qid, {
+      selectedAnswer,
+      correct,
+      timeMs,
+      timestamp: Date.now(),
+      confidence: null,
+      reviewDone: false,
+    });
+
+    adaptiveEngine.recordAttempt({
+      qid: currentQuestion.qid,
+      correct,
+      time_ms: timeMs,
+      qtype: currentQuestion.qtype,
+      difficulty: currentQuestion.difficulty,
+      timestamp: new Date(),
+    });
+
+    setSession({ ...session, attempts: newAttempts });
+    setShowSolution(true);
+  };
+
   const handleSubmit = async () => {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
 
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // After wrong answer, show Joshua's feedback automatically
-    if (!correct) {
+    // After wrong answer in adaptive mode, show Joshua's feedback automatically
+    if (!correct && session.mode === 'adaptive') {
       // Open text tutor with specific feedback
       setTutorChatOpen(true);
     } else {
@@ -914,7 +962,20 @@ function DrillContent() {
         </AlertDialogContent>
       </AlertDialog>
 
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col relative">
+        {/* Pause Overlay - Blurs background when paused */}
+        {timer?.isPaused && (
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center">
+            <Card className="p-8 text-center">
+              <h2 className="text-2xl font-bold mb-2">Timer Paused</h2>
+              <p className="text-muted-foreground mb-4">Click Resume to continue</p>
+              <Button onClick={timer.resume} size="lg">
+                Resume Timer
+              </Button>
+            </Card>
+          </div>
+        )}
+
         {/* Header */}
         <div className="px-6 py-4 border-b bg-card">
           <div className="flex items-center justify-between">
@@ -1121,8 +1182,8 @@ function DrillContent() {
               </RadioGroup>
             )}
 
-            {/* Confidence selector */}
-            {selectedAnswer && !tutorChatOpen && (
+            {/* Confidence selector - only for adaptive mode */}
+            {session.mode === 'adaptive' && selectedAnswer && !tutorChatOpen && (
               <div className="space-y-3 pt-8">
                 <Label className="text-sm font-medium">Confidence (1–5)</Label>
                 <div className="flex gap-2">
