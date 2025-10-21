@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 1,
+    "stimulus": "Ilana: Carver's stories are somber and pessimistic, which is a sure sign of inferior writing. I have never read a single story of his that ends happily.\nGustav: Carver was one of the finest writers of the past 30 years. Granted, his stories are characterized by somberness and pessimism, but they are also wryly humorous, compassionate, and beautifully structured.",
+    "questionStem": "On the basis of their statements, Ilana and Gustav are committed to disagreeing over whether",
+    "answerChoices": {
+      "A": "Carver's stories are truly compassionate",
+      "B": "Carver's stories are pessimistic in their vision",
+      "C": "stories that are characterized by somberness and pessimism can appropriately be called humorous",
+      "D": "stories that are well written can be somber and pessimistic",
+      "E": "there are some characteristics of a story that are decisive in determining its aesthetic value"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Statistical studies show that last year there was the greatest drop in the violent crime rate over the course of a year since such statistics were first gathered. But they also reveal that at the same time public anxiety about violent crime substantially increased.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+    "answerChoices": {
+      "A": "Longer prison sentences were the primary cause of the decrease in the violent crime rate over the course of last year.",
+      "B": "As in the past, last year's increase in public anxiety about violent crime has been consistently underreported in the news media.",
+      "C": "Most people can realistically assess the likelihood that they will become victims of violent crime.",
+      "D": "People who feel the most anxiety about violent crime usually live in areas with relatively high violent crime rates.",
+      "E": "The proportion of violent crimes covered in the news media nearly doubled over the course of last year."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Most employees spend their time completing unimportant tasks for which they have been given firm schedules and deadlines. Efficient employees know how to ignore such demands and instead spend their time on projects that will yield big rewards for their employers if successful, even when such projects carry the risk of significant loss if unsuccessful.",
+    "questionStem": "Which one of the following is an example of efficiency as described above?",
+    "answerChoices": {
+      "A": "spending the entire afternoon working on a report that a supervisor has ordered completed by the following day",
+      "B": "instead of working on a report that a supervisor has ordered completed by the following day, spending the entire afternoon completing routine correspondence that could be delayed",
+      "C": "deciding to take an urgent call from a major customer instead of being punctual at a monthly sales meeting",
+      "D": "meeting daily with other staff members to discuss workloads and schedules",
+      "E": "spending time each morning scheduling tasks according to the most immediate deadlines"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Child psychologist: Some studies in which children have been observed before and after playing video games with violent content have shown that young children tend to behave more aggressively immediately after playing the games. This suggests that the violence in such video games leads young children to believe that aggressive behavior is acceptable.",
+    "questionStem": "Each of the following, if true, strengthens the child psychologist's argument except:",
+    "answerChoices": {
+      "A": "Young children tend to be more accepting of aggressive behavior in others immediately after playing video games with violent content.",
+      "B": "Many young children who have never played video games with violent content believe that aggressive behavior is acceptable.",
+      "C": "Other studies have shown no increase in aggressive behavior in young children who have just played nonviolent video games.",
+      "D": "Older children are less likely before playing video games with violent content than they are afterwards to believe that aggressive behavior is acceptable.",
+      "E": "Young children tend to behave more aggressively immediately after being told that aggressive behavior is acceptable than they did beforehand."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Letter to the editor: Middle-class families in wealthy nations are often criticized for the ecological damage resulting from their lifestyles. This criticism should not be taken too seriously, however, since its source is often a movie star or celebrity whose own lifestyle would, if widely adopted, destroy the environment and deplete our resources in a short time.",
+    "questionStem": "The reasoning in the letter to the editor is vulnerable to criticism in that it",
+    "answerChoices": {
+      "A": "criticizes a characteristic of the people giving an argument rather than criticizing the argument itself",
+      "B": "takes failure to act consistently with a belief as an indication of the sincerity with which that belief is held",
+      "C": "presumes that a viewpoint must be unreasonable to accept simply because some of the grounds advanced to support it do not adequately do so",
+      "D": "fails to recognize that evidence advanced in support of a conclusion actually undermines that conclusion",
+      "E": "generalizes about the behavior of all people on the basis of the behavior of a few"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "The cattle egret is a bird that lives around herds of cattle. The only available explanation of the fact that the cattle egret follows cattle herds is that the egrets consume the insects stirred up from the grasses as the cattle herds graze.",
+    "questionStem": "Which one of the following, if true, would most seriously undermine the claim that the explanation given above is the only available one?",
+    "answerChoices": {
+      "A": "Birds other than cattle egrets have been observed consuming insects stirred up by the movement of cattle.",
+      "B": "Cattle egrets are known to follow other slow-moving animals, such as rhinoceroses and buffalo.",
+      "C": "The presence of cattle dissuades many would-be predators of the cattle egret.",
+      "D": "Cattle egrets are not generally known to live outside the range of large, slow-moving animals.",
+      "E": "Forests are generally inhospitable to cattle egrets because of a lack of insects of the kind egrets can consume."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Any fruit that is infected is also rotten. No fruit that was inspected is infected. Therefore, any fruit that was inspected is safe to eat.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "It is not safe to eat any fruit that is rotten.",
+      "B": "It is safe to eat any fruit that is not rotten.",
+      "C": "It would have been safe to eat infected fruit if it had been inspected.",
+      "D": "It is not safe to eat any fruit that is infected.",
+      "E": "It is safe to eat any fruit that is uninfected."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "1990 editorial: Local pay phone calls have cost a quarter apiece ever since the 1970s, when a soft drink from a vending machine cost about the same. The price of a soft drink has more than doubled since, so phone companies should be allowed to raise the price of pay phone calls too.",
+    "questionStem": "Which one of the following, if true, most weakens the editorial's argument?",
+    "answerChoices": {
+      "A": "A pay phone typically cost less than a soft-drink machine in the 1970s.",
+      "B": "Due to inflation, the prices of most goods more than doubled between the 1970s and 1990.",
+      "C": "Government regulation of phone call prices did not become more stringent between the 1970s and 1990.",
+      "D": "Between the 1970s and 1990 the cost of ingredients for soft drinks increased at a greater rate than the cost of telephone equipment.",
+      "E": "Technological advances made telephone equipment more sophisticated between the 1970s and 1990."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Members of large-animal species must consume enormous amounts of food to survive. When climatic conditions in their environment deteriorate, such animals are often unable to find enough food. This fact helps make large-animal species more vulnerable to extinction than small-animal species, which can maintain greater populations on smaller amounts of food.",
+    "questionStem": "The statements above, if true, most support which one of the following?",
+    "answerChoices": {
+      "A": "The maximum population size that an animal species could maintain on any given amount of food is the main factor determining whether that species will become extinct.",
+      "B": "The vulnerability of an animal species to extinction depends at least in part on how much food individuals of that species must consume to survive.",
+      "C": "When conditions deteriorate in a given environment, no small-animal species will become extinct unless some large-animal species also becomes extinct.",
+      "D": "Within any given species, the prospects for survival of any particular individual depend primarily on the amount of food that individual requires.",
+      "E": "Whenever climatic conditions in a given environment are bad enough to threaten large-animal species with extinction, small-animal species are able to find enough food to survive."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 1,
+    "stimulus": "Megan: People pursue wealth beyond what their basic needs require only if they see it as a way of achieving high status or prestige.\nChannen: Not everybody thinks that way. After all, money is the universal medium of exchange. So, if you have enough of it, you can exchange it for whatever other material goods you may need or want even if you are indifferent to what others think of you.",
+    "questionStem": "Megan and Channen disagree over whether",
+    "answerChoices": {
+      "A": "people ever pursue wealth beyond what is required for their basic needs",
+      "B": "it is irrational to try to achieve high status or prestige in the eyes of one's society",
+      "C": "the pursuit of monetary wealth is irrational only when it has no further purpose",
+      "D": "it is rational to maximize one's ability to purchase whatever one wants only when the motive for doing so is something other than the desire for prestige",
+      "E": "the motive for pursuing wealth beyond what one's basic needs require is ever anything other than the desire for prestige or high status"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Cholesterol, which is a known factor in coronary heart disease and stroke, needs a carrier, known as a lipoprotein, to transport it through the bloodstream. Low-density lipoproteins (LDLs) increase the risk of coronary heart disease and stroke, but we can tentatively conclude that high-density lipoproteins (HDLs) help prevent coronary heart disease and stroke. First, aerobic exercise increases one's level of HDLs. Second, HDL levels are higher in women than in men. And both aerobic exercise and being female are positively correlated with lower risk of coronary heart disease and stroke.",
+    "questionStem": "Each of the following, if true, strengthens the argument except:",
+    "answerChoices": {
+      "A": "HDLs, unlike LDLs, help the body excrete cholesterol.",
+      "B": "Persons who are overweight tend to have a higher risk of early death due to coronary heart disease and stroke, and tend to have low levels of HDLs.",
+      "C": "HDLs are less easily removed from the bloodstream than are LDLs.",
+      "D": "A high level of HDLs mitigates the increased health risks associated with LDLs.",
+      "E": "Men whose level of HDLs is equal to the average level for women have been found to have a lower risk of coronary heart disease and stroke than that of most men."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Role",
+    "questionDifficulty": 4,
+    "stimulus": "It is primarily by raising interest rates that central bankers curb inflation, but an increase in interest rates takes up to two years to affect inflation. Accordingly, central bankers usually try to raise interest rates before inflation becomes excessive, at which time inflation is not yet readily apparent either. But unless inflation is readily apparent, interest rate hikes generally will be perceived as needlessly restraining a growing economy. Thus, central bankers' success in temporarily restraining inflation may make it harder for them to ward off future inflation without incurring the public's wrath.",
+    "questionStem": "Which one of the following most accurately describes the role played in the argument by the claim that it is primarily by raising interest rates that central bankers curb inflation?",
+    "answerChoices": {
+      "A": "It is presented as a complete explanation of the fact that central bankers' success in temporarily restraining inflation may make it harder for them to ward off future inflation without incurring the public's wrath.",
+      "B": "It is a description of a phenomenon for which the claim that an increase in interest rates takes up to two years to affect inflation is offered as an explanation.",
+      "C": "It is a premise offered in support of the conclusion that central bankers' success in temporarily restraining inflation may make it harder for them to ward off future inflation without incurring the public's wrath.",
+      "D": "It is a conclusion for which the statement that an increase in interest rates takes up to two years to affect inflation is offered as support.",
+      "E": "It is a premise offered in support of the conclusion that unless inflation is readily apparent, interest rate hikes generally will be perceived as needlessly restraining a growing economy."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "A survey of clerical workers' attitudes toward their work identified a group of secretaries with very positive attitudes. They responded \"Strongly agree\" to such statements as \"I enjoy word processing” and “I like learning new secretarial skills.” These secretaries had been rated by their supervisors as excellent workers-far better than secretaries whose attitudes were identified as less positive. Clearly these secretaries' positive attitudes toward their work produced excellent job performance.",
+    "questionStem": "Which one of the following identifies a reasoning error in the argument?",
+    "answerChoices": {
+      "A": "It attempts to prove a generalization about job performance by using the single example of clerical workers.",
+      "B": "It restates the claim that the secretaries' positive attitudes produced their excellent job performance instead of offering evidence for it.",
+      "C": "It does not consider the possibility that secretaries with very positive attitudes toward their work might also have had very positive attitudes toward other activities.",
+      "D": "It uses the term \"positive attitudes\" to mean two different things.",
+      "E": "It identifies the secretaries' positive attitudes as the cause of their excellent job performance although their attitudes might be an effect of their performance."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Scientist: A controversy in paleontology centers on the question of whether prehistoric human ancestors began to develop sophisticated tools before or after they came to stand upright. I argue that they stood upright first, simply because advanced toolmaking requires free use of the hands, and standing upright makes this possible.",
+    "questionStem": "Which one of the following statements, if true, most weakens the scientist's argument?",
+    "answerChoices": {
+      "A": "Many animals that do not stand upright have learned to make basic tools.",
+      "B": "Advanced hunting weapons have been discovered among the artifacts belonging to prehistoric human ancestors who did not stand upright.",
+      "C": "Many prehistoric human ancestors who stood upright had no sophisticated tools.",
+      "D": "Those prehistoric human ancestors who first came to stand upright had no more dexterity with their hands than did those who did not stand upright.",
+      "E": "Many of the earliest sophisticated tools did not require their users to be able to stand upright."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "The greater the number of people who regularly use a product, the greater the number whose health is potentially at risk due to that product. More people regularly use household maintenance products such as cleaning agents and lawn chemicals than regularly use prescription medicines. Therefore, it is even more important for such household products to be carefully tested to ensure their safety than it is for prescription medicines to be so tested.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify drawing the conclusion in the argument above?",
+    "answerChoices": {
+      "A": "Whether or not it is important for a given product to be carefully tested depends mainly on the number of people who regularly use that product.",
+      "B": "It is very important for any product that is regularly used by a large number of people to be carefully tested to ensure its safety.",
+      "C": "The more people whose health might be at risk from the regular use of a particular product, the more important it is for that product to be carefully tested to ensure its safety.",
+      "D": "If one type of medicine must be taken in more frequent doses than another type of medicine, it is more important for the former to be carefully tested than for the latter.",
+      "E": "It is generally more important for a medicine than it is for a nonmedical product to be carefully tested to ensure its safety unless more people's health would be at risk from the nonmedical product than from the medicine."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Must Be False",
+    "questionDifficulty": 4,
+    "stimulus": "Most successful entrepreneurs work at least 18 hours a day, and no one who works at least 18 hours a day has time for leisure activities. But all happy entrepreneurs have time for leisure activities.",
+    "questionStem": "If the statements above are true, each of the following could be true except:",
+    "answerChoices": {
+      "A": "Anyone who has no time for leisure activities works at least 18 hours a day.",
+      "B": "Some entrepreneurs who work at least 18 hours a day are successful.",
+      "C": "Some happy entrepreneurs are successful.",
+      "D": "Some entrepreneurs who work at least 18 hours a day are happy.",
+      "E": "Some successful entrepreneurs work less than 18 hours a day."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Human beings can exhibit complex, goal-oriented behavior without conscious awareness of what they are doing. Thus, merely establishing that nonhuman animals are intelligent will not establish that they have consciousness.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Complex, goal-oriented behavior requires intelligence.",
+      "B": "The possession of consciousness does not imply the possession of intelligence.",
+      "C": "All forms of conscious behavior involve the exercise of intelligence.",
+      "D": "The possession of intelligence entails the possession of consciousness.",
+      "E": "Some intelligent human behavior is neither complex nor goal-oriented."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "New Age philosopher: Nature evolves organically and nonlinearly. Furthermore, it can best be understood as a whole; its parts are so interconnected that none could exist without support from many others. Therefore, attaining the best possible understanding of nature requires an organic, holistic, nonlinear way of reasoning rather than the traditional linear reasoning of science, which proceeds through experiments on deliberately isolated parts of nature.",
+    "questionStem": "The reasoning in the New Age philosopher's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "takes for granted that if a statement must be true for the argument's conclusion to be true, then that statement's truth is sufficient for the truth of the conclusion",
+      "B": "overlooks the possibility that the overall structure of a phenomenon is not always identical to the overall structure of the reasoning that people do about that phenomenon",
+      "C": "fails to distinguish adequately between the characteristics of a phenomenon as a whole and those of the deliberately isolated parts of that phenomenon",
+      "D": "takes for granted that what is interconnected cannot, through abstraction, be thought of as separate",
+      "E": "takes for granted that a phenomenon that can best be understood as having certain properties can best be understood only through reasoning that shares those properties"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Vanwilligan: Some have argued that professional athletes receive unfairly high salaries. But in an unrestricted free market, such as the market these athletes compete in, salaries are determined by what someone else is willing to pay for their services. These athletes make enormous profits for their teams' owners, and that is why owners are willing to pay them extraordinary salaries. Thus the salaries they receive are fair.",
+    "questionStem": "Vanwilligan's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "The fairest economic system for a society is one in which the values of most goods and services are determined by the unrestricted free market.",
+      "B": "If professional athletes were paid less for their services, then the teams for which they play would not make as much money.",
+      "C": "The high level of competition in the marketplace forces the teams' owners to pay professional athletes high salaries.",
+      "D": "Any salary that a team owner is willing to pay for the services of a professional athlete is a fair salary.",
+      "E": "If a professional athlete's salary is fair, then that salary is determined by what an individual is willing to pay for the athlete's services in an unrestricted free market."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Environmentalist: Discarding old appliances can be dangerous: refrigerators contain chlorofluorocarbons; electronic circuit boards and cathode-ray tubes often contain heavy metals like lead; and old fluorescent bulbs contain mercury, another heavy metal. When landfills are operated properly, such materials pose no threat. However, when landfills are not operated properly, lead and mercury from them contaminate groundwater, for example. On the other hand, when trash is incinerated, heavy metals poison the ash and escape into the air.",
+    "questionStem": "The environmentalist's statements, if true, most strongly support which one of the following inferences?",
+    "answerChoices": {
+      "A": "Old fluorescent bulbs should be recycled.",
+      "B": "Appliances containing heavy metals should not be incinerated.",
+      "C": "Chlorofluorocarbons are harmful to the atmosphere.",
+      "D": "Newer appliances are more dangerous to the environment than older ones.",
+      "E": "Appliances should be kept out of landfills."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Must Be False",
+    "questionDifficulty": 4,
+    "stimulus": "Since the sweetness of sugared beverages makes athletes more likely to drink them, they can be helpful in avoiding dehydration. Furthermore, small amounts of sugar enhance the body's absorption of water and delay muscle fatigue by maintaining the body's glucose level. Still, one must use sugared beverages cautiously, for large amounts draw water from the blood to the stomach, thereby exacerbating the dehydration process.",
+    "questionStem": "If the statements above are true, then each of the following could also be true except:",
+    "answerChoices": {
+      "A": "Glucose is not the only type of sugar whose absence or scarcity in one's diet causes muscle fatigue.",
+      "B": "Problems caused by dehydration are invariably exacerbated if substances that delay muscle fatigue are consumed.",
+      "C": "Dehydrated athletes find beverages containing large amounts of sugar to be too sweet.",
+      "D": "Some situations that exacerbate the problems caused by muscle fatigue do not exacerbate those caused by dehydration.",
+      "E": "The rate at which the body absorbs water depends primarily on the amount of water already present in the blood."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "A mathematical theorem proved by one mathematician should not be accepted until each step in its proof has been independently verified. Computer-assisted proofs generally proceed by conducting a vast number of calculations-surveying all the possible types of instances in which the theorem could apply and proving that the theorem holds for each type. In most computer-assisted proofs there are astronomically many types of instances to survey, and no human being could review every step in the proof. Hence, computer-assisted proofs involving astronomically many types of instances should not be accepted.",
+    "questionStem": "Which one of the following is an assumption on which the argument relies?",
+    "answerChoices": {
+      "A": "The use of the computer to assist in the proof of mathematical theorems has greatly simplified the mathematician's task.",
+      "B": "Most attempts to construct proofs of mathematical theorems do not result in demonstrations that the theorems are true.",
+      "C": "Computers cannot be used to assist in generating proofs of mathematical theorems that involve only a very limited number of steps.",
+      "D": "Any mathematical proof that does not rely on the computer cannot proceed by surveying all possible types of instances to which the candidate theorem might apply.",
+      "E": "The use of an independent computer program does not satisfy the requirement for independent verification of each step in a proof that is extended enough to be otherwise unverifiable."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Commentator: Human behavior cannot be fully understood without inquiring into nonphysical aspects of persons. As evidence of this, I submit the following: suppose that we had a complete scientific account of the physical aspects of some particular human action-every neurological, physiological, and environmental event involved. Even with all that we would obviously still not truly comprehend the action or know why it occurred.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the argument's reasoning?",
+    "answerChoices": {
+      "A": "No support is offered for its conclusion other than an analogy that relates only superficially to the issue at hand.",
+      "B": "The purported evidence that it cites in support of its conclusion presumes that the conclusion is true.",
+      "C": "It concludes that a proposition must be true merely on the grounds that it has not been proven false.",
+      "D": "It fails to indicate whether the speaker is aware of any evidence that could undermine the conclusion.",
+      "E": "It presumes, without providing justification, that science can provide a complete account of any physical phenomenon."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "Judicial punishment's power to deter people from committing crimes is a function of the severity of the penalty and the likelihood of one's actually receiving the penalty. Occasionally, juries decide that a crime's penalty is too severe and so refuse to convict a person they are convinced has committed that crime. Thus, increasing the penalty may decrease the deterrent power of judicial punishment.",
+    "questionStem": "The pattern of reasoning in which one of the following arguments is most similar to the pattern of reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Success in attaining one's first academic job depends on the quality of one's dissertation and the amount of time spent working on it in graduate school. But sometimes, so much time is spent on a dissertation that it becomes too lengthy to be coherent and its quality suffers. So spending more time working on a dissertation can lead to less success in attaining a first academic job.",
+      "B": "People who drive cars having many safety features are likely to drive more aggressively than do people who drive cars having few safety features. Thus, the people who drive the safest cars are likely to be the most dangerous drivers on the road.",
+      "C": "A new surgical technique is developed to treat a dangerous condition. This technique enables people to live longer than does an older form of surgery. But the new surgery's mortality rate is also slightly higher. Thus, if more people choose to undergo the new surgery, more people may die from the dangerous condition than previously.",
+      "D": "To be attractive to tourists, it is best for a city to have both wide appeal and sufficient hotel space. Though a sufficient number of hotel rooms alone cannot attract tourists, it is much harder for city governments to affect the appeal of their city than for them to affect its amount of hotel space. Thus, governments of cities that want to increase their attractiveness to tourists should put their energies into increasing their hotel space.",
+      "E": "Many young, talented artists, because they are unknown, decide to charge low prices for their work. As their reputations grow, the prices they can charge for their work increase. Thus, raising the price of an artist's work can improve that artist's reputation."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Cecile's association requires public disclosure of an officer's investments in two cases only: when an officer is authorized to disburse association funds, and when an officer sits on the board of a petrochemical company. Cecile, an officer who is not authorized to disburse funds, sits on the board of just one company, a small timber business. Therefore, there is no reason for Cecile to publicly disclose her investments at this time.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Cecile will not be appointed to a position in the association that authorizes her to disburse funds.",
+      "B": "Cecile's office and her position on the timber business's board create no conflicts of interest.",
+      "C": "The association's requirements provide the only reasons there might be for Cecile to disclose her investments.",
+      "D": "The timber business on whose board Cecile sits is owned by a petrochemical company.",
+      "E": "Cecile owns no investments in the petrochemical industry."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "The obesity invariably associated with some high-fat diets is caused by an absence in these diets of certain nutrients that are necessary for an active metabolism, not by excessive caloric intake. Hence, people on these high-fat diets do not consume too many calories.",
+    "questionStem": "The questionable pattern of reasoning in the argument above is most similar to that in which one of the following?",
+    "answerChoices": {
+      "A": "Electrical storms are strongly correlated with precipitous drops in barometric pressure. So, electrical storms are caused by such drops in pressure, rather than by air turbulence.",
+      "B": "The impression that most viewers of sports programming are beer drinkers is due not to mere stereotyping but to the vast number of beer commercials broadcast during televised sports. Hence, most beer drinkers are avid fans of sports programs.",
+      "C": "The disorientation observed in airline pilots after transoceanic flights is caused not by sleep deprivation but by disruption in their exposure to daylight. Hence, transoceanic pilots do not suffer from sleep deprivation.",
+      "D": "Stock market crashes are due, not to panic in the face of predicted economic downturns, but to mere rumormongering without any basis in fact. Hence, economic downturns cannot be accurately predicted.",
+      "E": "The preponderance of mathematics graduates among professional computer programmers is due not to the intelligence of mathematicians but to the appropriateness of mathematical training for computer programming. Hence, most computer programmers have mathematical training."
+    },
+    "correctAnswer": "C"
+  }
+]

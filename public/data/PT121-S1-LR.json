@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "The effort involved in lying produces measurable physiological reactions such as a speedup of the heartbeat. Since lying is accompanied by physiological reactions, lie-detector tests that can detect these reactions are a sure way of determining when someone is lying.",
+    "questionStem": "Which one of the following statements, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Lie-detector tests can measure only some of the physiological reactions that occur when someone is lying.",
+      "B": "People are often unaware that they are having physiological reactions of the sort measured by lie-detector tests.",
+      "C": "Lying about past criminal behavior does not necessarily produce stronger physiological reactions than does lying about other things.",
+      "D": "For people who are not lying, the tension of taking a lie-detector test can produce physiological reactions identical to the ones that accompany the act of lying.",
+      "E": "When employers use lie-detector tests as part of their preemployment screening, some candidates tested are highly motivated to lie."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Publishing executive: Our company must sell at least 100,000 books to make a profit this year. However, it is unlikely that we will sell that many, since of the twelve titles we will sell, the one with the best sales prospects, a novel, is unlikely to sell as many as 100,000 copies.",
+    "questionStem": "The publishing executive's argument is most vulnerable to criticism because it overlooks the possibility that",
+    "answerChoices": {
+      "A": "the publishing company will sell considerably fewer than 100,000 copies of the novel",
+      "B": "the publishing company will not make a profit even if it sells more than 100,000 books",
+      "C": "what is true of the overall profitability of a publishing company is not true of its profitability in a particular year",
+      "D": "what is true of the sales prospects of the publishing company's individual titles is not true of the sales prospects of the group of titles as a whole",
+      "E": "the publishing company will sell even fewer books if it does not advertise its books efficiently"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "A recent study proves that at least some people possess an independent \"sixth sense\" that allows them to detect whether someone is watching them. In the study, subjects were seated one at a time in the center of a room facing away from a large window. On average, subjects decided correctly 60 percent of the time whether or not they were being watched through the window.",
+    "questionStem": "Which one of the following, if true, most supports the conclusion drawn from the study mentioned above?",
+    "answerChoices": {
+      "A": "Most of the time, subjects said they were being watched.",
+      "B": "The person recording the experimental results was careful not to interact with the subjects after the experiment ended.",
+      "C": "A similar result was found when the subjects were watched from another room on a video monitor.",
+      "D": "The room in which the subjects were seated was not soundproof.",
+      "E": "The subjects were mostly graduate students in psychology from a nearby university."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 3,
+    "stimulus": "Philosopher: We should not disapprove of the unearthing of truths that we would rather not acknowledge or that, by their dissemination, might influence society in pernicious ways.",
+    "questionStem": "Which one of the following conforms most closely to the principle stated by the philosopher?",
+    "answerChoices": {
+      "A": "A law enforcement officer should not act upon illegally obtained information, even though such action might, in some cases, result in a benefit to society.",
+      "B": "Scientific research should not be restricted even if it could lead to harmful applications, such as the manufacture of sophisticated weapons.",
+      "C": "A physician should never withhold the truth from a patient, except in cases where depression induced by bad news might significantly affect the patient's recuperation.",
+      "D": "Investigative journalists who employ illegal means of obtaining information should not be subjected to moral disapproval, if the revelation of that information does more good for society than does its suppression.",
+      "E": "A poem need not adhere too strictly to the truth. Art is exempt from such requirements—it matters only that the poem provoke a response in the reader."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Compact discs (CDs) offer an improvement in artistic freedom over vinyl records. As the record needle moves in toward a vinyl record's center, it must fight centrifugal force. Wide, shallow, or jagged grooves will cause the needle to jump; consequently, the song nearest the center—the last song on the side—cannot have especially loud, high-pitched, or low-pitched passages. The CD suffers no such limitations, leaving artists free to end recordings with any song.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "CDs provide greater artistic latitude than do vinyl records.",
+      "B": "On vinyl records, the song farthest from the center can have loud, high-pitched, or low-pitched passages.",
+      "C": "As the record needle moves in toward the vinyl record's center, the centrifugal force on the needle becomes stronger.",
+      "D": "CDs represent a considerable technological advance over vinyl records.",
+      "E": "CDs can have louder passages, as well as both higher- and lower-pitched passages, than can vinyl records."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "The public interest comprises many interests and the broadcast media must serve all of them. Perhaps most television viewers would prefer an action show to an opera. But a constant stream of action shows on all channels is not in the public interest. Thus, __________",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "broadcasters' obligations are not satisfied if they look only to popularity to decide their programming schedules",
+      "B": "television networks should broadcast more artistic and cultural shows and fewer action shows",
+      "C": "the public interest should be considered whenever television producers develop a new program",
+      "D": "the popularity of a television program is a poor indicator of its artistic quality",
+      "E": "broadcast media could be rightly accused of neglecting the public interest only if all channels carried mostly action shows"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Enthusiasm for the use of calculators in the learning of mathematics is misplaced. Teachers rightly observe that in some cases calculators enable students to focus on general principles rather than the tedious, largely rote calculations that constitute the application of these principles. But principles are more likely to be remembered when knowledge of them is grounded in habits ingrained by painstaking applications of those principles. The very fact that calculators make calculation easier, therefore, makes it reasonable to restrict their use.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Some students who know how to use calculators also thoroughly understand the mathematical principles that calculators obey.",
+      "B": "Slide rules, which are less technologically sophisticated analogues of calculators, were widely used in the learning of mathematics several decades ago.",
+      "C": "It is much more important that students retain the knowledge of general principles than that this knowledge be easily acquired.",
+      "D": "Habits that are acquired by laborious and sometimes tedious practice are not as valuable as those that are painlessly mastered.",
+      "E": "Teachers' enthusiasm for new educational aids is often not proportional to the pedagogical effectiveness of those devices."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "Commentator: Most journalists describe their individual political orientations as liberal, and it is often concluded that there is therefore a liberal bias in current journalism. This is not the case, however, because newspapers, magazines, radio, and television are all in the business of selling news and advertising, and therefore face market pressures that tend to keep them impartial, since in order to maximize profits they must target the broadest customer base possible.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion drawn by the commentator's argument?",
+    "answerChoices": {
+      "A": "The individual political orientations of journalists do not constitute acceptable evidence regarding media bias.",
+      "B": "Major media face significant market pressures.",
+      "C": "Current journalism does not have a liberal political bias.",
+      "D": "Major media must target the broadest customer base possible in order to maximize profits.",
+      "E": "It is often maintained that current journalism has a liberal bias."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Theories generated by scientific research were used to develop several products that, although useful, damage the environment severely. The scientists who conducted the research, however, should not be held responsible for that damage, since they merely generated the theories and could neither foresee nor restrict the kinds of products that might be designed using those theories.",
+    "questionStem": "Which one of the following principles, if established, justifies the conclusion above?",
+    "answerChoices": {
+      "A": "Individuals who develop something that has desirable characteristics should not be held responsible for any undesirable characteristics that the thing has if improperly used.",
+      "B": "Individuals are justified in performing an activity that has both desirable and undesirable foreseeable consequences only if they alone bear its undesirable consequences.",
+      "C": "Individuals should receive credit for the foreseeable desirable consequences of the activities they perform only if those individuals are to be held responsible for any unforeseeable undesirable consequences those activities might have.",
+      "D": "Individuals who perform an activity should not be held responsible for any unforeseen undesirable consequences that arise from the use to which others put the results of that activity.",
+      "E": "Individuals should be held responsible for the foreseeable undesirable consequences of the activities that they perform and receive credit for the foreseeable desirable consequences of those activities."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "The administration at a certain university has explained this year's tuition increase by citing increased spending on faculty salaries and on need-based aid to students. However, this year's budget indicated that faculty salaries constitute a small part of the university's expenditure, and the only significant increases in scholarship aid have gone to academic scholarships awarded regardless of need. The administration's explanation is not believable.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument that the administration's explanation is not believable?",
+    "answerChoices": {
+      "A": "With this year's budget, the university has increased its total spending on scholarship aid by 5 percent.",
+      "B": "With this year's budget, the university increased the allotment for faculty salaries by 5 percent while tuition was increased by 6 percent.",
+      "C": "Faculty salaries at the university have increased in line with the national average, and substantial cuts in government student-loan programs have caused financial difficulties for many students at the university.",
+      "D": "Of the substantial items in the budget, the greatest increase was in administrative costs, facilities maintenance costs, and costs associated with the provision of athletic facilities.",
+      "E": "Because enrollment projections at the university are very unreliable, it is difficult to accurately estimate the amount of money the university will collect from tuition fees ahead of time."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Students asked by a psychologist to tell a lie before discussion groups vastly overestimated how many people in the discussion groups could tell they were lying. Other research has found that when volleyball players perform unusually poorly on the court, teammates notice this far less often than the players expect. Finally, in one research experiment a student wearing a funny T-shirt entered a room full of people. Questioning revealed that only a small fraction of the people in the room noticed the shirt, contrary to the student's expectations.",
+    "questionStem": "Which one of the following is best illustrated by the statements above?",
+    "answerChoices": {
+      "A": "People tend to be far less aware of their own appearance and behavior than are other people.",
+      "B": "People tend not to notice the appearance or behavior of others.",
+      "C": "We are actually less observant of the appearance and behavior of others than we think ourselves to be.",
+      "D": "People will notice the appearance or behavior of others only if it is specifically highlighted in some way.",
+      "E": "People tend to believe their appearance and behavior are noticed by others more often than is actually the case."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Parallel",
+    "questionDifficulty": 1,
+    "stimulus": "Extinction is inevitable for all biological species. In fact, the vast majority of all species that have ever lived are now extinct. Since all species die out eventually, there is no justification for trying to protect species that are presently endangered, even those that can be saved from extinction now.",
+    "questionStem": "The reasoning in the argument above is most closely paralleled by the argument that there is no reason to",
+    "answerChoices": {
+      "A": "look for a book in the library because it is sometimes checked out",
+      "B": "spend money on preventive maintenance of a car because no car can last indefinitely",
+      "C": "reinforce bridges against earthquakes in earthquake-prone areas because earthquakes occur only very infrequently",
+      "D": "take a route that will avoid the normal traffic jams because traffic jams can occur along any route",
+      "E": "plant a flower garden in soil that is not beneficial to plants because the plants are likely to die in such soil"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Psychology professor: Applied statistics should be taught only by the various social science departments. These departments can best teach their respective students which statistical methodologies are most useful for their discipline, and how best to interpret collected data and the results of experiments.\nMathematics professor: I disagree. My applied statistics course covers much of the same material taught in the applied statistics courses in social science departments. In fact, my course uses exactly the same textbook as those courses!",
+    "questionStem": "Which one of the following most accurately describes a questionable aspect of the reasoning in the mathematics professor's response to the psychology professor?",
+    "answerChoices": {
+      "A": "The response gives no evidence for its presumption that students willing to take a course in one department would choose a similar course in another.",
+      "B": "The response gives no evidence for its presumption that social science students should have the same competence in statistics as mathematics students.",
+      "C": "The response does not effectively address a key reason given in support of the psychology professor's position.",
+      "D": "The response depends for its plausibility on a personal attack made against the psychology professor.",
+      "E": "The response takes for granted that unless the course textbook is the same the course content will not be the same."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "Among a sample of diverse coins from an unfamiliar country, each face of any coin portrays one of four things: a judge's head, an explorer's head, a building, or a tree. By examining the coins, a collector determines that none of them have heads on both sides and that all coins in the sample with a judge's head on one side have a tree on the other.",
+    "questionStem": "If the statements above are true, which one of the following must be true of the coins in the sample?",
+    "answerChoices": {
+      "A": "All those with an explorer's head on one side have a building on the other.",
+      "B": "All those with a tree on one side have a judge's head on the other.",
+      "C": "None of those with a tree on one side have an explorer's head on the other.",
+      "D": "None of those with a building on one side have a judge's head on the other.",
+      "E": "None of those with an explorer's head on one side have a building on the other."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "There are two supposedly conflicting hypotheses as to what makes for great national leaders: one is that such leaders successfully shape public opinion, and the other is that they are adept at reacting to it. However, treating these hypotheses as mutually exclusive is evidently a mistake. All leaders who have had success getting their programs passed by their country's legislature have been adroit both in shaping and reacting to public opinion.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Having success getting programs passed by the legislature is indicative of being a great national leader.",
+      "B": "It is impossible to successfully shape public opinion without in some way reacting to it.",
+      "C": "To lead, one must either successfully shape public opinion or be adept at reacting to it, or both.",
+      "D": "Having a good rapport with the members of the legislature allows a leader to shape public opinion.",
+      "E": "To be a great leader one must not be swayed by public opinion."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Most business ethics courses and textbooks confine themselves to considering specific cases and principles. For example, students are often given lists of ethical rules for in-class discussion and role-playing. This approach fails to provide a framework for understanding specific principles and should thus be changed to include abstract ethical theory.",
+    "questionStem": "Which one of the following, if valid, most helps to justify the reasoning above?",
+    "answerChoices": {
+      "A": "A moralizing approach that fails to recognize the diversity of the ethical rules in use is unacceptable.",
+      "B": "Courses that concentrate mainly on role-playing are undesirable because students must adopt alien personae.",
+      "C": "People have no obligation to always behave ethically unless they are acquainted with abstract ethical theory.",
+      "D": "Abstract ethical theory is the most appropriate of any context for understanding specific principles.",
+      "E": "An ethics course should acquaint students with a wide range of specific principles and appropriate applications."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Some classes of animal are so successful that they spread into virtually every ecosystem, whereas others gradually recede until they inhabit only small niches in geographically isolated areas and thereby become threatened. Insects are definitely of the former sort and ants are the most successful of these, ranging from the Arctic Circle to Tierra del Fuego. Hence, no species of ant is a threatened species.",
+    "questionStem": "The argument is flawed because it takes for granted that",
+    "answerChoices": {
+      "A": "the Arctic Circle and Tierra del Fuego do not constitute geographically isolated areas",
+      "B": "because ants do not inhabit only a small niche in a geographically isolated area, they are unlike most other insects",
+      "C": "the only way a class of animal can avoid being threatened is to spread into virtually every ecosystem",
+      "D": "what is true of the constituent elements of a whole is also true of the whole",
+      "E": "what is true of a whole is also true of its constituent elements"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Advocate: You claim that it is wrong to own gasoline-powered cars because they pollute too much; you have an electric car, which pollutes far less. But the company that made your car also makes millions of gasoline-powered vehicles, so your patronage benefits a producer of products to which you object. Thus, if you are right about gasoline-powered cars, you should not have your electric car either.",
+    "questionStem": "Which one of the following principles, if valid, would most help to justify the advocate's reasoning?",
+    "answerChoices": {
+      "A": "An action can be wrong even if it has fewer negative consequences than another action.",
+      "B": "One should purchase a product only if it pollutes less than any competing product.",
+      "C": "One should purchase every product whose use has no negative consequences.",
+      "D": "One should not support an organization that does anything one believes to be wrong.",
+      "E": "One should not purchase products from companies that make no environmentally sound products."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Analyst: A recent survey showed that although professors of biology who teach but do not pursue research made up one twentieth of all science professors, they were appointed to fewer than one twentieth of all the scientific administrative positions in universities. We can conclude from this survey that failing to pursue research tends to bias university administrators against appointing these professors to scientific administrative positions.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the support for the analyst's conclusion?",
+    "answerChoices": {
+      "A": "In universities there are fewer scientific administrative positions than there are nonscientific administrative positions.",
+      "B": "Biologists who do research fill a disproportionately low number of scientific administrative positions in universities.",
+      "C": "Biology professors get more than one twentieth of all the science grant money available.",
+      "D": "Conducting biological research tends to take significantly more time than does teaching biology.",
+      "E": "Biologists who hold scientific administrative positions in the university tend to hold those positions for a shorter time than do other science professors."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Researcher: We have found that some cases of high blood pressure can be treated effectively with medicine. Since it is generally accepted that any illness caused by stress is treatable only by the reduction of stress, some cases of high blood pressure must not be caused by stress.",
+    "questionStem": "Which one of the following is an assumption required by the researcher's argument?",
+    "answerChoices": {
+      "A": "The correlation between stress and all cases of high blood pressure is merely coincidental.",
+      "B": "The reduction of stress in a person's life can at times lower that person's blood pressure.",
+      "C": "Reduced stress does not reduce a person's responsiveness to medicine used to treat high blood pressure.",
+      "D": "Some conditions that are treated effectively by medicines are not also treatable through the reduction of stress.",
+      "E": "Medicine used to treat high blood pressure does not itself reduce stress."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Catmull: Although historians consider themselves to be social scientists, different historians never arrive at the same conclusions about specific events of the past. Thus historians never determine what actually happened; like novelists, they merely create interesting fictional stories about the many different problems that people have faced.",
+    "questionStem": "The reasoning in Catmull's argument is flawed because the argument",
+    "answerChoices": {
+      "A": "draws a conclusion that simply restates a claim presented in support of that conclusion",
+      "B": "concludes, solely on the basis of the claim that different people have reached different conclusions about a topic, that none of these conclusions is true",
+      "C": "presumes, without providing justification, that unless historians' conclusions are objectively true, they have no value whatsoever",
+      "D": "bases its conclusion on premises that contradict each other",
+      "E": "mistakes a necessary condition for the objective truth of historians' conclusions for a sufficient condition for the objective truth of those conclusions"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "In a poll conducted by interviewing eligible voters in their homes just before the recent election, incumbent candidate Kenner was significantly ahead of candidate Muratori. Nonetheless, Muratori won the recent election.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described by the statements above?",
+    "answerChoices": {
+      "A": "The positions taken by Muratori and Kenner on many election issues were not very similar to each other.",
+      "B": "Kenner had held elected office for many years before the recent election.",
+      "C": "In the year leading up to the election, Kenner was implicated in a series of political scandals.",
+      "D": "Six months before the recent election, the voting age was lowered by three years.",
+      "E": "In the poll, supporters of Muratori were more likely than others to describe the election as important."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Statistical analysis is a common tool for explanation in the physical sciences. It can only be used, however, to explain events that can be replicated to the last detail. Since human mental events never precisely recur, statistical analysis cannot be employed to explain these events. Therefore, they cannot be explained by the physical sciences.",
+    "questionStem": "Which one of the following arguments is most similar in its flawed reasoning to the argument above?",
+    "answerChoices": {
+      "A": "Computer modeling is used to try to explain the way in which wind resistance affects the movement of bicycles. To use computer modeling, the phenomenon being modeled must be predictable. But wind resistance is not predictable. Therefore, the way in which wind resistance affects the movement of bicycles cannot be explained by computer modeling.",
+      "B": "The only way to explain how music affects the emotional state of a person is to appeal to the psychology of emotion. The psychology of emotion can be applied only to cases involving human beings. But not all music is created by human beings; some music is computer generated. Therefore, the way in which music affects the emotional state of a person cannot be explained.",
+      "C": "The best way to explain why an object has a particular color is in terms of the interaction of light and matter. It is sometimes impossible to find out what kind of matter constitutes an object. Therefore, the color of such objects has nothing to do with the interaction of light and matter.",
+      "D": "To determine which explanation of the origin of the universe is correct, we would need to know about the first moments of the existence of the universe. Due to the immense time that has passed since the universe began, it is impossible to get such information. Therefore, none of the explanations of the origin of the universe is likely to be correct.",
+      "E": "A good way to explain historical events is to construct a coherent narrative about those events. In order to construct such a narrative, a great many details about the events must be known. Virtually no details can be known of certain very ancient historical events. Therefore, no historical explanation can be given for these events."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Journalist: Although a recent poll found that more than half of all eligible voters support the idea of a political party whose primary concern is education, only 26 percent would like to join it, and only 16 percent would be prepared to donate money to it. Furthermore, there is overwhelming historical evidence that only a party that has at least 30 percent of eligible voters prepared to support it by either joining it or donating money to it is viable in the long run. Therefore, it is unlikely that an education party is viable in the long run.",
+    "questionStem": "The reasoning in the journalist's argument is most vulnerable to criticism on the grounds that the argument fails to consider that",
+    "answerChoices": {
+      "A": "some of those who said they were willing to donate money to an education party might not actually do so if such a party were formed",
+      "B": "an education party could possibly be viable with a smaller base than is customarily needed",
+      "C": "the 16 percent of eligible voters prepared to donate money to an education party might donate almost as much money as a party would ordinarily expect to get if 30 percent of eligible voters contributed",
+      "D": "a party needs the appropriate support of at least 30 percent of eligible voters in order to be viable and more than half of all eligible voters support the idea of an education party",
+      "E": "some of the eligible voters who would donate money to an education party might not be prepared to join such a party"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Almost all microbe species live together in dense, interdependent communities, supporting the environment for each other, and regulating the population balances for their different species through a complex system of chemical signals. For this reason, it is currently impossible to cultivate any one such species in isolation. Thus, microbiologists lack complete knowledge of most microbe species.",
+    "questionStem": "Which one of the following, if assumed, enables the argument's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "It is currently impossible for microbiologists to reproduce the complex systems of chemical signals with which microbe communities regulate the population balances for their different species.",
+      "B": "If it is currently impossible to reproduce the environmental supports and chemical signals in dense, interdependent communities of microbe species, then it is also impossible to cultivate any microbe species from such a community in isolation.",
+      "C": "No microbiologist can have complete knowledge of any species of organism unless that microbiologist can cultivate that species in isolation.",
+      "D": "At least some microbiologists lack complete knowledge of any microbe species that live together in dense, interdependent communities.",
+      "E": "No microbe species that normally lives together with other microbe species in dense, interdependent communities can survive outside such a community."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 1,
+    "questionNumber": 26,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "Reza: Language requires the use of verbal signs for objects as well as for feelings. Many animals can vocally express hunger, but only humans can ask for an egg or an apple by naming it. And using verbal signs for objects requires the ability to distinguish these objects from other objects, which in turn requires conceptual thought.",
+    "questionStem": "If all of Reza's statements are true, then which one of the following must also be true?",
+    "answerChoices": {
+      "A": "Conceptual thought is required for language.",
+      "B": "Conceptual thought requires the use of verbal signs for objects.",
+      "C": "It is not possible to think conceptually about feelings.",
+      "D": "All humans are capable of conceptual thought.",
+      "E": "The vocal expressions of animals other than humans do not require conceptual thought."
+    },
+    "correctAnswer": "A"
+  }
+]

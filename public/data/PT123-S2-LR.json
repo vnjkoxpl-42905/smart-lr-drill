@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Economist: Every business strives to increase its productivity, for this increases profits for the owners and the likelihood that the business will survive. But not all efforts to increase productivity are beneficial to the business as a whole. Often, attempts to increase productivity decrease the number of employees, which clearly harms the dismissed employees as well as the sense of security of the retained employees.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the economist's argument?",
+    "answerChoices": {
+      "A": "If an action taken to secure the survival of a business fails to enhance the welfare of the business's employees, that action cannot be good for the business as a whole.",
+      "B": "Some measures taken by a business to increase productivity fail to be beneficial to the business as a whole.",
+      "C": "Only if the employees of a business are also its owners will the interests of the employees and owners coincide, enabling measures that will be beneficial to the business as a whole.",
+      "D": "There is no business that does not make efforts to increase its productivity.",
+      "E": "Decreasing the number of employees in a business undermines the sense of security of retained employees."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "All Labrador retrievers bark a great deal. All Saint Bernards bark infrequently. Each of Rosa's dogs is a cross between a Labrador retriever and a Saint Bernard. Therefore, Rosa's dogs are moderate barkers.",
+    "questionStem": "Which one of the following uses flawed reasoning that most closely resembles the flawed reasoning used in the argument above?",
+    "answerChoices": {
+      "A": "All students who study diligently make good grades. But some students who do not study diligently also make good grades. Jane studies somewhat diligently. Therefore, Jane makes somewhat good grades.",
+      "B": "All type A chemicals are extremely toxic to human beings. All type B chemicals are nontoxic to human beings. This household cleaner is a mixture of a type A chemical and a type B chemical. Therefore, this household cleaner is moderately toxic.",
+      "C": "All students at Hanson School live in Green County. All students at Edwards School live in Winn County. Members of the Perry family attend both Hanson and Edwards. Therefore, some members of the Perry family live in Green County and some live in Winn County.",
+      "D": "All transcriptionists know shorthand. All engineers know calculus. Bob has worked both as a transcriptionist and as an engineer. Therefore, Bob knows both shorthand and calculus.",
+      "E": "All of Kenisha's dresses are very well made. All of Connie's dresses are very badly made. Half of the dresses in this closet are very well made, and half of them are very badly made. Therefore, half of the dresses in this closet are Kenisha's and half of them are Connie's."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "A century in certain ways is like a life, and as the end of a century approaches, people behave toward that century much as someone who is nearing the end of life does toward that life. So just as people in their last years spend much time looking back on the events of their life, people at a century's end __________.",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "reminisce about their own lives",
+      "B": "fear that their own lives are about to end",
+      "C": "focus on what the next century will bring",
+      "D": "become very interested in the history of the century just ending",
+      "E": "reflect on how certain unfortunate events of the century could have been avoided"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Consumer: The latest Connorly Report suggests that Ocksenfrey prepackaged meals are virtually devoid of nutritional value. But the Connorly Report is commissioned by Danto Foods, Ocksenfrey's largest corporate rival, and early drafts of the report are submitted for approval to Danto Foods' public relations department. Because of the obvious bias of this report, it is clear that Ocksenfrey's prepackaged meals really are nutritious.",
+    "questionStem": "The reasoning in the consumer's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "treats evidence that there is an apparent bias as evidence that the Connorly Report's claims are false",
+      "B": "draws a conclusion based solely on an unrepresentative sample of Ocksenfrey's products",
+      "C": "fails to take into account the possibility that Ocksenfrey has just as much motivation to create negative publicity for Danto as Danto has to create negative publicity for Ocksenfrey",
+      "D": "fails to provide evidence that Danto Foods' prepackaged meals are not more nutritious than Ocksenfrey's are",
+      "E": "presumes, without providing justification, that Danto Foods' public relations department would not approve a draft of a report that was hostile to Danto Foods' products"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Scientist: Earth's average annual temperature has increased by about 0.5 degrees Celsius over the last century. This warming is primarily the result of the buildup of minor gases in the atmosphere, blocking the outward flow of heat from the planet.",
+    "questionStem": "Which one of the following, if true, would count as evidence against the scientist's explanation of Earth's warming?",
+    "answerChoices": {
+      "A": "Only some of the minor gases whose presence in the atmosphere allegedly resulted in the phenomenon described by the scientist were produced by industrial pollution.",
+      "B": "Most of the warming occurred before 1940, while most of the buildup of minor gases in the atmosphere occurred after 1940.",
+      "C": "Over the last century, Earth received slightly more solar radiation in certain years than it did in others.",
+      "D": "Volcanic dust and other particles in the atmosphere reflect much of the Sun's radiation back into space before it can reach Earth's surface.",
+      "E": "The accumulation of minor gases in the atmosphere has been greater over the last century than at any other time in Earth's history."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "An undergraduate degree is necessary for appointment to the executive board. Further, no one with a felony conviction can be appointed to the board. Thus, Murray, an accountant with both a bachelor's and a master's degree, cannot be accepted for the position of Executive Administrator, since he has a felony conviction.",
+    "questionStem": "The argument's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Anyone with a master's degree and without a felony conviction is eligible for appointment to the executive board.",
+      "B": "Only candidates eligible for appointment to the executive board can be accepted for the position of Executive Administrator.",
+      "C": "An undergraduate degree is not necessary for acceptance for the position of Executive Administrator.",
+      "D": "If Murray did not have a felony conviction, he would be accepted for the position of Executive Administrator.",
+      "E": "The felony charge on which Murray was convicted is relevant to the duties of the position of Executive Administrator."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Ethicist: The most advanced kind of moral motivation is based solely on abstract principles. This form of motivation is in contrast with calculated self-interest or the desire to adhere to societal norms and conventions.",
+    "questionStem": "The actions of which one of the following individuals exhibit the most advanced kind of moral motivation, as described by the ethicist?",
+    "answerChoices": {
+      "A": "Bobby contributed money to a local charity during a charity drive at work because he worried that not doing so would make him look stingy.",
+      "B": "Wes contributed money to a local charity during a charity drive at work because he believed that doing so would improve his employer's opinion of him.",
+      "C": "Donna's employers engaged in an illegal but profitable practice that caused serious damage to the environment. Donna did not report this practice to the authorities, out of fear that her employers would retaliate against her.",
+      "D": "Jadine's employers engaged in an illegal but profitable practice that caused serious damage to the environment. Jadine reported this practice to the authorities out of a belief that protecting the environment is always more important than monetary profit.",
+      "E": "Leigh's employers engaged in an illegal but profitable practice that caused serious damage to the environment. Leigh reported this practice to the authorities only because several colleagues had been pressuring her to do so."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Proponents of the electric car maintain that when the technical problems associated with its battery design are solved, such cars will be widely used and, because they are emission-free, will result in an abatement of the environmental degradation caused by auto emissions. But unless we dam more rivers, the electricity to charge these batteries will come from nuclear or coal-fired power plants. Each of these three power sources produces considerable environmental damage. Thus, the electric car __________.",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "will have worse environmental consequences than its proponents may believe",
+      "B": "will probably remain less popular than other types of cars",
+      "C": "requires that purely technical problems be solved before it can succeed",
+      "D": "will increase the total level of emissions rather than reduce it",
+      "E": "will not produce a net reduction in environmental degradation"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Although video game sales have increased steadily over the past 3 years, we can expect a reversal of this trend in the very near future. Historically, over three quarters of video games sold have been purchased by people from 13 to 16 years of age, and the number of people in this age group is expected to decline steadily over the next 10 years.",
+    "questionStem": "Which one of the following, if true, would most seriously weaken the argument?",
+    "answerChoices": {
+      "A": "Most people 17 years old or older have never purchased a video game.",
+      "B": "Video game rentals have declined over the past 3 years.",
+      "C": "New technology will undoubtedly make entirely new entertainment options available over the next 10 years.",
+      "D": "The number of different types of video games available is unlikely to decrease in the near future.",
+      "E": "Most of the people who have purchased video games over the past 3 years are over the age of 16."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "Double-blind techniques should be used whenever possible in scientific experiments. They help prevent the misinterpretations that often arise due to expectations and opinions that scientists already hold, and clearly scientists should be extremely diligent in trying to avoid such misinterpretations.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "Scientists' objectivity may be impeded by interpreting experimental evidence on the basis of expectations and opinions that they already hold.",
+      "B": "It is advisable for scientists to use double-blind techniques in as high a proportion of their experiments as they can.",
+      "C": "Scientists sometimes neglect to adequately consider the risk of misinterpreting evidence on the basis of prior expectations and opinions.",
+      "D": "Whenever possible, scientists should refrain from interpreting evidence on the basis of previously formed expectations and convictions.",
+      "E": "Double-blind experimental techniques are often an effective way of ensuring scientific objectivity."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Role",
+    "questionDifficulty": 4,
+    "stimulus": "It is now a common complaint that the electronic media have corroded the intellectual skills required and fostered by the literary media. But several centuries ago the complaint was that certain intellectual skills, such as the powerful memory and extemporaneous eloquence that were intrinsic to oral culture, were being destroyed by the spread of literacy. So, what awaits us is probably a mere alteration of the human mind rather than its devolution.",
+    "questionStem": "The reference to the complaint of several centuries ago that powerful memory and extemporaneous eloquence were being destroyed plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "evidence supporting the claim that the intellectual skills fostered by the literary media are being destroyed by the electronic media",
+      "B": "an illustration of the general hypothesis being advanced that intellectual abilities are inseparable from the means by which people communicate",
+      "C": "an example of a cultural change that did not necessarily have a detrimental effect on the human mind overall",
+      "D": "evidence that the claim that the intellectual skills required and fostered by the literary media are being lost is unwarranted",
+      "E": "possible evidence, mentioned and then dismissed, that might be cited by supporters of the hypothesis being criticized"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "Suppose I have promised to keep a confidence and someone asks me a question that I cannot answer truthfully without thereby breaking the promise. Obviously, I cannot both keep and break the same promise. Therefore, one cannot be obliged both to answer all questions truthfully and to keep all promises.",
+    "questionStem": "Which one of the following arguments is most similar in its reasoning to the argument above?",
+    "answerChoices": {
+      "A": "It is claimed that we have the unencumbered right to say whatever we want. It is also claimed that we have the obligation to be civil to others. But civility requires that we not always say what we want. So, it cannot be true both that we have the unencumbered right to say whatever we want and that we have the duty to be civil.",
+      "B": "Some politicians could attain popularity with voters only by making extravagant promises; this, however, would deceive the people. So, since the only way for some politicians to be popular is to deceive, and any politician needs to be popular, it follows that some politicians must deceive.",
+      "C": "If we put a lot of effort into making this report look good, the client might think we did so because we believed our proposal would not stand on its own merits. On the other hand, if we do not try to make the report look good, the client might think we are not serious about her business. So, whatever we do, we risk her criticism.",
+      "D": "If creditors have legitimate claims against a business and the business has the resources to pay those debts, then the business is obliged to pay them. Also, if a business has obligations to pay debts, then a court will force it to pay them. But the courts did not force this business to pay its debts, so either the creditors did not have legitimate claims or the business did not have sufficient resources.",
+      "E": "If we extend our business hours, we will either have to hire new employees or have existing employees work overtime. But both new employees and additional overtime would dramatically increase our labor costs. We cannot afford to increase labor costs, so we will have to keep our business hours as they stand."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Standard aluminum soft-drink cans do not vary in the amount of aluminum that they contain. Fifty percent of the aluminum contained in a certain group (M) of standard aluminum soft-drink cans was recycled from another group (L) of used, standard aluminum soft-drink cans. Since all the cans in L were recycled into cans in M and since the amount of material other than aluminum in an aluminum can is negligible, it follows that M contains twice as many cans as L.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "The aluminum in the cans of M cannot be recycled further.",
+      "B": "Recycled aluminum is of poorer quality than unrecycled aluminum.",
+      "C": "All of the aluminum in an aluminum can is recovered when the can is recycled.",
+      "D": "None of the soft-drink cans in group L had been made from recycled aluminum.",
+      "E": "Aluminum soft-drink cans are more easily recycled than are soft-drink cans made from other materials."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "A cup of raw milk, after being heated in a microwave oven to 50 degrees Celsius, contains half its initial concentration of a particular enzyme, lysozyme. If, however, the milk reaches that temperature through exposure to a conventional heat source of 50 degrees Celsius, it will contain nearly all of its initial concentration of the enzyme. Therefore, what destroys the enzyme is not heat but microwaves, which generate heat.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Heating raw milk in a microwave oven to a temperature of 100 degrees Celsius destroys nearly all of the lysozyme initially present in that milk.",
+      "B": "Enzymes in raw milk that are destroyed through excessive heating can be replaced by adding enzymes that have been extracted from other sources.",
+      "C": "A liquid exposed to a conventional heat source of exactly 50 degrees Celsius will reach that temperature more slowly than it would if it were exposed to a conventional heat source hotter than 50 degrees Celsius.",
+      "D": "Milk that has been heated in a microwave oven does not taste noticeably different from milk that has been briefly heated by exposure to a conventional heat source.",
+      "E": "Heating any liquid by microwave creates small zones within it that are much hotter than the overall temperature that the liquid will ultimately reach."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "A new government policy has been developed to avoid many serious cases of influenza. This goal will be accomplished by the annual vaccination of high-risk individuals: everyone 65 and older as well as anyone with a chronic disease that might cause them to experience complications from the influenza virus. Each year's vaccination will protect only against the strain of the influenza virus deemed most likely to be prevalent that year, so every year it will be necessary for all high-risk individuals to receive a vaccine for a different strain of the virus.",
+    "questionStem": "Which one of the following is an assumption that would allow the conclusion above to be properly drawn?",
+    "answerChoices": {
+      "A": "The number of individuals in the high-risk group for influenza will not significantly change from year to year.",
+      "B": "The likelihood that a serious influenza epidemic will occur varies from year to year.",
+      "C": "No vaccine for the influenza virus protects against more than one strain of that virus.",
+      "D": "Each year the strain of influenza virus deemed most likely to be prevalent will be one that had not previously been deemed most likely to be prevalent.",
+      "E": "Each year's vaccine will have fewer side effects than the vaccine of the previous year since the technology for making vaccines will constantly improve."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 5,
+    "stimulus": "Taylor: Researchers at a local university claim that 61 percent of the information transferred during a conversation is communicated through nonverbal signals. But this claim, like all such mathematically precise claims, is suspect, because claims of such exactitude could never be established by science.\nSandra: While precision is unobtainable in many areas of life, it is commonplace in others. Many scientific disciplines obtain extremely precise results, which should not be doubted merely because of their precision.",
+    "questionStem": "The statements above provide the most support for holding that Sandra would disagree with Taylor about which one of the following statements?",
+    "answerChoices": {
+      "A": "Research might reveal that 61 percent of the information taken in during a conversation is communicated through nonverbal signals.",
+      "B": "It is possible to determine whether 61 percent of the information taken in during a conversation is communicated through nonverbal signals.",
+      "C": "The study of verbal and nonverbal communication is an area where one cannot expect great precision in one's research results.",
+      "D": "Some sciences can yield mathematically precise results that are not inherently suspect.",
+      "E": "If inherently suspect claims are usually false, then the majority of claims made by scientists are false as well."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Hospital executive: At a recent conference on nonprofit management, several computer experts maintained that the most significant threat faced by large institutions such as universities and hospitals is unauthorized access to confidential data. In light of this testimony, we should make the protection of our clients' confidentiality our highest priority.",
+    "questionStem": "The hospital executive's argument is most vulnerable to which one of the following objections?",
+    "answerChoices": {
+      "A": "The argument confuses the causes of a problem with the appropriate solutions to that problem.",
+      "B": "The argument relies on the testimony of experts whose expertise is not shown to be sufficiently broad to support their general claim.",
+      "C": "The argument assumes that a correlation between two phenomena is evidence that one is the cause of the other.",
+      "D": "The argument draws a general conclusion about a group based on data about an unrepresentative sample of that group.",
+      "E": "The argument infers that a property belonging to large institutions belongs to all institutions."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Modern science is built on the process of posing hypotheses and testing them against observations—in essence, attempting to show that the hypotheses are incorrect. Nothing brings more recognition than overthrowing conventional wisdom. It is accordingly unsurprising that some scientists are skeptical of the widely accepted predictions of global warming. What is instead remarkable is that with hundreds of researchers striving to make breakthroughs in climatology, very few find evidence that global warming is unlikely.",
+    "questionStem": "The information above provides the most support for which one of the following statements?",
+    "answerChoices": {
+      "A": "Most scientists who are reluctant to accept the global warming hypothesis are not acting in accordance with the accepted standards of scientific debate.",
+      "B": "Most researchers in climatology have substantial motive to find evidence that would discredit the global warming hypothesis.",
+      "C": "There is evidence that conclusively shows that the global warming hypothesis is true.",
+      "D": "Scientists who are skeptical about global warming have not offered any alternative hypotheses to explain climatological data.",
+      "E": "Research in global warming is primarily driven by a desire for recognition in the scientific community."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Historian: The Land Party achieved its only national victory in Banestria in 1935. It received most of its support that year in rural and semirural areas, where the bulk of Banestria's population lived at the time. The economic woes of the years surrounding that election hit agricultural and small business interests the hardest, and the Land Party specifically targeted those groups in 1935. I conclude that the success of the Land Party that year was due to the combination of the Land Party's specifically addressing the concerns of these groups and the depth of the economic problems people in these groups were facing.",
+    "questionStem": "Each of the following, if true, strengthens the historian's argument except:",
+    "answerChoices": {
+      "A": "In preceding elections the Land Party made no attempt to address the interests of economically distressed urban groups.",
+      "B": "Voters are more likely to vote for a political party that focuses on their problems.",
+      "C": "The Land Party had most of its successes when there was economic distress in the agricultural sector.",
+      "D": "No other major party in Banestria specifically addressed the issues of people who lived in semirural areas in 1935.",
+      "E": "The greater the degree of economic distress someone is in, the more likely that person is to vote."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Gamba: Muñoz claims that the Southwest Hopeville Neighbors Association overwhelmingly opposes the new water system, citing this as evidence of citywide opposition. The association did pass a resolution opposing the new water system, but only 25 of 350 members voted, with 10 in favor of the system. Furthermore, the 15 opposing votes represent far less than 1 percent of Hopeville's population. One should not assume that so few votes represent the view of the majority of Hopeville's residents.",
+    "questionStem": "Of the following, which one most accurately describes Gamba's strategy of argumentation?",
+    "answerChoices": {
+      "A": "questioning a conclusion based on the results of a vote, on the grounds that people with certain views are more likely to vote",
+      "B": "questioning a claim supported by statistical data by arguing that statistical data can be manipulated to support whatever view the interpreter wants to support",
+      "C": "attempting to refute an argument by showing that, contrary to what has been claimed, the truth of the premises does not guarantee the truth of the conclusion",
+      "D": "criticizing a view on the grounds that the view is based on evidence that is in principle impossible to disconfirm",
+      "E": "attempting to cast doubt on a conclusion by claiming that the statistical sample on which the conclusion is based is too small to be dependable"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Driver: My friends say I will one day have an accident because I drive my sports car recklessly. But I have done some research, and apparently minivans and larger sedans have very low accident rates compared to sports cars. So trading my sports car in for a minivan would lower my risk of having an accident.",
+    "questionStem": "The reasoning in the driver's argument is most vulnerable to criticism on the grounds that this argument",
+    "answerChoices": {
+      "A": "infers a cause from a mere correlation",
+      "B": "relies on a sample that is too narrow",
+      "C": "misinterprets evidence that a result is likely as evidence that the result is certain",
+      "D": "mistakes a condition sufficient for bringing about a result for a condition necessary for doing so",
+      "E": "relies on a source that is probably not well-informed"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Editorialist: News media rarely cover local politics thoroughly, and local political business is usually conducted secretively. These factors each tend to isolate local politicians from their electorates. This has the effect of reducing the chance that any particular act of resident participation will elicit a positive official response, which in turn discourages resident participation in local politics.",
+    "questionStem": "Which one of the following is most strongly supported by the editorialist's statements?",
+    "answerChoices": {
+      "A": "Particular acts of resident participation would be likely to elicit a positive response from local politicians if those politicians were less isolated from their electorate.",
+      "B": "Local political business should be conducted less secretively because this would avoid discouraging resident participation in local politics.",
+      "C": "The most important factor influencing a resident's decision as to whether to participate in local politics is the chance that the participation will elicit a positive official response.",
+      "D": "More-frequent thorough coverage of local politics would reduce at least one source of discouragement from resident participation in local politics.",
+      "E": "If resident participation in local politics were not discouraged, this would cause local politicians to be less isolated from their electorate."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Philosopher: An action is morally right if it would be reasonably expected to increase the aggregate well-being of the people affected by it. An action is morally wrong if and only if it would be reasonably expected to reduce the aggregate well-being of the people affected by it. Thus, actions that would be reasonably expected to leave unchanged the aggregate well-being of the people affected by them are also right.",
+    "questionStem": "The philosopher's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Only wrong actions would be reasonably expected to reduce the aggregate well-being of the people affected by them.",
+      "B": "No action is both right and wrong.",
+      "C": "Any action that is not morally wrong is morally right.",
+      "D": "There are actions that would be reasonably expected to leave unchanged the aggregate well-being of the people affected by them.",
+      "E": "Only right actions have good consequences."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Car companies solicit consumer information on such human factors as whether a seat is comfortable or whether a set of controls is easy to use. However, designer interaction with consumers is superior to survey data; the data may tell the designer why a feature on last year's model was given a low rating, but data will not explain how that feature needs to be changed in order to receive a higher rating.",
+    "questionStem": "The reasoning above conforms most closely to which one of the following propositions?",
+    "answerChoices": {
+      "A": "Getting consumer input for design modifications can contribute to successful product design.",
+      "B": "Car companies traditionally conduct extensive postmarket surveys.",
+      "C": "Designers aim to create features that will appeal to specific market niches.",
+      "D": "A car will have unappealing features if consumers are not consulted during its design stage.",
+      "E": "Consumer input affects external rather than internal design components of cars."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "During the nineteenth century, the French academy of art was a major financial sponsor of painting and sculpture in France; sponsorship by private individuals had decreased dramatically by this time. Because the academy discouraged innovation in the arts, there was little innovation in nineteenth century French sculpture. Yet nineteenth century French painting showed a remarkable degree of innovation.",
+    "questionStem": "Which one of the following, if true, most helps to explain the difference between the amount of innovation in French painting and the amount of innovation in French sculpture during the nineteenth century?",
+    "answerChoices": {
+      "A": "In France in the nineteenth century, the French academy gave more of its financial support to painting than it did to sculpture.",
+      "B": "The French academy in the nineteenth century financially supported a greater number of sculptors than painters, but individual painters received more support, on average, than individual sculptors.",
+      "C": "Because stone was so much more expensive than paint and canvas, far more unsponsored paintings were produced than were unsponsored sculptures in France during the nineteenth century.",
+      "D": "Very few of the artists in France in the nineteenth century who produced sculptures also produced paintings.",
+      "E": "Although the academy was the primary sponsor of sculpture and painting, the total amount of financial support that French sculptors and painters received from sponsors declined during the nineteenth century."
+    },
+    "correctAnswer": "C"
+  }
+]

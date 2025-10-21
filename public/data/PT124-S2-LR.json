@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "The water of Lake Laberge, in Canada, currently contains high levels of the pesticide toxaphene. Authorities are puzzled because toxaphene was banned in North America in the early 1980s and now is used only in a few other parts of the world.",
+    "questionStem": "Which one of the following, if true, does most to explain why the water of Lake Laberge currently contains high levels of toxaphene?",
+    "answerChoices": {
+      "A": "Levels of pesticides in the environment often continue to be high for decades after their use ends.",
+      "B": "Lake Laberge's water contains high levels of other pesticides besides toxaphene.",
+      "C": "Toxic chemicals usually do not travel large distances in the atmosphere.",
+      "D": "North American manufacturers opposed banning toxaphene.",
+      "E": "Toxic chemicals become more readily detectable once they enter organisms the size of fish."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Must Be False",
+    "questionDifficulty": 2,
+    "stimulus": "Although Samantha likes both oolong and green tea, none of her friends likes both. However, all of her friends like black tea.",
+    "questionStem": "If the statements above are true, each of the following could be true except:",
+    "answerChoices": {
+      "A": "Samantha likes black tea.",
+      "B": "None of Samantha's friends likes green tea.",
+      "C": "Samantha's friends like exactly the same kinds of tea as each other.",
+      "D": "One of Samantha's friends likes neither oolong nor green tea.",
+      "E": "One of Samantha's friends likes all the kinds of teas that Samantha likes."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Because it permits a slower and more natural rhythm of life, living in the country is supposed to be more healthy and relaxed than living in the city. But surveys show that people living in the country become ill as often and as seriously as people living in the city, and that they experience an equal amount of stress.",
+    "questionStem": "The statements above, if true, provide the most support for which one of the following?",
+    "answerChoices": {
+      "A": "Living in the country is neither healthier nor more relaxing than living in the city.",
+      "B": "Living in the country does not in fact permit a slower and more natural rhythm of life than living in the city.",
+      "C": "People whose rhythm of life is slow and natural recover quickly from illness.",
+      "D": "Despite what people believe, a natural rhythm of life is unhealthy.",
+      "E": "The amount of stress a person experiences depends on that person's rhythm of life."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Industrialist: Environmentalists contend that emissions from our factory pose a health risk to those living downwind. The only testimony presented in support of this contention comes from residents of the communities surrounding the factory. But only a trained scientist can determine whether or not these emissions are dangerous, and none of the residents are scientists. Hence our factory's emissions present no health risk.",
+    "questionStem": "The reasoning in the industrialist's argument is flawed because the argument",
+    "answerChoices": {
+      "A": "impugns the motives of the residents rather than assessing the reasons for their contention",
+      "B": "does not consider the safety of emissions from other sources in the area",
+      "C": "presents no testimony from scientists that the emissions are safe",
+      "D": "fails to discuss the benefits of the factory to the surrounding community",
+      "E": "equivocates between two different notions of the term \"health risk\""
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "In the city of Glasgow, Scotland, trade doubled between 1750, when the first bank opened there, and 1765, when government regulations on banking were first implemented in Scotland.",
+    "questionStem": "Each of the following, if true, could contribute to an explanation of the doubling described above except:",
+    "answerChoices": {
+      "A": "The technological revolution that started in the early eighteenth century in England resulted in increased trade between England and Scotland.",
+      "B": "Reductions in tariffs on foreign goods in 1752 led to an increase in imports to Glasgow.",
+      "C": "The establishment of banking in Glasgow encouraged the use of paper money, which made financial transactions more efficient.",
+      "D": "Improvements in Scottish roads between 1750 and 1758 facilitated trade between Glasgow and the rest of Scotland.",
+      "E": "The initial government regulation of Scottish banks stimulated Glasgow's economy."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Some argue that laws are instituted at least in part to help establish a particular moral fabric in society. But the primary function of law is surely to help order society so that its institutions, organizations, and citizenry can work together harmoniously, regardless of any further moral aims of the law. Indeed, the highest courts have on occasion treated moral beliefs based on conscience or religious faith as grounds for making exceptions in the application of laws.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "The manner in which laws are applied sometimes takes into account the beliefs of the people governed by those laws.",
+      "B": "The law has as one of its functions the ordering of society but is devoid of moral aims.",
+      "C": "Actions based on religious belief or on moral conviction tend to receive the protection of the highest courts.",
+      "D": "The way a society is ordered by law should not reflect any moral convictions about the way society ought to be ordered.",
+      "E": "The best way to promote cooperation among a society's institutions, organizations, and citizenry is to institute order in that society by means of law."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "In Western economies, more energy is used to operate buildings than to operate transportation. Much of the decline in energy consumption since the oil crisis of 1973 is due to more efficient use of energy in homes and offices. New building technologies, which make lighting, heating, and ventilation systems more efficient, have cut billions of dollars from energy bills in the West. Since energy savings from these efficiencies save several billion dollars per year today, we can conclude that 50 to 100 years from now they will save more than $200 billion per year (calculated in current dollars).",
+    "questionStem": "On which one of the following assumptions does the argument rely?",
+    "answerChoices": {
+      "A": "Technology used to make buildings energy efficient will not become prohibitively expensive over the next century.",
+      "B": "Another oil crisis will occur in the next 50 to 100 years.",
+      "C": "Buildings will gradually become a less important consumer of energy than transportation.",
+      "D": "Energy bills in the West will be $200 billion lower in the next 50 to 100 years.",
+      "E": "Energy-efficient technologies based on new scientific principles will be introduced in the next 50 to 100 years."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Travel writer: A vacationer should choose an airline that has had an accident in the past 5 years. Though this may seem counterintuitive, studies show that the average airline has 1 accident every 5 years. So if an airline has had no accident during the past 5 years, the chances that the airline will have a crash are increased.",
+    "questionStem": "The flawed reasoning in the travel writer's argument is most similar to that in which one of the following arguments?",
+    "answerChoices": {
+      "A": "A tossed coin has come up heads 100 times in a row. It is therefore reasonable to believe that the coin is not fair, and thus that it is more likely to come up heads than tails when it is flipped again.",
+      "B": "If there are 10 adult male baboons in a troop, the chance of an average adult male baboon ascending to dominance in any given year is 1 in 10. Thus, if an adult male baboon has been in the troop more than 10 years and has never ascended to dominance, then the chance of his doing so is now better than 1 in 10.",
+      "C": "On a given day, an average resident's chance of being involved in a traffic accident in a certain city is 1 in 10,000. Therefore, the chance of Marty, a 5-year-old resident, being involved in a traffic accident in the city on any given day is also 1 in 10,000.",
+      "D": "The average adolescent who works full-time in a certain country makes about 76 cents for every dollar that an adult who works full-time there makes. Therefore, since in this country the average adolescent who works part-time makes less than the average adolescent who works full-time, the average adolescent who works part-time makes less than 76 cents for every dollar made by an employed adult.",
+      "E": "Though until recently this chess grandmaster had responded to opening move X with move Y half of the time, in the current tournament he has responded to move X with move Y 90 percent of the time. Thus, in the next game of the current tournament, he is 90 percent likely to respond to move X with move Y."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Method",
+    "questionDifficulty": 3,
+    "stimulus": "Phoebe: There have been many reported sightings of strange glowing lights, but a number of these sightings have a straightforward, natural explanation. They occurred clustered in time and location around the epicenters of three earthquakes, and so were almost certainly earthquake lights, a form of ball lightning caused by stresses in the ground.\nQuincy: I am skeptical that the association between the lights and the earthquakes is anything more than a coincidence. The theory that ground stresses related to earthquakes can cause any kind of lightning is extremely speculative.",
+    "questionStem": "In responding to Phoebe, Quincy",
+    "answerChoices": {
+      "A": "takes a correlation to be a causal relation",
+      "B": "challenges the accuracy of the data about sightings that Phoebe takes for granted",
+      "C": "criticizes Phoebe's explanation as unsubstantiated",
+      "D": "offers an explanation of the glowing lights different from Phoebe's",
+      "E": "accuses Phoebe of introducing irrelevant information"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Must Be False",
+    "questionDifficulty": 4,
+    "stimulus": "Those who have the ability to fully concentrate are always of above-average intelligence. Also, being successfully trained in speed-reading will usually be accompanied by an increased ability to concentrate.",
+    "questionStem": "If the statements above are true, then each of the following could be true except:",
+    "answerChoices": {
+      "A": "Some people can speed-read, and are able to fully concentrate, but are of below-average intelligence.",
+      "B": "All people who can speed-read are of above-average intelligence.",
+      "C": "Many people of above-average intelligence are unable to fully concentrate.",
+      "D": "Some people with little ability to concentrate are of below-average intelligence, but can speed-read.",
+      "E": "All people who can speed-read are able to concentrate to some extent."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "In order to maintain a high standard of living, a nation must maintain a functioning infrastructure. Major investment in the improvement of its infrastructure will, over time, reward a nation with a corresponding rise in its standard of living. Hence a nation whose standard of living is on the rise can be safely assumed to be a nation that has invested heavily in improving its infrastructure.",
+    "questionStem": "The reasoning in the argument is flawed because the argument fails to take into account that",
+    "answerChoices": {
+      "A": "a nation that fails to invest in its infrastructure need not experience any resulting decline in its standard of living",
+      "B": "many nations are unable to make the needed investments in infrastructure",
+      "C": "the rise in a nation's standard of living that is prompted by investment in its infrastructure may take a long time to occur",
+      "D": "a rise in a nation's standard of living need not be the result of major investments in its infrastructure",
+      "E": "nations often experience short-term crises that require that resources be diverted to purposes other than the maintenance and improvement of infrastructure"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Method",
+    "questionDifficulty": 3,
+    "stimulus": "Yang: Yeast has long been known to be a leaven, that is, a substance used in baking to make breads rise. Since biblical evidence ties the use of leavens to events dating back to 1200 B.C., we can infer that yeast was already known to be a leaven at that time.\nCampisi: I find your inference unconvincing; several leavens other than yeast could have been known in 1200 B.C.",
+    "questionStem": "Campisi counters Yang's argument by",
+    "answerChoices": {
+      "A": "suggesting that an alternative set of evidence better supports Yang's conclusion",
+      "B": "questioning the truth of a presumption underlying Yang's argument",
+      "C": "denying the truth of Yang's conclusion without considering the reason given for that conclusion",
+      "D": "pointing out that the premises of Yang's argument more strongly support a contrary conclusion",
+      "E": "calling into question the truth of the evidence presented in Yang's argument"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Researcher: People with certain personality disorders have more theta brain waves than those without such disorders. But my data show that the amount of one's theta brain waves increases while watching TV. So watching too much TV increases one's risk of developing personality disorders.",
+    "questionStem": "A questionable aspect of the reasoning above is that it",
+    "answerChoices": {
+      "A": "uses the phrase \"personality disorders\" ambiguously",
+      "B": "fails to define the phrase \"theta brain waves\"",
+      "C": "takes correlation to imply a causal connection",
+      "D": "draws a conclusion from an unrepresentative sample of data",
+      "E": "infers that watching TV is a consequence of a personality disorder"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 4,
+    "stimulus": "The authorship of the Iliad and the Odyssey has long been debated. Some traditional evidence suggests that Homer created both works, or at least large portions of them, but there is equally forceful evidence that he had nothing to do with either. Since there is no overwhelming evidence for either claim, we ought to accept the verdict of tradition that Homer is the principal author of both works.",
+    "questionStem": "Which one of the following most accurately expresses the principle underlying the argumentation above?",
+    "answerChoices": {
+      "A": "If there is no overwhelming evidence for or against a hypothesis, then one should suspend judgment as to its truth.",
+      "B": "If a hypothesis goes against tradition, one should not accept the hypothesis without overwhelming evidence.",
+      "C": "If there is no overwhelming evidence for or against a hypothesis, one should believe it.",
+      "D": "One should accept the authority of tradition only if one has nontraditional evidence for the traditional hypothesis.",
+      "E": "One should defer to the authority of tradition if two or more hypotheses conflict with it."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Midlevel managers at large corporations are unlikely to suggest reductions in staff in their own departments even when these departments are obviously overstaffed.",
+    "questionStem": "Each of the following, if true, supports the claim above except:",
+    "answerChoices": {
+      "A": "The compensation paid to midlevel managers is greater when they supervise more workers.",
+      "B": "Midlevel managers have less work to do when their departments are overstaffed.",
+      "C": "Staff morale and productivity often suffer when workers are laid off.",
+      "D": "Departmental workloads at most large corporations increase and decrease significantly and unpredictably.",
+      "E": "Many large corporations allow managers to offer early retirement as a means of reducing staff."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Editorialist: Some people propose that, to raise revenues and encourage conservation, our country's taxes on oil, gasoline, and coal should be increased. Such a tax increase, however, would do more harm than good. By raising energy costs, the tax increase would decrease our competitiveness with other countries. Many families would be unfairly burdened with higher transportation costs. Finally, by reducing the demand for energy, the tax increase would reduce the number of energy production jobs.",
+    "questionStem": "Each of the following, if true, would weaken the editorialist's argument except:",
+    "answerChoices": {
+      "A": "The editorialist's country's budget deficit will decrease if the energy tax increase is implemented, thus benefiting the economy.",
+      "B": "Higher gasoline prices tend to lead to a cleaner environment, because people do less nonessential driving.",
+      "C": "The proposed tax increase would be larger for some energy sources than for others.",
+      "D": "Higher gasoline prices will encourage people to carpool, which will reduce individual transportation costs.",
+      "E": "The government would use the increase in tax revenue to create many more jobs than would be lost in the energy production sector."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Reporter: A team of scientists has recently devised a new test that for the first time accurately diagnoses autism in children as young as 18 months old. When used to evaluate 16,000 children at their 18-month checkup, the test correctly diagnosed all 10 children later confirmed to be autistic, though it also wrongly identified 2 children as autistic. Autistic children can therefore now benefit much earlier in life than before from the treatments already available.",
+    "questionStem": "Which one of the following is an assumption on which the reporter's argument depends?",
+    "answerChoices": {
+      "A": "No test intended for diagnosing autism at such an early age existed before the new test was devised.",
+      "B": "A diagnostic test that sometimes falsely gives a positive diagnosis can still provide a reasonable basis for treatment decisions.",
+      "C": "The new test can be used to evaluate all children, regardless of the level of development of their verbal skills.",
+      "D": "Those children incorrectly identified as autistic will not be adversely affected by treatments aimed at helping autistic children.",
+      "E": "There was no reliable evidence that autism could affect children so young until the advent of the new test."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Tallulah: The columnist attributes the decline of interest in novels to consumerism, technology, and the laziness of people who prefer watching television to reading a novel. However, in reaching this conclusion, the columnist has overlooked important evidence. It is surely relevant that contemporary fiction is frequently of poor quality indeed, much of it is meaningless and depressing-whereas many good newspapers, magazines, professional journals, and books of other types are currently available.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of Tallulah's argument?",
+    "answerChoices": {
+      "A": "Contemporary fiction is unpopular because it is meaningless, depressing, and of poor overall quality.",
+      "B": "The columnist's claim that novels are being displaced by consumerism, technology, and television is false.",
+      "C": "The view expressed by the columnist was formed without considering all of the pertinent evidence.",
+      "D": "People read as much as they used to, but most of the works they now read are not novels.",
+      "E": "A large number of high-quality newspapers, magazines, professional journals, and nonfiction books are currently published."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Renting cars from dealerships is less expensive than renting cars from national rental firms. But to take advantage of dealership rates, tourists must determine which local dealerships offer rentals, and then pay for long taxi rides between the airport and those dealerships. So renting from dealerships rather than national rental firms is generally more worthwhile for local residents than for tourists.",
+    "questionStem": "Each of the following, if true, strengthens the argument except:",
+    "answerChoices": {
+      "A": "To encourage future business, many car dealerships drop off and pick up rental cars for local residents at no charge.",
+      "B": "Tourists renting cars from national rental firms almost never need to pay for taxi rides to or from the airport.",
+      "C": "Travel agents generally are unable to inform tourists of which local car dealerships offer rentals.",
+      "D": "Many local residents know of local car dealerships that offer low-priced rentals.",
+      "E": "For local residents, taxi rides to car dealerships from their homes or workplaces are usually no less expensive than taxi rides to national rental firms."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "On some hot days the smog in Hillview reaches unsafe levels, and on some hot days the wind blows into Hillview from the east. Therefore, on some days when the wind blows into Hillview from the east, the smog in Hillview reaches unsafe levels.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "mistakes a condition that sometimes accompanies unsafe levels of smog for a condition that necessarily accompanies unsafe levels of smog",
+      "B": "fails to recognize that one set might have some members in common with each of two others even though those two other sets have no members in common with each other",
+      "C": "uses the key term \"unsafe” in one sense in a premise and in another sense in the conclusion",
+      "D": "contains a premise that is implausible unless the conclusion is presumed to be true",
+      "E": "infers a particular causal relation from a correlation that could be explained in a variety of other ways"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Labor representative: Social historians have shown conclusively that if workers strike when the working conditions at their jobs are poor, those conditions usually significantly improve after five years. Although workers in this industry are familiar with this fact, they nonetheless refuse to strike even though their working conditions are poor.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described by the labor representative?",
+    "answerChoices": {
+      "A": "Until recently it was widely believed that strikes do not generally improve working conditions.",
+      "B": "Most factories in this industry change ownership every two years.",
+      "C": "Working conditions in many other industries are worse than conditions in this industry.",
+      "D": "Workers typically plan to work in this industry only three years.",
+      "E": "Wages in this industry have increased each year."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Paleontologists recently discovered teeth from several woolly mammoths on an isolated Arctic island where no mammoth fossils had previously been found. The teeth were 25 percent smaller on average than adult mammoth teeth that have been found elsewhere, but they are clearly adult mammoth teeth. Therefore, provided that the teeth are representative of their respective populations, woolly mammoths that lived on the island were smaller on average than those that lived elsewhere.",
+    "questionStem": "Which one of the following, if assumed, would allow the conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "Neither tooth size nor overall body size is completely uniform among adult members of most species, including woolly mammoths.",
+      "B": "The tooth wear that naturally occurs in many animals over the course of their adult years did not result in a significant change in tooth size among adult woolly mammoths as they aged.",
+      "C": "Unusually small mammoth teeth found at locations other than the island have always been those of juvenile mammoths rather than adult mammoths.",
+      "D": "Tooth size among adult woolly mammoths was always directly proportional to the overall size of those mammoths.",
+      "E": "Woolly mammoths of the kind that lived on the island had the same number and variety of teeth as mammoths that lived elsewhere had."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Diplomat: Every major war in the last 200 years has been preceded by a short, sharp increase in the acquisition of weapons by the nations that subsequently became participants in those conflicts. Clearly, therefore, arms control agreements will preserve peace.",
+    "questionStem": "Of the following, which one most accurately describes a reasoning flaw in the diplomat's argument?",
+    "answerChoices": {
+      "A": "The argument infers, merely from the claim that events of one type have for a long time consistently preceded events of a second type, that an event of the second type will not occur unless an event of the first type occurs.",
+      "B": "The argument reasons that, simply because weapons are used in war, a rapid, dramatic increase in the acquisition of weapons will always lead to war.",
+      "C": "The argument draws a conclusion that simply restates a claim presented in support of that conclusion.",
+      "D": "The argument fails to consider that a short, sharp increase in the acquisition of weapons by a nation may be a response to the increased armament of neighboring nations.",
+      "E": "The argument fails to consider that some of the minor wars that have occurred in the last 200 years may have been preceded by rapid increases in the acquisition of weapons by the nations that subsequently became participants in those wars."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "Newscaster: In order for the public to participate in a meaningful way in the current public policy debate, one requirement is that the issues be stated in terms the public can understand. The mayor's speech has just stated these issues in such terms, so now the public at least might be able to participate in a meaningful way in the current public policy debate.",
+    "questionStem": "Which one of the following most closely parallels the newscaster's argument in its reasoning?",
+    "answerChoices": {
+      "A": "One must know Russian if one is to read Dostoyevski's original text of Crime and Punishment. Rachel has never learned Russian; therefore she cannot read the original text of Crime and Punishment.",
+      "B": "In order to reach one's goals, one must be able to consider these goals carefully. Laura has reached her goals, so she must have been able to consider those goals carefully.",
+      "C": "One cannot confuse the majority of one's students if one wants to be a good teacher. Hugo wants to be a good teacher; therefore, he might be able to avoid confusing the majority of his students.",
+      "D": "In order to discover the meaning of certain seldom-used words, one must use a good dictionary. Paul has used a good dictionary, so Paul must have discovered the meaning of those words.",
+      "E": "One must at least have warm clothing if one is to survive in a very cold climate. Jerome has obtained warm clothing; therefore, he might be able to survive in a very cold climate."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Most serious students are happy students, and most serious students go to graduate school. Furthermore, all students who go to graduate school are overworked.",
+    "questionStem": "Which one of the following can be properly inferred from the statements above?",
+    "answerChoices": {
+      "A": "Most overworked students are happy students.",
+      "B": "Some happy students are overworked.",
+      "C": "All overworked students are serious students.",
+      "D": "Some unhappy students go to graduate school.",
+      "E": "All serious students are overworked."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Editorialist: Some people argue that highway speed limits should be increased to reflect the actual average speeds of highway drivers, which are currently 10 to 20 percent higher than posted speed limits. Any such increase would greatly decrease highway safety, however; as past experience teaches, higher average highway speeds would result, since even though most drivers who currently violate posted speed limits would obey higher ones, almost all drivers who obey current speed limits would likely increase their speed.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the editorialist's argument?",
+    "answerChoices": {
+      "A": "Some drivers who obey current speed limits would not change their speeds after the introduction of the new speed limits.",
+      "B": "Uniformity of speeds among vehicles is more important for highway safety than is a low average highway speed.",
+      "C": "Most drivers who drive 10 to 20 percent faster than current speed limits have never been involved in a highway accident.",
+      "D": "Some drivers who violate current speed limits would also violate higher speed limits.",
+      "E": "Most drivers who violate current speed limits determine their speeds by what they believe to be safe in the situation."
+    },
+    "correctAnswer": "B"
+  }
+]

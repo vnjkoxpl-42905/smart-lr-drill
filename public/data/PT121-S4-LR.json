@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "While 65 percent of the eligible voters who were recently polled favor Perkins over Samuels in the coming election, the results of that poll are dubious because it was not based on a representative sample. Given that Perkins predominantly advocates the interests of the upper-middle class and that the survey was conducted at high-priced shopping malls, it is quite probable that Perkins's supporters were overrepresented.",
+    "questionStem": "Which one of the following statements most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "The poll was intentionally designed to favor Perkins over Samuels.",
+      "B": "Samuels's supporters believe that they were probably not adequately represented in the poll.",
+      "C": "The poll's results probably do not accurately represent the opinions of the voters in the coming election.",
+      "D": "Samuels is quite likely to have a good chance of winning the coming election.",
+      "E": "Those who designed the poll should have considered more carefully where to conduct the survey."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Sleep research has demonstrated that sleep is characterized by periods of different levels of brain activity. People experience dreams during only one of these periods, known as REM (rapid eye movement) sleep. Test subjects who are chronically deprived of REM sleep become irritable during waking life. This shows that REM sleep relieves the stresses of waking life.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Test subjects who are chronically deprived of non-REM sleep also become irritable during waking life.",
+      "B": "Chronically having bad dreams can cause stress, but so can chronically having pleasant but exciting dreams.",
+      "C": "During times of increased stress, one's REM sleep is disturbed in a way that prevents one from dreaming.",
+      "D": "Only some people awakened during REM sleep can report the dreams they were having just before being awakened.",
+      "E": "Other factors being equal, people who normally have shorter periods of REM sleep tend to experience more stress."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Since 1989 the importation of ivory from African elephants into the United States and Canada has been illegal, but the importation of ivory from the excavated tusks of ancient mammoths remains legal in both countries. Following the ban, there was a sharp increase in the importation of ivory that importers identified as mammoth ivory. In 1989 customs officials lacked a technique for distinguishing elephant ivory from that of mammoths. Just after such a technique was invented and its use by customs officials became widely known, there was a dramatic decrease in the amount of ivory presented for importation into the U.S. and Canada that was identified by importers as mammoth ivory.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Customs officials still cannot reliably distinguish elephant ivory from mammoth ivory.",
+      "B": "Most of the ivory currently imported into the U.S. and Canada comes from neither African elephants nor mammoths.",
+      "C": "In the period since the technique for distinguishing elephant ivory from mammoth ivory was implemented, the population of African elephants has declined.",
+      "D": "Much of the ivory imported as mammoth ivory just after the ban on ivory from African elephants went into effect was actually elephant ivory.",
+      "E": "Shortly after the importation of ivory from African elephants was outlawed, there was a sharp increase in the total amount of all ivory presented for importation into the U.S. and Canada."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "My suspicion that there is some truth to astrology has been confirmed. Most physicians I have talked to believe in it.",
+    "questionStem": "The flawed pattern of reasoning in the argument above is most similar to that in which one of the following?",
+    "answerChoices": {
+      "A": "Professor Smith was convicted of tax evasion last year. So I certainly wouldn't give any credence to Smith's economic theories.",
+      "B": "I have come to the conclusion that several governmental social programs are wasteful. This is because most of the biology professors I have discussed this with think that this is true.",
+      "C": "Quantum mechanics seems to be emerging as the best physical theory we have today. Most prominent physicists subscribe to it.",
+      "D": "Most mechanical engineers I have talked to say that it is healthier to refrain from eating meat. So most mechanical engineers are vegetarians.",
+      "E": "For many years now, many people, some famous, have reported that they have seen or come in contact with unidentified flying objects. So there are probably extraterrestrial societies trying to contact us."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "The best explanation for Mozart's death involves the recently detected fracture in his skull. The crack, most likely the result of an accident, could have easily torn veins in his brain, allowing blood to leak into his brain. When such bleeding occurs in the brain and the blood dries, many of the brain's faculties become damaged, commonly, though not immediately, leading to death. This explanation of Mozart's death is bolstered by the fact that the fracture shows signs of partial healing.",
+    "questionStem": "The claim that the fracture shows signs of partial healing figures in the argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "It shows that Mozart's death could have been avoided.",
+      "B": "It shows that the fracture did not occur after Mozart's death.",
+      "C": "It shows that the dried blood impaired Mozart's brain's faculties.",
+      "D": "It shows that Mozart's death occurred suddenly.",
+      "E": "It suggests that Mozart's death was accidental."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "In the first phase of the Industrial Revolution, machines were invented whose main advantage was that they worked faster than human workers. This technology became widely used because it was economically attractive; many unskilled workers could be replaced by just a few skilled workers. Today managers are looking for technology that will allow them to replace highly paid skilled workers with a smaller number of less-skilled workers.",
+    "questionStem": "The examples presented above best illustrate which one of the following propositions?",
+    "answerChoices": {
+      "A": "Employers utilize new technology because it allows them to reduce labor costs.",
+      "B": "Workers will need to acquire more education and skills to remain competitive in the labor market.",
+      "C": "In seeking employment, highly skilled workers no longer have an advantage over less-skilled workers.",
+      "D": "Technology eliminates many jobs but also creates just as many jobs.",
+      "E": "Whereas technological innovations were once concentrated in heavy industry, they now affect all industries."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "For many types of crops, hybrid strains have been developed that have been found in test plantings to produce significantly higher yields than were produced by traditional nonhybrid strains of those crops planted alongside them. However, in many parts of the world where farmers have abandoned traditional nonhybrid strains in favor of the hybrid strains, crop yields have not increased.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy?",
+    "answerChoices": {
+      "A": "Most farmers who plant the hybrid strains of their crops have larger farms than do farmers who continue to plant traditional nonhybrid strains of the same crops.",
+      "B": "Hybrid strains of crops produced higher yields in some areas than did nonhybrid strains in those areas.",
+      "C": "The hybrid strains were tested under significantly better farming conditions than are found in most areas where farmers grow those strains.",
+      "D": "Many traditional nonhybrid strains of plants produce crops that taste better and thus sell better than the hybrid strains of those crops.",
+      "E": "Many governments subsidize farmers who plant only hybrid strains of staple crops."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "This stamp is probably highly valuable, since it exhibits a printing error. The most important factors in determining a stamp's value, assuming it is in good condition, are its rarity and age. This is clearly a fine specimen, and it is quite old as well.",
+    "questionStem": "The conclusion is properly inferred if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "The older a stamp is, the more valuable it is.",
+      "B": "Printing errors are always confined to a few individual stamps.",
+      "C": "Most stamps with printing errors are already in the hands of collectors.",
+      "D": "Rarity and age are of equal importance to a stamp's value.",
+      "E": "Even old and rare stamps are usually not valuable if they are in poor condition."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "A recent study of several hundred female physicians showed that their tendency to develop coronary disease was inversely proportional to their dietary intake of two vitamins, folate and B6. The researchers concluded that folate and B6 inhibit the development of heart disease in women.",
+    "questionStem": "Which one of the following would, if true, most weaken the researchers' conclusion?",
+    "answerChoices": {
+      "A": "The foods that contain significant amounts of the vitamins folate and B6 also contain significant amounts of nonvitamin nutrients that inhibit heart disease.",
+      "B": "It is very unlikely that a chemical compound would inhibit coronary disease in women but not in men.",
+      "C": "Physicians are more likely than nonphysicians to know a great deal about the link between diet and health.",
+      "D": "The physicians in the study had not been screened in advance to ensure that none had preexisting heart conditions.",
+      "E": "The vitamins folate and B6 are present only in very small amounts in most foods."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "The proposed coal-burning electric plant should be approved, since no good arguments have been offered against it. After all, all the arguments against it have been presented by competing electricity producers.",
+    "questionStem": "Which one of the following is an assumption on which the reasoning above depends?",
+    "answerChoices": {
+      "A": "The competing electricity producers would stand to lose large amounts of revenue from the building of the coal-burning electric plant.",
+      "B": "If a person's arguments against a proposal are defective, then that person has a vested interest in seeing that the proposal is not implemented.",
+      "C": "Approval of the coal-burning electric plant would please coal suppliers more than disapproval would please suppliers of fuel to the competing electricity producers.",
+      "D": "If good arguments are presented for a proposal, then that proposal should be approved.",
+      "E": "Arguments made by those who have a vested interest in the outcome of a proposal are not good arguments."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Psychiatrist: While the first appearance of a phobia is usually preceded by a traumatizing event, not everyone who is traumatized by an event develops a phobia. Furthermore, many people with phobias have never been traumatized. These two considerations show that traumatizing events do not contribute to the occurrence of phobias.",
+    "questionStem": "The reasoning in the psychiatrist's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "treats the cause of the occurrence of a type of phenomenon as an effect of phenomena of that type",
+      "B": "presumes, without providing justification, that some psychological events have no causes that can be established by scientific investigation",
+      "C": "builds the conclusion drawn into the support cited for that conclusion",
+      "D": "takes for granted that a type of phenomenon contributes to the occurrence of another type of phenomenon only if phenomena of these two types are invariably associated",
+      "E": "derives a causal connection from mere association when there is no independent evidence of causal connection"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Some species are called “indicator species\" because the loss of a population of such a species serves as an early warning of problems arising from pollution. Environmentalists tracking the effects of pollution have increasingly paid heed to indicator species; yet environmentalists would be misguided if they attributed the loss of a population to pollution in all cases. Though declines in population often do signal environmental degradation, they are just as often a result of the natural evolution of an ecosystem. We must remember that, in nature, change is the status quo.",
+    "questionStem": "Which one of the following most accurately expresses the argument's conclusion?",
+    "answerChoices": {
+      "A": "Environmentalists sometimes overreact to the loss of a specific population.",
+      "B": "The loss of a specific population should not always be interpreted as a sign of environmental degradation.",
+      "C": "Environmentalists' use of indicator species in tracking the effects of pollution is often problematic.",
+      "D": "The loss of a specific population is often the result of natural changes in an ecosystem and in such cases should not be resisted.",
+      "E": "The loss of a specific population as a result of pollution is simply part of nature's status quo."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Columnist: Tagowa's testimony in the Pemberton trial was not heard outside the courtroom, so we cannot be sure what she said. Afterward, however, she publicly affirmed her belief in Pemberton's guilt. Hence, since the jury found Pemberton not guilty, we can conclude that not all of the jury members believed Tagowa's testimony.",
+    "questionStem": "Which one of the following describes a flaw in the columnist's reasoning?",
+    "answerChoices": {
+      "A": "It overlooks that a witness may think that a defendant is guilty even though that witness's testimony in no way implicates the defendant.",
+      "B": "It confuses facts about what certain people believe with facts about what ought to be the case.",
+      "C": "It presumes, without providing warrant, that juries find defendants guilty only if those defendants committed the crimes with which they are charged.",
+      "D": "It presumes, without providing warrant, that a jury's finding a defendant not guilty is evidence of dishonesty on the part of someone who testified against the defendant.",
+      "E": "It fails to consider that jury members sometimes disagree with each other about the significance of a particular person's testimony."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Must be True",
+    "questionDifficulty": 2,
+    "stimulus": "A new tax law aimed at encouraging the reforestation of cleared land in order to increase the amount of forested land in a particular region offers lumber companies tax incentives for each unit of cleared land they reforest. One lumber company has accordingly reduced its tax liability by purchasing a large tract of cleared land in the region and reforesting it. The company paid for the purchase by clearing a larger tract of land in the region, a tract that it had planned to hold in long-term reserve.",
+    "questionStem": "If the statements above are true, which one of the following must be true about the new tax law?",
+    "answerChoices": {
+      "A": "It is a failure in encouraging the reforestation of cleared land in the region.",
+      "B": "It will have no immediate effect on the amount of forested land in the region.",
+      "C": "It will ultimately cause lumber companies to plant trees on approximately as much land as they harvest in the region.",
+      "D": "It can provide a motivation for companies to act in a manner contrary to the purpose of the law while taking advantage of the tax incentives.",
+      "E": "It will provide lumber companies with a tax incentive that will ultimately be responsible for a massive decrease in the number of mature forests in the region."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Trustee: The recent exhibit at the art museum was extensively covered by the local media, and this coverage seems to have contributed to the record-breaking attendance it drew. If the attendance at the exhibit had been low, the museum would have gone bankrupt and closed permanently, so the museum could not have remained open had it not been for the coverage from the local media.",
+    "questionStem": "The reasoning in the trustee's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "confuses a necessary condition for the museum's remaining open with a sufficient condition for the museum's remaining open",
+      "B": "takes for granted that no previous exhibit at the museum had received such extensive media coverage",
+      "C": "takes for granted that most people who read articles about the exhibit also attended the exhibit",
+      "D": "fails to address the possibility that the exhibit would have drawn enough visitors to prevent bankruptcy even without media coverage",
+      "E": "presupposes the very conclusion that it is trying to prove"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Economist: A tax is effective if it raises revenue and burdens all and only those persons targeted by the tax. A tax is ineffective, however, if it does not raise revenue and it costs a significant amount of money to enforce.",
+    "questionStem": "Which one of the following inferences is most strongly supported by the principles stated by the economist?",
+    "answerChoices": {
+      "A": "The tax on cigarettes burdens most, but not all, of the people targeted by it. Thus, if it raises revenue, the tax is effective.",
+      "B": "The tax on alcohol raises a modest amount of revenue, but it costs a significant amount of money to enforce. Thus, the tax is ineffective.",
+      "C": "The tax on gasoline costs a significant amount of money to enforce. Thus, if it does not raise revenue, the tax is ineffective.",
+      "D": "The tax on coal burdens all of the people targeted by it, and this tax does not burden anyone who is not targeted by it. Thus, the tax is effective.",
+      "E": "The tax on steel does not cost a significant amount of money to enforce, but it does not raise revenue either. Thus, the tax is ineffective."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "A large amount of rainfall in April and May typically leads to an increase in the mosquito population and thus to an increased threat of encephalitis. People cannot change the weather. Thus people cannot decrease the threat of encephalitis.",
+    "questionStem": "The reasoning in the argument above is flawed in that the argument",
+    "answerChoices": {
+      "A": "takes for granted that because one event precedes another the former must be the cause of the latter",
+      "B": "presumes, without providing justification, that a certain outcome would be desirable",
+      "C": "ignores the possibility that a certain type of outcome is dependent on more than one factor",
+      "D": "takes for granted that a threat that is aggravated by certain factors could not occur in the absence of those factors",
+      "E": "draws a conclusion about what is possible from a premise about what is actually the case"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Must be False",
+    "questionDifficulty": 3,
+    "stimulus": "Leadership depends as much on making one's followers aware of their own importance as it does on conveying a vivid image of a collective goal. Only if they are convinced both that their efforts are necessary for the accomplishment of this goal, and that these efforts, if expended, will actually achieve it, will people follow a leader.",
+    "questionStem": "If all of the statements above are true, then which one of the following cannot be true?",
+    "answerChoices": {
+      "A": "Some leaders who convince their followers of the necessity of their efforts in achieving a goal fail, nevertheless, to lead them to the attainment of that goal.",
+      "B": "One who succeeds in conveying to one's followers the relationship between their efforts and the attainment of a collective goal succeeds in leading these people to this goal.",
+      "C": "Only if one is a leader must one convince people of the necessity of their efforts for the attainment of a collective goal.",
+      "D": "Sometimes people succeed in achieving a collective goal without ever having been convinced that by trying to do so they would succeed.",
+      "E": "Sometimes people who remain unsure of whether their efforts are needed for the attainment of a collective goal nevertheless follow a leader."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "Fifty chronic insomniacs participated in a one-month study conducted at an institute for sleep disorders. Half were given a dose of a new drug and the other half were given a placebo every night before going to bed at the institute. Approximately 80 percent of the participants in each group reported significant relief from insomnia during the first two weeks of the study. But in each group, approximately 90 percent of those who had reported relief claimed that their insomnia had returned during the third week of the study.",
+    "questionStem": "Which one of the following, if true, most helps to explain all the data from the study?",
+    "answerChoices": {
+      "A": "Because it is easy to build up a tolerance to the new drug, most people will no longer experience its effects after taking it every night for two weeks.",
+      "B": "The psychological comfort afforded by the belief that one has taken a sleep-promoting drug is enough to prevent most episodes of insomnia.",
+      "C": "The new drug is very similar in chemical composition to another drug, large doses of which have turned out to be less effective than expected.",
+      "D": "Most insomniacs sleep better in a new environment, and the new drug has no effect on an insomniac's ability to sleep.",
+      "E": "Some insomniacs cannot reliably determine how much sleep they have had or how well they have slept."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Advertisement: The Country Classic is the only kind of car in its class that offers an antilock braking system that includes TrackAid. An antilock braking system keeps your wheels from locking up during hard braking, and TrackAid keeps your rear wheels from spinning on slippery surfaces. So if you are a safety-conscious person in the market for a car in this class, the Country Classic is the only car for you.",
+    "questionStem": "The advertisement is misleading if which one of the following is true?",
+    "answerChoices": {
+      "A": "All of the cars that are in the same class as the Country Classic offer some kind of antilock braking system.",
+      "B": "Most kinds of cars that are in the same class as the Country Classic are manufactured by the same company that manufactures the Country Classic.",
+      "C": "Without an antilock braking system, the wheels of the Country Classic and other cars in its class are more likely to lock up during hard braking than they are to spin on slippery surfaces.",
+      "D": "Other cars in the same class as the Country Classic offer an antilock braking system that uses a method other than TrackAid to prevent rear wheels from spinning on slippery surfaces.",
+      "E": "The Country Classic is more expensive than any other car in its class."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Sociologist: Traditional norms in our society prevent sincerity by requiring one to ignore unpleasant realities and tell small lies. But a community whose members do not trust one another cannot succeed. So, if a community is to succeed, its members must be willing to face unpleasant realities and speak about them honestly.",
+    "questionStem": "The sociologist's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Sincerity is required if community members are to trust each other.",
+      "B": "The more sincere and open community members are, the more likely that community is to succeed.",
+      "C": "A community sometimes can succeed even if its members subscribe to traditional norms.",
+      "D": "Unless a community's members are willing to face unpleasant realities, they cannot be sincere.",
+      "E": "A community's failure is often caused by its members' unwillingness to face unpleasant realities and to discuss them honestly."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "If there is an election, you can either vote or not. If you vote, you have the satisfaction of knowing you influenced the results of the election; if you do not vote, you have no right to complain about the results. So, following an election, either you will have the satisfaction of knowing you influenced its results or you will have no right to complain.",
+    "questionStem": "The reasoning in which one of the following most closely resembles that in the argument above?",
+    "answerChoices": {
+      "A": "When you rent a car, you can either take out insurance or not. If you take out insurance you are covered, but if you are uninsured, you are personally liable for any costs incurred from an accident. So in case of an accident, you will be better off if you are insured.",
+      "B": "If you go for a walk, when you are finished either you will feel relaxed or you will not. If you feel relaxed, then your muscles will likely not be sore the next day, though your muscles will more likely become conditioned faster if they do feel sore. Therefore, either your muscles will feel sore, or they will become better conditioned.",
+      "C": "If you attend school, you will find the courses stimulating or you will not. If your teachers are motivated, you will find the courses stimulating. If your teachers are not motivated, you will not. So either your teachers are motivated, or their courses are not stimulating.",
+      "D": "If you use a computer, its messages are either easily readable or not. If the messages are easily readable, they are merely password protected. If they are not easily readable, they are electronically encrypted. So any message on the computer you use is either password protected or electronically encrypted.",
+      "E": "When manufacturers use a natural resource, they are either efficient or inefficient. If they are inefficient, the resource will be depleted quickly. If they are efficient, the resource will last much longer. So either manufacturers are efficient or they should be fined."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Company president: Our consultants report that, in general, the most efficient managers have excellent time management skills. Thus, to improve productivity I recommend that we make available to our middle-level managers a seminar to train them in techniques of time management.",
+    "questionStem": "Each of the following, if true, would weaken the support for the company president's recommendation except:",
+    "answerChoices": {
+      "A": "The consultants use the same criteria to evaluate managers' efficiency as they do to evaluate their time management skills.",
+      "B": "Successful time management is more dependent on motivation than on good technique.",
+      "C": "Most managers at other companies who have attended time management seminars are still unproductive.",
+      "D": "Most managers who are already efficient do not need to improve their productivity.",
+      "E": "Most managers who are efficient have never attended a time management seminar."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "Many Seychelles warblers of breeding age forgo breeding, remaining instead with their parents and helping to raise their own siblings. This behavior, called cooperative breeding, results from the scarcity of nesting territory for the birds on the tiny island that, until recently, was home to the world's population of Seychelles warblers. Yet when healthy warblers were transplanted to a much larger neighboring island as part of an experiment, most of those warblers maintained a pattern of cooperative breeding.",
+    "questionStem": "Which one of the following, if true, most helps to explain the result of the experiment?",
+    "answerChoices": {
+      "A": "Many of the Seychelles warblers that were transplanted to the neighboring island had not yet reached breeding age.",
+      "B": "The climate of the island to which Seychelles warblers were transplanted was the same as that of the warblers' native island.",
+      "C": "Most of the terrain on the neighboring island was not of the type in which Seychelles warblers generally build their nests.",
+      "D": "Cooperative breeding in species other than the Seychelles warbler often results when the environment cannot sustain a rise in the population.",
+      "E": "The Seychelles warblers had fewer competitors for nesting territory on the island to which they were transplanted than on their native island."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Therapist: In a recent study, researchers measured how quickly 60 different psychological problems waned as a large, diverse sample of people underwent weekly behavioral therapy sessions. About 75 percent of the 60 problems consistently cleared up within 50 weeks of therapy. This shows that 50 weekly behavioral therapy sessions are all that most people need.",
+    "questionStem": "The therapist's argument is logically most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "takes for granted that there are no psychological problems that usually take significantly longer to clear up than the 60 psychological problems studied",
+      "B": "fails to address the possibility that any given one of the 60 psychological problems studied might afflict most people",
+      "C": "takes for granted that no one suffers from more than one of the 60 psychological problems studied",
+      "D": "fails to address the possibility that some forms of therapy have never been proven to be effective as treatments for psychological problems",
+      "E": "takes for granted that the sample of people studied did not have significantly more psychological problems, on average, than the population as a whole"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT121",
+    "sectionNumber": 4,
+    "questionNumber": 26,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Researcher: It is commonly believed that species belonging to the same biological order, such as rodents, descended from a single common ancestor. However, I compared the genetic pattern in 3 rodent species—guinea pigs, rats, and mice—as well as in 13 nonrodent mammals, and found that while rats and mice are genetically quite similar, the genetic differences between guinea pigs and mice are as great as those between mice and some nonrodent species. Thus, despite their similar physical form, guinea pigs stem from a separate ancestor.",
+    "questionStem": "Which one of the following, if true, most seriously undermines the researcher's reasoning?",
+    "answerChoices": {
+      "A": "The researcher examined the genetic material of only 3 of over 2,000 species of rodents.",
+      "B": "Some pairs of species not having a common ancestor are genetically more similar to each other than are some pairs that do have a common ancestor.",
+      "C": "The researcher selected nonrodent species that have the specific cell structures she wanted to analyze genetically, though many nonrodent mammals lack these cell structures.",
+      "D": "For some genuine biological orders, the most recent common ancestor dates from later epochs than does the most recent common ancestor of other biological orders.",
+      "E": "Peculiarities of body structure, such as distinctive teeth and olfactory structures, are shared by all rodents, including guinea pigs."
+    },
+    "correctAnswer": "B"
+  }
+]

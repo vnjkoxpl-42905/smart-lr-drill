@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Editorial: Clearly, during the past two years, the unemployment situation in our city has been improving. Studies show that the number of unemployed people who are actively looking for jobs has steadily decreased during that period.",
+    "questionStem": "The editorial's reasoning is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that the government is at least partly responsible for the improvement in the employment situation",
+      "B": "relies on data from a period that is too short to justify an inference about a general trend",
+      "C": "fails to take into account the possibility that many unemployed workers who still desire jobs may have stopped looking for jobs",
+      "D": "fails to take into account that the sorts of governmental efforts that reduce unemployment may not be effective in creating more high-paying jobs",
+      "E": "ignores other economic indicators, which may not have improved during the past two years"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Evaluate",
+    "questionDifficulty": 1,
+    "stimulus": "Eating garlic reduces the levels of cholesterol and triglycerides in the blood and so helps reduce the risk of cardiovascular disease. Evidence that eating garlic reduces these levels is that a group of patients taking a garlic tablet each day for four months showed a 12 percent reduction in cholesterol and a 17 percent reduction in triglycerides; over the same period, a group of similar patients taking a medically inert tablet showed only a 2 percent reduction in triglycerides and a 3 percent reduction in cholesterol.",
+    "questionStem": "It would be most important to determine which one of the following in evaluating the argument?",
+    "answerChoices": {
+      "A": "whether the garlic tablets are readily available to the public",
+      "B": "what the diets of the two groups were during the period",
+      "C": "what effect taking the garlic tablets each day for a period of less than four months had on the levels of cholesterol and triglycerides",
+      "D": "whether large amounts of garlic are well tolerated by all patients",
+      "E": "whether the manufacturer of the garlic tablets cites the study in its advertising"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "Educator: If there is a crisis in education today, it is one of maintaining quality. People love to reduce serious learning to degrees and certificates. But one also can obtain these credentials by plodding through courses without ever learning much of value. When that happens, the credentials one receives are almost meaningless.",
+    "questionStem": "If the educator's statements are true, then which one of the following must be true?",
+    "answerChoices": {
+      "A": "Increasingly, institutions are granting meaningless degrees and certificates.",
+      "B": "It has become easier for students to complete their coursework without learning anything of importance.",
+      "C": "Educational institutions should cease to grant degrees and certificates.",
+      "D": "Degrees and certificates do not guarantee that a person has acquired much worthwhile knowledge.",
+      "E": "A person benefits from an education only to the extent that he or she invests effort in it."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Essayist: Politicians deserve protection from a prying press. No one wants his or her private life spread across the pages of the newspapers. Furthermore, the press's continual focus on politicians' private lives dissuades talented people from pursuing a career in politics and turns reporters into character cops who walk their beats looking for minute and inconsequential personality flaws in public servants. It is time to put a halt to this trivial journalism.",
+    "questionStem": "Each of the following, if true, strengthens the essayist's argument except:",
+    "answerChoices": {
+      "A": "The press is unusually inaccurate when it reports on people's private lives.",
+      "B": "Reporting on politicians' private lives distracts voters from more important issues in a campaign.",
+      "C": "Much writing on politicians' private lives consists of rumors circulated by opposing candidates.",
+      "D": "In recent elections, the best local politicians have refused to run for national office because of the intrusiveness of press coverage.",
+      "E": "Politicians' personality flaws often ultimately affect their performance on the job."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Must Be False",
+    "questionDifficulty": 2,
+    "stimulus": "Most veterinarians, and especially those at university veterinary research centers, have a devoted interest in the biological sciences. But most veterinarians choose their profession primarily because they love animals. Among persons who are seriously interested in biological science but lack any special love for animals, one does not find any prominent veterinarians.",
+    "questionStem": "If all of the statements above are true, which one of the following cannot be true?",
+    "answerChoices": {
+      "A": "Some veterinarians have a greater love for biological science than for individual animals.",
+      "B": "Most veterinarians love animals and have an interest in biological science.",
+      "C": "Prominent veterinarians at some veterinary research centers are intensely devoted to the biological sciences but do not feel any pronounced affection for animals.",
+      "D": "Few veterinarians at university research centers chose their profession primarily because they love animals.",
+      "E": "Most veterinarians who are not prominent regard an understanding of the biological sciences as the most important quality for success in their profession."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The simultaneous and apparently independent development in several ancient cultures of a myth of creatures who were half human and half horse parallels the increased use of horses in these cultures. But despite the nobility and gentleness traditionally ascribed to the horse, the mythical half-horse, half-humans were frequently portrayed as violent and savage. Many human cultures use myth to express unconscious thoughts, so these mythical creatures obviously reflect people's unconscious fear of the horse.",
+    "questionStem": "The reasoning in the argument is flawed because the argument",
+    "answerChoices": {
+      "A": "fails to show that the mythical creature mentioned represents the horse in people's minds",
+      "B": "fails to consider that people might have good reason to fear horses",
+      "C": "confuses the expression of unconscious thoughts with the suppression of them",
+      "D": "fails to demonstrate that the myth was not borrowed from one of the cultures by the others",
+      "E": "fails to explain why people use myth for the expression of unconscious thoughts"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Editorialist: There would seem to be little hazard for consumers associated with chemicals used in treated lumber because the lumber is used outside where fumes cannot accumulate. However, immediate steps should be taken to determine the safety of these chemicals since consumers could ingest them. If the lumber is used for children's playground equipment, youngsters could put their mouths on the wood, and if it is used to contain soil in a vegetable garden, the chemicals could leach into the soil.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the editorialist's argument?",
+    "answerChoices": {
+      "A": "The chemicals used in treated lumber are apparently not dangerous to the consumer.",
+      "B": "Treated lumber is as dangerous when used outdoors as it is when used indoors.",
+      "C": "The effects on humans from the chemicals in treated lumber should be studied.",
+      "D": "Parents should not allow children to put their mouths on playground equipment.",
+      "E": "Treated lumber is more dangerous than was once believed."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "One good clue as to which geographical regions an ancient relic was moved through in the past involves the analysis of pollen that clings to the surface of the relic. A relic is linked to a geographical area by the identification of pollen from plants that are known to have been unique to that area.",
+    "questionStem": "Which one of the following, if true, casts the most doubt on the reliability of the method described above?",
+    "answerChoices": {
+      "A": "Pollens are often transported from one region to another by wind or human movement.",
+      "B": "There are several less complicated methods of determining the history of the movement of an object than the analysis and identification of pollen.",
+      "C": "Many types of pollen were common to several geographical regions in the ancient world.",
+      "D": "Data are scarce as to the geographical distribution of the pollens of many ancient plants.",
+      "E": "Pollen analysis is a painstaking process that is also expensive to conduct."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 4,
+    "stimulus": "Executive: In order to add to our profits, I was planning to promote and distribute herbal tinctures. However, some members of my advisory staff questioned the medical efficacy of such products. So I have consulted a variety of reliable medical publications, and these likewise claim that herbal tinctures are ineffective. Therefore, I must conclude that marketing such products would not produce the result I intended.",
+    "questionStem": "The executive's reasoning most closely conforms to which one of the following generalizations?",
+    "answerChoices": {
+      "A": "To be reliable, a medical publication that evaluates consumer products must include at least some independent evidence.",
+      "B": "If a majority of reliable sources conclude that a particular substance is medically ineffective, then that substance almost certainly is medically ineffective.",
+      "C": "Consulting reliable publications is not, by itself, a reliable basis for determining whether or not the promotion of a new line of products will be profitable.",
+      "D": "It would not be profitable to promote and distribute a new line of products if these products have adverse medical effects.",
+      "E": "The promotion and distribution of a new line of products will not prove profitable if a number of reliable authorities declare them to be ineffective."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "To be great, an artwork must express a deep emotion, such as sorrow or love. But an artwork cannot express an emotion that the artwork's creator is incapable of experiencing.",
+    "questionStem": "Which one of the following can be properly inferred from the statements above?",
+    "answerChoices": {
+      "A": "A computer can create an artwork that expresses sorrow or love only if it has actually experienced such an emotion.",
+      "B": "The greatest art is produced by those who have experienced the deepest emotions.",
+      "C": "An artwork that expresses a deep emotion of its creator is a great artwork.",
+      "D": "As long as computers are constructed so as to be incapable of experiencing emotions they will not create great artworks.",
+      "E": "Only artworks that succeed in expressing deep emotions are the products of great artists."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Consumer activist: When antilock brakes were first introduced, it was claimed that they would significantly reduce the incidence of multiple-car collisions, thereby saving lives. Indeed, antilock brakes have reduced the incidence of multiple-car collisions. I maintain, however, that to save lives, automobile manufacturers ought to stop equipping cars with them.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent conflict in the consumer activist's statements?",
+    "answerChoices": {
+      "A": "Drivers and passengers in automobiles with antilock brakes feel less vulnerable, and are thus less likely to wear seat belts.",
+      "B": "Under some circumstances, automobiles with traditional brakes stop just as quickly as do automobiles with antilock brakes.",
+      "C": "For inexperienced drivers, antilock brakes are easier to use correctly than are traditional brakes.",
+      "D": "Antilock brakes are considerably more expensive to manufacture than are traditional brakes.",
+      "E": "Antilock brakes are no more effective in preventing multiple-car accidents than in preventing other kinds of traffic accidents."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Politician: The huge amounts of money earned by oil companies elicit the suspicion that the regulations designed to prevent collusion need to be tightened. But just the opposite is true. If the regulations designed to prevent collusion are not excessively burdensome, then oil companies will make profits sufficient to motivate the very risky investments associated with exploration that must be made if society is to have adequate oil supplies. But recent data show that the oil industry's profits are not the highest among all industries. Clearly, the regulatory burden on oil companies has become excessive.",
+    "questionStem": "The reasoning in the politician's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "fails to justify its presumption that profits sufficient to motivate very risky investments must be the highest among all industries",
+      "B": "attacks the character of the oil companies rather than the substance of their conduct",
+      "C": "fails to justify its presumption that two events that are correlated must also be causally related",
+      "D": "treats the absence of evidence that the oil industry has the highest profits among all industries as proof that the oil industry does not have the highest profits among all industries",
+      "E": "illicitly draws a general conclusion from a specific example that there is reason to think is atypical"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "It is due to a misunderstanding that most modern sculpture is monochromatic. When ancient sculptures were exhumed years ago, they were discovered to be uncolored. No one at the time had reason to believe, as we now do, that the sculptures had originally been colorfully painted, but that centuries of exposure to moisture washed away the paint.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "The natural beauty of the materials out of which modern sculptures are made plays a part in their effect.",
+      "B": "Modern sculpture has been influenced by beliefs about ancient sculpture.",
+      "C": "Ancient sculptures were more susceptible to moisture damage than are modern sculptures.",
+      "D": "Some ancient paintings known to early archaeologists depicted sculptures.",
+      "E": "As modern sculptors come to believe that ancient sculpture was painted, they will begin to create polychromatic works."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "In older commercial airplanes, the design of the control panel allows any changes in flight controls made by one member of the flight crew to be immediately viewed by the other crew members. In recently manufactured aircraft, however, a crew member's flight control changes are harder to observe, thereby eliminating a routine means for performing valuable cross-checks. As a result, the flight crews operating recently manufactured airplanes must inform each other verbally about flight control changes much more frequently.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "How frequently an airplane's flight crew members will inform each other verbally about flight control changes depends in large part on how long it takes to perform those changes.",
+      "B": "In recently manufactured aircraft, the most valuable means available for performing cross-checks involves frequent verbal exchanges of information among the flight crew members.",
+      "C": "In older commercial airplanes, in contrast to recently manufactured airplanes, flight crew members have no need to exchange information verbally about flight control changes.",
+      "D": "The flight crew members operating a recently manufactured airplane cannot observe the flight control changes made by other crew members by viewing the control panel.",
+      "E": "How often flight crew members must share information verbally about flight control changes depends in part on what other means for performing cross-checks are available to the crew."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "According to the proposed Factory Safety Act, a company may operate an automobile factory only if that factory is registered as a class B factory. In addressing whether a factory may postpone its safety inspections, this Act also stipulates that no factory can be class B without punctual inspections. Thus, under the Factory Safety Act, a factory that manufactures automobiles would not be able to postpone its safety inspections.",
+    "questionStem": "The argument proceeds by",
+    "answerChoices": {
+      "A": "pointing out how two provisions of the proposed Factory Safety Act jointly entail the unacceptability of a certain state of affairs",
+      "B": "considering two possible interpretations of a proposed legal regulation and eliminating the less plausible one",
+      "C": "showing that the terms of the proposed Factory Safety Act are incompatible with existing legislation",
+      "D": "showing that two different provisions of the proposed Factory Safety Act conflict and thus cannot apply to a particular situation",
+      "E": "pointing out that if a provision applies in a specific situation, it must apply in any analogous situation"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "There is a difference between beauty and truth. After all, if there were no difference, then the most realistic pieces of art would be the best as well, since the most realistic pieces are the most truthful. But many of the most realistic artworks are not among the best.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "The most beautiful artworks are the best artworks.",
+      "B": "If an artwork contains nonrealistic elements, then it is not at all truthful.",
+      "C": "None of the best artworks are realistic.",
+      "D": "Only the best artworks are beautiful.",
+      "E": "An artwork's beauty is inherently subjective and depends on who is viewing it."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "From the fact that people who studied music as children frequently are quite proficient at mathematics, it cannot be concluded that the skills required for mathematics are acquired by studying music: it is equally likely that proficiency in mathematics and studying music are both the result of growing up in a family that encourages its children to excel at all intellectual and artistic endeavors.",
+    "questionStem": "The pattern of reasoning in which one of the following arguments is most parallel to that in the argument above?",
+    "answerChoices": {
+      "A": "Although children who fail to pay attention tend to perform poorly in school, it should not necessarily be thought that their poor performance is caused by their failure to pay attention, for it is always possible that their failure to pay attention is due to undiagnosed hearing problems that can also lead to poor performance in school.",
+      "B": "People who attend a university in a foreign country are usually among the top students from their native country. It would therefore be wrong to conclude from the fact that many foreign students perform better academically than others in this country that secondary schools in other countries are superior to those in this country; it may be that evaluation standards are different.",
+      "C": "People whose diet includes relatively large quantities of certain fruits and vegetables have a slightly lower than average incidence of heart disease. But it would be premature to conclude that consuming these fruits and vegetables prevents heart disease, for this correlation may be merely coincidental.",
+      "D": "Those who apply to medical school are required to study biology and chemistry. It would be a mistake, however, to conclude that those who have mastered chemistry and biology will succeed as physicians, for the practical application of knowledge is different from its acquisition.",
+      "E": "Those who engage in vigorous exercise tend to be very healthy. But it would be silly to conclude that vigorous exercise is healthful simply because people who are healthy exercise vigorously, since it is possible that exercise that is less vigorous also has beneficial results."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "A physician has a duty to see to the health and best medical interests of the patient. On the other hand, the patient has a right to be fully informed about any negative findings concerning the patient's health. When this duty conflicts with this right, the right should prevail since it is a basic right. Anything else carries the risk of treating the patient as a mere object, not as a person.",
+    "questionStem": "The conclusion drawn above follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "All persons have a right to accept or reject any medical procedures proposed by a physician.",
+      "B": "Some actions are right independently of the consequences that might ensue.",
+      "C": "Because only persons have rights, objects do not have rights.",
+      "D": "A person's basic rights should never be violated.",
+      "E": "In medicine, the patient's basic right to information is stronger than most other rights."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Forester: The great majority of the forests remaining in the world are only sickly fragments of the fully functioning ecosystems they once were. These fragmented forest ecosystems have typically lost their ability to sustain themselves in the long term, yet they include the last refuges for some of the world's most endangered species. To maintain its full complement of plant and animal species, a fragmented forest requires regular interventions by resource managers.",
+    "questionStem": "The forester's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Most of the world's forests will lose at least some of their plant or animal species if no one intervenes.",
+      "B": "Unless resource managers regularly intervene in most of the world's remaining forests, many of the world's most endangered species will not survive.",
+      "C": "A fragmented forest ecosystem cannot sustain itself in the long term if it loses any of its plant or animal species.",
+      "D": "A complete, fully functioning forest ecosystem can always maintain its full complement of plant and animal species even without interventions by resource managers.",
+      "E": "At present, resource managers intervene regularly in only some of the world's fragmented forest ecosystems."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Magazine article: Sugar consumption may exacerbate attention deficit disorder (ADD) in children. A recent study found that children produce large amounts of adrenaline within hours after consuming large amounts of sugar. This increase in adrenaline is especially noticeable if the source of sugar is candy, in which case the sugar's effects are not ameliorated by the ingestion of other foodstuffs.",
+    "questionStem": "Which one of the following is an assumption on which the argument in the magazine article depends?",
+    "answerChoices": {
+      "A": "The adrenaline level of children who do not have ADD is not increased by excessive sugar consumption.",
+      "B": "Overproduction of adrenaline causes ADD in children.",
+      "C": "The most effective way to treat ADD in children is to restrict their intake of sugars.",
+      "D": "Increased adrenaline production can make ADD more severe in children.",
+      "E": "Sugar consumed with food substances other than candy does not substantially increase the level of adrenaline in the bloodstream of children with ADD."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Ethicist: People who avoid alcoholic beverages simply because they regard them as a luxury beyond their financial means should not be praised for their abstinence. Similarly, those who avoid alcohol simply because they lack the desire to partake should not be praised, unless this disinclination has somehow resulted from an arduous process of disciplining oneself to refrain from acting indiscriminately on one's desires.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the ethicist's claims?",
+    "answerChoices": {
+      "A": "Whether behavior should be regarded as praiseworthy is a function of both its consequences and the social context in which the agent acts.",
+      "B": "A person should be blamed for an action only if that action was not motivated by a desire to be virtuous or if the person did not have to overcome any obstacles in order to perform that action.",
+      "C": "A person is praiseworthy for a particular behavior only if, in order to adopt that behavior, the person at some point had to overcome a desire to do something that she or he felt able to afford to do.",
+      "D": "The extent to which the process of acquiring self-discipline is arduous for a person is affected by that person's set of desires and aversions.",
+      "E": "The apportionment of praise and blame should be commensurate with the arduousness or ease of the lives of those who receive praise or blame."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Economist: Some people argue that when large countries split into several small countries, the world economy is harmed by increased barriers to free trade in the form of an increased number of national tariffs. But small countries do not think of themselves as economically self-sufficient. Therefore, such division of large countries does not increase barriers to free trade.",
+    "questionStem": "Which one of the following, if assumed, enables the economist's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "A country has the right to split into smaller countries even if some of the economic consequences of division would harm the world economy.",
+      "B": "Increasing the number of countries in the world would strengthen rather than weaken the world economy.",
+      "C": "All countries that impose national tariffs or other barriers to free trade think of themselves as economically self-sufficient.",
+      "D": "There is strong evidence that national tariffs and other barriers to free trade harm the world economy.",
+      "E": "Large countries tend to be more economically self-sufficient than small countries."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Counselor: Constantly comparing oneself to those one sees as more able or more successful almost invariably leads to self-disparagement. Conversely, constantly comparing oneself to those one sees as less able or less successful almost invariably leads to being dismissive of others. So, those who for the most part refrain from comparing themselves to others will most likely be, on the whole, self-accepting and accepting of others.",
+    "questionStem": "The counselor's reasoning is most vulnerable to criticism because it",
+    "answerChoices": {
+      "A": "overlooks the possibility that one can compare oneself both to those one perceives to be more able and more successful than oneself and to those one perceives to be less able and less successful than oneself",
+      "B": "overlooks the possibility that constantly comparing oneself to others may have beneficial effects that those who refrain from making such comparisons are deprived of",
+      "C": "takes for granted that if one is both dismissive of others and self-disparaging, one will not be self-accepting and accepting of others",
+      "D": "overlooks the possibility that self-disparagement and being dismissive of others can result from something other than comparing oneself to others",
+      "E": "takes for granted that whenever one compares oneself to others one sees them as more successful and more able than oneself or less successful and less able than oneself"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Most of the employees of the Compujack Corporation are computer programmers. Since most computer programmers receive excellent salaries from their employers, at least one Compujack employee must receive an excellent salary from Compujack.",
+    "questionStem": "Which one of the following arguments exhibits a flawed pattern of reasoning most similar to the flawed pattern of reasoning exhibited by the argument above?",
+    "answerChoices": {
+      "A": "Most gardeners are people with a great deal of patience. Since most of Molly's classmates are gardeners, at least one of Molly's classmates must be a person with a great deal of patience.",
+      "B": "Most of Molly's classmates are gardeners. Since most gardeners are people with a great deal of patience, some of Molly's classmates could be people with a great deal of patience.",
+      "C": "Most gardeners are people with a great deal of patience. Since most of Molly's classmates are gardeners, at least one of Molly's classmates who is a gardener must be a person with a great deal of patience.",
+      "D": "Most gardeners are people with a great deal of patience. Since most of Molly's classmates who garden are women, at least one female classmate of Molly's must be a person with a great deal of patience.",
+      "E": "Most of Molly's classmates are gardeners with a great deal of patience. Since most of Molly's classmates are women, at least one female classmate of Molly's must be a gardener with a great deal of patience."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "A study conducted over a 6-month period analyzed daily attendance and average length of visit at the local art museum. The results showed that when the museum was not featuring a special exhibition, attendance tended to be lower but patrons spent an average of 45 minutes longer in the museum than when it was featuring a special exhibition.",
+    "questionStem": "Each of the following, if true, could help to explain the differing average lengths of visits to the museum except:",
+    "answerChoices": {
+      "A": "Visitors to the museum during special exhibitions tend to have narrower artistic interests, and do not view as many different exhibits during their visit.",
+      "B": "A plan to extend normal museum hours during special exhibitions was considered but not enacted during the period studied.",
+      "C": "Many people who go to special exhibitions go simply for the prestige of having been there.",
+      "D": "Admission tickets to the special exhibitions at the museum are issued for a specific 1-hour period on a specific day.",
+      "E": "Many people who go to special exhibitions are on organized tours and do not have the opportunity to browse."
+    },
+    "correctAnswer": "B"
+  }
+]

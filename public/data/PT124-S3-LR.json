@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "At many electronics retail stores, the consumer has the option of purchasing product warranties that extend beyond the manufacturer's warranty. However, consumers are generally better off not buying extended warranties. Most problems with electronic goods occur within the period covered by the manufacturer's warranty.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Problems with electronic goods that occur after the manufacturer's warranty expires are generally inexpensive to fix in comparison with the cost of an extended warranty.",
+      "B": "Because problems are so infrequent after the manufacturer's warranty expires, extended warranties on electronic goods are generally inexpensive.",
+      "C": "Most of those who buy extended warranties on electronic goods do so because special circumstances make their item more likely to break than is usually the case.",
+      "D": "Some extended warranties on electronic goods cover the product for the period covered by the manufacturer's warranty as well as subsequent years.",
+      "E": "Retail stores sell extended warranties in part because consumers who purchase them are likely to purchase other products from the same store."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Since the 1970s, environmentalists have largely succeeded in convincing legislators to enact extensive environmental regulations. Yet, as environmentalists themselves not only admit but insist, the condition of the environment is worsening, not improving. Clearly, more environmental regulations are not the solution to the environment's problems.",
+    "questionStem": "The argument's reasoning is flawed because the argument",
+    "answerChoices": {
+      "A": "attacks the environmentalists themselves instead of their positions",
+      "B": "presumes, without providing warrant, that only an absence of environmental regulations could prevent environmental degradation",
+      "C": "fails to consider the possibility that the condition of the environment would have worsened even more without environmental regulations",
+      "D": "fails to justify its presumption that reducing excessive regulations is more important than preserving the environment",
+      "E": "fails to consider the views of the environmentalists' opponents"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Although it is unwise to take a developmental view of an art like music as if Beethoven were an advance over Josquin, or Miles Davis an advance over Louis Armstrong-there are ways in which it makes sense to talk about musical knowledge growing over time. We certainly know more about certain sounds than was known five centuries ago; that is, we understand how sounds that earlier composers avoided can be used effectively in musical compositions. For example, we now know how the interval of the third, which is considered dissonant, can be used in compositions to create consonant musical phrases.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "Sounds that were never used in past musical compositions are used today.",
+      "B": "Sounds that were once considered dissonant are more pleasing to modern listeners.",
+      "C": "It is inappropriate to take a developmental view of music.",
+      "D": "It is unwise to say that one composer is better than another.",
+      "E": "Our understanding of music can improve over the course of time."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "A recent test of an electric insect control device discovered that, of the more than 300 insects killed during one 24-hour period, only 12 were mosquitoes. Thus this type of device may kill many insects, but will not significantly aid in controlling the potentially dangerous mosquito population.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "A careful search discovered no live mosquitoes in the vicinity of the device after the test.",
+      "B": "A very large proportion of the insects that were attracted to the device were not mosquitoes.",
+      "C": "The device is more likely to kill beneficial insects than it is to kill harmful insects.",
+      "D": "Many of the insects that were killed by the device are mosquito-eating insects.",
+      "E": "The device does not succeed in killing all of the insects that it attracts."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Brain-scanning technology provides information about processes occurring in the brain. For this information to help researchers understand how the brain enables us to think, however, researchers must be able to rely on the accuracy of the verbal reports given by subjects while their brains are being scanned. Otherwise brain-scan data gathered at a given moment might not contain information about what the subject reports thinking about at that moment, but instead about some different set of thoughts.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "It is unlikely that brain-scanning technology will ever enable researchers to understand how the brain enables us to think.",
+      "B": "There is no way that researchers can know for certain that subjects whose brains are being scanned are accurately reporting what they are thinking.",
+      "C": "Because subjects whose brains are being scanned may not accurately report what they are thinking, the results of brain-scanning research should be regarded with great skepticism.",
+      "D": "Brain scans can provide information about the accuracy of the verbal reports of subjects whose brains are being scanned.",
+      "E": "Information from brain scans can help researchers understand how the brain enables us to think only if the verbal reports of those whose brains are being scanned are accurate."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Ornithologist: This bird species is widely thought to subsist primarily on vegetation, but my research shows that this belief is erroneous. While concealed in a well-camouflaged blind, I have observed hundreds of these birds every morning over a period of months, and I estimate that over half of what they ate consisted of insects and other animal food sources.",
+    "questionStem": "The reasoning in the ornithologist's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "assumes, without providing justification, that the feeding behavior of the birds observed was not affected by the ornithologist's act of observation",
+      "B": "fails to specify the nature of the animal food sources, other than insects, that were consumed by the birds",
+      "C": "adopts a widespread belief about the birds' feeding habits without considering the evidence that led to the belief",
+      "D": "neglects the possibility that the birds have different patterns of food consumption during different parts of the day and night",
+      "E": "fails to consider the possibility that the birds' diet has changed since the earlier belief about their diet was formed"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Educator: Only those students who are genuinely curious about a topic can successfully learn about that topic. They find the satisfaction of their curiosity intrinsically gratifying, and appreciate the inherent rewards of the learning process itself. However, almost no child enters the classroom with sufficient curiosity to learn successfully all that the teacher must instill. A teacher's job, therefore,",
+    "questionStem": "Which one of the following most logically completes the educator's argument?",
+    "answerChoices": {
+      "A": "requires for the fulfillment of its goals the stimulation as well as the satisfaction of curiosity",
+      "B": "necessitates the creative use of rewards that are not inherent in the learning process itself",
+      "C": "is to focus primarily on those topics that do not initially interest the students",
+      "D": "is facilitated by students' taking responsibility for their own learning",
+      "E": "becomes easier if students realize that some learning is not necessarily enjoyable"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Environmentalist: When bacteria degrade household cleaning products, vapors that are toxic to humans are produced. Unfortunately, household cleaning products are often found in landfills. Thus, the common practice of converting landfills into public parks is damaging human health.",
+    "questionStem": "Which one of the following is an assumption the environmentalist's argument requires?",
+    "answerChoices": {
+      "A": "In at least some landfills that have been converted into public parks there are bacteria that degrade household cleaning products.",
+      "B": "Converting a landfill into a public park will cause no damage to human health unless toxic vapors are produced in that landfill and humans are exposed to them.",
+      "C": "If a practice involves the exposure of humans to vapors from household cleaning products, then it causes at least some damage to human health.",
+      "D": "When landfills are converted to public parks, measures could be taken that would prevent people using the parks from being exposed to toxic vapors.",
+      "E": "If vapors toxic to humans are produced by the degradation of household cleaning products by bacteria in any landfill, then the health of at least some humans will suffer."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Tea made from camellia leaves is a popular beverage. However, studies show that regular drinkers of camellia tea usually suffer withdrawal symptoms if they discontinue drinking the tea. Furthermore, regular drinkers of camellia tea are more likely than people in general to develop kidney damage. Regular consumption of this tea, therefore, can result in a heightened risk of kidney damage.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Several other popular beverages contain the same addictive chemical that is found in camellia tea.",
+      "B": "Addictive chemicals are unlikely to cause kidney damage solely by virtue of their addictive qualities.",
+      "C": "Some people claim that regular consumption of camellia tea helps alleviate their stress.",
+      "D": "Most people who regularly drink camellia tea do not develop kidney damage.",
+      "E": "Many people who regularly consume camellia tea also regularly consume other beverages suspected of causing kidney damage."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Artist: Avant-garde artists intend their work to challenge a society's mainstream beliefs and initiate change. And some art collectors claim that an avant-garde work that becomes popular in its own time is successful. However, a society's mainstream beliefs do not generally show any significant changes over a short period of time. Therefore, when an avant-garde work becomes popular it is a sign that the work is not successful, since it does not fulfil the intentions of its creator.",
+    "questionStem": "The reference to the claim of certain art collectors plays which one of the following roles in the artist's argument?",
+    "answerChoices": {
+      "A": "It serves to bolster the argument's main conclusion.",
+      "B": "It identifies a view that is ultimately disputed by the argument.",
+      "C": "It identifies a position supported by the initial premise in the argument.",
+      "D": "It provides support for the initial premise in the argument.",
+      "E": "It provides support for a counterargument to the initial premise."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "A recent epidemiological study found that businesspeople who travel internationally on business are much more likely to suffer from chronic insomnia than are businesspeople who do not travel on business. International travelers experience the stresses of dramatic changes in climate, frequent disruption of daily routines, and immersion in cultures other than their own, stresses not commonly felt by those who do not travel. Thus, it is likely that these stresses cause the insomnia.",
+    "questionStem": "Which one of the following would, if true, most strengthen the reasoning above?",
+    "answerChoices": {
+      "A": "Most international travel for the sake of business occurs between countries with contiguous borders.",
+      "B": "Some businesspeople who travel internationally greatly enjoy the changes in climate and immersion in another culture.",
+      "C": "Businesspeople who already suffer from chronic insomnia are no more likely than businesspeople who do not to accept assignments from their employers that require international travel.",
+      "D": "Experiencing dramatic changes in climate and disruption of daily routines through international travel can be beneficial to some people who suffer from chronic insomnia.",
+      "E": "Some businesspeople who once traveled internationally but no longer do so complain of various sleep-related ailments."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Many mountain climbers regard climbing Mount Everest as the ultimate achievement. But climbers should not attempt this climb since the risk of death or serious injury in an Everest expedition is very high. Moreover, the romantic notion of gaining \"spiritual discovery\" atop Everest is dispelled by climbers' reports that the only profound experiences they had at the top were of exhaustion and fear.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+    "answerChoices": {
+      "A": "Projects undertaken primarily for spiritual reasons ought to be abandoned if the risks are great.",
+      "B": "Dangerous activities that are unlikely to result in significant spiritual benefits for those undertaking them should be avoided.",
+      "C": "Activities that are extremely dangerous ought to be legally prohibited unless they are necessary to produce spiritual enlightenment.",
+      "D": "Profound spiritual experiences can be achieved without undergoing the serious danger involved in mountain climbing.",
+      "E": "Mountain climbers and other athletes should carefully examine the underlying reasons they have for participating in their sports."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Each of the smallest particles in the universe has an elegantly simple structure. Since these particles compose the universe, we can conclude that the universe itself has an elegantly simple structure.",
+    "questionStem": "Each of the following arguments exhibits flawed reasoning similar to that in the argument above except:",
+    "answerChoices": {
+      "A": "Each part of this car is nearly perfectly engineered. Therefore this car is nearly perfect, from an engineering point of view.",
+      "B": "Each part of this desk is made of metal. Therefore this desk is made of metal.",
+      "C": "Each brick in this wall is rectangular. Therefore this wall is rectangular.",
+      "D": "Each piece of wood in this chair is sturdy. Therefore this chair is sturdy.",
+      "E": "Each sentence in this novel is well constructed. Therefore this is a well-constructed novel."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Criminologist: A judicial system that tries and punishes criminals without delay is an effective deterrent to violent crime. Long, drawn-out trials and successful legal maneuvering may add to criminals' feelings of invulnerability. But if potential violent criminals know that being caught means prompt punishment, they will hesitate to break the law.",
+    "questionStem": "Which one of the following, if true, would most seriously weaken the criminologist's argument?",
+    "answerChoices": {
+      "A": "It is in the nature of violent crime that it is not premeditated.",
+      "B": "About one-fourth of all suspects first arrested for a crime are actually innocent.",
+      "C": "Many violent crimes are committed by first-time offenders.",
+      "D": "Everyone accused of a crime has the right to a trial.",
+      "E": "Countries that promptly punish suspected lawbreakers have lower crime rates than countries that allow long trials."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Journalist: Many people object to mandatory retirement at age 65 as being arbitrary, arguing that people over 65 make useful contributions. However, if those who reach 65 are permitted to continue working indefinitely, we will face unacceptable outcomes. First, young people entering the job market will not be able to obtain decent jobs in the professions for which they were trained, resulting in widespread dissatisfaction among the young. Second, it is not fair for those who have worked 40 or more years to deprive others of opportunities. Therefore, mandatory retirement should be retained.",
+    "questionStem": "The journalist's argument depends on assuming which one of the following?",
+    "answerChoices": {
+      "A": "Anyone who has worked 40 years is at least 65 years old.",
+      "B": "All young people entering the job market are highly trained professionals.",
+      "C": "It is unfair for a person not to get a job in the profession for which that person was trained.",
+      "D": "If people are forced to retire at age 65, there will be much dissatisfaction among at least some older people.",
+      "E": "If retirement ceases to be mandatory at age 65, at least some people will choose to work past age 65."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "Editorial: Contrary to popular belief, teaching preschoolers is not especially difficult, for they develop strict systems (e.g., for sorting toys by shape), which help them to learn, and they are always intensely curious about something new in their world.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the editorial's argument?",
+    "answerChoices": {
+      "A": "Preschoolers have a tendency to imitate adults, and most adults follow strict routines.",
+      "B": "Children intensely curious about new things have very short attention spans.",
+      "C": "Some older children also develop strict systems that help them learn.",
+      "D": "Preschoolers ask as many creative questions as do older children.",
+      "E": "Preschool teachers generally report lower levels of stress than do other teachers."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Lawyer: A body of circumstantial evidence is like a rope, and each item of evidence is like a strand of that rope. Just as additional pieces of circumstantial evidence strengthen the body of evidence, adding strands to the rope strengthens the rope. And if one strand breaks, the rope is not broken nor is its strength much diminished. Thus, even if a few items of a body of circumstantial evidence are discredited, the overall body of evidence retains its basic strength.",
+    "questionStem": "The reasoning in the lawyer's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "takes for granted that no items in a body of circumstantial evidence are significantly more critical to the strength of the evidence than other items in that body",
+      "B": "presumes, without providing justification, that the strength of a body of evidence is less than the sum of the strengths of the parts of that body",
+      "C": "fails to consider the possibility that if many items in a body of circumstantial evidence were discredited, the overall body of evidence would be discredited",
+      "D": "offers an analogy in support of a conclusion without indicating whether the two types of things compared share any similarities",
+      "E": "draws a conclusion that simply restates a claim presented in support of that conclusion"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Ethicist: Many environmentalists hold that the natural environment is morally valuable for its own sake, regardless of any benefits it provides us. However, even if nature has no moral value, nature can be regarded as worth preserving simply on the grounds that people find it beautiful. Moreover, because it is philosophically disputable whether nature is morally valuable but undeniable that it is beautiful, an argument for preserving nature that emphasizes nature's beauty will be less vulnerable to logical objections than one that emphasizes its moral value.",
+    "questionStem": "The ethicist's reasoning most closely conforms to which one of the following principles?",
+    "answerChoices": {
+      "A": "An argument in favor of preserving nature will be less open to logical objections if it avoids the issue of what makes nature worth preserving.",
+      "B": "If an argument for preserving nature emphasizes a specific characteristic of nature and is vulnerable to logical objections, then that characteristic does not provide a sufficient reason for preserving nature.",
+      "C": "If it is philosophically disputable whether nature has a certain characteristic, then nature would be more clearly worth preserving if it did not have that characteristic.",
+      "D": "Anything that has moral value is worth preserving regardless of whether people consider it to be beautiful.",
+      "E": "An argument for preserving nature will be less open to logical objections if it appeals to a characteristic that can be regarded as a basis for preserving nature and that philosophically indisputably belongs to nature."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "An editor is compiling a textbook containing essays by several different authors. The book will contain essays by Lind, Knight, or Jones, but it will not contain essays by all three. If the textbook contains an essay by Knight, then it will also contain an essay by Jones.",
+    "questionStem": "If the statements above are true, which one of the following must be true?",
+    "answerChoices": {
+      "A": "If the textbook contains an essay by Lind, then it will not contain an essay by Knight.",
+      "B": "The textbook will contain an essay by only one of Lind, Knight, and Jones.",
+      "C": "The textbook will not contain an essay by Knight.",
+      "D": "If the textbook contains an essay by Lind, then it will also contain an essay by Jones.",
+      "E": "The textbook will contain an essay by Lind."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "The ability of mammals to control their internal body temperatures is a factor in the development of their brains and intelligence. This can be seen from the following facts: the brain is a chemical machine, all chemical reactions are temperature dependent, and any organism that can control its body temperature can assure that these reactions occur at the proper temperatures.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Organisms unable to control their body temperatures do not have the capacity to generate internal body heat without relying on external factors.",
+      "B": "Mammals are the only animals that have the ability to control their internal body temperatures.",
+      "C": "The brain cannot support intelligence if the chemical reactions within it are subject to uncontrolled temperatures.",
+      "D": "The development of intelligence in mammals is not independent of the chemical reactions in their brains taking place at the proper temperatures.",
+      "E": "Organisms incapable of controlling their internal body temperatures are subject to unpredictable chemical processes."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "People who object to the proposed hazardous waste storage site by appealing to extremely implausible scenarios in which the site fails to contain the waste safely are overlooking the significant risks associated with delays in moving the waste from its present unsafe location. If we wait to remove the waste until we find a site certain to contain it safely, the waste will remain in its current location for many years, since it is currently impossible to guarantee that any site can meet that criterion. Yet keeping the waste at the current location for that long clearly poses unacceptable risks.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "The waste should never have been stored in its current location.",
+      "B": "The waste should be placed in the most secure location that can ever be found.",
+      "C": "Moving the waste to the proposed site would reduce the threat posed by the waste.",
+      "D": "Whenever waste must be moved, one should limit the amount of time allotted to locating alternative waste storage sites.",
+      "E": "Any site to which the waste could be moved will be safer than its present site."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Paradox",
+    "questionDifficulty": 5,
+    "stimulus": "A recent survey indicates that the average number of books read annually per capita has declined in each of the last three years. However, it also found that most bookstores reported increased profits during the same period.",
+    "questionStem": "Each of the following, if true, helps to resolve the survey's apparently paradoxical results except:",
+    "answerChoices": {
+      "A": "Recent cutbacks in government spending have forced public libraries to purchase fewer popular contemporary novels.",
+      "B": "Due to the installation of sophisticated new antitheft equipment, the recent increase in shoplifting that has hit most retail businesses has left bookstores largely unaffected.",
+      "C": "Over the past few years many bookstores have capitalized on the lucrative coffee industry by installing coffee bars.",
+      "D": "Bookstore owners reported a general shift away from the sale of inexpensive paperback novels and toward the sale of lucrative hardback books.",
+      "E": "Citing a lack of free time, many survey respondents indicated that they had canceled magazine subscriptions in favor of purchasing individual issues at bookstores when time permits."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "Naturalist: A species can survive a change in environment, as long as the change is not too rapid. Therefore, the threats we are creating to woodland species arise not from the fact that we are cutting down trees, but rather from the rate at which we are doing so.",
+    "questionStem": "The reasoning in which one of the following is most similar to that in the naturalist's argument?",
+    "answerChoices": {
+      "A": "The problem with burning fossil fuels is that the supply is limited; so, the faster we expend these resources, the sooner we will be left without an energy source.",
+      "B": "Many people gain more satisfaction from performing a job well-regardless of whether they like the job-than from doing merely adequately a job they like; thus, people who want to be happy should choose jobs they can do well.",
+      "C": "Some students who study thoroughly do well in school. Thus, what is most important for success in school is not how much time a student puts into studying, but rather how thoroughly the student studies.",
+      "D": "People do not fear change if they know what the change will bring; so, our employees' fear stems not from our company's undergoing change, but from our failing to inform them of what the changes entail.",
+      "E": "Until ten years ago, we had good soil and our agriculture flourished. Therefore, the recent decline of our agriculture is a result of our soil rapidly eroding and there being nothing that can replace the good soil we lost."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Method",
+    "questionDifficulty": 4,
+    "stimulus": "Professor: A person who can select a beverage from among 50 varieties of cola is less free than one who has only these 5 choices: wine, coffee, apple juice, milk, and water. It is clear, then, that meaningful freedom cannot be measured simply by the number of alternatives available; the extent of the differences among the alternatives is also a relevant factor.",
+    "questionStem": "The professor's argument proceeds by",
+    "answerChoices": {
+      "A": "supporting a general principle by means of an example",
+      "B": "drawing a conclusion about a particular case on the basis of a general principle",
+      "C": "supporting its conclusion by means of an analogy",
+      "D": "claiming that whatever holds for each member of a group must hold for the whole group",
+      "E": "inferring one general principle from another, more general, principle"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Principle: Meetings should be kept short, addressing only those issues relevant to a majority of those attending. A person should not be required to attend a meeting if none of the issues to be addressed at the meeting are relevant to that person.\nApplication: Terry should not be required to attend today's two o'clock meeting.",
+    "questionStem": "Which one of the following, if true, most justifies the stated application of the principle?",
+    "answerChoices": {
+      "A": "The only issues on which Terry could make a presentation at the meeting are issues irrelevant to at least a majority of those who could attend.",
+      "B": "If Terry makes a presentation at the meeting, the meeting will not be kept short.",
+      "C": "No issue relevant to Terry could be relevant to a majority of those attending the meeting.",
+      "D": "If Terry attends the meeting a different set of issues will be relevant to a majority of those attending than if Terry does not attend.",
+      "E": "The majority of the issues to be addressed at the meeting are not relevant to Terry."
+    },
+    "correctAnswer": "C"
+  }
+]

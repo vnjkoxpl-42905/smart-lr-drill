@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Consumer advocate: Businesses are typically motivated primarily by the desire to make as great a profit as possible, and advertising helps businesses to achieve this goal. But it is clear that the motive of maximizing profits does not impel businesses to present accurate information in their advertisements. It follows that consumers should be skeptical of the claims made in advertisements.",
+    "questionStem": "Each of the following, if true, would strengthen the consumer advocate's argument except:",
+    "answerChoices": {
+      "A": "Businesses know that they can usually maximize their profits by using inaccurate information in their advertisements.",
+      "B": "Businesses have often included inaccurate information in their advertisements.",
+      "C": "Many consumers have a cynical attitude toward advertising.",
+      "D": "Those who create advertisements are less concerned with the accuracy than with the creativity of advertisements.",
+      "E": "The laws regulating truth in advertising are not applicable to many of the most common forms of inaccurate advertising."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Elaine: The purpose of art museums is to preserve artworks and make them available to the public. Museums, therefore, should seek to acquire and display the best examples of artworks from each artistic period and genre, even if some of these works are not recognized by experts as masterpieces.\nFrederick: Art museums ought to devote their limited resources to acquiring the works of recognized masters in order to ensure the preservation of the greatest artworks.",
+    "questionStem": "Elaine's and Frederick's statements provide the most support for the claim that they would disagree about whether",
+    "answerChoices": {
+      "A": "many artistic masterpieces are not recognized as such by art experts",
+      "B": "museums should seek to represent all genres of art in their collections",
+      "C": "art museums should seek to preserve works of art",
+      "D": "an art museum ought to acquire an unusual example of a period or genre if more characteristic examples are prohibitively expensive",
+      "E": "all of the artworks that experts identify as masterpieces are actually masterpieces"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Science columnist: It is clear why humans have so many diseases in common with cats. Many human diseases are genetically based, and cats are genetically closer to humans than are any other mammals except nonhuman primates. Each of the genes identified so far in cats has an exact counterpart in humans.",
+    "questionStem": "Which one of the following, if true, most weakens the science columnist's explanation for the claim that humans have so many diseases in common with cats?",
+    "answerChoices": {
+      "A": "Cats have built up resistance to many of the diseases they have in common with humans.",
+      "B": "Most diseases that humans have in common with cats have no genetic basis.",
+      "C": "Cats have more diseases in common with nonhuman primates than with humans.",
+      "D": "Many of the diseases humans have in common with cats are mild and are rarely diagnosed.",
+      "E": "Humans have more genes in common with nonhuman primates than with cats."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "This region must find new ways to help business grow. After all, shoe manufacturing used to be a major local industry, but recently has experienced severe setbacks due to overseas competition, so there is a need for expansion into new manufacturing areas. Moreover, our outdated public policy generally inhibits business growth.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion drawn in the argument?",
+    "answerChoices": {
+      "A": "The region needs to find new ways to enhance business growth.",
+      "B": "Shoe manufacturing is no longer a major source of income in the region.",
+      "C": "Shoe manufacturing in the region has dramatically declined due to overseas competition.",
+      "D": "Business in the region must expand into new areas of manufacturing.",
+      "E": "Outdated public policy inhibits business growth in the region."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "As a result of modern medicine, more people have been able to enjoy long and pain-free lives. But the resulting increase in life expectancy has contributed to a steady increase in the proportion of the population that is of advanced age. This population shift is creating potentially devastating financial problems for some social welfare programs.",
+    "questionStem": "Which one of the following propositions is most precisely exemplified by the situation presented above?",
+    "answerChoices": {
+      "A": "Technical or scientific innovation cannot be the solution to all problems.",
+      "B": "Implementing technological innovations should be delayed until the resulting social changes can be managed.",
+      "C": "Every enhancement of the quality of life has unavoidable negative consequences.",
+      "D": "All social institutions are affected by a preoccupation with prolonging life.",
+      "E": "Solving one set of problems can create a different set of problems."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Since Jackie is such a big fan of Moral Vacuum's music, she will probably like The Cruel Herd's new album. Like Moral Vacuum, The Cruel Herd on this album plays complex rock music that employs the acoustic instrumentation and harmonic sophistication of early sixties jazz. The Cruel Herd also has very witty lyrics, full of puns and sardonic humor, like some of Moral Vacuum's best lyrics.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Jackie has not previously cared for The Cruel Herd, but on the new album The Cruel Herd's previous musical arranger has been replaced by Moral Vacuum's musical arranger.",
+      "B": "Though The Cruel Herd's previous albums' production quality was not great, the new album is produced by one of the most widely employed producers in the music industry.",
+      "C": "Like Moral Vacuum, The Cruel Herd regularly performs in clubs popular with many students at the university that Jackie attends.",
+      "D": "All of the music that Jackie prefers to listen to on a regular basis is rock music.",
+      "E": "Jackie's favorite Moral Vacuum songs have lyrics that are somber and marked by a strong political awareness."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "Superconductors are substances that conduct electricity without resistance at low temperatures. Their use, however, will never be economically feasible, unless there is a substance that superconducts at a temperature above minus 148 degrees Celsius. If there is such a substance, that substance must be an alloy of niobium and germanium. Unfortunately, such alloys superconduct at temperatures no higher than minus 160 degrees Celsius.",
+    "questionStem": "If the statements above are true, which one of the following must also be true?",
+    "answerChoices": {
+      "A": "The use of superconductors will never be economically feasible.",
+      "B": "If the alloys of niobium and germanium do not superconduct at temperatures above minus 148 degrees Celsius, then there are other substances that will do so.",
+      "C": "The use of superconductors could be economically feasible if there is a substance that superconducts at temperatures below minus 148 degrees Celsius.",
+      "D": "Alloys of niobium and germanium do not superconduct at temperatures below minus 160 degrees Celsius.",
+      "E": "No use of alloys of niobium and germanium will ever be economically feasible."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Doctor: In three separate studies, researchers compared children who had slept with night-lights in their rooms as infants to children who had not. In the first study, the children who had slept with night-lights proved more likely to be nearsighted, but the later studies found no correlation between night-lights and nearsightedness. However, the children in the first study were younger than those in the later studies. This suggests that if night-lights cause nearsightedness, the effect disappears with age.",
+    "questionStem": "Which one of the following, if true, would most weaken the doctor's argument?",
+    "answerChoices": {
+      "A": "A fourth study comparing infants who were currently sleeping with night-lights to infants who were not did not find any correlation between night-lights and nearsightedness.",
+      "B": "On average, young children who are already very nearsighted are no more likely to sleep with night-lights than young children who are not already nearsighted.",
+      "C": "In a study involving children who had not slept with night-lights as infants but had slept with night-lights when they were older, most of the children studied were not nearsighted.",
+      "D": "The two studies in which no correlation was found did not examine enough children to provide significant support for any conclusion regarding a causal relationship between night-lights and nearsightedness.",
+      "E": "In a fourth study involving 100 children who were older than those in any of the first three studies, several of the children who had slept with night-lights as infants were nearsighted."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Global surveys estimate the earth's population of nesting female leatherback turtles has fallen by more than two-thirds in the past 15 years. Any species whose population declines by more than two-thirds in 15 years is in grave danger of extinction, so the leatherback turtle is clearly in danger of extinction.",
+    "questionStem": "Which one of the following is an assumption that the argument requires?",
+    "answerChoices": {
+      "A": "The decline in the population of nesting female leatherback turtles is proportional to the decline in the leatherback turtle population as a whole.",
+      "B": "If the global population of leatherback turtles falls by more than two-thirds over the next 15 years, the species will eventually become extinct.",
+      "C": "The global population of leatherback turtles consists in roughly equal numbers of females and males.",
+      "D": "Very few leatherback turtles exist in captivity.",
+      "E": "The only way to ensure the continued survival of leatherback turtles in the wild is to breed them in captivity."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Public health experts have waged a long-standing educational campaign to get people to eat more vegetables, which are known to help prevent cancer. Unfortunately, the campaign has had little impact on people's diets. The reason is probably that many people simply dislike the taste of most vegetables. Thus, the campaign would probably be more effective if it included information on ways to make vegetables more appetizing.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "The campaign to get people to eat more vegetables has had little impact on the diets of most people who love the taste of vegetables.",
+      "B": "Some ways of making vegetables more appetizing diminish vegetables' ability to help prevent cancer.",
+      "C": "People who find a few vegetables appetizing typically do not eat substantially more vegetables than do people who dislike the taste of most vegetables.",
+      "D": "People who dislike the taste of most vegetables would eat many more vegetables if they knew how to make them more appetizing.",
+      "E": "The only way to make the campaign to get people to eat more vegetables more effective would be to ensure that anyone who at present dislikes the taste of certain vegetables learns to find those vegetables appetizing."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Pure science—research with no immediate commercial or technological application—is a public good. Such research requires a great amount of financial support and does not yield profits in the short term. Since private corporations will not undertake to support activities that do not yield short-term profits, a society that wants to reap the benefits of pure science ought to use public funds to support such research.",
+    "questionStem": "The claim about private corporations serves which one of the following functions in the argument?",
+    "answerChoices": {
+      "A": "It expresses the conclusion of the argument.",
+      "B": "It explains what is meant by the expression \"pure research\" in the context of the argument.",
+      "C": "It distracts attention from the point at issue by introducing a different but related goal.",
+      "D": "It supports the conclusion by ruling out an alternative way of achieving the benefits mentioned.",
+      "E": "It illustrates a case where unfortunate consequences result from a failure to accept the recommendation offered."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Melinda: Hazard insurance decreases an individual's risk by judiciously spreading the risk among many policyholders.\nJack: I disagree. It makes sense for me to buy fire insurance for my house, but I don't see how doing so lessens the chances that my house will burn down.",
+    "questionStem": "Jack's response most clearly trades on an ambiguity in which one of the following expressions used by Melinda?",
+    "answerChoices": {
+      "A": "judiciously spreading",
+      "B": "many policyholders",
+      "C": "risk",
+      "D": "decreases",
+      "E": "hazard insurance"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Some doctors believe that a certain drug reduces the duration of episodes of vertigo, claiming that the average duration of vertigo for people who suffer from it has decreased since the drug was introduced. However, during a recent three-month shortage of the drug, there was no significant change in the average duration of vertigo. Thus, we can conclude that the drug has no effect on the duration of vertigo.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "If a drug made a difference in the duration of vertigo, a three-month shortage of that drug would have caused a significant change in the average duration of vertigo.",
+      "B": "If there were any change in the average duration of vertigo since the introduction of the drug, it would have demonstrated that the drug has an effect on the duration of vertigo.",
+      "C": "A period of time greater than three months would not have been better to use in judging whether the drug has an effect on the duration of vertigo.",
+      "D": "Changes in diet and smoking habits are not responsible for any change in the average duration of vertigo since the introduction of the drug.",
+      "E": "There are various significant factors other than drugs that decrease the duration of vertigo for many people who suffer from it."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "It has been suggested that a television set should be thought of as nothing more than \"a toaster with pictures\" and that since we let market forces determine the design of kitchen appliances we can let them determine what is seen on television. But that approach is too simple. Some governmental control is needed, since television is so important politically and culturally. It is a major source of commercial entertainment. It plays an important political role because it is the primary medium through which many voters obtain information about current affairs. It is a significant cultural force in that in the average home it is on for more than five hours a day.",
+    "questionStem": "Which one of the following most accurately expresses the role played in the argument by the claim that television is so important politically and culturally?",
+    "answerChoices": {
+      "A": "It states a view that the argument as a whole is designed to discredit.",
+      "B": "It is an intermediate conclusion that is offered in support of the claim that a television set should be thought of as nothing more than \"a toaster with pictures\" and for which the claim that we can let market forces determine what is seen on television is offered as support.",
+      "C": "It is a premise that is offered in support of the claim that we let market forces determine the design of kitchen appliances.",
+      "D": "It is an intermediate conclusion that is offered in support of the claim that some governmental control of television is needed and for which the claim that the television is on for more than five hours a day in the average home is offered as partial support.",
+      "E": "It is a premise that is offered in support of the claim that television is the primary medium through which many voters obtain information about current affairs."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "Earthworms, vital to the health of soil, prefer soil that is approximately neutral on the acid-to-alkaline scale. Since decomposition of dead plants makes the top layer of soil highly acidic, application of crushed limestone, which is highly alkaline, to the soil's surface should make the soil more attractive to earthworms.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "As far as soil health is concerned, aiding the decomposition of dead plants is the most important function performed by earthworms.",
+      "B": "After its application to the soil's surface, crushed limestone stays in the soil's top layer long enough to neutralize some of the top layer's acidity.",
+      "C": "Crushed limestone contains available calcium and magnesium, both of which are just as vital as earthworms to healthy soil.",
+      "D": "By itself, acidity of soil does nothing to hasten decomposition of dead plants.",
+      "E": "Alkaline soil is significantly more likely to benefit from an increased earthworm population than is highly acidic soil."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Jurist: A nation's laws must be viewed as expressions of a moral code that transcends those laws and serves as a measure of their adequacy. Otherwise, a society can have no sound basis for preferring any given set of laws to all others. Thus, any moral prohibition against the violation of statutes must leave room for exceptions.",
+    "questionStem": "Which one of the following can be properly inferred from the jurist's statements?",
+    "answerChoices": {
+      "A": "Those who formulate statutes are not primarily concerned with morality when they do so.",
+      "B": "Sometimes criteria other than the criteria derived from a moral code should be used in choosing one set of laws over another.",
+      "C": "Unless it is legally forbidden ever to violate some moral rules, moral behavior and compliance with laws are indistinguishable.",
+      "D": "There is no statute that a nation's citizens have a moral obligation to obey.",
+      "E": "A nation's laws can sometimes come into conflict with the moral code they express."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 3,
+    "stimulus": "An association between two types of conditions does not establish that conditions of one type cause conditions of the other type. Even persistent and inviolable association is inconclusive; such association is often due to conditions of both types being effects of the same kind of cause.",
+    "questionStem": "Which one of the following judgments most closely conforms to the principle stated above?",
+    "answerChoices": {
+      "A": "Some people claim that rapid growth of the money supply is what causes inflation. But this is a naive view. What these people do not realize is that growth in the money supply and inflation are actually one and the same phenomenon.",
+      "B": "People who have high blood pressure tend to be overweight. But before we draw any inferences, we should consider that an unhealthy lifestyle can cause high blood pressure, and weight gain can result from living unhealthily.",
+      "C": "In some areas, there is a high correlation between ice cream consumption and the crime rate. Some researchers have proposed related third factors, but we cannot rule out that the correlation is purely coincidental.",
+      "D": "People's moods seem to vary with the color of the clothes they wear. Dark colors are associated with gloomy moods, and bright colors are associated with cheerful moods. This correlation resolves nothing, however. We cannot say whether it is the colors that cause the moods or the converse.",
+      "E": "Linguists propose that the similarities between Greek and Latin are due to their common descent from an earlier language. But how are we to know that the similarities are not actually due to the two languages having borrowed structures from one another, as with the languages Marathi and Telegu?"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Salesperson: When a salesperson is successful, it is certain that that person has been in sales for at least three years. This is because to succeed as a salesperson, one must first establish a strong client base, and studies have shown that anyone who spends at least three years developing a client base can eventually make a comfortable living in sales.",
+    "questionStem": "The reasoning in the salesperson's argument is vulnerable to criticism on the grounds that it fails to consider the possibility that",
+    "answerChoices": {
+      "A": "salespeople who have spent three years developing a client base might not yet be successful in sales",
+      "B": "some salespeople require fewer than three years in which to develop a strong client base",
+      "C": "a salesperson who has not spent three years developing a client base may not succeed in sales",
+      "D": "it takes longer than three years for a salesperson to develop a strong client base",
+      "E": "few salespeople can afford to spend three years building a client base"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Parallel",
+    "questionDifficulty": 5,
+    "stimulus": "People who have habitually slept less than six hours a night and then begin sleeping eight or more hours a night typically begin to feel much less anxious. Therefore, most people who sleep less than six hours a night can probably cause their anxiety levels to fall by beginning to sleep at least eight hours a night.",
+    "questionStem": "The reasoning in which one of the following arguments is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "When a small company first begins to advertise on the Internet, its financial situation generally improves. This shows that most small companies that have never advertised on the Internet can probably improve their financial situation by doing so.",
+      "B": "Certain small companies that had never previously advertised on the Internet have found that their financial situations began to improve after they started to do so. So most small companies can probably improve their financial situations by starting to advertise on the Internet.",
+      "C": "It must be true that any small company that increases its Internet advertising will improve its financial situation, since most small companies that advertise on the Internet improved their financial situations soon after they first began to do so.",
+      "D": "Usually, the financial situation of a small company that has never advertised on the Internet will improve only if that company starts to advertise on the Internet. Therefore, a typical small company that has never advertised on the Internet can probably improve its financial situation by doing so.",
+      "E": "A small company's financial situation usually improves soon after that company first begins to advertise on the Internet. Thus, most small companies that have never advertised on the Internet could probably become financially strong."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Biologist: Lions and tigers are so similar to each other anatomically that their skeletons are virtually indistinguishable. But their behaviors are known to be quite different: tigers hunt only as solitary individuals, whereas lions hunt in packs. Thus, paleontologists cannot reasonably infer solely on the basis of skeletal anatomy that extinct predatory animals, such as certain dinosaurs, hunted in packs.",
+    "questionStem": "The conclusion is properly drawn if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "The skeletons of lions and tigers are at least somewhat similar in structure in certain key respects to the skeletons of at least some extinct predatory animals.",
+      "B": "There have existed at least two species of extinct predatory dinosaurs that were so similar to each other that their skeletal anatomy is virtually indistinguishable.",
+      "C": "If skeletal anatomy alone is ever an inadequate basis for inferring a particular species' hunting behavior, then it is never reasonable to infer, based on skeletal anatomy alone, that a species of animals hunted in packs.",
+      "D": "If any two animal species with virtually indistinguishable skeletal anatomy exhibit quite different hunting behaviors, then it is never reasonable to infer, based solely on the hunting behavior of those species, that the two species have the same skeletal anatomy.",
+      "E": "If it is unreasonable to infer, solely on the basis of differences in skeletal anatomy, that extinct animals of two distinct species differed in their hunting behavior, then the skeletal remains of those two species are virtually indistinguishable."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "The trees always blossom in May if April rainfall exceeds 5 centimeters. If April rainfall exceeds 5 centimeters, then the reservoirs are always full on May 1. The reservoirs were not full this May 1 and thus the trees will not blossom this May.",
+    "questionStem": "Which one of the following exhibits a flawed pattern of reasoning most similar to the flawed pattern of reasoning in the argument above?",
+    "answerChoices": {
+      "A": "If the garlic is in the pantry, then it is still fresh. And the potatoes are on the basement stairs if the garlic is in the pantry. The potatoes are not on the basement stairs, so the garlic is not still fresh.",
+      "B": "The jar reaches optimal temperature if it is held over the burner for 2 minutes. The contents of the jar liquefy immediately if the jar is at optimal temperature. The jar was held over the burner for 2 minutes, so the contents of the jar must have liquefied immediately.",
+      "C": "A book is classified \"special\" if it is more than 200 years old. If a book was set with wooden type, then it is more than 200 years old. This book is not classified \"special,\" so it is not printed with wooden type.",
+      "D": "The mower will operate only if the engine is not flooded. The engine is flooded if the foot pedal is depressed. The foot pedal is not depressed, so the mower will operate.",
+      "E": "If the kiln is too hot, then the plates will crack. If the plates crack, then the artisan must redo the order. The artisan need not redo the order. Thus, the kiln was not too hot."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Doctor: Being overweight has long been linked with a variety of health problems, such as high blood pressure and heart disease. But recent research conclusively shows that people who are slightly overweight are healthier than those who are considerably underweight. Therefore, to be healthy, it suffices to be slightly overweight.",
+    "questionStem": "The argument's reasoning is flawed because the argument",
+    "answerChoices": {
+      "A": "ignores medical opinions that tend to lead to a conclusion contrary to the one drawn",
+      "B": "never adequately defines what is meant by \"healthy\"",
+      "C": "does not take into account the fact that appropriate weight varies greatly from person to person",
+      "D": "holds that if a person lacks a property that would suffice to make the person unhealthy, then that person must be healthy",
+      "E": "mistakes a merely relative property for one that is absolute"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Robust crops not only withstand insect attacks more successfully than other crops, they are also less likely to be attacked in the first place, since insects tend to feed on weaker plants. Killing insects with pesticides does not address the underlying problem of inherent vulnerability to damage caused by insect attacks. Thus, a better way to reduce the vulnerability of agricultural crops to insect pest damage is to grow those crops in good soil soil with adequate nutrients, organic matter, and microbial activity.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "The application of nutrients and organic matter to farmland improves the soil's microbial activity.",
+      "B": "Insects never attack crops grown in soil containing adequate nutrients, organic matter, and microbial activity.",
+      "C": "The application of pesticides to weak crops fails to reduce the extent to which they are damaged by insect pests.",
+      "D": "Crops that are grown in good soil tend to be more robust than other crops.",
+      "E": "Growing crops without the use of pesticides generally produces less robust plants than when pesticides are used."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "People perceive color by means of certain photopigments in the retina that are sensitive to certain wavelengths of light. People who are color-blind are unable to distinguish between red and green, for example, due to an absence of certain photopigments. What is difficult to explain, however, is that in a study of people who easily distinguish red from green, 10 to 20 percent failed to report distinctions between many shades of red that the majority of the subjects were able to distinguish.",
+    "questionStem": "Each of the following, if true, helps to explain the result of the study cited above except:",
+    "answerChoices": {
+      "A": "People with abnormally low concentrations of the photopigments for perceiving red can perceive fewer shades of red than people with normal concentrations.",
+      "B": "Questions that ask subjects to distinguish between different shades of the same color are difficult to phrase with complete clarity.",
+      "C": "Some people are uninterested in fine gradations of color and fail to notice or report differences they do not care about.",
+      "D": "Some people are unable to distinguish red from green due to an absence in the retina of the photopigment sensitive to green.",
+      "E": "Some people fail to report distinctions between certain shades of red because they lack the names for those shades."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT124",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Occultist: The issue of whether astrology is a science is easily settled: it is both an art and a science. The scientific components are the complicated mathematics and the astronomical knowledge needed to create an astrological chart. The art is in the synthesis of a multitude of factors and symbols into a coherent statement of their relevance to an individual.",
+    "questionStem": "The reasoning in the occultist's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that any science must involve complicated mathematics",
+      "B": "incorrectly infers that a practice is a science merely from the fact that the practice has some scientific components",
+      "C": "denies the possibility that astrology involves components that are neither artistic nor scientific",
+      "D": "incorrectly infers that astronomical knowledge is scientific merely from the fact that such knowledge is needed to create an astrological chart",
+      "E": "presumes, without providing justification, that any art must involve the synthesis of a multitude of factors and symbols"
+    },
+    "correctAnswer": "B"
+  }
+]

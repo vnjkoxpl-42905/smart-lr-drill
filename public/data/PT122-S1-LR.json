@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Because the statement \"all gray rabbits are rabbits\" is true, it follows by analogy that the statement \"all suspected criminals are criminals” is also true.",
+    "questionStem": "The reasoning above is flawed because it fails to recognize that",
+    "answerChoices": {
+      "A": "the relationship between being a criminal and being a rabbit is not of the same kind as that between being suspected and being gray",
+      "B": "the relationship between being suspected and being a rabbit is not of the same kind as that between being gray and being a criminal",
+      "C": "the relationship between being a gray rabbit and being a rabbit is not of the same kind as that between being a suspected criminal and being a criminal",
+      "D": "not all rabbits are gray",
+      "E": "not all criminals are suspected"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "A study of plaque buildup on teeth used three randomly assigned groups of people who brushed their teeth twice a day for a year. People in Group 1 used the same toothbrush all year. People in Group 2 used the same toothbrush all year but sterilized it each month. People in Group 3 used a new, sterile toothbrush each month. At the end of the year, people in Groups 1 and 2 had the same amount of plaque buildup as each other, while people in Group 3 had less plaque buildup.",
+    "questionStem": "Which one of the following, if true, most helps to explain the relative amounts of plaque buildup found in the three groups?",
+    "answerChoices": {
+      "A": "The buildup of plaque on teeth, which brushing twice a day helps to prevent, is accelerated by the growth of bacteria on toothbrushes that remained unsterilized for more than a month.",
+      "B": "The stiffness of the bristles on new toothbrushes, which the mechanical action of brushing destroys after several months, inhibits the buildup of plaque.",
+      "C": "The people who did the study measured the amount of plaque buildup by a new method not usually employed by dentists.",
+      "D": "Before they joined the study, some of the people in Group 3 had been in the habit of brushing their teeth only once a day.",
+      "E": "The people in Group 2 and Group 3 brushed their teeth as vigorously as did the people in Group 1."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "Xavier: Demand by tourists in Nepal for inexpensive thangka paintings has resulted in the proliferation of inferior thangkas containing symbolic inaccuracies a sure sign of a dying art form. Nepal should prohibit sales of thangkas to tourists, for such a prohibition will induce artists to create thangkas that meet traditional standards.\nYvette: An art form without dedicated young artists will decay and die. If tourists were forbidden to buy thangkas, young artists would cease making thangkas and concentrate instead on an art form tourists can buy.",
+    "questionStem": "Yvette responds to Xavier by",
+    "answerChoices": {
+      "A": "denying the existence of the problem that Xavier's proposal is designed to ameliorate",
+      "B": "challenging the integrity of Xavier's sources of information",
+      "C": "arguing that Xavier's proposal, if implemented, would result in the very consequences it is meant to prevent",
+      "D": "using an analogy to draw a conclusion that is inconsistent with the conclusion drawn by Xavier",
+      "E": "showing that the evidence presented by Xavier has no bearing on the point at issue"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "Industry experts expect improvements in job safety training to lead to safer work environments. A recent survey indicated, however, that for manufacturers who improved job safety training during the 1980s, the number of on-the-job accidents tended to increase in the months immediately following the changes in the training programs.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy in the passage above?",
+    "answerChoices": {
+      "A": "A similar survey found that the number of on-the-job accidents remained constant after job safety training in the transportation sector was improved.",
+      "B": "Manufacturers tend to improve their job safety training only when they are increasing the size of their workforce.",
+      "C": "Manufacturers tend to improve job safety training only after they have noticed that the number of on-the-job accidents has increased.",
+      "D": "It is likely that the increase in the number of on-the-job accidents experienced by many companies was not merely a random fluctuation.",
+      "E": "Significant safety measures, such as protective equipment and government safety inspections, were in place well before the improvements in job safety training."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "Statistician: Two major studies found no causal link between medical procedure X and disorder Y, but these studies are flawed. One study looked at 1,000 people who had undergone procedure X and the other study looked at 1,100 people who had undergone procedure X. But because disorder Y occurs in only .02 percent of the population, researchers would need to include many more than 1,100 people in a study to detect even a doubling of the rate of disorder Y.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the statistician's argument?",
+    "answerChoices": {
+      "A": "Contrary to the findings of two major studies, there is reason to think that procedure X causes disorder Y.",
+      "B": "Two studies that discovered no causal link between procedure X and disorder Y are unsound.",
+      "C": "Researchers should conduct more-extensive studies of procedure X to determine whether the procedure is causally linked with disorder Y.",
+      "D": "The two studies cited did not reach a conclusion as to whether disorder Y results from procedure X.",
+      "E": "Despite the opinions of many medical experts, it has not been established that there is a causal link between procedure X and disorder Y."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Patti: Most parents are eager for their preschoolers to learn as much as possible. However, instead of providing general opportunities for their children to learn, parents often direct their children's learning to their own personal concerns. Because children have a natural curiosity and thirst for knowledge, they learn an enormous amount simply through growing and adapting to the world. Therefore, this type of directed learning is unlikely to improve a child's preschool education.",
+    "questionStem": "Which one of the following is an assumption on which Patti's argument depends?",
+    "answerChoices": {
+      "A": "Parents who use the type of directed learning in question have been exposed to misguided psychological theories about children.",
+      "B": "Children will have difficulty adapting to the world without the unique help and guidance of their parents.",
+      "C": "The type of directed learning in question is likely to enhance the general opportunities for children to learn.",
+      "D": "The type of directed learning in question is not a necessary part of the process of growing and adapting to the world.",
+      "E": "General opportunities to learn are not typical of the early years of formal education."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Must Be False",
+    "questionDifficulty": 4,
+    "stimulus": "Two things are true of all immoral actions. First, if they are performed in public, they offend public sensibilities. Second, they are accompanied by feelings of guilt.",
+    "questionStem": "If all of the statements above are true, then which one of the following must be false?",
+    "answerChoices": {
+      "A": "Some immoral actions that are not performed in public are not accompanied by feelings of guilt.",
+      "B": "Immoral actions are wrong solely by virtue of being accompanied by feelings of guilt.",
+      "C": "Some actions that offend public sensibilities if they are performed in public are not accompanied by feelings of guilt.",
+      "D": "Some actions that are accompanied by feelings of guilt are not immoral, even if they frequently offend public sensibilities.",
+      "E": "Every action performed in public that is accompanied by feelings of guilt is immoral."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Vervet monkeys use different alarm calls to warn each other of nearby predators, depending on whether the danger comes from land or from the air.",
+    "questionStem": "Which one of the following, if true, contributes most to an explanation of the behavior of vervet monkeys described above?",
+    "answerChoices": {
+      "A": "By varying the pitch of its alarm call, a vervet monkey can indicate the number of predators approaching.",
+      "B": "Different land-based predators are responsible for different numbers of vervet monkey deaths.",
+      "C": "No predators that pose a danger to vervet monkeys can attack both from land and from the air.",
+      "D": "Vervet monkeys avoid land-based predators by climbing trees but avoid predation from the air by diving into foliage.",
+      "E": "Certain land-based predators feed only on vervet monkeys, whereas every predator that attacks vervet monkeys from the air feeds on many different animals."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Technological improvements will enable food production to increase as populations increase. However, increases in food production will be negligible unless societies become more centralized so that all factors contributing to the production of food can be better coordinated. But, historically, the more centralized a society was, the greater the percentage of its people who perished if and when it collapsed. Thus, increasing the centralization of societies in an effort to increase food production via better technology will merely exacerbate the disasters associated with societal collapse.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "The more centralized a society is, the greater its need for increased food production.",
+      "B": "Not every problem associated with the collapse of a centralized society would be prevented by technological improvements.",
+      "C": "The rate at which the world's population is growing will continue to increase indefinitely.",
+      "D": "The production of food can be increased only by improved technology.",
+      "E": "Societies have become more centralized as technology has improved."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "In an experiment, scientists changed a single gene in cloned flies of a certain species. These cloned flies lacked the eye cells that give flies ultraviolet vision, even though cloned siblings with unaltered, otherwise identical genes had normal vision. Thus, scientists have shown that flies of this species lacking ultraviolet vision must have some damage to this gene.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "The relationship between genes and vision in flies is well understood.",
+      "B": "No other gene in the flies in the experiment is required for the formation of the ultraviolet vision cells.",
+      "C": "Ultraviolet vision is a trait found in all species of flies.",
+      "D": "The gene change had no effect on the flies other than the lack of ultraviolet vision cells.",
+      "E": "Ultraviolet vision is an environmentally influenced trait in the species of flies in the experiment."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "In the recent election, a country's voters overwhelmingly chose Adler over Burke. Voters knew that Burke offered more effective strategies for dealing with most of the country's problems. Moreover, Burke has a long public record of successful government service that testifies to competence and commitment. It was well known, however, that Burke's environmental policy coincided with the interests of the country's most dangerous polluter, whereas Adler proposed a policy of strict environmental regulation.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Throughout their respective political careers, Adler has been more committed to taking measures to protect the country's environment than Burke has been.",
+      "B": "Voters realized that their country's natural resources are rapidly being depleted.",
+      "C": "The concern of the country's voters for the environment played an important role in Adler's election.",
+      "D": "Offering effective strategies for dealing with a country's problems is more important in winning an election than having a long record of successful government service.",
+      "E": "In every respect other than environmental policy, Burke would have served the country better than Adler will."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Poor nutrition is at the root of the violent behavior of many young offenders. Researchers observed that in a certain institution for young offenders, the violent inmates among them consistently chose, from the food available, those items that were low in nutrients. In a subsequent experiment, some of the violent inmates were placed on a diet high in nutrients. There was a steady improvement in their behavior over the four months of the experiment. These results confirm the link between poor nutrition and violent behavior.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Some of the violent inmates who took part in the experiment had committed a large number of violent crimes.",
+      "B": "Dietary changes are easier and cheaper to implement than any other type of reform program in institutions for young offenders.",
+      "C": "Many young offenders have reported that they had consumed a low-nutrient food sometime in the days before they committed a violent crime.",
+      "D": "A further study investigated young offenders who chose a high-nutrient diet on their own and found that many of them were nonviolent.",
+      "E": "The violent inmates in the institution who were not placed on a high-nutrient diet did not show an improvement in behavior."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Robin: When a region's economy is faltering, many people lose their jobs. As a result, spending on consumer goods declines, leading in turn to more lost jobs and a worsening of the economy. Eventually, the economy becomes so bad that prices collapse; the lower prices encourage people to increase spending on consumer goods, and this higher spending results in economic improvement.\nTerry: People cannot increase their spending if they have no jobs and no money for anything other than basic necessities, so price collapses cannot lead to economic improvement.",
+    "questionStem": "Which one of the following, if true, most undermines Terry's objection to Robin's analysis?",
+    "answerChoices": {
+      "A": "Companies hire more workers after the economy starts to improve again, and many newly hired workers then make long-deferred purchases.",
+      "B": "Even when economic conditions are worsening, consumers realize that the economy will eventually improve.",
+      "C": "Even people who do not lose their jobs spend less in bad economic times and thus have savings available to spend when prices collapse.",
+      "D": "People who have lost their jobs must continue to buy some basic goods such as food, even during bad economic times.",
+      "E": "The prices of some consumer goods remain stable, even during a general price collapse."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Laila: Though lying may be unacceptable in most cases, there are exceptions: when lying brings about more good than harm, lying is morally permissible.",
+    "questionStem": "Which one of the following judgments conforms most closely to the principle stated by Laila?",
+    "answerChoices": {
+      "A": "It is morally permissible for Marcus to lie to his parents about where he is going for the evening as long as what he is going to do is not itself a bad thing to do.",
+      "B": "It is morally permissible for Lane to lie to the police about the whereabouts of a friend even if Lane suspects the friend has committed a crime.",
+      "C": "It is morally permissible to lie about anything that affects only yourself.",
+      "D": "It is morally permissible for Debra to lie to keep Thomas from being unhappy as long as the lie helps Thomas and does no harm.",
+      "E": "It is morally permissible to lie to innocent people if the lie will cause those people to make a choice that will benefit them but may harm others."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "If all works of art evoke intense feelings, and this sculpture is a work of art, then it follows that this sculpture evokes intense feelings. But this sculpture does not evoke intense feelings at all. So either this sculpture is not a work of art, or not all works of art evoke intense feelings.",
+    "questionStem": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
+    "answerChoices": {
+      "A": "If all classes are canceled, and the biology lab is a class, then it follows that the biology lab is canceled. But the biology lab is not a class. So the biology lab is not canceled, or some classes are not canceled.",
+      "B": "If all medical research is significant, and this research is medical, then it follows that this research is significant. But this research is actually of no significance. So not all medical research is significant, and this research is not medical.",
+      "C": "If all vitamins are safe in large doses, and beta-carotene is a vitamin, then it follows that beta-carotene is safe in large doses. But beta-carotene is not safe in large doses. So not all vitamins are safe in large doses, or beta-carotene is not a vitamin.",
+      "D": "If all sciences rely heavily on mathematics, and clinical psychology is a science, then it follows that clinical psychology relies heavily on mathematics. But clinical psychology does not rely heavily on mathematics. So clinical psychology is not a science.",
+      "E": "If all classes are canceled today, then it follows that today is a holiday and the library is closed. But today is not a holiday. So some classes are not canceled, or the library is open."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "With decreased production this year in many rice-growing countries, prices of the grain on world markets have increased. Analysts blame this increase on the fact that only a small percentage of world production is sold commercially, with government growers controlling most of the rest, distributing it for local consumption. With so little rice being traded freely, even slight changes in production can significantly affect the amount of rice available on world markets.",
+    "questionStem": "Which one of the following, if true, would most call into question the analysts' explanation of the price increase?",
+    "answerChoices": {
+      "A": "Rice-importing countries reduce purchases of rice when the price increases dramatically.",
+      "B": "In times of decreased rice production, governments store more of the rice they control and reduce their local distribution of rice.",
+      "C": "In times of decreased rice production, governments export some of the rice originally intended for local distribution to countries with free grain markets.",
+      "D": "Governments that distribute the rice crop for local consumption purchase the grain commercially in the event of production shortfalls.",
+      "E": "During reduced rice harvests, rice-importing countries import other kinds of crops, although this fails to compensate for decreased rice imports."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Sharon, a noted collector of fine glass, found a rare glass vase in a secondhand store in a small town she was visiting. The vase was priced at $10, but Sharon knew that it was worth at least $1,000. Saying nothing to the storekeeper about the value of the vase, Sharon bought the vase for $10. Weeks later the storekeeper read a newspaper article about Sharon's collection, which mentioned the vase and how she had acquired it. When the irate storekeeper later accused Sharon of taking advantage of him, Sharon replied that she had done nothing wrong.",
+    "questionStem": "Which one of the following principles, if established, most helps to justify Sharon's position?",
+    "answerChoices": {
+      "A": "A seller is not obligated to inform a buyer of anything about the merchandise that the seller offers for sale except for the demanded price.",
+      "B": "It is the responsibility of the seller, not the buyer, to make sure that the amount of money a buyer gives a seller in exchange for merchandise matches the amount that the seller demands for that merchandise.",
+      "C": "A buyer's sole obligation to a seller is to pay in full the price that the seller demands for a piece of merchandise that the buyer acquires from the seller.",
+      "D": "It is the responsibility of the buyer, not the seller, to ascertain that the quality of a piece of merchandise satisfies the buyer's standards.",
+      "E": "The obligations that follow from any social relationship between two people who are well acquainted override any obligations that follow from an economic relationship between the two."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Health officials now recommend that people reduce their intake of foods that are high in cholesterol, such as red meat. The recent decline in the total consumption of beef indicates that many people are following this recommendation. But restaurants specializing in steak are flourishing despite an overall decline in the restaurant industry. So clearly there still are a lot of people completely ignoring the health recommendation.",
+    "questionStem": "The argument is vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It neglects to consider whether restaurants that specialize in steak try to attract customers by offering steak dinners at low prices.",
+      "B": "It assumes without warrant that people who eat steak at steak restaurants do not need to reduce their intake of foods that are high in cholesterol.",
+      "C": "It presupposes that the popularity of restaurants that specialize in steaks is a result of a decrease in the price of beef.",
+      "D": "It mistakes the correlation of the decline in beef consumption and the decline in the restaurant industry for a causal relation.",
+      "E": "It fails to consider whether the people who patronize steak restaurants have heeded the health officials by reducing their cholesterol intake in their at-home diets."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Film critic: There has been a recent spate of so-called \"documentary\" films purporting to give the \"true story\" of one historical event or another. But most of these films have been inaccurate and filled with wild speculations, usually about conspiracies. The filmmakers defend their works by claiming that freedom of speech entitles them to express their views. Although that claim is true, it does not support the conclusion that anyone ought to pay attention to the absurd views expressed in the films.",
+    "questionStem": "To which one of the following principles does the film critic's commentary most closely conform?",
+    "answerChoices": {
+      "A": "Although filmmakers are entitled to express absurd views, they are not justified in doing so.",
+      "B": "Everyone ought to ignore films containing wild speculations about conspiracies.",
+      "C": "Freedom of speech sometimes makes the expression of absurd views necessary.",
+      "D": "Freedom of speech does not entitle filmmakers to present inaccurate speculations as truth.",
+      "E": "Views that people are entitled to express need not be views to which anyone is obliged to pay attention."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The people most likely to watch a televised debate between political candidates are the most committed members of the electorate and thus the most likely to have already made up their minds about whom to support. Furthermore, following a debate, uncommitted viewers are generally undecided about who won the debate. Hence, winning a televised debate does little to bolster one's chances of winning an election.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism because the argument fails to consider the possibility that",
+    "answerChoices": {
+      "A": "watching an exciting debate makes people more likely to vote in an election",
+      "B": "the voting behavior of people who do not watch a televised debate is influenced by reports about the debate",
+      "C": "there are differences of opinion about what constitutes winning or losing a debate",
+      "D": "people's voting behavior may be influenced in unpredictable ways by comments made by the participants in a televised debate",
+      "E": "people who are committed to a particular candidate will vote even if their candidate is perceived as having lost a televised debate"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Many successful graphic designers began their careers after years of formal training, although a significant number learned their trade more informally on the job. But no designer ever became successful who ignored the wishes of a client.",
+    "questionStem": "If all of the statements above are true, which one of the following must also be true?",
+    "answerChoices": {
+      "A": "All graphic designers who are unsuccessful have ignored the wishes of a client.",
+      "B": "Not all formally trained graphic designers ignore clients' wishes.",
+      "C": "The more attentive a graphic designer is to a client's wishes, the more likely the designer is to be successful.",
+      "D": "No graphic designers who learn their trade on the job will ignore clients' wishes.",
+      "E": "The most successful graphic designers learn their trade on the job."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "If violations of any of a society's explicit rules routinely go unpunished, then that society's people will be left without moral guidance. Because people who lack moral guidance will act in many different ways, chaos results. Thus, a society ought never to allow any of its explicit rules to be broken with impunity.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "takes for granted that a society will avoid chaos as long as none of its explicit rules are routinely violated with impunity",
+      "B": "fails to consider that the violated rules might have been made to prevent problems that would not arise even if the rules were removed",
+      "C": "infers, from the claim that the violation of some particular rules will lead to chaos, that the violation of any rule will lead to chaos",
+      "D": "confuses the routine nonpunishment of violations of a rule with sometimes not punishing violations of the rule",
+      "E": "takes for granted that all of a society's explicit rules result in equally serious consequences when broken"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Perception cannot be a relationship between a conscious being and a material object that causes that being to have beliefs about that object. For there are many imperceptible material objects about which we have beliefs.",
+    "questionStem": "Which one of the following is most closely parallel in its flawed reasoning to the flawed reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Art cannot be an artifact created by someone with the express purpose of causing an aesthetic reaction in its audience. For we often have aesthetic reactions to artifacts that are not art.",
+      "B": "Liberty cannot be the obligation of other people not to prevent one from doing as one wishes. For no matter what one tries to do some people will try to prevent it.",
+      "C": "Preparation cannot be action directed toward fulfilling needs and solving problems before they arise. For there are problems so severe that no amount of preparation will help.",
+      "D": "Happiness cannot be the state of mind in which pleasure both qualitatively and quantitatively predominates over pain. For we simply cannot compare pain and pleasure qualitatively.",
+      "E": "Physics cannot be the science that investigates the ultimate principles of nature. For human beings are finite, and the ultimate principles cannot be understood by finite beings."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Ethicist: In general it is wrong to use medical treatments and procedures of an experimental nature without the patient's consent, because the patient has a right to reject or accept a treatment on the basis of full information about all the available options. But knowledge of the best treatment for emergency conditions can be gained only if consent to experimental practices is sometimes bypassed in medical emergencies. So some restricted nonconsensual medical research should be allowed.",
+    "questionStem": "Which one of the following is an assumption required by the ethicist's argument?",
+    "answerChoices": {
+      "A": "Doctors often do not know what is best for their own patients in emergency situations.",
+      "B": "If patients knew that experimental treatments were being used in medical emergencies, it could adversely affect the outcome of that research.",
+      "C": "Nonconsensual medical research should be allowed only if the research is highly likely to yield results that will benefit the patient.",
+      "D": "In cases where the best treatment option is unknown, a patient ceases to have the right to know the treatment plan and the alternatives.",
+      "E": "The right of patients to informed consent is outweighed in at least some medical emergencies by the possible benefits of research conducted without their consent."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT122",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Gas station owner: Increased fuel efficiency reduces air pollution and dependence on imported oil, which has led some people to suggest that automobile manufacturers should make cars smaller to increase their fuel efficiency. But smaller cars are more likely to be seriously damaged in collisions and provide less protection for their occupants. Greater fuel efficiency is not worth the added risk to human lives; therefore, manufacturers should not seek to increase fuel efficiency.",
+    "questionStem": "The reasoning in the gas station owner's argument is flawed because the argument",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that it would be impossible to reduce the likelihood of dangerous accidents for small cars",
+      "B": "concludes, on the basis of the claim that one means to an end is unacceptable, that the end should not be pursued",
+      "C": "draws a conclusion about what should be done from premises all of which are about factual matters only",
+      "D": "presupposes the truth of what it sets out to prove",
+      "E": "presumes, without providing justification, that increasing fuel efficiency is the only way to reduce air pollution"
+    },
+    "correctAnswer": "B"
+  }
+]

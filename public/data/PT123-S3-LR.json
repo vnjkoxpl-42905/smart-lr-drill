@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Situation: Someone living in a cold climate buys a winter coat that is stylish but not warm in order to appear sophisticated.\nAnalysis: People are sometimes willing to sacrifice sensual comfort or pleasure for the sake of appearances.",
+    "questionStem": "The analysis provided for the situation above is most appropriate for which one of the following situations?",
+    "answerChoices": {
+      "A": "A person buys an automobile to commute to work even though public transportation is quick and reliable.",
+      "B": "A parent buys a car seat for a young child because it is more colorful and more comfortable for the child than the other car seats on the market, though no safer.",
+      "C": "A couple buys a particular wine even though their favorite wine is less expensive and better tasting because they think it will impress their dinner guests.",
+      "D": "A person sets her thermostat at a low temperature during the winter because she is concerned about the environmental damage caused by using fossil fuels to heat her home.",
+      "E": "An acrobat convinces the circus that employs him to purchase an expensive outfit for him so that he can wear it during his act to impress the audience."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "After replacing his old gas water heater with a new, pilotless, gas water heater that is rated as highly efficient, Jimmy's gas bills increased.",
+    "questionStem": "Each of the following, if true, contributes to an explanation of the increase mentioned above except:",
+    "answerChoices": {
+      "A": "The new water heater uses a smaller percentage of the gas used by Jimmy's household than did the old one.",
+      "B": "Shortly after the new water heater was installed, Jimmy's uncle came to live with him, doubling the size of the household.",
+      "C": "After having done his laundry at a laundromat, Jimmy bought and started using a gas dryer when he replaced his water heater.",
+      "D": "Jimmy's utility company raised the rates for gas consumption following installation of the new water heater.",
+      "E": "Unusually cold weather following installation of the new water heater resulted in heavy gas usage."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Carolyn: The artist Marc Quinn has displayed, behind a glass plate, biologically replicated fragments of Sir John Sulston's DNA, calling it a \"conceptual portrait\" of Sulston. But to be a portrait, something must bear a recognizable resemblance to its subject.\nArnold: I disagree. Quinn's conceptual portrait is a maximally realistic portrait, for it holds actual instructions according to which Sulston was created.",
+    "questionStem": "The dialogue provides most support for the claim that Carolyn and Arnold disagree over whether the object described by Quinn as a conceptual portrait of Sir John Sulston",
+    "answerChoices": {
+      "A": "should be considered to be art",
+      "B": "should be considered to be Quinn's work",
+      "C": "bears a recognizable resemblance to Sulston",
+      "D": "contains instructions according to which Sulston was created",
+      "E": "is actually a portrait of Sulston"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Many corporations have begun decorating their halls with motivational posters in hopes of boosting their employees' motivation to work productively. However, almost all employees at these corporations are already motivated to work productively. So these corporations' use of motivational posters is unlikely to achieve its intended purpose.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "fails to consider whether corporations that do not currently use motivational posters would increase their employees' motivation to work productively if they began using the posters",
+      "B": "takes for granted that, with respect to their employees' motivation to work productively, corporations that decorate their halls with motivational posters are representative of corporations in general",
+      "C": "fails to consider that even if motivational posters do not have one particular beneficial effect for corporations, they may have similar effects that are equally beneficial",
+      "D": "does not adequately address the possibility that employee productivity is strongly affected by factors other than employees' motivation to work productively",
+      "E": "fails to consider that even if employees are already motivated to work productively, motivational posters may increase that motivation"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Atrens: An early entomologist observed ants carrying particles to neighboring ant colonies and inferred that the ants were bringing food to their neighbors. Further research, however, revealed that the ants were emptying their own colony's dumping site. Thus, the early entomologist was wrong.",
+    "questionStem": "Atrens's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Ant societies do not interact in all the same ways that human societies interact.",
+      "B": "There is only weak evidence for the view that ants have the capacity to make use of objects as gifts.",
+      "C": "Ant dumping sites do not contain particles that could be used as food.",
+      "D": "The ants to whom the particles were brought never carried the particles into their own colonies.",
+      "E": "The entomologist cited retracted his conclusion when it was determined that the particles the ants carried came from their dumping site."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Jablonski, who owns a car dealership, has donated cars to driver education programs at area schools for over five years. She found the statistics on car accidents to be disturbing, and she wanted to do something to encourage better driving in young drivers. Some members of the community have shown their support for this action by purchasing cars from Jablonski's dealership.",
+    "questionStem": "Which one of the following propositions is best illustrated by the passage?",
+    "answerChoices": {
+      "A": "The only way to reduce traffic accidents is through driver education programs.",
+      "B": "Altruistic actions sometimes have positive consequences for those who perform them.",
+      "C": "Young drivers are the group most likely to benefit from driver education programs.",
+      "D": "It is usually in one's best interest to perform actions that benefit others.",
+      "E": "An action must have broad community support if it is to be successful."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Antonio: One can live a life of moderation by never deviating from the middle course. But then one loses the joy of spontaneity and misses the opportunities that come to those who are occasionally willing to take great chances, or to go too far.\nMarla: But one who, in the interests of moderation, never risks going too far is actually failing to live a life of moderation: one must be moderate even in one's moderation.",
+    "questionStem": "Antonio and Marla disagree over",
+    "answerChoices": {
+      "A": "whether it is desirable for people occasionally to take great chances in life",
+      "B": "what a life of moderation requires of a person",
+      "C": "whether it is possible for a person to embrace other virtues along with moderation",
+      "D": "how often a person ought to deviate from the middle course in life",
+      "E": "whether it is desirable for people to be moderately spontaneous"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Advertisement: Fabric-Soft leaves clothes soft and fluffy, and its fresh scent is a delight. We conducted a test using over 100 consumers to prove Fabric-Soft is best. Each consumer was given one towel washed with Fabric-Soft and one towel washed without it. Ninety-nine percent of the consumers preferred the Fabric-Soft towel. So Fabric-Soft is the most effective fabric softener available.",
+    "questionStem": "The advertisement's reasoning is most vulnerable to criticism on the grounds that it fails to consider whether",
+    "answerChoices": {
+      "A": "any of the consumers tested are allergic to fabric softeners",
+      "B": "Fabric-Soft is more or less harmful to the environment than other fabric softeners",
+      "C": "Fabric-Soft is much cheaper or more expensive than other fabric softeners",
+      "D": "the consumers tested find the benefits of using fabric softeners worth the expense",
+      "E": "the consumers tested had the opportunity to evaluate fabric softeners other than Fabric-Soft"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Naturalist: The recent claims that the Tasmanian tiger is not extinct are false. The Tasmanian tiger's natural habitat was taken over by sheep farming decades ago, resulting in the animal's systematic elimination from the area. Since then naturalists working in the region have discovered no hard evidence of its survival, such as carcasses or tracks. In spite of alleged sightings of the animal, the Tasmanian tiger no longer exists.",
+    "questionStem": "Which one of the following is an assumption on which the naturalist's argument depends?",
+    "answerChoices": {
+      "A": "Sheep farming drove the last Tasmanian tigers to starvation by chasing them from their natural habitat.",
+      "B": "Some scavengers in Tasmania are capable of destroying tiger carcasses without a trace.",
+      "C": "Every naturalist working in the Tasmanian tiger's natural habitat has looked systematically for evidence of the tiger's survival.",
+      "D": "The Tasmanian tiger did not move and adapt to a different region in response to the loss of habitat.",
+      "E": "Those who have reported sightings of the Tasmanian tiger are not experienced naturalists."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Advertisers have learned that people are more easily encouraged to develop positive attitudes about things toward which they originally have neutral or even negative attitudes if those things are linked, with pictorial help rather than exclusively through prose, to things about which they already have positive attitudes. Therefore, advertisers are likely to",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "use little if any written prose in their advertisements",
+      "B": "try to encourage people to develop positive attitudes about products that can be better represented pictorially than in prose",
+      "C": "place their advertisements on television rather than in magazines",
+      "D": "highlight the desirable features of the advertised product by contrasting them pictorially with undesirable features of a competing product",
+      "E": "create advertisements containing pictures of things most members of the target audience like"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Feathers recently taken from seabirds stuffed and preserved in the 1880s have been found to contain only half as much mercury as feathers recently taken from living birds of the same species. Since mercury that accumulates in a seabird's feathers as the feathers grow is derived from fish eaten by the bird, these results indicate that mercury levels in saltwater fish are higher now than they were 100 years ago.",
+    "questionStem": "The argument depends on assuming that",
+    "answerChoices": {
+      "A": "the proportion of a seabird's diet consisting of fish was not as high, on average, in the 1880s as it is today",
+      "B": "the amount of mercury in a saltwater fish depends on the amount of pollution in the ocean habitat of the fish",
+      "C": "mercury derived from fish is essential for the normal growth of a seabird's feathers",
+      "D": "the stuffed seabirds whose feathers were tested for mercury were not fully grown",
+      "E": "the process used to preserve birds in the 1880s did not substantially decrease the amount of mercury in the birds' feathers"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "Novel X and Novel Y are both semiautobiographical novels and contain many very similar themes and situations, which might lead one to suspect plagiarism on the part of one of the authors. However, it is more likely that the similarity of themes and situations in the two novels is merely coincidental, since both authors are from very similar backgrounds and have led similar lives.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion drawn in the argument?",
+    "answerChoices": {
+      "A": "Novel X and Novel Y are both semiautobiographical novels, and the two novels contain many very similar themes and situations.",
+      "B": "The fact that Novel X and Novel Y are both semiautobiographical novels and contain many very similar themes and situations might lead one to suspect plagiarism on the part of one of the authors.",
+      "C": "The author of Novel X and the author of Novel Y are from very similar backgrounds and have led very similar lives.",
+      "D": "It is less likely that one of the authors of Novel X or Novel Y is guilty of plagiarism than that the similarity of themes and situations in the two novels is merely coincidental.",
+      "E": "If the authors of Novel X and Novel Y are from very similar backgrounds and have led similar lives, suspicions that either of the authors plagiarized are very likely to be unwarranted."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "Therapist: Cognitive psychotherapy focuses on changing a patient's conscious beliefs. Thus, cognitive psychotherapy is likely to be more effective at helping patients overcome psychological problems than are forms of psychotherapy that focus on changing unconscious beliefs and desires, since only conscious beliefs are under the patient's direct conscious control.",
+    "questionStem": "Which one of the following, if true, would most strengthen the therapist's argument?",
+    "answerChoices": {
+      "A": "Psychological problems are frequently caused by unconscious beliefs that could be changed with the aid of psychotherapy.",
+      "B": "It is difficult for any form of psychotherapy to be effective without focusing on mental states that are under the patient's direct conscious control.",
+      "C": "Cognitive psychotherapy is the only form of psychotherapy that focuses primarily on changing the patient's conscious beliefs.",
+      "D": "No form of psychotherapy that focuses on changing the patient's unconscious beliefs and desires can be effective unless it also helps change beliefs that are under the patient's direct conscious control.",
+      "E": "All of a patient's conscious beliefs are under the patient's conscious control, but other psychological states cannot be controlled effectively without the aid of psychotherapy."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Commentator: In academic scholarship, sources are always cited, and methodology and theoretical assumptions are set out, so as to allow critical study, replication, and expansion of scholarship. In open-source software, the code in which the program is written can be viewed and modified by individual users for their purposes without getting permission from the producer or paying a fee. In contrast, the code of proprietary software is kept secret, and modifications can be made only by the producer, for a fee. This shows that open-source software better matches the values embodied in academic scholarship, and since scholarship is central to the mission of universities, universities should use only open-source software.",
+    "questionStem": "The commentator's reasoning most closely conforms to which one of the following principles?",
+    "answerChoices": {
+      "A": "Whatever software tools are most advanced and can achieve the goals of academic scholarship are the ones that should alone be used in universities.",
+      "B": "Universities should use the type of software technology that is least expensive, as long as that type of software technology is adequate for the purposes of academic scholarship.",
+      "C": "Universities should choose the type of software technology that best matches the values embodied in the activities that are central to the mission of universities.",
+      "D": "The form of software technology that best matches the values embodied in the activities that are central to the mission of universities is the form of software technology that is most efficient for universities to use.",
+      "E": "A university should not pursue any activity that would block the achievement of the goals of academic scholarship at that university."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "A consumer magazine surveyed people who had sought a psychologist's help with a personal problem. Of those responding who had received treatment for 6 months or less, 20 percent claimed that treatment \"made things a lot better.\" Of those responding who had received longer treatment, 36 percent claimed that treatment “made things a lot better.\" Therefore, psychological treatment lasting more than 6 months is more effective than shorter-term treatment.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Of the respondents who had received treatment for longer than 6 months, 10 percent said that treatment made things worse.",
+      "B": "Patients who had received treatment for longer than 6 months were more likely to respond to the survey than were those who had received treatment for a shorter time.",
+      "C": "Patients who feel they are doing well in treatment tend to remain in treatment, while those who are doing poorly tend to quit earlier.",
+      "D": "Patients who were dissatisfied with their treatment were more likely to feel a need to express their feelings about it and thus to return the survey.",
+      "E": "Many psychologists encourage their patients to receive treatment for longer than 6 months."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Philosopher: Nations are not literally persons; they have no thoughts or feelings, and, literally speaking, they perform no actions. Thus they have no moral rights or responsibilities. But no nation can survive unless many of its citizens attribute such rights and responsibilities to it, for nothing else could prompt people to make the sacrifices national citizenship demands. Obviously, then, a nation",
+    "questionStem": "Which one of the following most logically completes the philosopher's argument?",
+    "answerChoices": {
+      "A": "cannot continue to exist unless something other than the false belief that the nation has moral rights motivates its citizens to make sacrifices",
+      "B": "cannot survive unless many of its citizens have some beliefs that are literally false",
+      "C": "can never be a target of moral praise or blame",
+      "D": "is not worth the sacrifices that its citizens make on its behalf",
+      "E": "should always be thought of in metaphorical rather than literal terms"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "When exercising the muscles in one's back, it is important, in order to maintain a healthy back, to exercise the muscles on opposite sides of the spine equally. After all, balanced muscle development is needed to maintain a healthy back, since the muscles on opposite sides of the spine must pull equally in opposing directions to keep the back in proper alignment and protect the spine.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Muscles on opposite sides of the spine that are equally well developed will be enough to keep the back in proper alignment.",
+      "B": "Exercising the muscles on opposite sides of the spine unequally tends to lead to unbalanced muscle development.",
+      "C": "Provided that one exercises the muscles on opposite sides of the spine equally, one will have a generally healthy back.",
+      "D": "If the muscles on opposite sides of the spine are exercised unequally, one's back will be irreparably damaged.",
+      "E": "One should exercise daily to ensure that the muscles on opposite sides of the spine keep the back in proper alignment."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Editorialist: In all cultures, it is almost universally accepted that one has a moral duty to prevent members of one's family from being harmed. Thus, few would deny that if a person is known by the person's parents to be falsely accused of a crime, it would be morally right for the parents to hide the accused from the police. Hence, it is also likely to be widely accepted that it is sometimes morally right to obstruct the police in their work.",
+    "questionStem": "The reasoning in the editorialist's argument is most vulnerable to criticism on the grounds that this argument",
+    "answerChoices": {
+      "A": "utilizes a single type of example for the purpose of justifying a broad generalization",
+      "B": "fails to consider the possibility that other moral principles would be widely recognized as overriding any obligation to protect a family member from harm",
+      "C": "presumes, without providing justification, that allowing the police to arrest an innocent person assists rather than obstructs justice",
+      "D": "takes for granted that there is no moral obligation to obey the law",
+      "E": "takes for granted that the parents mentioned in the example are not mistaken about their child's innocence"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "Editor: Many candidates say that if elected they will reduce governmental intrusion into voters' lives. But voters actually elect politicians who instead promise that the government will provide assistance to solve their most pressing problems. Governmental assistance, however, costs money, and money can come only from taxes, which can be considered a form of governmental intrusion. Thus, governmental intrusion into the lives of voters will rarely be substantially reduced over time in a democracy.",
+    "questionStem": "Which one of the following, if true, would most strengthen the editor's argument?",
+    "answerChoices": {
+      "A": "Politicians who win their elections usually keep their campaign promises.",
+      "B": "Politicians never promise what they really intend to do once in office.",
+      "C": "The most common problems people have are financial problems.",
+      "D": "Governmental intrusion into the lives of voters is no more burdensome in nondemocratic countries than it is in democracies.",
+      "E": "Politicians who promise to do what they actually believe ought to be done are rarely elected."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "We should accept the proposal to demolish the old train station, because the local historical society, which vehemently opposes this, is dominated by people who have no commitment to long-term economic well-being. Preserving old buildings creates an impediment to new development, which is critical to economic health.",
+    "questionStem": "The flawed reasoning exhibited by the argument above is most similar to that exhibited by which one of the following arguments?",
+    "answerChoices": {
+      "A": "Our country should attempt to safeguard works of art that it deems to possess national cultural significance. These works might not be recognized as such by all taxpayers, or even all critics. Nevertheless, our country ought to expend whatever money is needed to procure all such works as they become available.",
+      "B": "Documents of importance to local heritage should be properly preserved and archived for the sake of future generations. For, if even one of these documents is damaged or lost, the integrity of the historical record as a whole will be damaged.",
+      "C": "You should have your hair cut no more than once a month. After all, beauticians suggest that their customers have their hair cut twice a month, and they do this as a way of generating more business for themselves.",
+      "D": "The committee should endorse the plan to postpone construction of the new expressway. Many residents of the neighborhoods that would be affected are fervently opposed to that construction, and the committee is obligated to avoid alienating those residents.",
+      "E": "One should not borrow even small amounts of money unless it is absolutely necessary. Once one borrows a few dollars, the interest starts to accumulate. The longer one takes to repay, the more one ends up owing, and eventually a small debt has become a large one."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Ethicist: On average, animals raised on grain must be fed sixteen pounds of grain to produce one pound of meat. A pound of meat is more nutritious for humans than a pound of grain, but sixteen pounds of grain could feed many more people than could a pound of meat. With grain yields leveling off, large areas of farmland going out of production each year, and the population rapidly expanding, we must accept the fact that consumption of meat will soon be morally unacceptable.",
+    "questionStem": "Which one of the following, if true, would most weaken the ethicist's argument?",
+    "answerChoices": {
+      "A": "Even though it has been established that a vegetarian diet can be healthy, many people prefer to eat meat and are willing to pay for it.",
+      "B": "Often, cattle or sheep can be raised to maturity on grass from pastureland that is unsuitable for any other kind of farming.",
+      "C": "If a grain diet is supplemented with protein derived from non-animal sources, it can have nutritional value equivalent to that of a diet containing meat.",
+      "D": "Although prime farmland near metropolitan areas is being lost rapidly to suburban development, we could reverse this trend by choosing to live in areas that are already urban.",
+      "E": "Nutritionists agree that a diet composed solely of grain products is not adequate for human health."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "If the price it pays for coffee beans continues to increase, the Coffee Shoppe will have to increase its prices. In that case, either the Coffee Shoppe will begin selling noncoffee products or its coffee sales will decrease. But selling noncoffee products will decrease the Coffee Shoppe's overall profitability. Moreover, the Coffee Shoppe can avoid a decrease in overall profitability only if its coffee sales do not decrease.",
+    "questionStem": "Which one of the following statements follows logically from the statements above?",
+    "answerChoices": {
+      "A": "If the Coffee Shoppe's overall profitability decreases, the price it pays for coffee beans will have continued to increase.",
+      "B": "If the Coffee Shoppe's overall profitability decreases, either it will have begun selling noncoffee products or its coffee sales will have decreased.",
+      "C": "The Coffee Shoppe's overall profitability will decrease if the price it pays for coffee beans continues to increase.",
+      "D": "The price it pays for coffee beans cannot decrease without the Coffee Shoppe's overall profitability also decreasing.",
+      "E": "Either the price it pays for coffee beans will continue to increase or the Coffee Shoppe's coffee sales will increase."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Political candidates' speeches are loaded with promises and with expressions of good intention, but one must not forget that the politicians' purpose in giving these speeches is to get themselves elected. Clearly, then, these speeches are selfishly motivated and the promises made in them are unreliable.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the argument above?",
+    "answerChoices": {
+      "A": "The argument presumes, without providing justification, that if a person's promise is not selfishly motivated then that promise is reliable.",
+      "B": "The argument presumes, without providing justification, that promises made for selfish reasons are never kept.",
+      "C": "The argument confuses the effect of an action with its cause.",
+      "D": "The argument overlooks the fact that a promise need not be unreliable just because the person who made it had an ulterior motive for doing so.",
+      "E": "The argument overlooks the fact that a candidate who makes promises for selfish reasons may nonetheless be worthy of the office for which he or she is running."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Sociologist: Romantics who claim that people are not born evil but may be made evil by the imperfect institutions that they form cannot be right, for they misunderstand the causal relationship between people and their institutions. After all, institutions are merely collections of people.",
+    "questionStem": "Which one of the following principles, if valid, would most help to justify the sociologist's argument?",
+    "answerChoices": {
+      "A": "People acting together in institutions can do more good or evil than can people acting individually.",
+      "B": "Institutions formed by people are inevitably imperfect.",
+      "C": "People should not be overly optimistic in their view of individual human beings.",
+      "D": "A society's institutions are the surest gauge of that society's values.",
+      "E": "The whole does not determine the properties of the things that compose it."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT123",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Some anthropologists argue that the human species could not have survived prehistoric times if the species had not evolved the ability to cope with diverse natural environments. However, there is considerable evidence that Australopithecus afarensis, a prehistoric species related to early humans, also thrived in a diverse array of environments, but became extinct. Hence, the anthropologists' claim is false.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "confuses a condition's being required for a given result to occur in one case with the condition's being sufficient for such a result to occur in a similar case",
+      "B": "takes for granted that if one species had a characteristic that happened to enable it to survive certain conditions, at least one related extinct species must have had the same characteristic",
+      "C": "generalizes, from the fact that one species with a certain characteristic survived certain conditions, that all related species with the same characteristic must have survived exactly the same conditions",
+      "D": "fails to consider the possibility that Australopithecus afarensis had one or more characteristics that lessened its chances of surviving prehistoric times",
+      "E": "fails to consider the possibility that, even if a condition caused a result to occur in one case, it was not necessary to cause the result to occur in a similar case"
+    },
+    "correctAnswer": "A"
+  }
+]
