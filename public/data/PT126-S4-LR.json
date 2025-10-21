@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Carl is clearly an incompetent detective. He has solved a smaller percentage of the cases assigned to him in the last 3 years—only 1 out of 25—than any other detective on the police force.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument above?",
+    "answerChoices": {
+      "A": "Because the police chief regards Carl as the most capable detective, she assigns him only the most difficult cases, ones that others have failed to solve.",
+      "B": "Before he became a detective, Carl was a neighborhood police officer and was highly respected by the residents of the neighborhood he patrolled.",
+      "C": "Detectives on the police force on which Carl serves are provided with extensive resources, including the use of a large computer database, to help them solve crimes.",
+      "D": "Carl was previously a detective in a police department in another city, and in the 4 years he spent there, he solved only 1 out of 30 crimes.",
+      "E": "Many of the officers in the police department in which Carl serves were hired or promoted within the last 5 years."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Role",
+    "questionDifficulty": 1,
+    "stimulus": "It is well documented that people have positive responses to some words, such as \"kind\" and \"wonderful,\" and negative responses to others, such as \"evil\" and \"nausea.\" Recently, psychological experiments have revealed that people also have positive or negative responses to many nonsense words. This shows that people's responses to words are conditioned not only by what the words mean, but also by how they sound.",
+    "questionStem": "The claim that people have positive or negative responses to many nonsense words plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "It is a premise offered in support of the conclusion that people have either a positive or a negative response to any word.",
+      "B": "It is a conclusion for which the only support provided is the claim that people's responses to words are conditioned both by what the words mean and by how they sound.",
+      "C": "It is a generalization partially supported by the claim that meaningful words can trigger positive or negative responses in people.",
+      "D": "It is a premise offered in support of the conclusion that people's responses to words are engendered not only by what the words mean, but also by how they sound.",
+      "E": "It is a conclusion supported by the claim that people's responses under experimental conditions are essentially different from their responses in ordinary situations."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "People with high blood pressure are generally more nervous and anxious than are people who do not have high blood pressure. This fact shows that this particular combination of personality traits—the so-called hypertensive personality—is likely to cause a person with these traits to develop high blood pressure.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the ground that the argument",
+    "answerChoices": {
+      "A": "fails to define the term “hypertensive personality\"",
+      "B": "presupposes that people have permanent personality traits",
+      "C": "simply restates the claim that there is a “hypertensive personality” without providing evidence to support that claim",
+      "D": "takes a correlation between personality traits and high blood pressure as proof that the traits cause high blood pressure",
+      "E": "focuses on nervousness and anxiety only, ignoring other personality traits that people with high blood pressure might have"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "In his book, published in 1892, Grey used the same metaphor that Jordan used in her book, which was published in 1885. The metaphor is so unusual that there is little chance that two different people independently created it. Therefore, it is highly likely that Grey read Jordan's book.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "A text that was probably known to both Jordan and Grey was published in 1860 and also contained the same unusual metaphor.",
+      "B": "The passage in Grey's book that employs the unusual metaphor expresses an idea that bears little relation to any ideas expressed in Jordan's book.",
+      "C": "Both Grey's book and Jordan's book were written for the same audience.",
+      "D": "Jordan used the same metaphor in a work that she wrote in 1894 and published in 1895.",
+      "E": "According to most scholars, Grey was generally a more inventive writer than Jordan and developed many original metaphors."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "Medical specialists report that patients with back muscle injuries who receive a combination of drugs and physical therapy do only as well as those who receive physical therapy alone. Yet the specialists state that drugs are a necessary part of the treatment of all patients who receive them for back muscle injuries.",
+    "questionStem": "Which one of the following, if true, most helps to reconcile the medical specialists' two claims?",
+    "answerChoices": {
+      "A": "Medical specialists treat all patients who have serious back muscle injuries with either physical therapy alone or a combination of drugs and physical therapy.",
+      "B": "Medical specialists who prescribe these treatments make accurate judgments about who needs both drugs and physical therapy and who needs physical therapy alone.",
+      "C": "Some back muscle injuries have been completely healed by a combination of drugs and physical therapy.",
+      "D": "Some back muscle injuries that have been aggravated by improper attempts at physical therapy, such as home massage, have been successfully treated with drugs.",
+      "E": "Patients with injuries to other muscles show more improvement when treated with both drugs and physical therapy than when treated with physical therapy alone."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Commentator: In many countries the influence of fringe movements is increasing. The great centrifugal engine of modern culture turns faster and faster, spinning off fashions, ideologies, religions, artistic movements, economic theories, cults, and dogmas in fabulous profusion. Hence, modern culture threatens the national identities that now exist in the world.",
+    "questionStem": "Which one of the following statements, if true, most seriously weakens the commentator's argument?",
+    "answerChoices": {
+      "A": "New national identities are often forged out of conflicts among diverse groups.",
+      "B": "A stable national identity is typically a composite of a staggering number of subcultures.",
+      "C": "The rate of cultural change in most countries will soon change drastically.",
+      "D": "It is preferable to have a pluralistic rather than a monolithic national culture.",
+      "E": "A culture with a solidified national identity tends to have more social problems than one without such an identity."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Packaging is vital to a product's commercial success. For example, the maker of a popular drink introduced a \"new, improved\" version which succeeded in blind taste tests. However, customers did not buy the product when marketed, mainly because the can, almost identical to that used for the earlier version of the beverage, made consumers expect that the new product would share certain features of the old, an expectation not satisfied by the new product.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Proper product packaging is more important than the quality of the product.",
+      "B": "Products generally succeed in the market if they are packaged in a manner that accurately reflects their nature.",
+      "C": "Changing the packaging of a product will not improve the product's sales unless the product is also changed.",
+      "D": "To succeed in the market, a new product should not be packaged in a way that creates expectations that it does not meet.",
+      "E": "An improved version of an existing product will sell better than the earlier version unless the improved version is packaged like the earlier one."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Larew: People in the lowest income quintile had a much higher percentage increase in average income over the last ten years than did those in the highest quintile. So their economic prosperity increased relative to the highest quintile's.\nMendota: I disagree. The average income for the lowest quintile may have increased by a greater percentage, but the absolute amount of the increase in average income was surely greater for the highest quintile.",
+    "questionStem": "Larew and Mendota disagree about whether",
+    "answerChoices": {
+      "A": "change in the economic prosperity of the lowest income quintile relative to the highest is accurately measured by comparing their percentage changes in average income",
+      "B": "change in the economic prosperity of the lowest income quintile is more accurately measured in terms relative to the highest income quintile than in terms relative only to the lowest income quintile",
+      "C": "changes in the average income of people in the lowest quintile should ever be compared to changes in the average income of people in the highest quintile",
+      "D": "there were any improvements at all in the economic situation of those in the lowest income quintile during the ten years being considered",
+      "E": "the average income of people in the lowest quintile increased by a greater percentage over the last decade than did that of people in the highest quintile"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Challenge can be an important source of self-knowledge, since those who pay attention to how they react, both emotionally and physically, to challenge can gain useful insights into their own weaknesses.",
+    "questionStem": "Which one of the following most closely conforms to the principle above?",
+    "answerChoices": {
+      "A": "A concert pianist should not have an entirely negative view of a memory lapse during a difficult performance. By understanding why the memory lapse occurred, the pianist can better prepare for future performances.",
+      "B": "A salesperson should understand that the commission earned is not the only reward of making a sale. Salespeople should also take satisfaction from the fact that successful sales reflect well on their personalities.",
+      "C": "Compassion is valuable not only for the wonderful feelings it brings, but also for the opportunities it affords to enrich the lives of other people.",
+      "D": "While some of the value of competition comes from the pleasure of winning, the primary reward of competition is competition itself.",
+      "E": "Even people who dread public speaking should accept invitations to speak before large groups. People will admire their courage and they will experience the fulfillment of having attempted something that is difficult for them."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "In some countries, national planners have attempted to address the problems resulting from increasing urbanization by reducing migration from rural areas. But some economists have suggested an alternative approach. These economists assert that planners could solve these problems effectively by trading goods or services produced by a predominantly urban population in order to obtain the agricultural products that were previously produced domestically.",
+    "questionStem": "Which one of the following, if true, would provide the most support for the economists' assertion?",
+    "answerChoices": {
+      "A": "Government subsidies to urban manufacturers can ease the problems caused by the migration of people from rural to urban areas.",
+      "B": "All problems that have economic causes must have economic solutions.",
+      "C": "A scarcity of agricultural products is a central element of many problems created by urbanization.",
+      "D": "Problems associated with migration to cities from rural areas are primarily due to trade imbalances between countries.",
+      "E": "Free trade policies can exacerbate the problems caused by increasing urbanization."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Inez: The book we are reading, The Nature of Matter, is mistitled. A title should summarize the content of the whole book, but nearly half of this book is devoted to discussing a different, albeit closely related subject: energy.\nAntonio: I do not think that the author erred; according to modern physics, matter and energy are two facets of the same phenomenon.",
+    "questionStem": "Which one of the following is most strongly supported by the conversation above?",
+    "answerChoices": {
+      "A": "Inez believes that the book should be called The Nature of Energy.",
+      "B": "Antonio believes that there are no differences between matter and energy.",
+      "C": "Inez and Antonio disagree on whether matter and energy are related.",
+      "D": "Inez and Antonio disagree about the overall value of the book.",
+      "E": "Inez believes that the book's title should not mention matter without mentioning energy."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Politician: Those economists who claim that consumer price increases have averaged less than 3 percent over the last year are mistaken. They clearly have not shopped anywhere recently. Gasoline is up 10 percent over the last year; my auto insurance, 12 percent; newspapers, 15 percent; propane, 13 percent; bread, 50 percent.",
+    "questionStem": "The reasoning in the politician's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "impugns the character of the economists rather than addressing their arguments",
+      "B": "fails to show that the economists mentioned are not experts in the area of consumer prices",
+      "C": "mistakenly infers that something is not true from the claim that it has not been shown to be so",
+      "D": "uses evidence drawn from a small sample that may well be unrepresentative",
+      "E": "attempts to persuade by making an emotional appeal"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 1,
+    "stimulus": "Sherrie: Scientists now agree that nicotine in tobacco is addictive inasmuch as smokers who try to stop smoking suffer withdrawal symptoms. For this reason alone, tobacco should be treated the same way as other dangerous drugs. Governments worldwide have a duty to restrict the manufacture and sale of tobacco.\nFran: By your own admission, \"addictive\" is broad enough to include other commonly consumed products, such as coffee and soft drinks containing caffeine. But of course the manufacture and sale of these products should not be restricted.",
+    "questionStem": "The dialogue above lends the most support to the claim that Sherrie and Fran disagree with each other about which one of the following statements?",
+    "answerChoices": {
+      "A": "The manufacture and sale of all drugs should be regulated by governments.",
+      "B": "Coffee and soft drinks that contain caffeine should not be regulated by governments.",
+      "C": "Agreement by scientists that a substance is addictive justifies government restrictions on products containing that substance.",
+      "D": "Scientists are not proper authorities with respect to the question of whether a given substance is addictive.",
+      "E": "Scientists and governments have a duty to cooperate in regulating drugs to protect the public health."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "In 1963, a young macaque monkey was observed venturing into a hot spring to retrieve food which had fallen in. Soon, other macaques began to enter the spring, and over a few years this behavior was adopted by the entire troop. Prior to 1963, no macaques had ever been observed in the hot spring; by 1990, the troop was regularly spending time there during the winters. Thus, these macaques are able to adopt and pass on new patterns of social behavior, and are not complete captives of their genetic heritage.",
+    "questionStem": "Which one of the following is an assumption required by the argument above?",
+    "answerChoices": {
+      "A": "Mutations in the genetic heritage of a certain variety of macaques can occur over a time span as short as a few years or decades.",
+      "B": "New patterns of behavior that emerge in macaque populations over the course of a few years or decades are not necessarily genetically predetermined.",
+      "C": "Only when behaviors become typical among an animal population can we conclude that a genetic alteration has occurred in that variety or species.",
+      "D": "The social behaviors of macaques are completely independent of their genetic heritage.",
+      "E": "The macaques' new pattern of behavior will persist over several generations."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Technological innovation rarely serves the interests of society as a whole. This can be seen from the fact that those responsible for technological advances are almost without exception motivated by considerations of personal gain rather than societal benefit in that they strive to develop commercially viable technology.",
+    "questionStem": "The argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "contains a premise that cannot possibly be true",
+      "B": "takes for granted that technology beneficial to society as a whole cannot be commercially viable",
+      "C": "fails to consider the possibility that actions motivated by a desire for personal gain often do not result in personal gain",
+      "D": "takes for granted that an action is unlikely to produce a certain outcome unless it is motivated by a desire to produce that outcome",
+      "E": "draws a conclusion about the practical consequences of people's actions on the basis of theoretical views about what people should or should not do"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "There are two kinds of horror stories: those that describe a mad scientist's experiments and those that describe a monstrous beast. In some horror stories about monstrous beasts, the monster symbolizes a psychological disturbance in the protagonist. Horror stories about mad scientists, on the other hand, typically express the author's feeling that scientific knowledge alone is not enough to guide human endeavor. However, despite these differences, both kinds of horror stories share two features: they describe violations of the laws of nature and they are intended to produce dread in the reader.",
+    "questionStem": "If the statements above are true, which one of the following would also have to be true?",
+    "answerChoices": {
+      "A": "All descriptions of monstrous beasts describe violations of the laws of nature.",
+      "B": "Any story that describes a violation of a law of nature is intended to invoke dread in the reader.",
+      "C": "Horror stories of any kind usually describe characters who are psychologically disturbed.",
+      "D": "Most stories about mad scientists express the author's antiscientific views.",
+      "E": "Some stories that employ symbolism describe violations of the laws of nature."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Politician: Some of my opponents have argued on theoretical grounds in favor of reducing social spending. Instead of arguing that there is excessive public expenditure on social programs, my opponents should focus on the main cause of deficit spending: the fact that government is bloated with bureaucrats and self-aggrandizing politicians. It is unwarranted, therefore, to reduce social expenditure.",
+    "questionStem": "A reasoning flaw in the politician's argument is that the argument",
+    "answerChoices": {
+      "A": "does not address the arguments advanced by the politician's opponents",
+      "B": "makes an attack on the character of opponents",
+      "C": "takes for granted that deficit spending has just one cause",
+      "D": "portrays opponents' views as more extreme than they really are",
+      "E": "fails to make clear what counts as excessive spending"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "While it is true that bees' vision is well suited to the task of identifying flowers by their colors, it is probable that flowers developed in response to the type of vision that bees have, rather than bees' vision developing in response to flower color.",
+    "questionStem": "Which one of the following, if true, most strongly supports the statement above?",
+    "answerChoices": {
+      "A": "Many insects that have vision very similar to that of bees do not depend on perceiving an object's color.",
+      "B": "Some flowers rely on insects other than bees.",
+      "C": "The number of different species of flowers is greater than the number of different species of bees.",
+      "D": "Many nonflowering plants rely on bees.",
+      "E": "Present-day bees rely exclusively on flowers for their food."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Professor: It has been argued that freedom of thought is a precondition for intellectual progress, because freedom of thought allows thinkers to pursue their ideas, regardless of whom these ideas offend, in whatever direction they lead. However, it is clear that one must mine the full implications of interrelated ideas to make intellectual progress, and for this, thinkers need intellectual discipline. Therefore, this argument for freedom of thought fails.",
+    "questionStem": "The conclusion drawn by the professor follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Thinkers who limit their line of thought to a particular orthodoxy are hindered in their intellectual progress.",
+      "B": "Thinkers can mine the full implications of interrelated ideas only in the context of a society that values intellectual progress.",
+      "C": "In societies that protect freedom of thought, thinkers invariably lack intellectual discipline.",
+      "D": "Freedom of thought engenders creativity, which aids the discovery of truth.",
+      "E": "Without intellectual discipline, thinkers can have no freedom of thought."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "People who have specialized knowledge about a scientific or technical issue are systematically excluded from juries for trials where that issue is relevant. Thus, trial by jury is not a fair means of settling disputes involving such issues.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "The more complicated the issue being litigated, the less likely it is that a juror without specialized knowledge of the field involved will be able to comprehend the testimony being given.",
+      "B": "The more a juror knows about a particular scientific or technical issue involved in a trial, the more likely it is that the juror will be prejudiced in favor of one of the litigating parties before the trial begins.",
+      "C": "Appointing an impartial arbitrator is not a fair means of settling disputes involving scientific or technical issues, because arbitrators tend to favor settlements in which both parties compromise on the issues.",
+      "D": "Experts who give testimony on scientific or technical issues tend to hedge their conclusions by discussing the possibility of error.",
+      "E": "Expert witnesses in specialized fields often command fees that are so high that many people involved in litigation cannot afford their services."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 3,
+    "stimulus": "If one has evidence that an act will benefit other people and performs that act to benefit them, then one will generally succeed in benefiting them.",
+    "questionStem": "Which one of the following best illustrates the proposition above?",
+    "answerChoices": {
+      "A": "A country's leaders realized that fostering diplomatic ties with antagonistic nations reduces the chances of war with those nations. Because those leaders worried that war would harm their chances of being reelected, they engaged in diplomatic discussions with a hostile country, and the two countries avoided a confrontation.",
+      "B": "A government study concluded that a proposed bureaucratic procedure would allow people to register their cars without waiting in line. The government adopted the procedure for this reason, and, as with most bureaucratic procedures, it was not successful.",
+      "C": "Betsy overheard a heating contractor say that regularly changing the filter in a furnace helps to keep the furnace efficient. So Betsy has regularly changed the furnace filter in her daughter's house. As a result, the furnace has never required maintenance due to becoming clogged with dust or dirt.",
+      "D": "Sejal learned in a psychology class that the best way to help someone overcome an addiction is to confront that person. So she confronted her friend Bob, who was struggling with a chemical dependency.",
+      "E": "Zachary hoped that psychotherapy could help his parents overcome their marital difficulties. He persuaded his parents to call a psychotherapist, and eventually their problems were resolved."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "Radio airplay restrictions are nationally imposed regulations. The City Club has compiled a guide to all nationally imposed regulations except those related to taxation or to labor law. Radio airplay restrictions are related neither to taxation nor to labor law, so the City Club's guide covers radio airplay restrictions.",
+    "questionStem": "Which one of the following exhibits a pattern of reasoning most similar to that exhibited by the argument above?",
+    "answerChoices": {
+      "A": "All prepackaged desserts pose a risk of tooth decay. The Nutrition Foundation recommends avoiding all prepackaged desserts that are not high in vitamins or protein. Many prepackaged snack foods are low in vitamins or protein, so the Nutrition Foundation recommends avoiding prepackaged snack foods as well.",
+      "B": "Coreopsis is a perennial. The Garden Club awards a prize each year for each perennial except those that are shrubs or not native to North America. Coreopsis is native to North America and is not a shrub. So the Garden Club awards a prize each year for coreopsis.",
+      "C": "The Windsor Coalition is an example of a community organizing to discourage overdevelopment. The Neighborhood Association is in favor of this sort of community organizing, except when it poses a threat to regional economic growth. Therefore, the Neighborhood Association is in favor of the Windsor Coalition.",
+      "D": "Compact discs are a kind of data storage device. Leotol Corporation does not produce data storage devices that use analog storage methods. Compact discs do not use analog storage methods, so it follows that Leotol Corporation produces compact discs.",
+      "E": "Traffic laws are a type of government regulation. The association supports traffic laws that are in the public interest, even if they have not been shown to reduce the accident rate. Thus, the association should support all government regulations that are in the public interest."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Physics professor: Some scientists claim that superheated plasma in which electrical resistance fails is a factor in causing so-called \"ball lightning.\" If this were so, then such lightning would emit intense light and, since plasma has gaslike properties, would rise in the air. However, the instances of ball lightning that I observed were of low intensity and floated horizontally before vanishing. Thus, superheated plasma with failed electrical resistance is never a factor in causing ball lightning.",
+    "questionStem": "The physics professor's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Superheated plasma in which electrical resistance fails does not cause types of lightning other than ball lightning.",
+      "B": "The phenomena observed by the physics professor were each observed by at least one other person.",
+      "C": "Ball lightning can occur as the result of several different factors.",
+      "D": "Superheating of gaslike substances causes bright light to be emitted.",
+      "E": "All types of ball lightning have the same cause."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Advertisement: Our oat bran cereal is the only one that has printed right on its package all of its claimed health benefits. And really health-conscious consumers have demonstrated that these health claims are true by buying our cereal since they would not have bought our cereal unless the claims were true. How do we know these consumers are really health-conscious? No really health-conscious consumer would buy food in a package that did not have accurate information about the food's health benefits printed on it.",
+    "questionStem": "Which one of the following employs a flawed argumentative strategy that is most closely parallel to the flawed argumentative strategy in the advertisement above?",
+    "answerChoices": {
+      "A": "Greeting one's coworkers must be a polite thing to do, because people who are considered polite always greet their coworkers. The proof that these people really are polite is that they are consistently polite in their daily lives.",
+      "B": "This card game must be intellectually challenging, because it is played by highly intelligent people, who play only intellectually challenging card games. In fact, these players' intelligence is demonstrated by the fact that they play this game.",
+      "C": "When coffee is being chosen, Brand Z is the coffee chosen by people with highly developed taste in coffee. These people showed their highly developed taste in coffee by correctly distinguishing eight brands of coffee from each other in a taste test.",
+      "D": "That jacket must have been made for a very short person, because only very short people were able to fit into it. We know that they were very short because we saw them before they tried on the jacket.",
+      "E": "This painting is a poor imitation, because only people with poor eyesight mistook it for the original. That these people have poor eyesight is demonstrated by the fact that they also mistook a vase of flowers in the painting for a peacock."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "A study of 86 patients, all of whom suffered from disease T and received the same standard medical treatment, divided the patients into 2 equal groups. One group's members all attended weekly support group meetings, but no one from the other group attended support group meetings. After 10 years, 41 patients from each group had died. Clearly, support group meetings do not help patients with disease T live longer.",
+    "questionStem": "Which one of the following statements, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Of the 4 patients who survived more than 10 years, the 2 who had attended weekly support group meetings lived longer than the 2 who had not.",
+      "B": "For many diseases, attending weekly support group meetings is part of the standard medical treatment.",
+      "C": "The members of the group that attended weekly support group meetings lived 2 years longer, on average, than the members of the other group.",
+      "D": "Some physicians have argued that attending weekly support group meetings gives patients less faith in the standard treatment for disease T.",
+      "E": "Everyone in the group whose members attended weekly support group meetings reported after 1 year that those meetings had helped them to cope with the disease."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 4,
+    "questionNumber": 26,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Astronomer: I have asserted that our solar system does not contain enough meteoroids and other cosmic debris to have caused the extensive cratering on the far side of the moon. My opponents have repeatedly failed to demonstrate the falsity of this thesis. Their evidence is simply inconclusive; thus they should admit that my thesis is correct.",
+    "questionStem": "The reasoning in the astronomer's argument is flawed because this argument",
+    "answerChoices": {
+      "A": "criticizes the astronomer's opponents rather than their arguments",
+      "B": "infers the truth of the astronomer's thesis from the mere claim that it has not been proven false",
+      "C": "ignores the possibility that alternative explanations may exist for the cratering",
+      "D": "presumes that the astronomer's thesis should not be subject to rational discussion and criticism",
+      "E": "fails to precisely define the key word “meteoroids\""
+    },
+    "correctAnswer": "B"
+  }
+]

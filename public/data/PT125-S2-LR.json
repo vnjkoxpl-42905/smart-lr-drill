@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Executive: Our company is proud of its long history of good relations with its employees. In fact, a recent survey of our retirees proves that we treat our employees fairly, since 95 percent of the respondents reported that they had always been treated fairly during the course of their careers with us.",
+    "questionStem": "The executive's argument is flawed in that it",
+    "answerChoices": {
+      "A": "presents as its sole premise a claim that one would accept as true only if one already accepted the truth of the conclusion",
+      "B": "relies on evidence that cannot be verified",
+      "C": "equivocates on the word \"fairly\"",
+      "D": "bases a generalization on a sample that may not be representative",
+      "E": "presumes, without providing justification, that older methods of managing employees are superior to newer ones"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "Many of those who are most opposed to cruelty to animals in the laboratory, in the slaughterhouse, or on the farm are people who truly love animals and who keep pets. The vast majority of domestic pets, however, are dogs and cats, and both of these species are usually fed meat. Therefore, many of those who are most opposed to cruelty to animals do, in fact, contribute to such cruelty.",
+    "questionStem": "Which one of the following is an assumption made by the argument?",
+    "answerChoices": {
+      "A": "Loving pets requires loving all forms of animal life.",
+      "B": "Many of those who are opposed to keeping dogs and cats as pets are also opposed to cruelty to animals.",
+      "C": "Some people who work in laboratories, in slaughterhouses, or on farms are opposed to cruelty to animals.",
+      "D": "Many popular pets are not usually fed meat.",
+      "E": "Feeding meat to pets contributes to cruelty to animals."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Statistics from the National Booksellers Association indicate that during the last five years most bookstores have started to experience declining revenues from the sale of fiction, despite national campaigns to encourage people to read more fiction. Therefore, these reading campaigns have been largely unsuccessful.",
+    "questionStem": "Which one of the following statements, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Mail order book clubs have enjoyed substantial growth in fiction sales throughout the last five years.",
+      "B": "During the last five years the most profitable items in bookstores have been newspapers and periodicals rather than novels.",
+      "C": "Fierce competition has forced booksellers to make drastic markdowns on the cover price of best-selling biographies.",
+      "D": "Due to the poor economic conditions that have prevailed during the last five years, most libraries report substantial increases in the number of patrons seeking books on changing careers and starting new businesses.",
+      "E": "The National Booksellers Association statistics do not include profits from selling novels by mail to overseas customers."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "People who consume a lot of honey tend to have fewer cavities than others have. Yet, honey is high in sugar, and sugar is one of the leading causes of tooth decay.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent paradox described above?",
+    "answerChoices": {
+      "A": "People who eat a lot of honey tend to consume very little sugar from other sources.",
+      "B": "Many people who consume a lot of honey consume much of it dissolved in drinks.",
+      "C": "People's dental hygiene habits vary greatly.",
+      "D": "Refined sugars have been linked to more health problems than have unrefined sugars.",
+      "E": "Honey contains bacteria that inhibit the growth of the bacteria that cause tooth decay."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Byrne: One of our club's bylaws specifies that any officer who fails to appear on time for any one of the quarterly board meetings, or who misses two of our monthly general meetings, must be suspended. Thibodeaux, an officer, was recently suspended. But Thibodeaux has never missed a monthly general meeting. Therefore, Thibodeaux must have failed to appear on time for a quarterly board meeting.",
+    "questionStem": "The reasoning in Byrne's argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "fails to consider the possibility that Thibodeaux has arrived late for two or more monthly general meetings",
+      "B": "presumes, without providing justification, that if certain events each produce a particular result, then no other event is sufficient to produce that result",
+      "C": "takes for granted that an assumption required to establish the argument's conclusion is sufficient to establish that conclusion",
+      "D": "fails to specify at what point someone arriving at a club meeting is officially deemed late",
+      "E": "does not specify how long Thibodeaux has been an officer"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Manufacturers of writing paper need to add mineral \"filler\" to paper pulp if the paper made from the pulp is to look white. Without such filler, paper products look grayish. To make writing paper that looks white from recycled paper requires more filler than is required to make such paper from other sources. Therefore, barring the more efficient use of fillers in paper manufacturing or the development of paper-whitening technologies that do not require mineral fillers, if writing paper made from recycled paper comes to replace other types of writing paper, paper manufacturers will have to use more filler than they now use.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Certain kinds of paper cannot be manufactured from recycled paper.",
+      "B": "The fillers that are used to make paper white are harmful to the environment.",
+      "C": "Grayish writing paper will not be a universally acceptable alternative to white writing paper.",
+      "D": "Beyond a certain limit, increasing the amount of filler added to paper pulp does not increase the whiteness of the paper made from the pulp.",
+      "E": "The total amount of writing paper manufactured worldwide will increase significantly in the future."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Environmentalist: The excessive atmospheric buildup of carbon dioxide, which threatens the welfare of everyone in the world, can be stopped only by reducing the burning of fossil fuels. Any country imposing the strict emission standards on the industrial burning of such fuels that this reduction requires, however, would thereby reduce its gross national product. No nation will be willing to bear singlehandedly the costs of an action that will benefit everyone. It is obvious, then, that the catastrophic consequences of excessive atmospheric carbon dioxide are unavoidable unless",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "all nations become less concerned with pollution than with the economic burdens of preventing it",
+      "B": "multinational corporations agree to voluntary strict emission standards",
+      "C": "international agreements produce industrial emission standards",
+      "D": "distrust among nations is eliminated",
+      "E": "a world government is established"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "A clear advantage of digital technology over traditional printing is that digital documents, being patterns of electronic signals rather than patterns of ink on paper, do not generate waste in the course of their production and use. However, because patterns of electronic signals are necessarily ephemeral, a digital document can easily be destroyed and lost forever.",
+    "questionStem": "The statements above best illustrate which one of the following generalizations?",
+    "answerChoices": {
+      "A": "A property of a technology may constitute an advantage in one set of circumstances and a disadvantage in others.",
+      "B": "What at first appears to be an advantage of a technology may create more problems than it solves.",
+      "C": "It is more important to be able to preserve information than it is for information to be easily accessible.",
+      "D": "Innovations in document storage technologies sometimes decrease, but never eliminate, the risk of destroying documents.",
+      "E": "Advances in technology can lead to increases in both convenience and environmental soundness."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Museum visitor: The national government has mandated a 5 percent increase in the minimum wage paid to all workers. This mandate will adversely affect the museum-going public. The museum's revenue does not currently exceed its expenses, and since the mandate will significantly increase the museum's operating expenses, the museum will be forced either to raise admission fees or to decrease services.",
+    "questionStem": "Which one of the following is an assumption required by the museum visitor's argument?",
+    "answerChoices": {
+      "A": "Some of the museum's employees are not paid significantly more than the minimum wage.",
+      "B": "The museum's revenue from admission fees has remained constant over the past five years.",
+      "C": "Some of the museum's employees are paid more than the current minimum wage.",
+      "D": "The annual number of visitors to the museum has increased steadily.",
+      "E": "Not all visitors to the museum are required to pay an admission fee."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Helen: Reading a book is the intellectual equivalent of investing money: you're investing time, thereby foregoing other ways of spending that time, in the hope that what you learn will later afford you more opportunities than you'd get by spending the time doing something other than reading that book.\nRandi: But that applies only to vocational books. Reading fiction is like watching a sitcom: it's just wasted time.",
+    "questionStem": "Which one of the following most accurately describes the technique Randi uses in responding to Helen's claims?",
+    "answerChoices": {
+      "A": "questioning how the evidence Helen uses for a claim was gathered",
+      "B": "disputing the scope of Helen's analogy by presenting another analogy",
+      "C": "arguing that Helen's reasoning ultimately leads to an absurd conclusion",
+      "D": "drawing an analogy to an example presented by Helen",
+      "E": "denying the relevance of an example presented by Helen"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Contrary to recent speculations, no hardware store will be opening in the shopping plaza. If somebody were going to open a store there, they would already have started publicizing it. But there has been no such publicity.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion drawn in the argument?",
+    "answerChoices": {
+      "A": "Some people have surmised that a hardware store will be opening in the shopping plaza.",
+      "B": "A hardware store will not be opening in the shopping plaza.",
+      "C": "If somebody were going to open a hardware store in the shopping plaza, that person would already have started publicizing it.",
+      "D": "It would be unwise to open a hardware store in the shopping plaza.",
+      "E": "There has been no publicity concerning the opening of a hardware store in the shopping plaza."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Ethicist: Although science is frequently said to be morally neutral, it has a traditional value system of its own. For example, scientists sometimes foresee that a line of theoretical research they are pursuing will yield applications that could seriously harm people, animals, or the environment. Yet, according to science's traditional value system, such consequences do not have to be considered in deciding whether to pursue that research. Ordinary morality, in contrast, requires that we take the foreseeable consequences of our actions into account whenever we are deciding what to do.",
+    "questionStem": "The ethicist's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Scientists should not be held responsible for the consequences of their research.",
+      "B": "According to the dictates of ordinary morality, scientists doing research that ultimately turns out to yield harmful applications are acting immorally.",
+      "C": "Science is morally neutral because it assigns no value to the consequences of theoretical research.",
+      "D": "It is possible for scientists to both adhere to the traditional values of their field and violate a principle of ordinary morality.",
+      "E": "The uses and effects of scientifically acquired knowledge can never be adequately foreseen."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Consumers seek to purchase the highest quality at the lowest prices. Companies that do not offer products that attract consumers eventually go bankrupt. Therefore, companies that offer neither the best quality nor the lowest price will eventually go bankrupt.",
+    "questionStem": "The conclusion above follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "No company succeeds in producing a product that is both highest in quality and lowest in price.",
+      "B": "Products that are neither highest in quality nor lowest in price do not attract consumers.",
+      "C": "Any company that offers either the highest quality or the lowest price will avoid bankruptcy.",
+      "D": "Some consumers will not continue to patronize a company purely out of brand loyalty.",
+      "E": "No company is driven from the market for reasons other than failing to meet consumer demands."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "The number of serious traffic accidents (accidents resulting in hospitalization or death) that occurred on Park Road from 1986 to 1990 was 35 percent lower than the number of serious accidents from 1981 to 1985. The speed limit on Park Road was lowered in 1986. Hence, the reduction of the speed limit led to the decrease in serious accidents.",
+    "questionStem": "Which one of the following statements, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "The number of speeding tickets issued annually on Park Road remained roughly constant from 1981 to 1990.",
+      "B": "Beginning in 1986, police patrolled Park Road much less frequently than in 1985 and previous years.",
+      "C": "The annual number of vehicles using Park Road decreased significantly and steadily from 1981 to 1990.",
+      "D": "The annual number of accidents on Park Road that did not result in hospitalization remained roughly constant from 1981 to 1990.",
+      "E": "Until 1986 accidents were classified as \"serious\" only if they resulted in an extended hospital stay."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Humans are supposedly rational: in other words, they have a capacity for well-considered thinking and behavior. This is supposedly the difference that makes them superior to other animals. But humans knowingly pollute the world's precious air and water and, through bad farming practices, deplete the soil that feeds them. Thus, humans are not rational after all, so it is absurd to regard them as superior to other animals.",
+    "questionStem": "The reasoning above is flawed in that it",
+    "answerChoices": {
+      "A": "relies crucially on an internally contradictory definition of rationality",
+      "B": "takes for granted that humans are aware that their acts are irrational",
+      "C": "neglects to show that the irrational acts perpetrated by humans are not also perpetrated by other animals",
+      "D": "presumes, without offering justification, that humans are no worse than other animals",
+      "E": "fails to recognize that humans may possess a capacity without displaying it in a given activity"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "\"Good hunter\" and \"bad hunter\" are standard terms in the study of cats. Good hunters can kill prey that weigh up to half their body weight. All good hunters have a high muscle-to-fat ratio. Most wild cats are good hunters, but some domestic cats are good hunters as well.",
+    "questionStem": "If the statements above are true, which one of the following must also be true?",
+    "answerChoices": {
+      "A": "Some cats that have a high muscle-to-fat ratio are not good hunters.",
+      "B": "A smaller number of domestic cats than wild cats have a high muscle-to-fat ratio.",
+      "C": "All cats that are bad hunters have a low muscle-to-fat ratio.",
+      "D": "Some cats that have a high muscle-to-fat ratio are domestic.",
+      "E": "All cats that have a high muscle-to-fat ratio can kill prey that weigh up to half their body weight."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Role",
+    "questionDifficulty": 4,
+    "stimulus": "Ethicist: The penalties for drunk driving are far more severe when the drunk driver accidentally injures people than when no one is injured. Moral responsibility for an action depends solely on the intentions underlying the action and not on the action's results. Therefore, legal responsibility, depending as it does in at least some cases on factors other than the agent's intentions, is different than moral responsibility.",
+    "questionStem": "The claim that the penalties for drunk driving are far more severe when the drunk driver accidentally injures people than when no one is injured plays which one of the following roles in the ethicist's argument?",
+    "answerChoices": {
+      "A": "It is a premise offered in support of the claim that legal responsibility for an action is based solely upon features of the action that are generally unintended by the agent.",
+      "B": "It is offered as an illustration of the claim that the criteria of legal responsibility for an action include but are not the same as those for moral responsibility.",
+      "C": "It is offered as an illustration of the claim that people may be held morally responsible for an action for which they are not legally responsible.",
+      "D": "It is a premise offered in support of the claim that legal responsibility depends in at least some cases on factors other than the agent's intentions.",
+      "E": "It is a premise offered in support of the claim that moral responsibility depends solely on the intentions underlying the action and not on the action's result."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 5,
+    "stimulus": "Columnist: Taking a strong position on an issue makes one likely to misinterpret or ignore additional evidence that conflicts with one's stand. But in order to understand an issue fully, it is essential to consider such evidence impartially. Thus, it is best not to take a strong position on an issue unless one has already considered all important evidence conflicting with that position.",
+    "questionStem": "The columnist's reasoning most closely conforms to which one of the following principles?",
+    "answerChoices": {
+      "A": "It is reasonable to take a strong position on an issue if one fully understands the issue and has considered the evidence regarding that issue impartially.",
+      "B": "To ensure that one has impartially considered the evidence regarding an issue on which one has taken a strong position, one should avoid misinterpreting or ignoring evidence regarding that issue.",
+      "C": "Anyone who does not understand an issue fully should avoid taking a strong position on it.",
+      "D": "One should try to understand an issue fully if doing so will help one to avoid misinterpreting or ignoring evidence regarding that issue.",
+      "E": "It is reasonable to take a strong position on an issue only if there is important evidence conflicting with that position."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "The coach of the Eagles used a computer analysis to determine the best combinations of players for games. The analysis revealed that the team has lost only when Jennifer was not playing. Although no computer was needed to discover this information, this sort of information is valuable, and in this case it confirms that Jennifer's presence in the game will ensure that the Eagles will win.",
+    "questionStem": "The argument above is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "infers from the fact that a certain factor is sufficient for a result that the absence of that factor is necessary for the opposite result",
+      "B": "presumes, without providing justification, that a player's contribution to a team's win or loss can be reliably quantified and analyzed by computer",
+      "C": "draws conclusions about applications of computer analyses to sports from the evidence of a single case",
+      "D": "presumes, without providing justification, that occurrences that have coincided in the past must continue to coincide",
+      "E": "draws a conclusion about the value of computer analyses from a case in which computer analysis provided no facts beyond what was already known"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Of the various food containers made of recycled Styrofoam, egg cartons are among the easiest to make. Because egg shells keep the actual food to be consumed from touching the Styrofoam, used Styrofoam need not be as thoroughly cleaned when made into egg cartons as when made into other food containers.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "No food containers other than egg cartons can safely be made of recycled Styrofoam that has not been thoroughly cleaned.",
+      "B": "There are some foods that cannot be packaged in recycled Styrofoam no matter how the Styrofoam is recycled.",
+      "C": "The main reason Styrofoam must be thoroughly cleaned when recycled is to remove any residual food that has come into contact with the Styrofoam.",
+      "D": "Because they are among the easiest food containers to make from recycled Styrofoam, most egg cartons are made from recycled Styrofoam.",
+      "E": "Not every type of food container made of recycled Styrofoam is effectively prevented from coming into contact with the food it contains."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Most people who become migraine sufferers as adults were prone to bouts of depression as children. Hence it stands to reason that a child who is prone to bouts of depression is likely to suffer migraines during adulthood.",
+    "questionStem": "The flawed pattern of reasoning in the argument above is most parallel to that in which one of the following?",
+    "answerChoices": {
+      "A": "Most good-tempered dogs were vaccinated against rabies as puppies. Therefore, a puppy that is vaccinated against rabies is likely to become a good-tempered dog.",
+      "B": "Most vicious dogs were ill-treated when young. Hence it can be concluded that a pet owner whose dog is vicious is likely to have treated the dog badly when it was young.",
+      "C": "Most well-behaved dogs have undergone obedience training. Thus, if a dog has not undergone obedience training, it will not be well behaved.",
+      "D": "Most of the pets taken to veterinarians are dogs. Therefore, it stands to reason that dogs are more prone to illness or accident than are other pets.",
+      "E": "Most puppies are taken from their mothers at the age of eight weeks. Thus, a puppy that is older than eight weeks is likely to have been taken from its mother."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Student: The publications of Professor Vallejo on the origins of glassblowing have reopened the debate among historians over whether glassblowing originated in Egypt or elsewhere. If Professor Vallejo is correct, there is insufficient evidence for claiming, as most historians have done for many years, that glassblowing began in Egypt. So, despite the fact that the traditional view is still maintained by the majority of historians, if Professor Vallejo is correct, we must conclude that glassblowing originated elsewhere.",
+    "questionStem": "Which one of the following is an error in the student's reasoning?",
+    "answerChoices": {
+      "A": "It draws a conclusion that conflicts with the majority opinion of experts.",
+      "B": "It presupposes the truth of Professor Vallejo's claims.",
+      "C": "It fails to provide criteria for determining adequate historical evidence.",
+      "D": "It mistakes the majority view for the traditional view.",
+      "E": "It confuses inadequate evidence for truth with evidence for falsity."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Parallel",
+    "questionDifficulty": 4,
+    "stimulus": "At Southgate Mall, mattresses are sold only at Mattress Madness. Every mattress at Mattress Madness is on sale at a 20 percent discount. So every mattress for sale at Southgate Mall is on sale at a 20 percent discount.",
+    "questionStem": "Which one of the following arguments is most similar in its reasoning to the argument above?",
+    "answerChoices": {
+      "A": "The only food in Diane's apartment is in her refrigerator. All the food she purchased within the past week is in her refrigerator. Therefore, she purchased all the food in her apartment within the past week.",
+      "B": "Diane's refrigerator, and all the food in it, is in her apartment. Diane purchased all the food in her refrigerator within the past week. Therefore, she purchased all the food in her apartment within the past week.",
+      "C": "All the food in Diane's apartment is in her refrigerator. Diane purchased all the food in her refrigerator within the past week. Therefore, she purchased all the food in her apartment within the past week.",
+      "D": "The only food in Diane's apartment is in her refrigerator. Diane purchased all the food in her refrigerator within the past week. Therefore, all the food she purchased within the past week is in her apartment.",
+      "E": "The only food that Diane has purchased within the past week is in her refrigerator. All the food that she has purchased within the past week is in her apartment. Therefore, all the food in her apartment is in her refrigerator."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "There are 1.3 billion cows worldwide, and this population is growing to keep pace with the demand for meat and milk. These cows produce trillions of liters of methane gas yearly, and this methane contributes to global warming. The majority of the world's cows are given relatively low-quality diets even though cows produce less methane when they receive better-quality diets. Therefore, methane production from cows could be kept in check if cows were given better-quality diets.",
+    "questionStem": "Which one of the following, if true, adds the most support for the conclusion of the argument?",
+    "answerChoices": {
+      "A": "Cows given good-quality diets produce much more meat and milk than they would produce otherwise.",
+      "B": "Carbon and hydrogen, the elements that make up methane, are found in abundance in the components of all types of cow feed.",
+      "C": "Most farmers would be willing to give their cows high-quality feed if the cost of that feed were lower.",
+      "D": "Worldwide, more methane is produced by cows raised for meat production than by those raised for milk production.",
+      "E": "Per liter, methane contributes more to global warming than does carbon dioxide, a gas that is thought to be the most significant contributor to global warming."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Must Be True",
+    "questionDifficulty": 5,
+    "stimulus": "To face danger solely because doing so affords one a certain pleasure does not constitute courage. Real courage is manifested only when a person, in acting to attain a goal, perseveres in the face of fear prompted by one or more dangers involved.",
+    "questionStem": "Which one of the following statements can be properly inferred from the statements above?",
+    "answerChoices": {
+      "A": "A person who must face danger in order to avoid future pain cannot properly be called courageous for doing so.",
+      "B": "A person who experiences fear of some aspects of a dangerous situation cannot be said to act courageously in that situation.",
+      "C": "A person who happens to derive pleasure from some dangerous activities is not a courageous person.",
+      "D": "A person who faces danger in order to benefit others is acting courageously only if the person is afraid of the danger.",
+      "E": "A person who has no fear of the situations that everyone else would fear cannot be said to be courageous in any situation."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "The government will purchase and install new severe weather sirens for this area next year if replacement parts for the old sirens are difficult to obtain. The newspaper claims that public safety in the event of severe weather would be enhanced if new sirens were to be installed. The local company from which replacement parts were purchased last year has since gone out of business. So, if the newspaper is correct, the public will be safer during severe weather in the future.",
+    "questionStem": "The argument's conclusion follows logically from its premises if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "If public safety in the event of severe weather is enhanced next year, it will be because new sirens have been purchased.",
+      "B": "The newspaper was correct in claiming that public safety in the event of severe weather would be enhanced if new sirens were purchased.",
+      "C": "The local company from which replacement parts for the old sirens were purchased last year was the only company in the area that sold them.",
+      "D": "Replacement parts for the old sirens will be difficult to obtain if the government cannot obtain them from the company it purchased them from last year.",
+      "E": "Because the local company from which replacement parts had been purchased went out of business, the only available parts are of such inferior quality that use of them would make the sirens less reliable."
+    },
+    "correctAnswer": "D"
+  }
+]

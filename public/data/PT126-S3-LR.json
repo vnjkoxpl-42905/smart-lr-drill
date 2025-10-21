@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Aristophanes' play The Clouds, which was written when the philosopher Socrates was in his mid-forties, portrays Socrates as an atheistic philosopher primarily concerned with issues in natural science. The only other surviving portrayals of Socrates were written after Socrates' death at age 70. They portrayed Socrates as having a religious dimension and a strong focus on ethical issues.",
+    "questionStem": "Which one of the following, if true, would most help to resolve the apparent discrepancy between Aristophanes' portrayal of Socrates and the other surviving portrayals?",
+    "answerChoices": {
+      "A": "Aristophanes' portrayal of Socrates in The Clouds was unflattering, whereas the other portrayals were very flattering.",
+      "B": "Socrates' philosophical views and interests changed sometime after his mid-forties.",
+      "C": "Most of the philosophers who lived before Socrates were primarily concerned with natural science.",
+      "D": "Socrates was a much more controversial figure in the years before his death than he was in his mid-forties.",
+      "E": "Socrates had an influence on many subsequent philosophers who were primarily concerned with natural science."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Board member: The J Foundation, a philanthropic organization, gave you this grant on the condition that your resulting work not contain any material detrimental to the J Foundation's reputation. But your resulting work never mentions any of the laudable achievements of our foundation. Hence your work fails to meet the conditions under which the grant was made.",
+    "questionStem": "The reasoning in the board member's argument is vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "takes for granted that a work that never mentions any laudable achievements cannot be of high intellectual value",
+      "B": "confuses a condition necessary for the receipt of a grant with a condition sufficient for the receipt of a grant",
+      "C": "presumes, without providing justification, that a work that does not mention a foundation's laudable achievements is harmful to that foundation's reputation",
+      "D": "fails to consider that recipients of a grant usually strive to meet a foundation's conditions",
+      "E": "fails to consider the possibility that the work that was produced with the aid of the grant may have met all conditions other than avoiding detriment to the J Foundation's reputation"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Psychiatrist: Breaking any habit is difficult, especially when it involves an addictive substance. People who break a habit are more likely to be motivated by immediate concerns than by long-term ones. Therefore, people who succeed in breaking their addiction to smoking cigarettes are more likely to be motivated by the social pressure against smoking—which is an immediate concern—than by health concerns, since",
+    "questionStem": "The conclusion of the psychiatrist's argument is most strongly supported if which one of the following completes the argument?",
+    "answerChoices": {
+      "A": "a habit that involves an addictive substance is likely to pose a greater health threat than a habit that does not involve any addictive substance",
+      "B": "for most people who successfully quit smoking, smoking does not create an immediate health concern at the time they quit",
+      "C": "some courses of action that exacerbate health concerns can also relieve social pressure",
+      "D": "most people who succeed in quitting smoking succeed only after several attempts",
+      "E": "everyone who succeeds in quitting smoking is motivated either by social pressure or by health concerns"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Cassie: In order to improve the quality of customer service provided by our real estate agency, we should reduce client loads—the number of clients each agent is expected to serve at one time.\nMelvin: Although smaller client loads are desirable, reducing client loads at our agency is simply not feasible. We already find it very difficult to recruit enough qualified agents; recruiting even more agents, which would be necessary in order to reduce client loads, is out of the question.",
+    "questionStem": "Of the following, which one, if true, is the logically strongest counter that Cassie can make to Melvin's argument?",
+    "answerChoices": {
+      "A": "Since reducing client loads would improve working conditions for agents, reducing client loads would help recruit additional qualified agents to the real estate agency.",
+      "B": "Many of the real estate agency's current clients have expressed strong support for efforts to reduce client loads.",
+      "C": "Several recently conducted studies of real estate agencies have shown that small client loads are strongly correlated with high customer satisfaction ratings.",
+      "D": "Hiring extra support staff for the real estate agency's main office would have many of the same beneficial effects as reducing client loads.",
+      "E": "Over the last several years, it has become increasingly challenging for the real estate agency to recruit enough qualified agents just to maintain current client loads."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "The star-nosed mole has a nose that ends in a pair of several-pointed stars, or tentacles that are crucial for hunting, as moles are poor-sighted. These tentacles contain receptors that detect electric fields produced by other animals, enabling the moles to detect and catch suitable prey such as worms and insects.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Both worms and insects produce electric fields.",
+      "B": "The star-nosed mole does not rely at all on its eyesight for survival.",
+      "C": "The star-nosed mole does not rely at all on its sense of smell when hunting.",
+      "D": "Only animals that hunt have noses with tentacles that detect electric fields.",
+      "E": "The star-nosed mole does not produce an electric field."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "In her recent book a psychologist described several cases that exhibit the following pattern: A child, denied something by its parent, initiates problematic behavior such as screaming; the behavior escalates until finally the exasperated parent acquiesces to the child's demand. At this point the child, having obtained the desired goal, stops the problematic behavior, to the parent's relief. This self-reinforcing pattern of misbehavior and accommodation is repeated with steadily increasing levels of misbehavior by the child.",
+    "questionStem": "The cases described by the psychologist illustrate each of the following generalizations except:",
+    "answerChoices": {
+      "A": "A child can develop problematic behavior patterns as a result of getting what it wants.",
+      "B": "A child and parent can mutually influence each other's behavior.",
+      "C": "Parents, by their choices, can inadvertently increase their child's level of misbehavior.",
+      "D": "A child can unintentionally influence a parent's behavior in ways contrary to the child's intended goals.",
+      "E": "A child can get what it wants by doing what its parent doesn't want it to do."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Scientist: In our study, chemical R did not cause cancer in laboratory rats. But we cannot conclude from this that chemical R is safe for humans. After all, many substances known to be carcinogenic to humans cause no cancer in rats; this is probably because some carcinogens cause cancer only via long-term exposure and rats are short lived.",
+    "questionStem": "Which one of the following most precisely describes the role played in the scientist's argument by the statement that chemical R did not cause cancer in laboratory rats?",
+    "answerChoices": {
+      "A": "It is cited as evidence against the conclusion that chemical R is safe for humans.",
+      "B": "It is advanced to support the contention that test results obtained from laboratory rats cannot be extrapolated to humans.",
+      "C": "It illustrates the claim that rats are too short lived to be suitable as test subjects for the carcinogenic properties of substances to which humans are chronically exposed.",
+      "D": "It is used as evidence to support the hypothesis that chemical R causes cancer in humans via long-term exposure.",
+      "E": "It is cited as being insufficient to support the conclusion that chemical R is safe for humans."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Department store manager: There is absolutely no reason to offer our customers free gift wrapping again this holiday season. If most customers take the offer, it will be expensive and time-consuming for us. On the other hand, if only a few customers want it, there is no advantage in offering it.",
+    "questionStem": "Which one of the following is an assumption required by the department store manager's argument?",
+    "answerChoices": {
+      "A": "Gift wrapping would cost the store more during this holiday season than in previous holiday seasons.",
+      "B": "Anything that slows down shoppers during the holiday season costs the store money.",
+      "C": "It would be to the store's advantage to charge customers for gift wrapping services.",
+      "D": "It would be expensive to inform customers about the free gift wrapping service.",
+      "E": "Either few customers would want free gift wrapping or most customers would want it."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Among people who have a history of chronic trouble falling asleep, some rely only on sleeping pills to help them fall asleep, and others practice behavior modification techniques and do not take sleeping pills. Those who rely only on behavior modification fall asleep more quickly than do those who rely only on sleeping pills, so behavior modification is more effective than are sleeping pills in helping people to fall asleep.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "People who do not take sleeping pills spend at least as many total hours asleep each night as do the people who take sleeping pills.",
+      "B": "Most people who have trouble falling asleep and who use behavior modification techniques fall asleep more slowly than do most people who have no trouble falling asleep.",
+      "C": "Many people who use only behavior modification techniques to help them fall asleep have never used sleeping pills.",
+      "D": "The people who are the most likely to take sleeping pills rather than practice behavior modification techniques are those who have previously had the most trouble falling asleep.",
+      "E": "The people who are the most likely to practice behavior modification techniques rather than take sleeping pills are those who prefer not to use drugs if other treatments are available."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Lawyer: This witness acknowledges being present at the restaurant and watching when my client, a famous television personality, was assaulted. Yet the witness claims to recognize the assailant, but not my famous client. Therefore, the witness's testimony should be excluded.",
+    "questionStem": "The lawyer's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "If a witness claims to recognize both parties involved in an assault, then the witness's testimony should be included.",
+      "B": "There are other witnesses who can identify the lawyer's client as present during the assault.",
+      "C": "It is impossible to determine whether the witness actually recognized the assailant.",
+      "D": "The testimony of a witness to an assault should be included only if the witness claims to recognize both parties involved in the assault.",
+      "E": "It is unlikely that anyone would fail to recognize the lawyer's client."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Biologist: Many paleontologists have suggested that the difficulty of adapting to ice ages was responsible for the evolution of the human brain. But this suggestion must be rejected, for most other animal species adapted to ice ages with no evolutionary changes to their brains.",
+    "questionStem": "The biologist's argument is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It fails to address adequately the possibility that even if a condition is sufficient to produce an effect in a species, it may not be necessary to produce that effect in that species.",
+      "B": "It fails to address adequately the possibility that a condition can produce a change in a species even if it does not produce that change in other species.",
+      "C": "It overlooks the possibility that a condition that is needed to produce a change in one species is not needed to produce a similar change in other species.",
+      "D": "It presumes without warrant that human beings were presented with greater difficulties during ice ages than were individuals of most other species.",
+      "E": "It takes for granted that, if a condition coincided with the emergence of a certain phenomenon, that condition must have been causally responsible for the phenomenon."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "The total number of book titles published annually in North America has approximately quadrupled since television first became available. Retail sales of new titles, as measured in copies, increased rapidly in the early days of television, though the rate of increase has slowed in recent years. Library circulation has been flat or declining in recent years.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Television has, over the years, brought about a reduction in the amount of per capita reading in North America.",
+      "B": "The introduction of television usually brings about a decrease in library use.",
+      "C": "Book publishers in North America now sell fewer copies per title than they sold in the early days of television.",
+      "D": "The availability of television does not always cause a decline in the annual number of book titles published or in the number of books sold.",
+      "E": "The introduction of television expanded the market for books in North America."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "Botanist: It has long been believed that people with children or pets should keep poinsettia plants out of their homes. Although this belief has been encouraged by child-rearing books, which commonly list poinsettias as poisonous and therefore dangerous, it is mistaken. Our research has shown, conclusively, that poinsettias pose no risk to children or pets.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion drawn in the botanist's argument?",
+    "answerChoices": {
+      "A": "Child-rearing books should encourage people with children to put poinsettias in their homes.",
+      "B": "Poinsettias are not dangerously poisonous.",
+      "C": "According to many child-rearing books, poinsettias are dangerous.",
+      "D": "The belief that households with children or pets should not have poinsettias is mistaken.",
+      "E": "Poinsettias pose no risk to children or pets."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Archaeologist: An ancient stone building at our excavation site was composed of three kinds of stone—quartz, granite, and limestone. Of these, only limestone occurs naturally in the area. Most of the buildings at the site from the same time period had limestone as their only stone component, and most were human dwellings. Therefore, the building we are studying probably was not a dwelling.",
+    "questionStem": "Which one of the following, if true, would most strengthen the archaeologist's reasoning?",
+    "answerChoices": {
+      "A": "Most of the buildings that were used as dwellings at the site were made, at least in part, of limestone.",
+      "B": "Most of the buildings at the site that were not dwellings were made, at least in part, from types of stone that do not occur naturally in the area.",
+      "C": "Most of the buildings that were built from stones not naturally occurring in the area were not built with both quartz and granite.",
+      "D": "Most of the buildings at the site were used as dwellings.",
+      "E": "No quartz has been discovered on the site other than that found in the building being studied."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Theodore will be able to file his tax return on time only in the event that he has an accountant prepare his tax return and the accountant does not ask Theodore for any additional documentation of his business expenses. If he does have an accountant prepare his return, the accountant will necessarily ask Theodore to provide this additional documentation. Therefore, Theodore will not be able to file on time.",
+    "questionStem": "The pattern of reasoning in which one of the following arguments most closely parallels the pattern of reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Given the demands of Timothy's job, his next free evening will occur next Friday. Since he spent a lot of money on his last evening out, he will probably decide to spend his next free evening at home. Therefore, Timothy will probably be at home next Friday evening.",
+      "B": "Tovah cannot attend the concert next week if she is away on business. If she misses that concert, she will not have another opportunity to attend a concert this month. Since she will be away on business, Tovah will not be able to attend a concert this month.",
+      "C": "Mark's children will not be content this weekend unless he lets them play video games some of the time. Mark will let them play video games, but only at times when he has no other activities planned. Therefore, unless Mark and his children take a break from planned activities, Mark's children will not be content this weekend.",
+      "D": "If Teresa is not seated in first class on her airline flight, she will be seated in business class. Therefore, since she cannot be seated in first class on that flight, she will necessarily be seated in business class.",
+      "E": "Susannah will have a relaxing vacation only if her children behave especially well and she does not start to suspect that they are planning some mischief. Since she will certainly start to suspect that they are planning some mischief if they behave especially well, Susannah's vacation cannot possibly be relaxing."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "When a threat to life is common, as are automobile and industrial accidents, only unusual instances tend to be prominently reported by the news media. Instances of rare threats, such as product tampering, however, are seen as news by reporters and are universally reported in featured stories. People in general tend to estimate the risk of various threats by how frequently those threats come to their attention.",
+    "questionStem": "If the statements above are true, which one of the following is most strongly supported on the basis of them?",
+    "answerChoices": {
+      "A": "Whether governmental action will be taken to lessen a common risk depends primarily on the prominence given to the risk by the news media.",
+      "B": "People tend to magnify the risk of a threat if the threat seems particularly dreadful or if those who would be affected have no control over it.",
+      "C": "Those who get their information primarily from the news media tend to overestimate the risk of uncommon threats relative to the risk of common threats.",
+      "D": "Reporters tend not to seek out information about long-range future threats but to concentrate their attention on the immediate past and future.",
+      "E": "The resources that are spent on avoiding product tampering are greater than the resources that are spent on avoiding threats that stem from the weather."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Real estate agent: Upon selling a home, the sellers are legally entitled to remove any items that are not permanent fixtures. Legally, large appliances like dishwashers are not permanent fixtures. However, since many prospective buyers of the home are likely to assume that large appliances in the home would be included with its purchase, sellers who will be keeping the appliances are morally obliged either to remove them before showing the home or to indicate in some other way that the appliances are not included.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the real estate agent's argumentation?",
+    "answerChoices": {
+      "A": "If a home's sellers will be keeping any belongings that prospective buyers of the home might assume would be included with the purchase of the home, the sellers are morally obliged to indicate clearly that those belongings are not included.",
+      "B": "A home's sellers are morally obliged to ensure that prospective buyers of the home do not assume that any large appliances are permanent fixtures in the home.",
+      "C": "A home's sellers are morally obliged to include with the sale of the home at least some of the appliances that are not permanent fixtures but were in the home when it was shown to prospective buyers.",
+      "D": "A home's sellers are morally obliged not to deliberately mislead any prospective buyers of their home about which belongings are included with the sale of the home and which are not.",
+      "E": "If a home's sellers have indicated in some way that a large appliance is included with the home's purchase, then they are morally obliged not to remove that appliance after showing the home."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Many parents rigorously organize their children's activities during playtime, thinking that doing so will enhance their children's cognitive development. But this belief is incorrect. To thoroughly structure a child's playtime and expect this to produce a creative and resourceful child would be like expecting a good novel to be produced by someone who was told exactly what the plot and characters must be.",
+    "questionStem": "The argument is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It takes for granted that if something is conducive to a certain goal it cannot also be conducive to some other goal.",
+      "B": "It overlooks the possibility that many children enjoy rigorously organized playtime.",
+      "C": "It takes a necessary condition for something's enhancing a child's creativity and resourcefulness to be a sufficient condition for its doing so.",
+      "D": "It fails to consider the possibility that being able to write a good novel requires something more than creativity and resourcefulness.",
+      "E": "It fails to consider the possibility that something could enhance a child's overall cognitive development without enhancing the child's creativity and resourcefulness."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Bureaucrat: The primary, constant goal of an ideal bureaucracy is to define and classify all possible problems and set out regulations regarding each eventuality. Also, an ideal bureaucracy provides an appeal procedure for any complaint. If a complaint reveals an unanticipated problem, the regulations are expanded to cover the new issue, and for this reason an ideal bureaucracy will have an ever-expanding system of regulations.",
+    "questionStem": "Which one of the following is an assumption the bureaucrat's argument requires?",
+    "answerChoices": {
+      "A": "An ideal bureaucracy will provide an appeal procedure for complaints even after it has defined and classified all possible problems and set out regulations regarding each eventuality.",
+      "B": "For each problem that an ideal bureaucracy has defined and classified, the bureaucracy has received at least one complaint revealing that problem.",
+      "C": "An ideal bureaucracy will never be permanently without complaints about problems that are not covered by that bureaucracy's regulations.",
+      "D": "An ideal bureaucracy can reach its primary goal if, but only if, its system of regulations is always expanding to cover problems that had not been anticipated.",
+      "E": "Any complaint that an ideal bureaucracy receives will reveal an unanticipated problem that the bureaucracy is capable of defining and classifying."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "Scientists studying a common type of bacteria have discovered that most bacteria of that type are in hibernation at any given time. Some microbiologists have concluded from this that bacteria in general are usually in hibernation. This conclusion would be reasonable if all types of bacteria were rather similar. But, in fact, since bacteria are extremely diverse, it is unlikely that most types of bacteria hibernate regularly.",
+    "questionStem": "Which one of the following most accurately expresses the overall conclusion of the argument?",
+    "answerChoices": {
+      "A": "Bacteria of most types are usually in hibernation.",
+      "B": "It is probably not true that most types of bacteria hibernate regularly.",
+      "C": "If bacteria are extremely diverse, it is unlikely that most types of bacteria hibernate regularly.",
+      "D": "The conclusion that bacteria in general are usually in hibernation would be reasonable if all types of bacteria were rather similar.",
+      "E": "It is likely that only one type of bacteria hibernates regularly."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Any student who is not required to hand in written homework based on the reading assignments in a course will not complete all of the reading assignments. Even highly motivated students will neglect their reading assignments if they are not required to hand in written homework. Therefore, if the students in a course are given several reading assignments and no written assignments, no student in that course will receive a high grade for the course.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "No student who completes anything less than all of the reading assignments for a course will earn a high grade for that course.",
+      "B": "Any student who completes all of the reading and written assignments for a course will earn a high grade in that course.",
+      "C": "All highly motivated students who complete all of the reading assignments for a course will receive high grades for that course.",
+      "D": "If highly motivated students are required to hand in written homework on their reading assignments, then they will complete all of their reading assignments.",
+      "E": "Some highly motivated students will earn high grades in a course if they are required to hand in written homework on their reading assignments."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "In a study, one group of volunteers was fed a high-protein, low-carbohydrate diet; another group was fed a low-protein, high-carbohydrate diet. Both diets contained the same number of calories, and each volunteer's diet prior to the experiment had contained moderate levels of proteins and carbohydrates. After ten days, those on the low-carbohydrate diet had lost more weight than those on the high-carbohydrate diet. Thus, the most effective way to lose body fat is to eat much protein and shun carbohydrates.",
+    "questionStem": "Which one of the following, if true, most weakens the argument above?",
+    "answerChoices": {
+      "A": "A low-protein, high-carbohydrate diet causes the human body to retain water, the added weight of which largely compensates for the weight of any body fat lost, whereas a high-protein, low-carbohydrate diet does not.",
+      "B": "Many people who consume large quantities of protein nevertheless gain significant amounts of body fat.",
+      "C": "A high-protein, low-carbohydrate diet will often enable the human body to convert some body fat into muscle, without causing any significant overall weight loss.",
+      "D": "In the experiment, the volunteers on the high-carbohydrate diet engaged in regular exercise of a kind known to produce weight loss, and those on the low-carbohydrate diet did not.",
+      "E": "Many of the volunteers who had been on the low-carbohydrate diet eventually regained much of the weight they had lost on the diet after returning to their normal diets."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Essayist: Computers have the capacity to represent and to perform logical transformations on pieces of information. Since exactly the same applies to the human mind, the human mind is a type of computer.",
+    "questionStem": "The flawed pattern of reasoning in which one of the following most closely resembles the flawed pattern of reasoning in the essayist's argument?",
+    "answerChoices": {
+      "A": "Often individual animals sacrifice their lives when the survival of their offspring or close relatives is threatened. It is probable, therefore, that there is a biological basis for the fact that human beings are similarly often willing to sacrifice their own well-being for the good of their community.",
+      "B": "In the plastic arts, such as sculpture or painting, no work can depend for its effectiveness upon a verbal narrative that explains it. Since the same can be said of poetry, we cannot consider this characteristic as a reasonable criterion for distinguishing the plastic arts from other arts.",
+      "C": "In any organism, the proper functioning of each component depends upon the proper functioning of every other component. Thus, communities belong to the category of organisms, since communities are invariably characterized by this same interdependence of components.",
+      "D": "Some vitamins require the presence in adequate amounts of some mineral in order to be fully beneficial to the body. Thus, since selenium is needed to make vitamin E fully active, anyone with a selenium deficiency will have a greater risk of contracting those diseases from which vitamin E provides some measure of protection.",
+      "E": "Friendship often involves obligations whose fulfillment can be painful or burdensome. The same can be said of various forms of cooperation that cannot strictly be called friendship. Thus cooperation, like friendship, can require that priority be given to goals other than mere self-interest."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "It is popularly believed that a poem has whatever meaning is assigned to it by the reader. But objective evaluation of poetry is possible only if this popular belief is false; for the aesthetic value of a poem cannot be discussed unless it is possible for at least two readers to agree on the correct interpretation of the poem.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Only if they find the same meaning in a poem can two people each judge that it has aesthetic value.",
+      "B": "If two readers agree about the meaning of a given poem, that ensures that an objective evaluation of the poem can be made.",
+      "C": "Discussion of a poem is possible only if it is false that a poem has whatever meaning is assigned to it by the reader.",
+      "D": "A given poem can be objectively evaluated only if the poem's aesthetic value can be discussed.",
+      "E": "Aesthetic evaluation of literature is best accomplished through discussion by more than two readers."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Dean: The mathematics department at our university has said that it should be given sole responsibility for teaching the course Statistics for the Social Sciences. But this course has no more mathematics in it than high school algebra does. The fact that a course has mathematics in it does not mean that it needs to be taught by a mathematics professor, any more than a course approaching its subject from a historical perspective must be taught by a history professor. Such demands by the mathematics department are therefore unjustified.",
+    "questionStem": "The dean's argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that expertise in a subject does not enable one to teach that subject well",
+      "B": "purports to refute a view by showing that one possible reason for that view is insufficient",
+      "C": "presumes, without providing justification, that most students are as knowledgeable about mathematics as they are about history",
+      "D": "fails to establish that mathematics professors are not capable of teaching Statistics for the Social Sciences effectively",
+      "E": "presumes, without providing justification, that any policies that apply to history courses must be justified with respect to mathematics courses"
+    },
+    "correctAnswer": "B"
+  }
+]

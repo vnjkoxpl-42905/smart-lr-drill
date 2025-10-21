@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Editorialist: Advertisers devote millions of dollars to the attempt to instill attitudes and desires that lead people to purchase particular products, and advertisers' techniques have been adopted by political strategists in democratic countries, who are paid to manipulate public opinion in every political campaign. Thus, the results of elections in democratic countries cannot be viewed as representing the unadulterated preferences of the people.",
+    "questionStem": "Which one of the following, if true, most strengthens the editorialist's argument?",
+    "answerChoices": {
+      "A": "Public opinion can be manipulated more easily by officials of nondemocratic governments than by those of democratic governments.",
+      "B": "Advertisers' techniques are often apparent to the people to whom the advertisements are directed.",
+      "C": "Many democratic countries have laws limiting the amount that may be spent on political advertisements in any given election.",
+      "D": "People who neither watch television nor read any print media are more likely to vote than people who do one or both of these activities.",
+      "E": "Unlike advertisements for consumer products, most of which only reinforce existing beliefs, political advertisements often change voters' beliefs."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Kris: Years ago, the chemical industry claimed that technological progress cannot occur without pollution. Today, in the name of technological progress, the cellular phone industry manufactures and promotes a product that causes environmental pollution in the form of ringing phones and loud conversations in public places. Clearly, the cellular industry must be regulated, just as the chemical industry is now regulated.\nTerry: That's absurd. Chemical pollution can cause physical harm, but the worst harm that cellular phones can cause is annoyance.",
+    "questionStem": "Terry responds to Kris's argument by doing which one of the following?",
+    "answerChoices": {
+      "A": "questioning the reliability of the source of crucial information in Kris's argument",
+      "B": "attacking the accuracy of the evidence about the chemical industry that Kris puts forward",
+      "C": "arguing that an alleged cause of a problem is actually an effect of that problem",
+      "D": "questioning the strength of the analogy on which Kris's argument is based",
+      "E": "rejecting Kris's interpretation of the term \"technological progress\""
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Researcher: Any country can determine which type of public school system will work best for it by investigating the public school systems of other countries. Nationwide tests could be given in each country and other countries could adopt the system of the country that has the best scores on these tests.",
+    "questionStem": "Which one of the following is an assumption required by the researcher's argument?",
+    "answerChoices": {
+      "A": "A type of school system that works well in one country will work well in any other country.",
+      "B": "A number of children in each country in the research sample are educated in private schools.",
+      "C": "If two countries performed differently on these nationwide tests, further testing could determine what features of the school systems account for the differences.",
+      "D": "Most countries in the research sample already administer nationwide tests to their public school students.",
+      "E": "The nationwide testing in the research sample will target as closely as possible grade levels that are comparable in the different countries in the research sample."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Ray: Cynthia claims that her car's trunk popped open because the car hit a pothole. Yet, she also acknowledged that the trunk in that car had popped open on several other occasions, and that on none of those other occasions had the car hit a pothole. Therefore, Cynthia mistakenly attributed the trunk's popping open to the car's having hit a pothole.",
+    "questionStem": "The reasoning in Ray's argument is most vulnerable to criticism in that the argument",
+    "answerChoices": {
+      "A": "fails to consider the possibility that the trunks of other cars may pop open when those cars hit potholes",
+      "B": "fails to consider the possibility that potholes can have negative effects on a car's engine",
+      "C": "presumes, without providing justification, that if one event causes another, it cannot also cause a third event",
+      "D": "fails to consider the possibility that one type of event can be caused in many different ways",
+      "E": "presumes the truth of the claim that it is trying to establish"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Journalists agree universally that lying is absolutely taboo. Yet, while many reporters claim that spoken words ought to be quoted verbatim, many others believe that tightening a quote from a person who is interviewed is legitimate on grounds that the speaker's remarks would have been more concise if the speaker had written them instead. Also, many reporters believe that, to expose wrongdoing, failing to identify oneself as a reporter is permissible, while others condemn such behavior as a type of lying.",
+    "questionStem": "Which one of the following is most supported by the information above?",
+    "answerChoices": {
+      "A": "Reporters make little effort to behave ethically.",
+      "B": "There is no correct answer to the question of whether lying in a given situation is right or wrong.",
+      "C": "Omission of the truth is the same thing as lying.",
+      "D": "Since lying is permissible in some situations, reporters are mistaken to think that it is absolutely taboo.",
+      "E": "Reporters disagree on what sort of behavior qualifies as lying."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Wood-frame houses withstand earthquakes far better than masonry houses do, because wooden frames have some flexibility; their walls can better handle lateral forces. In a recent earthquake, however, a wood-frame house was destroyed, while the masonry house next door was undamaged.",
+    "questionStem": "Which one of the following, if true, most helps to explain the results of the earthquake described above?",
+    "answerChoices": {
+      "A": "In earthquake-prone areas, there are many more wood-frame houses than masonry houses.",
+      "B": "In earthquake-prone areas, there are many more masonry houses than wood-frame houses.",
+      "C": "The walls of the wood-frame house had once been damaged in a flood.",
+      "D": "The masonry house was far more expensive than the wood-frame house.",
+      "E": "No structure is completely impervious to the destructive lateral forces exerted by earthquakes."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "In an experiment, biologists repeatedly shone a bright light into a tank containing a sea snail and simultaneously shook the tank. The snail invariably responded by tensing its muscular \"foot,\" a typical reaction in sea snails to ocean turbulence. After several repetitions of this procedure, the snail tensed its \"foot\" whenever the biologists shone the light into its tank, even when the tank was not simultaneously shaken. Therefore, the snail must have learned to associate the shining of the bright light with the shaking of the tank.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "All sea snails react to ocean turbulence in the same way as the sea snail in the experiment did.",
+      "B": "Sea snails are not ordinarily exposed to bright lights such as the one used in the biologists' experiment.",
+      "C": "The sea snail used in the experiment did not differ significantly from other members of its species in its reaction to external stimuli.",
+      "D": "The appearance of a bright light alone would ordinarily not result in the sea snail's tensing its \"foot.\"",
+      "E": "Tensing of the muscular \"foot\" in sea snails is an instinctual rather than a learned response to ocean turbulence."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "The university's purchasing department is highly efficient overall. We must conclude that each of its twelve staff members is highly efficient.",
+    "questionStem": "Which one of the following arguments exhibits flawed reasoning most similar to that exhibited by the argument above?",
+    "answerChoices": {
+      "A": "The employees at this fast-food restaurant are the youngest and most inexperienced of any fast-food workers in the city. Given this, it seems obvious that customers will have to wait longer for their food at this restaurant than at others.",
+      "B": "The outside audit of our public relations department has exposed serious deficiencies in the competence of each member of that department. We must conclude that the department is inadequate for our needs.",
+      "C": "This supercomputer is the most sophisticated—and the most expensive—ever built. It must be that each of its components is the most sophisticated and expensive available.",
+      "D": "Literature critics have lavished praise on every chapter of this book. In light of their reviews, one must conclude that the book is excellent.",
+      "E": "Passing a driving test is a condition of employment at the city's transportation department. It follows that each of the department's employees has passed the test."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "The Jacksons regularly receive wrong-number calls for Sara, whose phone number was misprinted in a directory. Sara contacted the Jacksons, informing them of the misprint and her correct number. The Jacksons did not lead Sara to believe that they would pass along the correct number, but it would be helpful to Sara and of no difficulty for them to do so. Thus, although it would not be wrong for the Jacksons to tell callers trying to reach Sara merely that they have dialed the wrong number, it would be laudable if the Jacksons passed along Sara's correct number.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the reasoning in the argument?",
+    "answerChoices": {
+      "A": "It is always laudable to do something helpful to someone, but not doing so would be wrong only if one has led that person to believe one would do it.",
+      "B": "Being helpful to someone is laudable whenever it is not wrong to do so.",
+      "C": "If one can do something that would be helpful to someone else and it would be easy to do, then it is laudable and not wrong to do so.",
+      "D": "Doing something for someone is laudable only if it is difficult for one to do so and it is wrong for one not to do so.",
+      "E": "The only actions that are laudable are those that it would not be wrong to refrain from doing, whether or not it is difficult to do so."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Albert: The government has proposed new automobile emissions regulations designed to decrease the amount of polycyclic aromatic hydrocarbons (PAHs) released into the atmosphere by automobile exhaust. I don't see the need for such regulations; although PAHs are suspected of causing cancer, a causal link has never been proven.\nErin: Scientists also blame PAHs for 10,000 premature deaths in this country each year from lung and heart disease. So the proposed regulations would save thousands of lives.",
+    "questionStem": "Which one of the following, if true, is the logically strongest counter that Albert can make to Erin's argument?",
+    "answerChoices": {
+      "A": "Most automobile manufacturers are strongly opposed to additional automobile emissions regulations.",
+      "B": "It is not known whether PAHs are a causal factor in any diseases other than heart and lung disease and cancer.",
+      "C": "Even if no new automobile emissions regulations are enacted, the amount of PAHs released into the atmosphere will decrease if automobile usage declines.",
+      "D": "Most of the PAHs released into the atmosphere are the result of wear and tear on automobile tires.",
+      "E": "PAHs are one of several components of automobile exhaust that scientists suspect of causing cancer."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "Australia has considerably fewer species of carnivorous mammals than any other continent does but about as many carnivorous reptile species as other continents do. This is probably a consequence of the unusual sparseness of Australia's ecosystems. To survive, carnivorous mammals must eat much more than carnivorous reptiles need to; thus carnivorous mammals are at a disadvantage in ecosystems in which there is relatively little food.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "Australia has considerably fewer species of carnivorous mammals than any other continent does but about as many carnivorous reptile species as other continents do.",
+      "B": "In ecosystems in which there is relatively little food carnivorous mammals are at a disadvantage relative to carnivorous reptiles.",
+      "C": "The unusual sparseness of Australia's ecosystems is probably the reason Australia has considerably fewer carnivorous mammal species than other continents do but about as many carnivorous reptile species.",
+      "D": "The reason that carnivorous mammals are at a disadvantage in ecosystems in which there is relatively little food is that they must eat much more in order to survive than carnivorous reptiles need to.",
+      "E": "Because Australia's ecosystems are unusually sparse, carnivorous mammals there are at a disadvantage relative to carnivorous reptiles."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Linguist: The Sapir-Whorf hypothesis states that a society's world view is influenced by the language or languages its members speak. But this hypothesis does not have the verifiability of hypotheses of physical science, since it is not clear that the hypothesis could be tested.",
+    "questionStem": "If the linguist's statements are accurate, which one of the following is most supported by them?",
+    "answerChoices": {
+      "A": "The Sapir-Whorf hypothesis is probably false.",
+      "B": "Only the hypotheses of physical science are verifiable.",
+      "C": "Only verifiable hypotheses should be seriously considered.",
+      "D": "We do not know whether the Sapir-Whorf hypothesis is true or false.",
+      "E": "Only the hypotheses of physical science should be taken seriously."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "The highest mountain ranges are formed by geological forces that raise the earth's crust: two continent-bearing tectonic plates of comparable density collide and crumple upward, causing a thickening of the crust. The erosive forces of wind and precipitation inexorably wear these mountains down. Yet the highest mountain ranges tend to be found in places where these erosive forces are most prevalent.",
+    "questionStem": "Which one of the following, if true, most helps to reconcile the apparent conflict described above?",
+    "answerChoices": {
+      "A": "Patterns of extreme wind and precipitation often result from the dramatic differences in elevation commonly found in the highest mountain ranges.",
+      "B": "The highest mountain ranges have less erosion-reducing vegetation near their peaks than do other mountain ranges.",
+      "C": "Some lower mountain ranges are formed by a different collision process, whereby one tectonic plate simply slides beneath another of lesser density.",
+      "D": "The amount of precipitation that a given region of the earth receives may vary considerably over the lifetime of an average mountain range.",
+      "E": "The thickening of the earth's crust associated with the formation of the highest mountain ranges tends to cause the thickened portion of the crust to sink over time."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Expert: A group of researchers claims to have shown that for an antenna to work equally well at all frequencies, it must be symmetrical in shape and have what is known as a fractal structure. Yet the new antenna developed by these researchers, which satisfies both of these criteria, in fact works better at frequencies below 250 megahertz than at frequencies above 250 megahertz. Hence, their claim is incorrect.",
+    "questionStem": "The reasoning in the expert's argument is flawed because the argument",
+    "answerChoices": {
+      "A": "fails to provide a definition of the technical term \"fractal\"",
+      "B": "contradicts itself by denying in its conclusion the claim of scientific authorities that it relies on in its premises",
+      "C": "concludes that a claim is false merely on the grounds that there is insufficient evidence that it is true",
+      "D": "interprets an assertion that certain conditions are necessary as asserting that those conditions are sufficient",
+      "E": "takes for granted that there are only two possible alternatives, either below or above 250 megahertz"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Role",
+    "questionDifficulty": 5,
+    "stimulus": "Singletary: We of Citizens for Cycling Freedom object to the city's new ordinance requiring bicyclists to wear helmets. If the city wanted to become a safer place for cyclists, it would not require helmets. Instead, it would construct more bicycle lanes and educate drivers about bicycle safety. Thus, passage of the ordinance reveals that the city is more concerned with the appearance of safety than with bicyclists' actual safety.",
+    "questionStem": "Which one of the following most accurately describes the role played in Singletary's argument by the statement that mentions driver education?",
+    "answerChoices": {
+      "A": "It is cited as evidence for the claim that the city misunderstands the steps necessary for ensuring bicyclists' safety.",
+      "B": "It is used as partial support for a claim about the motivation of the city.",
+      "C": "It is offered as evidence of the total ineffectiveness of the helmet ordinance.",
+      "D": "It is offered as an example of further measures the city will take to ensure bicyclists' safety.",
+      "E": "It is presented as an illustration of the city's overriding interest in its public image."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Max: Although doing so would be very costly, humans already possess the technology to build colonies on the Moon. As the human population increases and the amount of unoccupied space available for constructing housing on Earth diminishes, there will be a growing economic incentive to construct such colonies to house some of the population. Thus, such colonies will almost certainly be built and severe overcrowding on Earth relieved.",
+    "questionStem": "Max's argument is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It takes for granted that the economic incentive to construct colonies on the Moon will grow sufficiently to cause such a costly project to be undertaken.",
+      "B": "It takes for granted that the only way of relieving severe overcrowding on Earth is the construction of colonies on the Moon.",
+      "C": "It overlooks the possibility that colonies will be built on the Moon regardless of any economic incentive to construct such colonies to house some of the population.",
+      "D": "It overlooks the possibility that colonies on the Moon might themselves quickly become overcrowded.",
+      "E": "It takes for granted that none of the human population would prefer to live on the Moon unless Earth were seriously overcrowded."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Ethicist: An action is wrong if it violates a rule of the society in which the action is performed and that rule promotes the general welfare of people in the society. An action is right if it is required by a rule of the society in which the action is performed and the rule promotes the general welfare of the people in that society.",
+    "questionStem": "Which one of the following judgments most closely conforms to the principle cited by the ethicist?",
+    "answerChoices": {
+      "A": "Amelia's society has a rule against lying. However, she lies anyway in order to protect an innocent person from being harmed. While the rule against lying promotes the general welfare of people in the society, Amelia's lie is not wrong because she is preventing harm.",
+      "B": "Jordan lives in a society that requires its members to eat certain ceremonial foods during festivals. Jordan disobeys this rule. Because the rule is not detrimental to the general welfare of people in her society, Jordan's disobedience is wrong.",
+      "C": "Elgin obeys a certain rule of his society. Because Elgin knows that this particular rule is detrimental to the general welfare of the people in his society, his obedience is wrong.",
+      "D": "Dahlia always has a cup of coffee before getting dressed in the morning. Dahlia's action is right because it does not violate any rule of the society in which she lives.",
+      "E": "Edward's society requires children to take care of their aged parents. Edward's taking care of his aged parents is the right thing for him to do because the rule requiring this action promotes the general welfare of people in the society."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Teresa: If their goal is to maximize profits, film studios should concentrate on producing big-budget films rather than small-budget ones. For, unlike big-budget films, small-budget films never attract mass audiences. While small-budget films are less expensive to produce and, hence, involve less risk of unprofitability than big-budget films, low production costs do not guarantee the highest possible profits.",
+    "questionStem": "Which one of the following is an assumption required by Teresa's argument?",
+    "answerChoices": {
+      "A": "Each big-budget film is guaranteed to attract a mass audience.",
+      "B": "A film studio cannot make both big-budget films and small-budget films.",
+      "C": "A film studio will not maximize its profits unless at least some of its films attract mass audiences.",
+      "D": "It is impossible to produce a big-budget film in a financially efficient manner.",
+      "E": "A film studio's primary goal should be to maximize profits."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Cyclists in the Tour de France are extremely physically fit: all of the winners of this race have had abnormal physiological constitutions. Typical of the abnormal physiology of these athletes are exceptional lung capacity and exceptionally powerful hearts. Tests conducted on last year's winner did not reveal an exceptionally powerful heart. That cyclist must, therefore, have exceptional lung capacity.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that it overlooks the possibility that",
+    "answerChoices": {
+      "A": "having exceptional lung capacity and an exceptionally powerful heart is an advantage in cycling",
+      "B": "some winners of the Tour de France have neither exceptional lung capacity nor exceptionally powerful hearts",
+      "C": "cyclists with normal lung capacity rarely have exceptionally powerful hearts",
+      "D": "the exceptional lung capacity and exceptionally powerful hearts of Tour de France winners are due to training",
+      "E": "the notions of exceptional lung capacity and exceptional heart function are relative to the physiology of most cyclists"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "TV meteorologist: Our station's weather forecasts are more useful and reliable than those of the most popular news station in the area. After all, the most important question for viewers in this area is whether it will rain, and on most of the occasions when we have forecast rain for the next day, we have been right. The same cannot be said for either of our competitors.",
+    "questionStem": "Which one of the following, if true, most strengthens the meteorologist's argument?",
+    "answerChoices": {
+      "A": "The meteorologist's station forecast rain more often than did the most popular news station in the area.",
+      "B": "The less popular of the competing stations does not employ any full-time meteorologists.",
+      "C": "The most popular news station in the area is popular because of its investigative news reports.",
+      "D": "The meteorologist's station has a policy of not making weather forecasts more than three days in advance.",
+      "E": "On most of the occasions when the meteorologist's station forecast that it would not rain, at least one of its competitors also forecast that it would not rain."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "In an experiment, volunteers witnessed a simulated crime. After they witnessed the simulation the volunteers were first questioned by a lawyer whose goal was to get them to testify inaccurately about the event. They were then cross-examined by another lawyer whose goal was to cause them to correct the inaccuracies in their testimony. The witnesses who gave testimony containing fewer inaccurate details than most of the other witnesses during the first lawyer's questioning also gave testimony containing a greater number of inaccurate details than most of the other witnesses during cross-examination.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent conflict in the results concerning the witnesses who gave testimony containing fewer inaccurate details during the first lawyer's questioning?",
+    "answerChoices": {
+      "A": "These witnesses were more observant about details than were most of the other witnesses.",
+      "B": "These witnesses had better memories than did most of the other witnesses.",
+      "C": "These witnesses were less inclined than most of the other witnesses to be influenced in their testimony by the nature of the questioning.",
+      "D": "These witnesses were unclear about the details at first but then began to remember more accurately as they answered questions.",
+      "E": "These witnesses tended to give testimony containing more details than most of the other witnesses."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "The short-term and long-term interests of a business often conflict; when they do, the morally preferable act is usually the one that serves the long-term interest. Because of this, businesses often have compelling reasons to execute the morally preferable act.",
+    "questionStem": "Which one of the following, if assumed, enables the conclusion of the argument to be properly drawn?",
+    "answerChoices": {
+      "A": "A business's moral interests do not always provide compelling reasons for executing an act.",
+      "B": "A business's long-term interests often provide compelling reasons for executing an act.",
+      "C": "The morally preferable act for a business to execute and the long-term interests of the business seldom conflict.",
+      "D": "The morally preferable act for a business to execute and the short-term interests of the business usually conflict.",
+      "E": "When a business's short-term and long-term interests conflict, morality alone is rarely the overriding consideration."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Politician: The current crisis in mathematics education must be overcome if we are to remain competitive in the global economy. Alleviating this crisis requires the employment of successful teaching methods. No method of teaching a subject can succeed that does not get students to spend a significant amount of time outside of class studying that subject.",
+    "questionStem": "Which one of the following statements follows logically from the statements above?",
+    "answerChoices": {
+      "A": "If students spend a significant amount of time outside of class studying mathematics, the current crisis in mathematics education will be overcome.",
+      "B": "The current crisis in mathematics education will not be overcome unless students spend a significant amount of time outside of class studying mathematics.",
+      "C": "Few subjects are as important as mathematics to the effort to remain competitive in the global economy.",
+      "D": "Only if we succeed in remaining competitive in the global economy will students spend a significant amount of time outside of class studying mathematics.",
+      "E": "Students' spending a significant amount of time outside of class studying mathematics would help us to remain competitive in the global economy."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Downtown Petropolis boasted over 100 large buildings 5 years ago. Since then, 60 of those buildings have been demolished. Since the number of large buildings in a downtown is an indicator of the economic health of that downtown, it is clear that downtown Petropolis is in a serious state of economic decline.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "The demolitions that have taken place during the past 5 years have been evenly spread over that period.",
+      "B": "There have never been significantly more than 100 large buildings in downtown Petropolis.",
+      "C": "Most of the buildings demolished during the past 5 years were torn down because they were structurally unsound.",
+      "D": "The large buildings demolished over the past 5 years have been replaced with small buildings built on the same sites.",
+      "E": "Significantly fewer than 60 new large buildings have been built in downtown Petropolis during the past 5 years."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT125",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "To get the free dessert, one must order an entree and a salad. But anyone who orders either an entree or a salad can receive a free soft drink. Thus, anyone who is not eligible for a free soft drink is not eligible for a free dessert.",
+    "questionStem": "The reasoning in the argument above is most similar to the reasoning in which one of the following arguments?",
+    "answerChoices": {
+      "A": "To get an executive position at Teltech, one needs a university diploma and sales experience. But anyone who has worked at Teltech for more than six months who does not have sales experience has a university diploma. Thus, one cannot get an executive position at Teltech unless one has worked there for six months.",
+      "B": "To be elected class president, one must be well liked and well known. Anyone who is well liked or well known has something better to do than run for class president. Therefore, no one who has something better to do will be elected class president.",
+      "C": "To grow good azaleas, one needs soil that is both rich in humus and low in acidity. Anyone who has soil that is rich in humus or low in acidity can grow blueberries. So, anyone who cannot grow blueberries cannot grow good azaleas.",
+      "D": "To drive to Weller, one must take the highway or take Old Mill Road. Anyone who drives to Weller on the highway will miss the beautiful scenery. Thus, one cannot see the beautiful scenery without taking Old Mill Road to Weller.",
+      "E": "To get a discount on ice cream, one must buy frozen raspberries and ice cream together. Anyone who buys ice cream or raspberries will get a coupon for a later purchase. So, anyone who does not get the discount on ice cream will not get a coupon for a later purchase."
+    },
+    "correctAnswer": "C"
+  }
+]```

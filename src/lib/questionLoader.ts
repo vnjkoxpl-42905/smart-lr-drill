@@ -116,6 +116,13 @@ const JSON_FILES = [
   '/data/PT124-S1-LR.json',
   '/data/PT124-S2-LR.json',
   '/data/PT124-S3-LR.json',
+  // Thirteenth batch - PT125
+  '/data/PT125-S2-LR.json',
+  '/data/PT125-S4-LR.json',
+  // Fourteenth batch - PT126
+  '/data/PT126-S1-LR.json',
+  '/data/PT126-S3-LR.json',
+  '/data/PT126-S4-LR.json',
 ];
 
 // Simple hash for qid generation

@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "The editor of a magazine has pointed out several errors of spelling and grammar committed on a recent TV program. But she can hardly be trusted to pass judgment on such matters: similar errors have been found in her own magazine.",
+    "questionStem": "The flawed reasoning in the argument above is most similar to that in which one of the following?",
+    "answerChoices": {
+      "A": "Your newspaper cannot be trusted with the prerogative to criticize the ethics of our company: you misspelled our president's name.",
+      "B": "Your news program cannot be trusted to judge our hiring practices as unfair: you yourselves unfairly discriminate in hiring and promotion decisions.",
+      "C": "Your regulatory agency cannot condemn our product as unsafe: selling it is allowed under an existing-product clause.",
+      "D": "Your coach cannot be trusted to judge our swimming practices: he accepted a lucrative promotional deal from a soft-drink company.",
+      "E": "Your teen magazine should not run this feature on problems afflicting modern high schools: your revenue depends on not alienating the high school audience."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "Soaking dried beans overnight before cooking them reduces cooking time. However, cooking without presoaking yields plumper beans. Therefore, when a bean dish's quality is more important than the need to cook that dish quickly, beans should not be presoaked.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Plumper beans enhance the quality of a dish.",
+      "B": "There are no dishes whose quality improves with faster cooking.",
+      "C": "A dish's appearance is as important as its taste.",
+      "D": "None of the other ingredients in the dish need to be presoaked.",
+      "E": "The plumper the bean, the better it tastes."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Durth: Increasingly, businesses use direct mail advertising instead of paying for advertising space in newspapers, in magazines, or on billboards. This practice is annoying and also immoral. Most direct mail advertisements are thrown out without ever being read, and the paper on which they are printed is wasted. If anyone else wasted this much paper, it would be considered unconscionable.",
+    "questionStem": "Which one of the following most accurately describes Durth's method of reasoning?",
+    "answerChoices": {
+      "A": "presenting a specific counterexample to the contention that direct mail advertising is not immoral",
+      "B": "asserting that there would be very undesirable consequences if direct mail advertising became a more widespread practice than it is now",
+      "C": "claiming that direct mail advertising is immoral because one of its results would be deemed immoral in other contexts",
+      "D": "basing a conclusion on the claim that direct mail advertising is annoying to those who receive it",
+      "E": "asserting that other advertising methods do not have the negative effects of direct mail advertising"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Among the various models of Delta vacuum cleaners, one cannot accurately predict how effectively a particular model cleans simply by determining how powerful its motor is. The efficiency of dust filtration systems varies significantly, even between models of Delta vacuum cleaners equipped with identically powerful motors.",
+    "questionStem": "The argument's conclusion is properly drawn if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "For each Delta vacuum cleaner, the efficiency of its dust filtration system has a significant impact on how effectively it cleans.",
+      "B": "One can accurately infer how powerful a Delta vacuum cleaner's motor is from the efficiency of the vacuum cleaner's dust filtration system.",
+      "C": "All Delta vacuum cleaners that clean equally effectively have identically powerful motors.",
+      "D": "For any two Delta vacuum cleaners with equally efficient dust filtration systems, the one with the more powerful motor cleans more effectively.",
+      "E": "One cannot accurately assess how effectively any Delta vacuum cleaner cleans without knowing how powerful that vacuum cleaner's motor is."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Many scientists believe that bipedal locomotion (walking on two feet) evolved in early hominids in response to the move from life in dense forests to life in open grasslands. Bipedalism would have allowed early hominids to see over tall grasses, helping them to locate food and to detect and avoid predators. However, because bipedalism also would have conferred substantial advantages upon early hominids who never left the forest—in gathering food found within standing reach of the forest floor, for example—debate continues concerning its origins. It may even have evolved, like the upright threat displays of many large apes, because it bettered an individual's odds of finding a mate.",
+    "questionStem": "Which one of the following statements is most supported by the information above?",
+    "answerChoices": {
+      "A": "For early hominids, forest environments were generally more hospitable than grassland environments.",
+      "B": "Bipedal locomotion would have helped early hominids gather food.",
+      "C": "Bipedal locomotion actually would not be advantageous to hominids living in open grassland environments.",
+      "D": "Bipedal locomotion probably evolved among early hominids who exclusively inhabited forest environments.",
+      "E": "For early hominids, gathering food was more relevant to survival than was detecting and avoiding predators."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Mathematics teacher: Teaching students calculus before they attend university may significantly benefit them. Yet if students are taught calculus before they are ready for the level of abstraction involved, they may abandon the study of mathematics altogether. So if we are going to teach pre-university students calculus, we must make sure they can handle the level of abstraction involved.",
+    "questionStem": "Which one of the following principles most helps to justify the mathematics teacher's argument?",
+    "answerChoices": {
+      "A": "Only those who, without losing motivation, can meet the cognitive challenges that new intellectual work involves should be introduced to it.",
+      "B": "Only those parts of university-level mathematics that are the most concrete should be taught to pre-university students.",
+      "C": "Cognitive tasks that require exceptional effort tend to undermine the motivation of those who attempt them.",
+      "D": "Teachers who teach university-level mathematics to pre-university students should be aware that students are likely to learn effectively only when the application of mathematics to concrete problems is shown.",
+      "E": "The level of abstraction involved in a topic should not be considered in determining whether that topic is appropriate for pre-university students."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "In 1955, legislation in a certain country gave the government increased control over industrial workplace safety conditions. Among the high-risk industries in that country, the likelihood that a worker will suffer a serious injury has decreased since 1955. The legislation, therefore, has increased overall worker safety within high-risk industries.",
+    "questionStem": "Which one of the following, if true, most weakens the argument above?",
+    "answerChoices": {
+      "A": "Because of technological innovation, most workplaces in the high-risk industries do not require as much unprotected interaction between workers and heavy machinery as they did in 1955.",
+      "B": "Most of the work-related injuries that occurred before 1955 were the result of worker carelessness.",
+      "C": "The annual number of work-related injuries has increased since the legislation took effect.",
+      "D": "The number of work-related injuries occurring within industries not considered high-risk has increased annually since 1955.",
+      "E": "Workplace safety conditions in all industries have improved steadily since 1955."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Economist: Historically, sunflower seed was one of the largest production crops in Kalotopia, and it continues to be a major source of income for several countries. The renewed growing of sunflowers would provide relief to Kalotopia's farming industry, which is quite unstable. Further, sunflower oil can provide a variety of products, both industrial and consumer, at little cost to Kalotopia's already fragile environment.",
+    "questionStem": "The economist's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Kalotopia's farming industry will deteriorate if sunflowers are not grown there.",
+      "B": "Stabilizing Kalotopia's farming industry would improve the economy without damaging the environment.",
+      "C": "Kalotopia's farming industry would be better off now if it had never ceased to grow any of the crops that historically were large production crops.",
+      "D": "A crop that was once a large production crop in Kalotopia would, if it were grown there again, benefit that country's farmers and general economy.",
+      "E": "Sunflower seed is a better crop for Kalotopia from both the environmental and the economic viewpoints than are most crops that could be grown there."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Several major earthquakes have occurred in a certain region over the last ten years. But a new earthquake prediction method promises to aid local civil defense officials in deciding exactly when to evacuate various towns. Detected before each of these major quakes were certain changes in the electric current in the earth's crust.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "Scientists do not fully understand what brought about the changes in the electric current in the earth's crust that preceded each of the major quakes in the region over the last ten years.",
+      "B": "Most other earthquake prediction methods have been based on a weaker correlation than that found between the changes in the electric current in the earth's crust and the subsequent earthquakes.",
+      "C": "The frequency of major earthquakes in the region has increased over the last ten years.",
+      "D": "There is considerable variation in the length of time between the changes in the electric current and the subsequent earthquakes.",
+      "E": "There is presently only one station in the region that is capable of detecting the electric current in the earth's crust."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Unlike many machines that are perfectly useful in isolation from others, fax machines must work with other fax machines. Thus, in the fax industry, the proliferation of incompatible formats, which resulted from the large number of competing manufacturers, severely limited the usefulness and hence the commercial viability of fax technology until the manufacturers agreed to adopt a common format for their machines.",
+    "questionStem": "The information above provides the most support for which one of the following propositions?",
+    "answerChoices": {
+      "A": "Whenever machines are dependent on other machines of the same type, competition among manufacturers is damaging to the industry.",
+      "B": "In some industries it is in the interest of competitors to cooperate to some extent with one another.",
+      "C": "The more competitors there are in a high-tech industry, the more they will have to cooperate in determining the basic design of their product.",
+      "D": "Some cooperation among manufacturers in the same industry is more beneficial than is pure competition.",
+      "E": "Cooperation is beneficial only in industries whose products depend on other products of the same type."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "In comparing different methods by which a teacher's performance can be evaluated and educational outcomes improved, researchers found that a critique of teacher performance leads to enhanced educational outcomes if the critique is accompanied by the information that teacher performance is merely one of several factors that, in concert with other factors, determines the educational outcomes.",
+    "questionStem": "Which one of the following best illustrates the principle illustrated by the finding of the researchers?",
+    "answerChoices": {
+      "A": "Children can usually be taught to master subject matter in which they have no interest if they believe that successfully mastering it will earn the respect of their peers.",
+      "B": "People are generally more willing to accept a negative characterization of a small group of people if they do not see themselves as members of the group being so characterized.",
+      "C": "An actor can more effectively evaluate the merits of her own performance if she can successfully convince herself that she is really evaluating the performance of another actor.",
+      "D": "The opinions reached by a social scientist in the study of a society can be considered as more reliable and objective if that social scientist is not a member of that society.",
+      "E": "It is easier to correct the mistakes of an athlete if it is made clear to him that the criticism is part of an overarching effort to rectify the shortcomings of the entire team on which he plays."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Critic: A novel cannot be of the highest quality unless most readers become emotionally engaged with the imaginary world it describes. Thus shifts of narrative point of view within a novel, either between first and third person or of some other sort, detract from the merit of the work, since such shifts tend to make most readers focus on the author.",
+    "questionStem": "Which one of the following is an assumption necessary for the critic's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "Most readers become emotionally engaged with the imaginary world described by a novel only if the novel is of the highest quality.",
+      "B": "A novel is generally not considered to be of high quality unless it successfully engages the imagination of most readers.",
+      "C": "Most readers cannot become emotionally involved with a novel's imaginary world if they focus on the author.",
+      "D": "Most readers regard a novel's narrative point of view as representing the perspective of the novel's author.",
+      "E": "Shifts in narrative point of view serve no literary purpose."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "People aged 46 to 55 spend more money per capita than people of any other age group. So it is puzzling that when companies advertise consumer products on television, they focus almost exclusively on people aged 25 and under. Indeed, those who make decisions about television advertising think that the value of a television advertising slot depends entirely on the number of people aged 25 and under who can be expected to be watching at that time.",
+    "questionStem": "Which one of the following, if true, most helps to explain the puzzling facts stated above?",
+    "answerChoices": {
+      "A": "The expense of television advertising slots makes it crucial for companies to target people who are most likely to purchase their products.",
+      "B": "Advertising slots during news programs almost always cost far less than advertising slots during popular sitcoms whose leading characters are young adults.",
+      "C": "When television executives decide which shows to renew, they do so primarily in terms of the shows' ratings among people aged 25 and under.",
+      "D": "Those who make decisions about television advertising believe that people older than 25 almost never change their buying habits.",
+      "E": "When companies advertise consumer products in print media, they focus primarily on people aged 26 and over."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Eighteenth-century moralist: You should never make an effort to acquire expensive new tastes, since they are a drain on your purse and in the course of acquiring them you may expose yourself to sensations that are obnoxious to you. Furthermore, the very effort that must be expended in their acquisition attests their superfluity.",
+    "questionStem": "The moralist's reasoning is most vulnerable to criticism on the grounds that the moralist",
+    "answerChoices": {
+      "A": "draws a conclusion that simply restates a claim presented in support of that conclusion",
+      "B": "takes for granted that the acquisition of expensive tastes will lead to financial irresponsibility",
+      "C": "uses the inherently vague term \"sensations\" without providing a definition of that term",
+      "D": "mistakes a cause of acquisition of expensive tastes for an effect of acquisition of such tastes",
+      "E": "rejects trying to achieve a goal because of the cost of achieving it, without considering the benefits of achieving it"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Must Be True",
+    "questionDifficulty": 5,
+    "stimulus": "Zack's Coffeehouse schedules free poetry readings almost every Wednesday. Zack's offers half-priced coffee all day on every day that a poetry reading is scheduled.",
+    "questionStem": "Which one of the following can be properly inferred from the information above?",
+    "answerChoices": {
+      "A": "Wednesday is the most common day on which Zack's offers half-priced coffee all day.",
+      "B": "Most free poetry readings given at Zack's are scheduled for Wednesdays.",
+      "C": "Free poetry readings are scheduled on almost every day that Zack's offers half-priced coffee all day.",
+      "D": "Zack's offers half-priced coffee all day on most if not all Wednesdays.",
+      "E": "On some Wednesdays Zack's does not offer half-priced coffee all day."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Philosopher: An event is intentional if it is a human action performed on the basis of a specific motivation. An event is random if it is not performed on the basis of a specific motivation and it is not explainable by normal physical processes.",
+    "questionStem": "Which one of the following inferences conforms most closely to the philosopher's position?",
+    "answerChoices": {
+      "A": "Tarik left the keys untouched on the kitchen counter, but he did not do so on the basis of a specific motivation. Therefore, the keys' remaining on the kitchen counter was a random event.",
+      "B": "Ellis tore the envelope open in order to read its contents, but the envelope was empty. Nevertheless, because Ellis acted on the basis of a specific motivation, tearing the envelope open was an intentional event.",
+      "C": "Judith's hailing a cab distracted a driver in the left lane. She performed the action of hailing the cab on the basis of a specific motivation, so the driver's becoming distracted was an intentional event.",
+      "D": "Yasuko continued to breathe regularly throughout the time that she was asleep. This was a human action, but it was not performed on the basis of a specific motivation. Therefore, her breathing was a random event.",
+      "E": "Henry lost his hold on the wrench and dropped it because the handle was slippery. This was a human action and is explainable by normal physical processes, so it was an intentional event."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "It is a mistake to conclude, as some have, that ancient people did not know what moral rights were simply because no known ancient language has an expression correctly translatable as “a moral right.” This would be like saying that a person who discovers a wild fruit tree and returns repeatedly to harvest from it and study it has no idea what the fruit is until naming it or learning its name.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "To know the name of something is to know what that thing is.",
+      "B": "People who first discover what something is know it better than do people who merely know the name of the thing.",
+      "C": "The name or expression that is used to identify something cannot provide any information about the nature of the thing that is identified.",
+      "D": "A person who repeatedly harvests from a wild fruit tree and studies it has some idea of what the fruit is even before knowing a name for the fruit.",
+      "E": "One need not know what something is before one can name it."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "There is little plausibility to the claim that it is absurd to criticize anyone for being critical. Obviously, people must assess one another and not all assessments will be positive. However, there is wisdom behind the injunction against being judgmental. To be judgmental is not merely to assess someone negatively, but to do so prior to a serious effort at understanding.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion drawn in the argument?",
+    "answerChoices": {
+      "A": "To be judgmental is to assess someone negatively prior to making a serious effort at understanding.",
+      "B": "It is absurd to criticize anyone for being critical.",
+      "C": "There is some plausibility to the claim that it is absurd to criticize anyone for being critical.",
+      "D": "Not all assessments people make of one another will be positive.",
+      "E": "There is wisdom behind the injunction against being judgmental."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Even those who believe that the art of each age and culture has its own standards of beauty must admit that some painters are simply superior to others in the execution of their artistic visions. But this superiority must be measured in light of the artist's purposes, since the high merits, for example, of Jose Rey Toledo's work and his extraordinary artistic skills are not in doubt, despite the fact that his paintings do not literally resemble what they represent.",
+    "questionStem": "The claim that some painters are superior to others in the execution of their artistic visions plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "It is a hypothesis that the argument attempts to refute.",
+      "B": "It is a generalization, one sort of objection to which the argument illustrates by giving an example.",
+      "C": "It is a claim that, according to the argument, is to be understood in a manner specified by the conclusion.",
+      "D": "It is a claim that the argument derives from another claim and that it uses to support its conclusion.",
+      "E": "It is a generalization that the argument uses to justify the relevance of the specific example it cites."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "A study of rabbits in the 1940s convinced many biologists that parthenogenesis—reproduction without fertilization of an egg-sometimes occurs in mammals. However, the study's methods have since been shown to be flawed, and no other studies have succeeded in demonstrating mammalian parthenogenesis. Thus, since parthenogenesis is known to occur in a wide variety of nonmammalian vertebrates, there must be something about mammalian chromosomes that precludes the possibility of parthenogenesis.",
+    "questionStem": "A flaw in the reasoning of the argument is that the argument",
+    "answerChoices": {
+      "A": "takes for granted that something that has not been proven to be true is for that reason shown to be false",
+      "B": "infers that a characteristic is shared by all nonmammalian vertebrate species merely because it is shared by some nonmammalian vertebrate species",
+      "C": "rules out an explanation of a phenomenon merely on the grounds that there is another explanation that can account for the phenomenon",
+      "D": "confuses a necessary condition for parthenogenesis with a sufficient condition for it",
+      "E": "assumes that the methods used in a study of one mammalian species were flawed merely because the study's findings cannot be generalized to all other mammalian species"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 5,
+    "stimulus": "Advertiser: Most TV shows depend on funding from advertisers and would be canceled without such funding. However, advertisers will not pay to have their commercials aired during a TV show unless many people watching the show buy the advertised products as a result. So if people generally fail to buy the products advertised during their favorite shows, these shows will soon be canceled. Thus, anyone who feels that a TV show is worth preserving ought to buy the products advertised during that show.",
+    "questionStem": "The advertiser's reasoning most closely conforms to which one of the following principles?",
+    "answerChoices": {
+      "A": "If a TV show that one feels to be worth preserving would be canceled unless one took certain actions, then one ought to take those actions.",
+      "B": "If a TV show would be canceled unless many people took certain actions, then everyone who feels that the show is worth preserving ought to take those actions.",
+      "C": "If a TV show is worth preserving, then everyone should take whatever actions are necessary to prevent that show from being canceled.",
+      "D": "If one feels that a TV show is worth preserving, then one should take at least some actions to reduce the likelihood that the show will be canceled.",
+      "E": "If a TV show would be canceled unless many people took certain actions, then those who feel most strongly that it is worth preserving should take those actions."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Psychologist: It is well known that becoming angry often induces temporary incidents of high blood pressure. A recent study further showed, however, that people who are easily angered are significantly more likely to have permanently high blood pressure than are people who have more tranquil personalities. Coupled with the long-established fact that those with permanently high blood pressure are especially likely to have heart disease, the recent findings indicate that heart disease can result from psychological factors.",
+    "questionStem": "Which one of the following would, if true, most weaken the psychologist's argument?",
+    "answerChoices": {
+      "A": "Those who are easily angered are less likely to recover fully from episodes of heart disease than are other people.",
+      "B": "Medication designed to control high blood pressure can greatly affect the moods of those who use it.",
+      "C": "People with permanently high blood pressure who have tranquil personalities virtually never develop heart disease.",
+      "D": "Those who discover that they have heart disease tend to become more easily frustrated by small difficulties.",
+      "E": "The physiological factors that cause permanently high blood pressure generally make people quick to anger."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "A professor of business placed a case-study assignment for her class on her university's computer network. She later found out that instead of reading the assignment on the computer screen, 50 out of the 70 students printed it out on paper. Thus, it is not the case that books delivered via computer will make printed books obsolete.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Several colleagues of the professor have found that, in their non-business courses, several of their students behave similarly in relation to assignments placed on the computer network.",
+      "B": "Studies consistently show that most computer users will print reading material that is more than a few pages in length rather than read it on the computer screen.",
+      "C": "Some people get impaired vision from long periods of reading printed matter on computer screens, even if they use high quality computer screens.",
+      "D": "Scanning technology is very poor, causing books delivered via computer to be full of errors unless editors carefully read the scanned versions.",
+      "E": "Books on cassette tape have only a small fraction of the sales of printed versions of the same books, though sales of videos of books that have been turned into movies remain strong."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Advertisement: Researchers studied a group of people trying to lose weight and discovered that those in the group who lost the most weight got more calories from protein than from carbohydrates and ate their biggest meal early in the day. So anyone who follows our diet, which provides more calories from protein than from anything else and which requires that breakfast be the biggest meal of the day, is sure to lose weight.",
+    "questionStem": "The reasoning in the advertisement is most vulnerable to criticism on the grounds that the advertisement overlooks the possibility that",
+    "answerChoices": {
+      "A": "eating foods that derive a majority of their calories from carbohydrates tends to make one feel fuller than does eating foods that derive a majority of their calories from protein",
+      "B": "a few of the people in the group studied who lost significant amounts of weight got nearly all of their calories from carbohydrates and ate their biggest meal at night",
+      "C": "the people in the group studied who increased their activity levels lost more weight, on average, than those who did not, regardless of whether they got more calories from protein or from carbohydrates",
+      "D": "some people in the group studied lost no weight yet got more calories from protein than from carbohydrates and ate their biggest meal early in the day",
+      "E": "people who eat their biggest meal at night tend to snack more during the day and so tend to take in more total calories than do people who eat their biggest meal earlier in the day"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT126",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Must Be False",
+    "questionDifficulty": 4,
+    "stimulus": "Some twentieth-century art is great art. All great art involves original ideas, and any art that is not influential cannot be great art.",
+    "questionStem": "Each of the following statements follows logically from the set of statements above except:",
+    "answerChoices": {
+      "A": "Some influential art involves original ideas.",
+      "B": "Some twentieth-century art involves original ideas.",
+      "C": "Only art that involves original ideas is influential.",
+      "D": "Only art that is influential and involves original ideas is great art.",
+      "E": "Some twentieth-century art is influential and involves original ideas."
+    },
+    "correctAnswer": "C"
+  }
+]
