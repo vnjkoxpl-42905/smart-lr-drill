@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Studies have shown that treating certain illnesses with treatment X produces the same beneficial changes in patients' conditions as treating the same illnesses with treatment Y. Furthermore, treatment X is quicker and less expensive than treatment Y. Thus, in treating these illnesses, treatment X should be preferred to treatment Y.",
+    "questionStem": "Which one of the following, if true, would most weaken the argument above?",
+    "answerChoices": {
+      "A": "Unlike treatment Y, treatment X has produced harmful side effects in laboratory animals.",
+      "B": "There are other illnesses for which treatment Y is more effective than treatment X.",
+      "C": "Until recently, treatment X was more expensive than treatment Y.",
+      "D": "Treatment Y is prescribed more often by physicians than treatment X.",
+      "E": "A third treatment, treatment Z, is even quicker and less expensive than treatment X."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Some political thinkers hope to devise a form of government in which every citizen's rights are respected. But such a form of government is impossible. For any government must be defined and controlled by laws that determine its powers and limits; and it is inevitable that some individuals will learn how to interpret these laws to gain a greater share of political power than others have.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "In any form of government that leads to unequal distribution of political power, the rights of the majority of people will be violated.",
+      "B": "A government can ensure that every citizen's rights are respected by keeping the citizens ignorant of the laws.",
+      "C": "Not all the laws that define a government's power and limits can be misinterpreted.",
+      "D": "In any form of government, if anybody gains a greater share of political power than others have, then somebody's rights will be violated.",
+      "E": "People who have more political power than others have tend to use it to acquire an even greater share of political power."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Safety considerations aside, nuclear power plants are not economically feasible. While the cost of fuel for nuclear plants is significantly lower than the cost of conventional fuels, such as coal and oil, nuclear plants are far more expensive to build than are conventional power plants.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Safety regulations can increase the costs of running both conventional and nuclear power plants.",
+      "B": "Conventional power plants spend more time out of service than do nuclear power plants.",
+      "C": "The average life expectancy of a nuclear power plant is shorter than that of a conventional one.",
+      "D": "Nuclear power plants cost less to build today than they cost to build when their technology was newly developed.",
+      "E": "As conventional fuels become scarcer their cost will increase dramatically, which will increase the cost of running a conventional power plant."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Pundit: The average salary for teachers in our society is lower than the average salary for athletes. Obviously, our society values sports more than it values education.",
+    "questionStem": "The reasoning in the pundit's argument is questionable because the argument",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that sports have some educational value",
+      "B": "fails to consider that the total amount of money spent on education may be much greater than the total spent on sports",
+      "C": "fails to consider both that most teachers are not in the classroom during the summer and that most professional athletes do not play all year",
+      "D": "compares teachers' salaries only to those of professional athletes rather than also to the salaries of other professionals",
+      "E": "fails to compare salaries for teachers in the pundit's society to salaries for teachers in other societies"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "The area of mathematics called \"gauge field theory,\" though investigated in the nineteenth century, has only relatively recently been applied to problems in contemporary quantum mechanics. Differential geometry, another area of mathematics, was investigated by Gauss in the early nineteenth century, long before Einstein determined that one of its offspring, tensor analysis, was the appropriate mathematics for exploring general relativity.",
+    "questionStem": "Which one of the following is best illustrated by the examples presented above?",
+    "answerChoices": {
+      "A": "Applications of some new theories or techniques in mathematics are unrecognized until long after the discovery of those theories or techniques.",
+      "B": "Mathematicians are sometimes able to anticipate which branches of their subject will prove useful to future scientists.",
+      "C": "The discoveries of modern physics would not have been possible without major mathematical advances made in the nineteenth century.",
+      "D": "The nineteenth century stands out among other times as a period of great mathematical achievement.",
+      "E": "Mathematics tends to advance more quickly than any of the physical sciences."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Recently discovered bird fossils are about 20 million years older than the fossils of the birdlike dinosaurs from which the birds are generally claimed to have descended. So these newly discovered fossils show, contrary to the account espoused by most paleontologists, that no bird descended from any dinosaur.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "draws a generalization that is broader than is warranted by the findings cited",
+      "B": "rejects the consensus view of experts in the field without providing any counterevidence",
+      "C": "attacks the adherents of the opposing view personally instead of addressing any reason for their view",
+      "D": "fails to consider the possibility that dinosaurs descended from birds",
+      "E": "ignores the possibility that dinosaurs and birds descended from a common ancestor"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Whether one is buying men's or women's clothing, it pays to consider fashion trends. A classic suit may stay in style for as long as five years, so it is worthwhile to pay more to get a well-constructed one. A trendy hat that will go out of style in a year or two should be purchased as cheaply as possible.",
+    "questionStem": "Which one of the following most accurately expresses the principle underlying the reasoning above?",
+    "answerChoices": {
+      "A": "Formal attire tends to be designed and constructed to last longer than casual attire.",
+      "B": "The amount of money one spends on a garment should be roughly proportionate to the length of time one plans to keep wearing it.",
+      "C": "One should not buy a cheaply made garment when a well-constructed garment is available.",
+      "D": "The amount of money one spends on clothing should be roughly the same whether one is purchasing men's or women's attire.",
+      "E": "It is more appropriate to spend money on office attire than on casual attire."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Strengthen/Explain",
+    "questionDifficulty": 1,
+    "stimulus": "Engineers are investigating the suitability of Wantastiquet Pass as the site of a new bridge. Because one concern is whether erosion could eventually weaken the bridge's foundations, they contracted for two reports on erosion in the region. Although both reports are accurate, one claims that the region suffers relatively little erosion, while the other claims that regional erosion is heavy and a cause for concern.",
+    "questionStem": "Which one of the following, if true, most helps to explain how both reports could be accurate?",
+    "answerChoices": {
+      "A": "Neither report presents an extensive chemical analysis of the soil in the region.",
+      "B": "Both reports include computer-enhanced satellite photographs.",
+      "C": "One report was prepared by scientists from a university, while the other report was prepared by scientists from a private consulting firm.",
+      "D": "One report focuses on regional topsoil erosion, while the other report focuses on riverbank erosion resulting from seasonal floods.",
+      "E": "One report cost nearly twice as much to prepare as did the other report."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Letter to the editor: I have never seen such flawed reasoning and distorted evidence as that which you tried to pass off as a balanced study in the article \"Speed Limits, Fatalities, and Public Policy.\" The article states that areas with lower speed limits had lower vehicle-related fatality rates than other areas. However, that will not be true for long, since vehicle-related fatality rates are rising in the areas with lower speed limits. So the evidence actually supports the view that speed limits should be increased.",
+    "questionStem": "The reasoning in the letter writer's argument is flawed because the argument",
+    "answerChoices": {
+      "A": "bases its conclusion on findings from the same article that it is criticizing",
+      "B": "fails to consider the possibility that automobile accidents that occur at high speeds often result in fatalities",
+      "C": "fails to consider the possibility that not everyone wants to drive faster",
+      "D": "fails to consider the possibility that the vehicle-related fatality rates in other areas are also rising",
+      "E": "does not present any claims as evidence against the opposing viewpoint"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Strengthen/Explain",
+    "questionDifficulty": 2,
+    "stimulus": "Human settlement of previously uninhabited areas tends to endanger species of wildlife. However, the Mississippi kite, a bird found on the prairies of North America, flourishes in areas that people have settled. In fact, during the five years since 1985 its population has risen far more rapidly in towns than in rural areas.",
+    "questionStem": "Which one of the following, if true, most helps to explain why the Mississippi kite population does not follow the usual pattern?",
+    "answerChoices": {
+      "A": "Residents of prairie towns have been setting off loud firecrackers near kites' roosting spots because of the birds' habit of diving at people and frightening them.",
+      "B": "Towns on the prairies tend to be small, with a low density of human population and large numbers of wild birds and animals.",
+      "C": "Since the international migratory bird protection treaty of 1972, it has been illegal to shoot kites, and the treaty has been effectively enforced.",
+      "D": "Wildlife such as pigeons and raccoons had already adapted successfully to towns and cities long before there were towns on the North American prairies.",
+      "E": "Trees are denser in towns than elsewhere on the prairie, and these denser trees provide greater protection from hail and windstorms for kites' nests and eggs."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "When a major record label signs a contract with a band, the label assumes considerable financial risk. It pays for videos, album art, management, and promotions. Hence, the band does not need to assume nearly as much risk as it would if it produced its own records independently. For this reason, it is only fair for a major label to take a large portion of the profits from the record sales of any band signed with it.",
+    "questionStem": "Which one of the following most accurately describes the role played in the argument by the claim that a band signed with a major label does not need to assume nearly as much risk as it would if it produced its own records independently?",
+    "answerChoices": {
+      "A": "It is the only conclusion that the argument attempts to establish.",
+      "B": "It is one of two unrelated conclusions, each of which the same premises are used to support.",
+      "C": "It is a general principle from which the argument's conclusion follows as a specific instance.",
+      "D": "It describes a phenomenon for which the rest of the argument offers an explanation.",
+      "E": "Premises are used to support it, and it is used to support the main conclusion."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Commentator: Recently, articles criticizing the environmental movement have been appearing regularly in newspapers. According to Winslow, this is due not so much to an antienvironmental bias among the media as to a preference on the part of newspaper editors for articles that seem \"daring\" in that they seem to challenge prevailing political positions. It is true that editors like to run antienvironmental pieces mainly because they seem to challenge the political orthodoxy. But serious environmentalism is by no means politically orthodox, and antienvironmentalists can hardly claim to be dissidents, however much they may have succeeded in selling themselves as renegades.",
+    "questionStem": "The commentator's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Winslow is correct about the preference of newspaper editors for controversial articles.",
+      "B": "Critics of environmentalism have not successfully promoted themselves as renegades.",
+      "C": "Winslow's explanation is not consonant with the frequency with which critiques of environmentalism are published.",
+      "D": "The position attacked by critics of environmentalism is actually the prevailing political position.",
+      "E": "Serious environmentalism will eventually become a prevailing political position."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Philosopher: Some of the most ardent philosophical opponents of democracy have rightly noted that both the inherently best and the inherently worst possible forms of government are those that concentrate political power in the hands of a few. Thus, since democracy is a consistently mediocre form of government, it is a better choice than rule by the few.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the philosopher's argument?",
+    "answerChoices": {
+      "A": "A society should adopt a democratic form of government if and only if most members of the society prefer a democratic form of government.",
+      "B": "In choosing a form of government, it is better for a society to avoid the inherently worst than to seek to attain the best.",
+      "C": "The best form of government is the one that is most likely to produce an outcome that is on the whole good.",
+      "D": "Democratic governments are not truly equitable unless they are designed to prevent interest groups from exerting undue influence on the political process.",
+      "E": "It is better to choose a form of government on the basis of sound philosophical reasons than on the basis of popular preference."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Must Be True",
+    "questionDifficulty": 5,
+    "stimulus": "Expert: What criteria distinguish addictive substances from nonaddictive ones? Some have suggested that any substance that at least some habitual users can cease to use is nonaddictive. However, if this is taken to be the sole criterion of nonaddictiveness, some substances that most medical experts classify as prime examples of addictive substances would be properly deemed nonaddictive. Any adequate set of criteria for determining a substance's addictiveness must embody the view, held by these medical experts, that a substance is addictive only if withdrawal from its habitual use causes most users extreme psychological and physiological difficulty.",
+    "questionStem": "Which one of the following can be properly inferred from the expert's statements?",
+    "answerChoices": {
+      "A": "If a person experiences extreme psychological and physiological difficulty in ceasing to use a substance habitually, that substance is addictive.",
+      "B": "Fewer substances would be deemed addictive than are deemed so at present if an adequate definition of \"addictive\" were employed.",
+      "C": "A substance that some habitual users can cease to use with little or no psychological or physiological difficulty is addictive only if that is not true for most habitual users.",
+      "D": "A chemical substance habitually used by a person throughout life without significant psychological or physiological difficulty is nonaddictive.",
+      "E": "\"Addiction\" is a term that is impossible to define with precision."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Sociologist: A contention of many of my colleagues—that the large difference between the wages of the highest- and lowest-paid workers will inevitably become a source of social friction is unfounded. Indeed, the high differential should have an opposite effect, for it means that companies will be able to hire freely in response to changing conditions. Social friction arises not from large wage differences, but from wage levels that are static or slow changing.",
+    "questionStem": "Which one of the following is an assumption required by the sociologist's argument?",
+    "answerChoices": {
+      "A": "When companies can hire freely in response to changing conditions, wage levels do not tend to be static or slow changing.",
+      "B": "People who expect their wages to rise react differently than do others to obvious disparities in income.",
+      "C": "A lack of financial caution causes companies to expand their operations.",
+      "D": "A company's ability to respond swiftly to changing conditions always benefits its workers.",
+      "E": "Even relatively well-paid workers may become dissatisfied with their jobs if their wages never change."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Publisher: The new year is approaching, and with it the seasonal demand for books on exercise and fitness. We must do whatever it takes to ship books in that category on time; our competitors have demonstrated a high level of organization, and we cannot afford to be outsold.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion drawn in the publisher's argument?",
+    "answerChoices": {
+      "A": "The company should make shipping books its highest priority.",
+      "B": "By increasing its efficiency, the company can maintain its competitive edge.",
+      "C": "The company will be outsold if it does not maintain its competitors' high level of organization.",
+      "D": "It is imperative that the company ship fitness and exercise books on time.",
+      "E": "The company should do whatever is required in order to adopt its competitors' shipping practices."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Advertiser: There's nothing wrong with a tool that has ten functions until you need a tool that can perform an eleventh function! The VersaTool can perform more functions than any other tool. If you use the VersaTool, therefore, you will need additional tools less often than you would using any other multiple-function tool.",
+    "questionStem": "The reasoning in the advertiser's argument is most vulnerable to criticism on the grounds that the VersaTool might",
+    "answerChoices": {
+      "A": "include some functions that are infrequently or never needed",
+      "B": "include a number of functions that are difficult to perform with any tool",
+      "C": "cost more than the combined cost of two other multiple-function tools that together perform more functions than the VersaTool",
+      "D": "be able to perform fewer often-needed functions than some other multiple-function tool",
+      "E": "not be able to perform individual functions as well as single-function tools"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "The flagellum, which bacteria use to swim, requires many parts before it can propel a bacterium at all. Therefore, an evolutionary ancestor of bacteria that had only a few of these parts would gain no survival advantage from them.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Any of bacteria's evolutionary ancestors that had only a few of the parts of the flagellum would be at a disadvantage relative to similar organisms that had none of these parts.",
+      "B": "For parts now incorporated into the flagellum to have aided an organism's survival, they would have had to help it swim.",
+      "C": "All parts of the flagellum are vital to each of its functions.",
+      "D": "No evolutionary ancestor of bacteria had only a few of the parts of the flagellum.",
+      "E": "Any of bacteria's evolutionary ancestors that lacked a flagellum also lacked the capacity to swim."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Style manual: Archaic spellings and styles of punctuation in direct quotations from older works are to be preserved if they occur infrequently and do not interfere with a reader's comprehension. However, if they occur frequently, the editor may modernize them, inserting a note with an explanation to this effect in the text, or if similar modernizing has been done in more than one quotation, inserting a general statement in the preface. On the other hand, obvious typographical errors in quotations from modern works may be corrected without explanation.",
+    "questionStem": "Which one of the following follows logically from the statements above?",
+    "answerChoices": {
+      "A": "If an editor corrects the spelling of a quoted word and the word occurs only once in the text, then an explanation should appear in a note or in the text.",
+      "B": "An editor may modernize an archaic spelling of a word found in a modern work without providing an explanation.",
+      "C": "An editor should modernize an archaic spelling of a word that is quoted from an older work if the spelling interferes with reader comprehension.",
+      "D": "An editor may modernize punctuation directly quoted from an older work if that punctuation occurs frequently and interferes with reader comprehension.",
+      "E": "If an editor modernizes only one of several similar instances of quoted archaic punctuation, an explanation should appear in the preface of the work."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Whoever murdered Jansen was undoubtedly in Jansen's office on the day of the murder, and both Samantha and Herbert were in Jansen's office on that day. If Herbert had committed the murder, the police would have found either his fingerprints or his footprints at the scene of the crime. But if Samantha was the murderer, she would have avoided leaving behind footprints or fingerprints. The police found fingerprints but no footprints at the scene of the crime. Since the fingerprints were not Herbert's, he is not the murderer. Thus Samantha must be the killer.",
+    "questionStem": "Which one of the following, if assumed, allows the conclusion that Samantha was the killer to be properly inferred?",
+    "answerChoices": {
+      "A": "If there had been footprints at the scene of the crime, the police would have found them.",
+      "B": "Jansen's office was the scene of the crime.",
+      "C": "No one but Herbert and Samantha was in Jansen's office on the day of the murder.",
+      "D": "The fingerprints found at the scene of the crime were not Jansen's.",
+      "E": "The fingerprints found at the scene of the crime were not Samantha's."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Most opera singers who add demanding roles to their repertoires at a young age lose their voices early. It has been said that this is because their voices have not yet matured and hence lack the power for such roles. But young singers with great vocal power are the most likely to ruin their voices. The real problem is that most young singers lack the technical training necessary to avoid straining their vocal cords—especially when using their full vocal strength. Such misuse of the cords inevitably leads to a truncated singing career.",
+    "questionStem": "Which one of the following does the information above most strongly support?",
+    "answerChoices": {
+      "A": "Young opera singers without great vocal power are unlikely to ruin their voices by singing demanding roles.",
+      "B": "Some young opera singers ruin their voices while singing demanding roles because their vocal cords have not yet matured.",
+      "C": "Only opera singers with many years of technical training should try to sing demanding roles.",
+      "D": "Only mature opera singers can sing demanding roles without undue strain on their vocal cords.",
+      "E": "Most young opera singers who sing demanding roles strain their vocal cords."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Food that is very high in fat tends to be unhealthy. These brownies are fat-free, while those cookies contain a high percentage of fat. Therefore, these fat-free brownies are healthier than those cookies are.",
+    "questionStem": "Which one of the following exhibits flawed reasoning most similar to the flawed reasoning exhibited by the argument above?",
+    "answerChoices": {
+      "A": "Canned foods always contain more salt than frozen foods do. Therefore, these canned peas contain more salt than those frozen peas do.",
+      "B": "Vegetables that are overcooked generally have few vitamins. Therefore, these carrots, which are overcooked, contain fewer vitamins than those peas, which are uncooked.",
+      "C": "The human body needs certain amounts of many minerals to remain healthy. Therefore, this distilled water, which has no minerals, is unhealthy.",
+      "D": "Some types of nuts make Roy's throat itch. These cookies contain a greater percentage of nuts than that pie contains. Therefore, these cookies are more likely to make Roy's throat itch.",
+      "E": "Eating at a restaurant costs more than eating food prepared at home. Therefore, this home-cooked meal is less expensive than a restaurant meal of the same dishes would be."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Role",
+    "questionDifficulty": 5,
+    "stimulus": "Ethicist: It would be a mistake to say that just because someone is not inclined to do otherwise, she or he does not deserve to be praised for doing what is right, for although we do consider people especially virtuous if they successfully resist a desire to do what is wrong, they are certainly no less virtuous if they have succeeded in extinguishing all such desires.\nThe assertion that people are considered especially virtuous if they successfully resist a desire to do what is wrong plays which one of the following roles in the ethicist's argument?",
+    "questionStem": "The assertion that people are considered especially virtuous if they successfully resist a desire to do what is wrong plays which one of the following roles in the ethicist's argument?",
+    "answerChoices": {
+      "A": "It is a claim for which the argument attempts to provide justification.",
+      "B": "It makes an observation that, according to the argument, is insufficient to justify the claim that the argument concludes is false.",
+      "C": "It is a claim, acceptance of which, the argument contends, is a primary obstacle to some people's having an adequate conception of virtue.",
+      "D": "It is, according to the argument, a commonly held opinion that is nevertheless false.",
+      "E": "It reports an observation that, according to the argument, serves as evidence for the truth of its conclusion."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Ecologists predict that the incidence of malaria will increase if global warming continues or if the use of pesticides is not expanded. But the use of pesticides is known to contribute to global warming, so it is inevitable that we will see an increase in malaria in the years to come.",
+    "questionStem": "The pattern of reasoning in which one of the following is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "The crime rate will increase if the economy does not improve or if we do not increase the number of police officers. But we will be able to hire more police officers if the economy does improve. Therefore, the crime rate will not increase.",
+      "B": "If educational funds remain at their current level or if we fail to recruit qualified teachers, student performance will worsen. But we will fail to recruit qualified teachers. Therefore, student performance will worsen.",
+      "C": "If interest rates increase or demand for consumer goods does not decline, inflation will rise. But if there is a decline in the demand for consumer goods, that will lead to higher interest rates. Therefore, inflation will rise.",
+      "D": "If global warming continues or if the rate of ozone depletion is not reduced, there will be an increase in the incidence of skin cancer. But reduced use of aerosols ensures both that global warming will not continue and that ozone depletion will be reduced. Thus, the incidence of skin cancer will not increase.",
+      "E": "If deforestation continues at the current rate and the use of chemicals is not curtailed, wildlife species will continue to become extinct. But because of increasing population worldwide, it is inevitable that the current rate of deforestation will continue and that the use of chemicals will not be curtailed. Thus, wildlife species will continue to become extinct."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "In ancient Greece, court witnesses were not cross-examined and the jury, selected from the citizenry, received no guidance on points of law; thus, it was extremely important for litigants to make a good impression on the jurors. For this reason, courtroom oratory by litigants is a good source of data on the common conceptions of morality held by the citizens of ancient Greece.",
+    "questionStem": "Which one of the following, if true, would most strengthen the argument?",
+    "answerChoices": {
+      "A": "Litigants believed jurors were more likely to be impressed by litigants whose personality they preferred.",
+      "B": "Litigants believed jurors were more likely to subject the litigants' personal moral codes to close critical scrutiny than were people who did not sit on juries.",
+      "C": "Litigants believed jurors were likely to be impressed by litigants whose professed moral code most resembled their own.",
+      "D": "Litigants believed jurors to be more impressed by litigants who were of the same economic class as the jurors.",
+      "E": "Litigants believed jurors were likely to render their decisions based on a good understanding of the law."
+    },
+    "correctAnswer": "C"
+  }
+]

@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Backyard gardeners who want to increase the yields of their potato plants should try growing stinging nettles alongside the plants, since stinging nettles attract insects that kill a wide array of insect pests that damage potato plants. It is true that stinging nettles also attract aphids, and that many species of aphids are harmful to potato plants, but that fact in no way contradicts this recommendation, because",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "stinging nettles require little care and thus are easy to cultivate",
+      "B": "some types of aphids are attracted to stinging nettle plants but do not damage them",
+      "C": "the types of aphids that stinging nettles attract do not damage potato plants",
+      "D": "insect pests typically cause less damage to potato plants than other harmful organisms do",
+      "E": "most aphid species that are harmful to potato plants cause greater harm to other edible food plants"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "Jocko, a chimpanzee, was once given a large bunch of bananas by a zookeeper after the more dominant members of the chimpanzee's troop had wandered off. In his excitement, Jocko uttered some loud \"food barks.\" The other chimpanzees returned and took the bananas away. The next day, Jocko was again found alone and was given a single banana. This time, however, he kept silent. The zookeeper concluded that Jocko's silence was a stratagem to keep the other chimpanzees from his food.",
+    "questionStem": "Which one of the following, if true, most seriously calls into question the zookeeper's conclusion?",
+    "answerChoices": {
+      "A": "Chimpanzees utter food barks only when their favorite foods are available.",
+      "B": "Chimpanzees utter food barks only when they encounter a sizable quantity of food.",
+      "C": "Chimpanzees frequently take food from other chimpanzees merely to assert dominance.",
+      "D": "Even when they are alone, chimpanzees often make noises that appear to be signals to other chimpanzees.",
+      "E": "Bananas are a food for which all of the chimpanzees at the zoo show a decided preference."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "A recent survey quizzed journalism students about the sorts of stories they themselves wished to read. A significant majority said they wanted to see stories dealing with serious governmental and political issues and had little tolerance for the present popularity of stories covering lifestyle trends and celebrity gossip. This indicates that today's trends in publishing are based on false assumptions about the interests of the public.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the argument's reasoning?",
+    "answerChoices": {
+      "A": "It takes what is more likely to be the effect of a phenomenon to be its cause.",
+      "B": "It regards the production of an effect as incontrovertible evidence of an intention to produce that effect.",
+      "C": "It relies on the opinions of a group unlikely to be representative of the group at issue in the conclusion.",
+      "D": "It employs language that unfairly represents those who are likely to reject the argument's conclusion.",
+      "E": "It treats a hypothesis as fact even though it is admittedly unsupported."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Electric bug zappers, which work by attracting insects to light, are a very effective means of ridding an area of flying insects. Despite this, most pest control experts now advise against their use, recommending instead such remedies as insect-eating birds or insecticide sprays.",
+    "questionStem": "Which one of the following, if true, most helps to account for the pest control experts' recommendation?",
+    "answerChoices": {
+      "A": "Insect-eating birds will take up residence in any insect-rich area if they are provided with nesting boxes, food, and water.",
+      "B": "Bug zappers are less effective against mosquitoes, which are among the more harmful insects, than they are against other harmful insects.",
+      "C": "Bug zappers use more electricity but provide less light than do most standard outdoor light sources.",
+      "D": "Bug zappers kill many more beneficial insects and fewer harmful insects than do insect-eating birds and insecticide sprays.",
+      "E": "Developers of certain new insecticide sprays claim that their products contain no chemicals that are harmful to humans, birds, or pets."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "Gardener: The design of Japanese gardens should display harmony with nature. Hence, rocks chosen for placement in such gardens should vary widely in appearance, since rocks found in nature also vary widely in appearance.",
+    "questionStem": "The gardener's argument depends on assuming which one of the following?",
+    "answerChoices": {
+      "A": "The selection of rocks for placement in a Japanese garden should reflect every key value embodied in the design of Japanese gardens.",
+      "B": "In the selection of rocks for Japanese gardens, imitation of nature helps to achieve harmony with nature.",
+      "C": "The only criterion for selecting rocks for placement in a Japanese garden is the expression of harmony with nature.",
+      "D": "Expressing harmony with nature and being natural are the same thing.",
+      "E": "Each component of a genuine Japanese garden is varied."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Small experimental vacuum tubes can operate in heat that makes semiconductor components fail. Any component whose resistance to heat is greater than that of semiconductors would be preferable for use in digital circuits, but only if that component were also comparable to semiconductors in all other significant respects, such as maximum current capacity. However, vacuum tubes' maximum current capacity is presently not comparable to that of semiconductors.",
+    "questionStem": "If the statements above are true, which one of the following must also be true?",
+    "answerChoices": {
+      "A": "Vacuum tubes are not now preferable to semiconductors for use in digital circuits.",
+      "B": "Once vacuum tubes and semiconductors have comparable maximum current capacity, vacuum tubes will be used in some digital circuits.",
+      "C": "The only reason that vacuum tubes are not now used in digital circuits is that vacuum tubes' maximum current capacity is too low.",
+      "D": "Semiconductors will always be preferable to vacuum tubes for use in many applications other than digital circuits.",
+      "E": "Resistance to heat is the only advantage that vacuum tubes have over semiconductors."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Weaken EXCEPT",
+    "questionDifficulty": 3,
+    "stimulus": "The cause of the epidemic that devastated Athens in 430 B.C. can finally be identified. Accounts of the epidemic mention the hiccups experienced by many victims, a symptom of no known disease except that caused by the recently discovered Ebola virus. Moreover, other symptoms of the disease caused by the Ebola virus are mentioned in the accounts of the Athenian epidemic.",
+    "questionStem": "Each of the following, if true, weakens the argument except:",
+    "answerChoices": {
+      "A": "Victims of the Ebola virus experience many symptoms that do not appear in any of the accounts of the Athenian epidemic.",
+      "B": "Not all of those who are victims of the Ebola virus are afflicted with hiccups.",
+      "C": "The Ebola virus's host animals did not live in Athens at the time of the Athenian epidemic.",
+      "D": "The Ebola virus is much more contagious than the disease that caused the Athenian epidemic was reported to have been.",
+      "E": "The epidemics known to have been caused by the Ebola virus are usually shorter-lived than was the Athenian epidemic."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "Letter to the editor: Your article was unjustified in criticizing environmentalists for claiming that more wolves on Vancouver Island are killed by hunters than are born each year. You stated that this claim was disproven by recent studies that indicate that the total number of wolves on Vancouver Island has remained roughly constant for 20 years. But you failed to account for the fact that, fearing the extinction of this wolf population, environmentalists have been introducing new wolves into the Vancouver Island wolf population for 20 years.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the argument in the letter to the editor?",
+    "answerChoices": {
+      "A": "Environmentalists have been successfully maintaining the wolf population on Vancouver Island for 20 years.",
+      "B": "As many wolves on Vancouver Island are killed by hunters as are born each year.",
+      "C": "The population of wolves on Vancouver Island should be maintained by either reducing the number killed by hunters each year or introducing new wolves into the population.",
+      "D": "The recent studies indicating that the total number of wolves on Vancouver Island has remained roughly constant for 20 years were flawed.",
+      "E": "The stability in the size of the Vancouver Island wolf population does not warrant the article's criticism of the environmentalists' claim."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "Computer scientist: For several decades, the number of transistors on new computer microchips, and hence the microchips' computing speed, has doubled about every 18 months. However, from the mid-1990s into the next decade, each such doubling in a microchip's computing speed was accompanied by a doubling in the cost of producing that microchip.",
+    "questionStem": "Which one of the following can be properly inferred from the computer scientist's statements?",
+    "answerChoices": {
+      "A": "The only effective way to double the computing speed of computer microchips is to increase the number of transistors per microchip.",
+      "B": "From the mid-1990s into the next decade, there was little if any increase in the retail cost of computers as a result of the increased number of transistors on microchips.",
+      "C": "For the last several decades, computer engineers have focused on increasing the computing speed of computer microchips without making any attempt to control the cost of producing them.",
+      "D": "From the mid-1990s into the next decade, a doubling in the cost of fabricating new computer microchips accompanied each doubling in the number of transistors on those microchips.",
+      "E": "It is unlikely that engineers will ever be able to increase the computing speed of microchips without also increasing the cost of producing them."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Ms. Sandstrom's newspaper column describing a strange natural phenomenon on the Mendels' farm led many people to trespass on and extensively damage their property. Thus, Ms. Sandstrom should pay for this damage if, as the Mendels claim, she could have reasonably expected that the column would lead people to damage the Mendels' farm.",
+    "questionStem": "The argument's conclusion can be properly inferred if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "One should pay for any damage that one's action leads other people to cause if one could have reasonably expected that the action would lead other people to cause damage.",
+      "B": "One should pay for damage that one's action leads other people to cause only if, prior to the action, one expected that the action would lead other people to cause that damage.",
+      "C": "It is unlikely that the people who trespassed on and caused the damage to the Mendels' property would themselves pay for the damage they caused.",
+      "D": "Ms. Sandstrom knew that her column could incite trespassing that could result in damage to the Mendels' farm.",
+      "E": "The Mendels believe that Ms. Sandstrom is able to form reasonable expectations about the consequences of her actions."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Meyer was found by his employer to have committed scientific fraud by falsifying data. The University of Williamstown, from which Meyer held a PhD, validated this finding and subsequently investigated whether he had falsified data in his doctoral thesis, finding no evidence that he had. But the university decided to revoke Meyer's PhD anyway.",
+    "questionStem": "Which one of the following university policies most justifies the decision to revoke Meyer's PhD?",
+    "answerChoices": {
+      "A": "Anyone who holds a PhD from the University of Williamstown and is found to have committed academic fraud in the course of pursuing that PhD will have the PhD revoked.",
+      "B": "No PhD program at the University of Williamstown will admit any applicant who has been determined to have committed any sort of academic fraud.",
+      "C": "Any University of Williamstown student who is found to have submitted falsified data as academic work will be dismissed from the university.",
+      "D": "Anyone who holds a PhD from the University of Williamstown and is found to have committed scientific fraud will have the PhD revoked.",
+      "E": "The University of Williamstown will not hire anyone who is under investigation for scientific fraud."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Aerobics instructor: Compared to many forms of exercise, kickboxing aerobics is highly risky. Overextending when kicking often leads to hip, knee, or lower-back injuries. Such overextension is very likely to occur when beginners try to match the high kicks of more skilled practitioners.",
+    "questionStem": "Which one of the following is most strongly supported by the aerobics instructor's statements?",
+    "answerChoices": {
+      "A": "Skilled practitioners of kickboxing aerobics are unlikely to experience injuries from overextending while kicking.",
+      "B": "To reduce the risk of injuries, beginners at kickboxing aerobics should avoid trying to match the high kicks of more skilled practitioners.",
+      "C": "Beginners at kickboxing aerobics will not experience injuries if they avoid trying to match the high kicks of more skilled practitioners.",
+      "D": "Kickboxing aerobics is more risky than forms of aerobic exercise that do not involve high kicks.",
+      "E": "Most beginners at kickboxing aerobics experience injuries from trying to match the high kicks of more skilled practitioners."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "A large company has been convicted of engaging in monopolistic practices. The penalty imposed on the company will probably have little if any effect on its behavior. Still, the trial was worthwhile, since it provided useful information about the company's practices. After all, this information has emboldened the company's direct competitors, alerted potential rivals, and forced the company to restrain its unfair behavior toward customers and competitors.",
+    "questionStem": "Which one of the following most accurately expresses the overall conclusion drawn in the argument?",
+    "answerChoices": {
+      "A": "Even if the company had not been convicted of engaging in monopolistic practices, the trial probably would have had some effect on the company's behavior.",
+      "B": "The light shed on the company's practices by the trial has emboldened its competitors, alerted potential rivals, and forced the company to restrain its unfair behavior.",
+      "C": "The penalty imposed on the company will likely have little or no effect on its behavior.",
+      "D": "The company's trial on charges of engaging in monopolistic practices was worthwhile.",
+      "E": "The penalty imposed on the company in the trial should have been larger."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 5,
+    "stimulus": "Waller: If there were really such a thing as extrasensory perception, it would generally be accepted by the public since anyone with extrasensory powers would be able to convince the general public of its existence by clearly demonstrating those powers. Indeed, anyone who was recognized to have such powers would achieve wealth and renown.\nChin: It's impossible to demonstrate anything to the satisfaction of all skeptics. So long as the cultural elite remains closed-minded to the possibility of extrasensory perception, the popular media reports, and thus public opinion, will always be biased in favor of such skeptics.",
+    "questionStem": "Waller's and Chin's statements commit them to disagreeing on whether",
+    "answerChoices": {
+      "A": "extrasensory perception is a real phenomenon",
+      "B": "extrasensory perception, if it were a real phenomenon, could be demonstrated to the satisfaction of all skeptics",
+      "C": "skeptics about extrasensory perception have a weak case",
+      "D": "the failure of the general public to believe in extrasensory perception is good evidence against its existence",
+      "E": "the general public believes that extrasensory perception is a real phenomenon"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Counselor: Hagerle sincerely apologized to the physician for lying to her. So Hagerle owes me a sincere apology as well, because Hagerle told the same lie to both of us.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the counselor's reasoning?",
+    "answerChoices": {
+      "A": "It is good to apologize for having done something wrong to a person if one is capable of doing so sincerely.",
+      "B": "If someone tells the same lie to two different people, then neither of those lied to is owed an apology unless both are.",
+      "C": "Someone is owed a sincere apology for having been lied to by a person if someone else has already received a sincere apology for the same lie from that same person.",
+      "D": "If one is capable of sincerely apologizing to someone for lying to them, then one owes that person such an apology.",
+      "E": "A person should not apologize to someone for telling a lie unless he or she can sincerely apologize to all others to whom the lie was told"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "A survey of address changes filed with post offices and driver's license bureaus over the last ten years has established that households moving out of the city of Weston outnumbered households moving into the city two to one. Therefore, we can expect that next year's census, which counts all residents regardless of age, will show that the population of Weston has declined since the last census ten years ago.",
+    "questionStem": "Which one of the following, if true, most helps strengthen the argument?",
+    "answerChoices": {
+      "A": "Within the past decade many people both moved into the city and also moved out of it.",
+      "B": "Over the past century any census of Weston showing a population loss was followed ten years later by a census showing a population gain.",
+      "C": "Many people moving into Weston failed to notify either the post office or the driver's license bureau that they had moved to the city.",
+      "D": "Most adults moving out of Weston were parents who had children living with them, whereas most adults remaining in or moving into the city were older people who lived alone.",
+      "E": "Most people moving out of Weston were young adults who were hoping to begin a career elsewhere, whereas most adults remaining in or moving into the city had long-standing jobs in the city."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Method of Reasoning",
+    "questionDifficulty": 2,
+    "stimulus": "Psychologist: People tend to make certain cognitive errors when they predict how a given event would affect their future happiness. But people should not necessarily try to rid themselves of this tendency. After all, in a visual context, lines that are actually parallel often appear to people as if they converge. If a surgeon offered to restructure your eyes and visual cortex so that parallel lines would no longer ever appear to converge, it would not be reasonable to take the surgeon up on the offer.",
+    "questionStem": "The psychologist's argument does which one of the following?",
+    "answerChoices": {
+      "A": "attempts to refute a claim that a particular event is inevitable by establishing the possibility of an alternative event",
+      "B": "attempts to undermine a theory by calling into question an assumption on which the theory is based",
+      "C": "argues that an action might not be appropriate by suggesting that a corresponding action in an analogous situation is not appropriate",
+      "D": "argues that two situations are similar by establishing that the same action would be reasonable in each situation",
+      "E": "attempts to establish a generalization and then uses that generalization to argue against a particular action"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Principle: Even if an art auction house identifies the descriptions in its catalog as opinions, it is guilty of misrepresentation if such a description is a deliberate attempt to mislead bidders.\nApplication: Although Healy's, an art auction house, states that all descriptions in its catalog are opinions, Healy's was guilty of misrepresentation when its catalog described a vase as dating from the mid-eighteenth century when it was actually a modern reproduction.",
+    "questionStem": "Which one of the following, if true, most justifies the above application of the principle?",
+    "answerChoices": {
+      "A": "An authentic work of art from the mid-eighteenth century will usually sell for at least ten times more than a modern reproduction of a similar work from that period.",
+      "B": "Although pottery that is similar to the vase is currently extremely popular among art collectors, none of the collectors who are knowledgeable about such pottery were willing to bid on the vase.",
+      "C": "The stated policy of Healy's is to describe works in its catalogs only in terms of their readily perceptible qualities and not to include any information about their age.",
+      "D": "Some Healy's staff members believe that the auction house's catalog should not contain any descriptions that have not been certified to be true by independent experts.",
+      "E": "Without consulting anyone with expertise in authenticating vases, Healy's described the vase as dating from the mid-eighteenth century merely in order to increase its auction price."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Anthropologist: It was formerly believed that prehistoric Homo sapiens ancestors of contemporary humans interbred with Neanderthals, but DNA testing of a Neanderthal's remains indicates that this is not the case. The DNA of contemporary humans is significantly different from that of the Neanderthal.",
+    "questionStem": "Which one of the following is an assumption required by the anthropologist's argument?",
+    "answerChoices": {
+      "A": "At least some Neanderthals lived at the same time and in the same places as prehistoric Homo sapiens ancestors of contemporary humans.",
+      "B": "DNA testing of remains is significantly less reliable than DNA testing of samples from living species.",
+      "C": "The DNA of prehistoric Homo sapiens ancestors of contemporary humans was not significantly more similar to that of Neanderthals than is the DNA of contemporary humans.",
+      "D": "Neanderthals and prehistoric Homo sapiens ancestors of contemporary humans were completely isolated from each other geographically.",
+      "E": "Any similarity in the DNA of two species must be the result of interbreeding."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "Council member: The profits of downtown businesses will increase if more consumers live in the downtown area, and a decrease in the cost of living in the downtown area will guarantee that the number of consumers living there will increase. However, the profits of downtown businesses will not increase unless downtown traffic congestion decreases.",
+    "questionStem": "If all the council member's statements are true, which one of the following must be true?",
+    "answerChoices": {
+      "A": "If downtown traffic congestion decreases, the number of consumers living in the downtown area will increase.",
+      "B": "If the cost of living in the downtown area decreases, the profits of downtown businesses will increase.",
+      "C": "If downtown traffic congestion decreases, the cost of living in the downtown area will increase.",
+      "D": "If downtown traffic congestion decreases, the cost of living in the downtown area will decrease.",
+      "E": "If the profits of downtown businesses increase, the number of consumers living in the downtown area will increase"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "On the Discount Phoneline, any domestic long-distance call starting between 9 A.M. and 5 P.M. costs 15 cents a minute, and any other domestic long-distance call costs 10 cents a minute. So any domestic long-distance call on the Discount Phoneline that does not cost 10 cents a minute costs 15 cents a minute.",
+    "questionStem": "The pattern of reasoning in which one of the following arguments is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "If a university class involves extensive lab work, the class will be conducted in a laboratory; otherwise, it will be conducted in a normal classroom. Thus, if a university class does not involve extensive lab work, it will not be conducted in a laboratory.",
+      "B": "If a university class involves extensive lab work, the class will be conducted in a laboratory; otherwise, it will be conducted in a normal classroom. Thus, if a university class is not conducted in a normal classroom, it will involve extensive lab work.",
+      "C": "If a university class involves extensive lab work, the class will be conducted in a laboratory; otherwise, it will be conducted in a normal classroom. Thus, if a university class is conducted in a normal classroom, it will not be conducted in a laboratory.",
+      "D": "If a university class involves extensive lab work, the class will be conducted in a laboratory; otherwise, it will be conducted in a normal classroom. Thus, if a university class involves extensive lab work, it will not be conducted in a normal classroom.",
+      "E": "If a university class involves extensive lab work, the class will be conducted in a laboratory; otherwise, it will be conducted in a normal classroom. Thus, if a university class is not conducted in a normal classroom, it will be conducted in a laboratory."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 3,
+    "stimulus": "One child pushed another child from behind, injuring the second child. The first child clearly understands the difference between right and wrong, so what was done was wrong if it was intended to injure the second child.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the reasoning in the argument?",
+    "answerChoices": {
+      "A": "An action that is intended to harm another person is wrong only if the person who performed the action understands the difference between right and wrong.",
+      "B": "It is wrong for a person who understands the difference between right and wrong to intentionally harm another person.",
+      "C": "Any act that is wrong is done with the intention of causing harm.",
+      "D": "An act that harms another person is wrong if the person who did it understands the difference between right and wrong and did not think about whether the act would injure the other person.",
+      "E": "A person who does not understand the difference between right and wrong does not bear any responsibility for harming another person."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Researcher: Each subject in this experiment owns one car, and was asked to estimate what proportion of all automobiles registered in the nation are the same make as the subject's car. The estimate of nearly every subject has been significantly higher than the actual national statistic for the make of that subject's car. I hypothesize that certain makes of car are more common in some regions of the nation than in other regions; obviously, that would lead many people to overestimate how common their make of car is nationally. That is precisely the result found in this experiment, so certain makes of car must indeed be more common in some areas of the nation than in others.",
+    "questionStem": "Which one of the following most accurately expresses a reasoning flaw in the researcher's argument?",
+    "answerChoices": {
+      "A": "The argument fails to estimate the likelihood that most subjects in the experiment did not know the actual statistics about how common their make of car is nationwide.",
+      "B": "The argument treats a result that supports a hypothesis as a result that proves a hypothesis.",
+      "C": "The argument fails to take into account the possibility that the subject pool may come from a wide variety of geographical regions.",
+      "D": "The argument attempts to draw its main conclusion from a set of premises that are mutually contradictory.",
+      "E": "The argument applies a statistical generalization to a particular case to which it was not intended to apply."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "In university towns, police issue far more parking citations during the school year than they do during the times when the students are out of town. Therefore, we know that most parking citations in university towns are issued to students.",
+    "questionStem": "Which one of the following is most similar in its flawed reasoning to the flawed reasoning in the argument above?",
+    "answerChoices": {
+      "A": "We know that children buy most of the snacks at cinemas, because popcorn sales increase as the proportion of child moviegoers to adult moviegoers increases.",
+      "B": "We know that this houseplant gets more of the sunlight from the window, because it is greener than that houseplant.",
+      "C": "We know that most people who go to a university are studious because most of those people study while they attend the university.",
+      "D": "We know that consumers buy more fruit during the summer than they buy during the winter, because there are far more varieties of fruit available in the summer than in the winter.",
+      "E": "We know that most of the snacks parents buy go to other people's children, because when other people's children come to visit, parents give out more snacks than usual."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Counselor: Those who believe that criticism should be gentle rather than harsh should consider the following: change requires a motive, and criticism that is unpleasant provides a motive. Since harsh criticism is unpleasant, harsh criticism provides a motive. Therefore, only harsh criticism will cause the person criticized to change.",
+    "questionStem": "The reasoning in the counselor's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "infers that something that is sufficient to provide a motive is necessary to provide a motive",
+      "B": "fails to address the possibility that in some cases the primary goal of criticism is something other than bringing about change in the person being criticized",
+      "C": "takes for granted that everyone who is motivated to change will change",
+      "D": "confuses a motive for doing something with a motive for avoiding something",
+      "E": "takes the refutation of an argument to be sufficient to show that the argument's conclusion is false"
+    },
+    "correctAnswer": "A"
+  }
+]

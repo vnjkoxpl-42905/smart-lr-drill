@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Sometimes it is advisable for a medical patient to seek a second opinion. But this process can be awkward for both the patient and the physicians, since the patient often worries that the first physician will be alienated. In addition, for the first physician there is the issue of pride: a second opinion tacitly highlights a physician's fallibility. And the second physician is in the position of evaluating not only a patient's health, but also, inevitably and uncomfortably, a colleague's work.",
+    "questionStem": "Which one of the following most accurately states the conclusion of the argument as a whole?",
+    "answerChoices": {
+      "A": "Because of the awkwardness involved, it is best for patients not to seek second opinions unless it is absolutely necessary.",
+      "B": "In cases in which second opinions are necessary, the first physician often feels that his or her professional judgment is called into question.",
+      "C": "The process of obtaining a second medical opinion can be awkward for those involved.",
+      "D": "Physicians who are called upon to offer second opinions are always uncomfortable about evaluating the work of colleagues.",
+      "E": "In many cases in which medical patients seek second opinions, they are concerned about offending the first physician."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "There are 70 to 100 Florida panthers alive today. This represents a very large increase over their numbers in the 1970s, but their population must reach at least 250 if it is to be self-sustaining. Their current habitat is not large enough to support any more of these animals, however.",
+    "questionStem": "If the statements above are true, which one of the following must also be true?",
+    "answerChoices": {
+      "A": "Some part of the panthers' current habitat is only of marginal quality.",
+      "B": "If the population of Florida panthers ever exceeds 250, it will be self-sustaining.",
+      "C": "Unless Florida panthers acquire a larger habitat, their population will not be self-sustaining.",
+      "D": "The population of Florida panthers will never increase much beyond its current level.",
+      "E": "Today, Florida panthers occupy a larger habitat than they did in the 1970s."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Method of Reasoning",
+    "questionDifficulty": 1,
+    "stimulus": "Political scientist: Efforts to create a more egalitarian society are often wrongly criticized on the grounds that total equality would necessarily force everyone into a common mold. Equality is presumed by such critics to require unacceptably bland uniformity. But this is not so. By promoting complementary human interests, a society can achieve a greater and more prosperous equality while enhancing rather than minimizing diversity.",
+    "questionStem": "The political scientist's argument proceeds by",
+    "answerChoices": {
+      "A": "undermining a view by showing that its general acceptance would lead to undesirable consequences",
+      "B": "rebutting an objection by attacking the assumption on which it is said to be based",
+      "C": "attacking a view by claiming that those who propose it are motivated only by self-interest",
+      "D": "claiming that whatever is true of a group must be true of each of the members of the group",
+      "E": "undermining an apparent counterexample to a universal claim"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Weaken/Counter",
+    "questionDifficulty": 2,
+    "stimulus": "Physician: In an experiment, 50 patients with chronic back pain were divided into two groups. Small magnets were applied to the backs of one group; the other group received no treatment. Most of the patients in the first group, but very few in the second group, reported a significant reduction in pain. This shows that magnetic fields are probably effective at relieving some back pain.",
+    "questionStem": "Which one of the following, if true, constitutes the logically strongest counter to the physician's argument?",
+    "answerChoices": {
+      "A": "A patient's merely knowing that a treatment has been applied can lead to improvement in his or her condition.",
+      "B": "Most physicians believe that medication relieves chronic back pain more effectively than magnets do.",
+      "C": "No other experiments have been done showing that magnetic fields reduce pain in any area other than the back.",
+      "D": "Some of the scientists who helped design the experiment believed even before the experiment that magnetic fields relieve back pain, but they were not directly involved in conducting the experiment.",
+      "E": "There was wide variation in the specific causes of the chronic back pain suffered by the patients in the experiment."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Kennel club members who frequently discipline their dogs report a higher incidence of misbehavior than do members who rarely or never discipline their dogs. We can conclude from this that discipline does not improve dogs' behavior; on the contrary, it encourages misbehavior.",
+    "questionStem": "The argument is flawed in that it fails to consider the possibility that",
+    "answerChoices": {
+      "A": "dogs' misbehavior is the cause of, rather than the result of, frequent discipline",
+      "B": "dogs learn from past experience how their owners are likely to react to misbehavior",
+      "C": "discipline does not cause misbehavior on the part of animals other than dogs",
+      "D": "kennel club members tend to be more skilled at raising dogs than are other dog owners",
+      "E": "kennel club members are more likely to use discipline than are other dog owners"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "The number of tornadoes recorded annually in North America has more than tripled since 1953. Yet meteorologists insist that the climatic factors affecting the creation of tornadoes are unchanged.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+    "answerChoices": {
+      "A": "The factors affecting the creation of tornadoes were not well known to meteorologists before 1953.",
+      "B": "The intensity of the average tornado is greater now than it was in 1953.",
+      "C": "The number of tornadoes recorded annually has increased only slightly in the last five years.",
+      "D": "The amount of property damage done by tornadoes has grown substantially since 1953.",
+      "E": "Many more citizens are helping authorities detect tornadoes now than in 1953."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Recently, a report commissioned by a confectioners trade association noted that chocolate, formerly considered a health scourge, is an effective antioxidant and so has health benefits. Another earlier claim was that oily foods clog arteries, leading to heart disease, yet reports now state that olive oil has a positive influence on the circulatory system. From these examples, it is clear that if you wait long enough, almost any food will be reported to be healthful.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "relies on the truth of a claim by a source that is likely to be biased",
+      "B": "applies a general rule to specific cases to which it does not pertain",
+      "C": "bases an overly broad generalization on just a few instances",
+      "D": "takes for granted that all results of nutritional research are eventually reported",
+      "E": "fails to consider that there are many foods that are reported to be unhealthful"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "According to the \"bottom-up\" theory of how ecosystems are structured, the availability of edible plants is what primarily determines an ecosystem's characteristics since it determines how many herbivores the ecosystem can support, which in turn determines how many predators it can support. This theory also holds that a reduction in the number of predators will have little impact on the rest of the ecosystem.",
+    "questionStem": "Which one of the following, if true, would provide evidence against the bottom-up theory?",
+    "answerChoices": {
+      "A": "In an effort to build up the population of a rare species of monkey on Vahique Island, monkeys were bred in zoos and released into the wild. However, the effort failed because the trees on which the monkeys fed were also nearly extinct.",
+      "B": "After hunting virtually eliminated predators on Rigu Island, the population of many herbivore species increased more than tenfold, causing the density of plants to be dramatically reduced.",
+      "C": "After many of the trees on Jaevix Island were cleared, the island's leaf-cutter ants, which require a forested ecosystem, experienced a substantial decrease in population, as did the island's anteaters.",
+      "D": "After a new species of fern was introduced to Lisdok Island, native ferns were almost eliminated. However, this did not affect the population of the herbivores that had eaten the native ferns, since they also thrived on a diet of the new fern.",
+      "E": "Plants that are a dietary staple of wild pigs on Sedif Island have flourished over the last three decades, and the population of the pigs has not changed much in spite of extensive hunting."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "If a child is to develop healthy bones, the child's diet must include sufficient calcium. It therefore follows that the diets of children who do not develop healthy bones do not include sufficient calcium.",
+    "questionStem": "Flawed reasoning in which one of the following most closely parallels the flawed reasoning in the argument above?",
+    "answerChoices": {
+      "A": "If bread is to have a firm crust, it must be baked at the right temperature. It therefore follows that bread that is not baked at the right temperature will not have a firm crust.",
+      "B": "A cake must contain the right amount of flour in order to taste good. It therefore follows that cakes that do not taste good do not contain the right amount of flour.",
+      "C": "The Bake-a-Thon, which is open to contestants of all ages, has never been won by a person under the age of 30. It therefore follows that the winner of this year's Bake-a-Thon will not be under the age of 30.",
+      "D": "Both yeast and baking powder can cause sweet rolls to rise. It therefore follows that yeast can always be substituted for baking powder in a recipe for sweet rolls.",
+      "E": "In recipe contests, there are always more contestants in the pie category than there are in the cake category. It therefore follows that contestants generally have a better chance of winning in the cake category than in the pie category."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "History provides many examples of technological innovations being strongly resisted by people whose working conditions without those innovations were miserable. This shows that social inertia is a more powerful determinant of human behavior than is the desire for comfort or safety.",
+    "questionStem": "Which one of the following, if true, most seriously undermines the reasoning in the argument?",
+    "answerChoices": {
+      "A": "People correctly believe that technological innovations often cause job loss.",
+      "B": "People are often reluctant to take on new challenges.",
+      "C": "Some examples of technological innovation have been embraced by workers.",
+      "D": "People tend to adapt easily to gradually implemented technological innovations.",
+      "E": "People correctly believe that technological innovations almost always increase workers' productivity."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "In considering the fact that many people believe that promotions are often given to undeserving employees because the employees successfully flatter their supervisors, a psychologist argued that although many people who flatter their supervisors are subsequently promoted, flattery generally is not the reason for their success, because almost all flattery is so blatant that it is obvious even to those toward whom it is directed.",
+    "questionStem": "Which one of the following, if assumed, enables the psychologist's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "People in positions of responsibility expect to be flattered.",
+      "B": "Official guidelines for granting promotion tend to focus on merit.",
+      "C": "Flattery that is not noticed by the person being flattered is ineffective.",
+      "D": "Many people interpret insincere flattery as sincere admiration.",
+      "E": "Supervisors are almost never influenced by flattery when they notice it."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "The government is being urged to prevent organizations devoted to certain views on human nutrition from advocating a diet that includes large portions of uncooked meat, because eating uncooked meat can be very dangerous. However, this purported fact does not justify the government's silencing the groups, for surely the government would not be justified in silencing a purely political group merely on the grounds that the policies the group advocates could be harmful to some members of society. The same should be true for silencing groups with certain views on human nutrition.",
+    "questionStem": "Which one of the following principles most helps to justify the reasoning in the argument?",
+    "answerChoices": {
+      "A": "The government should not silence any group for advocating a position that a significant proportion of society believes to be beneficial.",
+      "B": "The government ought to do whatever is in the best interest of society.",
+      "C": "One ought to advocate a position only if one believes that it is true or would be beneficial.",
+      "D": "The government ought not to silence an opinion merely on the grounds that it could be harmful to disseminate the opinion.",
+      "E": "One ought to urge the government to do only those things the government is justified in doing."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Medical researcher: Scientists compared a large group of joggers who habitually stretch before jogging to an equal number of joggers who do not stretch before jogging. Both groups of joggers incurred roughly the same number of injuries. This indicates that stretching before jogging does not help to prevent injuries.",
+    "questionStem": "Which one of the following, if true, would most weaken the medical researcher's argument?",
+    "answerChoices": {
+      "A": "For both groups of joggers compared by the scientists, the rate of jogging injuries during the study was lower than the overall rate of jogging injuries.",
+      "B": "Among the joggers in the groups compared by the scientists, many of those previously injured while jogging experienced difficulty in their efforts to perform stretches.",
+      "C": "Most jogging injuries result from falls, collisions, and other mishaps on which the flexibility resulting from stretching would have little if any effect.",
+      "D": "The more prone a jogger is to jogging injuries, the more likely he or she is to develop the habit of performing stretches before jogging.",
+      "E": "Studies have found that, for certain forms of exercise, stretching beforehand can reduce the severity of injuries resulting from that exercise."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Superconductor development will enable energy to be transported farther with less energy lost in transit. This will probably improve industrial productivity, for a similar improvement resulted when oil and natural gas replaced coal as the primary fossil fuels used in North America. Shipping costs, a function of the distance fossil fuels are shipped and the losses of material in transit, decreased for factory owners at that time.",
+    "questionStem": "The claim that superconductor development will probably improve industrial productivity plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "It is a conclusion for which the claim that shipping costs for fossil fuels are partly a function of the losses of material in transit is offered as partial support.",
+      "B": "It is a generalization for which the claim that superconductor development will enable energy to be transported farther with less energy lost in transit is offered as an illustration.",
+      "C": "It is an assumption supporting the conclusion that superconductor development will enable energy to be transported farther with less energy lost in transit.",
+      "D": "It is a premise offered to support the claim that oil and natural gas have replaced coal as the primary fossil fuels used in North America.",
+      "E": "It is cited as evidence that shipping costs are a function of the distances fossil fuels are shipped and the losses of material in transit."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "The French novelist Colette (1873–1954) has been widely praised for the vividness of her language. But many critics complain that her novels are indifferent to important moral questions. This charge is unfair. Each of her novels is a poetic condensation of a major emotional crisis in the life of an ordinary person of her time. Such emotional crises almost invariably raise important moral questions.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Critics who suggest that Colette's novels are indifferent to great moral questions of her time greatly underestimate her literary achievements.",
+      "B": "A novel that poetically condenses a major emotional crisis does not have to be indifferent to the important moral questions raised by that crisis.",
+      "C": "To deserve the level of praise that Colette has received, a novelist's work must concern itself with important moral questions.",
+      "D": "The vividness of Colette's language was not itself the result of poetic condensation.",
+      "E": "Colette's purpose in poetically condensing emotional crises in the lives of characters in her novels was to explore some of the important moral questions of her time."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The view that every person is concerned exclusively with her or his own self-interest implies that government by consent is impossible. Thus, social theorists who believe that people are concerned only with their self-interest evidently believe that aspiring to democracy is futile, since democracy is not possible in the absence of government by consent.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "infers merely from the fact of someone's holding a belief that he or she believes an implication of that belief",
+      "B": "infers that because something is true of a group of people, it is true of each individual member of the group",
+      "C": "infers that because something is true of each individual person belonging to a group, it is true of the group as a whole",
+      "D": "attempts to discredit a theory by discrediting those who espouse that theory",
+      "E": "fails to consider that, even if an argument's conclusion is false, some of the assumptions used to justify that conclusion may nonetheless be true"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Archaeologist: The mosaics that were removed from Zeugma, the ancient city now flooded by the runoff from Turkey's Birecik Dam, should have been left there. We had all the information about them that we needed to draw archaeological conclusions, and future archaeologists studying the site, who may not have access to our records, might be misled by their absence.",
+    "questionStem": "Which one of the following, if assumed, most helps to justify the reasoning in the archaeologist's argument?",
+    "answerChoices": {
+      "A": "The only considerations that bear upon the question of whether the mosaics should have been removed are archaeological.",
+      "B": "Archaeologists studying a site can tell whether or not that site had been flooded at some time.",
+      "C": "The materials used in the construction of a mosaic are readily apparent when the mosaic is examined in its original location.",
+      "D": "Archaeological sites from which artifacts have been removed rarely mislead archaeologists who later study the site.",
+      "E": "The removal of artifacts from archaeological sites rarely has any environmental impact."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Traffic engineers have increased the capacity of the Krakkenbak Bridge to handle rush-hour traffic flow. The resultant increase in rush-hour traffic flow would not have occurred had the city not invested in computer modeling technology last year at the request of the city's mayor, and the city's financial predicament would not have been resolved if the traffic flow across the bridge during rush hour had not been increased.",
+    "questionStem": "Which one of the following can be properly inferred from the information above?",
+    "answerChoices": {
+      "A": "The city's financial predicament would not have been resolved had the city chosen a competing computer modeling software package.",
+      "B": "The city's financial predicament would not have been resolved had the city not invested in computer modeling technology.",
+      "C": "On an average day, more traffic crosses the Krakkenbak Bridge this year as compared to last year.",
+      "D": "Traffic flow across the Krakkenbak Bridge during rush hour would not have increased had the city's mayor not made investing in computer modeling technology the highest budgetary priority last year.",
+      "E": "The city's mayor was a proponent of investing in computer modeling technology because of the city's need to increase traffic flow across the Krakkenbak Bridge during rush hour."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Court analyst: Courts should not allow the use of DNA tests in criminal cases. There exists considerable controversy among scientific experts about how reliable these tests are. Unless there is widespread agreement in the scientific community about how reliable a certain test is, it is unreasonable for the courts to allow evidence based on that test.",
+    "questionStem": "The court analyst's reasoning is flawed because it fails to take into account that",
+    "answerChoices": {
+      "A": "courts have the authority to admit or exclude any evidence irrespective of what experts have to say about its reliability",
+      "B": "the standard against which evidence in a criminal case is measured should not be absolute certainty",
+      "C": "experts may agree that the tests are highly reliable while disagreeing about exactly how reliable they are",
+      "D": "data should not be admitted as evidence in a court of law without scientific witnesses having agreed about how reliable they are",
+      "E": "there are also controversies about reliability of evidence in noncriminal cases"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "Members of the VideoKing Frequent Viewers club can now receive a special discount coupon. Members of the club who have rented more than ten videos in the past month can receive the discount coupon only at the VideoKing location from which the member last rented a movie. Members of the Frequent Viewers club who have not rented more than ten videos in the past month can receive the coupon only at the Main Street location. Pat, who has not rented more than ten videos in the past month, can receive the special discount coupon at the Walnut Lane location of VideoKing.",
+    "questionStem": "If all of the statements above are true, which one of the following must be true?",
+    "answerChoices": {
+      "A": "The only people who can receive the special discount coupon at the Main Street location are Frequent Viewers club members who have not rented more than ten videos.",
+      "B": "Some members of the Frequent Viewers club have not rented more than ten videos.",
+      "C": "Some members of the Frequent Viewers club can receive the special discount coupon at more than one location of VideoKing.",
+      "D": "Some people who are not members of the Frequent Viewers club can receive the special discount coupon.",
+      "E": "If Pat rents a movie from the Main Street location, then she will not receive the special discount coupon."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "Game show winners choosing between two equally desirable prizes will choose either the one that is more expensive or the one with which they are more familiar. Today's winner, Ed, is choosing between two equally desirable and equally unfamiliar prizes, A and B. He will thus choose A, which is more expensive.",
+    "questionStem": "The reasoning in which one of the following is most similar to the reasoning above?",
+    "answerChoices": {
+      "A": "With a book contract, an academic writer receives either an advance or a guarantee of royalties. Professor al-Sofi received an advance for a book contract, so al-Sofi did not receive a guarantee of royalties.",
+      "B": "When entering this amusement park, children always choose to take their first ride on either the Rocket or the Mouse. Janine insisted on the Rocket for her first ride. Thus, Janine would not have been standing near the Mouse during her first half hour in the amusement park.",
+      "C": "The elliptical orbit of an asteroid is only slightly eccentric unless it is affected by the gravitational pull of a planet. Asteroid Y is affected by Jupiter's gravitational pull and asteroid X is not. Thus, the orbit of asteroid Y is the more eccentric of the two.",
+      "D": "New students in this program must choose either a physics class or an art class. Miyoko has no desire to take a class in either of those fields, so Miyoko will probably not enter this program.",
+      "E": "To avoid predators, rabbits will either double back on their pursuers or flee for nearby cover. The rabbit being pursued by a fox in this wildlife film is in a field that offers no opportunity for nearby cover, so it will try to double back on the fox."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Microbiologist: Because heavy metals are normally concentrated in sewage sludge during the sewage treatment process, the bacteria that survive in the sludge have evolved the unusual ability to resist heavy-metal poisoning. The same bacteria also show a strong resistance to antibiotics. This suggests that the bacteria's exposure to the heavy metals in the sewage sludge has somehow promoted their resistance to antibiotics.",
+    "questionStem": "Which one of the following, if true, most strengthens the microbiologist's argument?",
+    "answerChoices": {
+      "A": "Most bacteria that are not resistant to antibiotics are not resistant to heavy-metal poisoning either.",
+      "B": "Bacteria that live in sewage sludge that is free of heavy metals, but is in other respects similar to normal sewage, are generally resistant to neither heavy-metal poisoning nor antibiotics.",
+      "C": "Antibiotic resistance of bacteria that survive in sewage sludge in which heavy metals are concentrated contributes to their resistance to heavy-metal poisoning.",
+      "D": "Sewage sludge that contains high concentrations of heavy metals almost always contains significant concentrations of antibiotics.",
+      "E": "Many kinds of bacteria that do not live in sewage sludge are resistant to both heavy-metal poisoning and antibiotics."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Ethicist: Marital vows often contain the promise to love \"until death do us part.\" If \"love\" here refers to a feeling, then this promise makes no sense, for feelings are not within one's control, and a promise to do something not within one's control makes no sense. Thus, no one—including those making marital vows—should take \"love\" in this context to be referring to feelings.",
+    "questionStem": "The ethicist's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "None of our feelings are within our control.",
+      "B": "People should not make promises to do something that is not within their control.",
+      "C": "\"Love\" can legitimately be taken to refer to something other than feelings.",
+      "D": "Promises should not be interpreted in such a way that they make no sense.",
+      "E": "Promises that cannot be kept do not make any sense."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Principle: If a food product contains ingredients whose presence most consumers of that product would be upset to discover in it, then the food should be labeled as containing those ingredients.\nApplication: Crackly Crisps need not be labeled as containing genetically engineered ingredients, since most consumers of Crackly Crisps would not care if they discovered that fact.",
+    "questionStem": "The application of the principle is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "fails to address the possibility that consumers of a specific food may not be representative of consumers of food in general",
+      "B": "fails to address the possibility that the genetically engineered ingredients in Crackly Crisps may have been proven safe for human consumption",
+      "C": "implicitly makes use of a value judgment that is incompatible with the principle being applied",
+      "D": "takes for granted that if most consumers of a product would buy it even if they knew several of the ingredients in it, then they would buy the product even if they knew all the ingredients in it",
+      "E": "confuses a claim that under certain conditions a certain action should be taken with a claim that the action need not be taken in the absence of those conditions"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT134",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Role",
+    "questionDifficulty": 4,
+    "stimulus": "Editorial: The town would not need to spend as much as it does on removing trash if all town residents sorted their household garbage. However, while telling residents that they must sort their garbage would get some of them to do so, many would resent the order and refuse to comply. The current voluntary system, then, is to be preferred, because it costs about as much as a nonvoluntary system would and it does not engender nearly as much resentment.",
+    "questionStem": "The contention that the town would not have to spend as much as it does on removing trash if all town residents sorted their garbage plays which one of the following roles in the editorial's argument?",
+    "answerChoices": {
+      "A": "It is a claim that the editorial is trying to show is false.",
+      "B": "It is a fact granted by the editorial that lends some support to an alternative to the practice that the editorial defends as preferable.",
+      "C": "It is an example of a difficulty facing the claim that the editorial is attempting to refute.",
+      "D": "It is a premise that the editorial's argument relies on in reaching its conclusion.",
+      "E": "It is the conclusion that the editorial's argument purports to establish."
+    },
+    "correctAnswer": "D"
+  }
+]

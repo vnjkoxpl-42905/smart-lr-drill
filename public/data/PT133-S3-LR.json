@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Role",
+    "questionDifficulty": 1,
+    "stimulus": "Commentator: In last week's wreck involving one of Acme Engines' older locomotives, the engineer lost control of the train when his knee accidentally struck a fuel shut-down switch. Acme claims it is not liable because it never realized that the knee-level switches were a safety hazard. When asked why it relocated knee-level switches in its newer locomotives, Acme said engineers had complained that they were simply inconvenient. However, it is unlikely that Acme would have spent the $500,000 it took to relocate switches in the newer locomotives merely because of inconvenience. Thus, Acme Engines should be held liable for last week's wreck.",
+    "questionStem": "The point that Acme Engines spent $500,000 relocating knee-level switches in its newer locomotives is offered in the commentator's argument as",
+    "answerChoices": {
+      "A": "proof that the engineer is not at all responsible for the train wreck",
+      "B": "a reason for believing that the wreck would have occurred even if Acme Engines had remodeled their older locomotives",
+      "C": "an explanation of why the train wreck occurred",
+      "D": "evidence that knee-level switches are not in fact hazardous",
+      "E": "an indication that Acme Engines had been aware of the potential dangers of knee-level switches before the wreck occurred"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Artist: Almost everyone in this country really wants to be an artist even though they may have to work other jobs to pay the rent. After all, just about everyone I know hopes to someday be able to make a living as a painter, musician, or poet even if they currently work as dishwashers or discount store clerks.",
+    "questionStem": "The reasoning in the artist's argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "contains a premise that presupposes the truth of the conclusion",
+      "B": "presumes that what is true of each person in a country is also true of the country's population as a whole",
+      "C": "defends a view solely on the grounds that the view is widely held",
+      "D": "bases its conclusion on a sample that is unlikely to accurately represent people in the country as a whole",
+      "E": "fails to make a needed distinction between wanting to be an artist and making a living as an artist"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "The qwerty keyboard became the standard keyboard with the invention of the typewriter and remains the standard for typing devices today. If an alternative known as the Dvorak keyboard were today's standard, typists would type significantly faster. Nevertheless, it is not practical to switch to the Dvorak keyboard because the cost to society of switching, in terms of time, money, and frustration, would be greater than the benefits that would be ultimately gained from faster typing.",
+    "questionStem": "The example above best illustrates which one of the following propositions?",
+    "answerChoices": {
+      "A": "Often it is not worthwhile to move to a process that improves speed if it comes at the expense of accuracy.",
+      "B": "People usually settle on a standard because that standard is more efficient than any alternatives.",
+      "C": "People often remain with an entrenched standard rather than move to a more efficient alternative simply because they dislike change.",
+      "D": "The emotional cost associated with change is a factor that sometimes outweighs financial considerations.",
+      "E": "The fact that a standard is already in wide use can be a crucial factor in making it a more practical choice than an alternative."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 1,
+    "stimulus": "Sam: Mountain lions, a protected species, are preying on bighorn sheep, another protected species. We must let nature take its course and hope the bighorns survive.\nMeli: Nonsense. We must do what we can to ensure the survival of the bighorn, even if that means limiting the mountain lion population.",
+    "questionStem": "Which one of the following is a point of disagreement between Meli and Sam?",
+    "answerChoices": {
+      "A": "Humans should not intervene to protect bighorn sheep from mountain lions.",
+      "B": "The preservation of a species as a whole is more important than the loss of a few individuals.",
+      "C": "The preservation of a predatory species is easier to ensure than the preservation of the species preyed upon.",
+      "D": "Any measures to limit the mountain lion population would likely push the species to extinction.",
+      "E": "If the population of mountain lions is not limited, the bighorn sheep species will not survive."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Must Be True",
+    "questionDifficulty": 1,
+    "stimulus": "Parent: Pushing very young children into rigorous study in an effort to make our nation more competitive does more harm than good. Curricula for these young students must address their special developmental needs, and while rigorous work in secondary school makes sense, the same approach in the early years of primary school produces only short-term gains and may cause young children to burn out on schoolwork. Using very young students as pawns in the race to make the nation economically competitive is unfair and may ultimately work against us.",
+    "questionStem": "Which one of the following can be inferred from the parent's statements?",
+    "answerChoices": {
+      "A": "For our nation to be competitive, our secondary school curriculum must include more rigorous study than it now does.",
+      "B": "The developmental needs of secondary school students are not now being addressed in our high schools.",
+      "C": "Our country can be competitive only if the developmental needs of all our students can be met.",
+      "D": "A curriculum of rigorous study does not adequately address the developmental needs of primary school students.",
+      "E": "Unless our nation encourages more rigorous study in the early years of primary school, we cannot be economically competitive."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "A transit company's bus drivers are evaluated by supervisors riding with each driver. Drivers complain that this affects their performance, but because the supervisor's presence affects every driver's performance, those drivers performing best with a supervisor aboard will likely also be the best drivers under normal conditions.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "There is no effective way of evaluating the bus drivers' performance without having supervisors ride with them.",
+      "B": "The supervisors are excellent judges of a bus driver's performance.",
+      "C": "For most bus drivers, the presence of a supervisor makes their performance slightly worse than it otherwise would be.",
+      "D": "The bus drivers are each affected in roughly the same way and to the same extent by the presence of the supervisor.",
+      "E": "The bus drivers themselves are able to deliver accurate assessments of their driving performance."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "Economic growth accelerates business demand for the development of new technologies. Businesses supplying these new technologies are relatively few, while those wishing to buy them are many. Yet an acceleration of technological change can cause suppliers as well as buyers of new technologies to fail.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Businesses supplying new technologies are more likely to prosper in times of accelerated technological change than other businesses.",
+      "B": "Businesses that supply new technologies may not always benefit from economic growth.",
+      "C": "The development of new technologies may accelerate economic growth in general.",
+      "D": "Businesses that adopt new technologies are most likely to prosper in a period of general economic growth.",
+      "E": "Economic growth increases business failures."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "Energy analyst: During this record-breaking heat wave, air conditioner use has overloaded the region's electrical power grid, resulting in frequent power blackouts throughout the region. For this reason, residents have been asked to cut back voluntarily on air conditioner use in their homes. But even if this request is heeded, blackouts will probably occur unless the heat wave abates.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy in the information above?",
+    "answerChoices": {
+      "A": "Air-conditioning is not the only significant drain on the electrical system in the area.",
+      "B": "Most air-conditioning in the region is used to cool businesses and factories.",
+      "C": "Most air-conditioning systems could be made more energy efficient by implementing simple design modifications.",
+      "D": "Residents of the region are not likely to reduce their air conditioner use voluntarily during particularly hot weather.",
+      "E": "The heat wave is expected to abate in the near future."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Long-term and short-term relaxation training are two common forms of treatment for individuals experiencing problematic levels of anxiety. Yet studies show that on average, regardless of which form of treatment one receives, symptoms of anxiety decrease to a normal level within the short-term-training time period. Thus, for most people the generally more expensive long-term training is unwarranted.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "A decrease in symptoms of anxiety often occurs even with no treatment or intervention by a mental health professional.",
+      "B": "Short-term relaxation training conducted by a more experienced practitioner can be more expensive than long-term training conducted by a less experienced practitioner.",
+      "C": "Recipients of long-term training are much less likely than recipients of short-term training to have recurrences of problematic levels of anxiety.",
+      "D": "The fact that an individual thinks that a treatment will reduce his or her anxiety tends, in and of itself, to reduce the individual's anxiety.",
+      "E": "Short-term relaxation training involves the teaching of a wider variety of anxiety-combating relaxation techniques than does long-term training."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Editorial: Many critics of consumerism insist that advertising persuades people that they need certain consumer goods when they merely desire them. However, this accusation rests on a fuzzy distinction, that between wants and needs. In life, it is often impossible to determine whether something is merely desirable or whether it is essential to one's happiness.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion drawn in the editorial's argument?",
+    "answerChoices": {
+      "A": "The claim that advertising persuades people that they need things that they merely want rests on a fuzzy distinction.",
+      "B": "Many critics of consumerism insist that advertising attempts to blur people's ability to distinguish between wants and needs.",
+      "C": "There is nothing wrong with advertising that tries to persuade people that they need certain consumer goods.",
+      "D": "Many critics of consumerism fail to realize that certain things are essential to human happiness.",
+      "E": "Critics of consumerism often use fuzzy distinctions to support their claims."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "People who browse the web for medical information often cannot discriminate between scientifically valid information and quackery. Much of the quackery is particularly appealing to readers with no medical background because it is usually written more clearly than scientific papers. Thus, people who rely on the web when attempting to diagnose their medical conditions are likely to do themselves more harm than good.",
+    "questionStem": "Which one of the following is an assumption the argument requires?",
+    "answerChoices": {
+      "A": "People who browse the web for medical information typically do so in an attempt to diagnose their medical conditions.",
+      "B": "People who attempt to diagnose their medical conditions are likely to do themselves more harm than good unless they rely exclusively on scientifically valid information.",
+      "C": "People who have sufficient medical knowledge to discriminate between scientifically valid information and quackery will do themselves no harm if they rely on the web when attempting to diagnose their medical conditions.",
+      "D": "Many people who browse the web assume that information is not scientifically valid unless it is clearly written.",
+      "E": "People attempting to diagnose their medical conditions will do themselves more harm than good only if they rely on quackery instead of scientifically valid information."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Strengthen/Explain",
+    "questionDifficulty": 1,
+    "stimulus": "When adults toss balls to very young children they generally try to toss them as slowly as possible to compensate for the children's developing coordination. But recent studies show that despite their developing coordination, children actually have an easier time catching balls that are thrown at a faster speed.",
+    "questionStem": "Which one of the following, if true, most helps to explain why very young children find it easier to catch balls that are thrown at a faster speed?",
+    "answerChoices": {
+      "A": "Balls thrown at a faster speed, unlike balls thrown at a slower speed, trigger regions in the brain that control the tracking of objects for self-defense.",
+      "B": "Balls that are tossed more slowly tend to have a higher arc that makes it less likely that the ball will be obscured by the body of the adult tossing it.",
+      "C": "Adults generally find it easier to catch balls that are thrown slowly than balls that are thrown at a faster speed.",
+      "D": "Children are able to toss balls back to the adults with more accuracy when they throw fast than when they throw the ball back more slowly.",
+      "E": "There is a limit to how fast the balls can be tossed to the children before the children start to have more difficulty in catching them."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Like a genetic profile, a functional magnetic-resonance image (fMRI) of the brain can contain information that a patient wishes to keep private. An fMRI of a brain also contains enough information about a patient's skull to create a recognizable image of that patient's face. A genetic profile can be linked to a patient only by referring to labels or records.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "It is not important that medical providers apply labels to fMRIs of patients' brains.",
+      "B": "An fMRI has the potential to compromise patient privacy in circumstances in which a genetic profile would not.",
+      "C": "In most cases patients cannot be reasonably sure that the information in a genetic profile will be kept private.",
+      "D": "Most of the information contained in an fMRI of a person's brain is also contained in that person's genetic profile.",
+      "E": "Patients are more concerned about threats to privacy posed by fMRIs than they are about those posed by genetic profiles."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Method of Reasoning",
+    "questionDifficulty": 3,
+    "stimulus": "Council member: I recommend that the abandoned shoe factory be used as a municipal emergency shelter. Some council members assert that the courthouse would be a better shelter site, but they have provided no evidence of this. Thus, the shoe factory would be a better shelter site.",
+    "questionStem": "A questionable technique used in the council member's argument is that of",
+    "answerChoices": {
+      "A": "asserting that a lack of evidence against a view is proof that the view is correct",
+      "B": "accepting a claim simply because advocates of an opposing claim have not adequately defended their view",
+      "C": "attacking the proponents of the courthouse rather than addressing their argument",
+      "D": "attempting to persuade its audience by appealing to their fear",
+      "E": "attacking an argument that is not held by any actual council member"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "It was misleading for James to tell the Core Curriculum Committee that the chair of the Anthropology Department had endorsed his proposal. The chair of the Anthropology Department had told James that his proposal had her endorsement, but only if the draft proposal she saw included all the recommendations James would ultimately make to the Core Curriculum Committee.",
+    "questionStem": "The argument relies on which one of the following assumptions?",
+    "answerChoices": {
+      "A": "If the chair of the Anthropology Department did not endorse James's proposed recommendations, the Core Curriculum Committee would be unlikely to implement them.",
+      "B": "The chair of the Anthropology Department would have been opposed to any recommendations James proposed to the Core Curriculum Committee other than those she had seen.",
+      "C": "James thought that the Core Curriculum Committee would implement the proposed recommendations only if they believed that the recommendations had been endorsed by the chair of the Anthropology Department.",
+      "D": "James thought that the chair of the Anthropology Department would have endorsed all of the recommendations that he proposed to the Core Curriculum Committee.",
+      "E": "The draft proposal that the chair of the Anthropology Department had seen did not include all of the recommendations in James's proposal to the Core Curriculum Committee."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Travaillier Corporation has recently hired employees with experience in the bus tour industry, and its executives have also been negotiating with charter bus companies that subcontract with bus tour companies. But Travaillier has traditionally focused on serving consumers who travel primarily by air, and marketing surveys show that Travaillier's traditional consumers have not changed their vacation preferences. Therefore, Travaillier must be attempting to enlarge its consumer base by attracting new customers.",
+    "questionStem": "Which one of the following, if true, would most weaken the argument?",
+    "answerChoices": {
+      "A": "In the past, Travaillier has found it very difficult to change its customers' vacation preferences.",
+      "B": "Several travel companies other than Travaillier have recently tried and failed to expand into the bus tour business.",
+      "C": "At least one of Travaillier's new employees not only has experience in the bus tour industry but has also designed air travel vacation packages.",
+      "D": "Some of Travaillier's competitors have increased profits by concentrating their attention on their customers who spend the most on vacations.",
+      "E": "The industry consultants employed by Travaillier typically recommend that companies expand by introducing their current customers to new products and services."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Educator: Traditional classroom education is ineffective because education in such an environment is not truly a social process and only social processes can develop students' insights. In the traditional classroom, the teacher acts from outside the group and interaction between teachers and students is rigid and artificial.",
+    "questionStem": "The educator's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Development of insight takes place only if genuine education also occurs.",
+      "B": "Classroom education is effective if the interaction between teachers and students is neither rigid nor artificial.",
+      "C": "All social processes involve interaction that is neither rigid nor artificial.",
+      "D": "Education is not effective unless it leads to the development of insight.",
+      "E": "The teacher does not act from outside the group in a nontraditional classroom."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "The probability of avoiding heart disease is increased if one avoids fat in one's diet. Furthermore, one is less likely to eat fat if one avoids eating dairy foods. Thus the probability of maintaining good health is increased by avoiding dairy foods.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "The argument ignores the possibility that, even though a practice may have potentially negative consequences, its elimination may also have negative consequences.",
+      "B": "The argument fails to consider the possibility that there are more ways than one of decreasing the risk of a certain type of occurrence.",
+      "C": "The argument presumes, without providing justification, that factors that carry increased risks of negative consequences ought to be eliminated.",
+      "D": "The argument fails to show that the evidence appealed to is relevant to the conclusion asserted.",
+      "E": "The argument fails to consider that what is probable will not necessarily occur."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Method of Reasoning",
+    "questionDifficulty": 3,
+    "stimulus": "Professor: One cannot frame an accurate conception of one's physical environment on the basis of a single momentary perception, since each such glimpse occurs from only one particular perspective. Similarly, any history book gives only a distorted view of the past, since it reflects the biases and prejudices of its author.",
+    "questionStem": "The professor's argument proceeds by",
+    "answerChoices": {
+      "A": "attempting to show that one piece of reasoning is incorrect by comparing it with another, presumably flawed, piece of reasoning",
+      "B": "developing a case for one particular conclusion by arguing that if that conclusion were false, absurd consequences would follow",
+      "C": "making a case for the conclusion of one argument by showing that argument's resemblance to another, presumably cogent, argument",
+      "D": "arguing that because something has a certain group of characteristics, it must also have another, closely related, characteristic",
+      "E": "arguing that a type of human cognition is unreliable in one instance because it has been shown to be unreliable under similar circumstances"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "To date, most of the proposals that have been endorsed by the Citizens League have been passed by the city council. Thus, any future proposal that is endorsed by the Citizens League will probably be passed as well.",
+    "questionStem": "The pattern of reasoning in which one of the following arguments is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "Most of the Vasani grants that have been awarded in previous years have gone to academic biologists. Thus, if most of the Vasani grants awarded next year are awarded to academics, most of these will probably be biologists.",
+      "B": "Most of the individual trees growing on the coastal islands in this area are deciduous. Therefore, most of the tree species on these islands are probably deciduous varieties.",
+      "C": "Most of the editors who have worked for the local newspaper have not been sympathetic to local farmers. Thus, if the newspaper hires someone who is sympathetic to local farmers, they will probably not be hired as an editor.",
+      "D": "Most of the entries that were received after the deadline for last year's photography contest were rejected by the judges' committee. Thus, the people whose entries were received after the deadline last year will probably send them in well before the deadline this year.",
+      "E": "Most of the stone artifacts that have been found at the archaeological site have been domestic tools. Thus, if the next artifact found at the site is made of stone, it will probably be a domestic tool."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Chemist: The molecules of a certain weed-killer are always present in two forms, one the mirror image of the other. One form of the molecule kills weeds, while the other has no effect on them. As a result, the effectiveness of the weed-killer in a given situation is heavily influenced by which of the two forms is more concentrated in the soil, which in turn varies widely because local soil conditions will usually favor the breakdown of one form or the other. Thus, much of the data on the effects of this weed-killer are probably misleading.",
+    "questionStem": "Which one of the following, if true, most strengthens the chemist's argument?",
+    "answerChoices": {
+      "A": "In general, if the molecules of a weed-killer are always present in two forms, then it is likely that weeds are killed by one of those two forms but unaffected by the other.",
+      "B": "Almost all of the data on the effects of the weed-killer are drawn from laboratory studies in which both forms of the weed-killer's molecules are equally concentrated in the soil and equally likely to break down in that soil.",
+      "C": "Of the two forms of the weed-killer's molecules, the one that kills weeds is found in most local soil conditions to be the more concentrated form.",
+      "D": "The data on the effects of the weed-killer are drawn from studies of the weed-killer under a variety of soil conditions similar to those in which the weed-killer is normally applied.",
+      "E": "Data on the weed-killer's effects that rely solely on the examination of the effects of only one of the two forms of the weed-killer's molecules will almost certainly be misleading."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 5,
+    "stimulus": "Principle: A police officer is eligible for a Mayor's Commendation if the officer has an exemplary record, but not otherwise; an officer eligible for the award who did something this year that exceeded what could be reasonably expected of a police officer should receive the award if the act saved someone's life.\nConclusion: Officer Franklin should receive a Mayor's Commendation but Officer Penn should not.",
+    "questionStem": "From which one of the following sets of facts can the conclusion be properly drawn using the principle?",
+    "answerChoices": {
+      "A": "In saving a child from drowning this year, Franklin and Penn both risked their lives beyond what could be reasonably expected of a police officer. Franklin has an exemplary record but Penn does not.",
+      "B": "Both Franklin and Penn have exemplary records, and each officer saved a child from drowning earlier this year. However, in doing so, Franklin went beyond what could be reasonably expected of a police officer; Penn did not.",
+      "C": "Neither Franklin nor Penn has an exemplary record. But, in saving the life of an accident victim, Franklin went beyond what could be reasonably expected of a police officer. In the only case in which Penn saved someone's life this year, Penn was merely doing what could be reasonably expected of an officer under the circumstances.",
+      "D": "At least once this year, Franklin has saved a person's life in such a way as to exceed what could be reasonably expected of a police officer. Penn has not saved anyone's life this year.",
+      "E": "Both Franklin and Penn have exemplary records. On several occasions this year Franklin has saved people's lives, and on many occasions this year Franklin has exceeded what could be reasonably expected of a police officer. On no occasions this year has Penn saved a person's life or exceeded what could be reasonably expected of an officer."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 4,
+    "stimulus": "Essayist: It is much less difficult to live an enjoyable life if one is able to make lifestyle choices that accord with one's personal beliefs and then see those choices accepted by others. It is possible for people to find this kind of acceptance by choosing friends and associates who share many of their personal beliefs. Thus, no one should be denied the freedom to choose the people with whom he or she will associate.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the essayist's argument?",
+    "answerChoices": {
+      "A": "No one should be denied the freedom to make lifestyle choices that accord with his or her personal beliefs.",
+      "B": "One should associate with at least some people who share many of one's personal beliefs.",
+      "C": "If having a given freedom could make it less difficult for someone to live an enjoyable life, then no one should be denied that freedom.",
+      "D": "No one whose enjoyment of life depends, at least in part, on friends and associates who share many of the same personal beliefs should be deliberately prevented from having such friends and associates.",
+      "E": "One may choose for oneself the people with whom one will associate, if doing so could make it easier to live an enjoyable life."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Physician: The rise in blood pressure that commonly accompanies aging often results from a calcium deficiency. This deficiency is frequently caused by a deficiency in the active form of vitamin D needed in order for the body to absorb calcium. Since the calcium in one glass of milk per day can easily make up for any underlying calcium deficiency, some older people can lower their blood pressure by drinking milk.",
+    "questionStem": "The physician's conclusion is properly drawn if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "There is in milk, in a form that older people can generally utilize, enough of the active form of vitamin D and any other substances needed in order for the body to absorb the calcium in that milk.",
+      "B": "Milk does not contain any substance that is likely to cause increased blood pressure in older people.",
+      "C": "Older people's drinking one glass of milk per day does not contribute to a deficiency in the active form of vitamin D needed in order for the body to absorb the calcium in that milk.",
+      "D": "People who consume high quantities of calcium together with the active form of vitamin D and any other substances needed in order for the body to absorb calcium have normal blood pressure.",
+      "E": "Anyone who has a deficiency in the active form of vitamin D also has a calcium deficiency."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Political philosopher: A just system of taxation would require each person's contribution to correspond directly to the amount the society as a whole contributes to serve that person's interests. For purposes of taxation, wealth is the most objective way to determine how well the society has served the interest of any individual. Therefore, each person should be taxed solely in proportion to her or his income.",
+    "questionStem": "The flawed reasoning in the political philosopher's argument is most similar to that in which one of the following?",
+    "answerChoices": {
+      "A": "Cars should be taxed in proportion to the danger that they pose. The most reliable measure of this danger is the speed at which a car can travel. Therefore, cars should be taxed only in proportion to their ability to accelerate quickly.",
+      "B": "People should be granted autonomy in proportion to their maturity. A certain psychological test was designed to provide an objective measure of maturity. Therefore, those scoring above high school level on the test should be granted complete autonomy.",
+      "C": "Everyone should pay taxes solely in proportion to the benefits they receive from government. Many government programs provide subsidies for large corporations. Therefore, a just tax would require corporations to pay a greater share of their income in taxes than individual citizens pay.",
+      "D": "Individuals who confer large material benefits upon society should receive high incomes. Those with high incomes should pay correspondingly high taxes. Therefore, we as a society should place high taxes on activities that confer large benefits upon society.",
+      "E": "Justice requires that health care be given in proportion to each individual's need. Therefore, we need to ensure that the most seriously ill hospital patients are given the highest priority for receiving care."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT133",
+    "sectionNumber": 3,
+    "questionNumber": 26,
+    "questionType": "Paradox",
+    "questionDifficulty": 5,
+    "stimulus": "A recent poll showed that almost half of the city's residents believe that Mayor Walker is guilty of ethics violations. Surprisingly, however, 52 percent of those surveyed judged Walker's performance as mayor to be good or excellent, which is no lower than it was before anyone accused him of ethics violations.",
+    "questionStem": "Which one of the following, if true, most helps to explain the surprising fact stated above?",
+    "answerChoices": {
+      "A": "Almost all of the people who believe that Walker is guilty of ethics violations had thought, even before he was accused of those violations, that his performance as mayor was poor.",
+      "B": "In the time since Walker was accused of ethics violations, there has been an increase in the percentage of city residents who judge the performance of Walker's political opponents to be good or excellent.",
+      "C": "About a fifth of those polled did not know that Walker had been accused of ethics violations.",
+      "D": "Walker is currently up for reelection, and anticorruption groups in the city have expressed support for Walker's opponent.",
+      "E": "Walker has defended himself against the accusations by arguing that the alleged ethics violations were the result of honest mistakes by his staff members."
+    },
+    "correctAnswer": "A"
+  }
+]

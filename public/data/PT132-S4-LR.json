@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Marine biologist: Scientists have long wondered why the fish that live around coral reefs exhibit such brilliant colors. One suggestion is that coral reefs are colorful and, therefore, that colorful fish are camouflaged by them. Many animal species, after all, use camouflage to avoid predators. However, as regards the populations around reefs, this suggestion is mistaken. A reef stripped of its fish is quite monochromatic. Most corals, it turns out, are relatively dull browns and greens.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion drawn in the marine biologist's argument?",
+    "answerChoices": {
+      "A": "One hypothesis about why fish living near coral reefs exhibit such bright colors is that the fish are camouflaged by their bright colors.",
+      "B": "The fact that many species use camouflage to avoid predators is one reason to believe that brightly colored fish living near reefs do too.",
+      "C": "The suggestion that the fish living around coral reefs exhibit bright colors because they are camouflaged by the reefs is mistaken.",
+      "D": "A reef stripped of its fish is relatively monochromatic.",
+      "E": "It turns out that the corals in a coral reef are mostly dull hues of brown and green."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "To discover what percentage of teenagers believe in telekinesis—the psychic ability to move objects without physically touching them—a recent survey asked a representative sample of teenagers whether they agreed with the following statement: \"A person's thoughts can influence the movement of physical objects.\" But because this statement is particularly ambiguous and is amenable to a naturalistic, uncontroversial interpretation, the survey's responses are also ambiguous.",
+    "questionStem": "The reasoning above conforms most closely to which one of the following general propositions?",
+    "answerChoices": {
+      "A": "Uncontroversial statements are useless in surveys.",
+      "B": "Every statement is amenable to several interpretations.",
+      "C": "Responses to surveys are always unambiguous if the survey's questions are well phrased.",
+      "D": "Responses people give to poorly phrased questions are likely to be ambiguous.",
+      "E": "Statements about psychic phenomena can always be given naturalistic interpretations."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "A recent study of perfect pitch—the ability to identify the pitch of an isolated musical note—found that a high percentage of people who have perfect pitch are related to someone else who has it. Among those without perfect pitch, the percentage was much lower. This shows that having perfect pitch is a consequence of genetic factors.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "People who have relatives with perfect pitch generally receive no more musical training than do others.",
+      "B": "All of the researchers conducting the study had perfect pitch.",
+      "C": "People with perfect pitch are more likely than others to choose music as a career.",
+      "D": "People with perfect pitch are more likely than others to make sure that their children receive musical training.",
+      "E": "People who have some training in music are more likely to have perfect pitch than those with no such training."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Paleontologists recently excavated two corresponding sets of dinosaur tracks, one left by a large grazing dinosaur and the other by a smaller predatory dinosaur. The two sets of tracks make abrupt turns repeatedly in tandem, suggesting that the predator was following the grazing dinosaur and had matched its stride. Modern predatory mammals, such as lions, usually match the stride of prey they are chasing immediately before they strike those prey. This suggests that the predatory dinosaur was chasing the grazing dinosaur and attacked immediately afterwards.",
+    "questionStem": "Which one of the following most accurately describes the role played in the argument by the statement that the predatory dinosaur was following the grazing dinosaur and had matched its stride?",
+    "answerChoices": {
+      "A": "It helps establish the scientific importance of the argument's overall conclusion, but is not offered as evidence for that conclusion.",
+      "B": "It is a hypothesis that is rejected in favor of the hypothesis stated in the argument's overall conclusion.",
+      "C": "It provides the basis for an analogy used in support of the argument's overall conclusion.",
+      "D": "It is presented to counteract a possible objection to the argument's overall conclusion.",
+      "E": "It is the overall conclusion of the argument."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Researchers announced recently that over the past 25 years the incidence of skin cancer caused by exposure to harmful rays from the sun has continued to grow in spite of the increasingly widespread use of sunscreens. This shows that using sunscreen is unlikely to reduce a person's risk of developing such skin cancer.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "Most people who purchase a sunscreen product will not purchase the most expensive brand available.",
+      "B": "Skin cancer generally develops among the very old as a result of sunburns experienced when very young.",
+      "C": "The development of sunscreens by pharmaceutical companies was based upon research conducted by dermatologists.",
+      "D": "People who know that they are especially susceptible to skin cancer are generally disinclined to spend a large amount of time in the sun.",
+      "E": "Those who use sunscreens most regularly are people who believe themselves to be most susceptible to skin cancer."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "University administrator: Any proposal for a new department will not be funded if there are fewer than 50 people per year available for hire in that field and the proposed department would duplicate more than 25 percent of the material covered in one of our existing departments. The proposed Area Studies Department will duplicate more than 25 percent of the material covered in our existing Anthropology Department. However, we will fund the new department.",
+    "questionStem": "Which one of the following statements follows logically from the university administrator's statements?",
+    "answerChoices": {
+      "A": "The field of Area Studies has at least 50 people per year available for hire.",
+      "B": "The proposed Area Studies Department would not duplicate more than 25 percent of the material covered in any existing department other than Anthropology.",
+      "C": "If the proposed Area Studies Department did not duplicate more than 25 percent of the material covered in Anthropology, then the new department would not be funded.",
+      "D": "The Anthropology Department duplicates more than 25 percent of the material covered in the proposed Area Studies Department.",
+      "E": "The field of Area Studies has fewer than 50 people per year available for hire."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Strengthen/Explain",
+    "questionDifficulty": 2,
+    "stimulus": "Researcher: Over the course of three decades, we kept records of the average beak size of two populations of the same species of bird, one wild population, the other captive. During this period, the average beak size of the captive birds did not change, while the average beak size of the wild birds decreased significantly.",
+    "questionStem": "Which one of the following, if true, most helps to explain the researcher's findings?",
+    "answerChoices": {
+      "A": "The small-beaked wild birds were easier to capture and measure than the large-beaked wild birds.",
+      "B": "The large-beaked wild birds were easier to capture and measure than the small-beaked wild birds.",
+      "C": "Changes in the wild birds' food supply during the study period favored the survival of small-beaked birds over large-beaked birds.",
+      "D": "The average body size of the captive birds remained the same over the study period.",
+      "E": "The researcher measured the beaks of some of the wild birds on more than one occasion."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "Storytelling appears to be a universal aspect of both past and present cultures. Comparative study of traditional narratives from widely separated epochs and diverse cultures reveals common themes such as creation, tribal origin, mystical beings and quasi-historical figures, and common story types such as fables and tales in which animals assume human personalities.",
+    "questionStem": "The evidence cited above from the study of traditional narratives most supports which one of the following statements?",
+    "answerChoices": {
+      "A": "Storytellers routinely borrow themes from other cultures.",
+      "B": "Storytellers have long understood that the narrative is a universal aspect of human culture.",
+      "C": "Certain human concerns and interests arise in all of the world's cultures.",
+      "D": "Storytelling was no less important in ancient cultures than it is in modern cultures.",
+      "E": "The best way to understand a culture is to understand what motivates its storytellers."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "If a mother's first child is born before its due date, it is likely that her second child will be also. Jackie's second child was not born before its due date, so it is likely that Jackie's first child was not born before its due date either.",
+    "questionStem": "The questionable reasoning in the argument above is most similar in its reasoning to which one of the following?",
+    "answerChoices": {
+      "A": "Artisans who finish their projects before the craft fair will probably go to the craft fair. Ben will not finish his project before the fair. So he probably will not go to the craft fair.",
+      "B": "All responsible pet owners are likely to be good with children. So anyone who is good with children is probably a responsible pet owner.",
+      "C": "If a movie is a box-office hit, it is likely that its sequel will be also. Hawkman II, the sequel to Hawkman I, was not a box-office hit, so Hawkman I was probably not a box-office hit.",
+      "D": "If a business is likely to fail, people will not invest in it. Pallid Starr is likely to fail, therefore no one is likely to invest in it.",
+      "E": "Tai will go sailing only if the weather is nice. The weather will be nice, thus Tai will probably go sailing."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Science journalist: Europa, a moon of Jupiter, is covered with ice. Data recently transmitted by a spacecraft strongly suggest that there are oceans of liquid water deep under the ice. Life as we know it could evolve only in the presence of liquid water. Hence, it is likely that at least primitive life has evolved on Europa.",
+    "questionStem": "The science journalist's argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "takes for granted that if a condition would be necessary for the evolution of life as we know it, then such life could not have evolved anywhere that this condition does not hold",
+      "B": "fails to address adequately the possibility that there are conditions necessary for the evolution of life in addition to the presence of liquid water",
+      "C": "takes for granted that life is likely to be present on Europa if, but only if, life evolved on Europa",
+      "D": "overlooks the possibility that there could be unfamiliar forms of life that have evolved without the presence of liquid water",
+      "E": "takes for granted that no conditions on Europa other than the supposed presence of liquid water could have accounted for the data transmitted by the spacecraft"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "A bacterial species will inevitably develop greater resistance within a few years to any antibiotics used against it, unless those antibiotics eliminate that species completely. However, no single antibiotic now on the market is powerful enough to eliminate bacterial species X completely.",
+    "questionStem": "Which one of the following is most strongly supported by the statements above?",
+    "answerChoices": {
+      "A": "It is unlikely that any antibiotic can be developed that will completely eliminate bacterial species X.",
+      "B": "If any antibiotic now on the market is used against bacterial species X, that species will develop greater resistance to it within a few years.",
+      "C": "The only way of completely eliminating bacterial species X is by a combination of two or more antibiotics now on the market.",
+      "D": "Bacterial species X will inevitably become more virulent in the course of time.",
+      "E": "Bacterial species X is more resistant to at least some antibiotics that have been used against it than it was before those antibiotics were used against it."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Political scientist: It is not uncommon for a politician to criticize his or her political opponents by claiming that their exposition of their ideas is muddled and incomprehensible. Such criticism, however, is never sincere. Political agendas promoted in a manner that cannot be understood by large numbers of people will not be realized for, as every politician knows, political mobilization requires commonality of purpose.",
+    "questionStem": "Which one of the following is the most accurate rendering of the political scientist's main conclusion?",
+    "answerChoices": {
+      "A": "People who promote political agendas in an incomprehensible manner should be regarded as insincere.",
+      "B": "Sincere critics of the proponents of a political agenda should not focus their criticisms on the manner in which that agenda is promoted.",
+      "C": "The ineffectiveness of a confusingly promoted political agenda is a reason for refraining from, rather than engaging in, criticism of those who are promoting it.",
+      "D": "A politician criticizing his or her political opponents for presenting their political agendas in an incomprehensible manner is being insincere.",
+      "E": "To mobilize large numbers of people in support of a political agenda, that political agenda must be presented in such a way that it cannot be misunderstood."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Many symptoms of mental illnesses are affected by organic factors such as a deficiency in a compound in the brain. What is surprising, however, is the tremendous variation among different countries in the incidence of these symptoms in people with mental illnesses. This variation establishes that the organic factors that affect symptoms of mental illnesses are not distributed evenly around the globe.",
+    "questionStem": "The reasoning above is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "does not say how many different mental illnesses are being discussed",
+      "B": "neglects the possibility that nutritional factors that contribute to deficiencies in compounds in the brain vary from culture to culture",
+      "C": "fails to consider the possibility that cultural factors significantly affect how mental illnesses manifest themselves in symptoms",
+      "D": "presumes, without providing justification, that any change in brain chemistry manifests itself as a change in mental condition",
+      "E": "presumes, without providing justification, that mental phenomena are only manifestations of physical phenomena"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Politician: It has been proposed that the national parks in our country be managed by private companies rather than the government. A similar privatization of the telecommunications industry has benefited consumers by allowing competition among a variety of telephone companies to improve service and force down prices. Therefore, the privatization of the national parks would probably benefit park visitors as well.",
+    "questionStem": "Which one of the following, if true, most weakens the politician's argument?",
+    "answerChoices": {
+      "A": "It would not be politically expedient to privatize the national parks even if doing so would, in the long run, improve service and reduce the fees charged to visitors.",
+      "B": "The privatization of the telecommunications industry has been problematic in that it has led to significantly increased unemployment and economic instability in that industry.",
+      "C": "The vast majority of people visiting the national parks are unaware of proposals to privatize the management of those parks.",
+      "D": "Privatizing the national parks would benefit a much smaller number of consumers to a much smaller extent than did the privatization of the telecommunications industry.",
+      "E": "The privatization of the national parks would produce much less competition between different companies than did the privatization of the telecommunications industry."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Jewel collectors, fearing that their eyes will be deceived by a counterfeit, will not buy a diamond unless the dealer guarantees that it is genuine. But why should a counterfeit give any less aesthetic pleasure when the naked eye cannot distinguish it from a real diamond? Both jewels should be deemed of equal value.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Jewel collectors should collect only those jewels that provide the most aesthetic pleasure.",
+      "B": "The value of a jewel should depend at least partly on market demand.",
+      "C": "It should not be assumed that everyone who likes diamonds receives the same degree of aesthetic pleasure from them.",
+      "D": "The value of a jewel should derive solely from the aesthetic pleasure it provides.",
+      "E": "Jewel collectors should not buy counterfeit jewels unless they are unable to distinguish counterfeit jewels from real ones."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "All etching tools are either pin-tipped or bladed. While some bladed etching tools are used for engraving, some are not. On the other hand, all pin-tipped etching tools are used for engraving. Thus, there are more etching tools that are used for engraving than there are etching tools that are not used for engraving.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "All tools used for engraving are etching tools as well.",
+      "B": "There are as many pin-tipped etching tools as there are bladed etching tools.",
+      "C": "No etching tool is both pin-tipped and bladed.",
+      "D": "The majority of bladed etching tools are not used for engraving.",
+      "E": "All etching tools that are not used for engraving are bladed."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Strengthen/Explain EXCEPT",
+    "questionDifficulty": 4,
+    "stimulus": "A 24-year study of 1,500 adults showed that those subjects with a high intake of foods rich in beta-carotene were much less likely to die from cancer or heart disease than were those with a low intake of such foods. On the other hand, taking beta-carotene supplements for 12 years had no positive or negative effect on the health of subjects in a separate study of 20,000 adults.",
+    "questionStem": "Each of the following, if true, would help to resolve the apparent discrepancy between the results of the two studies except:",
+    "answerChoices": {
+      "A": "The human body processes the beta-carotene present in foods much more efficiently than it does beta-carotene supplements.",
+      "B": "Beta-carotene must be taken for longer than 12 years to have any cancer-preventive effects.",
+      "C": "Foods rich in beta-carotene also tend to contain other nutrients that assist in the human body's absorption of beta-carotene.",
+      "D": "In the 12-year study, half of the subjects were given beta-carotene supplements and half were given a placebo.",
+      "E": "In the 24-year study, the percentage of the subjects who had a high intake of beta-carotene-rich foods who smoked cigarettes was much smaller than the percentage of the subjects with a low intake of beta-carotene-rich foods who smoked."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "If there are sentient beings on planets outside our solar system, we will not be able to determine this anytime in the near future unless some of these beings are at least as intelligent as humans. We will not be able to send spacecraft to planets outside our solar system anytime in the near future, and any sentient being on another planet capable of communicating with us anytime in the near future would have to be at least as intelligent as we are.",
+    "questionStem": "The argument's conclusion can be properly inferred if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "There are no sentient beings on planets in our solar system other than those on Earth.",
+      "B": "Any beings that are at least as intelligent as humans would want to communicate with sentient beings outside their own solar systems.",
+      "C": "If there is a sentient being on another planet that is as intelligent as humans are, we will not be able to send spacecraft to the being's planet anytime in the near future.",
+      "D": "If a sentient being on another planet cannot communicate with us, then the only way to detect its existence is by sending a spacecraft to its planet.",
+      "E": "Any sentient beings on planets outside our solar system that are at least as intelligent as humans would be capable of communicating with us."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Doctor: Medical researchers recently examined a large group of individuals who said that they had never experienced serious back pain. Half of the members of the group turned out to have bulging or slipped disks in their spines, conditions often blamed for serious back pain. Since these individuals with bulging or slipped disks evidently felt no pain from them, these conditions could not lead to serious back pain in people who do experience such pain.",
+    "questionStem": "The reasoning in the doctor's argument is most vulnerable to the criticism that it fails to consider which one of the following possibilities?",
+    "answerChoices": {
+      "A": "A factor that need not be present in order for a certain effect to arise may nonetheless be sufficient to produce that effect.",
+      "B": "A factor that is not in itself sufficient to produce a certain effect may nonetheless be partly responsible for that effect in some instances.",
+      "C": "An effect that occurs in the absence of a particular phenomenon might not occur when that phenomenon is present.",
+      "D": "A characteristic found in half of a given sample of the population might not occur in half of the entire population.",
+      "E": "A factor that does not bring about a certain effect may nonetheless be more likely to be present when the effect occurs than when the effect does not occur."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Many workers who handled substance T in factories became seriously ill years later. We now know T caused at least some of their illnesses. Earlier ignorance of this connection does not absolve T's manufacturer of all responsibility. For had it investigated the safety of T before allowing workers to be exposed to it, many of their illnesses would have been prevented.",
+    "questionStem": "Which one of the following principles most helps to justify the conclusion above?",
+    "answerChoices": {
+      "A": "Employees who are harmed by substances they handle on the job should be compensated for medical costs they incur as a result.",
+      "B": "Manufacturers should be held responsible only for the preventable consequences of their actions.",
+      "C": "Manufacturers have an obligation to inform workers of health risks of which they are aware.",
+      "D": "Whether or not an action's consequences were preventable is irrelevant to whether a manufacturer should be held responsible for those consequences.",
+      "E": "Manufacturers should be held responsible for the consequences of any of their actions that harm innocent people if those consequences were preventable."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Method of Reasoning",
+    "questionDifficulty": 1,
+    "stimulus": "It is virtually certain that the government contract for building the new highway will be awarded to either Phoenix Contracting or Cartwright Company. I have just learned that the government has decided not to award the contract to Cartwright Company. It is therefore almost inevitable that Phoenix Contracting will be awarded the contract.",
+    "questionStem": "The argument proceeds by",
+    "answerChoices": {
+      "A": "concluding that it is extremely likely that an event will occur by ruling out the only probable alternative",
+      "B": "inferring, from a claim that one of two possible events will occur, that the other event will not occur",
+      "C": "refuting a claim that a particular event is inevitable by establishing the possibility of an alternative event",
+      "D": "predicting a future event on the basis of an established pattern of past events",
+      "E": "inferring a claim about the probability of a particular event from a general statistical statement"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Researchers have found that children in large families—particularly the younger siblings—generally have fewer allergies than children in small families do. They hypothesize that exposure to germs during infancy makes people less likely to develop allergies.",
+    "questionStem": "Which one of the following, if true, most supports the researchers' hypothesis?",
+    "answerChoices": {
+      "A": "In countries where the average number of children per family has decreased over the last century, the incidence of allergies has increased.",
+      "B": "Children in small families generally eat more kinds of very allergenic foods than children in large families do.",
+      "C": "Some allergies are life threatening, while many diseases caused by germs produce only temporary discomfort.",
+      "D": "Children whose parents have allergies have an above-average likelihood of developing allergies themselves.",
+      "E": "Children from small families who entered day care before age one were less likely to develop allergies than children from small families who entered day care later."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Film preservation requires transferring old movies from their original material—unstable, deteriorating nitrate film—to stable acetate film. But this is a time-consuming, expensive process, and there is no way to transfer all currently deteriorating nitrate films to acetate before they disintegrate. So some films from the earliest years of Hollywood will not be preserved.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "No new technology for transferring old movies from nitrate film to acetate film will ever be developed.",
+      "B": "Transferring films from nitrate to acetate is not the least expensive way of preserving them.",
+      "C": "Not many films from the earliest years of Hollywood have already been transferred to acetate.",
+      "D": "Some films from the earliest years of Hollywood currently exist solely in their original material.",
+      "E": "The least popular films from the earliest years of Hollywood are the ones most likely to be lost."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Evaluate",
+    "questionDifficulty": 5,
+    "stimulus": "In a recent study of arthritis, researchers tried but failed to find any correlation between pain intensity and any of those features of the weather—humidity, temperature swings, barometric pressure—usually cited by arthritis sufferers as the cause of their increased pain. Those arthritis sufferers in the study who were convinced of the existence of such a correlation gave widely varying accounts of the time delay between the occurrence of what they believed to be the relevant feature of the weather and the increased intensity of the pain. Thus, this study __________.",
+    "questionStem": "Of the following, which one most logically completes the argument?",
+    "answerChoices": {
+      "A": "indicates that the weather affects some arthritis sufferers more quickly than it does other arthritis sufferers",
+      "B": "indicates that arthritis sufferers' beliefs about the causes of the pain they feel may affect their assessment of the intensity of that pain",
+      "C": "suggests that arthritis sufferers are imagining the correlation they assert to exist",
+      "D": "suggests that some people are more susceptible to weather-induced arthritis pain than are others",
+      "E": "suggests that the scientific investigation of possible links between weather and arthritis pain is impossible"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "Cities with healthy economies typically have plenty of job openings. Cities with high-technology businesses also tend to have healthy economies, so those in search of jobs should move to a city with high-technology businesses.",
+    "questionStem": "The reasoning in which one of the following is most similar to the reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Older antiques are usually the most valuable. Antique dealers generally authenticate the age of the antiques they sell, so those collectors who want the most valuable antiques should purchase their antiques from antique dealers.",
+      "B": "Antique dealers who authenticate the age of the antiques they sell typically have plenty of antiques for sale. Since the most valuable antiques are those that have had their ages authenticated, antique collectors in search of valuable antiques should purchase their antiques from antique dealers.",
+      "C": "Antiques that have had their ages authenticated tend to be valuable. Since antique dealers generally carry antiques that have had their ages authenticated, those collectors who want antiques that are valuable should purchase their antiques from antique dealers.",
+      "D": "Many antique collectors know that antique dealers can authenticate the age of the antiques they sell. Since antiques that have had their ages authenticated are always the most valuable, most antique collectors who want antiques that are valuable tend to purchase their antiques from antique dealers.",
+      "E": "Many antiques increase in value once they have had their ages authenticated by antique dealers. Since antique dealers tend to have plenty of valuable antiques, antique collectors who prefer to purchase the most valuable antiques should purchase antiques from antique dealers."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 4,
+    "questionNumber": 26,
+    "questionType": "Strengthen/Explain EXCEPT",
+    "questionDifficulty": 3,
+    "stimulus": "Sociologist: A recent study of 5,000 individuals found, on the basis of a physical exam, that more than 25 percent of people older than 65 were malnourished, though only 12 percent of the people in this age group fell below government poverty standards. In contrast, a greater percentage of the people 65 or younger fell below poverty standards than were found in the study to be malnourished.",
+    "questionStem": "Each of the following, if true, helps to explain the findings of the study cited by the sociologist except:",
+    "answerChoices": {
+      "A": "Doctors are less likely to correctly diagnose and treat malnutrition in their patients who are over 65 than in their younger patients.",
+      "B": "People over 65 are more likely to take medications that increase their need for certain nutrients than are people 65 or younger.",
+      "C": "People over 65 are more likely to suffer from loss of appetite due to medication than are people 65 or younger.",
+      "D": "People 65 or younger are no more likely to fall below government poverty standards than are people over 65.",
+      "E": "People 65 or younger are less likely to have medical conditions that interfere with their digestion than are people over 65."
+    },
+    "correctAnswer": "D"
+  }
+]

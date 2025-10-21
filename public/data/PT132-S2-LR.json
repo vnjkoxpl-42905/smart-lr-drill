@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Principle Illustrated",
+    "questionDifficulty": 1,
+    "stimulus": "In a recent study, a group of young children were taught the word \"stairs\" while walking up and down a flight of stairs. Later that day, when the children were shown a video of a person climbing a ladder, they all called the ladder stairs.",
+    "questionStem": "Which one of the following principles is best illustrated by the study described above?",
+    "answerChoices": {
+      "A": "When young children repeatedly hear a word without seeing the object denoted by the word, they sometimes apply the word to objects not denoted by the word.",
+      "B": "Young children best learn words when they are shown how the object denoted by the word is used.",
+      "C": "The earlier in life a child encounters and uses an object, the easier it is for that child to learn how not to misuse the word denoting that object.",
+      "D": "Young children who learn a word by observing how the object denoted by that word is used sometimes apply that word to a different object that is similarly used.",
+      "E": "Young children best learn the names of objects when the objects are present at the time the children learn the words and when no other objects are simultaneously present."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Among people who live to the age of 100 or more, a large proportion have led “unhealthy” lives: smoking, consuming alcohol, eating fatty foods, and getting little exercise. Since such behavior often leads to shortened life spans, it is likely that exceptionally long-lived people are genetically disposed to having long lives.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "There is some evidence that consuming a moderate amount of alcohol can counteract the effects of eating fatty foods.",
+      "B": "Some of the exceptionally long-lived people who do not smoke or drink do eat fatty foods and get little exercise.",
+      "C": "Some of the exceptionally long-lived people who exercise regularly and avoid fatty foods do smoke or consume alcohol.",
+      "D": "Some people who do not live to the age of 100 also lead unhealthy lives.",
+      "E": "Nearly all people who live to 100 or more have siblings who are also long-lived."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Medications with an unpleasant taste are generally produced only in tablet, capsule, or soft-gel form. The active ingredient in medication M is a waxy substance that cannot tolerate the heat used to manufacture tablets because it has a low melting point. So, since the company developing M does not have soft-gel manufacturing technology and manufactures all its medications itself, M will most likely be produced in capsule form.",
+    "questionStem": "The conclusion is most strongly supported by the reasoning in the argument if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Medication M can be produced in liquid form.",
+      "B": "Medication M has an unpleasant taste.",
+      "C": "No medication is produced in both capsule and soft-gel form.",
+      "D": "Most medications with a low melting point are produced in soft-gel form.",
+      "E": "Medications in capsule form taste less unpleasant than those in tablet or soft-gel form."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Carol Morris wants to own a majority of the shares of the city's largest newspaper, The Daily. The only obstacle to Morris's amassing a majority of these shares is that Azedcorp, which currently owns a majority, has steadfastly refused to sell. Industry analysts nevertheless predict that Morris will soon be the majority owner of The Daily.",
+    "questionStem": "Which one of the following, if true, provides the most support for the industry analysts' prediction?",
+    "answerChoices": {
+      "A": "Azedcorp does not own shares of any newspaper other than The Daily.",
+      "B": "Morris has recently offered Azedcorp much more for its shares of The Daily than Azedcorp paid for them.",
+      "C": "No one other than Morris has expressed any interest in purchasing a majority of The Daily's shares.",
+      "D": "Morris already owns more shares of The Daily than anyone except Azedcorp.",
+      "E": "Azedcorp is financially so weak that bankruptcy will probably soon force the sale of its newspaper holdings."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Area resident: Childhood lead poisoning has declined steadily since the 1970s, when leaded gasoline was phased out and lead paint was banned. But recent statistics indicate that 25 percent of this area’s homes still contain lead paint that poses significant health hazards. Therefore, if we eliminate the lead paint in those homes, childhood lead poisoning in the area will finally be eradicated.",
+    "questionStem": "The area resident's argument is flawed in that it",
+    "answerChoices": {
+      "A": "relies on statistical claims that are likely to be unreliable",
+      "B": "relies on an assumption that is tantamount to assuming that the conclusion is true",
+      "C": "fails to consider that there may be other significant sources of lead in the area’s environment",
+      "D": "takes for granted that lead paint in homes can be eliminated economically",
+      "E": "takes for granted that children reside in all of the homes in the area that contain lead paint"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "Although some nutritional facts about soft drinks are listed on their labels, exact caffeine content is not. Listing exact caffeine content would make it easier to limit, but not eliminate, one's caffeine intake. If it became easier for people to limit, but not eliminate, their caffeine intake, many people would do so, which would improve their health.",
+    "questionStem": "If all the statements above are true, which one of the following must be true?",
+    "answerChoices": {
+      "A": "The health of at least some people would improve if exact caffeine content were listed on soft-drink labels.",
+      "B": "Many people will be unable to limit their caffeine intake if exact caffeine content is not listed on soft-drink labels.",
+      "C": "Many people will find it difficult to eliminate their caffeine intake if they have to guess exactly how much caffeine is in their soft drinks.",
+      "D": "People who wish to eliminate, rather than simply limit, their caffeine intake would benefit if exact caffeine content were listed on soft-drink labels.",
+      "E": "The health of at least some people would worsen if everyone knew exactly how much caffeine was in their soft drinks."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "When the famous art collector Vidmar died, a public auction of her collection, the largest privately owned, was held. \"I can't possibly afford any of those works because hers is among the most valuable collections ever assembled by a single person,\" declared art lover MacNeil.",
+    "questionStem": "The flawed pattern of reasoning in which one of the following is most closely parallel to that in MacNeil's argument?",
+    "answerChoices": {
+      "A": "Each word in the book is in French. So the whole book is in French.",
+      "B": "The city council voted unanimously to adopt the plan. So councilperson Martinez voted to adopt the plan.",
+      "C": "This paragraph is long. So the sentences that comprise it are long.",
+      "D": "The members of the company are old. So the company itself is old.",
+      "E": "The atoms comprising this molecule are elements. So the molecule itself is an element."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "A leading critic of space exploration contends that it would be wrong, given current technology, to send a group of explorers to Mars, since the explorers would be unlikely to survive the trip. But that exaggerates the risk. There would be a well-engineered backup system at every stage of the long and complicated journey. A fatal catastrophe is quite unlikely at any given stage if such a backup system is in place.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "infers that something is true of a whole merely from the fact that it is true of each of the parts",
+      "B": "infers that something cannot occur merely from the fact that it is unlikely to occur",
+      "C": "draws a conclusion about what must be the case based on evidence about what is probably the case",
+      "D": "infers that something will work merely because it could work",
+      "E": "rejects a view merely on the grounds that an inadequate argument has been made for it"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "A retrospective study is a scientific study that tries to determine the causes of subjects' present characteristics by looking for significant connections between the present characteristics of subjects and what happened to those subjects in the past, before the study began. Because retrospective studies of human subjects must use the subjects' reports about their own pasts, however, such studies cannot reliably determine the causes of human subjects' present characteristics.",
+    "questionStem": "Which one of the following, if assumed, enables the argument's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "Whether or not a study of human subjects can reliably determine the causes of those subjects' present characteristics may depend at least in part on the extent to which that study uses inaccurate reports about the subjects' pasts.",
+      "B": "A retrospective study cannot reliably determine the causes of human subjects' present characteristics unless there exist correlations between the present characteristics of the subjects and what happened to those subjects in the past.",
+      "C": "In studies of human subjects that attempt to find connections between subjects' present characteristics and what happened to those subjects in the past, the subjects' reports about their own pasts are highly susceptible to inaccuracy.",
+      "D": "If a study of human subjects uses only accurate reports about the subjects' pasts, then that study can reliably determine the causes of those subjects' present characteristics.",
+      "E": "Every scientific study in which researchers look for significant connections between the present characteristics of subjects and what happened to those subjects in the past must use the subjects' reports about their own pasts."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Gigantic passenger planes currently being developed will have enough space to hold shops and lounges in addition to passenger seating. However, the additional space will more likely be used for more passenger seating. The number of passengers flying the air-traffic system is expected to triple within 20 years, and it will be impossible for airports to accommodate enough normal-sized jet planes to carry that many passengers.",
+    "questionStem": "Which one of the following most accurately states the conclusion drawn in the argument?",
+    "answerChoices": {
+      "A": "Gigantic planes currently being developed will have enough space in them to hold shops and lounges as well as passenger seating.",
+      "B": "The additional space in the gigantic planes currently being developed is more likely to be filled with passenger seating than with shops and lounges.",
+      "C": "The number of passengers flying the air-traffic system is expected to triple within 20 years.",
+      "D": "In 20 years, it will be impossible for airports to accommodate enough normal-sized planes to carry the number of passengers that are expected to be flying then.",
+      "E": "In 20 years, most airline passengers will be flying in gigantic passenger planes."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Scientist: To study the comparative effectiveness of two experimental medications for athlete's foot, a representative sample of people with athlete's foot were randomly assigned to one of two groups. One group received only medication M, and the other received only medication N. The only people whose athlete's foot was cured had been given medication M.\nReporter: This means, then, that if anyone in the study had athlete's foot that was not cured, that person did not receive medication M.",
+    "questionStem": "Which one of the following most accurately describes the reporter's error in reasoning?",
+    "answerChoices": {
+      "A": "The reporter concludes from evidence showing only that M can cure athlete's foot that M always cures athlete's foot.",
+      "B": "The reporter illicitly draws a conclusion about the population as a whole on the basis of a study conducted only on a sample of the population.",
+      "C": "The reporter presumes, without providing justification, that medications M and N are available to people who have athlete's foot but did not participate in the study.",
+      "D": "The reporter fails to allow for the possibility that athlete's foot may be cured even if neither of the two medications studied is taken.",
+      "E": "The reporter presumes, without providing justification, that there is no sizeable subgroup of people whose athlete's foot will be cured only if they do not take medication M."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Paleontologist: Plesiosauromorphs were gigantic, long-necked marine reptiles that ruled the oceans during the age of the dinosaurs. Most experts believe that plesiosauromorphs lurked and quickly ambushed their prey. However, plesiosauromorphs probably hunted by chasing their prey over long distances. Plesiosauromorph fins were quite long and thin, like the wings of birds specialized for long-distance flight.",
+    "questionStem": "Which one of the following is an assumption on which the paleontologist's argument depends?",
+    "answerChoices": {
+      "A": "Birds and reptiles share many physical features because they descend from common evolutionary ancestors.",
+      "B": "During the age of dinosaurs, plesiosauromorphs were the only marine reptiles that had long, thin fins.",
+      "C": "A gigantic marine animal would not be able to find enough food to meet the caloric requirements dictated by its body size if it did not hunt by chasing prey over long distances.",
+      "D": "Most marine animals that chase prey over long distances are specialized for long-distance swimming.",
+      "E": "The shape of a marine animal's fin affects the way the animal swims in the same way as the shape of a bird's wing affects the way the bird flies."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Buying elaborate screensavers—programs that put moving images on a computer monitor to prevent damage—can cost a company far more in employee time than it saves in electricity and monitor protection. Employees cannot resist spending time playing with screensavers that flash interesting graphics across their screens.",
+    "questionStem": "Which one of the following most closely conforms to the principle illustrated above?",
+    "answerChoices": {
+      "A": "A school that chooses textbooks based on student preference may not get the most economical package.",
+      "B": "An energy-efficient insulation system may cost more up front but will ultimately save money over the life of the house.",
+      "C": "The time that it takes to have a pizza delivered may be longer than it takes to cook a complete dinner.",
+      "D": "A complicated hotel security system may cost more in customer goodwill than it saves in losses by theft.",
+      "E": "An electronic keyboard may be cheaper to buy than a piano but more expensive to repair."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Method of Reasoning",
+    "questionDifficulty": 3,
+    "stimulus": "Music professor: Because rap musicians can work alone in a recording studio, they need not accommodate supporting musicians' wishes. Further, learning to rap is not as formal a process as learning an instrument. Thus, rap is an extremely individualistic and nontraditional musical form.\nMusic critic: But rap appeals to tradition by using bits of older songs. Besides, the themes and styles of rap have developed into a tradition. And successful rap musicians do not perform purely idiosyncratically but conform their work to the preferences of the public.",
+    "questionStem": "The music critic's response to the music professor's argument",
+    "answerChoices": {
+      "A": "challenges it by offering evidence against one of the stated premises on which its conclusion concerning rap music is based",
+      "B": "challenges its conclusion concerning rap music by offering certain additional observations that the music professor does not take into account in his argument",
+      "C": "challenges the grounds on which the music professor generalizes from the particular context of rap music to the broader context of musical tradition and individuality",
+      "D": "challenges it by offering an alternative explanation of phenomena that the music professor cites as evidence for his thesis about rap music",
+      "E": "challenges each of a group of claims about tradition and individuality in music that the music professor gives as evidence in his argument"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Speaker: Like many contemporary critics, Smith argues that the true meaning of an author's statements can be understood only through insight into the author's social circumstances. But this same line of analysis can be applied to Smith's own words. Thus, if she is right we should be able, at least in part, to discern from Smith's social circumstances the \"true meaning\" of Smith's statements. This, in turn, suggests that Smith herself is not aware of the true meaning of her own words.",
+    "questionStem": "The speaker's main conclusion logically follows if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Insight into the intended meaning of an author's work is not as important as insight into its true meaning.",
+      "B": "Smith lacks insight into her own social circumstances.",
+      "C": "There is just one meaning that Smith intends her work to have.",
+      "D": "Smith's theory about the relation of social circumstances to the understanding of meaning lacks insight.",
+      "E": "The intended meaning of an author's work is not always good evidence of its true meaning."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Tissue biopsies taken on patients who have undergone throat surgery show that those who snored frequently were significantly more likely to have serious abnormalities in their throat muscles than those who snored rarely or not at all. This shows that snoring can damage the throat of the snorer.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "The study relied on the subjects' self-reporting to determine whether or not they snored frequently.",
+      "B": "The patients' throat surgery was not undertaken to treat abnormalities in their throat muscles.",
+      "C": "All of the test subjects were of similar age and weight and in similar states of health.",
+      "D": "People who have undergone throat surgery are no more likely to snore than people who have not undergone throat surgery.",
+      "E": "The abnormalities in the throat muscles discovered in the study do not cause snoring."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "One should never sacrifice one's health in order to acquire money, for without health, happiness is not obtainable.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Money should be acquired only if its acquisition will not make happiness unobtainable.",
+      "B": "In order to be happy one must have either money or health.",
+      "C": "Health should be valued only as a precondition for happiness.",
+      "D": "Being wealthy is, under certain conditions, conducive to unhappiness.",
+      "E": "Health is more conducive to happiness than wealth is."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Must Be True EXCEPT",
+    "questionDifficulty": 3,
+    "stimulus": "Vanessa: All computer code must be written by a pair of programmers working at a single workstation. This is needed to prevent programmers from writing idiosyncratic code that can be understood only by the original programmer.\nJo: Most programming projects are kept afloat by the best programmers on the team, who are typically at least 100 times more productive than the worst. Since they generally work best when they work alone, the most productive programmers must be allowed to work by themselves.",
+    "questionStem": "Each of the following assignments of computer programmers is consistent both with the principle expressed by Vanessa and with the principle expressed by Jo except:",
+    "answerChoices": {
+      "A": "Olga and Kensuke are both programmers of roughly average productivity who feel that they are more productive when working alone. They have been assigned to work together at a single workstation.",
+      "B": "John is experienced but is not among the most productive programmers on the team. He has been assigned to mentor Tyrone, a new programmer who is not yet very productive. They are to work together at a single workstation.",
+      "C": "Although not among the most productive programmers on the team, Chris is more productive than Jennifer. They have been assigned to work together at a single workstation.",
+      "D": "Yolanda is the most productive programmer on the team. She has been assigned to work with Mike, who is also very productive. They are to work together at the same workstation.",
+      "E": "Kevin and Amy both have a reputation for writing idiosyncratic code; neither is unusually productive. They have been assigned to work together at the same workstation."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "In West Calverton, most pet stores sell exotic birds, and most of those that sell exotic birds also sell tropical fish. However, any pet store there that sells tropical fish but not exotic birds does sell gerbils; and no independently owned pet stores in West Calverton sell gerbils.",
+    "questionStem": "If the statements above are true, which one of the following must be true?",
+    "answerChoices": {
+      "A": "Most pet stores in West Calverton that are not independently owned do not sell exotic birds.",
+      "B": "No pet stores in West Calverton that sell tropical fish and exotic birds sell gerbils.",
+      "C": "Some pet stores in West Calverton that sell gerbils also sell exotic birds.",
+      "D": "No independently owned pet store in West Calverton sells tropical fish but not exotic birds.",
+      "E": "Any independently owned pet store in West Calverton that does not sell tropical fish sells exotic birds."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Strengthen/Explain",
+    "questionDifficulty": 4,
+    "stimulus": "Astronomer: Earlier estimates of the distances of certain stars from Earth would mean that these stars are about 1 billion years older than the universe itself, an impossible scenario. My estimates of the distances indicate that these stars are much farther away than previously thought. And the farther away the stars are, the greater their intrinsic brightness must be, given their appearance to us on Earth. So the new estimates of these stars' distances from Earth help resolve the earlier conflict between the ages of these stars and the age of the universe.",
+    "questionStem": "Which one of the following, if true, most helps to explain why the astronomer's estimates of the stars' distances from Earth help resolve the earlier conflict between the ages of these stars and the age of the universe?",
+    "answerChoices": {
+      "A": "The stars are the oldest objects yet discovered in the universe.",
+      "B": "The younger the universe is, the more bright stars it is likely to have.",
+      "C": "The brighter a star is, the younger it is.",
+      "D": "How bright celestial objects appear to be depends on how far away from the observer they are.",
+      "E": "New telescopes allow astronomers to see a greater number of distant stars."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "Most large nurseries sell raspberry plants primarily to commercial raspberry growers and sell only plants that are guaranteed to be disease-free. However, the shipment of raspberry plants that Johnson received from Wally's Plants carried a virus that commonly afflicts raspberries.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "If Johnson is a commercial raspberry grower and Wally's Plants is not a large nursery, then the shipment of raspberry plants that Johnson received was probably guaranteed to be disease-free.",
+      "B": "Johnson is probably not a commercial raspberry grower if the shipment of raspberry plants that Johnson received from Wally's Plants was not entirely as it was guaranteed to be.",
+      "C": "If Johnson is not a commercial raspberry grower, then Wally's Plants is probably not a large nursery.",
+      "D": "Wally's Plants is probably not a large, well-run nursery if it sells its raspberry plants primarily to commercial raspberry growers.",
+      "E": "If Wally's Plants is a large nursery, then the raspberry plants that Johnson received in the shipment were probably not entirely as they were guaranteed to be."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Drug company manager: Our newest product is just not selling. One way to save it would be a new marketing campaign. This would not guarantee success, but it is one chance to save the product, so we should try it.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the manager's argument?",
+    "answerChoices": {
+      "A": "The drug company has invested heavily in its newest product, and losses due to this product would be harmful to the company's profits.",
+      "B": "Many new products fail whether or not they are supported by marketing campaigns.",
+      "C": "The drug company should not undertake a new marketing campaign for its newest product if the campaign has no chance to succeed.",
+      "D": "Undertaking a new marketing campaign would endanger the drug company's overall position by necessitating cutbacks in existing marketing campaigns.",
+      "E": "Consumer demand for the drug company's other products has been strong in the time since the company's newest product was introduced."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 4,
+    "stimulus": "Consumer advocate: TMD, a pesticide used on peaches, shows no effects on human health when it is ingested in the amount present in the per capita peach consumption in this country. But while 80 percent of the population eat no peaches, others, including small children, consume much more than the national average, and thus ingest disproportionately large amounts of TMD. So even though the use of TMD on peaches poses minimal risk to most of the population, it has not been shown to be an acceptable practice.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the consumer advocate's argumentation?",
+    "answerChoices": {
+      "A": "The possibility that more data about a pesticide's health effects might reveal previously unknown risks at low doses warrants caution in assessing that pesticide's overall risks.",
+      "B": "The consequences of using a pesticide are unlikely to be acceptable when a majority of the population is likely to ingest it.",
+      "C": "Use of a pesticide is acceptable only if it is used for its intended purpose and the pesticide has been shown not to harm any portion of the population.",
+      "D": "Society has a special obligation to protect small children from pesticides unless average doses received by the population are low and have not been shown to be harmful to children's health.",
+      "E": "Measures taken to protect the population from a harm sometimes turn out to be the cause of a more serious harm to certain segments of the population."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Legal commentator: The goal of a recently enacted law that bans smoking in workplaces is to protect employees from secondhand smoke. But the law is written in such a way that it cannot be interpreted as ever prohibiting people from smoking in their own homes.",
+    "questionStem": "The statements above, if true, provide a basis for rejecting which one of the following claims?",
+    "answerChoices": {
+      "A": "The law will be interpreted in a way that is inconsistent with the intentions of the legislators who supported it.",
+      "B": "Supporters of the law believe that it will have a significant impact on the health of many workers.",
+      "C": "The law offers no protection from secondhand smoke for people outside of their workplaces.",
+      "D": "Most people believe that smokers have a fundamental right to smoke in their own homes.",
+      "E": "The law will protect domestic workers such as housecleaners from secondhand smoke in their workplaces."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "University president: Our pool of applicants has been shrinking over the past few years. One possible explanation of this unwelcome phenomenon is that we charge too little for tuition and fees. Prospective students and their parents conclude that the quality of education they would receive at this institution is not as high as that offered by institutions with higher tuition. So, if we want to increase the size of our applicant pool, we need to raise our tuition and fees.",
+    "questionStem": "The university president's argument requires the assumption that",
+    "answerChoices": {
+      "A": "the proposed explanation for the decline in applications applies in this case",
+      "B": "the quality of a university education is dependent on the amount of tuition charged by the university",
+      "C": "an increase in tuition and fees at the university would guarantee a larger applicant pool",
+      "D": "there is no additional explanation for the university's shrinking applicant pool",
+      "E": "the amount charged by the university for tuition has not increased in recent years"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT132",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Editorial: It has been suggested that private, for-profit companies should be hired to supply clean drinking water to areas of the world where it is unavailable now. But water should not be supplied by private companies. After all, clean water is essential for human health, and the purpose of a private company is to produce profit, not to promote health.",
+    "questionStem": "Which one of the following principles, if valid, would most help to justify the reasoning in the editorial?",
+    "answerChoices": {
+      "A": "A private company should not be allowed to supply a commodity that is essential to human health unless that commodity is also supplied by a government agency.",
+      "B": "If something is essential for human health and private companies are unwilling or unable to supply it, then it should be supplied by a government agency.",
+      "C": "Drinking water should never be supplied by an organization that is not able to consistently supply clean, safe water.",
+      "D": "The mere fact that something actually promotes human health is not sufficient to show that its purpose is to promote health.",
+      "E": "If something is necessary for human health, then it should be provided by an organization whose primary purpose is the promotion of health."
+    },
+    "correctAnswer": "E"
+  }
+]
