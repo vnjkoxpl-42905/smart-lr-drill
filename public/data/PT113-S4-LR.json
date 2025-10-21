@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "Criminals often have an unusual self-image. Embezzlers often think of their actions as \"only borrowing money.\" Many people convicted of violent crimes rationalize their actions by some sort of denial; either the victim \"deserved it\" and so the action was justified, or \"it simply wasn't my fault.\" Thus, in many cases, by criminals' characterization of their situations, _______________",
+    "questionStem": "Which one of the following most logically completes the passage?",
+    "answerChoices": {
+      "A": "they ought to be rewarded for their actions",
+      "B": "they are perceived to be the victim of some other criminal",
+      "C": "their actions are not truly criminal",
+      "D": "the criminal justice system is inherently unfair",
+      "E": "they deserve only a light sentence for their crimes"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "The vomeronasal organ (VNO) is found inside the noses of various animals. While its structural development and function are clearer in other animals, most humans have a VNO that is detectable, though only microscopically. When researchers have been able to stimulate VNO cells in humans, the subjects have reported experiencing subtle smell sensations. It seems, then, that the VNO, though not completely understood, is a functioning sensory organ in most humans.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "It is not known whether the researchers succeeded in stimulating only VNO cells in the human subjects' noses.",
+      "B": "Relative to its occurrence in certain other animals, the human VNO appears to be anatomically rudimentary and underdeveloped.",
+      "C": "Certain chemicals that play a leading role in the way the VNO functions in animals in which it is highly developed do not appear to play a role in its functioning in humans.",
+      "D": "Secondary anatomical structures associated with the VNO in other animals seem to be absent in humans.",
+      "E": "For many animal species, the VNO is thought to subtly enhance the sense of smell."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "An instructor presented two paintings to a class. She said that the first had hung in prestigious museums but the second was produced by an unknown amateur. Each student was asked which painting was better. Everyone selected the first. The instructor later presented the same two paintings in the same order to a different class. This time she said that the first was produced by an unknown amateur but the second had hung in prestigious museums. In this class, everyone said that the second painting was better.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Most of the students would not like any work of art that they believed to have been produced by an unknown amateur.",
+      "B": "None of the claims that the instructor made about the paintings was true.",
+      "C": "Each of the students would like most of the paintings hanging in any prestigious museum.",
+      "D": "In judging the paintings, some of the students were affected by what they had been told about the history of the paintings.",
+      "E": "Had the instructor presented the paintings without telling the students anything about them, almost all of the students would have judged them to be roughly equal in artistic worth."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "An overwhelming number of industry's chief executive officers who earn over $250,000 annually attended prestigious business schools. Therefore Greta Harris, who attended a prestigious business school, must be a chief executive officer who earns over $250,000 annually.",
+    "questionStem": "Which one of the following exhibits flawed reasoning most nearly parallel to that exhibited in the argument above?",
+    "answerChoices": {
+      "A": "Many opera singers are high-strung. Consequently it must be true that Fred, a high-strung opera singer, will develop the health problems associated with being high-strung.",
+      "B": "The most famous opera singers practiced constantly in order to improve their voices. Therefore Franz will be more famous than will his rival Otto, who rarely practices.",
+      "C": "Many of the most popular opera singers are Italian. Thus it must be true that opera is greatly enjoyed by many Italians.",
+      "D": "Quite a few opera singers carry a bent nail onstage for good luck. Therefore George, an opera singer, must owe his good luck to the bent nail that he always carries.",
+      "E": "A great many successful opera singers studied more than one language. Hence Eileen must be a successful opera singer, since she studied more than one language."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "After 1950, in response to record growth in worldwide food demand, farmers worldwide sharply increased fertilizer use. As a result, the productivity of farmland more than doubled by 1985. Since 1985, farmers have sought to increase farmland productivity even further. Nevertheless, worldwide fertilizer use has declined by 6 percent between 1985 and the present.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy in the information above?",
+    "answerChoices": {
+      "A": "Since 1985 the rate at which the world's population has increased has exceeded the rate at which new arable land has been created through irrigation and other methods.",
+      "B": "Several varieties of crop plants that have become popular recently, such as soybeans, are as responsive to fertilizer as are traditional grain crops.",
+      "C": "Between 1950 and 1985 farmers were able to increase the yield of many varieties of crop plants.",
+      "D": "After fertilizer has been added to soil for several years, adding fertilizer to the soil in subsequent years does not significantly improve crop production.",
+      "E": "Between 1975 and 1980 fertilizer prices temporarily increased because of labor disputes in several fertilizer-exporting nations, and these disputes disrupted worldwide fertilizer production."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "In a study, infant monkeys given a choice between two surrogate mothers—a bare wire structure equipped with a milk bottle, or a soft, suede-covered wire structure equipped with a milk bottle—unhesitatingly chose the latter. When given a choice between a bare wire structure equipped with a milk bottle and a soft, suede-covered wire structure lacking a milk bottle, they unhesitatingly chose the former.",
+    "questionStem": "Which one of the following is most supported by the information above?",
+    "answerChoices": {
+      "A": "Infant monkeys' desire for warmth and comfort is nearly as strong as their desire for food.",
+      "B": "For infant monkeys, suede is a less convincing substitute for their mother's touch than animal fur would be.",
+      "C": "For infant monkeys, a milk bottle is a less convincing substitute for their mother's teat than suede is for their mother's touch.",
+      "D": "For infant monkeys, a milk bottle is an equally convincing substitute for their mother's teat as suede is for their mother's touch.",
+      "E": "Infant monkeys' desire for food is stronger than their desire for warmth and comfort."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 1,
+    "stimulus": "Hazel: Faster and more accurate order processing would help our business. To increase profits, we should process orders electronically rather than manually, because customers' orders will then go directly to all relevant parties.\nMax: We would lose money if we started processing orders electronically. Most people prefer to interact with human beings when placing orders. If we switch to electronic order processing, our business will appear cold and inhuman, and we will attract fewer customers.",
+    "questionStem": "Hazel and Max disagree over whether",
+    "answerChoices": {
+      "A": "electronic order processing is faster and more accurate than is manual order processing",
+      "B": "faster and more accurate order processing would be financially beneficial to their business",
+      "C": "switching to electronic order processing would be financially beneficial to their business",
+      "D": "their business has an obligation to be as profitable as possible",
+      "E": "electronic order processing would appear cold and inhuman to most of their customers"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Commentator: In the new century, only nations with all the latest electronic technology will experience great economic prosperity. The people in these nations will be constantly bombarded with images of how people in other countries live. This will increase their tendency to question their own customs and traditions, leading to a dissolution of those customs and traditions. Hence, in the new century, the stability of a nation's cultural identity will likely _______________",
+    "questionStem": "Which one of the following most logically completes the commentator's argument?",
+    "answerChoices": {
+      "A": "depend on a just distribution of electronic technology among all nations",
+      "B": "decrease if that nation comes to have a high level of economic wealth",
+      "C": "be ensured by laws that protect the customs and traditions of that culture",
+      "D": "be threatened only if the people of that culture fail to acquire the latest technical skills",
+      "E": "be best maintained by ensuring gradual assimilation of new technical knowledge and skills"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Cultural historian: Universal acceptance of scientific theories that regard human beings only as natural objects subject to natural forces outside the individual's control will inevitably lead to a general decline in morality. After all, if people do not believe that they are responsible for their actions, they will feel unashamed when they act immorally, and a widespread failure of individuals to feel ashamed of their immoral actions is bound to lead to a general moral decline.",
+    "questionStem": "The conclusion drawn by the cultural historian follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Science does not enable human beings to control natural forces.",
+      "B": "Human beings who regard themselves only as natural objects will as a result lose their sense of responsibility for their actions.",
+      "C": "People who have a sense of shame for their moral transgressions will feel responsible for their actions.",
+      "D": "Some scientific theories hold that human beings are not responsible for their actions.",
+      "E": "Scientific explanations that regard human beings as in some respects independent of the laws of nature will not lead to a general decline in morality."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Lydia: Red squirrels are known to make holes in the bark of sugar maple trees and to consume the trees' sap. Since sugar maple sap is essentially water with a small concentration of sugar, the squirrels almost certainly are after either water or sugar. Water is easily available from other sources in places where maple trees grow, so the squirrels would not go to the trouble of chewing holes in trees just to get water. Therefore, they are probably after the sugar.\nGalina: It must be something other than sugar, because the concentration of sugar in the maple sap is so low that a squirrel would need to drink an enormous amount of sap to get any significant amount of sugar.",
+    "questionStem": "Lydia's argument proceeds by",
+    "answerChoices": {
+      "A": "dismissing potentially disconfirming data",
+      "B": "citing a general rule of which the conclusion is a specific instance",
+      "C": "presenting an observed action as part of a larger pattern of behavior",
+      "D": "drawing an analogy between well-understood phenomena and an unexplained phenomenon",
+      "E": "rejecting a possible alternative explanation for an observed phenomenon"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Lydia: Red squirrels are known to make holes in the bark of sugar maple trees and to consume the trees' sap. Since sugar maple sap is essentially water with a small concentration of sugar, the squirrels almost certainly are after either water or sugar. Water is easily available from other sources in places where maple trees grow, so the squirrels would not go to the trouble of chewing holes in trees just to get water. Therefore, they are probably after the sugar.\nGalina: It must be something other than sugar, because the concentration of sugar in the maple sap is so low that a squirrel would need to drink an enormous amount of sap to get any significant amount of sugar.",
+    "questionStem": "Which one of the following, if true, most undermines the force of Galina's attempted rebuttal of Lydia's argument?",
+    "answerChoices": {
+      "A": "Squirrels are known to like foods that have a high concentration of sugar.",
+      "B": "Once a hole in a sugar maple trunk has provided one red squirrel with sap, other red squirrels will make additional holes in its trunk.",
+      "C": "Trees other than sugar maples, whose sap contains a lower concentration of sugar than does sugar maple sap, are less frequently tapped by red squirrels.",
+      "D": "Red squirrels leave the sugar maple sap that slowly oozes out of the holes in the tree's trunk until much of the water in the sap has evaporated.",
+      "E": "During the season when sap can be obtained from sugar maple trees, the weather often becomes cold enough to prevent sap from oozing out of the trees."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Pundit: People complain about how ineffectual their legislative representatives are, but this apparent ineffectuality is simply the manifestation of compromises these representatives must make when they do what they were elected to do: compete for the government's scarce funds. So, when people express dissatisfaction with their legislative representatives, we can be assured that these representatives are simply doing what they were elected to do.",
+    "questionStem": "The pundit's argument is flawed because it takes for granted that",
+    "answerChoices": {
+      "A": "the apparent ineffectuality of legislative representatives is the only source of popular dissatisfaction with those representatives",
+      "B": "governmental resources that are currently scarce cannot become more abundant except by the actions of politicians",
+      "C": "constituents would continue to be dissatisfied with the effectuality of their legislative representatives if constituents were aware of the cause of this apparent ineffectuality",
+      "D": "legislative compromise inevitably results in popular dissatisfaction with politicians",
+      "E": "only elected public servants tend to elicit dissatisfaction among the public"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "When several of a dermatologist's patients complained of a rash on just one side of their faces, the dermatologist suspected that the cause was some kind of external contact. In each case it turned out that the rash occurred on the side of the face to which the telephone was held. The dermatologist concluded that the rash was caused by prolonged contact with telephones.",
+    "questionStem": "Each of the following, if true, provides additional support for the dermatologist's diagnosis except:",
+    "answerChoices": {
+      "A": "Many telephones are now manufactured using a kind of plastic to which some people are mildly allergic.",
+      "B": "Contact between other devices and the patients' faces occurred equally on both sides of their faces.",
+      "C": "Most of the patients had occupations that required them to use their telephones extensively.",
+      "D": "Telephones are used by most people in the industrialized world.",
+      "E": "The complaints occurred after an increase in the patients' use of the telephone."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "The fact that politicians in a certain country are trying to reduce government spending does not by itself explain why they have voted to eliminate all government-supported scholarship programs. Government spending could have been reduced even more if instead they had cut back on military spending.",
+    "questionStem": "Which one of the following arguments is most similar in its reasoning to the argument above?",
+    "answerChoices": {
+      "A": "The fact that Phyllis does not make much money at her new job does not by itself explain why she refuses to buy expensive clothing. Phyllis has always bought only inexpensive clothing even though she used to make a lot of money.",
+      "B": "The fact that Brooks has a part-time job does not by itself explain why he is doing poorly in school. Many students with part-time jobs are able to set aside enough time for study and thus maintain high grades.",
+      "C": "The fact that Sallie and Jim have different work styles does not by itself explain why they could not work together. Sallie and Jim could have resolved their differences if they had communicated more with one another when they began to work together.",
+      "D": "The fact that Roger wanted more companionship does not by itself explain why he adopted ten cats last year. He would not have adopted them all if anyone else had been willing to adopt some of them.",
+      "E": "The fact that Thelma's goal is to become famous does not by itself explain why she took up theatrical acting. It is easier to become famous through writing or directing plays than through theatrical acting."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Editorial: The threat of harsh punishment for a transgression usually decreases one's tendency to feel guilt or shame for committing that transgression, and the tendency to feel guilt or shame for committing a transgression reduces a person's tendency to commit transgressions. Thus, increasing the severity of the legal penalties for transgressions may amplify people's tendency to ignore the welfare of others.",
+    "questionStem": "Which one of the following is an assumption required by the editorial's argument?",
+    "answerChoices": {
+      "A": "Legal penalties do not determine the morality of an action.",
+      "B": "At least some actions that involve ignoring the welfare of others are transgressions.",
+      "C": "People who are concerned about threats to their own well-being tend to be less concerned about the welfare of others.",
+      "D": "The threat of harsh punishment deters people from committing transgressions only if this threat is at least sometimes carried out.",
+      "E": "Everyone has at least some tendency to feel guilt or shame for committing extremely severe transgressions."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "In determining the authenticity of a painting, connoisseurs claim to be guided by the emotional impact the work has on them. For example, if a painting purportedly by Rembrandt is expressive and emotionally moving in a certain way, then this is supposedly evidence that the work was created by Rembrandt himself, and not by one of his students. But the degree to which an artwork has an emotional impact differs wildly from person to person. So a connoisseur's assessment cannot be given credence.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "ignores the fact that anybody, not just a connoisseur, can give an assessment of the emotional impact of a painting",
+      "B": "is based on the consideration of the nature of just one painter's works, even though the conclusion is about paintings in general",
+      "C": "neglects the possibility that there may be widespread agreement among connoisseurs about emotional impact even when the public's assessment varies wildly",
+      "D": "presumes, without giving justification, that a painting's emotional impact is irrelevant to the determination of that painting's authenticity",
+      "E": "presumes, without offering evidence, that Rembrandt was better at conveying emotions in painting than were other painters"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "A year ago the government reduced the highway speed limit, and in the year since, there have been significantly fewer highway fatalities than there were in the previous year. Therefore, speed limit reduction can reduce traffic fatalities.",
+    "questionStem": "The argument is most vulnerable to the criticism that it takes for granted that",
+    "answerChoices": {
+      "A": "highway traffic has not increased over the past year",
+      "B": "the majority of drivers obeyed the new speed limit",
+      "C": "there is a relation between driving speed and the number of automobile accidents",
+      "D": "the new speed limit was more strictly enforced than the old",
+      "E": "the number of traffic fatalities the year before the new speed limit was introduced was not abnormally high"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "A plausible explanation of the disappearance of the dinosaurs is what is known as the comet theory. A large enough comet colliding with Earth could have caused a cloud of dust that enshrouded the planet and cooled the climate long enough to result in the dinosaurs' demise.",
+    "questionStem": "Which one of the following statements, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "One of the various schools of paleontology adheres to an explanation for the disappearance of the dinosaurs that is significantly different from the comet theory.",
+      "B": "Various species of animals from the same era as the dinosaurs and similar to them in physiology and habitat did not become extinct when the dinosaurs did.",
+      "C": "It cannot be determined from a study of dinosaur skeletons whether the animals died from the effects of a dust cloud.",
+      "D": "Many other animal species from the era of the dinosaurs did not become extinct at the same time the dinosaurs did.",
+      "E": "The consequences for vegetation and animals of a comet colliding with Earth are not fully understood."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Large-scale government projects designed to benefit everyone—such as roads, schools, and bridges—usually benefit some small segments of society, initially at least, more than others. The more equally and widely political power is distributed among the citizenry, the less likely such projects are to receive funding. Hence, government by referendum rather than by means of elected representatives tends to diminish, not enhance, the welfare of a society.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Large-scale government projects sometimes enhance the welfare of society.",
+      "B": "Large-scale projects are more likely to fulfill their intended purposes if they are not executed by the government.",
+      "C": "Government by referendum actually undermines the democratic process.",
+      "D": "The primary purpose of an equal distribution of political power is to enhance the welfare of society.",
+      "E": "Government by referendum is the only way to distribute political power equally and widely."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "The desire for praise is the desire to obtain, as a sign that one is good, the favorable opinions of others. But because people merit praise only for those actions motivated by a desire to help others, it follows that one who aids others primarily out of a desire for praise does not deserve praise for that aid.",
+    "questionStem": "Which one of the following, if assumed, enables the conclusion of the argument to be properly drawn?",
+    "answerChoices": {
+      "A": "An action that is motivated by a desire for the favorable opinion of others cannot also be motivated by a desire to help others.",
+      "B": "No action is worthy of praise if it is motivated solely by a desire for praise.",
+      "C": "People who are indifferent to the welfare of others do not deserve praise.",
+      "D": "One deserves praise for advancing one's own interests only if one also advances the interests of others.",
+      "E": "It is the motives rather than the consequences of one's actions that determine whether one deserves praise for them."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "Political theorist: Newly enacted laws need a period of immunity during which they can be repealed only if circumstances are dire. This is because the short-term consequences of any statutory change are likely to be painful, since people are not accustomed to it, while its long-term benefits are initially obscure, because people require time to learn how to take advantage of it.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the political theorist's argument?",
+    "answerChoices": {
+      "A": "Whether a law should be retained is independent of what the voters think its consequences will be.",
+      "B": "Whether a law should be retained depends primarily on the long-term consequences of its enactment.",
+      "C": "The repeal of a law should be at least as difficult as the passage of a law.",
+      "D": "The short-term consequences of a law's repeal should be considered more carefully than the short-term consequences of its passage.",
+      "E": "The long-term consequences of the enactment of a law should be more beneficial than its short-term consequences."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The druid stones discovered in Ireland are very, very old. But this particular druid stone was discovered in Scotland; hence, it must be of more recent vintage.",
+    "questionStem": "The argument is flawed because it",
+    "answerChoices": {
+      "A": "allows a key term to shift in meaning from one use to the next",
+      "B": "takes the fact that most members of a group have a certain property to constitute evidence that all members of the group have that property",
+      "C": "takes for granted the very claim that it sets out to establish",
+      "D": "presumes without justification that what was true of the members of a group in the past will continue to be true of them in the future",
+      "E": "takes the fact that all members of a group have a certain property to constitute evidence that the members of the group are the only things with that property"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "Robert: Speed limits on residential streets in Crownsbury are routinely ignored by drivers. People crossing those streets are endangered by speeding drivers, yet the city does not have enough police officers to patrol every street. So the city should install speed bumps and signs warning of their presence on residential streets to slow down traffic.\nSheila: That is a bad idea. People who are driving too fast can easily lose control of their vehicles when they hit a speed bump.",
+    "questionStem": "Sheila's response depends on the presupposition that",
+    "answerChoices": {
+      "A": "problems of the kind that Robert describes are worse in Crownsbury than they are in other cities",
+      "B": "Robert's proposal is intended to address a problem that Robert does not in fact intend it to address",
+      "C": "with speed bumps and warning signs in place, there would still be drivers who would not slow down to a safe speed",
+      "D": "most of the people who are affected by the problem Robert describes would be harmed by the installation of speed bumps and warning signs",
+      "E": "problems of the kind that Robert describes do not occur on any nonresidential streets in Crownsbury"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "Robert: Speed limits on residential streets in Crownsbury are routinely ignored by drivers. People crossing those streets are endangered by speeding drivers, yet the city does not have enough police officers to patrol every street. So the city should install speed bumps and signs warning of their presence on residential streets to slow down traffic.\nSheila: That is a bad idea. People who are driving too fast can easily lose control of their vehicles when they hit a speed bump.",
+    "questionStem": "The relationship of Sheila's statement to Robert's argument is that Sheila's statement",
+    "answerChoices": {
+      "A": "raises the objection that the problem with which Robert is concerned may not be as serious as he takes it to be",
+      "B": "argues that the solution Robert advocates is likely to have undesirable side effects of its own",
+      "C": "defends an alternative course of action as more desirable than the one advocated by Robert",
+      "D": "concedes that the solution advocated by Robert would be effective, but insists that the reasons for this are not those given by Robert",
+      "E": "charges that Robert's proposal would have no net effect on the problem he describes"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "In ancient Mesopotamia, prior to 2900 B.C., wheat was cultivated in considerable quantities, but after 2900 B.C. production of that grain began to decline as the production of barley increased sharply. Some historians who study ancient Mesopotamia contend that the decline in wheat production was due to excessive irrigation, lack of drainage, and the consequent accumulation of salt residues in the soil.",
+    "questionStem": "Which one of the following, if true, most helps to support the historians' contention concerning the reasons for the decline in wheat production in ancient Mesopotamia?",
+    "answerChoices": {
+      "A": "The cultivation of barley requires considerably less water than does the cultivation of wheat.",
+      "B": "Barley has much greater resistance to the presence of salt in soil than does wheat.",
+      "C": "Prior to 2900 B.C., barley was cultivated along with wheat, but the amount of barley produced was far less than the amount of wheat produced.",
+      "D": "Around 2900 B.C., a series of wheat blights occurred, destroying much of the wheat crop year after year.",
+      "E": "Literary and archaeological evidence indicates that in the period following 2900 B.C., barley became the principal grain in the diet of most of the inhabitants of Mesopotamia."
+    },
+    "correctAnswer": "B"
+  }
+]

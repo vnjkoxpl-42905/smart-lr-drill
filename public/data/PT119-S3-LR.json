@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Moralist: TV talk shows are contributing to the moral decline in our country. By constantly being shown the least moral people in our society, viewers begin to think that such people are the norm, and that there is something wrong with being morally upright.\nTV talk show host: Well, if there is such a decline, it's not because of TV talk shows: we simply show people what they want to see. What can be wrong with letting the viewers decide? Furthermore, if restrictions were put on my show, that would amount to censorship, which is wrong.",
+    "questionStem": "The moralist's and the TV talk show host's statements provide the most support for holding that they disagree about whether",
+    "answerChoices": {
+      "A": "TV talk shows should be censored",
+      "B": "people's moral standards have changed",
+      "C": "TV talk shows influence people's conception of what is the norm",
+      "D": "TV talk shows, by presenting immoral guests, are causing a moral decline",
+      "E": "it is wrong not to let the viewers decide what they want to see"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "For the last three years, entomologists have been searching for a parasite to help control a whitefly that has recently become a serious crop pest. Believing this new pest to be a variety of sweet-potato whitefly, the entomologists confined their search to parasites of the sweet-potato whitefly. Genetic research now shows the new pest to be a distinct species, the silverleaf whitefly. Therefore, the search for a parasite has so far been wasted effort.",
+    "questionStem": "Which one of the following is an assumption on which the argument relies?",
+    "answerChoices": {
+      "A": "All varieties of the sweet-potato whitefly are serious crop pests.",
+      "B": "If a crop pest has a parasite, that parasite can always be used to control that pest.",
+      "C": "The chances of successfully identifying a useful parasite of the new pest have increased since the proper identification of the pest.",
+      "D": "No parasite of the sweet-potato whitefly is also a parasite of the silverleaf whitefly.",
+      "E": "In the last three years, the entomologists found no parasites of the sweet-potato whitefly."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Announcement for a television program: Are female physicians more sensitive than male physicians to the needs of women patients? To get the answer, we'll ask physicians of both sexes this question. Tune in tomorrow.",
+    "questionStem": "Which one of the following, if true, identifies a flaw in the plan for the program?",
+    "answerChoices": {
+      "A": "Physicians are in general unwilling to describe the treatment style of other physicians.",
+      "B": "There still are fewer women than men who are physicians, so a patient might not have the opportunity to choose a woman as a physician.",
+      "C": "Those who are best able to provide answers to the question are patients, rather than physicians.",
+      "D": "Since medical research is often performed on men, not all results are fully applicable to women as patients.",
+      "E": "Women as patients are now beginning to take a more active role in managing their care and making sure that they understand the medical alternatives."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Doctor: The practice of using this therapy to treat the illness cannot be adequately supported by the claim that any therapy for treating the illness is more effective than no therapy at all. What must also be taken into account is that this therapy is expensive and complicated.",
+    "questionStem": "Which one of the following most accurately expresses the main point of the doctor's argument?",
+    "answerChoices": {
+      "A": "The therapy is more effective than no treatment at all for the illness.",
+      "B": "The therapy is more effective than other forms of treatment for the illness.",
+      "C": "The therapy is more expensive and complicated than other forms of treatment for the illness.",
+      "D": "The therapy should not be used to treat the illness unless it is either effective or inexpensive.",
+      "E": "The therapy's possible effectiveness in treating the illness is not sufficient justification for using it."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "Psychologist: Because of a perceived social stigma against psychotherapy, and because of age discrimination on the part of some professionals, some elderly people feel discouraged about trying psychotherapy. They should not be, however, for many younger people have greatly benefited from it, and people in later life have certain advantages over the young—such as breadth of knowledge, emotional maturity, and interpersonal skills—that contribute to the likelihood of a positive outcome.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the psychologist's argument?",
+    "answerChoices": {
+      "A": "Certain psychotherapists practice age discrimination.",
+      "B": "Elderly people are better able to benefit from psychotherapy than are younger people.",
+      "C": "Elderly people should not be reluctant to undergo psychotherapy.",
+      "D": "Characteristics associated with maturity are important factors in psychotherapy's success.",
+      "E": "Elderly people are less inclined to try psychotherapy than are younger people."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Heavy salting of Albritten's roads to melt winter ice and snow began about 20 years ago. The area's groundwater now contains approximately 100 milligrams of dissolved salt per liter. Groundwater in a nearby, less highly urbanized area, where little salt is used and where traffic patterns resemble those of Albritten 20 years ago, contains only about 10 milligrams of dissolved salt per liter. Since water that contains 250 or more milligrams of dissolved salt per liter tastes unacceptably salty, continuing the salting of Albritten's roads at its present rate will render Albritten's groundwater unpalatable within the next few decades.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Even water that contains up to 5,000 milligrams of dissolved salt per liter is safe to drink.",
+      "B": "The concentration of dissolved salt in Albritten's groundwater is expected to reach 400 milligrams per liter within a few decades.",
+      "C": "Salting icy roads is the simplest way to prevent accidents on those roads.",
+      "D": "Albritten's groundwater contained roughly 90 milligrams of dissolved salt per liter 20 years ago.",
+      "E": "Salting of Albritten's roads is likely to decrease over the next few decades."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Social critic: The whole debate over the legal right of rock singers to utter violent lyrics misses the point. Legally, there is very little that may not be said. But not everything that may legally be said, ought to be said. Granted, violence predates the rise in popularity of such music. Yet words also have the power to change the way we see and the way we act.",
+    "questionStem": "Which one of the following is most strongly supported by the passage?",
+    "answerChoices": {
+      "A": "If rock music that contains violent lyrics is morally wrong, then it should be illegal.",
+      "B": "The law should be changed so that the government is mandated to censor rock music that contains violent lyrics.",
+      "C": "Violent rock song lyrics do not incite violence, they merely reflect the violence in society.",
+      "D": "If rock musicians voluntarily censor their violent lyrics, this may help to reduce violence in society.",
+      "E": "Stopping the production of rock music that contains violent lyrics would eliminate much of the violence within society."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Must be False",
+    "questionDifficulty": 2,
+    "stimulus": "For all species of higher animals, reproduction requires the production of eggs but not necessarily the production of sperm. There are some species whose members are all female; the eggs produced by a rare female-only species of salamander hatch without fertilization. This has the drawback that all offspring have genetic codes nearly identical to that of the single parent, making the species less adaptive than species containing both male and female members.",
+    "questionStem": "If the statements above are true, each of the following could be true except:",
+    "answerChoices": {
+      "A": "There are some species of salamanders that have both male and female members.",
+      "B": "There are some species of higher animals none of whose members produce eggs.",
+      "C": "There is a significant number of female-only species of higher animals.",
+      "D": "Some species of higher animals containing both female and male members are not very adaptive.",
+      "E": "Some offspring of species of higher animals containing both female and male members have genetic codes more similar to one parent than to the other parent."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Editorial: When legislators discover that some public service is not being adequately provided, their most common response is to boost the funding for that public service. Because of this, the least efficiently run government bureaucracies are the ones that most commonly receive an increase in funds.",
+    "questionStem": "The statements in the editorial, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "The least efficiently run government bureaucracies are the bureaucracies that legislators most commonly discover to be failing to provide some public service adequately.",
+      "B": "When legislators discover that a public service is not being adequately provided, they never respond to the problem by reducing the funding of the government bureaucracy providing that service.",
+      "C": "Throughout the time a government bureaucracy is run inefficiently, legislators repeatedly boost the funding for the public service that this bureaucracy provides.",
+      "D": "If legislators boost funding for a public service, the government bureaucracy providing that service will commonly become less efficient as a result.",
+      "E": "The most inefficiently run government bureaucracy receives the most funding of any government bureaucracy."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Method",
+    "questionDifficulty": 3,
+    "stimulus": "Fred argued that, since Kathleen is a successful film director, she has probably worked with famous actors. But, while Fred is right in supposing that most successful film directors work with famous actors, his conclusion is not warranted. For, as he knows, Kathleen works only on documentary films, and directors of documentaries rarely work with famous actors.",
+    "questionStem": "Which one of the following strategies is used above to criticize Fred's reasoning?",
+    "answerChoices": {
+      "A": "maintaining that too little is known about Kathleen to justify any conclusion",
+      "B": "showing that Kathleen must not have worked with famous actors",
+      "C": "claiming that Fred has failed to take relevant information into account",
+      "D": "showing that Fred has mistakenly assumed that all successful film directors work with famous actors",
+      "E": "demonstrating that Fred has failed to show that most successful film directors work with famous actors"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "Several thousand years ago, people in what is now North America began to grow corn, which grows faster and produces more food per unit of land than do the grains these people had grown previously. Corn is less nutritious than those other grains, however, and soon after these people established corn as their staple grain crop, they began having nutrition-related health problems. Yet the people continued to grow corn as their staple grain, although they could have returned to growing the more nutritious grains.",
+    "questionStem": "Which one of the following, if true, most helps to explain why the people mentioned continued to grow corn as their staple grain crop?",
+    "answerChoices": {
+      "A": "The variety of corn that the people relied on as their staple grain produced more food than did the ancestors of that variety.",
+      "B": "Modern varieties of corn are more nutritious than were the varieties grown by people in North America several thousand years ago.",
+      "C": "The people did not domesticate large animals for meat or milk, either of which could supply nutrients not provided by corn.",
+      "D": "Some of the grain crops that could have been planted instead of corn required less fertile soil in order to flourish than corn required.",
+      "E": "The people discovered some years after adopting corn as their staple grain that a diet that supplemented corn with certain readily available nongrain foods significantly improved their health."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Our computer experts are asked from time to time to allocate funds for new hardware and software for our company. Unfortunately, these experts favor cutting-edge technologies, because that is what excites them, despite the fact that such experimental technologies are highly expensive, full of undiscovered \"bugs,\" and thus are not the most profitable investments.",
+    "questionStem": "Of the following, which one conforms most closely to the principle illustrated by the situation described above?",
+    "answerChoices": {
+      "A": "When senior executives choose to promote junior executives, they tend to favor those who share their professional interests, not those who have had the most education.",
+      "B": "When supermarkets choose foods, they choose the kinds that can be sold for the most profit, not the kinds of foods that are the most healthful for consumers.",
+      "C": "When librarians choose books for the library, they choose the kinds that they enjoy reading, not the kinds of books that serve the interests of the community.",
+      "D": "When students choose courses, they choose those that require the least amount of work, not those in which they might learn the most.",
+      "E": "When television executives choose programs to air, they choose the ones with the most sex and violence because that is what viewers want, not the shows with the highest artistic merit."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "It is characteristic of great artists generally, and of great writers in particular, to have a discerning view of the basic social and political arrangements of the society in which they live. Therefore, the greater a writer one is, the more astute one will be in perceiving the basic social and political arrangements of one's society.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the reasoning above?",
+    "answerChoices": {
+      "A": "It assumes, without providing justification, that members of a group that is part of a larger group possess all of the characteristics possessed by members of the larger group.",
+      "B": "It assumes, without providing justification, that because something is sometimes the case it must always be the case.",
+      "C": "It assumes, without providing justification, that those artists with political insight do not have insight into matters outside of politics.",
+      "D": "It assumes, without providing justification, that only great individuals can make discerning criticisms of their societies.",
+      "E": "It assumes, without providing justification, that because people who have one quality tend to have a second quality, those who have more of the first quality will have more of the second."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Political scientist: The economies of a number of European countries are currently in severe difficulty. Germany is the only neighboring country that has the resources to resuscitate these economies. Therefore, Germany should begin aiding these economically troubled countries.",
+    "questionStem": "Which one of the following principles most helps to justify the political scientist's reasoning?",
+    "answerChoices": {
+      "A": "Any nation that alone has an obligation to economically resuscitate neighboring countries ought to be the only nation to provide any economic aid.",
+      "B": "Any nation that alone has the capacity to economically resuscitate neighboring countries should exercise that capacity.",
+      "C": "Any nation that can afford to give economic aid to just a few other nations ought to aid just those few.",
+      "D": "Only nations that alone have the capacity to economically resuscitate neighboring countries should exercise that capacity.",
+      "E": "Only nations that can afford to give economic aid to just a few other nations ought to aid just those few."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Critic: Works of literature often present protagonists who scorn allegiance to their society and who advocate detachment rather than civic-mindedness. However, modern literature is distinguished from the literature of earlier eras in part because it more frequently treats such protagonists sympathetically. Sympathetic treatment of such characters suggests to readers that one should be unconcerned about contributing to societal good. Thus, modern literature can damage individuals who appropriate this attitude, as well as damage society at large.",
+    "questionStem": "Which one of the following is an assumption on which the critic's argument relies?",
+    "answerChoices": {
+      "A": "Some individuals in earlier eras were more concerned about contributing to societal good than is any modern individual.",
+      "B": "It is to the advantage of some individuals that they be concerned with contributing to societal good.",
+      "C": "Some individuals must believe that their society is better than most before they can become concerned with benefiting it.",
+      "D": "The aesthetic merit of some literary works cannot be judged in complete independence of their moral effects.",
+      "E": "Modern literature is generally not as conducive to societal good as was the literature of earlier eras."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Psychologist: Some people contend that children should never be reprimanded. Any criticism, let alone punishment, they say, harms children's self-esteem. This view is laudable in its challenge to the belief that children should be punished whenever they misbehave, yet it gives a dangerous answer to the question of how often punishment should be inflicted. When parents never reprimand their children, they are in effect rewarding them for unacceptable behavior, and rewarded behavior tends to recur.",
+    "questionStem": "The view that children should never be reprimanded functions in the psychologist's argument as a statement of a position that the psychologist's argument",
+    "answerChoices": {
+      "A": "is designed to discredit entirely",
+      "B": "is designed to establish as true",
+      "C": "is designed to establish as well intentioned",
+      "D": "claims has a serious flaw though is not without value",
+      "E": "claims is less reasonable than any other view mentioned"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Traditionally, students at Kelly University have evaluated professors on the last day of class. But some professors at Kelly either do not distribute the paper evaluation forms or do so selectively, and many students cannot attend the last day of class. Soon, students will be able to use school computers to evaluate their professors at any time during the semester. Therefore, evaluations under the new system will accurately reflect the distribution of student opinion about teaching performance.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Professors who distribute the paper evaluation forms selectively distribute them only to students they personally like.",
+      "B": "Students can wisely and insightfully assess a professor's performance before the end of the semester.",
+      "C": "The traditional system for evaluating teaching performance should not be used at any university.",
+      "D": "Nearly all professors who fail to distribute the paper evaluation forms do so because they believe the students will evaluate them unfavorably.",
+      "E": "Dissatisfied students are in general not more likely than satisfied students to submit a computerized evaluation."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "A seriously maladaptive trait is unlikely to persist in a given animal population for long, since there is enough genetic variation in populations that some members will lack the trait. Those lacking the trait will compete more successfully for the available resources. Hence these members of the population survive and reproduce at a higher rate, crowding out those with the maladaptive trait.",
+    "questionStem": "The proposition that those lacking a maladaptive trait will compete more successfully for the available resources figures in the argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "It expresses a view that the argument as a whole is designed to discredit.",
+      "B": "It is the argument's main conclusion.",
+      "C": "It is a premise of the argument.",
+      "D": "It presents evidence that the argument attempts to undermine.",
+      "E": "It is an intermediate conclusion of the argument."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Tanya would refrain from littering if everyone else refrained from littering. None of her friends litter, and therefore she does not litter either.",
+    "questionStem": "Which one of the following uses flawed reasoning most similar to the flawed reasoning in the argument above?",
+    "answerChoices": {
+      "A": "All residents of the same neighborhood have some goals in common. One group of neighborhood residents wants improvements made to a local park, so some other residents of that neighborhood must share this goal.",
+      "B": "If a talented artist is willing to starve for her career, then her friends should take her choice of profession seriously. Donna's friends take her choice of profession seriously, and she is willing to starve for her career, so she must be a talented artist.",
+      "C": "Herbert will stop selling office supplies in his store if none of his regular customers complains. Some of his regular customers never knew that Herbert sold office supplies, so those customers will not complain.",
+      "D": "If all whales need to surface for air, then whales must be easy to observe. Blue whales are easily observed, so they must surface for air.",
+      "E": "If all of a restaurant's customers like its food, it must be an exceptional restaurant. Everyone whom Sherryl consulted liked the food at Chez Louis, so it must be an exceptional restaurant."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Scientist: Genetic engineering has aided new developments in many different fields. But because these techniques require the manipulation of the genetic codes of organisms, they are said to be unethical. What the critics fail to realize is that this kind of manipulation has been going on for millennia; virtually every farm animal is the result of selective breeding for desired traits. Since selective breeding is genetic engineering of a crude sort, genetic engineering is not unethical.",
+    "questionStem": "Which one of the following is an assumption on which the scientist's argument depends?",
+    "answerChoices": {
+      "A": "The manipulation of the genetic code of organisms is never unethical.",
+      "B": "Anything that is accomplished by nature is not unethical to accomplish with science.",
+      "C": "The manipulation of the genetic code through selective breeding for desired traits is not unethical.",
+      "D": "The manipulation of the genetic code through selective breeding for desired traits is important for human survival.",
+      "E": "Science can accomplish only what is already in some sense natural, and nothing natural is unethical."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Bank deposits are credited on the date of the transaction only when they are made before 3 P.M. Alicia knows that the bank deposit was made before 3 P.M. So, Alicia knows that the bank deposit was credited on the date of the transaction.",
+    "questionStem": "Which one of the following exhibits both of the logical flaws exhibited by the argument above?",
+    "answerChoices": {
+      "A": "Journalists are the only ones who will be permitted to ask questions at the press conference. Since Marjorie is a journalist, she will be permitted to ask questions.",
+      "B": "We know that Patrice works only on Thursday. Today is Thursday, so it follows that Patrice is working today.",
+      "C": "It is clear that George knows he will be promoted to shift supervisor, because George will be promoted to shift supervisor only if Helen resigns, and George knows Helen will resign.",
+      "D": "John believes that 4 is a prime number and that 4 is divisible by 2. Hence John believes that there is a prime number divisible by 2.",
+      "E": "Pat wants to become a social worker. It is well known that social workers are poorly paid. Pat apparently wants to be poorly paid."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "On the surface, Melville's Billy Budd is a simple story with a simple theme. However, if one views the novel as a religious allegory, then it assumes a richness and profundity that place it among the great novels of the nineteenth century. However, the central question remains: Did Melville intend an allegorical reading? Since there is no textual or historical evidence that he did, we should be content with reading Billy Budd as a simple tragedy.",
+    "questionStem": "Which one of the following most accurately expresses the principle underlying the argument?",
+    "answerChoices": {
+      "A": "Given a choice between an allegorical and a nonallegorical reading of a novel, one should choose the latter.",
+      "B": "The only relevant evidence in deciding in which genre to place a novel is the author's stated intention.",
+      "C": "In deciding between rival readings of a novel, one should choose the one that is most favorable to the work.",
+      "D": "Without relevant evidence as to a novel's intended reading, one should avoid viewing the work allegorically.",
+      "E": "The only relevant evidence in deciding the appropriate interpretation of a text is the text itself."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "Town councillor: The only reason for the town to have ordinances restricting where skateboarding can be done would be to protect children from danger. Skateboarding in the town's River Park is undoubtedly dangerous, but we should not pass an ordinance prohibiting it. If children cannot skateboard in the park, they will most certainly skateboard in the streets. And skateboarding in the streets is more dangerous than skateboarding in the park.",
+    "questionStem": "The pattern of reasoning in which one of the following is most similar to that in the town councillor's argument?",
+    "answerChoices": {
+      "A": "The reason for requiring environmental reviews is to ensure that projected developments do not harm the natural environment. Currently, environmental concerns are less compelling than economic concerns, but in the long run, the environment must be protected. Therefore, the requirement for environmental reviews should not be waived.",
+      "B": "Insecticides are designed to protect crops against insect damage. Aphids damage tomato crops, but using insecticides against aphids kills wasps that prey on insecticide-resistant pests. Since aphids damage tomato crops less than the insecticide-resistant pests do, insecticides should not be used against aphids on tomato crops.",
+      "C": "The purpose of compulsory vaccination for schoolchildren was to protect both the children themselves and others in the community against smallpox. Smallpox was indeed a dreadful disease, but it has now been eliminated from the world's population. So children should not be vaccinated against it.",
+      "D": "The function of a sealer on wood siding is to retard deterioration caused by weather. However, cedar is a wood that is naturally resistant to weather-related damage and thus does not need additional protection. Sealers, therefore, should not be applied to cedar siding.",
+      "E": "Traffic patterns that involve one-way streets are meant to accelerate the flow of traffic in otherwise congested areas. However, it would be detrimental to the South Main Street area to have traffic move faster. So traffic patterns involving one-way streets should not be implemented there."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Town councillor: The only reason for the town to have ordinances restricting where skateboarding can be done would be to protect children from danger. Skateboarding in the town's River Park is undoubtedly dangerous, but we should not pass an ordinance prohibiting it. If children cannot skateboard in the park, they will most certainly skateboard in the streets. And skateboarding in the streets is more dangerous than skateboarding in the park.",
+    "questionStem": "Which one of the following principles, if established, would provide the strongest support for the town councillor's argument?",
+    "answerChoices": {
+      "A": "Ordinances that restrict the recreational activities of a town's inhabitants should not be passed unless those activities pose a danger to participants.",
+      "B": "Since the town could be legally liable for accidents that occur on public property, town ordinances should restrict any unnecessarily dangerous activities in publicly owned areas.",
+      "C": "Since safety in a recreational activity depends on the level of skill of the participant in that activity, the regulation of children's recreational activities should be left to the discretion of the children's parents.",
+      "D": "If recreational activities constitute a danger to the participants in those activities, then the town council should enact ordinances prohibiting those activities.",
+      "E": "Ordinances that seek to eliminate dangers should not be enacted if their enactment would lead to dangers that are greater than those they seek to eliminate."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "False chicory's taproot is always one half as long as the plant is tall. Furthermore, the more rain false chicory receives, the taller it tends to grow. In fact, false chicory plants that receive greater than twice the average rainfall of the species' usual habitat always reach above-average heights for false chicory.",
+    "questionStem": "If the statements above are true, then which one of the following must also be true?",
+    "answerChoices": {
+      "A": "If two false chicory plants differ in height, then it is likely that the one with the shorter taproot has received less than twice the average rainfall of the species' usual habitat.",
+      "B": "If a false chicory plant has a longer-than-average taproot, then it is likely to have received more than twice the average rainfall of the species' usual habitat.",
+      "C": "It is not possible for a false chicory plant to receive only the average amount of rainfall of the species' usual habitat and be of above-average height.",
+      "D": "If the plants in one group of false chicory are not taller than those in another group of false chicory, then the two groups must have received the same amount of rainfall.",
+      "E": "If a false chicory plant receives greater than twice the average rainfall of the species' usual habitat, then it will have a longer taproot than that of an average-sized false chicory plant."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 3,
+    "questionNumber": 26,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Fossilized teeth of an extinct species of herbivorous great ape have on them phytoliths, which are microscopic petrified remains of plants. Since only phytoliths from certain species of plants are found on the teeth, the apes' diet must have consisted only of those plants.",
+    "questionStem": "The argument assumes which one of the following?",
+    "answerChoices": {
+      "A": "None of the plant species that left phytoliths on the apes' teeth has since become extinct.",
+      "B": "Plants of every type eaten by the apes left phytoliths on their teeth.",
+      "C": "Each of the teeth examined had phytoliths of the same plant species on it as all the other teeth.",
+      "D": "Phytoliths have also been found on the fossilized teeth of apes of other extinct species.",
+      "E": "Most species of great ape alive today have diets that consist of a fairly narrow range of plants."
+    },
+    "correctAnswer": "B"
+  }
+]

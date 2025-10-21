@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "Joanna: The only way for a company to be successful, after emerging from bankruptcy, is to produce the same goods or services that it did before going bankrupt. It is futile for such a company to try to learn a whole new business.\nRuth: Wrong. The Kelton Company was a major mining operation that went into bankruptcy. On emerging from bankruptcy, Kelton turned its mines into landfills and is presently a highly successful waste-management concern.",
+    "questionStem": "Ruth uses which one of the following argumentative techniques in countering Joanna's argument?",
+    "answerChoices": {
+      "A": "She presents a counterexample to a claim.",
+      "B": "She offers an alternative explanation for a phenomenon.",
+      "C": "She supports a claim by offering a developed and relevant analogy.",
+      "D": "She undermines a claim by showing that it rests on an ambiguity.",
+      "E": "She establishes a conclusion by excluding the only plausible alternative to that conclusion."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Nutritionist: Recently a craze has developed for home juicers, $300 machines that separate the pulp of fruits and vegetables from the juice they contain. Outrageous claims are being made about the benefits of these devices: drinking the juice they produce is said to help one lose weight or acquire a clear complexion, to aid digestion, and even to prevent cancer. But there is no indication that juice separated from the pulp of the fruit or vegetable has any properties that it does not have when unseparated. Save your money. If you want carrot juice, eat a carrot.",
+    "questionStem": "Which one of the following, if true, most calls into question the nutritionist's argument?",
+    "answerChoices": {
+      "A": "Most people find it much easier to consume a given quantity of nutrients in liquid form than to eat solid foods containing the same quantity of the same nutrients.",
+      "B": "Drinking juice from home juicers is less healthy than is eating fruits and vegetables because such juice does not contain the fiber that is eaten if one consumes the entire fruit or vegetable.",
+      "C": "To most people who would be tempted to buy a home juicer, $300 would not be a major expense.",
+      "D": "The nutritionist was a member of a panel that extensively evaluated early prototypes of home juicers.",
+      "E": "Vitamin pills that supposedly contain nutrients available elsewhere only in fruits and vegetables often contain a form of those compounds that cannot be as easily metabolized as the varieties found in fruits and vegetables."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Finnish author Jaakko Mikkeli was accused by Norwegian author Kirsten Halden of plagiarizing a book that she had written and that had been published 20 years before Mikkeli's. The two books, although set in different periods and regions, contain enough plot similarities to make coincidental resemblance unlikely. Mikkeli's defense rests on his argument that plagiarism was impossible in this case because Halden's book has been published only in Norwegian, a language Mikkeli does not understand, and because no reviews of Halden's book have ever been published.",
+    "questionStem": "The argument in Mikkeli's defense depends on the assumption that",
+    "answerChoices": {
+      "A": "Mikkeli has never met Halden",
+      "B": "Halden's book did not become popular in Norway",
+      "C": "nobody related the plot of Halden's book in detail to Mikkeli before Mikkeli wrote his book",
+      "D": "there is a common European myth to which both authors referred subconsciously in the books in question",
+      "E": "Mikkeli is not familiar with Old Icelandic, an extinct language related to an earlier form of Norwegian"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "Most antidepressant drugs cause weight gain. While dieting can help reduce the amount of weight gained while taking such antidepressants, some weight gain is unlikely to be preventable.",
+    "questionStem": "The information above most strongly supports which one of the following?",
+    "answerChoices": {
+      "A": "A physician should not prescribe any antidepressant drug for a patient if that patient is overweight.",
+      "B": "People who are trying to lose weight should not ask their doctors for an antidepressant drug.",
+      "C": "At least some patients taking antidepressant drugs gain weight as a result of taking them.",
+      "D": "The weight gain experienced by patients taking antidepressant drugs should be attributed to lack of dieting.",
+      "E": "All patients taking antidepressant drugs should diet to maintain their weight."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 3,
+    "stimulus": "Company policy: An employee of our company must be impartial, particularly when dealing with family members. This obligation extends to all aspects of the job, including hiring and firing practices and the quality of service the employee provides customers.",
+    "questionStem": "Which one of the following employee behaviors most clearly violates the company policy cited above?",
+    "answerChoices": {
+      "A": "refusing to hire any of one's five siblings, even though they are each more qualified than any other applicant",
+      "B": "receiving over a hundred complaints about the service one's office provides and sending a complimentary product to all those who complain, including one's mother",
+      "C": "never firing a family member, even though three of one's siblings work under one's supervision and authority",
+      "D": "repeatedly refusing to advance an employee, claiming that he has sometimes skipped work and that his work has been sloppy, even though no such instances have occurred for over two years",
+      "E": "promoting a family member over another employee in the company"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "It is widely believed that eating chocolate can cause acne. Indeed, many people who are susceptible to acne report that, in their own experience, eating large amounts of chocolate is invariably followed by an outbreak of that skin condition. However, it is likely that common wisdom has mistaken an effect for a cause. Several recent scientific studies indicate that hormonal changes associated with stress can cause acne and there is good evidence that people who are fond of chocolate tend to eat more chocolate when they are under stress.",
+    "questionStem": "Of the following, which one most accurately expresses the main point of the argument?",
+    "answerChoices": {
+      "A": "People are mistaken who insist that whenever they eat large amounts of chocolate they invariably suffer from an outbreak of acne.",
+      "B": "The more chocolate a person eats, the more likely that person is to experience the hormonal changes associated with stress.",
+      "C": "Eating large amounts of chocolate is more likely to cause stress than it is to cause outbreaks of acne.",
+      "D": "It is less likely that eating large amounts of chocolate causes acne than that both the chocolate eating and the acne are caused by stress.",
+      "E": "The more stress a person experiences, the more likely that person is to crave chocolate."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Method",
+    "questionDifficulty": 4,
+    "stimulus": "It is widely believed that eating chocolate can cause acne. Indeed, many people who are susceptible to acne report that, in their own experience, eating large amounts of chocolate is invariably followed by an outbreak of that skin condition. However, it is likely that common wisdom has mistaken an effect for a cause. Several recent scientific studies indicate that hormonal changes associated with stress can cause acne and there is good evidence that people who are fond of chocolate tend to eat more chocolate when they are under stress.",
+    "questionStem": "The argument employs which one of the following argumentative strategies?",
+    "answerChoices": {
+      "A": "It cites counterevidence that calls into question the accuracy of the evidence advanced in support of the position being challenged.",
+      "B": "It provides additional evidence that points to an alternative interpretation of the evidence offered in support of the position being challenged.",
+      "C": "It invokes the superior authority of science over common opinion in order to dismiss out of hand the relevance of evidence based on everyday experience.",
+      "D": "It demonstrates that the position being challenged is inconsistent with certain well-established facts.",
+      "E": "It provides counterexamples to show that, contrary to the assumption on which the commonly held position rests, causes do not always precede their effects."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "It has been claimed that television networks should provide equal time for the presentation of opposing views whenever a television program concerns scientific issues—such as those raised by the claims of environmentalists about which people disagree. However, although an obligation to provide equal time does arise in the case of any program concerning social issues, it does so because social issues almost always have important political implications and seldom can definitely be settled on the basis of available evidence. If a program concerns scientific issues, that program gives rise to no such equal time obligation.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "No scientific issues raised by the claims of environmentalists have important political implications.",
+      "B": "There are often more than two opposing views on an issue that cannot be definitely settled on the basis of available evidence.",
+      "C": "Some social issues could be definitely settled on the basis of evidence if the opposing sides would give all the available evidence a fair hearing.",
+      "D": "Many scientific issues have important political implications and cannot be definitely settled on the basis of the available evidence.",
+      "E": "Some television networks refuse to broadcast programs on issues that have important political implications and that cannot be definitely settled by the available evidence."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "Raisins are made by drying grapes in the sun. Although some of the sugar in the grapes is caramelized in the process, nothing is added. Moreover, the only thing removed from the grapes is the water that evaporates during the drying, and water contains no calories or nutrients. The fact that raisins contain more iron per calorie than grapes do is thus puzzling.",
+    "questionStem": "Which one of the following, if true, most helps to explain why raisins contain more iron per calorie than do grapes?",
+    "answerChoices": {
+      "A": "Since grapes are bigger than raisins, it takes several bunches of grapes to provide the same amount of iron as a handful of raisins does.",
+      "B": "Caramelized sugar cannot be digested, so its calories do not count toward the calorie content of raisins.",
+      "C": "The body can absorb iron and other nutrients more quickly from grapes than from raisins because of the relatively high water content of grapes.",
+      "D": "Raisins, but not grapes, are available year-round, so many people get a greater share of their yearly iron intake from raisins than from grapes.",
+      "E": "Raisins are often eaten in combination with other iron-containing foods, while grapes are usually eaten by themselves."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Cotrell is, at best, able to write magazine articles of average quality. The most compelling pieces of evidence for this are those few of the numerous articles submitted by Cotrell that are superior, since Cotrell, who is incapable of writing an article that is better than average, must obviously have plagiarized superior ones.",
+    "questionStem": "The argument is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It simply ignores the existence of potential counterevidence.",
+      "B": "It generalizes from atypical occurrences.",
+      "C": "It presupposes what it seeks to establish.",
+      "D": "It relies on the judgment of experts in a matter to which their expertise is irrelevant.",
+      "E": "It infers limits on ability from a few isolated lapses in performance."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "Any sale item that is purchased can be returned for store credit but not for a refund of the purchase price. Every home appliance and every piece of gardening equipment is on sale along with selected construction tools.",
+    "questionStem": "If the statements above are true, which one of the following must also be true?",
+    "answerChoices": {
+      "A": "Any item that is not a home appliance or a piece of gardening equipment is returnable for a refund.",
+      "B": "Any item that is not on sale cannot be returned for store credit.",
+      "C": "Some construction tools are not returnable for store credit.",
+      "D": "No piece of gardening equipment is returnable for a refund.",
+      "E": "None of the things that are returnable for a refund are construction tools."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The consumer price index is a measure that detects monthly changes in the retail prices of goods and services. The payment of some government retirement benefits is based on the consumer price index so that those benefits reflect the change in the cost of living as the index changes. However, the consumer price index does not consider technological innovations that may drastically reduce the cost of producing some goods. Therefore, the value of government benefits is sometimes greater than is warranted by the true change in costs.",
+    "questionStem": "The reasoning in the argument is most vulnerable to the criticism that the argument",
+    "answerChoices": {
+      "A": "fails to consider the possibility that there are years in which there is no change in the consumer price index",
+      "B": "fails to make explicit which goods and services are included in the consumer price index",
+      "C": "presumes, without providing warrant, that retirement benefits are not generally used to purchase unusual goods",
+      "D": "uncritically draws an inference from what has been true in the past to what will be true in the future",
+      "E": "makes an irrelevant shift from discussing retail prices to discussing production costs"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "When astronomers observed the comet Schwassman-Wachmann 3 becoming 1,000 times brighter in September 1995, they correctly hypothesized that its increased brightness was a result of the comet's breaking up—when comets break up, they emit large amounts of gas and dust, becoming visibly brighter as a result. However, their observations did not reveal comet Schwassman-Wachmann 3 actually breaking into pieces until November 1995, even though telescopes were trained on it throughout the entire period.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent conflict in the statements above?",
+    "answerChoices": {
+      "A": "Comets often do not emit gas and dust until several weeks after they have begun to break up.",
+      "B": "The reason comets become brighter when they break up is that the gas and dust that they emit refract light.",
+      "C": "Gas and dust can be released by cracks in a comet even if the comet is not broken all the way through.",
+      "D": "The amount of gas and dust emitted steadily increased during the period from September through November.",
+      "E": "The comet passed close to the sun during this period and the gravitational strain caused it to break up."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "If Slater wins the election, McGuinness will be appointed head of the planning commission. But Yerxes is more qualified to head it since she is an architect who has been on the planning commission for fifteen years. Unless the polls are grossly inaccurate, Slater will win.",
+    "questionStem": "Which one of the following can be properly inferred from the information above?",
+    "answerChoices": {
+      "A": "If the polls are grossly inaccurate, someone more qualified than McGuinness will be appointed head of the planning commission.",
+      "B": "McGuinness will be appointed head of the planning commission only if the polls are a good indication of how the election will turn out.",
+      "C": "Either Slater will win the election or Yerxes will be appointed head of the planning commission.",
+      "D": "McGuinness is not an architect and has not been on the planning commission for fifteen years or more.",
+      "E": "If the polls are a good indication of how the election will turn out, someone less qualified than Yerxes will be appointed head of the planning commission."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "In one study, engineering students who prepared for an exam by using toothpicks and string did no worse than similar students who prepared by using an expensive computer with sophisticated graphics. In another study, military personnel who trained on a costly high-tech simulator performed no better on a practical exam than did similar personnel who trained using an inexpensive cardboard model. So one should not always purchase technologically advanced educational tools.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+    "answerChoices": {
+      "A": "One should use different educational tools to teach engineering to civilians than are used to train military personnel.",
+      "B": "High-tech solutions to modern problems are ineffective unless implemented by knowledgeable personnel.",
+      "C": "Spending large sums of money on educational tools is at least as justified for nonmilitary training as it is for military training.",
+      "D": "One should not invest in expensive teaching aids unless there are no other tools that are less expensive and at least as effective.",
+      "E": "One should always provide students with a variety of educational materials so that each student can find the materials that best suit that student's learning style."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "A number of measures indicate the viability of a nation's economy. The level and rate of growth of aggregate output are the most significant indicators, but unemployment and inflation rates are also important. Further, Switzerland, Austria, Israel, Ireland, Denmark, and Finland all have viable economies, but none has a very large population. Switzerland and Austria each have populations of about seven million; the other populations are at least one-fourth smaller.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "A nation's economic viability is independent of the size of its population.",
+      "B": "Having a population larger than seven million ensures that a nation will be economically viable.",
+      "C": "Economic viability does not require a population of at least seven million.",
+      "D": "A nation's population is the most significant contributor to the level and rate of growth of aggregate output.",
+      "E": "A nation's population affects the level and rate of growth of aggregate output more than it affects unemployment and inflation rates."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "The best way to write a good detective story is to work backward from the crime. The writer should first decide what the crime is and who the perpetrator is, and then come up with the circumstances and clues based on those decisions.",
+    "questionStem": "Which one of the following illustrates a principle most similar to that illustrated by the passage?",
+    "answerChoices": {
+      "A": "When planning a trip, some people first decide where they want to go and then plan accordingly, but, for most of us, much financial planning must be done before we can choose where we are going.",
+      "B": "In planting a vegetable garden, you should prepare the soil first, and then decide what kinds of vegetables to plant.",
+      "C": "Good architects do not extemporaneously construct their plans in the course of an afternoon; an architectural design cannot be divorced from the method of constructing the building.",
+      "D": "In solving mathematical problems, the best method is to try out as many strategies as possible in the time allotted. This is particularly effective if the number of possible strategies is fairly small.",
+      "E": "To make a great tennis shot, you should visualize where you want the shot to go. Then you can determine the position you need to be in to execute the shot properly."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "Moderate exercise lowers the risk of blockage of the arteries due to blood clots, since anything that lowers blood cholesterol levels also lowers the risk of hardening of the arteries, which in turn lowers the risk of arterial blockage due to blood clots; and, if the data reported in a recent study are correct, moderate exercise lowers blood cholesterol levels.",
+    "questionStem": "The conclusion drawn above follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "The recent study investigated the relationship between exercise and blood cholesterol levels.",
+      "B": "Blockage of the arteries due to blood clots can be prevented.",
+      "C": "Lowering blood cholesterol levels lowers the risk of blockage of the arteries.",
+      "D": "The data reported in the recent study are correct.",
+      "E": "Hardening of the arteries increases the risk of blockage of the arteries due to blood clots."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Although it has been suggested that Arton's plays have a strong patriotic flavor, we must recall that, at the time of their composition, her country was in anything but a patriotic mood. Unemployment was high, food was costly, and crime rates were soaring. As a result, the general morale of her nation was at an especially low point. Realizing this, we see clearly that any apparent patriotism in Arton's work must have been intended ironically.",
+    "questionStem": "The reasoning above is questionable because it",
+    "answerChoices": {
+      "A": "posits an unstated relationship between unemployment and crime",
+      "B": "takes for granted that straightforward patriotism is not possible for a serious writer",
+      "C": "takes for granted that Arton was attuned to the predominant national attitude of her time",
+      "D": "overlooks the fact that some citizens prosper in times of high unemployment",
+      "E": "confuses irony with a general decline in public morale"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Editorialist: To ensure justice in the legal system, citizens must be capable of criticizing anyone involved in determining the punishment of criminals. But when the legal system's purpose is seen as deterrence, the system falls into the hands of experts whose specialty is to assess how potential lawbreakers are affected by the system's punishments. Because most citizens lack knowledge about such matters, justice is not then ensured in the legal system.",
+    "questionStem": "The editorialist's argument requires assuming which one of the following?",
+    "answerChoices": {
+      "A": "Most citizens view justice as primarily concerned with the assignment of punishment to those who deserve it.",
+      "B": "In order to be just, a legal system must consider the effect that punishment will have on individual criminals.",
+      "C": "The primary concern in a legal system is to administer punishments that are just.",
+      "D": "In a legal system, a concern for punishment is incompatible with an emphasis on deterrence.",
+      "E": "Citizens without knowledge about how the legal system's punishments affect potential lawbreakers are incapable of criticizing experts in that area."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Kostman's original painting of Rosati was not a very accurate portrait. Therefore, your reproduction of Kostman's painting of Rosati will not be a very accurate reproduction of the painting.",
+    "questionStem": "Which one of the following is most similar in its flawed reasoning to the flawed reasoning in the argument above?",
+    "answerChoices": {
+      "A": "George's speech was filled with half-truths and misquotes. So the tape recording made of it cannot be of good sound quality.",
+      "B": "An artist who paints a picture of an ugly scene must necessarily paint an ugly picture, unless the picture is a distorted representation of the scene.",
+      "C": "If a child's eyes resemble her mother's, then if the mother's eyes are brown the child's eyes also must be brown.",
+      "D": "Jo imitated Layne. But Jo is different from Layne, so Jo could not have imitated Layne very well.",
+      "E": "Harold's second novel is similar to his first. Therefore, his second novel must be enthralling, because his first novel won a prestigious literary prize."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Any writer whose purpose is personal expression sometimes uses words ambiguously. Every poet's purpose is personal expression. Thus no poetry reader's enjoyment depends on attaining a precise understanding of what the poet means.",
+    "questionStem": "The conclusion can be properly inferred if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Writers who sometimes use words ambiguously have no readers who try to attain a precise understanding of what the writer means.",
+      "B": "Writers whose purpose is personal expression are unconcerned with whether anyone enjoys reading their works.",
+      "C": "No writer who ever uses words ambiguously has any reader whose enjoyment depends on attaining a precise understanding of what the writer means.",
+      "D": "Most writers whose readers' enjoyment does not depend on attaining a precise understanding of the writers' words are poets.",
+      "E": "Readers who have a precise understanding of what a writer has written derive their enjoyment from that understanding."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Paradox",
+    "questionDifficulty": 5,
+    "stimulus": "It is clear that humans during the Upper Paleolithic period used lamps for light in caves. Though lamps can be dated to the entire Upper Paleolithic, the distribution of known lamps from the period is skewed, with the greatest number being associated with the late Upper Paleolithic period, when the Magdalenian culture was dominant.",
+    "questionStem": "Each of the following, if true, contributes to an explanation of the skewed distribution of lamps except:",
+    "answerChoices": {
+      "A": "Artifacts from early in the Upper Paleolithic period are harder to identify than those that originated later in the period.",
+      "B": "More archaeological sites have been discovered from the Magdalenian culture than from earlier cultures.",
+      "C": "More efficient lamp-making techniques were developed by the Magdalenian culture than by earlier cultures.",
+      "D": "Fire pits were much more common in caves early in the Upper Paleolithic period than they were later in that period.",
+      "E": "More kinds of lamps were produced by the Magdalenian culture than by earlier cultures."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Evaluate",
+    "questionDifficulty": 5,
+    "stimulus": "Columnist: George Orwell's book 1984 has exercised much influence on a great number of this newspaper's readers. One thousand readers were surveyed and asked to name the one book that had the most influence on their lives. The book chosen most often was the Bible; 1984 was second.",
+    "questionStem": "The answer to which one of the following questions would most help in evaluating the columnist's argument?",
+    "answerChoices": {
+      "A": "How many books had each person surveyed read?",
+      "B": "How many people chose books other than 1984?",
+      "C": "How many people read the columnist's newspaper?",
+      "D": "How many books by George Orwell other than 1984 were chosen?",
+      "E": "How many of those surveyed had actually read the books they chose?"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "A 1991 calculation was made to determine what, if any, additional health-care costs beyond the ordinary are borne by society at large for people who live a sedentary life. The figure reached was a lifetime average of $1,650. Thus people's voluntary choice not to exercise places a significant burden on society.",
+    "questionStem": "Which one of the following, if true and not taken into account by the calculation, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Many people whose employment requires physical exertion do not choose to engage in regular physical exercise when they are not at work.",
+      "B": "Exercise is a topic that is often omitted from discussion between doctor and patient during a patient's visit.",
+      "C": "Physical conditions that eventually require medical or nursing-home care often first predispose a person to adopt a sedentary life-style.",
+      "D": "Individuals vary widely in the amount and kind of exercise they choose, when they do exercise regularly.",
+      "E": "A regular program of moderate exercise tends to increase circulation, induce a feeling of well-being and energy, and decrease excess weight."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 1,
+    "questionNumber": 26,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "In the paintings by seventeenth-century Dutch artist Vermeer, we find several recurrent items: a satin jacket, a certain Turkish carpet, and wooden chairs with lion's-head finials. These reappearing objects might seem to evince a dearth of props. Yet we know that many of the props Vermeer used were expensive. Thus, while we might speculate about exactly why Vermeer worked with a small number of familiar objects, it was clearly not for lack of props that the recurrent items were used.",
+    "questionStem": "The conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Vermeer often borrowed the expensive props he represented in his paintings.",
+      "B": "The props that recur in Vermeer's paintings were always available to him.",
+      "C": "The satin jacket and wooden chairs that recur in the paintings were owned by Vermeer's sister.",
+      "D": "The several recurrent items that appeared in Vermeer's paintings had special sentimental importance for him.",
+      "E": "If a dearth of props accounted for the recurrent objects in Vermeer's paintings, we would not see expensive props in any of them."
+    },
+    "correctAnswer": "E"
+  }
+]

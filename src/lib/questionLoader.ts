@@ -90,6 +90,18 @@ const JSON_FILES = [
   // Fifth batch - PT102
   '/data/PT102-S2-LR.json',
   '/data/PT102-S3-LR.json',
+  // Sixth batch - PT112
+  '/data/PT112-S1-LR.json',
+  '/data/PT112-S3-LR.json',
+  '/data/PT112-S4-LR.json',
+  // Seventh batch - PT113
+  '/data/PT113-S2-LR.json',
+  '/data/PT113-S3-LR.json',
+  '/data/PT113-S4-LR.json',
+  // Eighth batch - PT119
+  '/data/PT119-S2-LR.json',
+  '/data/PT119-S3-LR.json',
+  '/data/PT119-S4-LR.json',
 ];
 
 // Simple hash for qid generation

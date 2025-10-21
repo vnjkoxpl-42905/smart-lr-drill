@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "A government ought to protect and encourage free speech, because free speech is an activity that is conducive to a healthy nation and thus is in the best interest of its people.",
+    "questionStem": "The main conclusion above follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "An activity that is in the best interest of the people ought to be protected and encouraged by a nation's government.",
+      "B": "Basic, inalienable rights of the people ought to be protected and encouraged by government.",
+      "C": "An activity that helps a government to govern ought to be protected and encouraged by it.",
+      "D": "A government ought to protect and encourage an activity that is conducive to the interests of that government.",
+      "E": "Universal human rights that are in the best interest of the people ought to be protected and encouraged by a nation's government."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "The current theory about earthquakes holds that they are caused by adjoining plates of rock sliding past each other; the plates are pressed together until powerful forces overcome the resistance. As plausible as this may sound, at least one thing remains mysterious on this theory. The overcoming of such resistance should create enormous amounts of heat. But so far no increases in temperature unrelated to weather have been detected following earthquakes.",
+    "questionStem": "Which one of the following most accurately expresses the main point of the argument?",
+    "answerChoices": {
+      "A": "No increases in temperature have been detected following earthquakes.",
+      "B": "The current theory does not fully explain earthquake data.",
+      "C": "No one will ever be sure what the true cause of earthquakes is.",
+      "D": "Earthquakes produce enormous amounts of heat that have so far gone undetected.",
+      "E": "Contrary to the current theory, earthquakes are not caused by adjoining plates of rock sliding past one another."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Role",
+    "questionDifficulty": 4,
+    "stimulus": "Legal theorist: It is unreasonable to incarcerate anyone for any other reason than that he or she is a serious threat to the property or lives of other people. The breaking of a law does not justify incarceration, for lawbreaking proceeds either from ignorance of the law or of the effects of one's actions, or from the free choice of the lawbreaker. Obviously mere ignorance cannot justify incarcerating a lawbreaker, and even free choice on the part of the lawbreaker fails to justify incarceration, for free choice proceeds from the desires of an agent, and the desires of an agent are products of genetics and environmental conditioning, neither of which is controlled by the agent.",
+    "questionStem": "The claim in the first sentence of the passage plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "It is offered as a premise that helps to show that no actions are under the control of the agent.",
+      "B": "It is offered as background information necessary to understand the argument.",
+      "C": "It is offered as the main conclusion that the argument is designed to establish.",
+      "D": "It is offered as evidence for the stated claim that protection of life and property is more important than retribution for past illegal acts.",
+      "E": "It is offered as evidence for the stated claim that lawbreaking proceeds from either ignorance of the law, or ignorance of the effects of one's actions, or free choice."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "A certain gene can be stimulated by chemicals in cigarette smoke, causing lung cells to metabolize the chemicals in a way that makes the cells cancerous. Yet smokers in whom this gene is not stimulated have as high a risk of developing lung cancer from smoking as other smokers do.",
+    "questionStem": "If the statements above are true, it can be concluded on the basis of them that",
+    "answerChoices": {
+      "A": "stimulation of the gene by chemicals in cigarette smoke is not the only factor affecting the risk for smokers of developing lung cancer",
+      "B": "nonsmokers have as high a risk of developing lung cancer as do smokers in whom the gene has not been stimulated",
+      "C": "smokers in whom the gene has been stimulated are more likely to develop lung cancer than are other smokers",
+      "D": "the gene is more likely to be stimulated by chemicals in cigarette smoke than by other chemicals",
+      "E": "smokers are less likely to develop lung cancer if they do not have the gene"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "In a poll of eligible voters conducted on the eve of a mayoral election, more of those polled stated that they favored Panitch than stated that they favored any other candidate. Despite this result, another candidate, Yeung, defeated Panitch by a comfortable margin.",
+    "questionStem": "Each of the following, if true, contributes to a resolution of the discrepancy described above except:",
+    "answerChoices": {
+      "A": "Of Yeung's supporters, a smaller percentage were eligible to vote than the percentage of Panitch's supporters who were eligible to vote.",
+      "B": "A third candidate, Mulhern, conducted a press conference on the morning of the election and withdrew from the race.",
+      "C": "The poll's questions were designed by staff members of Panitch's campaign.",
+      "D": "Of the poll respondents supporting Yeung, 70 percent described the election as \"important\" or \"very important,\" while 30 percent of respondents supporting Panitch did the same.",
+      "E": "The poll, conducted on a Monday, surveyed persons in the downtown area, and the percentage of Yeung's supporters who work downtown is lower than that of Panitch's supporters."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Commissioner: Budget forecasters project a revenue shortfall of a billion dollars in the coming fiscal year. Since there is no feasible way to increase the available funds, our only choice is to decrease expenditures. The plan before you outlines feasible cuts that would yield savings of a billion dollars over the coming fiscal year. We will be able to solve the problem we face, therefore, only if we adopt this plan.",
+    "questionStem": "The reasoning in the commissioner's argument is flawed because this argument",
+    "answerChoices": {
+      "A": "relies on information that is far from certain",
+      "B": "confuses being an adequate solution with being a required solution",
+      "C": "inappropriately relies on the opinions of experts",
+      "D": "inappropriately employs language that is vague",
+      "E": "takes for granted that there is no way to increase available funds"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Must be False",
+    "questionDifficulty": 4,
+    "stimulus": "Critic: Emily Dickinson's poetry demonstrates that meaning cannot reside entirely within a poem itself, but is always the unique result of an interaction between a reader's system of beliefs and the poem; and, of course, any two readers from different cultures or eras have radically different systems of beliefs.",
+    "questionStem": "If the critic's statements are true, each of the following could be true except:",
+    "answerChoices": {
+      "A": "A reader's interpretation of a poem by Dickinson is affected by someone else's interpretation of it.",
+      "B": "A modern reader and a nineteenth-century reader interpret one of Shakespeare's sonnets in the same way.",
+      "C": "A reader's interpretation of a poem evolves over time.",
+      "D": "Two readers from the same era arrive at different interpretations of the same poem.",
+      "E": "A reader's enjoyment of a poem is enhanced by knowing the poet's interpretation of it."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Archaeologist: The fact that the ancient Egyptians and the Maya both built pyramids is often taken as evidence of a historical link between Old- and New-World civilizations that is earlier than any yet documented. But while these buildings are similar to each other, there are important differences in both design and function. The Egyptian pyramids were exclusively tombs for rulers, whereas the Mayan pyramids were used as temples. This shows conclusively that there was no such link between Old- and New-World civilizations.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the archaeologist's argument?",
+    "answerChoices": {
+      "A": "The argument equivocates with respect to the term \"evidence.\"",
+      "B": "The argument appeals to emotion rather than to reason.",
+      "C": "The argument assumes the conclusion it is trying to prove.",
+      "D": "The argument incorrectly relies on words whose meanings are vague or imprecise.",
+      "E": "The argument presumes that no other evidence is relevant to the issue at hand."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "Manuscripts written by first-time authors generally do not get serious attention by publishers except when these authors happen to be celebrities. My manuscript is unlikely to be taken seriously by publishers for I am a first-time author who is not a celebrity.",
+    "questionStem": "The structure of which one of the following arguments is most similar to the structure of the argument above?",
+    "answerChoices": {
+      "A": "Challengers generally do not win elections unless the incumbent has become very unpopular. The incumbent in this election has become very unpopular. Therefore, the challenger may win.",
+      "B": "Fruit salad that contains bananas is ordinarily a boring dish unless it contains two or more exotic fruits. This fruit salad has bananas in it, and the only exotic fruit it has is guava. Thus, it will probably be boring.",
+      "C": "Thursday's city council meeting is likely to be poorly attended. Traditionally, council meetings are sparsely attended if zoning issues are the only ones on the agenda. The agenda for Thursday is exclusively devoted to zoning.",
+      "D": "The bulk of an estate generally goes to the spouse, if surviving, and otherwise goes to the surviving children. In this case there is no surviving spouse; hence the bulk of the estate is likely to go to the surviving children.",
+      "E": "Normally about 40 percent of the deer population will die over the winter unless it is extremely mild. The percentage of the deer population that died over the recent winter was the normal 40 percent. I conclude that the recent winter was not unusually mild."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Twelve healthy volunteers with the Apo-A-IV-1 gene and twelve healthy volunteers who instead have the Apo-A-IV-2 gene each consumed a standard diet supplemented daily by a high-cholesterol food. A high level of cholesterol in the blood is associated with an increased risk of heart disease. After three weeks, the blood cholesterol levels of the subjects in the second group were unchanged, whereas the blood cholesterol levels of those with the Apo-A-IV-1 gene rose 20 percent.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Approximately half the population carries a gene that lowers cholesterol levels.",
+      "B": "Most of those at risk of heart disease may be able to reduce their risk by adopting a low-cholesterol diet.",
+      "C": "The bodies of those who have the Apo-A-IV-2 gene excrete cholesterol when blood cholesterol reaches a certain level.",
+      "D": "The presence of the Apo-A-IV-1 gene seems to indicate that a person has a lower risk of heart disease.",
+      "E": "The presence of the Apo-A-IV-2 gene may inhibit the elevation of blood cholesterol."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "High school students who feel that they are not succeeding in school often drop out before graduating and go to work. Last year, however, the city's high school dropout rate was significantly lower than the previous year's rate. This is encouraging evidence that the program instituted two years ago to improve the morale of high school students has begun to take effect to reduce dropouts.",
+    "questionStem": "Which one of the following, if true about the last year, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "There was a recession that caused a high level of unemployment in the city.",
+      "B": "The morale of students who dropped out of high school had been low even before they reached high school.",
+      "C": "As in the preceding year, more high school students remained in school than dropped out.",
+      "D": "High schools in the city established placement offices to assist their graduates in obtaining employment.",
+      "E": "The antidropout program was primarily aimed at improving students' morale in those high schools with the highest dropout rates."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "The television show Henry was not widely watched until it was scheduled for Tuesday evenings immediately after That's Life, the most popular show on television. During the year after the move, Henry was consistently one of the ten most-watched shows on television. Since Henry's recent move to Wednesday evenings, however, it has been watched by far fewer people. We must conclude that Henry was widely watched before the move to Wednesday evenings because it followed That's Life and not because people especially liked it.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Henry has been on the air for three years, but That's Life has been on the air for only two years.",
+      "B": "The show that replaced Henry on Tuesdays has persistently had a low number of viewers in the Tuesday time slot.",
+      "C": "The show that now follows That's Life on Tuesdays has double the number of viewers it had before being moved.",
+      "D": "After its recent move to Wednesday, Henry was aired at the same time as the second most popular show on television.",
+      "E": "That's Life was not widely watched during the first year it was aired."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Joseph: My encyclopedia says that the mathematician Pierre de Fermat died in 1665 without leaving behind any written proof for a theorem that he claimed nonetheless to have proved. Probably this alleged theorem simply cannot be proved, since as the article points out no one else has been able to prove it. Therefore it is likely that Fermat was either lying or else mistaken when he made his claim.\nLaura: Your encyclopedia is out of date. Recently someone has in fact proved Fermat's theorem. And since the theorem is provable, your claim— that Fermat was lying or mistaken—clearly is wrong.",
+    "questionStem": "Joseph's statement that \"this alleged theorem simply cannot be proved\" plays which one of the following roles in his argument?",
+    "answerChoices": {
+      "A": "an assumption for which no support is offered",
+      "B": "a subsidiary conclusion on which his argument's main conclusion is based",
+      "C": "a potential objection that his argument anticipates and attempts to answer before it is raised",
+      "D": "the principal claim that his argument is structured to refute",
+      "E": "background information that neither supports nor undermines his argument's conclusion"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Joseph: My encyclopedia says that the mathematician Pierre de Fermat died in 1665 without leaving behind any written proof for a theorem that he claimed nonetheless to have proved. Probably this alleged theorem simply cannot be proved, since as the article points out no one else has been able to prove it. Therefore it is likely that Fermat was either lying or else mistaken when he made his claim.\nLaura: Your encyclopedia is out of date. Recently someone has in fact proved Fermat's theorem. And since the theorem is provable, your claim— that Fermat was lying or mistaken—clearly is wrong.",
+    "questionStem": "Which one of the following most accurately describes a reasoning error in Laura's argument?",
+    "answerChoices": {
+      "A": "It purports to establish its conclusion by making a claim that, if true, would actually contradict that conclusion.",
+      "B": "It mistakenly assumes that the quality of a person's character can legitimately be taken to guarantee the accuracy of the claims that person has made.",
+      "C": "It mistakes something that is necessary for its conclusion to follow for something that ensures that the conclusion follows.",
+      "D": "It uses the term \"provable\" without defining it.",
+      "E": "It fails to distinguish between a true claim that has mistakenly been believed to be false and a false claim that has mistakenly been believed to be true."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "It is not good for a university to have class sizes that are very large or very small, or to have professors with teaching loads that are very light or very heavy. After all, crowded classes and overworked faculty cripple the institution's ability to recruit and retain both qualified students and faculty.",
+    "questionStem": "Which one of the following, if added as a premise to the argument, most helps to justify its conclusion?",
+    "answerChoices": {
+      "A": "Professors who have very light teaching loads tend to focus their remaining time on research.",
+      "B": "Classes that have very low numbers of students tend to have a lot of classroom discussion.",
+      "C": "Very small class sizes or very light teaching loads indicate incompetence in classroom instruction.",
+      "D": "Very small class sizes or very light teaching loads are common in the worst and the best universities.",
+      "E": "Professors with very light teaching loads have no more office hours for students than professors with normal teaching loads."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Method",
+    "questionDifficulty": 3,
+    "stimulus": "Sales manager: The highest priority should be given to the needs of the sales department, because without successful sales the company as a whole would fail.\nShipping manager: There are several departments other than sales that also must function successfully for the company to succeed. It is impossible to give the highest priority to all of them.",
+    "questionStem": "The shipping manager criticizes the sales manager's argument by pointing out",
+    "answerChoices": {
+      "A": "that the sales department taken by itself is not critical to the company's success as a whole",
+      "B": "the ambiguity of the term \"highest priority\"",
+      "C": "that departments other than sales are more vital to the company's success",
+      "D": "an absurd consequence of its apparent assumption that a department's necessity earns it the highest priority",
+      "E": "that the sales manager makes a generalization from an atypical case"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Researchers have found that people who drink five or more cups of coffee a day have a risk of heart disease 2.5 times the average after corrections are made for age and smoking habits. Members of the research team say that, on the basis of their findings, they now limit their own daily coffee intake to two cups.",
+    "questionStem": "Which one of the following, if true, indicates that the researchers' precaution might not have the result of decreasing their risk of heart disease?",
+    "answerChoices": {
+      "A": "The study found that for people who drank three or more cups of coffee daily, the additional risk of heart disease increased with each extra daily cup.",
+      "B": "Per capita coffee consumption has been declining over the past 20 years because of the increasing popularity of soft drinks and also because of health worries.",
+      "C": "The study did not collect information that would show whether variations in level of coffee consumption are directly related to variations in level of stress, a major causal factor in heart disease.",
+      "D": "Subsequent studies have consistently shown that heavy smokers consume coffee at about 3 times the rate of nonsmokers.",
+      "E": "Subsequent studies have shown that heavy coffee consumption tends to cause an elevated blood-cholesterol level, an immediate indicator of increased risk of heart disease."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "People who have political power tend to see new technologies as a means of extending or protecting their power, whereas they generally see new ethical arguments and ideas as a threat to it. Therefore, technical ingenuity usually brings benefits to those who have this ingenuity, whereas ethical inventiveness brings only pain to those who have this inventiveness.",
+    "questionStem": "Which one of the following statements, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Those who offer new ways of justifying current political power often reap the benefits of their own innovations.",
+      "B": "Politically powerful people tend to reward those who they believe are useful to them and to punish those who they believe are a threat.",
+      "C": "Ethical inventiveness and technical ingenuity are never possessed by the same individuals.",
+      "D": "New technologies are often used by people who strive to defeat those who currently have political power.",
+      "E": "Many people who possess ethical inventiveness conceal their novel ethical arguments for fear of retribution by the politically powerful."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Birds need so much food energy to maintain their body temperatures that some of them spend most of their time eating. But a comparison of a bird of a seed-eating species to a bird of a nectar-eating species that has the same overall energy requirement would surely show that the seed-eating bird spends more time eating than does the nectar-eating bird, since a given amount of nectar provides more energy than does the same amount of seeds.",
+    "questionStem": "The argument relies on which one of the following questionable assumptions?",
+    "answerChoices": {
+      "A": "Birds of different species do not generally have the same overall energy requirements as each other.",
+      "B": "The nectar-eating bird does not sometimes also eat seeds.",
+      "C": "The time it takes for the nectar-eating bird to eat a given amount of nectar is not longer than the time it takes the seed-eating bird to eat the same amount of seeds.",
+      "D": "The seed-eating bird does not have a lower body temperature than that of the nectar-eating bird.",
+      "E": "The overall energy requirements of a given bird do not depend on factors such as the size of the bird, its nest-building habits, and the climate of the region in which it lives."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Consumer advocate: The introduction of a new drug into the marketplace should be contingent upon our having a good understanding of its social impact. However, the social impact of the newly marketed antihistamine is far from clear. It is obvious, then, that there should be a general reduction in the pace of bringing to the marketplace new drugs that are now being tested.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "The social impact of the new antihistamine is much better understood than that of most new drugs being tested.",
+      "B": "The social impact of some of the new drugs being tested is poorly understood.",
+      "C": "The economic success of some drugs is inversely proportional to how well we understand their social impact.",
+      "D": "The new antihistamine is chemically similar to some of the new drugs being tested.",
+      "E": "The new antihistamine should be on the market only if most new drugs being tested should be on the market also."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Tina: For centuries oceans and human eccentricity have been linked in the literary and artistic imagination. Such linkage is probably due to the European Renaissance practice of using ships as asylums for the socially undesirable.\nSergio: No. Oceans have always been viewed as mysterious and unpredictable—qualities that people have invariably associated with eccentricity.",
+    "questionStem": "Tina's and Sergio's statements lend the most support to the claim that they disagree about which one of the following statements?",
+    "answerChoices": {
+      "A": "Eccentric humans were considered socially undesirable during the European Renaissance.",
+      "B": "Oceans have always been viewed as mysterious and unpredictable.",
+      "C": "The linkage between oceans and eccentricity explains the European Renaissance custom of using ships as asylums.",
+      "D": "People have never attributed the same qualities to oceans and eccentrics.",
+      "E": "The linkage between oceans and eccentricity predates the European Renaissance."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "In a recent study, a group of subjects had their normal daily caloric intake increased by 25 percent. This increase was entirely in the form of alcohol. Another group of similar subjects had alcohol replace nonalcoholic sources of 25 percent of their normal daily caloric intake. All subjects gained body fat over the course of the study, and the amount of body fat gained was the same for both groups.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Alcohol is metabolized more quickly by the body than are other foods or drinks.",
+      "B": "In the general population, alcohol is the primary cause of gains in body fat.",
+      "C": "An increased amount of body fat does not necessarily imply a weight gain.",
+      "D": "Body fat gain is not dependent solely on the number of calories one consumes.",
+      "E": "The proportion of calories from alcohol in a diet is more significant for body fat gain than are the total calories from alcohol."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "When investigators discovered that the director of a local charity had repeatedly overstated the number of people his charity had helped, the director accepted responsibility for the deception. However, the investigators claimed that journalists were as much to blame as the director was for inflating the charity's reputation, since they had naïvely accepted what the director told them, and simply reported as fact the numbers he gave them.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the investigators' claim?",
+    "answerChoices": {
+      "A": "Anyone who works for a charitable organization is obliged to be completely honest about the activities of that organization.",
+      "B": "Anyone who knowingly aids a liar by trying to conceal the truth from others is also a liar.",
+      "C": "Anyone who presents as factual a story that turns out to be untrue without first attempting to verify that story is no less responsible for the consequences of that story than anyone else is.",
+      "D": "Anyone who lies in order to advance his or her own career is more deserving of blame than someone who lies in order to promote a good cause.",
+      "E": "Anyone who accepts responsibility for a wrongful act that he or she committed is less deserving of blame than someone who tries to conceal his or her own wrongdoing."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Telephone companies are promoting \"voice mail\" as an alternative to the answering machine. By recording messages from callers when a subscriber does not have access to his or her telephone, voice mail provides a service similar to that of an answering machine. The companies promoting this service argue that it will soon make answering machines obsolete, since it is much more convenient, more flexible, and less expensive than an answering machine.",
+    "questionStem": "Which one of the following, if true, most calls into question the argument made by the companies promoting voice mail?",
+    "answerChoices": {
+      "A": "Unlike calls made to owners of answering machines, all telephone calls made to voice-mail subscribers are completed, even if the line called is in use at the time of the call.",
+      "B": "The surge in sales of answering machines occurred shortly after they were first introduced to the electronics market.",
+      "C": "Once a telephone customer decides to subscribe to voice mail, that customer can cancel the service at any time.",
+      "D": "Answering machines enable the customer to hear who is calling before the customer decides whether to answer the telephone, a service voice mail does not provide.",
+      "E": "The number of messages a telephone answering machine can record is limited by the length of the magnetic tape on which calls are recorded."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT112",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Parallel",
+    "questionDifficulty": 5,
+    "stimulus": "The judgment that an artist is great always rests on assessments of the work the artist has produced. A series of great works is the only indicator of greatness. Therefore, to say that an artist is great is just to summarize the quality of his or her known works, and the artist's greatness can provide no basis for predicting the quality of the artist's unknown or future works.",
+    "questionStem": "Which one of the following contains questionable reasoning most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "The only way of knowing whether someone has a cold is to observe symptoms. Thus, when a person is said to have a cold, this means only that he or she has displayed the symptoms of a cold, and no prediction about the patient's future symptoms is justified.",
+      "B": "Although colds are very common, there are some people who never or only very rarely catch colds. Clearly these people must be in some way physiologically different from people who catch colds frequently.",
+      "C": "Someone who has a cold is infected by a cold virus. No one can be infected by the same cold virus twice, but there are indefinitely many different cold viruses. Therefore, it is not possible to predict from a person's history of infection how susceptible he or she will be in the future.",
+      "D": "The viruses that cause colds are not all the same, and they differ in their effects. Therefore, although it may be certain that a person has a cold, it is impossible to predict how the cold will progress.",
+      "E": "Unless a person displays cold symptoms, it cannot properly be said that the person has a cold. But each of the symptoms of a cold is also the symptom of some other disease. Therefore, one can never be certain that a person has a cold."
+    },
+    "correctAnswer": "A"
+  }
+]```

@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Considering that Mark Twain is Samuel Clemens, I have always found it amazing that very few people know that Samuel Clemens was a writer, since almost everybody knows that Mark Twain was one.",
+    "questionStem": "Which one of the following, if true, would most effectively resolve the apparent paradox above?",
+    "answerChoices": {
+      "A": "Most people probably have not read anything by Samuel Clemens.",
+      "B": "Everyone who knows that Samuel Clemens was a writer also knows that Mark Twain was one.",
+      "C": "Most people do not know that Mark Twain is Samuel Clemens.",
+      "D": "Many people believe apparently conflicting things about authors.",
+      "E": "Some people know that \"Mark Twain\" is a pseudonym for Samuel Clemens."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "Advertisement: The pride the people at Austin Stables take in their work accounts for their success in producing more winning racehorses than any other stable. Such a tradition of pride is not only found in the business of horse racing. For generations we at Barr Motor Company have demonstrated similar pride. You can rely on Barr Motor Company to produce more winning automobiles than our competitors.",
+    "questionStem": "The advertisement proceeds by",
+    "answerChoices": {
+      "A": "demonstrating that Barr Motor Company has more repeat customers than its competitors",
+      "B": "using an analogy to reach the conclusion that Barr Motor Company is superior to its competitors",
+      "C": "proving that Barr Motor Company has a long-standing tradition of pride",
+      "D": "understating the role that pride plays in accounting for the success of Austin Stables",
+      "E": "asserting that Barr Motor Company has an older tradition of pride than does Austin Stables"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Must be True",
+    "questionDifficulty": 2,
+    "stimulus": "Having lived through extraordinary childhood circumstances, Robin has no conception of the moral difference between right and wrong, only between what is legally permitted and what is not. When Robin committed an offense, Robin did not recognize the fact that it was a morally wrong act, despite knowing that it was illegal.",
+    "questionStem": "From the statements above, which one of the following can be properly inferred?",
+    "answerChoices": {
+      "A": "Robin committed no offense that was not legally permissible.",
+      "B": "Robin did something that was morally wrong.",
+      "C": "Moral ignorance is never excusable in the eyes of the law.",
+      "D": "Robin's childhood could have provided more adequate moral training even in the circumstances.",
+      "E": "Robin could now be brought to see the moral difference between right and wrong."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Anne: Halley's Comet, now in a part of its orbit relatively far from the Sun, recently flared brightly enough to be seen by telescope. No comet has ever been observed to flare so far from the Sun before, so such a flare must be highly unusual.\nSue: Nonsense. Usually no one bothers to try to observe comets when they are so far from the Sun. This flare was observed only because an observatory was tracking Halley's Comet very carefully.",
+    "questionStem": "Sue challenges Anne's reasoning by",
+    "answerChoices": {
+      "A": "pointing out that Anne's use of the term \"observed\" is excessively vague",
+      "B": "drawing attention to an inconsistency between two of Anne's claims",
+      "C": "presenting evidence that directly contradicts Anne's evidence",
+      "D": "offering an alternative explanation for the evidence Anne cites",
+      "E": "undermining some of Anne's evidence while agreeing with her conclusion"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Psychologist: There are theories that posit completely different causal mechanisms from those posited by Freudian psychological theory and that are more successful at predicting human behavior. Therefore, Freudian theories of behavior, no matter how suggestive or complex they are, ought to be abandoned in favor of these other theories.",
+    "questionStem": "Which one of the following is an assumption on which the psychologist's argument depends?",
+    "answerChoices": {
+      "A": "Freudian theories have offered interesting suggestions, which have been shown to be false, about the causes of human behavior.",
+      "B": "A psychological theory with greater predictive success than another is scientifically preferable to it.",
+      "C": "Freudian theory has had little success in predicting how people will behave in various situations.",
+      "D": "Measuring the predictive success of a psychological theory involves considering other theories that attempt to explain the same phenomena.",
+      "E": "Scientific theories become impractical if they posit causal mechanisms beyond a certain level of complexity."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Skeletal remains of early humans indicate clearly that our ancestors had fewer dental problems than we have. So, most likely, the diet of early humans was very different from ours.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "A healthy diet leads to healthy teeth.",
+      "B": "Skeletal remains indicate that some early humans had a significant number of cavities.",
+      "C": "The diet of early humans was at least as varied as is our diet.",
+      "D": "Early humans had a shorter average life span than we do, and the most serious dental problems now tend to develop late in life.",
+      "E": "Diet is by far the most significant factor contributing to dental health."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "In preagricultural societies, social roles were few and were easily predicted for each phase of a person's life. Accordingly, interpersonal relations, although not always pleasant or fair, were stable and predictable. Modern society, on the other hand, has thousands of different social roles. Technology and consumerism require that each of us fill highly particularized niches, and these niches are differentiating at an astonishing pace. Therefore, _______________",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "modern society is characterized by greater injustice and unpleasantness than were preagricultural societies",
+      "B": "interpersonal relations in modern societies are less stable and less predictable than they were in preagricultural societies",
+      "C": "the most important difference between modern and preagricultural societies is the variety and type of social roles permitted in each",
+      "D": "in modern societies, people must rely on technology to effectively predict and interpret other people's actions",
+      "E": "preagricultural societies lacked the complex social system that is needed to provide each person with an appropriate and stable social role or niche"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "Journalist: A free marketplace of ideas ensures that all ideas get a fair hearing. Even ideas tainted with prejudice and malice can prompt beneficial outcomes. In most countries, however, the government is responsible for over half the information released to the public through all media. For this reason, the power of governments over information needs to be curtailed. Everyone grants that governments should not suppress free expression, yet governments continue to construct near monopolies on the publication and dissemination of enormous amounts of information.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the journalist's argument?",
+    "answerChoices": {
+      "A": "The freedom of the marketplace of ideas is in jeopardy.",
+      "B": "Preserving a free marketplace of ideas is important.",
+      "C": "The control that governments have over information needs to be reduced.",
+      "D": "Ideas that have malicious content or stem from questionable sources can be valuable.",
+      "E": "Governments have near monopolies on the dissemination of many kinds of information."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "Some students attending a small university with a well-known choir live off campus. From the fact that all music majors are members of the choir, a professor in the music department concluded that none of the students who live off campus is a music major.",
+    "questionStem": "The professor's conclusion is properly drawn if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "None of the students who live off campus is a member of the choir.",
+      "B": "None of the students who are music majors has failed to join the choir.",
+      "C": "Some of the students who do not live off campus are not music majors.",
+      "D": "All students who live on campus are music majors.",
+      "E": "All students who are members of the choir are music majors."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Charlene: Environmental cleanup increasingly relies on microorganisms to metabolize pollutants. This has its limitations, though, since microbes become less active when a region's temperature drops below normal.\nOlaf: I don't think that's right. Researchers studying oil spills in the Arctic and subtropical regions measured the carbon dioxide output of organisms that digest petroleum pollutants and found that Arctic and subtropical microbes ate oil at nearly the same rate.",
+    "questionStem": "Olaf's reply suggests that he misinterprets Charlene's use of the term",
+    "answerChoices": {
+      "A": "relies",
+      "B": "normal",
+      "C": "cleanup",
+      "D": "limitations",
+      "E": "active"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "According to the theory of continental drift, in prehistoric times, many of today's separate continents were part of a single huge landmass. As the plates on which this landmass rested began to move, the mass broke apart, and ocean water filled the newly created chasms. It is hypothesized, for example, that South America was once joined on its east coast with what is now the west coast of Africa.",
+    "questionStem": "Which one of the following discoveries, if it were made, would most support the above hypothesis about South America and Africa?",
+    "answerChoices": {
+      "A": "A large band of ancient rock of a rare type along the east coast of South America is of the same type as a band on the west coast of Africa.",
+      "B": "Many people today living in Brazil are genetically quite similar to many western Africans.",
+      "C": "The climates of western Africa and of the east coast of South America resemble each other.",
+      "D": "Some of the oldest tribes of people living in eastern South America speak languages linguistically similar to various languages spoken by certain western African peoples.",
+      "E": "Several species of plants found in western Africa closely resemble plants growing in South America."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Several legislators claim that the public finds many current movies so violent as to be morally offensive. However, these legislators have misrepresented public opinion. In a survey conducted by a movie industry guild, only 17 percent of respondents thought that movies are overly violent, and only 3 percent found any recent movie morally offensive. These low percentages are telling, because the respondents see far more current movies than does the average moviegoer.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "attempts to undermine the legislators' credibility instead of addressing their argument",
+      "B": "bases its conclusion on subjective judgments rather than on an objective criterion of moral offensiveness",
+      "C": "fails to consider the possibility that violent movies increase the prevalence of antisocial behavior",
+      "D": "generalizes from a sample that is unlikely to be representative of public sentiment",
+      "E": "presumes, without providing justification, that the people surveyed based their responses on a random sampling of movies"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "James: Many people claim that the voting public is unable to evaluate complex campaign issues. The television commercials for Reade in the national campaign, however, discuss complex campaign issues, and Reade is, at present, more popular than any other candidate.\nMaria: Yes, Reade is the most popular. However, you are incorrect in claiming that this is because of Reade's discussion of complex campaign issues. Reade simply strikes the voters as the most competent and trustworthy candidate.",
+    "questionStem": "Which one of the following, if true, most supports Maria's counter to James?",
+    "answerChoices": {
+      "A": "Reade's opponents are discussing some of the same issues as Reade.",
+      "B": "Reade's opponents charge that Reade oversimplifies complex campaign issues.",
+      "C": "Polling data show that Reade's present popularity will probably diminish over time.",
+      "D": "Polling data show that most voters cannot identify Reade's positions on campaign issues.",
+      "E": "Polling data show that some voters consider Reade competent and trustworthy."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Some critics claim that the power of the media to impose opinions upon people concerning the important issues of the day is too great. But this is not true. It would be true if on major issues the media purveyed a range of opinion narrower than that found among consumers of media. The fact that this assumption is untrue shows the critics' claim to be false.",
+    "questionStem": "Which one of the following most accurately describes a reasoning flaw in the argument?",
+    "answerChoices": {
+      "A": "The argument launches a personal attack against the critics rather than addressing the reasons they present in support of their claim.",
+      "B": "The argument takes for granted that the media give at least as much exposure as they should to a wide range of opinion on the important issues of the day.",
+      "C": "The argument takes for granted that if the truth of one claim implies the truth of a second claim, then the falsity of the first claim proves the falsity of the second claim.",
+      "D": "The argument, instead of providing adequate reasons in support of its conclusion, makes an appeal to popular opinion.",
+      "E": "The argument takes for granted that it is desirable for a wide range of opinion on the important issues of the day to receive media exposure."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Marta: There have been complaints about the lack of recreational areas in our city. Some people favor turning the old railway land into walking trails, but there may be more productive ways of using that land.\nArthur: But the old railway land is ideal for walking trails. Our citizens have gone too long with inadequate recreational areas; we should not dismiss this proposal for walking trails without further consideration.",
+    "questionStem": "Arthur's criticism suggests that he interpreted Marta to be",
+    "answerChoices": {
+      "A": "maintaining that converting the old railway land into walking trails would be an entirely unproductive use of that land",
+      "B": "favoring the development of recreational areas other than walking trails",
+      "C": "assuming that the complaints concerning a shortage of recreational areas are ill founded",
+      "D": "recommending that the proposal for converting the old railway land into walking trails should be promptly dismissed",
+      "E": "asserting that it may not be possible to convert the old railway land into adequate walking trails"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "In countries where government officials are neither selected by free elections nor open to criticism by a free press, the lives of citizens are controlled by policies they have had no role in creating. This is why such countries are prone to civil disorder, in spite of the veneer of calm such countries often present to a visitor. When people do not understand the purpose of the restrictions placed on their behavior they have a greater tendency to engage in civil disorder as an expression of their frustration.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "People who have had a role in making the laws that govern their own behavior act more rationally than those who have not.",
+      "B": "A free press is better able to convey to citizens the purpose of government policy than is a press controlled by the government.",
+      "C": "Civil disorder cannot be prevented by security forces alone, however great the powers granted them by the government.",
+      "D": "People tend not to understand the purpose of restrictions unless they participate in their formulation.",
+      "E": "Civil disorder does not generally occur in countries that have either free elections or a free press."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Researcher: Hard water contains more calcium and magnesium than soft water contains. Thus, those who drink mostly soft water incur an increased risk of heart disease, stroke, and hypertension, for people being treated for these conditions tend to have lower levels of magnesium in their blood.",
+    "questionStem": "Which one of the following, if true, most undermines the researcher's argument?",
+    "answerChoices": {
+      "A": "Magnesium deficiency is not uncommon, even in relatively prosperous countries with an otherwise generally adequate diet.",
+      "B": "Magnesium is needed to prevent sodium from increasing blood pressure.",
+      "C": "As people age, their ability to metabolize magnesium deteriorates.",
+      "D": "The ingestion of magnesium supplements inhibits the effectiveness of many medicines used to treat high blood pressure and heart disease.",
+      "E": "Compounds commonly used to treat hypertension and heart disease diminish the body's capacity to absorb and retain magnesium."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Bookstore owner: Consumers should buy books only from an independent bookstore, not from a bookstore that belongs to a bookstore chain. An independent bookstore tends to carry a much wider variety of books than does a chain bookstore, so because chains often threaten the existence of independent bookstores, they tend to reduce the variety of books available to consumers.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the bookstore owner's argumentation?",
+    "answerChoices": {
+      "A": "Chain bookstores should not force independent bookstores out of business when doing so would reduce the variety of books available to consumers.",
+      "B": "Consumers should buy books from only those bookstores whose existence does not tend to reduce the variety of books available to consumers.",
+      "C": "The best interest of the bookselling business is not served when consumers purchase books from businesses whose existence tends to reduce the variety of of books available to consumers.",
+      "D": "Consumers should not make purchases from any bookstore that deliberately forces competing bookstores out of business.",
+      "E": "If consumers have no access to any independent bookstore, they should buy books from the chain bookstore with the greatest diversity of books."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Anger in response to insults is unreasonable, for insults are merely assertions that someone has undesirable characteristics. If such an assertion is false, the insulted party ought to pity the ignorance prompting the insult. If it is true, the insulted party should be grateful for such useful information.",
+    "questionStem": "Which one of the following, if assumed, enables the argument's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "Actions prompted by ignorance do not warrant hostile reactions.",
+      "B": "Anger is an unreasonable response to useful information.",
+      "C": "Anger is an unreasonable response to any action that should prompt pity or gratitude.",
+      "D": "Gratitude and pity are reasonable responses to some forms of hostile or insensitive behavior.",
+      "E": "Pity is the only reasonable reaction to people with undesirable characteristics."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Evidence suggests that we can manufacture a car with twice the fuel efficiency of a normal car, and it has been shown that we can produce a car that meets safety standards for side-impact crashes. So we can make a car that does both.",
+    "questionStem": "The flawed reasoning in the argument above is most similar to that in which one of the following?",
+    "answerChoices": {
+      "A": "Since there is no dishwasher currently available that uses energy efficiently and there is no dishwasher currently available that effectively cleans pans, no dishwasher currently available is well engineered. For, to be well engineered, a dishwasher must use energy efficiently and clean pans effectively.",
+      "B": "Kameko might catch a cold this winter and she might go outside without a hat this winter. Therefore, it is possible that Kameko will catch a cold because she goes outside without a hat this winter.",
+      "C": "Susan says that it is cold outside, and Nathan says that it is snowing; therefore, it is both cold and snowing outside.",
+      "D": "It is possible to write a best-selling novel and it is possible to write one that appeals to the critics. Therefore, an author could write a critically acclaimed novel that gains a large readership.",
+      "E": "There are machines that brew coffee and there are machines that toast bread. And it is possible to make a machine that does both. So there will someday be a machine that does both."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Pizzerias are the only restaurants that routinely record the names, addresses, and menu selections of their customers. Simply by organizing these data, they can easily identify regular, average, and infrequent customers. Therefore, pizzerias utilize direct-mail marketing more effectively than do other restaurants.",
+    "questionStem": "Which one of the following, if assumed, enables the argument's conclusion to be properly inferred?",
+    "answerChoices": {
+      "A": "Restaurants other than pizzerias cannot easily identify regular, average, and infrequent customers.",
+      "B": "For restaurants, utilizing direct-mail marketing requires the names, addresses, and menu selections of at least some customers.",
+      "C": "For restaurants, the identification of regular, average, and infrequent customers generally involves recording the names, addresses, and menu selections of at least some customers.",
+      "D": "Utilizing direct-mail marketing is rarely beneficial for restaurants that cannot identify regular, average, and infrequent customers.",
+      "E": "Restaurants that routinely record names, addresses, and menu selections of their customers always utilize direct-mail marketing more effectively than do any other restaurants."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "All highly successful salespersons are both well organized and self-motivated, characteristics absent from many salespersons who are not highly successful. Further, although only those who are highly successful are well known among their peers, no salespersons who are self-motivated regret their career choices.",
+    "questionStem": "If all of the statements above are true, which one of the following must be true?",
+    "answerChoices": {
+      "A": "No self-motivated salespersons who are not highly successful are well organized.",
+      "B": "All salespersons who are well organized but not highly successful are self-motivated.",
+      "C": "No salespersons who are well known among their peers regret their career choices.",
+      "D": "All salespersons who are not well organized regret their career choices.",
+      "E": "All salespersons who do not regret their career choices are highly successful."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Parallel",
+    "questionDifficulty": 5,
+    "stimulus": "The fact that people who exercise vigorously are sick less often than average does not prove that vigorous exercise prevents illness, for whether one exercises vigorously or not depends in part on one's preexisting state of health.",
+    "questionStem": "The reasoning in which one of the following arguments is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "Having strong verbal skills encourages people to read more, so the fact that habitual readers tend to be verbally skilled does not prove that reading produces verbal skill.",
+      "B": "Musical and mathematical skills are often produced by the same talent for perceiving abstract patterns, so the fact that some mathematicians are not skilled musicians does not prove that they lack the talent that can produce musical skill.",
+      "C": "Since how people choose to dress often depends on how their friends dress, the fact that a person chooses a style of dress does not prove that he or she truly prefers that style to any other.",
+      "D": "The fact that taller children often outperform other children at basketball does not show that height is a decisive advantage in basketball, for taller children tend to play basketball more frequently than do other children.",
+      "E": "The fact that two diseases have similar symptoms does not establish that they have the same underlying cause, for dissimilar causes can have similar effects."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Must be True",
+    "questionDifficulty": 4,
+    "stimulus": "Biologist: We know the following things about plant X. Specimens with fuzzy seeds always have long stems but never have white flowers. Specimens with curled leaves always have white flowers, and specimens with thorny seedpods always have curled leaves. A specimen of plant X in my garden has a long stem and curled leaves.",
+    "questionStem": "From the biologist's statements, which one of the following can be properly inferred about the specimen of plant X in the biologist's garden?",
+    "answerChoices": {
+      "A": "It has white flowers and thorny seedpods.",
+      "B": "It has white flowers but lacks thorny seedpods.",
+      "C": "It has white flowers but lacks fuzzy seeds.",
+      "D": "It has fuzzy seeds and thorny seedpods.",
+      "E": "It lacks both white flowers and fuzzy seeds."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Unquestionably, inventors of useful devices deserve credit for their ingenuity, but the engineers who help develop an invention get too little recognition. Although inventors sometimes serve as their own engineers, more often, engineers must translate an inventor's insight into something workable and useful. Therefore, engineers also deserve credit for their contribution.",
+    "questionStem": "The claim that inventors sometimes serve as their own engineers plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "It separates the practical and theoretical aspects of the argument.",
+      "B": "It indicates that the problem identified in the argument does not arise in every instance.",
+      "C": "It supports an earlier statement regarding what is at issue in the argument.",
+      "D": "It concedes that a distinction on which the argument relies is unclear.",
+      "E": "It introduces an alternative solution to the problem the argument is addressing."
+    },
+    "correctAnswer": "B"
+  }
+]

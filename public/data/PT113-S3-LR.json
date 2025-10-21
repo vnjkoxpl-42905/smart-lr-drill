@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Moralist: TV talk shows are contributing to the moral decline in our country. By constantly being shown the least moral people in our society, viewers begin to think that such people are the norm, and that there is something wrong with being morally upright.\nTV talk show host: Well, if there is such a decline, it's not because of TV talk shows: we simply show people what they want to see. What can be wrong with letting the viewers decide? Furthermore, if restrictions were put on my show, that would amount to censorship, which is wrong.",
+    "questionStem": "The moralist's and the TV talk show host's statements provide the most support for holding that they disagree about whether",
+    "answerChoices": {
+      "A": "TV talk shows should be censored",
+      "B": "people's moral standards have changed",
+      "C": "TV talk shows influence people's conception of what is the norm",
+      "D": "TV talk shows, by presenting immoral guests, are causing a moral decline",
+      "E": "it is wrong not to let the viewers decide what they want to see"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "For the last three years, entomologists have been searching for a parasite to help control a whitefly that has recently become a serious crop pest. Believing this new pest to be a variety of sweet-potato whitefly, the entomologists confined their search to parasites of the sweet-potato whitefly. Genetic research now shows the new pest to be a distinct species, the silverleaf whitefly. Therefore, the search for a parasite has so far been wasted effort.",
+    "questionStem": "Which one of the following is an assumption on which the argument relies?",
+    "answerChoices": {
+      "A": "All varieties of the sweet-potato whitefly are serious crop pests.",
+      "B": "If a crop pest has a parasite, that parasite can always be used to control that pest.",
+      "C": "The chances of successfully identifying a useful parasite of the new pest have increased since the proper identification of the pest.",
+      "D": "No parasite of the sweet-potato whitefly is also a parasite of the silverleaf whitefly.",
+      "E": "In the last three years, the entomologists found no parasites of the sweet-potato whitefly."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Announcement for a television program: Are female physicians more sensitive than male physicians to the needs of women patients? To get the answer, we'll ask physicians of both sexes this question. Tune in tomorrow.",
+    "questionStem": "Which one of the following, if true, identifies a flaw in the plan for the program?",
+    "answerChoices": {
+      "A": "Physicians are in general unwilling to describe the treatment style of other physicians.",
+      "B": "There still are fewer women than men who are physicians, so a patient might not have the opportunity to choose a woman as a physician.",
+      "C": "Those who are best able to provide answers to the question are patients, rather than physicians.",
+      "D": "Since medical research is often performed on men, not all results are fully applicable to women as patients.",
+      "E": "Women as patients are now beginning to take a more active role in managing their care and making sure that they understand the medical alternatives."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Doctor: The practice of using this therapy to treat the illness cannot be adequately supported by the claim that any therapy for treating the illness is more effective than no therapy at all. What must also be taken into account is that this therapy is expensive and complicated.",
+    "questionStem": "Which one of the following most accurately expresses the main point of the doctor's argument?",
+    "answerChoices": {
+      "A": "The therapy is more effective than no treatment at all for the illness.",
+      "B": "The therapy is more effective than other forms of treatment for the illness.",
+      "C": "The therapy is more expensive and complicated than other forms of treatment for the illness.",
+      "D": "The therapy should not be used to treat the illness unless it is either effective or inexpensive.",
+      "E": "The therapy's possible effectiveness in treating the illness is not sufficient justification for using it."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Solicitor: Loux named Zembaty executor of her will. Her only beneficiary was her grandson, of whom she was very fond. Prior to distributing the remainder to the beneficiary, Zembaty was legally required to choose which properties in the estate should be sold to clear the estate's heavy debts. Loux never expressed any particular desire about the Stoke Farm, which includes the only farmland in her estate. Thus, it is unlikely that Loux would have had any objection to Zembaty's having sold it rather than having transferred it to her grandson.",
+    "questionStem": "Which one of the following, if true, most weakens the solicitor's argument?",
+    "answerChoices": {
+      "A": "The estate's debts could not have been cleared without selling the Stoke Farm.",
+      "B": "Loux repeatedly told her grandson that she would take care of him in her will.",
+      "C": "Loux was well aware of the legal requirements the executor of her will would have to satisfy.",
+      "D": "The Stoke Farm was the main cause of the estate's debts.",
+      "E": "Loux's grandson had repeatedly expressed his desire to own a farm."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Role",
+    "questionDifficulty": 1,
+    "stimulus": "Government official: A satisfactory way of eliminating chronic food shortages in our country is not easily achievable. Direct aid from other countries in the form of food shipments tends to undermine our prospects for long-term agricultural self-sufficiency. If external sources of food are delivered effectively by external institutions, local food producers and suppliers are forced out of business. On the other hand, foreign capital funneled to long-term development projects would inject so much cash into our economy that inflation would drive the price of food beyond the reach of most of our citizens.",
+    "questionStem": "The claim that foreign capital funneled into the economy would cause inflation plays which one of the following roles in the government official's argument?",
+    "answerChoices": {
+      "A": "It supports the claim that the official's country must someday be agriculturally self-sufficient.",
+      "B": "It supports the claim that there is no easy solution to the problem of chronic food shortages in the official's country.",
+      "C": "It is supported by the claim that the official's country must someday be agriculturally self-sufficient.",
+      "D": "It supports the claim that donations of food from other countries will not end the chronic food shortages in the official's country.",
+      "E": "It is supported by the claim that food producers and suppliers in the official's country may be forced out of business by donations of food from other countries."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Medical doctor: Sleep deprivation is the cause of many social ills, ranging from irritability to potentially dangerous instances of impaired decision making. Most people today suffer from sleep deprivation to some degree. Therefore we should restructure the workday to allow people flexibility in scheduling their work hours.",
+    "questionStem": "Which one of the following, if true, would most strengthen the medical doctor's argument?",
+    "answerChoices": {
+      "A": "The primary cause of sleep deprivation is overwork.",
+      "B": "Employees would get more sleep if they had greater latitude in scheduling their work hours.",
+      "C": "Individuals vary widely in the amount of sleep they require.",
+      "D": "More people would suffer from sleep deprivation today than did in the past if the average number of hours worked per week had not decreased.",
+      "E": "The extent of one's sleep deprivation is proportional to the length of one's workday."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Method",
+    "questionDifficulty": 3,
+    "stimulus": "Essayist: Knowledge has been defined as a true belief formed by a reliable process. This definition has been criticized on the grounds that if someone had a reliable power of clairvoyance, we would not accept that person's claim to know certain things on the basis of this power. I agree that we would reject such claims, but we would do so because we really do not believe in clairvoyance as a reliable process. Were we to believe in clairvoyance, we would accept knowledge claims made on the basis of it.",
+    "questionStem": "Which one of the following most accurately describes the essayist's method of defending the definition against the objection?",
+    "answerChoices": {
+      "A": "asserting that the objection is based on a belief about the reliability of clairvoyance rather than on the nature of knowledge or its definition",
+      "B": "asserting that the case of clairvoyance is one of knowledge even though we do not really believe in clairvoyance as a reliable process",
+      "C": "arguing against the assumption that clairvoyance is unreliable",
+      "D": "explaining that the definition of knowledge is a matter of personal choice",
+      "E": "demonstrating that the case of clairvoyance is not a case of knowledge and does not fit the definition of knowledge"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "I agree that Hogan's actions resulted in grievous injury to Winters. And I do not deny that Hogan fully realized the nature of his actions and the effects that they would have. Indeed, I would not disagree if you pointed out that intentionally causing such effects is reprehensible, other things being equal. But in asking you to concur with me that Hogan's actions not be wholly condemned I emphasize again that Hogan mistakenly believed Winters to be the robber who had been terrorizing west-side apartment buildings for the past several months.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the argument?",
+    "answerChoices": {
+      "A": "Hogan should not be considered responsible for the injuries sustained by Winters.",
+      "B": "The robber who had been terrorizing west-side apartment buildings should be considered to be as responsible for Winters's injuries as Hogan.",
+      "C": "The actions of Hogan that seriously injured Winters are not completely blameworthy.",
+      "D": "Hogan thought that Winters was the person who had been terrorizing west-side apartment buildings for the last few months.",
+      "E": "The actions of Hogan that seriously injured Winters were reprehensible, other things being equal."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Method",
+    "questionDifficulty": 3,
+    "stimulus": "Peter: Because the leaves of mildly drought-stressed plants are tougher in texture than the leaves of abundantly watered plants, insects prefer to feed on the leaves of abundantly watered plants. Therefore, to minimize crop damage, farmers should water crops only just enough to ensure that there is no substantial threat, from a lack of water, to either the growth or the yield of the crops.\nJennifer: Indeed. In fact, a mildly drought-stressed plant will divert a small amount of its resources from normal growth to the development of pesticidal toxins, but abundantly watered plants will not.",
+    "questionStem": "Jennifer's comment is related to Peter's argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "It offers information that supports each of the claims that Peter makes in his argument.",
+      "B": "It supports Peter's argument by supplying a premise without which Peter's conclusion cannot properly be drawn.",
+      "C": "It supports Peter's argument by offering an explanation of all of Peter's premises.",
+      "D": "It supports one of Peter's premises although it undermines Peter's conclusion.",
+      "E": "It supports the conclusion of Peter's argument by offering independent grounds for that conclusion."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Peter: Because the leaves of mildly drought-stressed plants are tougher in texture than the leaves of abundantly watered plants, insects prefer to feed on the leaves of abundantly watered plants. Therefore, to minimize crop damage, farmers should water crops only just enough to ensure that there is no substantial threat, from a lack of water, to either the growth or the yield of the crops.\nJennifer: Indeed. In fact, a mildly drought-stressed plant will divert a small amount of its resources from normal growth to the development of pesticidal toxins, but abundantly watered plants will not.",
+    "questionStem": "Which one of the following, if true, most strengthens Peter's argument?",
+    "answerChoices": {
+      "A": "The leaves of some crop plants are much larger, and therefore absorb more water, than the leaves of some other crop plants.",
+      "B": "In industrialized nations there are more crops that are abundantly watered than there are crops grown under mild drought stress.",
+      "C": "Insect damage presents a greater threat to crop plants than does mild drought stress.",
+      "D": "Farmers are not always able to control the amount of water that their crops receive when, for instance, there are rainstorms in the areas where their crops are growing.",
+      "E": "Mexican bean beetles are more likely to feed on the leaves of slightly drought-stressed soybeans than oak lace bugs are to feed on the leaves of abundantly watered soybeans."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Vague laws set vague limits on people's freedom, which makes it impossible for them to know for certain whether their actions are legal. Thus, under vague laws people cannot feel secure.",
+    "questionStem": "The conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "People can feel secure only if they know for certain whether their actions are legal.",
+      "B": "If people do not know for certain whether their actions are legal, then they might not feel secure.",
+      "C": "If people know for certain whether their actions are legal, they can feel secure.",
+      "D": "People can feel secure if they are governed by laws that are not vague.",
+      "E": "Only people who feel secure can know for certain whether their actions are legal."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "While it was once believed that the sort of psychotherapy appropriate for the treatment of neuroses caused by environmental factors is also appropriate for schizophrenia and other psychoses, it is now known that these latter, more serious forms of mental disturbance are best treated by biochemical-that is, medicinal-means. This is conclusive evidence that psychoses, unlike neuroses, have nothing to do with environmental factors but rather are caused by some sort of purely organic condition, such as abnormal brain chemistry or brain malformations.",
+    "questionStem": "The argument is vulnerable to criticism because it ignores the possibility that",
+    "answerChoices": {
+      "A": "the organic conditions that result in psychoses can be caused or exacerbated by environmental factors",
+      "B": "the symptoms of mental disturbance caused by purely organic factors can be alleviated with medicine",
+      "C": "organic illnesses that are nonpsychological in nature may be treatable without using biochemical methods",
+      "D": "the nature of any medical condition can be inferred from the nature of the treatment that cures that condition",
+      "E": "organic factors having little to do with brain chemistry may be at least partially responsible for neuroses"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "We learn to use most of the machines in our lives through written instructions, without knowledge of the machines' inner workings, because most machines are specifically designed for use by nonexperts. So, in general, attaining technological expertise would prepare students for tomorrow's job market no better than would a more traditional education stressing verbal and quantitative skills.",
+    "questionStem": "The argument depends on assuming which one of the following?",
+    "answerChoices": {
+      "A": "Fewer people receive a traditional education stressing verbal and quantitative skills now than did 20 years ago.",
+      "B": "Facility in operating machines designed for use by nonexperts is almost never enhanced by expert knowledge of the machines' inner workings.",
+      "C": "Most jobs in tomorrow's job market will not demand the ability to operate many machines that are designed for use only by experts.",
+      "D": "Students cannot attain technological expertise and also receive an education that does not neglect verbal and quantitative skills.",
+      "E": "When learning to use a machine, technological expertise is never more important than verbal and quantitative skills."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Environmentalists who seek stricter governmental regulations controlling water pollution should be certain to have their facts straight. For if it turns out, for example, that water pollution is a lesser threat than they proclaimed, then there will be a backlash and the public will not listen to them even when dire threats exist.",
+    "questionStem": "Which one of the following best illustrates the principle illustrated by the argument above?",
+    "answerChoices": {
+      "A": "Middle-level managers who ask their companies to hire additional employees should have strong evidence that doing so will benefit the company; otherwise, higher-level managers will refuse to follow their suggestions to hire additional employees even when doing so really would benefit the company.",
+      "B": "Politicians who defend the rights of unpopular constituencies ought to see to it that they use cool, dispassionate rhetoric in their appeals. Even if they have their facts straight, inflammatory rhetoric can cause a backlash that results in more negative reactions to these constituencies, whether or not they are deserving of more rights.",
+      "C": "People who are trying to convince others to take some sort of action should make every effort to present evidence that is emotionally compelling. Such evidence is invariably more persuasive than dry, technical data, even when the data strongly support their claims.",
+      "D": "Whoever wants to advance a political agenda ought to take the time to convince legislators that their own political careers are at stake in the matter at hand; otherwise, the agenda will simply be ignored.",
+      "E": "Activists who want to prevent excessive globalization of the economy should assign top priority to an appeal to the economic self-interest of those who would be adversely affected by it, for if they fail in such an appeal, extreme economic globalization is inevitable."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Herpetologist: Some psychologists attribute complex reasoning to reptiles, claiming that simple stimulus-response explanations of some reptiles' behaviors, such as food gathering, cannot account for the complexity of such behavior. But since experiments show that reptiles are incapable of making major alterations in their behavior, for example, when faced with significant changes in their environment, these animals must be incapable of complex reasoning.",
+    "questionStem": "Which one of the following is an assumption required by the herpetologist's argument?",
+    "answerChoices": {
+      "A": "Animals could make major changes in their behavior only if they were capable of complex reasoning.",
+      "B": "Simple stimulus-response explanations can in principle account for all reptile behaviors.",
+      "C": "Reptile behavior appears more complex in the field than laboratory experiments reveal it to be.",
+      "D": "If reptiles were capable of complex reasoning, they would sometimes be able to make major changes in their behavior.",
+      "E": "Complex reasoning and responses to stimuli cannot both contribute to the same behavior."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "The purpose of a general theory of art is to explain every aesthetic feature that is found in any of the arts. Premodern general theories of art, however, focused primarily on painting and sculpture. Every premodern general theory of art, even those that succeed as theories of painting and sculpture, fails to explain some aesthetic feature of music.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Any general theory of art that explains the aesthetic features of painting also explains those of sculpture.",
+      "B": "A general theory of art that explains every aesthetic feature of music will achieve its purpose.",
+      "C": "Any theory of art that focuses primarily on sculpture and painting cannot explain every aesthetic feature of music.",
+      "D": "No premodern general theory of art achieves its purpose unless music is not art.",
+      "E": "No premodern general theory of art explains any aesthetic features of music that are not shared with painting and sculpture."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "It is said that people should accept themselves as they are instead of being dissatisfied with their own abilities. But this is clearly a bad principle if the goal is a society whose citizens are genuinely happy, for no one can be genuinely happy if he or she is not pursuing personal excellence and is unwilling to undergo personal change of any kind.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Those who are willing to change will probably find genuine happiness.",
+      "B": "People who are not dissatisfied with themselves are less likely than others to pursue personal excellence.",
+      "C": "Personal excellence cannot be acquired by those who lack genuine confidence in their own abilities.",
+      "D": "People are justified in feeling content with themselves when they have achieved some degree of personal excellence.",
+      "E": "Happiness is not genuine unless it is based on something that is painful to obtain."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "My father likes turnips, but not potatoes, which he says are tasteless. So it is not true that whoever likes potatoes likes turnips.",
+    "questionStem": "The flawed reasoning in the argument above most closely resembles that in which one of the following?",
+    "answerChoices": {
+      "A": "This book is not a paperback, but it is expensive. So it is not true that some paperbacks are expensive.",
+      "B": "Although this recently published work of fiction has more than 75 pages, it is not a novel. Thus, it is not the case that all novels have more than 75 pages.",
+      "C": "All ornate buildings were constructed before the twentieth century. This house is ornate, so it must be true that it was built before the twentieth century.",
+      "D": "Erica enjoys studying physics, but not pure mathematics, which she says is boring. So it is not true that whoever enjoys studying physics enjoys studying pure mathematics.",
+      "E": "People who do their own oil changes are car fanatics. My next-door neighbors are car fanatics, so it follows that they do their own oil changes."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "Critic: Although some people claim it is inconsistent to support freedom of speech and also support legislation limiting the amount of violence in TV programs, it is not. We can limit TV program content because the damage done by violent programs is more harmful than the decrease in freedom of speech that would result from the limitations envisioned by the legislation.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the critic's reasoning?",
+    "answerChoices": {
+      "A": "In evaluating legislation that would impinge on a basic freedom, we should consider the consequences of not passing the legislation.",
+      "B": "One can support freedom of speech while at the same time recognizing that it can sometimes be overridden by other interests.",
+      "C": "When facing a choice between restricting freedom of speech or not, we must decide based on what would make the greatest number of people the happiest.",
+      "D": "If the exercise of a basic freedom leads to some harm, then the exercise of that freedom should be restricted.",
+      "E": "In some circumstances, we should tolerate regulations that impinge on a basic freedom."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Sandy: I play the Bigbucks lottery—that's the one where you pick five numbers and all the players who have picked the five numbers drawn at the end of the week share the money pot. But it's best to play only after there have been a few weeks with no winners, because the money pot increases each week that there is no winner.\nAlex: No, you're more likely to win the lottery when the money pot is small, because that's when the fewest other people are playing.",
+    "questionStem": "Which one of the following most accurately describes a mistake in the reasoning of one of the two speakers?",
+    "answerChoices": {
+      "A": "Sandy holds that the chances of anyone's winning are unaffected by the number of times that person plays.",
+      "B": "Alex holds that the chances of Sandy's winning are affected by the number of other people playing.",
+      "C": "Sandy holds that the chances of anyone's winning are unaffected by the size of the pot.",
+      "D": "Alex holds that the chances of Sandy's winning in a given week are unaffected by whether anyone has won the week before.",
+      "E": "Sandy holds that the chances of there being a winner go up if no one has won the lottery for quite a while."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "The retail price of decaffeinated coffee is considerably higher than that of regular coffee. However, the process by which coffee beans are decaffeinated is fairly simple and not very costly. Therefore, the price difference cannot be accounted for by the greater cost of providing decaffeinated coffee to the consumer.",
+    "questionStem": "The argument relies on assuming which one of the following?",
+    "answerChoices": {
+      "A": "Processing regular coffee costs more than processing decaffeinated coffee.",
+      "B": "Price differences between products can generally be accounted for by such factors as supply and demand, not by differences in production costs.",
+      "C": "There is little competition among companies that process decaffeinated coffee.",
+      "D": "Retail coffee-sellers do not expect that consumers are content to pay more for decaffeinated coffee than for regular coffee.",
+      "E": "The beans used for producing decaffeinated coffee do not cost much more before processing than the beans used for producing regular coffee."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "A newspaper article on Britain's unions argued that their strength was declining. The article's evidence was the decreasing number and size of strikes, as if the reason for the unions' existence was to organize strikes. Surely, in a modern industrial society, the calling of a strike is evidence that the negotiating position of the union was too weak. Strong unions do not need to call strikes. They can concentrate their efforts on working with others in the labor market to achieve common goals, such as profitable and humane working conditions.",
+    "questionStem": "The argument criticizing the newspaper article is directed toward establishing which one of the following as its main conclusion?",
+    "answerChoices": {
+      "A": "The negotiating position of a union is weak if the only means it has of achieving its end is a strike or the threat of a strike.",
+      "B": "Although unions represent the interests of their members, that does not preclude them from having interests in common with other participants in the labor market.",
+      "C": "There is no reason to believe, on the basis of what the newspaper article said, that union strength in Britain is declining.",
+      "D": "The reason for unions' existence is to work for goals such as profitable and humane working conditions by organizing strikes.",
+      "E": "With strong unions it is possible for a modern industrial society to achieve profitable and humane working conditions, but without them it would be impossible."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "A newspaper article on Britain's unions argued that their strength was declining. The article's evidence was the decreasing number and size of strikes, as if the reason for the unions' existence was to organize strikes. Surely, in a modern industrial society, the calling of a strike is evidence that the negotiating position of the union was too weak. Strong unions do not need to call strikes. They can concentrate their efforts on working with others in the labor market to achieve common goals, such as profitable and humane working conditions.",
+    "questionStem": "The argument criticizing the newspaper article employs which one of the following strategies?",
+    "answerChoices": {
+      "A": "questioning the accuracy of the statistical evidence that the newspaper article uses",
+      "B": "detailing historical changes that make the newspaper article's analysis outdated",
+      "C": "reinterpreting evidence that the newspaper article uses as indicating the opposite of what the newspaper concludes",
+      "D": "arguing that the newspaper article's conclusion is motivated by a desire to change the role of unions",
+      "E": "pointing to common interests among unions and management which the newspaper article ignores"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Anthropologist: All music is based on a few main systems of scale building. Clearly, if the popularity of a musical scale were a result of social conditioning, we would expect, given the diversity of social systems, a diverse mixture of diatonic and nondiatonic scales in the world's music. Yet diatonic scales have always dominated the music of most of the world. Therefore, the popularity of diatonic music can be attributed only to innate dispositions of the human mind.",
+    "questionStem": "The anthropologist's argument is most vulnerable to criticism on the grounds that it fails to",
+    "answerChoices": {
+      "A": "consider the possibility that some people appreciate nondiatonic music more than they do diatonic music",
+      "B": "explain how innate dispositions increase appreciation of nondiatonic music",
+      "C": "explain the existence of diatonic scales as well as the existence of nondiatonic scales",
+      "D": "consider that innate dispositions and social conditioning could jointly affect the popularity of a type of music",
+      "E": "consider whether any appreciation of nondiatonic music is demonstrated by some nonhuman species of animals"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT113",
+    "sectionNumber": 3,
+    "questionNumber": 26,
+    "questionType": "Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Before 1986 physicists believed they could describe the universe in terms of four universal forces. Experiments then suggested, however, a fifth universal force of mutual repulsion between particles of matter. This fifth force would explain the occurrence in the experiments of a smaller measurement of the gravitational attraction between bodies than the established theory predicted.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument that there is a fifth universal force?",
+    "answerChoices": {
+      "A": "The extremely sophisticated equipment used for the experiments was not available to physicists before the 1970s.",
+      "B": "No previously established scientific results are incompatible with the notion of a fifth universal force.",
+      "C": "Some scientists have suggested that the alleged fifth universal force is an aspect of gravity rather than being fundamental in itself.",
+      "D": "The experiments were conducted by physicists in remote geological settings in which factors affecting the force of gravity could not be measured with any degree of precision.",
+      "E": "The fifth universal force was postulated at a time in which many other exciting and productive ideas in theoretical physics were developed."
+    },
+    "correctAnswer": "B"
+  }
+]

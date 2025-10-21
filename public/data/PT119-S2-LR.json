@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 1,
+    "stimulus": "Cox: The consumer council did not provide sufficient justification for its action when it required that Derma-35 be recalled from the market.\nCrockett: I disagree. Derma-35 in fact causes inflammation, but in citing only the side effect of blemishes as the justification for its decision, the council rightly acknowledged that blemishes are a legitimate health concern.",
+    "questionStem": "Cox and Crockett disagree over whether",
+    "answerChoices": {
+      "A": "Derma-35 should remain on the market",
+      "B": "blemishes are sometimes caused by inflammation",
+      "C": "the council based its decision on the threat of inflammation or on the threat of blemishes",
+      "D": "the council gave an adequate reason for its decision to recall Derma-35",
+      "E": "inflammation is a serious health threat"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Literary historian: William Shakespeare, a humble actor, could have written the love poetry attributed to him. But the dramas attributed to him evince such insight into the minds of powerful rulers that they could only have been written by one who had spent much time among them; Francis Bacon associated with rulers, but Shakespeare did not.",
+    "questionStem": "Which one of the following logically follows from the literary historian's claims?",
+    "answerChoices": {
+      "A": "Bacon wrote the dramas attributed to Shakespeare, but could not have written the love poetry.",
+      "B": "Bacon wrote both the love poetry and the dramas attributed to Shakespeare.",
+      "C": "Shakespeare wrote neither the love poetry nor the dramas attributed to him.",
+      "D": "One person could not have written both the love poetry and the dramas attributed to Shakespeare.",
+      "E": "Shakespeare may have written the love poetry but did not write the dramas attributed to him."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 3,
+    "stimulus": "Philosopher: Effective tests have recently been developed to predict fatal diseases having a largely genetic basis. Now, for the first time, a person can be warned well in advance of the possibility of such life-threatening conditions. However, medicine is not yet able to prevent most such conditions. Simply being informed that one will get a disease that is both fatal and incurable can itself be quite harmful to some people. This raises the question of whether such \"early warning\" tests should be made available at all.",
+    "questionStem": "Which one of the following statements is best illustrated by the state of affairs described by the philosopher?",
+    "answerChoices": {
+      "A": "The advance of medicine fails to provide solutions to every problem.",
+      "B": "The advance of medicine creates new contexts in which ethical dilemmas can arise.",
+      "C": "Medical technologies continue to advance, increasing our knowledge and understanding of disease.",
+      "D": "The more we come to learn, the more we realize how little we know.",
+      "E": "The advance of technology is of questionable value."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Chapin: Commentators have noted with concern the recent electoral success by extremist parties in several democratic countries. But these successes pose no threat to democracy in those countries. The extremists have won pluralities, not majorities. Furthermore, they have won only when the moderate parties were preoccupied with arguing among themselves.",
+    "questionStem": "Which one of the following, if assumed, enables Chapin's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "Parties that win pluralities but not majorities never directly or indirectly effect changes in their country's political arrangements.",
+      "B": "Multiparty political systems are always more democratic than two-party political systems are.",
+      "C": "Countries in which extremist parties win pluralities sometimes have democratic governments as strong as those in countries that lack extremist parties.",
+      "D": "Members of moderate parties who consider extremist parties to be a serious threat to democracy will sometimes put aside their differences with each other to oppose them.",
+      "E": "People are not always supporting a move toward an extremist government when they vote for extremist parties in democratic elections."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Futurist: Artists in the next century will be supported largely by private patrons. Because these patrons will almost invariably be supporters of the social order—whatever it happens to be at the time—art in the next century will rarely express social and political doctrines that are perceived to be subversive of that social order.",
+    "questionStem": "Which one of the following principles, if valid, provides the most support for the futurist's inference?",
+    "answerChoices": {
+      "A": "Art patrons tend not to support artists whose art expresses social and political views that are in opposition to their own.",
+      "B": "Art patrons tend to be more interested in formal artistic problems than in the social and political issues of their time.",
+      "C": "Artists are as prone to attack the contemporary social and political order in their work as they are to defend it.",
+      "D": "Artists tend to become more critical of contemporary social and political arrangements after they are freed of their dependency on private patrons.",
+      "E": "Art patrons tend to oppose all social change except that initiated by artists."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "University budget committee: Athletes experience fewer injuries on artificial-turf athletic fields than on natural-grass fields. Additionally, natural-grass fields are more expensive to maintain than fields made of artificial turf. Nevertheless, this committee recommends replacing the university's current artificial-turf field with a natural-grass field.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy in the committee's position?",
+    "answerChoices": {
+      "A": "The university's current artificial-turf athletic field has required extensive maintenance since its original installation.",
+      "B": "Most injuries sustained on artificial-turf fields take longer to heal and require more expensive physical therapy than do injuries sustained on natural-grass fields.",
+      "C": "It is difficult for spectators at athletic events to determine whether an athletic field is artificial turf or natural grass.",
+      "D": "Maintaining artificial-turf fields involves the occasional replacement of damaged sections of turf, whereas natural-grass fields require daily watering and periodic fertilization.",
+      "E": "Athletes who have spent most of their playing time on natural-grass fields generally prefer not to play on artificial-turf fields."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Must be True",
+    "questionDifficulty": 2,
+    "stimulus": "Although instinct enables organisms to make complex responses to stimuli, instinctual behavior involves no reasoning and requires far fewer nerve cells than does noninstinctual (also called flexible) behavior. A brain mechanism capable of flexible behavior must have a large number of neurons, and no insect brain has yet reached a size capable of providing a sufficiently large number of neurons.",
+    "questionStem": "Which one of the following can be properly inferred from the statements above?",
+    "answerChoices": {
+      "A": "The behavior of organisms with elaborate brain mechanisms is usually not instinctual.",
+      "B": "Insect behavior is exclusively instinctual.",
+      "C": "All organisms with brains larger than insects' brains are capable of some measure of flexible behavior.",
+      "D": "All organisms with large brains are biologically equipped for flexible behavior.",
+      "E": "Only organisms with brains of insect size or smaller engage in purely instinctual behavior."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Conscientiousness is high on most firms' list of traits they want in employees. Yet a recent study found that laid-off conscientious individuals are less likely to find jobs within five months than are their peers who shirked their workplace responsibilities.",
+    "questionStem": "Each of the following, if true, helps to resolve the apparent paradox above except:",
+    "answerChoices": {
+      "A": "People who shirk their workplace responsibilities are less likely to keep the jobs they have, so there are more of them looking for jobs.",
+      "B": "Conscientious people tend to have a greater than average concern with finding the job most suited to their interests and abilities.",
+      "C": "Resentment about having been laid off in spite of their conscientiousness leads some people to perform poorly in interviews.",
+      "D": "People who are inclined to shirk their workplace responsibilities are more likely to exaggerate their credentials, leading prospective employers to believe them to be highly qualified.",
+      "E": "Finding a job is less urgent for the conscientious, because they tend to have larger savings."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Psychologist: Although studies of young children have revealed important facts about the influence of the environment on language acquisition, it is clear that one cannot attribute such acquisition solely to environmental influences: innate mechanisms also play a role. So, the most reasonable question that ought to be studied is whether",
+    "questionStem": "Which one of the following most logically completes the passage?",
+    "answerChoices": {
+      "A": "language acquisition can ever be fully explained",
+      "B": "innate mechanisms are a contributing factor in language learning",
+      "C": "language acquisition is solely the product of innate mechanisms",
+      "D": "parents and peers are the most important influence on a child's learning of a language",
+      "E": "innate mechanisms play a more important role in language acquisition than a child's immediate environment"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Method",
+    "questionDifficulty": 5,
+    "stimulus": "Mark: To convey an understanding of past events, a historian should try to capture what it was like to experience those events. For instance, a foot soldier in the Battle of Waterloo knew through direct experience what the battle was like, and it is this kind of knowledge that the historian must capture.\nCarla: But how do you go about choosing whose perspective is the valid one? Is the foot soldier's perspective more valid than that of a general? Should it be a French or an English soldier? Your approach would generate a biased version of history, and to avoid that, historians must stick to general and objective characterizations of the past.",
+    "questionStem": "Carla does which one of the following in disputing Mark's position?",
+    "answerChoices": {
+      "A": "contests Mark's understanding of historical events",
+      "B": "questions Mark's presupposition that one person can understand another's feelings",
+      "C": "argues that the selection involved in carrying out Mark's proposal would distort the result",
+      "D": "questions whether Mark accurately describes the kind of historical writing he deplores",
+      "E": "gives reason to believe that Mark's recommendation is motivated by his professional self-interest"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 4,
+    "stimulus": "Mark: To convey an understanding of past events, a historian should try to capture what it was like to experience those events. For instance, a foot soldier in the Battle of Waterloo knew through direct experience what the battle was like, and it is this kind of knowledge that the historian must capture.\nCarla: But how do you go about choosing whose perspective is the valid one? Is the foot soldier's perspective more valid than that of a general? Should it be a French or an English soldier? Your approach would generate a biased version of history, and to avoid that, historians must stick to general and objective characterizations of the past.",
+    "questionStem": "Mark's and Carla's positions indicate that they disagree about the truth of which one of the following?",
+    "answerChoices": {
+      "A": "The purpose of writing history is to convey an understanding of past events.",
+      "B": "The participants in a battle are capable of having an objective understanding of the ramifications of the events in which they are participating.",
+      "C": "Historians can succeed in conveying a sense of the way events in the distant past seemed to someone who lived in a past time.",
+      "D": "Historians should aim to convey past events from the perspective of participants in those events.",
+      "E": "Historians should use fictional episodes to supplement their accounts of past events if the documented record of those events is incomplete."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Must be True",
+    "questionDifficulty": 3,
+    "stimulus": "Rosen: One cannot prepare a good meal from bad food, produce good food from bad soil, maintain good soil without good farming, or have good farming without a culture that places value on the proper maintenance of all its natural resources so that needed supplies are always available.",
+    "questionStem": "Which one of the following can be properly inferred from Rosen's statement?",
+    "answerChoices": {
+      "A": "The creation of good meals depends on both natural and cultural conditions.",
+      "B": "Natural resources cannot be maintained properly without good farming practices.",
+      "C": "Good soil is a prerequisite of good farming.",
+      "D": "Any society with good cultural values will have a good cuisine.",
+      "E": "When food is bad, it is because of poor soil and, ultimately, bad farming practices."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Adam: Marking road edges with reflecting posts gives drivers a clear view of the edges, thereby enabling them to drive more safely. Therefore, marking road edges with reflecting posts will decrease the annual number of road accidents.\nAiesha: You seem to forget that drivers exceed the speed limit more frequently and drive close to the road edge more frequently on roads that are marked with reflecting posts than on similar roads without posts, and those are driving behaviors that cause road accidents.",
+    "questionStem": "Aiesha responds to Adam's argument by",
+    "answerChoices": {
+      "A": "questioning Adam's assertion that reflecting posts give drivers a clear view of road edges",
+      "B": "presenting a possible alternative method for decreasing road accidents",
+      "C": "raising a consideration that challenges the argument's assumption that facilitating safe driving will result in safer driving",
+      "D": "denying that the drivers' view of the road is relevant to the number of road accidents",
+      "E": "providing additional evidence to undermine the claim that safer driving does not necessarily reduce the number of road accidents"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "In response to office workers' worries about the health risks associated with using video display terminals (VDTs), researchers asked office workers to estimate both the amount of time they had spent using VDTs and how often they had suffered headaches over the previous year. According to the survey, frequent VDT users suffered from headaches more often than other office workers did, leading researchers to conclude that VDTs cause headaches.",
+    "questionStem": "Which one of the following, if true, most undermines the researchers' conclusion?",
+    "answerChoices": {
+      "A": "Few of the office workers surveyed participated in regular health programs during the year in question.",
+      "B": "In their study the researchers failed to ask the workers to distinguish between severe migraine headaches and mild headaches.",
+      "C": "Previous studies have shown that the glare from VDT screens causes some users to suffer eyestrain.",
+      "D": "Office workers who experienced frequent headaches were more likely than other workers to overestimate how much time they spent using VDTs.",
+      "E": "Office workers who regularly used VDTs experienced the same amount of job-related stress as workers who did not use VDTS."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Literary critic: The meaning of a literary work is not fixed but fluid, and therefore a number of equally valid interpretations of it may be offered. Interpretations primarily involve imposing meaning on a literary work rather than discovering meaning in it, so interpretations need not consider the writer's intentions. Thus, any interpretation of a literary work tells more about the critic than about the writer.",
+    "questionStem": "Which one of the following is an assumption required by the literary critic's argument?",
+    "answerChoices": {
+      "A": "There are no criteria by which to distinguish the validity of different interpretations of literary works.",
+      "B": "A meaning imposed on a literary work reflects facts about the interpreter.",
+      "C": "A writer's intentions are relevant to a valid interpretation of the writer's work.",
+      "D": "The true intentions of the writer of a work of literature can never be known to a critic of that work.",
+      "E": "The deepest understanding of a literary work requires that one know the writer's history."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Media consultant: Electronic media are bound to bring an end to the institution of the traditional school in our culture. This is because the emergence of the traditional school, characterized by a group of students gathered with a teacher in a classroom, was facilitated by the availability of relatively inexpensive printed books. Currently, however, the function of books in communicating information is gradually being taken over by electronic media. So, it is inevitable that the traditional school will not survive in our culture.",
+    "questionStem": "The reasoning in the consultant's argument is flawed because it",
+    "answerChoices": {
+      "A": "presupposes as a premise what it is trying to establish",
+      "B": "relies inappropriately on expert testimony",
+      "C": "presupposes that just because something can happen it will happen",
+      "D": "mistakes something that enables an institution to arise for something necessary to the institution",
+      "E": "confuses the value of an institution with the medium by which it operates"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "A safety report indicates that, on average, traffic fatalities decline by about 7 percent in those areas in which strict laws requiring drivers and passengers to wear seat belts have been passed. In a certain city, seat belt laws have been in effect for two years, but the city's public safety records show that the number of traffic deaths per year has remained the same.",
+    "questionStem": "Which one of the following, if true, does not help resolve the apparent discrepancy between the safety report and the city's public safety records?",
+    "answerChoices": {
+      "A": "Two years ago speed limits in the city were increased by as much as 15 kph (9 mph).",
+      "B": "The city now includes pedestrian fatalities in its yearly total of traffic deaths, whereas two years ago it did not.",
+      "C": "In the time since the seat belt laws were passed, the city has experienced a higher than average increase in automobile traffic.",
+      "D": "Because the city's seat belt laws have been so rarely enforced, few drivers in the city have complied with them.",
+      "E": "In the last two years, most of the people killed in car accidents in the city were not wearing seat belts."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Principle-Conform",
+    "questionDifficulty": 3,
+    "stimulus": "Some critics of space exploration programs claim that they are too costly to be justified. Moreover, there is the very real risk of a debilitating explosion—most experts say something like a 1-in-70 chance per flight. Budgetary pressures to make the programs cheaper only serve to undermine safety: one program's managers uncovered a series of manufacturing flaws that critics contend are a direct consequence of the pressure to produce results as quickly and cheaply as possible.",
+    "questionStem": "The passage conforms most closely to which one of the following propositions?",
+    "answerChoices": {
+      "A": "Attempts to solve one problem can lead to the exacerbation of another problem.",
+      "B": "Safety risks are sometimes ignored in the name of scientific progress.",
+      "C": "Safety is often sacrificed in order to reach a goal as quickly as possible.",
+      "D": "Bureaucratic mistakes can lead to quality reduction and inefficiency.",
+      "E": "Space exploration is too dangerous to be continued."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Physician: Hatha yoga is a powerful tool for helping people quit smoking. In a clinical trial, those who practiced hatha yoga for 75 minutes once a week and received individual counseling reduced their smoking and cravings for tobacco as much as did those who went to traditional self-help groups once a week and had individual counseling.",
+    "questionStem": "Which one of the following is an assumption on which the physician's argument relies?",
+    "answerChoices": {
+      "A": "The individual counseling received by the smokers in the clinical trial who practiced hatha yoga did not help them quit smoking.",
+      "B": "Most smokers are able to practice hatha yoga more than once a week.",
+      "C": "Traditional self-help groups are powerful tools for helping people quit smoking.",
+      "D": "People who practice hatha yoga for 75 minutes once a week are not damaging themselves physically.",
+      "E": "Other forms of yoga are less effective than hatha yoga in helping people quit smoking."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Professor Donnelly's exams are always more difficult than Professor Curtis's exams. The question about dinosaurs was on Professor Donnelly's last exam. Therefore, the question must be difficult.",
+    "questionStem": "Which one of the following exhibits both of the logical flaws exhibited in the argument above?",
+    "answerChoices": {
+      "A": "Lewis is a better baker than Stockman. Lewis made this cake. Therefore, it must be better than most of Stockman's cakes.",
+      "B": "Porter's new book of poetry is better than any of her other books of poetry. This poem is from Porter's new book, so it must be good.",
+      "C": "Professor Whitburn is teaching English this year and always assigns a lot of reading. Therefore, this year's English class will have to do more reading than last year's class.",
+      "D": "Shield's first novel has a more complicated plot than any other that she has written. Hence, that plot must be very complex.",
+      "E": "Mathematics is more difficult than history. Therefore, my calculus test will be more difficult than my history test."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "The studies showing that increased consumption of fruits and vegetables may help decrease the incidence of some types of cancer do not distinguish between organically grown and nonorganically grown produce; they were conducted with produce at least some of which contained pesticide residues. The studies may also be taken as showing, therefore, that there is no increased health risk associated with eating fruits and vegetables containing pesticide residues.",
+    "questionStem": "The pattern of flawed reasoning in which one of the following is most similar to the pattern of flawed reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Research shows that the incidence of certain major illnesses, including heart disease and cancer, is decreased in communities that have a modern power plant. The fact that this tendency is present whether the power plant is nuclear or not shows that there is no increased health risk associated with living next to a nuclear power plant.",
+      "B": "Research has shown that there is no long-term health risk associated with a diet consisting largely of foods high in saturated fat and cholesterol if such a diet is consumed by someone with a physically active lifestyle. So, exercise is a more useful strategy for achieving cardiological health than is dietary restriction.",
+      "C": "Research has shown that young people who drive motorcycles and receive one full year of extensive driving instruction are in fact less likely to become involved in accidents than those who simply pass a driving test and drive cars. This shows that there is not an inherently greater risk associated with driving a motorcycle than with driving a car.",
+      "D": "Research has shown that kitchen cutting boards retain significant numbers of microbes even after careful washing, but that after washing fewer microbes are found on wooden boards than on plastic boards. There is, therefore, no greater risk of contracting microbial illnesses associated with using wooden cutting boards than with using plastic cutting boards.",
+      "E": "Research shows that there is no greater long-term health benefit associated with taking vitamin supplements than with a moderate increase in the intake of fruits and vegetables. Clearly, then, there is no long-term health risk associated with the failure to take vitamin supplements, so long as enough fruits and vegetables are consumed."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Principle-Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Ethicist: As a function of one's job and societal role, one has various duties. There are situations where acting in accord with one of these duties has disastrous consequences, and thus the duties are not absolute. However, it is a principle of morality that if one does not have overwhelming evidence that fulfilling such a duty will have disastrous consequences, one ought to fulfill it.",
+    "questionStem": "Which one of the following most closely conforms to the principle of morality cited by the ethicist?",
+    "answerChoices": {
+      "A": "A teacher thinks that a certain student has received the course grade merited by the quality of his work. The teacher should fulfill her duty not to raise the student's grade, even though the lower grade might harm the student's chance of obtaining an internship.",
+      "B": "A person should not fulfill his duty to tell his friend the truth about the friend's new haircut, because lying will make the friend happier than the truth would.",
+      "C": "A police investigator discovers that a contractor has slightly overcharged wealthy customers in order to lower rates for a charity. The investigator should not fulfill his duty to report the contractor provided that the contractor stops the practice.",
+      "D": "A psychiatrist's patient tells her about his recurring nightmares of having committed a terrible crime. The psychiatrist should fulfill her duty to report this to the authorities because the patient may have broken the law, even though the psychiatrist also has a duty of confidentiality to her patients.",
+      "E": "A journalist thinks there is a slight chance that a story about a developing crisis will endanger innocent lives. Therefore, the journalist should await further developments before fulfilling his duty to file the story."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Whoever is kind is loved by somebody or other, and whoever loves anyone is happy. It follows that whoever is kind is happy.",
+    "questionStem": "The conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Whoever loves someone loves everyone.",
+      "B": "Whoever loves everyone loves someone.",
+      "C": "Whoever is happy loves everyone.",
+      "D": "Whoever loves no one is loved by no one.",
+      "E": "Whoever loves everyone is kind."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "It is now clear that the ancient Egyptians were the first society to produce alcoholic beverages. It had been thought that the ancient Babylonians were the first; they had mastered the process of fermentation for making wine as early as 1500 B.C. However, archaeologists have discovered an Egyptian cup dating from 2000 B.C. whose sides depict what appears to be an Egyptian brewery, and whose chemical residue reveals that it contained a form of alcoholic beer.",
+    "questionStem": "The reasoning above is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It makes a generalization about Egyptian society based on a sample so small that it is likely to be unrepresentative.",
+      "B": "It uses the term \"alcoholic beverage\" in a different sense in the premises than in the conclusion.",
+      "C": "It presumes, without providing justification, that because one society developed a technology before another, the development in the latter was dependent on the development in the former.",
+      "D": "It ignores the possibility that the first known instance of a kind is not the first instance of that kind.",
+      "E": "It provides no evidence for the claim that the Babylonians produced wine as early as 1500 B.C."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT119",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Studies have shown that specialty sports foods contain exactly the same nutrients in the same quantities as do common foods from the grocery store. Moreover, sports foods cost from two to three times more than regular foods. So very few athletes would buy sports foods were it not for expensive advertising campaigns.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "Sports foods are occasionally used by world-famous athletes.",
+      "B": "Many grocery stores carry sports foods alongside traditional inventories.",
+      "C": "Sports foods are easier than regular foods to carry and consume during training and competition.",
+      "D": "Regular foods contain vitamins and minerals that are essential to developing strength and endurance.",
+      "E": "Sports foods can nutritionally substitute for regular meals."
+    },
+    "correctAnswer": "C"
+  }
+]
