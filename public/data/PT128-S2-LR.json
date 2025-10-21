@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Mysterious ancient tracks cut into limestone have recently been found on the island of Malta. The tracks wander, sometimes disappearing under modern structures. Their origin and purpose are unknown, but evidence indicates that they could have connected settlements or water sources. One archaeologist hypothesizes, based on the tracks' physical appearance and surroundings, that they were made in about 1000 B.C. by animal-drawn carts.",
+    "questionStem": "Which one of the following, if true, most helps to support the archaeologist's hypothesis mentioned above?",
+    "answerChoices": {
+      "A": "Areas near the tracks have yielded relatively large amounts of fossilized animal excrement dating from approximately 1000 B.C.",
+      "B": "Some of the tracks connect areas that are sources of fresh water on Malta today.",
+      "C": "Some terrain on the island of Malta is more easily traversed on foot than are certain other types of terrain there.",
+      "D": "Historically, inhabitants of the island of Malta have not been innovative users of transportation technology.",
+      "E": "Around 1000 B.C., some settlements were abandoned in parts of Malta."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Book collector: The demand for out-of-print books is increasing. It has been spurred by the rise of the Internet, the search capabilities of which make it much easier to locate the out-of-print books one seeks.",
+    "questionStem": "The book collector's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Book collectors are now using the Internet to find book titles that they previously did not know existed.",
+      "B": "Fewer people try to find books that are in print than try to find books that are out of print.",
+      "C": "The amount of demand for out-of-print books is affected by the ease of finding such books.",
+      "D": "The Internet's search capabilities make it possible to locate most out-of-print books.",
+      "E": "Only people who have access to the Internet can locate out-of-print books."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Agriculture researcher: Because of its slow decomposition, paper is ineffective as a mulch to guard against soil erosion. However, a mixture of paper and manure, which decomposes faster than paper alone, is very effective. When spread over test plots, the mixture significantly decreased the amount of soil erosion. Since paper costs roughly the same as manure, farmers would be better off using this mixture than paper or manure alone.",
+    "questionStem": "The agriculture researcher's argument is flawed because it provides no evidence that",
+    "answerChoices": {
+      "A": "paper by itself does not contribute to soil erosion",
+      "B": "mulch containing paper and manure works better than mulch containing only paper",
+      "C": "mulch containing paper and manure works better than mulch containing only manure",
+      "D": "mulch containing paper and manure works better than methods of preventing soil erosion that do not involve mulch",
+      "E": "mulch of pure manure provides nutrients to the soil that paper mulch does not"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "In the spring and fall, eastern pipistrelle bats roost deep inside caves. They feed at night on flying insects and must leave the cave to catch their prey. Flying insects are much more abundant on warm nights than on cool ones. Researchers found that many more bats leave the caves on warm nights than on cool nights, even though the temperature within the caves where the bats roost remains virtually the same from one night to the next.",
+    "questionStem": "Which one of the following, if true, most helps to explain the researchers' findings?",
+    "answerChoices": {
+      "A": "The researchers studied only female bats, which tended to catch more insects on warm nights than did the male bats.",
+      "B": "Eastern pipistrelle bats can detect changes in barometric pressure within the caves that correlate closely with changes in temperature outside the caves.",
+      "C": "Eastern pipistrelle bats are incapable of long periods of sustained activity outside the roosting caves on very cool spring and fall evenings.",
+      "D": "Because of the long period of winter inactivity, eastern pipistrelle bats tend to consume more insects per day in the spring and fall than in the summer.",
+      "E": "During the periods in which the researchers studied the bats, on most evenings over half of the bats left the caves in search of food."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "Human Resources Director: Some people dislike their jobs but still go to work every day because they feel that it is ethically wrong to miss work. Others enjoy their jobs but sometimes miss work because they genuinely believe that they are too sick to work or that they might infect others if they go to work. This makes it difficult to",
+    "questionStem": "Which one of the following most reasonably completes the argument?",
+    "answerChoices": {
+      "A": "determine whether employees absent from work more often than others are any less fearful of losing their jobs",
+      "B": "maintain accurate absenteeism records for all the different employees of a company",
+      "C": "draw any conclusions about an employee's job satisfaction from his or her absenteeism record",
+      "D": "assess the trustworthiness of employees who claim that they must miss work because they are ill",
+      "E": "make any reliable predictions about an employee's future behavior from his or her absenteeism record"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "The effects of technology on language and the effects of language on culture as a whole are profound and complex. The telegraph, the telephone, and the television have all changed the way people speak to one another. The best current example of such a change is the advent of electronic mail, which has effected a widespread loosening of language usage rules. This loosening has, in turn, made relationships between people more casual than ever before.",
+    "questionStem": "Which one of the following propositions is best illustrated by the statements above?",
+    "answerChoices": {
+      "A": "Technology can adversely affect the nature of relationships between people.",
+      "B": "Changes in communication media can cause interpersonal relationships to change.",
+      "C": "A decrease in linguistic sophistication can lead to an increase in technological sophistication.",
+      "D": "A widespread loosening of overly rigid language-usage rules can improve communication.",
+      "E": "Changes in interpersonal relationships can cause changes in the way people speak to one another."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "Builder: Within ten years, most of the new homes constructed in North America will have steel frameworks rather than wood ones. After all, two-by-fours and two-by-sixes—the sizes of lumber most commonly used in home construction—are deteriorating in quality and increasing in cost, while environment-friendly steel is decreasing in cost. In addition, unlike wood, steel will not warp, rot, or split.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the builder's reasoning?",
+    "answerChoices": {
+      "A": "Over the next ten years, labor costs in the home construction industry are expected to rise significantly.",
+      "B": "Steel-framed homes do not have to be treated with pesticides or other chemicals that can contribute to indoor air pollution.",
+      "C": "Because lumber prices have increased over the last decade, currently most new homes are built with steel frameworks.",
+      "D": "Training home construction workers to work with steel is very costly.",
+      "E": "The number of houses built each year is expected to decrease over the next decade."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Candidate: The children in our nation need a better education. My opponent maintains that our outdated school system is the major impediment to achieving this goal. In fact our school system does need reform. Nonetheless, my opponent's position places far too much blame on our schools, for it seems to equate education with schooling, yet other parts of society are at least as responsible for educating our youth as our schools are.",
+    "questionStem": "The statement that the school system needs reform figures in the candidate's argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "It is the main conclusion that the argument is attempting to establish about the position of the candidate's opponent.",
+      "B": "It is offered as an example of one of the social problems for which the argument proposes a solution.",
+      "C": "It is cited as establishing the candidate's contention that far too much is being blamed on schools.",
+      "D": "It is used to indicate how the failings of the school system are partially responsible for society's problems.",
+      "E": "It is a limited concession made to the candidate's opponent in the context of a broader challenge to the opponent's position."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "A proposed amendment would allow the city council to decide that certain city elections be conducted solely by mail. But voting is a sacred right in democracies, one that has always been exercised by voting in person and not by mail. Therefore, voting by mail should not be allowed, and the proposed amendment should be rejected.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that the right to vote is not violated unless elections are conducted solely by mail",
+      "B": "presumes, without providing justification, that if citizens have always had a certain legal right, they will continue to have that right in the future",
+      "C": "presents an appeal to tradition as the only reason for rejecting the proposal",
+      "D": "fails to consider the possibility that, even if it gains the power to do so, the city council might never require voting by mail",
+      "E": "has a premise that is logically incompatible with the main conclusion"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "Columnist: Raising the minimum wage to the level recently proposed will actually hurt, rather than help, workers with low incomes. As the minimum wage increases, businesses must compensate for higher wage costs by increasing prices for the goods and services that low-income workers must buy but can already barely afford.",
+    "questionStem": "Which one of the following is an assumption on which the columnist's argument depends?",
+    "answerChoices": {
+      "A": "Workers who earn more than the minimum wage would not also be hurt by increased prices for goods and services.",
+      "B": "Any increase to the minimum wage smaller than the one proposed would not substantially affect prices of goods and services.",
+      "C": "The proposed minimum-wage increase would not wholly compensate low-income workers for the resulting increase in prices for goods and services.",
+      "D": "If raising the minimum wage helped low-income workers, this would be a good reason for raising it.",
+      "E": "Changes in the minimum wage are generally not as beneficial to the economy as is commonly believed."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "A recently completed study of several hundred subjects, all of approximately the same age, showed that those who exercised regularly during the study were much less likely to die during the study. This indicates that exercise can actually increase one's life span.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "The subjects who did not exercise regularly during the study tended to have diets that were more unhealthy.",
+      "B": "The subjects who did not exercise regularly during the study tended to blame their lack of exercise on a lack of time.",
+      "C": "A large number of the deaths recorded were attributable to preexisting conditions or illnesses.",
+      "D": "Whether or not a given subject was to exercise during the study was determined by the researchers on a random basis.",
+      "E": "A person who exercises regularly is probably doing so out of concern for his or her own health."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Method",
+    "questionDifficulty": 4,
+    "stimulus": "Shaw: Regulatory limits on pollution emissions from power plants should be set in terms of the long-term average emissions level rather than peak emissions levels.\nLevin: But short periods of high pollution emissions pose dangers to the environment. Your proposal is akin to enforcing the highway speed limit by measuring vehicles' average speed, including the time spent in traffic or at stoplights, rather than their peak speed.",
+    "questionStem": "Based on the analogy in Levin's argument, time that a vehicle spends at a stoplight is analogous to time that a power plant",
+    "answerChoices": {
+      "A": "operates without any monitoring of its pollution emissions",
+      "B": "operates at peak efficiency",
+      "C": "emits pollutants at a very low level",
+      "D": "emits no pollutants at all",
+      "E": "emits pollutants at its peak level"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Scientist: There is little doubt that the ice ages were caused by the unusually rich growth of vegetation worldwide. Since vegetation converts carbon dioxide into oxygen, excessive vegetation would have depleted the carbon dioxide in the atmosphere. Carbon dioxide helps the atmosphere retain the sun's heat. Thus, if this carbon dioxide is depleted, the earth cools significantly, thereby causing an ice age.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the scientist's argument?",
+    "answerChoices": {
+      "A": "Excessive growth of vegetation worldwide could have caused one or more ice ages by depleting the carbon dioxide in the atmosphere.",
+      "B": "If the carbon dioxide in the atmosphere is depleted, the earth cools significantly, thereby causing an ice age.",
+      "C": "An excessive growth of vegetation causes the carbon dioxide in the atmosphere to be depleted.",
+      "D": "If unusually rich growth of vegetation caused the ice ages, it undoubtedly did so by depleting the carbon dioxide in the atmosphere.",
+      "E": "Unusually rich growth of vegetation worldwide was almost certainly the cause of the ice ages."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "A promise is defined as any agreement that yields an obligation. It is acceptable not to keep one's promise if either the person to whom the promise is made tells the promisor not to keep it, or the promisor is unable to fulfill the obligation due to circumstances beyond the promisor's control.",
+    "questionStem": "Which one of the following is an application of the principle above pertaining to promising?",
+    "answerChoices": {
+      "A": "Paul agreed to lend Tom $10. But Paul also owes Maria $10. So it is unacceptable for Paul to fulfill his promise to lend Tom $10 while he still owes Maria money.",
+      "B": "Felicia agreed to tutor Alan in mathematics on Tuesday. However, on his way to the tutorial session, Alan was injured in a car accident and was unable to attend that day. Thus, it was acceptable for Felicia not to tutor Alan in mathematics on Tuesday.",
+      "C": "Mika agreed to help Owen move on Sunday, but Owen called Mika on the Thursday before the move and asked him to help him move on Saturday instead. So it would be unacceptable for Mika not to consent to help Owen move on Saturday.",
+      "D": "Quinn agreed to water Laura's plants while Laura was out of town. But Laura had forgotten to give Quinn the keys to her place. However, it was unacceptable for Quinn to fail to fulfill his promise to Laura, since Laura did not excuse Quinn from his obligation to water her plants.",
+      "E": "Ian agreed to pick up Ali at the train station. But Ian decided to stop and return his overdue library books first. As a result, Ian was unable to pick up Ali at the train station. Thus, it was acceptable for Ian to fail to pick up Ali at the train station."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "H. G. Wells's great dramatic novel The Time Machine is classified as science fiction simply because it takes place in the future. But this classification is inappropriate because Wells's book possesses something that great dramatic novels have and science fiction generally lacks—compelling characters that enable the reader to become absorbed in their plight and not just in the author's representation of the future of technology.",
+    "questionStem": "The argument's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "All novels that contain compelling characters are great dramatic novels.",
+      "B": "Novels can always be clearly classified into distinct genres.",
+      "C": "A work of science fiction cannot achieve greatness unless it contains compelling characters.",
+      "D": "The most important determinant of a novel's quality is the strength of its characters.",
+      "E": "A dramatic novel cannot both be great and belong to the genre of science fiction."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Laurel: Modern moral theories must be jettisoned, or at least greatly reworked, because they fail to provide guidance in extreme cases, which are precisely the times when people most need guidance.\nMiriam: A moral theory, like an overcoat, can be quite useful even if it is not useful in every possible situation. Being useful in a wide variety of common circumstances is all we need from a moral theory.",
+    "questionStem": "Laurel's and Miriam's statements provide the most support for the claim that they disagree about whether",
+    "answerChoices": {
+      "A": "it is preferable to develop a moral theory that provides solutions to all the moral dilemmas that could arise",
+      "B": "people abandoned earlier moral theories when they encountered dilemmas that those theories did not adequately address",
+      "C": "a moral theory's adequacy depends on its ability to provide guidance in extreme cases",
+      "D": "just as people need different overcoats in different climates, so too do they need different moral theories on different occasions",
+      "E": "a moral theory developed in the light of extreme cases is unlikely to provide adequate guidance in more usual cases"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Archaeologists excavating a Neanderthal campsite found discarded gazelle teeth there whose coloration indicated that gazelles had been hunted throughout the year. The archaeologists concluded that the Neanderthals had inhabited the campsite year-round and thus were not nomadic. In contrast, the archaeologists cite a neighboring campsite of nomadic Cro-Magnons that contained teeth from gazelles all killed during the same season.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the archaeologists' reasoning?",
+    "answerChoices": {
+      "A": "Neanderthals hunted a wide variety of both migratory and nonmigratory animals.",
+      "B": "Cro-Magnons and Neanderthals sometimes exchanged tools.",
+      "C": "Neanderthals saved gazelle teeth for use in religious rituals and later discarded them.",
+      "D": "Cro-Magnons usually followed the migrations of the animals they hunted.",
+      "E": "Gazelles inhabited the area around the campsites year-round."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Critic: The contemporary novel is incapable of making important new contributions. The evidence is clear. Contemporary psychological novels have been failures. Contemporary action novels lack any social significance. And contemporary romance novels are stale and formulaic.",
+    "questionStem": "The flawed reasoning in the critic's argument is most similar to that in which one of the following?",
+    "answerChoices": {
+      "A": "Since no government has been able to regulate either employment or inflation very closely, it is impossible for any government to improve its nation's economy.",
+      "B": "Because there has been substantial progress in recent years in making machines more efficient, it is only a matter of time before we invent a perpetual motion machine.",
+      "C": "The essayist Macaulay was as widely read in his time as Dickens, but has been neglected since. Thus writers who are popular today are likely to be forgotten in the future.",
+      "D": "This politician has not made any proposals for dealing with the problem of unemployment and thus must not think the problem is important.",
+      "E": "In international commerce, the corporations that are best suited for success are large and multinational. Thus small corporations cannot compete at the international level."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Paradox",
+    "questionDifficulty": 5,
+    "stimulus": "Criminologist: According to a countrywide tabulation of all crimes reported to local police departments, the incidence of crime per 100,000 people has risen substantially over the last 20 years. However, a series of independent surveys of randomly selected citizens of the country gives the impression that the total number of crimes was less in recent years than it was 20 years ago.",
+    "questionStem": "Which one of the following, if true, would most help to resolve the apparent discrepancy described by the criminologist?",
+    "answerChoices": {
+      "A": "Not all of the citizens selected for the series of independent surveys had been the victims of crime.",
+      "B": "Most crimes committed in the country are not reported to local police departments.",
+      "C": "The total annual number of crimes committed in the country has risen over the past 20 years but has fallen in proportion to the country's growing population.",
+      "D": "In the series of independent surveys, many of the respondents did not accurately describe the crimes to which they had fallen victim.",
+      "E": "Of crimes committed in the country, a much greater proportion have been reported to local police departments in recent years than were reported 20 years ago."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Geologist: A new method for forecasting earthquakes has reliably predicted several earthquakes. Unfortunately, this method can predict only that an earthquake will fall somewhere within a range of two and a half points on the Richter scale. Thus, since a difference of two and a half points can be the difference between a marginally perceptible shaking and a quake that causes considerable damage, the new method is unlikely to be useful.",
+    "questionStem": "Which one of the following, if assumed, enables the geologist's conclusion to be properly inferred?",
+    "answerChoices": {
+      "A": "Even if an earthquake-forecasting method makes predictions within a very narrow range on the Richter scale, this method is not likely to be useful unless its predictions are reliable.",
+      "B": "An earthquake-forecasting method is unlikely to be useful unless its predictions always differentiate earthquakes that are barely noticeable from ones that result in substantial destruction.",
+      "C": "An earthquake-forecasting method has not been shown to be useful until it has been used to reliably predict a large number of earthquakes.",
+      "D": "Several well-established methods for forecasting earthquakes can predict within much narrower ranges than two and a half points on the Richter scale.",
+      "E": "An earthquake-forecasting technique, even a perfectly reliable one, will probably be of little use if its predictions never distinguish between earthquakes that are imperceptibly small and those that cause catastrophic damage."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Cultural anthropological theory tends to fall into two camps. One focuses on everyday social behavior as a system that has developed in response to human needs in a given environment. The other rejects this approach, focusing on the systems of meanings by which thoughts, rituals, and mythology in a society are structured. Cultural anthropologists, however, should employ both approaches, and also attend to a third, often neglected dimension: the view of a community as a set of individuals whose actions constitute the actual stuff of everyday life.",
+    "questionStem": "Which one of the following statements is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Patterns of social behavior have meaning only when considered from the point of view of the community.",
+      "B": "Cultural anthropologists too often rely on a conception of human needs that excludes the notion of community.",
+      "C": "Cultural anthropological theorists who focus on issues of meaning overlook the humanity of their individual subjects.",
+      "D": "Systems of behavior can be understood only by experiencing the environments to which they respond.",
+      "E": "Disagreement among cultural anthropological theorists does not necessarily imply that their approaches are incompatible."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Journal editor: Our treasurer advises that because of our precarious financial situation, we should change from a paper version to an online version only if doing so will not increase the cost of publication. The cost of converting from a paper version to an online version is high; however, once the conversion is made, the cost per issue is much lower for an online version. Since a benefactor has agreed to cover the costs of conversion, and since we can safely assume that our treasurer is right, we should change to an online version.",
+    "questionStem": "The journal editor's argument is flawed in that it",
+    "answerChoices": {
+      "A": "treats meeting a necessary condition for changing from a paper to an online version as a sufficient reason for changing",
+      "B": "takes for granted that publishing a paper version rather than an online version is the reason the journal is in a precarious financial position",
+      "C": "overlooks the possibility that an online version would have other advantages over a paper version than cost",
+      "D": "fails to rule out the possibility that the journal will remain in a precarious financial position whether it changes to an online version or not",
+      "E": "bases its conclusion on the argument of an authority speaking outside the authority's field of expertise"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "Some people believe there is intelligent life somewhere in the universe besides Earth. But no one who believes that could also believe all planets other than Earth are devoid of life. Thus, some people do not believe all planets other than Earth are devoid of life.",
+    "questionStem": "The reasoning in which one of the following is most similar to the reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Some people believe computers are capable of thought. Since no one who does not believe computer chess programs sometimes beat human chess masters believes computers can think, it follows that computer chess programs do sometimes beat human chess masters.",
+      "B": "Some cat owners believe cats are incapable of feeling guilty. Since one could think that an animal is capable of feeling guilty only if one thought the animal had a conception of morality, it follows that some cat owners do not believe cats have a conception of morality.",
+      "C": "Some dog owners believe their dogs are emotionally attached to them. Since no one could believe that and also believe dogs are incapable of thought, it follows that some dog owners do not believe dogs are incapable of thought.",
+      "D": "Some people believe humans will someday colonize other planets. Since anyone who believes that probably also believes overpopulation of Earth is not a problem, it follows that some people do not believe overpopulation of Earth is not a problem.",
+      "E": "Some people believe there is life on planets other than Earth. Since anyone who believes that must also believe other planets have atmospheres that can support life, it follows that other planets do have atmospheres that can support life."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 4,
+    "stimulus": "Clarissa: The natural sciences would not have made such progress but for the power of mathematics. No observation is worth serious attention unless it is stated precisely in quantitative terms.\nMyungsook: I disagree. Converting observations into numbers is the hardest and last task; it can be done only when you have thoroughly explored the observations themselves.",
+    "questionStem": "Clarissa and Myungsook's statements provide the most support for claiming that they disagree about whether",
+    "answerChoices": {
+      "A": "mathematics has been a highly significant factor in the advance of the natural sciences",
+      "B": "converting observations into quantitative terms is usually easy",
+      "C": "not all observations can be stated precisely in quantitative terms",
+      "D": "successfully doing natural science demands careful consideration of observations not stated precisely in quantitative terms",
+      "E": "useful scientific theories require the application of mathematics"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Although Stillwater Pond has been polluted by farm runoff for years, several species of fish still live there. The local fishing guide says that \"the most populous fish species in the pond is also the one that has adapted best to living in polluted water.\" So if, as recent studies suggest, the most populous fish species in the pond is the bullhead catfish, then it must be that the local fishing guide believes that the species of fish in the pond that has adapted best to living in polluted water is the bullhead catfish.",
+    "questionStem": "The argument above is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "takes for granted that the local fishing guide believes that Stillwater Pond has been polluted by farm runoff for years",
+      "B": "fails to take into account the possibility that the catfish in Stillwater Pond had to adapt very little to survive in polluted water",
+      "C": "fails to take into account the possibility that the recent studies on fish populations in Stillwater Pond are inaccurate",
+      "D": "fails to take into account the possibility that the local fishing guide mistakenly believes that some fish species other than the bullhead catfish is the most populous fish species in Stillwater Pond",
+      "E": "takes for granted that Stillwater Pond has only one species of catfish living in it"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Weaken",
+    "questionDifficulty": null,
+    "stimulus": "Editorialist: Some people argue that highway speed limits should be increased to reflect the actual average speeds of highway drivers, which are currently 10 to 20 percent higher than posted speed limits. Any such increase would greatly decrease highway safety, however; as past experience teaches, higher average highway speeds would result, since even though most drivers who currently violate posted speed limits would obey higher ones, almost all drivers who obey current speed limits would likely increase their speed.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the editorialist's argument?",
+    "answerChoices": {
+      "A": "Some drivers who obey current speed limits would not change their speeds after the introduction of the new speed limits.",
+      "B": "Uniformity of speeds among vehicles is more important for highway safety than is a low average highway speed.",
+      "C": "Most drivers who drive 10 to 20 percent faster than current speed limits have never been involved in a highway accident.",
+      "D": "Some drivers who violate current speed limits would also violate higher speed limits.",
+      "E": "Most drivers who violate current speed limits determine their speeds by what they believe to be safe in the situation."
+    },
+    "correctAnswer": "E"
+  }
+]

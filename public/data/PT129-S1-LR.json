@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Extract from lease: The tenant should record all preexisting damage on the preexisting damage list, because the tenant need not pay for preexisting damage recorded there. The tenant must pay for damage that was not recorded on the preexisting damage list, except for any damage caused by a circumstance beyond the tenant's control.",
+    "questionStem": "In which one of the following instances does the extract from the lease most strongly support the view that the tenant is not required to pay for the damage?",
+    "answerChoices": {
+      "A": "a hole in the wall that was not recorded on the preexisting damage list and that was the result of an event within the tenant's control",
+      "B": "a crack in a window caused by a factor beyond the tenant's control and not recorded on the preexisting damage list",
+      "C": "a tear in the linoleum that was not preexisting but that was caused by one of the tenant's children",
+      "D": "a missing light fixture that was present when the tenant moved in but was later removed by the tenant",
+      "E": "paint splatters on the carpet that should have been recorded on the preexisting damage list but were not"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Randy: After Mega Cable Television Company refused to carry the competing Azco News Service alongside its own news channels, the mayor used her influence to get Azco time on a community channel, demonstrating her concern for keeping a diversity of news programming in the city.\nMarion: The mayor's action is fully explained by cruder motives: she's rewarding Azco's owner, a political supporter of hers.",
+    "questionStem": "Of the following, which one, if true, is the logically strongest counter Randy can make to Marion's objection?",
+    "answerChoices": {
+      "A": "The owner of Azco supported the mayor simply because he liked her political agenda, and not for any expected reward.",
+      "B": "The mayor also used her influence to get time on a community channel for another news service, whose owner supported the mayor's opponent in the last election.",
+      "C": "Azco's news coverage of the mayor has never been judged to be biased by an impartial, independent organization.",
+      "D": "The many people whose jobs depend on Azco's continued presence on a community channel are a potential source of political support for the mayor.",
+      "E": "The number of people who watch Mega Cable Television Company's programming has decreased during the mayor's term."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "On the first day of trout season a team of biologists went with local trout anglers to the Macawber River. Each angler who caught at least 2 trout chose exactly 2 of these trout for the biologists to weigh. A total of 90 fish were weighed. The measurements show that at the beginning of this season the average trout in the Macawber River weighed approximately 1.6 kilograms.",
+    "questionStem": "The reasoning above is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "makes a generalization from a sample that is unlikely to be representative",
+      "B": "relies on evidence that is anecdotal rather than scientific",
+      "C": "ignores the variations in weight that are likely to occur over the whole season",
+      "D": "fails to take into account measurements from the same time in previous seasons",
+      "E": "does not consider whether any fish other than trout were caught"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "A strong correlation exists between what people value and the way they act. For example, those who value wealth tend to choose higher-paying jobs in undesirable locations over lower-paying jobs in desirable locations. Thus, knowing what people value can help one predict their actions.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the argument?",
+    "answerChoices": {
+      "A": "Knowing how people behave allows one to infer what they value.",
+      "B": "People's claims concerning what they value are symptomatic of their actions.",
+      "C": "No two people who value different things act the same way in identical circumstances.",
+      "D": "People who value wealth tend to allow their desire for it to outweigh other concerns.",
+      "E": "What people value can be a reliable indicator of how they will act."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "An analysis of the number and severity of health problems among the population of a certain community showed that elderly people who were born in the community and resided there all their lives had significantly worse health than elderly people who had moved there within the past five years.",
+    "questionStem": "Each of the following, if true, contributes to an explanation of the difference in health between these two groups except:",
+    "answerChoices": {
+      "A": "People who have the means to relocate tend to be in better-than-average health.",
+      "B": "Although most people who have moved into the community are young, most people who have lived in the community all their lives are elderly.",
+      "C": "The quality of health care available to the community is lower than that for the rest of the country.",
+      "D": "Changes in one's environment tend to have a beneficial effect on one's health.",
+      "E": "People in good health are more likely to move to new communities than are people in poor health."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Classical Roman architecture is beautiful, primarily because of its use of rounded arches and its symmetry. Postmodern architecture is dramatic, primarily because of its creative use both of materials and of the surrounding environment. An architectural style that combines elements of both classical Roman and postmodern architecture would therefore be both beautiful and dramatic.",
+    "questionStem": "The reasoning in the argument is flawed in that it",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that for an architectural style to have certain qualities, its components must have those qualities",
+      "B": "fails to justify its presumption that because postmodern architecture is dramatic, that is its most salient feature",
+      "C": "neglects to consider that an architectural style combining elements of two other architectural styles may lack certain qualities of one or both of those styles",
+      "D": "neglects to specify how the drama of an architectural style contributes to its beauty",
+      "E": "ignores the possibility that there are other architectural styles whose defining qualities include both drama and beauty"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "After being subjected to clinical tests like those used to evaluate the effectiveness of prescription drugs, a popular nonprescription herbal remedy was found to be as effective in treating painful joints as is a certain prescription drug that has been used successfully to treat this condition. The manufacturer of the herbal remedy cited the test results as proof that chemical agents are unnecessary for the successful treatment of painful joints.",
+    "questionStem": "The test results would provide the proof that the manufacturer claims they do if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "People are likely to switch from using prescription drugs to using herbal remedies if the herbal remedies are found to be as effective as the prescription drugs.",
+      "B": "The herbal remedy contains no chemical agents that are effective in treating painful joints.",
+      "C": "None of the people who participated in the test of the prescription drug had ever tried using an herbal remedy to treat painful joints.",
+      "D": "The researchers who analyzed the results of the clinical testing of the herbal remedy had also analyzed the results of the clinical testing of the prescription drug.",
+      "E": "The prescription drug treats the discomfort associated with painful joints without eliminating the cause of that condition."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "When companies' profits would otherwise be reduced by an increase in the minimum wage (a wage rate set by the government as the lowest that companies are allowed to pay), the companies often reduce the number of workers they employ. Yet a recent increase in the minimum wage did not result in job cutbacks in the fast-food industry, where most workers are paid the minimum wage.",
+    "questionStem": "Which one of the following, if true, most helps to explain why the increase in the minimum wage did not affect the number of jobs in the fast-food industry?",
+    "answerChoices": {
+      "A": "After the recent increase in the minimum wage, decreased job turnover in the fast-food industry allowed employers of fast-food workers to save enough on recruiting costs to cover the cost of the wage increase.",
+      "B": "If, in any industry, an increase in the minimum wage leads to the elimination of many jobs that pay the minimum wage, then higher-paying supervisory positions will also be eliminated in that industry.",
+      "C": "With respect to its response to increases in the minimum wage, the fast-food industry does not differ significantly from other industries that employ many workers at the minimum wage.",
+      "D": "A few employees in the fast-food industry were already earning more than the new, higher minimum wage before the new minimum wage was established.",
+      "E": "Sales of fast food to workers who are paid the minimum wage did not increase following the recent change in the minimum wage."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "One should always capitalize the main words and the first and last words of a title. But one should never capitalize articles, or prepositions and conjunctions with fewer than five letters, when they occur in the middle of a title.",
+    "questionStem": "Which one of the following can be properly inferred from the statements above?",
+    "answerChoices": {
+      "A": "If a word that is a preposition or conjunction should be capitalized, then it is the first or last word of the title.",
+      "B": "If a word in the middle of a title should be capitalized, then that word is neither an article nor a conjunction shorter than five letters.",
+      "C": "All prepositions and conjunctions with fewer than five letters should be uncapitalized in titles.",
+      "D": "If a word is neither a main word nor a first or last word of a title, then it should not be capitalized.",
+      "E": "Prepositions and conjunctions with five or more letters should be capitalized in any text."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Letter to the editor: Recently, the city council passed an ordinance that prohibits loitering at the local shopping mall. The council's declared goal was to eliminate overcrowding and alleviate pedestrian congestion, thereby improving the mall's business and restoring its family-oriented image. But despite these claims, reducing overcrowding and congestion cannot be the actual goals of this measure, because even when fully implemented, the ordinance would not accomplish them.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the argument's reasoning?",
+    "answerChoices": {
+      "A": "The argument ignores the possibility that an action may achieve its secondary goals even if it does not achieve its primary goals.",
+      "B": "The argument takes for granted that something cannot be the goal of an action performed unless the action will in fact achieve that goal.",
+      "C": "The argument dismisses a claim because of its source rather than because of its content.",
+      "D": "The argument takes for granted that an action that does not accomplish its stated goals will not have any beneficial effects.",
+      "E": "The argument treats a condition that is necessary for achieving an action's stated goals as if this condition were sufficient for achieving these goals."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 5,
+    "stimulus": "Cynthia: Corporations amply fund research that generates marketable new technologies. But the fundamental goal of science is to achieve a comprehensive knowledge of the workings of the universe. The government should help fund those basic scientific research projects that seek to further our theoretical knowledge of nature.\nLuis: The basic goal of government support of scientific research is to generate technological advances that will benefit society as a whole. So only research that is expected to yield practical applications in fields such as agriculture and medicine ought to be funded.",
+    "questionStem": "Cynthia's and Luis's statements provide the most support for the contention that they would disagree with each other about the truth of which one of the following statements?",
+    "answerChoices": {
+      "A": "The government should help fund pure theoretical research because such research might have unforeseen practical applications in fields such as agriculture and medicine.",
+      "B": "A proposed study of the effects of chemical fertilizers on crops, for the purpose of developing more-resistant and higher-yielding breeds, should not receive government funding.",
+      "C": "Although some research projects in theoretical science yield practical benefits, most do not, and so no research projects in theoretical science should be funded by the government.",
+      "D": "Research for the sole purpose of developing new technologies ought to be financed exclusively by corporations.",
+      "E": "Knowledge gained through basic scientific research need not be expected to lead to new and useful technologies in order for the research to merit government funding."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "One can never tell whether another person is acting from an ulterior motive; therefore, it is impossible to tell whether someone's action is moral, and so one should evaluate the consequences of an action rather than its morality.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+    "answerChoices": {
+      "A": "The intention of an action is indispensable for an evaluation of its morality.",
+      "B": "The assigning of praise and blame is what is most important in the assessment of the value of human actions.",
+      "C": "One can sometimes know one's own motives for a particular action.",
+      "D": "There can be good actions that are not performed by a good person.",
+      "E": "One cannot know whether someone acted morally in a particular situation unless one knows what consequences that person's actions had."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "Fossil-fuel producers say that it would be prohibitively expensive to reduce levels of carbon dioxide emitted by the use of fossil fuels enough to halt global warming. This claim is probably false. Several years ago, the chemical industry said that finding an economical alternative to the chlorofluorocarbons (CFCs) destroying the ozone layer would be impossible. Yet once the industry was forced, by international agreements, to find substitutes for CFCs, it managed to phase them out completely well before the mandated deadline, in many cases at a profit.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "In the time since the chemical industry phased out CFCs, the destruction of the ozone layer by CFCs has virtually halted, but the levels of carbon dioxide emitted by the use of fossil fuels have continued to increase.",
+      "B": "In some countries, the amount of carbon dioxide emitted by the use of fossil fuels has already been reduced without prohibitive expense, but at some cost in convenience to the users of such fuels.",
+      "C": "The use of CFCs never contributed as greatly to the destruction of the ozone layer as the carbon dioxide emitted by the use of fossil fuels currently contributes to global warming.",
+      "D": "There are ways of reducing carbon dioxide emissions that could halt global warming without hurting profits of fossil-fuel producers significantly more than phasing out CFCs hurt those of the chemical industry.",
+      "E": "If international agreements forced fossil-fuel producers to find ways to reduce carbon dioxide emissions enough to halt global warming, the fossil-fuel producers could find substitutes for fossil fuels."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "If legislators are to enact laws that benefit constituents, they must be sure to consider what the consequences of enacting a proposed law will actually be. Contemporary legislatures fail to enact laws that benefit constituents. Concerned primarily with advancing their own political careers, legislators present legislation in polemical terms; this arouses in their colleagues either repugnance or enthusiasm for the legislation.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Legislation will not benefit constituents unless legislators become less concerned with their own careers.",
+      "B": "Legislatures that enact laws that benefit constituents are successful legislatures.",
+      "C": "The passage of laws cannot benefit constituents unless constituents generally adhere to those laws.",
+      "D": "Legislators considering a proposed law for which they have repugnance or enthusiasm do not consider the consequences that it will actually have.",
+      "E": "The inability of legislators to consider the actual consequences of enacting a proposed law is due to their strong feelings about that law."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Anderson maintains that travel writing has diminished in quality over the last few decades. Although travel writing has changed in this time, Anderson is too harsh on contemporary travel writers. Today, when the general public is better traveled than in the past, travel writers face a challenge far greater than that of their predecessors: they must not only show their readers a place but also make them see it anew. That the genre has not only survived but also flourished shows the talent of today's practitioners.",
+    "questionStem": "Which one of the following most accurately describes the role played in the argument by the statement that the general public is better traveled today than in the past?",
+    "answerChoices": {
+      "A": "It is claimed to be a result of good travel writing.",
+      "B": "It is cited as evidence that contemporary travel writing is intended for a wider readership.",
+      "C": "It is part of a purported explanation of why readers are disappointed with today's travel writers.",
+      "D": "It is cited as a reason that travel writing flourishes more today than it has in the past.",
+      "E": "It is cited as a condition that has transformed the task of the travel writer."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Among multiparty democracies, those with the fewest parties will have the most-productive legislatures. The fewer the number of parties in a democracy, the more issues each must take a stand on. A political party that must take stands on a wide variety of issues has to prioritize those issues; this promotes a tendency to compromise.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "The more political parties a nation has, the more likely it is that there will be disagreements within parties.",
+      "B": "The fewer the number of a nation's political parties, the more important it is that those parties can compromise with each other.",
+      "C": "The tendency to compromise makes the legislative process more productive.",
+      "D": "The legislatures of nondemocracies are less productive than are those of democracies.",
+      "E": "Legislators in a multiparty democracy never all agree on important issues."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Warm air tends to be humid, and as humidity of air increases, the amount of rainfall also increases. So, the fact that rainfall totals for most continents have been increasing over the past five years is strong evidence that the air temperature is increasing as well.",
+    "questionStem": "Which one of the following has a flawed pattern of reasoning most similar to the flawed pattern of reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Food that is fresh tends to be nutritious, and the more nutritious one's diet the healthier one is. People today are generally healthier than people were a century ago. So it is likely that people today eat food that is fresher than the food people ate a century ago.",
+      "B": "Your refusal to make public your personal finances indicates some sort of financial impropriety on your part, for people who do not reveal their personal finances generally are hiding some sort of financial impropriety.",
+      "C": "People tend not to want to travel on mass transit when they are carrying bags and packages, and the more bags and packages one carries, the more awkward travel on mass transit becomes. Therefore, people who carry bags and packages tend to use automobiles rather than mass transit.",
+      "D": "Statistics show that people are generally living longer and healthier lives than ever before. However, more people are overweight and fewer people exercise than ever before. Therefore, being lean and physically fit is essential neither to long life nor to good health.",
+      "E": "People tend to watch only those television programs that they enjoy and appreciate. Since there are more television viewers today than there were ten years ago, it must be the case that viewers today are satisfied with at least some of the programs shown on television."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "Asked by researchers to sort objects by shape, most toddlers in a large study had no trouble doing so. When subsequently told to sort by color, the toddlers seemed to have difficulty following the new rule and almost invariably persisted with their first approach. The researchers suggest such failures to adapt to new rules often result from insufficient development of the prefrontal cortex in toddlers. The cortex is essential for functions like adapting to new rules, yet is slow to mature, continuing to develop right into adolescence.",
+    "questionStem": "Which one of the following is most supported by the information above?",
+    "answerChoices": {
+      "A": "Toddlers unable to sort objects by color tend to have a less developed prefrontal cortex than other children of the same age.",
+      "B": "Only adolescents and adults can solve problems that require adapting to new rules.",
+      "C": "Certain kinds of behavior on the part of toddlers may not be willfully disobedient.",
+      "D": "The maturing of the prefrontal cortex is more important than upbringing in causing the development of adaptive behavior.",
+      "E": "Skill at adapting to new situations is roughly proportional to the level of development of the prefrontal cortex."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Role",
+    "questionDifficulty": 4,
+    "stimulus": "Dietitian: It is true that nutrients are most effective when provided by natural foods rather than artificial supplements. While it is also true that fat in one's diet is generally unhealthy, eating raw carrots (which are rich in beta carotene) by themselves is nonetheless not an effective means of obtaining vitamin A, since the body cannot transform beta carotene into vitamin A unless it is consumed with at least some fat.",
+    "questionStem": "The statement that fat in one's diet is generally unhealthy plays which one of the following roles in the dietitian's argument?",
+    "answerChoices": {
+      "A": "It is mentioned as a reason for adopting a dietary practice that the dietitian provides a reason for not carrying to the extreme.",
+      "B": "It is mentioned as the reason that is least often cited by those who recommend a dietary practice the dietitian disfavors.",
+      "C": "It is mentioned as a generally accepted hypothesis that the dietitian attempts to undermine completely.",
+      "D": "It is attacked as inadequate evidence for the claim that nutrients are most effective when provided by natural foods rather than artificial supplements.",
+      "E": "It is cited as a bad reason for adopting a dietary habit that the dietitian recommends."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "Industrial engineer: Some people have suggested that the problem of global warming should be addressed by pumping some of the carbon dioxide produced by the burning of fossil fuels into the deep ocean. Many environmentalists worry that this strategy would simply exchange one form of pollution for an equally destructive form. This worry is unfounded, however; much of the carbon dioxide now released into the atmosphere eventually ends up in the ocean anyway, where it does not cause environmental disturbances as destructive as global warming.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the industrial engineer's argument as a whole?",
+    "answerChoices": {
+      "A": "Global warming from the emission of carbon dioxide into the atmosphere could be reduced by pumping some of that carbon dioxide into the deep ocean.",
+      "B": "Environmentalists worry that the strategy of pumping carbon dioxide into the deep ocean to reduce global warming would simply exchange one form of pollution for another, equally destructive one.",
+      "C": "Worrying that pumping carbon dioxide into the deep ocean to reduce global warming would simply exchange one form of pollution for another, equally destructive, form is unfounded.",
+      "D": "Much of the carbon dioxide now released into the atmosphere ends up in the ocean where it does not cause environmental disturbances as destructive as global warming.",
+      "E": "To reduce global warming, the strategy of pumping into the deep ocean at least some of the carbon dioxide now released into the atmosphere should be considered."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Several people came down with an illness caused by a type of bacteria in seafood. Health officials traced the history of each person who became ill to the same restaurant and date. Careful testing showed that most people who ate seafood at the restaurant on that date had not come in contact with the bacteria in question. Despite this finding, health officials remained confident that contaminated seafood from this restaurant caused the cases of illness.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy indicated above?",
+    "answerChoices": {
+      "A": "Most people are immune to the effects of the bacteria in question.",
+      "B": "Those made ill by the bacteria had all been served by a waiter who subsequently became ill.",
+      "C": "All and only those who ate contaminated seafood at the restaurant on that date were allergic to the monosodium glutamate in a sauce that they used.",
+      "D": "The restaurant in question had recently been given a warning about violations of health regulations.",
+      "E": "All and only those who ate a particular seafood dish at the restaurant contracted the illness."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Economist: Real wages in this country will increase significantly only if productivity increases notably. Thus, it is unlikely that real wages will increase significantly in the near future, since this country's businesses are currently investing very little in new technology and this pattern is likely to continue for at least several more years.",
+    "questionStem": "Which one of the following, if assumed about the economist's country, allows the economist's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "Neither real wages nor productivity have increased in the last several years.",
+      "B": "Real wages will increase notably if a significant number of workers acquire the skills necessary to use new technology.",
+      "C": "Sooner or later real wages will increase significantly.",
+      "D": "Productivity will not increase if businesses do not make a substantial investment in new technology.",
+      "E": "The new technology in which businesses are currently investing is not contributing to an increase in productivity."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "In scientific journals, authors and reviewers have praised companies in which they have substantial investments. These scientists, with their potential conflict of interest, call into question the integrity of scientific inquiry, so there should be full public disclosure of scientific authors' commercial holdings.",
+    "questionStem": "Which one of the following conforms most closely to the principle illustrated by the argument above?",
+    "answerChoices": {
+      "A": "Managers within any corporation should not make investments in the companies for which they work.",
+      "B": "Claims about the effectiveness of pharmaceuticals should be based on scientific studies.",
+      "C": "People with access to otherwise private information regarding the value of stocks should not be allowed to sell or purchase those stocks.",
+      "D": "Magazine publishers should not be allowed to invest in the companies that advertise in their magazines.",
+      "E": "Financial advisers should inform their clients about any incentives the advisers receive for promoting investments in particular companies."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Columnist: The amount of acidic pollutants released into the air has decreased throughout the world over the last several decades. We can expect, then, an overall decrease in the negative environmental effects of acid rain, which is caused by these acidic pollutants.",
+    "questionStem": "Each of the following, if true, would weaken the columnist's argument except:",
+    "answerChoices": {
+      "A": "Some ecosystems have developed sophisticated mechanisms that reduce the negative effects of increased levels of acids in the environment.",
+      "B": "The amount of acid-neutralizing buffers released into the air has decreased in recent years.",
+      "C": "The current decrease in acidic pollutants is expected to end soon, as more countries turn to coal for the generation of electricity.",
+      "D": "The effects of acid rain are cumulative and largely independent of current acid rain levels.",
+      "E": "The soils of many ecosystems exposed to acid rain have been exhausted of minerals that help protect them from acid rain's harmful effects."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Columnist: It is sometimes claimed that the only factors relevant to determining moral guilt or innocence are the intentions of the person performing an action. However, external circumstances often play a crucial role in our moral judgment of an action. For example, a cook at a restaurant who absentmindedly put an ingredient in the stew that is not usually in the stew would ordinarily be regarded as forgetful, not immoral. If, however, someone eating at the restaurant happens to be severely allergic to that ingredient, eats the stew, and dies, many people would judge the cook to be guilty of serious moral negligence.",
+    "questionStem": "Which one of the following propositions is best illustrated by the columnist's statements?",
+    "answerChoices": {
+      "A": "It is sometimes fair to judge the morality of others' actions even without considering all of the circumstances under which those actions were performed.",
+      "B": "We sometimes judge unfairly the morality of other people's actions.",
+      "C": "We should judge all negligent people to be equally morally blameworthy, regardless of the outcomes of their actions.",
+      "D": "People are sometimes held morally blameworthy as a result of circumstances some of which were outside their intentional control.",
+      "E": "The intentions of the person performing an action are rarely a decisive factor in making moral judgments about that action."
+    },
+    "correctAnswer": "D"
+  }
+]

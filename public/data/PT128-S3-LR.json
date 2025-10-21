@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "In a transportation company, a certain syndrome often attributed to stress by medical experts afflicts a significantly higher percentage of workers in Department F than in any other department. We can conclude, therefore, that the work done in Department F subjects workers to higher stress levels than does the work in the other departments in the company.",
+    "questionStem": "Which one of the following, if true, most helps to support the argument?",
+    "answerChoices": {
+      "A": "Department F has more employees than any other department in the company.",
+      "B": "Some experts believe that the syndrome can be caused by various factors, only one of which is high stress.",
+      "C": "Many workers who transfer into Department F from elsewhere in the company soon begin to develop the syndrome.",
+      "D": "It is relatively common for workers in the transportation industry to suffer from the syndrome.",
+      "E": "Job-related stress has been the most frequently cited cause for dissatisfaction among workers at the company."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Because metallic mirrors absorb some light, they waste energy. When light strikes a metallic mirror, electrons in the mirror move, using energy and dimming the reflected image. As a result, metallic mirrors cannot be used in applications in which minimizing energy loss is important, such as high-powered lasers.",
+    "questionStem": "Which one of the following most accurately expresses the argument's main conclusion?",
+    "answerChoices": {
+      "A": "Metallic mirrors reduce the effectiveness of high-powered lasers.",
+      "B": "Part of the light falling on metallic mirrors tends to be absorbed by them.",
+      "C": "High-powered lasers require mirrors that conserve energy.",
+      "D": "A tendency to waste energy is the most significant disadvantage of metallic mirrors.",
+      "E": "Metallic mirrors are unsuitable for applications where it is crucial to minimize energy loss."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Parallel",
+    "questionDifficulty": 1,
+    "stimulus": "If Patricia eats a heavy, spicy meal tonight, she will get a bad case of heartburn later. If Patricia gets a bad case of heartburn later, she will be grouchy tomorrow morning. So if Patricia eats a heavy, spicy meal tonight, she will be grouchy tomorrow morning.",
+    "questionStem": "Which one of the following arguments is most similar in its logical features to the argument above?",
+    "answerChoices": {
+      "A": "If Ruth plants only daffodils, the squirrels will eat the bulbs. If the squirrels eat the bulbs, then no flowers will bloom in Ruth's garden. Since no flowers are blooming in Ruth's garden, she must have planted only daffodils.",
+      "B": "If Shawn starts gardening in early spring, he can plant tomatoes early. If Shawn can plant tomatoes early, he will have plenty of tomatoes for canning. But he does not have plenty of tomatoes for canning, so either he did not start gardening in early spring or he did not plant tomatoes early.",
+      "C": "Maria plants either petunias or geraniums in her garden. If Maria plants petunias, she plants purple ones. If Maria plants geraniums, she plants red ones. Since both petunias and geraniums are flowers, Maria will have either purple or red flowers in her garden.",
+      "D": "If Li plants old rose varieties, her garden will look beautiful. If Li's garden looks beautiful, Li's neighbors will be impressed. So if Li plants old rose varieties, her neighbors will be impressed.",
+      "E": "If Bryan's fruit trees are to produce well, he must either prune them in the fall or fertilize them in the spring. Since Bryan wants his trees to produce well but forgot to prune them last fall, Bryan is sure to fertilize his trees this spring."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Huang: Most people who commit violent crimes do not carefully consider whether or how they will be punished for these crimes. And those who don't commit violent crimes have no inclination to do so. Rather than impose harsh mandatory sentences, we should attend to the root causes of violence to reduce the rate of violent crime.\nSuarez: Would you say the same about nonviolent crimes, such as tax evasion? Surely mandatory penalties are a useful deterrent in these cases. At any rate, I am confident that mandatory sentences prevent most people who would otherwise physically harm others from doing so.",
+    "questionStem": "The dialogue between Huang and Suarez most strongly supports the claim that they disagree about whether",
+    "answerChoices": {
+      "A": "the best way to reduce violent crime is to address the root causes of violence",
+      "B": "people who commit violent crimes deserve harsh punishment",
+      "C": "people who commit violent crimes carefully consider how they will be punished for their crimes",
+      "D": "mandatory sentences will deter most people who might otherwise commit violent crimes",
+      "E": "severe penalties reduce the incidence of tax evasion"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Those who participate in risky sports often do so to confront their fears. For example, rock climbers are more likely than others to have once suffered from a fear of heights. Those who participate in such risk-taking activities also have more self-confidence than others, so it is probably true that confronting one's fears increases one's self-confidence.",
+    "questionStem": "Which one of the following, if true, most weakens the reasoning above?",
+    "answerChoices": {
+      "A": "Often those who suffer from fears such as a fear of heights either do not know that they suffer from those fears or do not know the extent to which they suffer from them.",
+      "B": "In general, people who currently participate in risky sports had above-average self-confidence even before participating in any risky sport.",
+      "C": "Most people who refrain from engaging in risky sports refrain from doing so for reasons other than a fear of death or injury.",
+      "D": "Participating in risky sports is not the only way to confront one's fears.",
+      "E": "Most of those who do not participate in risky sports believe that they lack the capacity to excel in such activities."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Melchior: Some studies have linked infants' consumption of formula made from cow's milk to subsequent diabetes. Nonetheless, parents should feed cow's milk formula to their infants. After all, cow's milk is an excellent source of several nutrients important to infants' development.",
+    "questionStem": "The reasoning in Melchior's argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "defends a certain practice on the basis that it has a certain benefit without considering whether an alternative practice has the same benefit",
+      "B": "draws a conclusion that simply restates a claim that is presented in support of that conclusion",
+      "C": "inappropriately introduces normative claims in support of a conclusion that is entirely factual",
+      "D": "distorts an argument against feeding cow's milk formula to infants and then attacks this distorted argument",
+      "E": "confuses an absence of evidence in support of a claim with the existence of evidence against a claim"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "In an attempt to create brand loyalties, television advertisers currently target young adults, ages 18 to 25, because on average they have higher discretionary income than do consumers of other age groups. But since the average discretionary income of those over 65 will soon be greater than that of young adults, in the future television advertisers would do better to target consumers over 65 instead.",
+    "questionStem": "Which one of the following, if true, would most weaken the argument above?",
+    "answerChoices": {
+      "A": "Consumers over the age of 65 tend to watch different television shows than do young adults.",
+      "B": "The older a consumer is, the more likely he or she is to have already established brand loyalties.",
+      "C": "The average discretionary income of young adults is projected to rise in the near future.",
+      "D": "The greater a consumer's discretionary income, the more likely advertising is to encourage that consumer to buy.",
+      "E": "The number of consumers over the age of 65 is increasing more rapidly than is the number of young adults."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Politician: It is widely accepted that because democratic politics cannot exist without debate about political issues, and because self-governance flourishes when citizens are allowed to express their feelings verbally, a democratically governed society should refrain from interfering in individual citizens' speech. I argue that a democratically governed society should also refrain from exercising strict control over the clothing and grooming of its citizens, for this is clearly a venue of self-expression, and it can also serve to make a variety of political statements, without using words.",
+    "questionStem": "A logical strategy used in the politician's argument is to",
+    "answerChoices": {
+      "A": "argue for a conclusion by suggesting that the opposite conclusion leads to an absurdity",
+      "B": "reach a general conclusion based on the absence of clear counterexamples to an empirical thesis",
+      "C": "support a conclusion by claiming that it is widely accepted",
+      "D": "reach a conclusion based on evidence that is similar to evidence commonly thought to support an analogous case",
+      "E": "reach a conclusion about what democratically governed societies actually do based on premises about what democratically governed societies should do"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "A television commercial argued as follows: both the product advertised and its competitor contain the same active ingredients, but the product advertised contains them in higher concentrations; tests show that the higher concentrations are completely safe; since a product that provides faster relief is always preferable, one should use the product advertised.",
+    "questionStem": "The television commercial's argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "takes for granted that it is true in all cases that products with higher concentrations of active ingredients are more effective than their competitors",
+      "B": "attempts to establish its conclusion on the basis of evidence that is in principle impossible to disprove",
+      "C": "dismisses its competitor's claims because of their source rather than their content",
+      "D": "attempts to manipulate the emotions of potential customers of the advertised product rather than presenting logically sound reasons for preferring the product advertised",
+      "E": "takes for granted that the product with the higher concentration of active ingredients provides faster relief than its competitor"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Biologists often announce that a certain kind of animal has been found capable of using tools; this usually refers to something like using a stick to hunt for ants in a log, or a stone to crack nuts. But such announcements are completely unsurprising, since all animals use tools. Birds build nests, fish hide in the mud to escape predators, and squirrels use buildings as shortcuts between trees. If an animal executes its purpose by means of an external physical object, then that object can reasonably be regarded as a tool.",
+    "questionStem": "Which one of the following most accurately describes the role played in the argument by the claim that the biologists' announcements that a certain animal has been found capable of using tools are unsurprising?",
+    "answerChoices": {
+      "A": "It provides evidence that the animals' activities given as examples are purposeful.",
+      "B": "It is the conclusion of the argument.",
+      "C": "It is an assumption used by the argument to justify acceptance of a broader conception of what a tool is than that usually accepted by the biologists.",
+      "D": "It calls into question the basis of the biologists' conception of a tool.",
+      "E": "It addresses a weakness in the biologists' announcements that stems from their ambiguous use of the word \"external.\""
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Literary critic: Samuel Johnson argued that writers should refrain from attributing attractive qualities to immoral characters, since doing so increases the tendency of readers to emulate these characters. Works of fiction would be unrealistic, however, if writers were to follow Johnson's advice.",
+    "questionStem": "The conclusion is properly drawn in the literary critic's argument if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "One-dimensional characters are less entertaining than well-rounded characters.",
+      "B": "The attractive qualities of characters are more appealing than their immoral behavior.",
+      "C": "In reality, all bad people have some attractive qualities.",
+      "D": "In reality, it is difficult to emulate fictional characters.",
+      "E": "It is rarely evident which qualities of fictional characters are intended to be attractive qualities."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Clothes dryers manufactured by Archway Appliances, Inc. are of poor quality. Crucial bolts are missing and some sections are assembled in the wrong order, thereby creating a shock and fire hazard. Concern for safety and quality is conspicuously lacking. So Archway must use shoddy, substandard components in its clothes dryers.",
+    "questionStem": "The argument is most vulnerable to criticism on the grounds that it fails to consider the possibility that",
+    "answerChoices": {
+      "A": "there is not a single known case of an Archway dryer starting a fire or electrocuting someone",
+      "B": "there are aspects of dryer construction that are more relevant to the quality of the finished product than those mentioned",
+      "C": "Archway's dryers consistently perform well and enjoy considerable customer loyalty",
+      "D": "a shoddily constructed appliance can be made of high-quality parts",
+      "E": "Archway's other product lines exhibit careful and safe assembly and use high-quality components"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "Sexual reproduction is achieved when the gamete of a male organism unites with the gamete of a female organism to form a new and genetically unique cell. Each of the two gametes contributes equally to the genetic material found in the new cell's nucleus. However, the genetic material found in the new cell's cytoplasm (the part of a cell outside the nucleus) is contributed exclusively by the female's gamete. A certain type of genetic material, referred to as GM62, is found only in cytoplasm.",
+    "questionStem": "Which one of the following is a conclusion that can logically be drawn from the passage above?",
+    "answerChoices": {
+      "A": "All female organisms contribute GM62 to their offspring.",
+      "B": "Only female organisms can contribute GM62 to their offspring.",
+      "C": "Genetic material is evenly divided between the nucleus and the cytoplasm of a new cell.",
+      "D": "The role of the male gamete in sexual reproduction is less important than the role of the female gamete.",
+      "E": "It is likely that other types of genetic material that are contributed exclusively by the male gamete will be identified."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Forty to 60 percent of students report, in anonymous surveys, that they plagiarized at least once as undergraduates, and evidence indicates that plagiarism also occurs in our medical and business schools. Researchers have found that students who plagiarize are more likely to engage in subsequent professional misconduct such as falsified research results and fraudulent business practices. Thus, a reduction of academic plagiarism will lead to a reduction of professional misconduct.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the reasoning in the argument?",
+    "answerChoices": {
+      "A": "The argument relies on the accuracy of reports by people, some of whom, in the nature of the case, cannot be relied upon to provide truthful testimony.",
+      "B": "The argument introduces one subject for debate, but proceeds to give premises relevant to a different subject.",
+      "C": "The argument presumes, without providing justification, that a certain phenomenon is the only factor contributing to the incidence of a certain other phenomenon.",
+      "D": "The argument takes for granted that a certain behavior is more prevalent among members of one population than it is among members of another.",
+      "E": "The argument infers the existence of a causal connection merely on the basis of an association."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Paradox",
+    "questionDifficulty": 5,
+    "stimulus": "The number of deer living in North America has increased dramatically since the 1960s even though hunters kill no fewer deer today. Moreover, the number of natural predators of deer, such as wolves, is on the rise, and suburbs increasingly encroach on deer habitats.",
+    "questionStem": "Which one of the following, if true, would most help to explain the apparent discrepancy described above?",
+    "answerChoices": {
+      "A": "Pesticides that adversely affected most wildlife living in North America have been banned since the 1970s.",
+      "B": "Recently, attempts have been made in various parts of North America to protect deer habitats from suburban development.",
+      "C": "The number of deer hunters in North America has decreased since the 1960s.",
+      "D": "Much of the increase in the population of wolves is due to wolves born in captivity and released into the wild.",
+      "E": "The greater the number of deer, the more likely they are to be afflicted with problems such as famine and disease."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "The primary task of a university is to educate. But to teach well, professors must be informed about new developments in their disciplines, and that requires research. Yet many universities cannot afford to support faculty research adequately. So a lack of funds for research adversely affects the degree to which a university can fulfill its central mission.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the argument?",
+    "answerChoices": {
+      "A": "In order to be able to teach well, university professors must conduct research.",
+      "B": "Lack of financial support for faculty research is the root of ineffective teaching at universities.",
+      "C": "Effective teaching is the primary mission of a university.",
+      "D": "Lack of funds for research reduces the quality of education a university provides.",
+      "E": "New means of funding faculty research at universities are needed."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Environmentalist: The United Kingdom recently instituted a law requiring that foods containing genetically altered ingredients be labeled accordingly. Food producers, fearing that consumers would understand the labels as warnings and thus avoid their products, rushed to rid those products of genetically altered ingredients. Other countries contemplating such labeling should therefore refrain, because many crops are genetically altered to be pest resistant; loss of demand for these genetically altered crops would necessitate production alternatives, all of which are dangerous and pesticide intensive.",
+    "questionStem": "Which one of the following is an assumption on which the environmentalist's argument depends?",
+    "answerChoices": {
+      "A": "In general, people interpret labels stating that some food ingredients are genetically altered as warnings.",
+      "B": "Before the United Kingdom instituted a law requiring that foods containing genetically altered ingredients be labeled as such, almost all foods sold there contained genetically altered ingredients.",
+      "C": "The reactions of food producers in other countries to laws requiring labeling of foods containing genetically altered ingredients are likely to be similar to the reactions of food producers in the United Kingdom.",
+      "D": "Warning labels on food products have proven to be effective in reducing consumption of those products.",
+      "E": "Countries that institute new food labeling regulations often experience a change in consumer eating habits."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Education critics' contention that the use of calculators in mathematics classes will undermine students' knowledge of the rationale underlying calculational procedures is clearly false. Every new information-handling technology has produced virtually the same accusation. Some Greek philosophers, for example, believed that the advent of written language would erode people's capacity to remember information and speak extemporaneously.",
+    "questionStem": "The reasoning in the argument above is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "presents only evidence whose relevancy to the issue raised by the opponents has not been established",
+      "B": "draws a conclusion based on an ambiguous notion of knowledge",
+      "C": "takes for granted that the advantages offered by new information-handling technologies always outweigh the disadvantages",
+      "D": "takes a condition that suffices to prove its conclusion to be a condition necessary for the truth of that conclusion",
+      "E": "concludes that a hypothesis is false simply because it contradicts other beliefs held by the advocates of that hypothesis"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Scott: The Hippocratic oath demands, specifically, that doctors \"never divulge\" information about patients. Hence the psychiatrist who released tapes of a poet's therapy sessions after the poet's death violated his oath by his actions, even though the tapes were released after the poet's death and to the poet's official biographer. It makes no difference that the poet's published works were written in a confessional manner or that she had assured the psychiatrist that he could do with the tapes as he saw fit.\nBonara: I agree that doctors are bound not to divulge patient information and would not myself release such tapes without written permission from the patient. Nevertheless, I disagree that the circumstances were irrelevant in this case. I do not think the poet's psychiatrist violated the Hippocratic oath.",
+    "questionStem": "Which one of the following principles, if established, helps most to justify Scott's evaluation of the psychiatrist's actions?",
+    "answerChoices": {
+      "A": "Restrictions on the release of patient information by psychiatrists are not binding after the patient's death, since after death a person can no longer suffer harm.",
+      "B": "Once a patient has granted a psychiatrist permission to release confidential information, that information can be released to anyone at the psychiatrist's discretion.",
+      "C": "Since a psychiatrist could influence a patient's opinions during therapy, any directives to the psychiatrist by the patient must be interpreted in the light of the patient's actions outside the therapeutic setting.",
+      "D": "Since any psychiatrist's divulging to the public information about a patient could undermine the trust of other patients in their psychiatrists, no patient can release a psychiatrist from the obligation to keep patient information confidential.",
+      "E": "If a patient has expressed an intention to make public information about himself or herself that is in a psychiatrist's possession, the psychiatrist is released from the obligation to keep that information confidential."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Professor Gandolf says that all political systems that aim at preventing conflict are legitimate. However, totalitarian political systems are usually good at preventing conflict, since those who are not in power are subject to the will of the powerful. But since all totalitarian political systems are illegitimate, Professor Gandolf's principle must be false.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "At least one political system that does not aim at preventing conflict is legitimate.",
+      "B": "If a totalitarian political system prevents conflict, such prevention is only incidental to its true aims.",
+      "C": "At least one totalitarian political system aims at preventing conflict.",
+      "D": "No political system that fails to prevent conflict is legitimate.",
+      "E": "Some political systems that are not totalitarian are illegitimate."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Musicologist: Ludwig van Beethoven began losing his hearing when he was 30. This loss continued gradually, but was not complete until late in his life. While it may seem that complete hearing loss would be a severe liability for a composer, in Beethoven's case it gave his later music a wonderfully introspective quality that his earlier music lacked.",
+    "questionStem": "Which one of the following statements is most strongly supported by the musicologist's claims?",
+    "answerChoices": {
+      "A": "It was more difficult for Beethoven to compose his later works than his earlier ones.",
+      "B": "Had he not lost his hearing, Beethoven's later music would have been of poorer quality than it is.",
+      "C": "Had he not lost his hearing, Beethoven would have been less introspective than he was.",
+      "D": "Beethoven's music became gradually more introspective as he grew older.",
+      "E": "Had he not lost his hearing, Beethoven's later music would probably have been different than it is."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Critic: Historians purport to discover the patterns inherent in the course of events. But historians actually impose, rather than find, such patterns by choosing what to include in and exclude from their historical narratives. Thus, properly understood, histories reveal more about the presuppositions underlying different historians' attempts to understand what happened than about what actually happened.",
+    "questionStem": "The critic's argument depends on which one of the following assumptions?",
+    "answerChoices": {
+      "A": "Historians have many presuppositions in common with one another.",
+      "B": "There is no way to determine with certainty whether a pattern described by a historian is actually present in and not merely imposed upon the events.",
+      "C": "Historians presuppose that certain historical patterns accurately describe many different eras.",
+      "D": "Most historians cannot become aware of the presuppositions that they bring to their narratives.",
+      "E": "Which pattern a historian imposes upon events is affected by that historian's presuppositions."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Councillor Miller opposes all proposals to raise taxes. Councillor Philopoulos supports increased funding for schools, which in this area are funded entirely by property taxes. It follows that Miller will oppose and Philopoulos will support Councillor Callari's proposal to increase school funding by raising property taxes.",
+    "questionStem": "Which one of the following exhibits flawed reasoning most similar to the flawed reasoning exhibited by the argument above?",
+    "answerChoices": {
+      "A": "Tara finds Ms. Burke's English class, which has paper assignments but no exams, easier than Mr. Kent's English class, which has exams but no paper assignments. It follows that Tara finds it easier to write a paper than to take an exam.",
+      "B": "Jane refuses to live downtown. Denise wants to rent a penthouse apartment. It follows that Jane will not rent one of the penthouse apartments in the Joliet Towers complex downtown but Denise will rent one of those apartments.",
+      "C": "Mayor Watson promised never to support an increase in public transportation fares in Johnsonville. It follows that Mayor Watson will oppose the new proposal to improve public transportation in Johnsonville by doubling public transportation fares.",
+      "D": "Ed dislikes any food that is extremely sweet, but Bill likes most extremely sweet food. It follows that Ed will dislike these extremely sweet brownies but Bill will probably like them.",
+      "E": "In the past, the citizens of Lake County have voted down every proposal to increase property taxes. It follows that citizens of Lake County will probably vote down the new proposed increase in property taxes."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Historian: The revolutionary party has been accused of having many overambitious goals and of having caused great suffering. However, most of the party's goals were quickly achieved and the party did not have enough power to cause the suffering the critics claim it caused. So it is clear that the party was not overambitious and caused no suffering.",
+    "questionStem": "The reasoning in the historian's argument is flawed because the argument",
+    "answerChoices": {
+      "A": "gives mutually inconsistent responses to the two criticisms",
+      "B": "fails to establish that the revolutionary party caused no suffering",
+      "C": "fails to establish that any of the revolutionary party's critics underestimated the party's power",
+      "D": "provides no evidence that the revolutionary party's goals were not overambitious",
+      "E": "fails to consider other major criticisms of the revolutionary party"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT128",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Although withholding information from someone who would find that information painful is sometimes justified, there is no such justification if the person would benefit from having the information. Therefore, even though it would be painful for Jason to learn that his supervisor is displeased with his work, his colleague Jane should nonetheless inform Jason of this fact, for knowing that his supervisor was displeased would enable Jason to improve his supervisor's opinion of his work.",
+    "questionStem": "Which one of the following is an assumption on which the argument relies?",
+    "answerChoices": {
+      "A": "If Jane does not tell Jason that his supervisor is displeased with his work, then Jason's situation will worsen.",
+      "B": "If Jane does not tell Jason that his supervisor is displeased with his work, Jason will never find out.",
+      "C": "If Jane tells Jason that his supervisor is displeased with his work, Jason will be grateful for the information even though it will be painful for him to learn it.",
+      "D": "Jason might eventually improve his supervisor's opinion of his work even if he never learns that his supervisor is displeased with his work.",
+      "E": "Jason would benefit if he were able to improve his supervisor's opinion of his work."
+    },
+    "correctAnswer": "E"
+  }
+]

@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Editorial: Almost every year the Smithfield River floods the coastal fishing community of Redhook, which annually spends $3 million on the cleanup. Some residents have proposed damming the river, which would cost $5 million but would prevent the flooding. However, their position is misguided. A dam would prevent nutrients in the river from flowing into the ocean. Fish that now feed on those nutrients would start feeding elsewhere. The loss of these fish would cost Redhook $10 million annually.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the editorial's argument?",
+    "answerChoices": {
+      "A": "The Smithfield River should be dammed to prevent flooding.",
+      "B": "Nutrients from the Smithfield River are essential to the local fish population.",
+      "C": "Damming the Smithfield River is not worth the high construction costs for such a project.",
+      "D": "For Redhook to build a dam on the Smithfield River would be a mistake.",
+      "E": "The Smithfield River floods cost Redhook $3 million every year."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Evaluate",
+    "questionDifficulty": 2,
+    "stimulus": "We already knew from thorough investigation that immediately prior to the accident, either the driver of the first vehicle changed lanes without signaling or the driver of the second vehicle was driving with excessive speed. Either of these actions would make a driver liable for the resulting accident. But further evidence has proved that the first vehicle's turn signal was not on, though the driver of that vehicle admits to having changed lanes. So the driver of the second vehicle is not liable for the accident.",
+    "questionStem": "Which one of the following would be most important to know in evaluating the conclusion drawn above?",
+    "answerChoices": {
+      "A": "whether the second vehicle was being driven at excessive speed",
+      "B": "whether the driver of the first vehicle knew that the turn signal was not on",
+      "C": "whether any other vehicles were involved in the accident",
+      "D": "whether the driver of the first vehicle was a reliable witness",
+      "E": "whether the driver of the second vehicle would have seen the turn signal flashing had it been on"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "In some places, iceberg lilies are the mainstay of grizzly bears' summer diets. The bears forage meadows for the lilies, uprooting them and eating their bulbs. Although the bears annually destroy a large percentage of the lilies, scientists have determined that the bears' feeding habits actually promote the survival of iceberg lilies.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy in the statements above?",
+    "answerChoices": {
+      "A": "When grizzly bears forage for iceberg lilies, they generally kill many more lilies than they eat.",
+      "B": "Iceberg lilies produce so many offspring that, when undisturbed, they quickly deplete the resources necessary for their own survival.",
+      "C": "A significantly smaller number of iceberg lily flowers are produced in fields where grizzly bears forage than in fields of undisturbed iceberg lilies.",
+      "D": "The geographic regions in which iceberg lilies are most prevalent are those regions populated by grizzly bears.",
+      "E": "Iceberg lilies contain plentiful amounts of some nutrients that are necessary for grizzly bears' survival."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Advertisement: Seventy-five percent of dermatologists surveyed prefer Dermactin to all other brands of skin cream. Why? We consulted dermatologists during the development of Dermactin to ensure that you have the best skin cream on the market. So if you need a skin cream, use Dermactin.",
+    "questionStem": "The reasoning in the advertisement is questionable because the advertisement",
+    "answerChoices": {
+      "A": "overlooks the possibility that other types of doctors have cause to use Dermactin, which would render the sample unrepresentative",
+      "B": "fails to state the number of dermatologists surveyed, which leaves open the possibility that the sample of doctors is too small to be reliable",
+      "C": "presumes, without providing justification, that some dermatologists are less qualified than others to evaluate skin cream",
+      "D": "relies on an inappropriate appeal to the opinions of consumers with no special knowledge of skin care",
+      "E": "overlooks the possibility that for a few people, using no skin cream is preferable to using even the best skin cream"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Parallel",
+    "questionDifficulty": 1,
+    "stimulus": "Landscape architect: If the screen between these two areas is to be a hedge, that hedge must be of either hemlocks or Leyland cypress trees. However, Leyland cypress trees cannot be grown this far north. So if the screen is to be a hedge, it will be a hemlock hedge.",
+    "questionStem": "In which one of the following is the pattern of reasoning most similar to that in the landscape architect's argument?",
+    "answerChoices": {
+      "A": "If there is to be an entrance on the north side of the building, it will have to be approached by a ramp. However, a ramp would become impossibly slippery in winter, so there will be no entrance on the north side.",
+      "B": "If visitors are to travel to this part of the site by automobile, there will be a need for parking spaces. However, no parking spaces are allowed for in the design. So if visitors are likely to come by automobile, the design will be changed.",
+      "C": "The subsoil in these five acres either consists entirely of clay or consists entirely of shale. Therefore, if one test hole in the area reveals shale, it will be clear that the entire five acres has a shale subsoil.",
+      "D": "Any path along this embankment must be either concrete or stone. But a concrete path cannot be built in this location. So if there is to be a path on the embankment, it will be a stone path.",
+      "E": "A space the size of this meadow would be suitable for a playground or a picnic area. However, a playground would be noisy and a picnic area would create litter. So it will be best for the area to remain a meadow."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Deirdre: Many philosophers have argued that the goal of every individual is to achieve happiness—that is, the satisfaction derived from fully living up to one's potential. They have also claimed that happiness is elusive and can be achieved only after years of sustained effort. But these philosophers have been unduly pessimistic, since they have clearly exaggerated the difficulty of being happy. Simply walking along the seashore on a sunny afternoon causes many people to experience feelings of happiness.",
+    "questionStem": "Which one of the following most accurately describes a reasoning flaw in Deirdre's argument?",
+    "answerChoices": {
+      "A": "It dismisses a claim because of its source rather than because of its content.",
+      "B": "It fails to take into account that what brings someone happiness at one moment may not bring that person happiness at another time.",
+      "C": "It allows the key term \"happiness\" to shift in meaning illicitly in the course of the argument.",
+      "D": "It presumes, without providing justification, that happiness is, in fact, the goal of life.",
+      "E": "It makes a generalization based on the testimony of a group whose views have not been shown to be representative."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Global ecological problems reduce to the problem of balancing supply and demand. Supply is strictly confined by the earth's limitations. Demand, however, is essentially unlimited, as there are no limits on the potential demands made by humans. The natural tendency for there to be an imbalance between demand and sustainable supply is the source of these global problems. Therefore, any solutions require reducing current human demand.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Supply and demand tend to balance themselves in the long run.",
+      "B": "It is possible to determine the limitations of the earth's sustainable supply.",
+      "C": "Actual human demand exceeds the earth's sustainable supply.",
+      "D": "It is never possible to achieve a balance between the environmental supply and human demand.",
+      "E": "Human consumption does not decrease the environmental supply."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "We can now dismiss the widely held suspicion that sugar consumption often exacerbates hyperactivity in children with attention deficit disorder. A scientific study of the effects of three common sugars—sucrose, fructose, and glucose—on children who have attention deficit disorder, with experimental groups each receiving a type of sugar in their diets and a control group receiving a sugar substitute instead of sugar, showed no statistically significant difference between the groups in thinking or behavior.",
+    "questionStem": "Which one of the following, if true, would most weaken the argument above?",
+    "answerChoices": {
+      "A": "Only one of the three types of sugar used in the study was ever widely suspected of exacerbating hyperactivity.",
+      "B": "The consumption of sugar actually has a calming effect on some children.",
+      "C": "The consumption of some sugar substitutes exacerbates the symptoms of hyperactivity.",
+      "D": "The study included some observations of each group in contexts that generally tend to make children excited and active.",
+      "E": "Some children believe that they can tell the difference between the taste of sugar and that of sugar substitutes."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Philosopher: An action is morally good if it both achieves the agent's intended goal and benefits someone other than the agent.",
+    "questionStem": "Which one of the following judgments most closely conforms to the principle cited by the philosopher?",
+    "answerChoices": {
+      "A": "Colin chose to lie to the authorities questioning him, in an attempt to protect his friends. The authorities discovered his deception and punished Colin and his friends severely. But because he acted out of love for his friends, Colin's action was morally good.",
+      "B": "Derek prepared a steak dinner to welcome his new neighbors to the neighborhood. When they arrived for dinner, Derek found out that the newcomers were strict vegetarians. Though the new neighbors were still grateful for Derek's efforts to welcome them, Derek's action was not morally good.",
+      "C": "Ellen worked overtime hoping to get a promotion. The extra money she earned allowed her family to take a longer vacation that year, but she failed to get the promotion. Nevertheless, Ellen's action was morally good.",
+      "D": "Louisa tried to get Henry into serious trouble by making it appear that he stole some expensive clothes from a store. But the store's detective realized what Louisa did, and so Louisa was punished rather than Henry. Since she intended to harm Henry, Louisa's action was not morally good.",
+      "E": "Yolanda took her children to visit their grandfather because she wanted her children to enjoy their vacation and she knew they adored their grandfather. The grandfather and the children all enjoyed the visit. Though Yolanda greatly enjoyed the visit, her action was morally good."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Columnist: A recent research report suggests that by exercising vigorously, one significantly lowers one's chances of developing certain cardio-respiratory illnesses. But exercise has this effect, the report concludes, only if the exercise is vigorous. Thus, one should not heed older studies purporting to show that nonstrenuous walking yields the same benefits.",
+    "questionStem": "The reasoning in the columnist's argument is most vulnerable to criticism on the grounds that this argument",
+    "answerChoices": {
+      "A": "fails to consider the possibility that the risk of developing certain cardio-respiratory illnesses can be reduced by means other than exercise",
+      "B": "fails to consider that those who exercise vigorously are at increased risk of physical injury caused by exercise",
+      "C": "overlooks the possibility that vigorous exercise may prevent life-endangering diseases that have little to do with the cardio-respiratory system",
+      "D": "fails to consider the possibility that those who engage in vigorous physical exercise are more likely than others to perceive themselves as healthy",
+      "E": "fails to show that a certain conclusion of the recent report is better justified than an opposing conclusion reached in older studies"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Some statisticians believe that the method called extreme value theory (EVT) is a powerful analytical tool. The curves generated by traditional statistical methods to analyze empirical data on human longevity predict that some humans would live beyond 130 years. According to the curves EVT generates, however, the limit on human life spans is probably between 113 and 124 years. To date, no one has lived beyond the upper limits indicated by EVT analysis.",
+    "questionStem": "Which one of the following can be properly inferred from the statements above?",
+    "answerChoices": {
+      "A": "EVT is, in general, a more reliable method for projecting future trends based on past observations than are traditional statistical methods.",
+      "B": "EVT fits the data about the highest observed human life spans more closely than do traditional statistical methods.",
+      "C": "According to the findings derived through the use of EVT, it is physically impossible for any human being to live longer than 124 years.",
+      "D": "Given the results generated by EVT, there is no point in conducting research aimed at greatly extending the upper limit on human life spans.",
+      "E": "Traditional statistical methods of empirical data analysis should eventually be replaced by some version of EVT."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The number of different synthetic chemical compounds that are known to be carcinogenic but are nonetheless used as pesticides, preservatives, or food additives is tiny compared to the number of nonsynthetic carcinogenic compounds widely found in plants and animals. It is therefore absurd to suppose that the rise in the cancer rate in recent decades is due to synthetic carcinogens.",
+    "questionStem": "The reasoning above is most vulnerable to criticism on the grounds that it overlooks the possibility that",
+    "answerChoices": {
+      "A": "the rise in the cancer rate in recent decades is due to increased exposure to nonsynthetic pollutants",
+      "B": "the rise in the cancer rate in recent decades is due to something other than increased exposure to carcinogens",
+      "C": "some synthetic chemical compounds that are not known to be carcinogenic are in other respects toxic",
+      "D": "people undergo significantly less exposure to carcinogens that are not synthetic than to those that are synthetic",
+      "E": "people can vary greatly in their susceptibility to cancers caused by nonsynthetic carcinogens"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 4,
+    "stimulus": "It is a mistake to think, as ecologists once did, that natural selection will eventually result in organisms that will be perfectly adapted to their environments. After all, perfect adaptation of an individual to its environment is impossible, for an individual's environment can vary tremendously; no single set of attributes could possibly prepare an organism to cope with all the conditions that it could face.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "It is not possible for an individual to be perfectly adapted to its environment.",
+      "B": "Natural selection will never result in individuals that will be perfectly adapted to their environments.",
+      "C": "No single set of attributes could enable an individual organism to cope with all of the conditions that it might face.",
+      "D": "Because an individual's environment can vary tremendously, no individual can be perfectly adapted to its environment.",
+      "E": "Ecologists once believed that natural selection would eventually result in individuals that will be perfectly adapted to their environments."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "It would not be surprising to discover that the trade routes between China and the West were opened many centuries, even millennia, earlier than 200 B.C., contrary to what is currently believed. After all, what made the Great Silk Road so attractive as a trade route linking China and the West—level terrain, easily traversable mountain passes, and desert oases—would also have made it an attractive route for the original emigrants to China from Africa and the Middle East, and this early migration began at least one million years ago.",
+    "questionStem": "That a migration from Africa and the Middle East to China occurred at least one million years ago figures in the above reasoning in which one of the following ways?",
+    "answerChoices": {
+      "A": "It is cited as conclusive evidence for the claim that trade links between China and the Middle East were established long before 200 B.C.",
+      "B": "It is an intermediate conclusion made plausible by the description of the terrain along which the migration supposedly took place.",
+      "C": "It is offered as evidence in support of the claim that trade routes between China and the West could easily have been established much earlier than is currently believed.",
+      "D": "It is offered as evidence against the claim that trade routes between China and Africa preceded those eventually established between China and the Middle East.",
+      "E": "It is the main conclusion that the argument attempts to establish about intercourse between China and the West."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "The typological theory of species classification, which has few adherents today, distinguishes species solely on the basis of observable physical characteristics, such as plumage color, adult size, or dental structure. However, there are many so-called \"sibling species,\" which are indistinguishable on the basis of their appearance but cannot interbreed and thus, according to the mainstream biological theory of species classification, are separate species. Since the typological theory does not count sibling species as separate species, it is unacceptable.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that",
+    "answerChoices": {
+      "A": "the argument does not evaluate all aspects of the typological theory",
+      "B": "the argument confuses a necessary condition for species distinction with a sufficient condition for species distinction",
+      "C": "the argument, in its attempt to refute one theory of species classification, presupposes the truth of an opposing theory",
+      "D": "the argument takes a single fact that is incompatible with a theory as enough to show that theory to be false",
+      "E": "the argument does not explain why sibling species cannot interbreed"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Chiu: The belief that a person is always morally blameworthy for feeling certain emotions, such as unjustifiable anger, jealousy, or resentment, is misguided. Individuals are responsible for only what is under their control, and whether one feels such an emotion is not always under one's control.",
+    "questionStem": "Chiu's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Individuals do not have control over their actions when they feel certain emotions.",
+      "B": "If a person is morally blameworthy for something, then that person is responsible for it.",
+      "C": "Although a person may sometimes be unjustifiably angry, jealous, or resentful, there are occasions when these emotions are appropriate.",
+      "D": "If an emotion is under a person's control, then that person cannot hold others responsible for it.",
+      "E": "The emotions for which a person is most commonly blamed are those that are under that person's control."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 4,
+    "stimulus": "Industrial adviser: If two new processes under consideration are not substantially different in cost, then the less environmentally damaging process should be chosen. If, however, a company already employs an environmentally damaging process and retooling for a less damaging process would involve substantial cost, then that company should retool only if retooling is either legally required or likely to bring long-term savings substantially greater than the cost.",
+    "questionStem": "Which one of the following judgments conforms most closely to the principles described by the industrial adviser?",
+    "answerChoices": {
+      "A": "A new law offering companies tax credits for reducing pollution would enable a company to realize a slight long-term savings by changing to a more environmentally sound process for manufacturing dye, despite the substantial cost of retooling. In light of the new law, the company should change its process.",
+      "B": "In manufacturing pincushions, a company uses a process that, though legal, has come under heavy public criticism for the environmental damage it causes. The company should change its process to preserve its public image, despite some expected long-term losses from doing so.",
+      "C": "A company is considering two new processes for the manufacture of staples. Process A is more expensive than process B but not substantially so. However, process A is substantially less environmentally damaging than process B. The company should implement process A.",
+      "D": "Two new processes are being considered for the manufacture of ball bearings. The processes are similar, except that the chemicals used in process A will pollute a nearby river slightly more than will the chemicals for process B. Process A is also slightly cheaper than process B. The company should use process A.",
+      "E": "A company is considering changing its process for manufacturing shoelaces. The new process is cheaper and less environmentally damaging than the old. Both are legal. Changing processes would be costly, but the cost would be almost entirely recovered in long-term savings. The company should switch processes."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "In a poll of a representative sample of a province's residents, the provincial capital was the city most often selected as the best place to live in that province. Since the capital is also the largest of that province's many cities, the poll shows that most residents of that province generally prefer life in large cities to life in small cities.",
+    "questionStem": "The argument is most vulnerable to the criticism that it",
+    "answerChoices": {
+      "A": "overlooks the possibility that what is true of the residents of the province may not be true of other people",
+      "B": "does not indicate whether most residents of other provinces also prefer life in large cities to life in small cities",
+      "C": "takes for granted that when people are polled for their preferences among cities, they tend to vote for the city that they think is the best place to live",
+      "D": "overlooks the possibility that the people who preferred small cities over the provincial capital did so not because of their general feelings about the sizes of cities, but because of their general feelings about capital cities",
+      "E": "overlooks the possibility that most people may have voted for small cities even though a large city received more votes than any other single city"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Geneticist: Genes, like viruses, have a strong tendency to self-replicate; this has led some biologists to call genes \"selfish.\" This term is, in this instance, intended to be defined behaviorally: it describes what genes do without ascribing intentions to them. But even given that genes are ascribed no intentions, the label \"selfish\" as applied to genes is a misnomer. Selfishness only concerns bringing about the best conditions for oneself; creating replicas of oneself is not selfish.",
+    "questionStem": "Which one of the following, if assumed, allows the geneticist's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "Bringing about the best conditions for oneself is less important than doing this for others.",
+      "B": "Creating replicas of oneself does not help bring about the best conditions for oneself.",
+      "C": "The behavioral definition of \"selfish\" is incompatible with its everyday definition.",
+      "D": "To ignore the fact that self-replication is not limited to genes is to misunderstand genetic behavior.",
+      "E": "Biologists have insufficient evidence about genetic behavior to determine whether it is best described as selfish."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Only experienced salespeople will be able to meet the company's selling quota. Thus, I must not count as an experienced salesperson, since I will be able to sell only half the quota.",
+    "questionStem": "The pattern of flawed reasoning exhibited by the argument above is most similar to that exhibited by which one of the following?",
+    "answerChoices": {
+      "A": "Only on Fridays are employees allowed to dress casually. Today is Friday but Hector is dressed formally. So he must not be going to work.",
+      "B": "Only music lovers take this class. Thus, since Hillary is not taking this class, she apparently does not love music.",
+      "C": "Only oceanographers enjoy the Atlantic in midwinter. Thus, we may expect that Gerald does not enjoy the Atlantic in midwinter, since he is not an oceanographer.",
+      "D": "As this tree before us is a giant redwood, it follows that we must be in a northern latitude, since it is only in northern latitudes that one finds giant redwoods.",
+      "E": "Only accomplished mountain climbers can scale El Capitan. Thus, Michelle must be able to scale El Capitan, since she is an accomplished mountain climber."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Designer: Any garden and adjoining living room that are separated from one another by sliding glass doors can visually merge into a single space. If the sliding doors are open, as may happen in summer, this effect will be created if it does not already exist and intensified if it does. The effect remains quite strong during colder months if the garden is well coordinated with the room and contributes strong visual interest of its own.",
+    "questionStem": "The designer's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "A garden separated from an adjoining living room by closed sliding glass doors cannot be well coordinated with the room unless the garden contributes strong visual interest.",
+      "B": "In cold weather, a garden and an adjoining living room separated from one another by sliding glass doors will not visually merge into a single space unless the garden is well coordinated with the room.",
+      "C": "A garden and an adjoining living room separated by sliding glass doors cannot visually merge in summer unless the doors are open.",
+      "D": "A garden can visually merge with an adjoining living room into a single space even if the garden does not contribute strong visual interest of its own.",
+      "E": "Except in summer, opening the sliding glass doors that separate a garden from an adjoining living room does not intensify the effect of the garden and room visually merging into a single space."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "Last summer, after a number of people got sick from eating locally caught anchovies, the coastal city of San Martin advised against eating such anchovies. The anchovies were apparently tainted with domoic acid, a harmful neurotoxin. However, a dramatic drop in the population of P. australis plankton to numbers more normal for local coastal waters indicates that it is once again safe to eat locally caught anchovies.",
+    "questionStem": "Which one of the following, if true, would most help to explain why it is now safe to lift the advisory?",
+    "answerChoices": {
+      "A": "P. australis is one of several varieties of plankton common to the region that, when ingested by anchovies, cause the latter to secrete small amounts of domoic acid.",
+      "B": "P. australis naturally produces domoic acid, though anchovies consume enough to become toxic only when the population of P. australis is extraordinarily large.",
+      "C": "Scientists have used P. australis plankton to obtain domoic acid in the laboratory.",
+      "D": "A sharp decline in the population of P. australis is typically mirrored by a corresponding drop in the local anchovy population.",
+      "E": "P. australis cannot survive in large numbers in seawater that does not contain significant quantities of domoic acid along with numerous other compounds."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 2,
+    "stimulus": "Constance: The traditional definition of full employment as a 5 percent unemployment rate is correct, because at levels below 5 percent, inflation rises.\nBrigita: That traditional definition of full employment was developed before the rise of temporary and part-time work and the fall in benefit levels. When people are juggling several part-time jobs with no benefits, or working in a series of temporary assignments, as is now the case, 5 percent unemployment is not full employment.",
+    "questionStem": "The dialogue most strongly supports the claim that Constance and Brigita disagree with each other about which one of the following?",
+    "answerChoices": {
+      "A": "what definition of full employment is applicable under contemporary economic conditions",
+      "B": "whether it is a good idea, all things considered, to allow the unemployment level to drop below 5 percent",
+      "C": "whether a person with a part-time job should count as fully employed",
+      "D": "whether the number of part-time and temporary workers has increased since the traditional definition of full employment was developed",
+      "E": "whether unemployment levels above 5 percent can cause inflation levels to rise"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "The supernova event of 1987 is interesting in that there is still no evidence of the neutron star that current theory says should have remained after a supernova of that size. This is in spite of the fact that many of the most sensitive instruments ever developed have searched for the tell-tale pulse of radiation that neutron stars emit. Thus, current theory is wrong in claiming that supernovas of a certain size always produce neutron stars.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Most supernova remnants that astronomers have detected have a neutron star nearby.",
+      "B": "Sensitive astronomical instruments have detected neutron stars much farther away than the location of the 1987 supernova.",
+      "C": "The supernova of 1987 was the first that scientists were able to observe in progress.",
+      "D": "Several important features of the 1987 supernova are correctly predicted by the current theory.",
+      "E": "Some neutron stars are known to have come into existence by a cause other than a supernova explosion."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "On average, corporations that encourage frequent social events in the workplace show higher profits than those that rarely do. This suggests that the EZ Corporation could boost its profits by having more staff parties during business hours.",
+    "questionStem": "Which one of the following, if true, most weakens the argument above?",
+    "answerChoices": {
+      "A": "The great majority of corporations that encourage frequent social events in the workplace do so at least in part because they are already earning above-average profits.",
+      "B": "Corporations that have frequent staff parties after business hours sometimes have higher profits than do corporations that have frequent staff parties during business hours.",
+      "C": "The EZ Corporation already earns above-average profits, and it almost never brings play into the workplace.",
+      "D": "Frequent social events in a corporate workplace leave employees with less time to perform their assigned duties than they would otherwise have.",
+      "E": "At one time the EZ Corporation encouraged social events in the workplace more frequently than it currently does, but it has not always been one of the most profitable corporations of its size."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 1,
+    "questionNumber": 26,
+    "questionType": "Method",
+    "questionDifficulty": 4,
+    "stimulus": "Philosopher: Wolves do not tolerate an attack by one wolf on another if the latter wolf demonstrates submission by baring its throat. The same is true of foxes and domesticated dogs. So it would be erroneous to deny that animals have rights on the grounds that only human beings are capable of obeying moral rules.",
+    "questionStem": "The philosopher's argument proceeds by attempting to",
+    "answerChoices": {
+      "A": "provide counterexamples to refute a premise on which a particular conclusion is based",
+      "B": "establish inductively that all animals possess some form of morality",
+      "C": "cast doubt on the principle that being capable of obeying moral rules is a necessary condition for having rights",
+      "D": "establish a claim by showing that the denial of that claim entails a logical contradiction",
+      "E": "provide evidence suggesting that the concept of morality is often applied too broadly"
+    },
+    "correctAnswer": "B"
+  }
+]

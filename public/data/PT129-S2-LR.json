@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Many doctors cater to patients' demands that they be prescribed antibiotics for their colds. However, colds are caused by viruses, and antibiotics have no effect on viruses, and so antibiotics have no effect on colds. Such treatments are also problematic because antibiotics can have dangerous side effects. So doctors should never prescribe antibiotics to treat colds.",
+    "questionStem": "The reasoning above most closely conforms to which one of the following principles?",
+    "answerChoices": {
+      "A": "A doctor should not prescribe a drug for a condition if it cannot improve that condition and if the drug potentially has adverse side effects.",
+      "B": "A doctor should not prescribe any drug that might have harmful effects on the patient even if the drug might have a positive effect on the patient.",
+      "C": "A doctor should attempt to prescribe every drug that is likely to affect the patient's health positively.",
+      "D": "A doctor should withhold treatment from a patient if the doctor is uncertain whether the treatment will benefit the patient.",
+      "E": "A doctor should never base the decision to prescribe a certain medication for a patient on the patient's claims about the effectiveness of that medication."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Long-distance runners use two different kinds of cognitive strategies: “associative” and “dissociative.” Associative strategies involve attending closely to physical sensations, while dissociative strategies involve mostly ignoring physical sensations. Associative strategies, unlike dissociative ones, require so much concentration that they result in mental exhaustion lasting more than a day. Since it is important for long-distance runners to enter a race mentally refreshed, __________",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "long-distance runners should not rely heavily on associative strategies during training the day before they run in a race",
+      "B": "unless they regularly train using associative strategies, long-distance runners should use dissociative strategies during races",
+      "C": "maximizing the benefits of training for long-distance running involves frequently alternating associative and dissociative strategies",
+      "D": "long-distance runners are about evenly divided between those who use dissociative strategies during races and those who use associative strategies during races",
+      "E": "in long-distance running, dissociative strategies are generally more effective for a day's training run than are associative strategies"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "MetroBank made loans to ten small companies, in amounts ranging from $1,000 to $100,000. These ten loans all had graduated payment plans, i.e., the scheduled monthly loan payment increased slightly each month over the five-year term of the loan. Nonetheless, the average payment received by MetroBank for these ten loans had decreased by the end of the five-year term.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy in the statements above?",
+    "answerChoices": {
+      "A": "The number of small companies receiving new loans from MetroBank increased over the five-year term.",
+      "B": "Several of the ten small companies also borrowed money from other banks.",
+      "C": "Most banks offer a greater number of loans for under $100,000 than for over $100,000.",
+      "D": "Of the ten small companies, the three that had borrowed the largest amounts paid off their loans within three years.",
+      "E": "For some loans made by MetroBank, the monthly payment decreases slightly over the term of the loan."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Professor: A guest speaker recently delivered a talk entitled \"The Functions of Democratic Governments\" to a Political Ideologies class at this university. The talk was carefully researched and theoretical in nature. But two students who disagreed with the theory hurled vicious taunts at the speaker. Several others applauded their attempt to humiliate the speaker. This incident shows that universities these days do not foster fair-minded and tolerant intellectual debate.",
+    "questionStem": "The professor's reasoning is flawed in that it",
+    "answerChoices": {
+      "A": "draws a conclusion based on the professor's own opinion rather than on that of the majority of the students present at the talk",
+      "B": "is inconsistent in advocating tolerance while showing intolerance of the dissenting students' views",
+      "C": "relies primarily on an emotional appeal",
+      "D": "draws a general conclusion based on too small a sample",
+      "E": "incorrectly focuses on the behavior of the dissenting students rather than relating the reasons for that behavior"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Strengthen",
+    "questionDifficulty": 1,
+    "stimulus": "Studies reveal that most people select the foods they eat primarily on the basis of flavor, and that nutrition is usually a secondary concern at best. This suggests that health experts would have more success in encouraging people to eat wholesome foods if they emphasized how flavorful those foods truly are rather than how nutritious they are.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument above?",
+    "answerChoices": {
+      "A": "Most people currently believe that wholesome foods are more flavorful, on average, than unwholesome foods are.",
+      "B": "Few people, when given a choice between foods that are flavorful but not nutritious and foods that are nutritious but not flavorful, will choose the foods that are nutritious but not flavorful.",
+      "C": "Health experts' attempts to encourage people to eat wholesome foods by emphasizing how nutritious those foods are have been moderately successful.",
+      "D": "The studies that revealed that people choose the foods they eat primarily on the basis of flavor also revealed that people rated as most flavorful those foods that were least nutritious.",
+      "E": "In a study, subjects who were told that a given food was very flavorful were more willing to try the food and more likely to enjoy it than were subjects who were told that the food was nutritious."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Studies show that individuals with a high propensity for taking risks tend to have fewer ethical principles to which they consciously adhere in their business interactions than do most people. On the other hand, individuals with a strong desire to be accepted socially tend to have more such principles than do most people. And, in general, the more ethical principles to which someone consciously adheres, the more ethical is that person's behavior. Therefore, business schools can promote more ethical behavior among future businesspeople by promoting among their students the desire to be accepted socially and discouraging the propensity for taking risks.",
+    "questionStem": "The reasoning in the argument is flawed because the argument",
+    "answerChoices": {
+      "A": "infers from the fact that something is usually true that it is always true",
+      "B": "takes for granted that promoting ethical behavior is more important than any other goal",
+      "C": "concludes merely from the fact that two things are correlated that one causes the other",
+      "D": "takes for granted that certain actions are morally wrong simply because most people believe that they are morally wrong",
+      "E": "draws a conclusion that simply restates a claim presented in support of that conclusion"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Essayist: Lessing contended that an art form's medium dictates the kind of representation the art form must employ in order to be legitimate; painting, for example, must represent simultaneous arrays of colored shapes, while literature, consisting of words read in succession, must represent events or actions occurring in sequence. The claim about literature must be rejected, however, if one regards as legitimate the imagists' poems, which consist solely of amalgams of disparate images.",
+    "questionStem": "Which one of the following, if assumed, enables the essayist's conclusion to be properly drawn?",
+    "answerChoices": {
+      "A": "An amalgam of disparate images cannot represent a sequence of events or actions.",
+      "B": "Poems whose subject matter is not appropriate to their medium are illegitimate.",
+      "C": "Lessing was not aware that the imagists' poetry consists of an amalgam of disparate images.",
+      "D": "All art, even the imagists' poetry, depicts or represents some subject matter.",
+      "E": "All art represents something either as simultaneous or as successive."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "A psychiatrist argued that there is no such thing as a multiple personality disorder on the grounds that in all her years of clinical practice, she had never encountered one case of this type.",
+    "questionStem": "Which one of the following most closely parallels the questionable reasoning cited above?",
+    "answerChoices": {
+      "A": "Anton concluded that colds are seldom fatal on the grounds that in all his years of clinical practice, he never had a patient who died of a cold.",
+      "B": "Lyla said that no one in the area has seen a groundhog and so there are probably no groundhogs in the area.",
+      "C": "Sauda argued that because therapy rarely had an effect on her patient's type of disorder, therapy was not warranted.",
+      "D": "Thomas argued that because Natasha has driven her car to work every day since she bought it, she would probably continue to drive her car to work.",
+      "E": "Jerod had never spotted a deer in his area and concluded from this that there are no deer in the area."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Even if many more people in the world excluded meat from their diet, world hunger would not thereby be significantly reduced.",
+    "questionStem": "Which one of the following, if true, most calls into question the claim above?",
+    "answerChoices": {
+      "A": "Hunger often results from natural disasters like typhoons or hurricanes, which sweep away everything in their path.",
+      "B": "Both herds and crops are susceptible to devastating viral and other diseases.",
+      "C": "The amount of land needed to produce enough meat to feed one person for a week can grow enough grain to feed more than ten people for a week.",
+      "D": "Often people go hungry because they live in remote barren areas where there is no efficient distribution for emergency food relief.",
+      "E": "Most historical cases of famine have been due to bad social and economic policies or catastrophes such as massive crop failure."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Dairy farmer: On our farm, we have great concern for our cows' environmental conditions. We have recently made improvements that increase their comfort, such as providing them with special sleeping mattresses. These changes are intended to increase blood flow to the udder. This increased blood flow would boost milk output and thus increase profits.",
+    "questionStem": "Of the following propositions, which one is best illustrated by the dairy farmer's statements?",
+    "answerChoices": {
+      "A": "Dairy cows cannot have comfortable living conditions unless farmers have some knowledge about the physiology of milk production.",
+      "B": "Farming practices introduced for the sake of maximizing profits can improve the living conditions of farm animals.",
+      "C": "More than other farm animals, dairy cows respond favorably to improvements in their living environments.",
+      "D": "The productivity of dairy farms should be increased only if the quality of the product is not compromised.",
+      "E": "The key to maximizing profits on a dairy farm is having a concern for dairy cows' environment."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Pat: E-mail fosters anonymity, which removes barriers to self-revelation. This promotes a degree of intimacy with strangers that would otherwise take years of direct personal contact to attain.\nAmar: Frankness is not intimacy. Intimacy requires a real social bond, and social bonds cannot be formed without direct personal contact.",
+    "questionStem": "The dialogue most strongly supports the claim that Pat and Amar disagree with each other about whether",
+    "answerChoices": {
+      "A": "barriers to self-revelation hinder the initial growth of intimacy",
+      "B": "E-mail can increase intimacy between friends",
+      "C": "intimacy between those who communicate with each other solely by e-mail is possible",
+      "D": "real social bonds always lead to intimacy",
+      "E": "the use of e-mail removes barriers to self-revelation"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Criminologist: The main purpose of most criminal organizations is to generate profits. The ongoing revolutions in biotechnology and information technology promise to generate enormous profits. Therefore, criminal organizations will undoubtedly try to become increasingly involved in these areas.",
+    "questionStem": "The conclusion of the criminologist's argument is properly inferred if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "If an organization tries to become increasingly involved in areas that promise to generate enormous profits, then the main purpose of that organization is to generate profits.",
+      "B": "At least some criminal organizations are or will at some point become aware that the ongoing revolutions in biotechnology and information technology promise to generate enormous profits.",
+      "C": "Criminal organizations are already heavily involved in every activity that promises to generate enormous profits.",
+      "D": "Any organization whose main purpose is to generate profits will try to become increasingly involved in any technological revolution that promises to generate enormous profits.",
+      "E": "Most criminal organizations are willing to become involved in legal activities if those activities are sufficiently profitable."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Administrators of educational institutions are enthusiastic about the educational use of computers because they believe that it will enable schools to teach far more courses with far fewer teachers than traditional methods allow. Many teachers fear computers for the same reason. But this reason is mistaken. Computerized instruction requires more, not less, time of instructors, which indicates that any reduction in the number of teachers would require an accompanying reduction in courses offered.",
+    "questionStem": "The statement that the educational use of computers enables schools to teach far more courses with far fewer teachers figures in the argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "It is presented as a possible explanation for an observation that follows it.",
+      "B": "It is a statement of the problem the argument sets out to solve.",
+      "C": "It is a statement that the argument is designed to refute.",
+      "D": "It is a statement offered in support of the argument's main conclusion.",
+      "E": "It is the argument's main conclusion."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Scientists have shown that older bees, which usually forage outside the hive for food, tend to have larger brains than do younger bees, which usually do not forage but instead remain in the hive to tend to newly hatched bees. Since foraging requires greater cognitive ability than does tending to newly hatched bees, it appears that foraging leads to the increased brain size of older bees.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument above?",
+    "answerChoices": {
+      "A": "Bees that have foraged for a long time do not have significantly larger brains than do bees that have foraged for a shorter time.",
+      "B": "The brains of older bees that stop foraging to take on other responsibilities do not become smaller after they stop foraging.",
+      "C": "Those bees that travel a long distance to find food do not have significantly larger brains than do bees that locate food nearer the hive.",
+      "D": "In some species of bees, the brains of older bees are only marginally larger than those of younger bees.",
+      "E": "The brains of older bees that never learn to forage are the same size as those of their foraging counterparts of the same age."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Carla: Professors at public universities should receive paid leaves of absence to allow them to engage in research. Research not only advances human knowledge, but also improves professors' teaching by keeping them abreast of the latest information in their fields.\nDavid: But even if you are right about the beneficial effects of research, why should our limited resources be devoted to supporting professors taking time off from teaching?",
+    "questionStem": "David's response to Carla is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "ignores the part of Carla's remarks that could provide an answer to David's question",
+      "B": "takes for granted that the only function of a university professor is teaching",
+      "C": "incorrectly takes Carla's remarks as claiming that all funding for professors comes from tax money",
+      "D": "takes for granted that providing the opportunity for research is the only function of paid leaves of absence",
+      "E": "presumes, without providing justification, that professors do not need vacations"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Software reviewer: Dictation software allows a computer to produce a written version of sentences that are spoken to it. Although dictation software has been promoted as a labor-saving invention, it fails to live up to its billing. The laborious part of writing is in the thinking and the editing, not in the typing. And proofreading the software's error-filled output generally squanders any time saved in typing.",
+    "questionStem": "Which one of the following most accurately describes the role played in the software reviewer's argument by the claim that dictation software fails to live up to its billing?",
+    "answerChoices": {
+      "A": "It is the argument's main conclusion but not its only conclusion.",
+      "B": "It is the argument's only conclusion.",
+      "C": "It is an intermediate conclusion that is offered as direct support for the argument's main conclusion.",
+      "D": "It is a premise offered in support of the argument's conclusion.",
+      "E": "It is a premise offered as direct support for an intermediate conclusion of the argument."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Poetry journal patron: Everybody who publishes in The Brick Wall Review has to agree in advance that if a poem is printed in one of its regular issues, the magazine also has the right to reprint it, without monetary compensation, in its annual anthology. The Brick Wall Review makes enough money from sales of its anthologies to cover most operating expenses. So, if your magazine also published an anthology of poems first printed in your magazine, you could depend less on donations. After all, most poems published in your magazine are very similar to those published in The Brick Wall Review.",
+    "questionStem": "Which one of the following, if true, most weakens the patron's argument?",
+    "answerChoices": {
+      "A": "Neither The Brick Wall Review nor the other magazine under discussion depends on donations to cover most operating expenses.",
+      "B": "Many of the poets whose work appears in The Brick Wall Review have had several poems rejected for publication by the other magazine under discussion.",
+      "C": "The only compensation poets receive for publishing in the regular issues of the magazines under discussion are free copies of the issues in which their poems appear.",
+      "D": "The Brick Wall Review depends on donations to cover most operating expenses not covered by income from anthology sales.",
+      "E": "The Brick Wall Review's annual poetry anthology always contains a number of poems by famous poets not published in the regular issues of the magazine."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "No one with a serious medical problem would rely on the average person to prescribe treatment. Similarly, since a good public servant has the interest of the public at heart,",
+    "questionStem": "Which one of the following statements would most reasonably complete the argument?",
+    "answerChoices": {
+      "A": "public servants should not be concerned about the outcomes of public opinion surveys",
+      "B": "the average public servant knows more about what is best for society than the average person does",
+      "C": "public servants should be more knowledgeable about the public good than they are",
+      "D": "public servants should base decisions on something other than the average person's recommendations",
+      "E": "one is a good public servant if one is more knowledgeable about the public good than is the average person"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "Team captain: Winning requires the willingness to cooperate, which in turn requires motivation. So you will not win if you are not motivated.",
+    "questionStem": "The pattern of reasoning in which one of the following is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "Being healthy requires exercise. But exercising involves risk of injury. So, paradoxically, anyone who wants to be healthy will not exercise.",
+      "B": "Learning requires making some mistakes. And you must learn if you are to improve. So you will not make mistakes without there being a noticeable improvement.",
+      "C": "Our political party will retain its status only if it raises more money. But raising more money requires increased campaigning. So our party will not retain its status unless it increases its campaigning.",
+      "D": "You can repair your own bicycle only if you are enthusiastic. And if you are enthusiastic, you will also have mechanical aptitude. So if you are not able to repair your own bicycle, you lack mechanical aptitude.",
+      "E": "Getting a ticket requires waiting in line. Waiting in line requires patience. So if you do not wait in line, you lack patience."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "In the past, when there was no highway speed limit, the highway accident rate increased yearly, peaking a decade ago. At that time, the speed limit on highways was set at 90 kilometers per hour (kph) (55 miles per hour). Every year since the introduction of the highway speed limit, the highway accident rate has been at least 15 percent lower than that of its peak rate. Thus, setting the highway speed limit at 90 kph (55 mph) has reduced the highway accident rate by at least 15 percent.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "In the years prior to the introduction of the highway speed limit, many cars could go faster than 90 kph (55 mph).",
+      "B": "Ten years ago, at least 95 percent of all automobile accidents in the area occurred on roads with a speed limit of under 80 kph (50 mph).",
+      "C": "Although the speed limit on many highways is officially set at 90 kph (55 mph), most people typically drive faster than the speed limit.",
+      "D": "Thanks to changes in automobile design in the past ten years, drivers are better able to maintain control of their cars in dangerous situations.",
+      "E": "It was not until shortly after the introduction of the highway speed limit that most cars were equipped with features such as seat belts and airbags designed to prevent harm to passengers."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Editorial: It is a travesty of justice, social critics say, that we can launch rockets into outer space but cannot solve social problems that have plagued humanity. The assumption underlying this assertion is that there are greater difficulties involved in a space launch than are involved in ending long-standing social problems, which in turn suggests that a government's failure to achieve the latter is simply a case of misplaced priorities. The criticism is misplaced, however, for rocket technology is much simpler than the human psyche, and until we adequately understand the human psyche we cannot solve the great social problems.",
+    "questionStem": "The statement that rocket technology is much simpler than the human psyche plays which one of the following roles in the editorial's argument?",
+    "answerChoices": {
+      "A": "It is cited as a possible objection to the argument's conclusion.",
+      "B": "According to the argument, it is a fact that has misled some social critics.",
+      "C": "It is the argument's conclusion.",
+      "D": "It is claimed to be a false assumption on which the reasoning that the argument seeks to undermine rests.",
+      "E": "It is used by the argument to attempt to undermine the reasoning behind a viewpoint."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Archaeologist: After the last ice age, groups of paleohumans left Siberia and crossed the Bering land bridge, which no longer exists, into North America. Archaeologists have discovered in Siberia a cache of Clovis points—the distinctive stone spear points made by paleohumans. This shows that, contrary to previous belief, the Clovis point was not invented in North America.",
+    "questionStem": "Which one of the following, if true, would most strengthen the archaeologist's argument?",
+    "answerChoices": {
+      "A": "The Clovis points found in Siberia are older than any of those that have been found in North America.",
+      "B": "The Bering land bridge disappeared before any of the Clovis points found to date were made.",
+      "C": "Clovis points were more effective hunting weapons than earlier spear points had been.",
+      "D": "Archaeologists have discovered in Siberia artifacts that date from after the time paleohumans left Siberia.",
+      "E": "Some paleohuman groups that migrated from Siberia to North America via the Bering land bridge eventually returned to Siberia."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "Some people believe there is intelligent life somewhere in the universe besides Earth. But no one who believes that could also believe all planets other than Earth are devoid of life. Thus, some people do not believe all planets other than Earth are devoid of life.",
+    "questionStem": "The reasoning in which one of the following is most similar to the reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Some people believe computers are capable of thought. Since no one who does not believe computer chess programs sometimes beat human chess masters believes computers can think, it follows that computer chess programs do sometimes beat human chess masters.",
+      "B": "Some cat owners believe cats are incapable of feeling guilty. Since one could think that an animal is capable of feeling guilty only if one thought the animal had a conception of morality, it follows that some cat owners do not believe cats have a conception of morality.",
+      "C": "Some dog owners believe their dogs are emotionally attached to them. Since no one could believe that and also believe dogs are incapable of thought, it follows that some dog owners do not believe dogs are incapable of thought.",
+      "D": "Some people believe humans will someday colonize other planets. Since anyone who believes that probably also believes overpopulation of Earth is not a problem, it follows that some people do not believe overpopulation of Earth is not a problem.",
+      "E": "Some people believe there is life on planets other than Earth. Since anyone who believes that must also believe other planets have atmospheres that can support life, it follows that other planets do have atmospheres that can support life."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 5,
+    "stimulus": "Clarissa: The natural sciences would not have made such progress but for the power of mathematics. No observation is worth serious attention unless it is stated precisely in quantitative terms.\nMyungsook: I disagree. Converting observations into numbers is the hardest and last task; it can be done only when you have thoroughly explored the observations themselves.",
+    "questionStem": "Clarissa and Myungsook's statements provide the most support for claiming that they disagree about whether",
+    "answerChoices": {
+      "A": "mathematics has been a highly significant factor in the advance of the natural sciences",
+      "B": "converting observations into quantitative terms is usually easy",
+      "C": "not all observations can be stated precisely in quantitative terms",
+      "D": "successfully doing natural science demands careful consideration of observations not stated precisely in quantitative terms",
+      "E": "useful scientific theories require the application of mathematics"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Although Stillwater Pond has been polluted by farm runoff for years, several species of fish still live there. The local fishing guide says that \"the most populous fish species in the pond is also the one that has adapted best to living in polluted water.\" So if, as recent studies suggest, the most populous fish species in the pond is the bullhead catfish, then it must be that the local fishing guide believes that the species of fish in the pond that has adapted best to living in polluted water is the bullhead catfish.",
+    "questionStem": "The argument above is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "takes for granted that the local fishing guide believes that Stillwater Pond has been polluted by farm runoff for years",
+      "B": "fails to take into account the possibility that the catfish in Stillwater Pond had to adapt very little to survive in polluted water",
+      "C": "fails to take into account the possibility that the recent studies on fish populations in Stillwater Pond are inaccurate",
+      "D": "fails to take into account the possibility that the local fishing guide mistakenly believes that some fish species other than the bullhead catfish is the most populous fish species in Stillwater Pond",
+      "E": "takes for granted that Stillwater Pond has only one species of catfish living in it"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT129",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Weaken",
+    "questionDifficulty": 1,
+    "stimulus": "Historian: Flavius, an ancient Roman governor who believed deeply in the virtues of manual labor and moral temperance, actively sought to discourage the arts by removing state financial support for them. Also, Flavius was widely unpopular among his subjects, as we can conclude from the large number of satirical plays that were written about him during his administration.",
+    "questionStem": "The historian's argumentation is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "fails to consider the percentage of plays written during Flavius's administration that were not explicitly about Flavius",
+      "B": "treats the satirical plays as a reliable indicator of Flavius's popularity despite potential bias on the part of the playwrights",
+      "C": "presumes, without providing evidence, that Flavius was unfavorably disposed toward the arts",
+      "D": "takes for granted that Flavius's attempt to discourage the arts was successful",
+      "E": "fails to consider whether manual labor and moral temperance were widely regarded as virtues in ancient Rome"
+    },
+    "correctAnswer": "B"
+  }
+]

@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 1,
+    "stimulus": "Commentator: Although the present freshwater supply is adequate for today's patterns of water use, the human population will increase substantially over the next few decades, drastically increasing the need for freshwater. Hence, restrictions on water use will be necessary to meet the freshwater needs of humankind in the not-too-distant future.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Humans will adapt to restrictions on the use of water without resorting to wasteful use of other natural resources.",
+      "B": "The total supply of freshwater has not diminished in recent years.",
+      "C": "The freshwater supply will not increase sufficiently to meet the increased needs of humankind.",
+      "D": "No attempt to synthesize water will have an appreciable effect on the quantity of freshwater available.",
+      "E": "No water conservation measure previously attempted yielded an increase in the supply of freshwater available for human use."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 2,
+    "stimulus": "Psychologist: The best way to recall a certain word or name that one is having trouble remembering is to occupy one's mind with other things, since often the more we strive to remember a certain word or name that we can't think of, the less likely it becomes that the word will come to mind.",
+    "questionStem": "The principle that underlies the psychologist's argument underlies which one of the following arguments?",
+    "answerChoices": {
+      "A": "Often, the best way to achieve happiness is to pursue other things besides wealth and fame, for there are wealthy and famous people who are not particularly happy, which suggests that true happiness does not consist in wealth and fame.",
+      "B": "The best way to succeed in writing a long document is not to think about how much is left to write but only about the current paragraph, since on many occasions thinking about what remains to be done will be so discouraging that the writer will be tempted to abandon the project.",
+      "C": "The best way to overcome a serious mistake is to continue on confidently as though all is well. After all, one can overcome a serious mistake by succeeding in new challenges, and dwelling on one's errors usually distracts one's mind from new challenges.",
+      "D": "The best way to fall asleep quickly is to engage in some mental diversion like counting sheep, because frequently the more one concentrates on falling asleep the lower the chance of falling asleep quickly.",
+      "E": "The best way to cope with sorrow or grief is to turn one's attention to those who are experiencing even greater hardship, for in many circumstances this will make our own troubles seem bearable by comparison."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Letter to the editor: The Planning Department budget increased from $100,000 in 2001 to $524,000 for this year. However, this does not justify your conclusion in yesterday's editorial that the department now spends five times as much money as it did in 2001 to perform the same duties.",
+    "questionStem": "Which one of the following, if true, most helps to support the claim made in the letter regarding the justification of the editorial's conclusion?",
+    "answerChoices": {
+      "A": "Departments other than the Planning Department have had much larger budget increases since 2001.",
+      "B": "Since 2001, the Planning Department has dramatically reduced its spending on overtime pay.",
+      "C": "In some years between 2001 and this year, the Planning Department budget did not increase.",
+      "D": "The budget figures used in the original editorial were adjusted for inflation.",
+      "E": "A restructuring act, passed in 2003, broadened the duties of the Planning Department."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "At mock trials in which jury instructions were given in technical legal jargon, jury verdicts tended to mirror the judge's own opinions. Jurors had become aware of the judge's nonverbal behavior: facial expressions, body movements, tone of voice. Jurors who viewed the same case but were given instruction in clear, nontechnical language, however, were comparatively more likely to return verdicts at odds with the judge's opinion.",
+    "questionStem": "Which one of the following is best illustrated by the example described above?",
+    "answerChoices": {
+      "A": "Technical language tends to be more precise than nontechnical language.",
+      "B": "A person's influence is proportional to that person's perceived status.",
+      "C": "Nonverbal behavior is not an effective means of communication.",
+      "D": "Real trials are better suited for experimentation than are mock trials.",
+      "E": "The way in which a judge instructs a jury can influence the jury's verdict."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Doctor: While a few alternative medicines have dangerous side effects, some, such as many herbs, have been proven safe to consume. Thus, though there is little firm evidence of medicinal effect, advocates of these herbs as remedies for serious illnesses should always be allowed to prescribe them, since their patients will not be harmed, and might be helped, by the use of these products.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the doctor's argument?",
+    "answerChoices": {
+      "A": "Many practitioners and patients neglect more effective conventional medicines in favor of herbal remedies.",
+      "B": "Many herbal remedies are marketed with claims of proven effectiveness when in fact their effectiveness is unproven.",
+      "C": "Some patients may have allergic reactions to certain medicines that have been tolerated by other patients.",
+      "D": "The vast majority of purveyors of alternative medicines are driven as much by the profit motive as by a regard for their patients' health.",
+      "E": "Any pain relief or other benefits of many herbs have been proven to derive entirely from patients' belief in the remedy, rather than from its biochemical properties."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Method",
+    "questionDifficulty": 1,
+    "stimulus": "When a nation is on the brink of financial crisis, its government does not violate free-market principles if, in order to prevent economic collapse, it limits the extent to which foreign investors and lenders can withdraw their money. After all, the right to free speech does not include the right to shout \"Fire!\" in a crowded theatre, and the harm done as investors and lenders rush madly to get their money out before everyone else does can be just as real as the harm resulting from a stampede in a theatre.",
+    "questionStem": "The argument does which one of the following?",
+    "answerChoices": {
+      "A": "tries to show that a set of principles is limited in a specific way by using an analogy to a similar principle that is limited in a similar way",
+      "B": "infers a claim by arguing that the truth of that claim would best explain observed facts",
+      "C": "presents numerous experimental results as evidence for a general principle",
+      "D": "attempts to demonstrate that an explanation of a phenomenon is flawed by showing that it fails to explain a particular instance of that phenomenon",
+      "E": "applies an empirical generalization to reach a conclusion about a particular case"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Although many political candidates object to being made the target of advertising designed to cast them in an adverse light, such advertising actually benefits its targets because most elections have been won by candidates who were the targets of that kind of advertising.",
+    "questionStem": "The pattern of flawed reasoning in the argument most closely parallels that in which one of the following?",
+    "answerChoices": {
+      "A": "Although many people dislike physical exercise, they should exercise because it is a good way to improve their overall health.",
+      "B": "Although many actors dislike harsh reviews of their work, such reviews actually help their careers because most of the really prestigious acting awards have gone to actors who have had performances of theirs reviewed harshly.",
+      "C": "Although many students dislike studying, it must be a good way to achieve academic success because most students who study pass their courses.",
+      "D": "Although many film critics dislike horror films, such films are bound to be successful because a large number of people are eager to attend them.",
+      "E": "Although many people dislike feeling sleepy as a result of staying up late the previous night, such sleepiness must be acceptable to those who experience it because most people who stay up late enjoy doing so."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Working residents of Springfield live, on average, farther from their workplaces than do working residents of Rorchester. Thus, one would expect that the demand for public transportation would be greater in Springfield than in Rorchester. However, Springfield has only half as many bus routes as Rorchester.",
+    "questionStem": "Each of the following, if true, contributes to a resolution of the apparent discrepancy described above except:",
+    "answerChoices": {
+      "A": "Three-fourths of the Springfield workforce is employed at the same factory outside the city limits.",
+      "B": "The average number of cars per household is higher in Springfield than in Rorchester.",
+      "C": "Rorchester has fewer railway lines than Springfield.",
+      "D": "Buses in Springfield run more frequently and on longer routes than in Rorchester.",
+      "E": "Springfield has a larger population than Rorchester does."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "People who need to reduce their intake of fat and to consume fewer calories often turn to fat substitutes, especially those with zero calories such as N5. But studies indicate that N5 is of no use to such people. Subjects who ate foods prepared with N5 almost invariably reported feeling hungrier afterwards than after eating foods prepared with real fat and consequently they ate more, quickly making up for the calories initially saved by using N5.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument fails to consider the possibility that",
+    "answerChoices": {
+      "A": "many foods cannot be prepared with N5",
+      "B": "N5 has mild but unpleasant side effects",
+      "C": "not everyone who eats foods prepared with N5 pays attention to caloric intake",
+      "D": "people who know N5 contains zero calories tend to eat more foods prepared with N5 than do people who are unaware that N5 is calorie-free",
+      "E": "the total fat intake of people who eat foods prepared with N5 tends to decrease even if their caloric intake does not"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "Music historian: Some critics lament the fact that impoverished postwar recording studios forced early bebop musicians to record extremely short solos, thus leaving a misleading record of their music. But these musicians' beautifully concise playing makes the recordings superb artistic works instead of mere representations of their live solos. Furthermore, the conciseness characteristic of early bebop musicians' recordings fostered a compactness in their subsequent live playing, which the playing of the next generation lacks.",
+    "questionStem": "The music historian's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Representations of live solos generally are not valuable artistic works.",
+      "B": "The difficult postwar recording conditions had some beneficial consequences for bebop.",
+      "C": "Short bebop recordings are always superior to longer ones.",
+      "D": "The music of the generation immediately following early bebop is of lower overall quality than early bebop.",
+      "E": "Musicians will not record extremely short solos unless difficult recording conditions force them to do so."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Recent studies indicate a correlation between damage to human chromosome number six and adult schizophrenia. We know, however, that there are people without damage to this chromosome who develop adult schizophrenia and that some people with damage to chromosome number six do not develop adult schizophrenia. So there is no causal connection between damage to human chromosome number six and adult schizophrenia.",
+    "questionStem": "Which one of the following most accurately describes a reasoning flaw in the argument above?",
+    "answerChoices": {
+      "A": "The argument ignores the possibility that some but not all types of damage to chromosome number six lead to schizophrenia.",
+      "B": "The argument presumes, without providing evidence, that schizophrenia is caused solely by chromosomal damage.",
+      "C": "The argument makes a generalization based on an unrepresentative sample population.",
+      "D": "The argument mistakes a cause for an effect.",
+      "E": "The argument presumes, without providing warrant, that correlation implies causation."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "City councilperson: Many city residents oppose the city art commission's proposed purchase of an unusual stone edifice, on the grounds that art critics are divided over whether the edifice really qualifies as art. But I argue that the purpose of art is to cause experts to debate ideas, including ideas about what constitutes art itself. Since the edifice has caused experts to debate what constitutes art itself, it does qualify as art.",
+    "questionStem": "Which one of the following, if assumed, enables the conclusion of the city councilperson's argument to be properly inferred?",
+    "answerChoices": {
+      "A": "Nothing qualifies as art unless it causes debate among experts.",
+      "B": "If an object causes debate among experts, no expert can be certain whether that object qualifies as art.",
+      "C": "The purchase of an object that fulfills the purpose of art should not be opposed.",
+      "D": "Any object that fulfills the purpose of art qualifies as art.",
+      "E": "The city art commission should purchase the edifice if it qualifies as art."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Paradox",
+    "questionDifficulty": 5,
+    "stimulus": "It is a given that to be an intriguing person, one must be able to inspire the perpetual curiosity of others. Constantly broadening one's abilities and extending one's intellectual reach will enable one to inspire that curiosity. For such a perpetual expansion of one's mind makes it impossible to be fully comprehended, making one a constant mystery to others.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion drawn in the argument above?",
+    "answerChoices": {
+      "A": "To be an intriguing person, one must be able to inspire the perpetual curiosity of others.",
+      "B": "If one constantly broadens one's abilities and extends one's intellectual reach, one will be able to inspire the perpetual curiosity of others.",
+      "C": "If one's mind becomes impossible to fully comprehend, one will always be a mystery to others.",
+      "D": "To inspire the perpetual curiosity of others, one must constantly broaden one's abilities and extend one's intellectual reach.",
+      "E": "If one constantly broadens one's abilities and extends one's intellectual reach, one will always have curiosity."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Theater managers will not rent a film if they do not believe it will generate enough total revenue—including food-and-beverage concession revenue—to yield a profit. Therefore, since film producers want their films to be shown as widely as possible, they tend to make films that theater managers consider attractive to younger audiences.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Adults consume less of the sort of foods and beverages sold at movie concession stands than do either children or adolescents.",
+      "B": "Movies of the kinds that appeal to younger audiences almost never also appeal to older audiences.",
+      "C": "Food-and-beverage concession stands in movie theaters are usually more profitable than the movies that are shown.",
+      "D": "Theater managers generally believe that a film that is attractive to younger audiences is more likely to be profitable than other films.",
+      "E": "Films that have an appeal to older audiences almost never generate a profit for theaters that show them."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "Almost all advances in genetic research give rise to ethical dilemmas. Government is the exclusive source of funding for most genetic research; those projects not funded by government are funded solely by corporations. One or the other of these sources of funding is necessary for any genetic research.",
+    "questionStem": "If all the statements above are true, then which one of the following must be true?",
+    "answerChoices": {
+      "A": "Most advances in genetic research occur in projects funded by government rather than by corporations.",
+      "B": "Most genetic research funded by government results in advances that give rise to ethical dilemmas.",
+      "C": "At least some advances in genetic research occur in projects funded by corporations.",
+      "D": "No ethical dilemmas resulting from advances in genetic research arise without government or corporate funding.",
+      "E": "As long as government continues to fund genetic research, that research will give rise to ethical dilemmas."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Corporate businesses, like species, must adapt to survive. Businesses that are no longer efficient will become extinct. But sometimes a business cannot adapt without changing its core corporate philosophy. Hence, sometimes a business can survive only by becoming a different corporation.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "No business can survive without changing its core corporate philosophy.",
+      "B": "As a business becomes less efficient, it invariably surrenders its core corporate philosophy.",
+      "C": "Different corporations have different core corporate philosophies.",
+      "D": "If a business keeps its core corporate philosophy intact, it will continue to exist.",
+      "E": "A business cannot change its core corporate philosophy without becoming a different corporation."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "A survey taken ten years ago of residents of area L showed that although living conditions were slightly below their country's average, most residents of L reported general satisfaction with their living conditions. However, this year the same survey found that while living conditions are now about the same as the national average, most residents of L report general dissatisfaction with their living conditions.",
+    "questionStem": "Which one of the following, if true, would most help to resolve the apparent conflict between the results of the surveys described above?",
+    "answerChoices": {
+      "A": "Residents of area L typically value aspects of living conditions different from the aspects of living conditions that are valued by residents of adjacent areas.",
+      "B": "Between the times that the two surveys were conducted, the average living conditions in L's country had substantially declined.",
+      "C": "Optimal living conditions were established in the survey by taking into account governmental policies and public demands on three continents.",
+      "D": "Living conditions in an area generally improve only if residents perceive their situation as somehow in need of improvement.",
+      "E": "Ten years ago the residents of area L were not aware that their living conditions were below the national average."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Travel agent: Although most low-fare airlines have had few, if any, accidents, very few such airlines have been in existence long enough for their safety records to be reliably established. Major airlines, on the other hand, usually have long-standing records reliably indicating their degree of safety. Hence, passengers are safer on a major airline than on one of the newer low-fare airlines.",
+    "questionStem": "Of the following, which one is the criticism to which the reasoning in the travel agent's argument is most vulnerable?",
+    "answerChoices": {
+      "A": "The argument fails to address adequately the possibility that the average major airline has had a total number of accidents as great as the average low-fare airline has had.",
+      "B": "The argument draws a general conclusion about how safe passengers are on different airlines on the basis of safety records that are each from too brief a period to adequately justify such a conclusion.",
+      "C": "The argument fails to consider the possibility that long-standing and reliable records documenting an airline's degree of safety may indicate that the airline is unsafe.",
+      "D": "The argument takes for granted that airlines that are the safest are also the most reliable in documenting their safety.",
+      "E": "The argument fails to address adequately the possibility that even airlines with long-standing, reliable records indicating their degree of safety are still likely to have one or more accidents."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Economist: Our economy's weakness is the direct result of consumers' continued reluctance to spend, which in turn is caused by factors such as high-priced goods and services. This reluctance is exacerbated by the fact that the average income is significantly lower than it was five years ago. Thus, even though it is not a perfect solution, if the government were to lower income taxes, the economy would improve.",
+    "questionStem": "Which one of the following is an assumption required by the economist's argument?",
+    "answerChoices": {
+      "A": "Increasing consumer spending will cause prices for goods and services to decrease.",
+      "B": "If consumer spending increases, the average income will increase.",
+      "C": "If income taxes are not lowered, consumers' wages will decline even further.",
+      "D": "Consumers will be less reluctant to spend money if income taxes are lowered.",
+      "E": "Lowering income taxes will have no effect on government spending."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "A person with a type B lipid profile is at much greater risk of heart disease than a person with a type A lipid profile. In an experiment, both type A volunteers and type B volunteers were put on a low-fat diet. The cholesterol levels of the type B volunteers soon dropped substantially, although their lipid profiles were unchanged. The type A volunteers, however, showed no benefit from the diet, and 40 percent of them actually shifted to type B profiles.",
+    "questionStem": "If the information above is true, which one of the following must also be true?",
+    "answerChoices": {
+      "A": "In the experiment, most of the volunteers had their risk of heart disease reduced at least marginally as a result of having been put on the diet.",
+      "B": "People with type B lipid profiles have higher cholesterol levels, on average, than do people with type A lipid profiles.",
+      "C": "Apart from adopting the low-fat diet, most of the volunteers did not substantially change any aspect of their lifestyle that would have affected their cholesterol levels or lipid profiles.",
+      "D": "The reduction in cholesterol levels in the volunteers is solely responsible for the change in their lipid profiles.",
+      "E": "For at least some of the volunteers in the experiment, the risk of heart disease increased after having been put on the low-fat diet."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 3,
+    "stimulus": "Columnist: Although there is and should be complete freedom of thought and expression, that does not mean that there is nothing wrong with exploiting depraved popular tastes for the sake of financial gain.",
+    "questionStem": "Which one of the following judgments conforms most closely to the principle cited by the columnist?",
+    "answerChoices": {
+      "A": "The government should grant artists the right to create whatever works of art they want to create so long as no one considers those works to be depraved.",
+      "B": "People who produce depraved movies have the freedom to do so, but that means that they also have the freedom to refrain from doing so.",
+      "C": "There should be no laws restricting what books are published, but publishing books that pander to people with depraved tastes is not thereby morally acceptable.",
+      "D": "The public has the freedom to purchase whatever recordings are produced, but that does not mean that the government may not limit the production of recordings deemed to be depraved.",
+      "E": "One who advocates complete freedom of speech should not criticize others for saying things that he or she believes to exhibit depraved tastes."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "When a society undergoes slow change, its younger members find great value in the advice of its older members. But when a society undergoes rapid change, young people think that little in the experience of their elders is relevant to them, and so do not value their advice. Thus, we may measure the rate at which a society is changing by measuring the amount of deference its younger members show to their elders.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "A society's younger members can often accurately discern whether that society is changing rapidly.",
+      "B": "How much deference young people show to their elders depends on how much of the elders' experience is practically useful to them.",
+      "C": "The deference young people show to their elders varies according to how much the young value their elders' advice.",
+      "D": "The faster a society changes, the less relevant the experience of older members of the society is to younger members.",
+      "E": "Young people value their elders' advice just insofar as the elders' experience is practically useful to them."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 4,
+    "stimulus": "Politician: We should impose a tariff on imported fruit to make it cost consumers more than domestic fruit. Otherwise, growers from other countries who can grow better fruit more cheaply will put domestic fruit growers out of business. This will result in farmland's being converted to more lucrative industrial uses and the consequent vanishing of a unique way of life.",
+    "questionStem": "The politician's recommendation most closely conforms to which one of the following principles?",
+    "answerChoices": {
+      "A": "A country should put its own economic interest over that of other countries.",
+      "B": "The interests of producers should always take precedence over those of consumers.",
+      "C": "Social concerns should sometimes take precedence over economic efficiency.",
+      "D": "A country should put the interests of its own citizens ahead of those of citizens of other countries.",
+      "E": "Government intervention sometimes creates more economic efficiency than free markets."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "The Kiffer Forest Preserve, in the northernmost part of the Abbimac Valley, is where most of the bears in the valley reside. During the eight years that the main road through the preserve has been closed the preserve's bear population has nearly doubled. Thus, the valley's bear population will increase if the road is kept closed.",
+    "questionStem": "Which one of the following, if true, most undermines the argument?",
+    "answerChoices": {
+      "A": "Most of the increase in the preserve's bear population over the past eight years is due to migration.",
+      "B": "Only some of the increase in the preserve's bear population over the past eight years is due to migration of bears from other parts of the Abbimac Valley.",
+      "C": "Only some of the increase in the preserve's bear population over the past eight years is due to migration of bears from outside the Abbimac Valley.",
+      "D": "The bear population in areas of the Abbimac Valley outside the Kiffer Forest Preserve has decreased over the past eight years.",
+      "E": "The bear population in the Abbimac Valley has remained about the same over the past eight years."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "If a wig has any handmade components, it is more expensive than one with none. Similarly, a made-to-measure wig ranges from medium-priced to expensive. Handmade foundations are never found on wigs that do not use human hair. Furthermore, any wig that contains human hair should be dry-cleaned. So all made-to-measure wigs should be dry-cleaned.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Any wig whose price falls in the medium-priced to expensive range has a handmade foundation.",
+      "B": "If a wig's foundation is handmade, then it is more expensive than one whose foundation is not handmade.",
+      "C": "A wig that has any handmade components should be dry-cleaned.",
+      "D": "If a wig's foundation is handmade, then its price is at least in the medium range.",
+      "E": "Any wig that should be dry-cleaned has a foundation that is handmade."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 1,
+    "questionNumber": 26,
+    "questionType": "Method",
+    "questionDifficulty": 5,
+    "stimulus": "Philosopher: Wolves do not tolerate an attack by one wolf on another if the latter wolf demonstrates submission by baring its throat. The same is true of foxes and domesticated dogs. So it would be erroneous to deny that animals have rights on the grounds that only human beings are capable of obeying moral rules.",
+    "questionStem": "The philosopher's argument proceeds by attempting to",
+    "answerChoices": {
+      "A": "provide counterexamples to refute a premise on which a particular conclusion is based",
+      "B": "establish inductively that all animals possess some form of morality",
+      "C": "cast doubt on the principle that being capable of obeying moral rules is a necessary condition for having rights",
+      "D": "establish a claim by showing that the denial of that claim entails a logical contradiction",
+      "E": "provide evidence suggesting that the concept of morality is often applied too broadly"
+    },
+    "correctAnswer": "A"
+  }
+]

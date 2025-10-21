@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Educators studied the performance of 200 students in a university's history classes. They found that those students who performed the best had either part-time jobs or full-time jobs, had their history classes early in the morning, and had a very limited social life, whereas those students who performed the worst had no jobs, had their history classes early in the morning, and had a very active social life.",
+    "questionStem": "Which one of the following, if true, most helps to explain the educators' findings?",
+    "answerChoices": {
+      "A": "The students compensated for any study time lost due to their jobs but they did not compensate for any study time lost due to their social lives.",
+      "B": "The students who had full-time jobs typically worked late-night hours at those jobs.",
+      "C": "Better students tend to choose classes that are scheduled to meet early in the morning.",
+      "D": "A larger percentage of those students interested in majoring in history had part-time jobs than had full-time jobs.",
+      "E": "Although having a job tends to provide a release from stress, thus increasing academic performance, having a full-time job, like having an active social life, can distract a student from studying."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "All works of art are beautiful and have something to teach us. Thus, since the natural world as a whole is both beautiful and instructive, it is a work of art.",
+    "questionStem": "The reasoning in the argument is flawed because the argument",
+    "answerChoices": {
+      "A": "uses the inherently vague term \"beautiful\" without providing an explicit definition of that term",
+      "B": "attempts to establish an evaluative conclusion solely on the basis of claims about factual matters",
+      "C": "concludes, simply because an object possesses two qualities that are each common to all works of art, that the object is a work of art",
+      "D": "presumes, without providing justification, that only objects that are beautiful are instructive",
+      "E": "fails to consider the possibility that there are many things that are both beautiful and instructive but are not part of the natural world"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "When Copernicus changed the way we think about the solar system, he did so not by discovering new information, but by looking differently at information already available. Edward Jenner's discovery of a smallpox vaccine occurred when he shifted his focus to disease prevention from the then more common emphasis on cure. History is replete with breakthroughs of this sort.",
+    "questionStem": "The examples provided above illustrate which one of the following?",
+    "answerChoices": {
+      "A": "Many valuable intellectual accomplishments occur by chance.",
+      "B": "Shifting from earlier modes of thought can result in important advances.",
+      "C": "The ability to look at information from a different point of view is rare.",
+      "D": "Understanding is advanced less often by better organization of available information than it is by the accumulation of new information.",
+      "E": "Dramatic intellectual breakthroughs are more easily accomplished in fields in which the amount of information available is relatively small."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Politician: Suppose censorship is wrong in itself, as modern liberals tend to believe. Then an actor's refusing a part in a film because the film glamorizes a point of view abhorrent to the actor would be morally wrong. But this conclusion is absurd. It follows that censorship is not, after all, wrong in itself.",
+    "questionStem": "The reasoning in the politician's argument is most vulnerable to criticism on the grounds that this argument",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that actors would subscribe to any tenet of modern liberalism",
+      "B": "uses the term \"liberal\" in order to discredit opponents' point of view",
+      "C": "takes for granted that there is a moral obligation to practice one's profession",
+      "D": "draws a conclusion that is inconsistent with a premise it accepts",
+      "E": "presumes, without providing justification, that declining a film role constitutes censorship in the relevant sense"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Motor oil serves to lubricate engines and thus retard engine wear. A study was conducted to assess the effectiveness of various brands of motor oil by using them in taxicabs over a 6,000-mile test period. All the oils did equally well in retarding wear on pistons and cylinders, the relevant parts of the engine. Hence, cheaper brands of oil are the best buys.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "Cheaper brands of motor oil are often used by knowledgeable automobile mechanics for their own cars.",
+      "B": "Tests other than of the ability to reduce engine wear also can reliably gauge the quality of motor oil.",
+      "C": "The lubricating properties of all motor oils deteriorate over time, and the rate of deterioration is accelerated by heat.",
+      "D": "The engines of some individual cars that have had their oil changed every 3,000 miles, using only a certain brand of oil, have lasted an extraordinarily long time.",
+      "E": "Ability to retard engine wear is not the only property of motor oil important to the running of an engine."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Elena: The best form of government is one that fosters the belief among its citizens that they have a say in how the government is run. Thus, democracy is the best form of government.\nMarsha: But there are many forms of government under which citizens can be manipulated into believing they have a say when they don't.",
+    "questionStem": "Marsha's claim that it is possible for governments to manipulate people into thinking that they have a say when they do not is used to",
+    "answerChoices": {
+      "A": "concur with Elena's claim that democracy is the best form of government",
+      "B": "support Marsha's unstated conclusion that the best form of government is one that appears to be democratic but really is not",
+      "C": "suggest that the premise Elena uses to support her conclusion could be used to support a conflicting conclusion",
+      "D": "support Marsha's unstated conclusion that most people seek only the appearance of democracy rather than democracy itself",
+      "E": "reject Elena's conclusion that the best form of government is democracy"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Researcher: The use of the newest drug in treating this disease should be discontinued. The treatment usually wreaks havoc with the normal functioning of the human body, causing severe side effects such as total loss of hair, debilitating nausea, and intense pain in the joints.",
+    "questionStem": "The argument's reasoning is flawed because the argument",
+    "answerChoices": {
+      "A": "fails to specify what is meant by \"normal functioning of the human body\"",
+      "B": "fails to consider the consequences of not administering the treatment",
+      "C": "presumes that every patient with the disease is treated with the drug",
+      "D": "does not consider the length of time needed for the treatment to begin taking effect",
+      "E": "does not acknowledge that the effects of the treatment may not be of the same severity in all cases"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 3,
+    "stimulus": "Otis: Aristotle's principle of justice says that we should treat relevantly similar cases similarly. Therefore, it is wrong for a dentist to schedule an after-hours appointment to suit a family friend but refuse to do it for anyone else.\nTyra: I accept Aristotle's principle of justice, but it's human nature to want to do special favors for friends. Indeed, that's what friends are—those for whom you would do special favors. It's not unjust for dentists to do that.",
+    "questionStem": "It can be inferred on the basis of their statements that Otis and Tyra disagree about whether",
+    "answerChoices": {
+      "A": "Aristotle's principle of justice is widely applicable",
+      "B": "situations involving friends and situations involving others should be considered relevantly similar cases",
+      "C": "human nature makes it impossible to treat relevantly similar cases similarly",
+      "D": "dentists should be willing to schedule an after-hours appointment for anyone who asks",
+      "E": "Aristotle recognizes that friendship sometimes morally outweighs justice"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Typically, people who have diets high in saturated fat have an increased risk of heart disease. Those who replace saturated fat in their diets with unsaturated fat decrease their risk of heart disease. Therefore, people who eat a lot of saturated fat can lower their risk of heart disease by increasing their intake of unsaturated fat.",
+    "questionStem": "Which one of the following, if assumed, most helps to justify the reasoning above?",
+    "answerChoices": {
+      "A": "People who add unsaturated fat to their diets will eat less food that is high in saturated fat.",
+      "B": "Adding unsaturated fat to a diet brings health benefits other than a reduced risk of heart disease.",
+      "C": "Diet is the most important factor in a person's risk of heart disease.",
+      "D": "Taking steps to prevent heart disease is one of the most effective ways of increasing life expectancy.",
+      "E": "It is difficult to move from a diet that is high in saturated fat to a diet that includes very little fat."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Must Be True",
+    "questionDifficulty": 2,
+    "stimulus": "Only people who are willing to compromise should undergo mediation to resolve their conflicts. Actual litigation should be pursued only when one is sure that one's position is correct. People whose conflicts are based on ideology are unwilling to compromise.",
+    "questionStem": "If the statements above are true, then which one of the following must be true?",
+    "answerChoices": {
+      "A": "People who do not undergo mediation to resolve their conflicts should be sure that their positions are correct.",
+      "B": "People whose conflicts are not based on ideology should attempt to resolve their conflicts by means of litigation.",
+      "C": "People whose conflicts are based on ideology are not always sure that their positions are correct.",
+      "D": "People who are sure of the correctness of their positions are not people who should undergo mediation to resolve their conflicts.",
+      "E": "People whose conflicts are based on ideology are not people who should undergo mediation to resolve their conflicts."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Scientists have long thought that omega-3 fatty acids in fish oil tend to lower blood cholesterol and strongly suspected that a diet that includes a modest amount of fish would provide substantial health benefits. Now these views have acquired strong support from a recent study showing that middle-aged people who eat fish twice a week are nearly 30 percent less likely to develop heart disease than are those who do not eat fish.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "The test subjects in the recent study who did not eat fish were not vegetarians.",
+      "B": "The test subjects in the recent study who ate fish twice a week did not have a diet that was otherwise conducive to the development of heart disease.",
+      "C": "The test subjects in the recent study who did not eat fish were significantly more likely to eat red meat several times per week than were those who did eat fish.",
+      "D": "The test subjects in the recent study who ate fish twice a week were not significantly more likely than those who did not to engage regularly in activities known to augment cardiorespiratory health.",
+      "E": "The test subjects in the recent study who ate fish twice a week were no more likely than those who did not to have sedentary occupations."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Researcher: A number of studies have suggested that, on average, clients in short-term psychotherapy show similar levels of improvement regardless of the kind of psychotherapy they receive. So any client improvement in short-term psychotherapy must be the result of some aspect or aspects of therapy that are common to all psychotherapies—for example, the presence of someone who listens and gives attention to the client.",
+    "questionStem": "Which one of the following, if true, would most weaken the researcher's argument?",
+    "answerChoices": {
+      "A": "The methods by which the studies measured whether clients improved primarily concerned immediate symptom relief and failed to address other important kinds of improvement.",
+      "B": "On average, clients improve more dramatically when they receive long-term psychotherapy, a year or longer in duration, than when clients receive short-term psychotherapy.",
+      "C": "The studies found that psychotherapy by a trained counselor does not result in any greater improvement, on average, among clients than does simple counseling by an untrained layperson.",
+      "D": "The specific techniques and interventions used by therapists practicing different kinds of psychotherapy differ dramatically.",
+      "E": "More-experienced therapists tend to use a wider range of techniques and interventions in psychotherapy than do inexperienced therapists."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Journalists sometimes use historical photographs to illustrate articles about current events. But this recycling of old photographs overstates the similarities between past and present, and thereby denies the individual significance of those current events. Hence, the use of historical photographs in this manner by journalists distorts public understanding of the present by presenting current events as mere repetitions of historical incidents.",
+    "questionStem": "Which one of the following, if assumed, enables the conclusion of the argument to be properly inferred?",
+    "answerChoices": {
+      "A": "Any practice by which journalists present current events as mere repetitions of historical incidents overstates the similarities between past and present.",
+      "B": "If the work of a journalist overstates the similarities between past and present, then it distorts public understanding of the present by presenting current events as mere repetitions of historical incidents.",
+      "C": "If a journalistic practice distorts public understanding of the present by overstating the similarities between past and present, then it denies the individual significance of any articles about current events.",
+      "D": "No article about a current event treats that event as merely a repetition of historical incidents unless it uses historical photographs to illustrate that article.",
+      "E": "If journalists believe current events to be mere repetitions of historical incidents, then public understanding of the present will be distorted."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Parallel",
+    "questionDifficulty": 2,
+    "stimulus": "If Juan went to the party, it is highly unlikely that Maria would have enjoyed the party. But in fact it turned out that Maria did enjoy the party; therefore, it is highly unlikely that Juan was at the party.",
+    "questionStem": "The pattern of reasoning in the argument above is most similar to that in which one of the following?",
+    "answerChoices": {
+      "A": "According to the newspaper, all eight teams in the soccer tournament have an equal chance of winning it. If so, then we will probably lose our goalie, since if we do lose our goalie we will probably not win the tournament.",
+      "B": "Kapinski, our new neighbor, is probably friendly, for Kapinski sells insurance and most people who sell insurance are friendly.",
+      "C": "If the lottery were fair, the person who won the lottery would not have been likely to win it. Thus, since this person would have been likely to win the lottery if it were unfair, the lottery was probably unfair.",
+      "D": "If Clarissa missed the bus today, it is quite unlikely that she would have gotten to work on time. So, it is quite unlikely that Clarissa missed the bus, since she actually was at work on time today.",
+      "E": "This year's election will probably be fair. But Popov probably will not win unless the election is unfair. So, Popov will not win the election."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Sonya: Anyone who lives without constant awareness of the fragility and precariousness of human life has a mind clouded by illusion. Yet those people who are perpetually cognizant of the fragility and precariousness of human life surely taint their emotional outlook on existence.",
+    "questionStem": "Sonya's statements, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Anyone who places a higher priority on maintaining a positive emotional outlook than on dispelling illusion will be completely unaware of the fragility and precariousness of human life.",
+      "B": "Either no one has a tainted emotional outlook on existence, or no one has a mind clouded by illusion.",
+      "C": "It is impossible for anyone to live without some degree of self-deception.",
+      "D": "Everyone whose emotional outlook on existence is untainted has a mind clouded by illusion.",
+      "E": "It is better to be aware of the fragility and precariousness of human life than to have an untainted emotional outlook on existence."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Paradox",
+    "questionDifficulty": 5,
+    "stimulus": "In a study, shoppers who shopped in a grocery store without a shopping list and bought only items that were on sale for half price or less spent far more money on a comparable number of items than did shoppers in the same store who used a list and bought no sale items.",
+    "questionStem": "Which one of the following, if true, most helps to explain the apparent paradox in the study's results?",
+    "answerChoices": {
+      "A": "Only the shoppers who used a list used a shopping cart.",
+      "B": "The shoppers who did not use lists bought many unnecessary items.",
+      "C": "Usually, only the most expensive items go on sale in grocery stores.",
+      "D": "The grocery store in the study carries many expensive items that few other grocery stores carry.",
+      "E": "The grocery store in the study places relatively few items on sale."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "A group of mountain climbers was studied to determine how they were affected by diminished oxygen in the air at high altitudes. As they climbed past 6,100 meters above sea level, the climbers slurred words, took longer to understand simple sentences, and demonstrated poor judgment. This combination of worsened performances disproves the theory that the area of the brain controlling speech is distinct from that controlling other functions.",
+    "questionStem": "The argument is most vulnerable to criticism on the grounds that it overlooks the possibility that",
+    "answerChoices": {
+      "A": "the climbers' performance in speech, comprehension, and reasoning was impaired because oxygen deprivation affected their entire brains",
+      "B": "the climbers' performance in speech, comprehension, and reasoning was better than average before they were studied",
+      "C": "the climbers showed different levels of impairment in their performance in speech, comprehension, and reasoning",
+      "D": "some of the effects described were apparent just before the climbers reached 6,100 meters",
+      "E": "many of the climbers had engaged in special training before the climb because they wanted to improve the efficiency with which their bodies use oxygen"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "A study found that patients referred by their doctors to psychotherapists practicing a new experimental form of therapy made more progress with respect to their problems than those referred to psychotherapists practicing traditional forms of therapy. Therapists practicing the new form of therapy, therefore, are more effective than therapists practicing traditional forms.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the argument?",
+    "answerChoices": {
+      "A": "It ignores the possibility that therapists trained in traditional forms of therapy use the same techniques in treating their patients as therapists trained in the new form of therapy do.",
+      "B": "It ignores the possibility that the patients referred to therapists practicing the new form of therapy had problems more amenable to treatment than did those referred to therapists practicing traditional forms.",
+      "C": "It presumes, without providing justification, that any psychotherapist trained in traditional forms of therapy is untrained in the new form of therapy.",
+      "D": "It ignores the possibility that therapists practicing the new form of therapy systematically differ from therapists practicing traditional forms of therapy with regard to some personality attribute relevant to effective treatment.",
+      "E": "It presumes, without providing justification, that the personal rapport between therapist and patient has no influence on the effectiveness of the treatment the patient receives."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "Essayist: One of the drawbacks of extreme personal and political freedom is that free choices are often made for the worst. To expect people to thrive when they are given the freedom to make unwise decisions is frequently unrealistic. Once people see the destructive consequences of extreme freedom, they may prefer to establish totalitarian political regimes that allow virtually no freedom. Thus, one should not support political systems that allow extreme freedom.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the essayist's reasoning?",
+    "answerChoices": {
+      "A": "One should not support any political system that will inevitably lead to the establishment of a totalitarian political regime.",
+      "B": "One should not expect everyone to thrive even in a political system that maximizes people's freedom in the long run.",
+      "C": "One should support only those political systems that give people the freedom to make wise choices.",
+      "D": "One should not support any political system whose destructive consequences could lead people to prefer totalitarian political regimes.",
+      "E": "One should not support any political system that is based on unrealistic expectations about people's behavior under that system."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 4,
+    "stimulus": "The layouts of supermarkets are not accidental: they are part of a plan designed to make customers walk all the way to the back of the store just to pick up a loaf of bread, passing tempting displays the whole way. But supermarkets can alienate customers by placing popular items in the rear; surveys list inconvenience as shoppers' top reason for disliking supermarkets.",
+    "questionStem": "Which one of the following propositions does the passage most precisely illustrate?",
+    "answerChoices": {
+      "A": "Supermarkets should focus on customers who want to purchase many items in a single trip.",
+      "B": "Alienation of customers is not good for business.",
+      "C": "Even well-thought-out plans can fail.",
+      "D": "Distracting customers is not good for business.",
+      "E": "Manipulation of people can have unwelcome consequences."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "Doctor: Medication to reduce blood pressure often has unhealthy side effects. However, lifestyle changes such as exercising more and avoiding fatty foods reduce blood pressure just as effectively as taking medication does. Therefore, it is healthier to rely on these lifestyle changes than on medication to reduce blood pressure.",
+    "questionStem": "Which one of the following is an assumption that the doctor's argument requires?",
+    "answerChoices": {
+      "A": "Other than medication, the only way to reduce blood pressure is by making lifestyle changes such as exercising more and avoiding fatty foods.",
+      "B": "If it is healthier to rely on a lifestyle change than on medication to reduce blood pressure, then that lifestyle change reduces blood pressure at least as effectively as medication does.",
+      "C": "The side effects, if any, of exercising more and avoiding fatty foods in order to reduce blood pressure are less unhealthy than those of taking medication to reduce blood pressure.",
+      "D": "If an alternative to medication relieves a medical condition just as effectively as medication does, then it is always healthier to rely on that alternative than on medication to relieve that medical condition.",
+      "E": "If two different methods of treating a medical condition have similar side effects, then it is healthier to rely on the more effective method."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Columnist: Several recent studies show, and insurance statistics confirm, that more pedestrians are killed every year in North American cities when crossing with the light than when crossing against it. Crossing against the light in North American cities is therefore less dangerous than crossing with the light.",
+    "questionStem": "The columnist's reasoning is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "relies on sources that are likely to be biased in their reporting",
+      "B": "presumes, without providing justification, that because two things are correlated there must be a causal relationship between them",
+      "C": "does not adequately consider the possibility that a correlation between two events may be explained by a common cause",
+      "D": "ignores the possibility that the effects of the types of actions considered might be quite different in environments other than the ones studied",
+      "E": "ignores possible differences in the frequency of the two actions whose risk is being assessed"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "Many scientific studies have suggested that taking melatonin tablets can induce sleep. But this does not mean that melatonin is helpful in treating insomnia. Most of the studies examined only people without insomnia, and in many of the studies, only a few of the subjects given melatonin appeared to be significantly affected by it.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "A weaker correlation between taking melatonin and the inducement of sleep was found in the studies that included people with insomnia than in the studies that did not.",
+      "B": "None of the studies that suggested that taking melatonin tablets can induce sleep examined a fully representative sample of the human population.",
+      "C": "In the studies that included subjects with insomnia, only subjects without insomnia were significantly affected by doses of melatonin.",
+      "D": "Several people who were in control groups and only given placebos claimed that the tablets induced sleep.",
+      "E": "If melatonin were helpful in treating insomnia, then every person with insomnia who took doses of melatonin would appear to be significantly affected by it."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The asteroid that hit the Yucatán Peninsula 65 million years ago caused both long-term climatic change and a tremendous firestorm that swept across North America. We cannot show that it was this fire that caused the extinction of the triceratops, a North American dinosaur in existence at the time of the impact of the asteroid. Nor can we show that the triceratops became extinct due to the climatic changes resulting from the asteroid's impact. Hence, we cannot attribute the triceratops's extinction to the asteroid's impact.",
+    "questionStem": "Which one of the following has flawed reasoning most similar to the flawed reasoning in the argument above?",
+    "answerChoices": {
+      "A": "I know that one cannot move this piano unless one can lift at least 150 kilograms. I doubt that either Leon or Pam can lift 150 kilograms alone. So I doubt that either Leon or Pam can move this piano alone. Thus, I doubt that Leon and Pam can move this piano together.",
+      "B": "Since we are quite sure that Cheng and Lin are the only candidates in the mayoral election, we can be quite sure that either Cheng or Lin will win the election. Therefore, either we know that Cheng will win or we know that Lin will win.",
+      "C": "It has not been conclusively proven that the accident was caused by John's driving at excessive speeds. Nor has it been conclusively proven that the accident was the result of John's weaving out of his lane. Hence, it has been conclusively proven that the cause of the accident was neither John's driving at excessive speeds nor John's weaving out of his lane.",
+      "D": "The flooding in the basement caused damage to the furnace and also caused a short in the electrical system. Fire investigators could not show that the damage to the furnace caused the fire that resulted shortly after the flooding, nor could they show that the fire was caused by the short in the electrical system. Therefore, we cannot claim that the flooding in the basement caused the fire.",
+      "E": "We have good reason to believe that the cause of the flooding along the coast was the unusually high tides. We also have good reason to believe that the cause of the unusually high tides was either the sun or the moon. So it is reasonable to maintain that the cause of the flooding was either the sun or the moon."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT130",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 3,
+    "stimulus": "Economist: Although obviously cuts in personal income tax rates for the upper income brackets disproportionately benefit the wealthy, across-the-board cuts for all brackets tend to have a similar effect. Personal income tax rates are progressive (i.e., graduated), and if total revenue remains constant, then across-the-board cuts in these taxes require increasing the amount of revenue generated through nonprogressive taxes, thereby favoring the wealthy. Yet if nonprogressive taxes are not increased to compensate for the cuts, then the budget deficit will increase, requiring more government borrowing and driving up interest rates. This favors those who have money to lend, once again benefiting primarily the wealthy.",
+    "questionStem": "Which one of the following statements most accurately expresses the main conclusion of the economist's argument?",
+    "answerChoices": {
+      "A": "Cuts in personal income tax rates for upper income brackets benefit the wealthy more than they benefit others.",
+      "B": "Across-the-board cuts in personal income tax rates do not generate enough additional economic activity to prevent a net loss of revenue.",
+      "C": "It is the wealthy who are favored by generating a high amount of revenue through nonprogressive taxes.",
+      "D": "It is primarily the wealthy who benefit from increases in the budget deficit, which drive up interest rates.",
+      "E": "Across-the-board personal income tax rate cuts generally benefit the wealthy more than they benefit others."
+    },
+    "correctAnswer": "E"
+  }
+]

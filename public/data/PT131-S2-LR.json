@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 1,
+    "stimulus": "Many doctors cater to patients' demands that they be prescribed antibiotics for their colds. However, colds are caused by viruses, and antibiotics have no effect on viruses, and so antibiotics have no effect on colds. Such treatments are also problematic because antibiotics can have dangerous side effects. So doctors should never prescribe antibiotics to treat colds.",
+    "questionStem": "The reasoning above most closely conforms to which one of the following principles?",
+    "answerChoices": {
+      "A": "A doctor should not prescribe a drug for a condition if it cannot improve that condition and if the drug potentially has adverse side effects.",
+      "B": "A doctor should not prescribe any drug that might have harmful effects on the patient even if the drug might have a positive effect on the patient.",
+      "C": "A doctor should attempt to prescribe every drug that is likely to affect the patient's health positively.",
+      "D": "A doctor should withhold treatment from a patient if the doctor is uncertain whether the treatment will benefit the patient.",
+      "E": "A doctor should never base the decision to prescribe a certain medication for a patient on the patient's claims about the effectiveness of that medication."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Long-distance runners use two different kinds of cognitive strategies: “associative” and “dissociative.” Associative strategies involve attending closely to physical sensations, while dissociative strategies involve mostly ignoring physical sensations. Associative strategies, unlike dissociative ones, require so much concentration that they result in mental exhaustion lasting more than a day. Since it is important for long-distance runners to enter a race mentally refreshed,",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "long-distance runners should not rely heavily on associative strategies during training the day before they run in a race",
+      "B": "unless they regularly train using associative strategies, long-distance runners should use dissociative strategies during races",
+      "C": "maximizing the benefits of training for long-distance running involves frequently alternating associative and dissociative strategies",
+      "D": "long-distance runners are about evenly divided between those who use dissociative strategies during races and those who use associative strategies during races",
+      "E": "in long-distance running, dissociative strategies are generally more effective for a day's training run than are associative strategies"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "MetroBank made loans to ten small companies, in amounts ranging from $1,000 to $100,000. These ten loans all had graduated payment plans, i.e., the scheduled monthly loan payment increased slightly each month over the five-year term of the loan. Nonetheless, the average payment received by MetroBank for these ten loans had decreased by the end of the five-year term.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy in the statements above?",
+    "answerChoices": {
+      "A": "The number of small companies receiving new loans from MetroBank increased over the five-year term.",
+      "B": "Several of the ten small companies also borrowed money from other banks.",
+      "C": "Most banks offer a greater number of loans for under $100,000 than for over $100,000.",
+      "D": "Of the ten small companies, the three that had borrowed the largest amounts paid off their loans within three years.",
+      "E": "For some loans made by MetroBank, the monthly payment decreases slightly over the term of the loan."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Professor: A guest speaker recently delivered a talk entitled “The Functions of Democratic Governments” to a Political Ideologies class at this university. The talk was carefully researched and theoretical in nature. But two students who disagreed with the theory hurled vicious taunts at the speaker. Several others applauded their attempt to humiliate the speaker. This incident shows that universities these days do not foster fair-minded and tolerant intellectual debate.",
+    "questionStem": "The professor's reasoning is flawed in that it",
+    "answerChoices": {
+      "A": "draws a conclusion based on the professor's own opinion rather than on that of the majority of the students present at the talk",
+      "B": "is inconsistent in advocating tolerance while showing intolerance of the dissenting students' views",
+      "C": "relies primarily on an emotional appeal",
+      "D": "draws a general conclusion based on too small a sample",
+      "E": "incorrectly focuses on the behavior of the dissenting students rather than relating the reasons for that behavior"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Studies reveal that most people select the foods they eat primarily on the basis of flavor, and that nutrition is usually a secondary concern at best. This suggests that health experts would have more success in encouraging people to eat wholesome foods if they emphasized how flavorful those foods truly are rather than how nutritious they are.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument above?",
+    "answerChoices": {
+      "A": "Most people currently believe that wholesome foods are more flavorful, on average, than unwholesome foods are.",
+      "B": "Few people, when given a choice between foods that are flavorful but not nutritious and foods that are nutritious but not flavorful, will choose the foods that are nutritious but not flavorful.",
+      "C": "Health experts' attempts to encourage people to eat wholesome foods by emphasizing how nutritious those foods are have been moderately successful.",
+      "D": "The studies that revealed that people choose the foods they eat primarily on the basis of flavor also revealed that people rated as most flavorful those foods that were least nutritious.",
+      "E": "In a study, subjects who were told that a given food was very flavorful were more willing to try the food and more likely to enjoy it than were subjects who were told that the food was nutritious."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Although Jaaks is a respected historian, her negative review of Yancey's new book on the history of coastal fisheries in the region rests on a mistake. Jaaks's review argues that the book inaccurately portrays the lives of fishery workers. However, Yancey used the same research methods in this book as in her other histories, which have been very popular. This book is also very popular in local bookstores.",
+    "questionStem": "The reasoning above is flawed in that it",
+    "answerChoices": {
+      "A": "relies on the word of a scholar who is unqualified in the area in question",
+      "B": "attacks the person making the claim at issue rather than addressing the claim",
+      "C": "takes for granted that the popularity of a book is evidence of its accuracy",
+      "D": "bases a general conclusion on a sample that is likely to be unrepresentative",
+      "E": "presumes, without providing justification, that the methods used by Yancey are the only methods that would produce accurate results"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Role",
+    "questionDifficulty": 5,
+    "stimulus": "Columnist: It has been noted that attending a live musical performance is a richer experience than is listening to recorded music. Some say that this is merely because we do not see the performers when we listen to recorded music. However, there must be some other reason, for there is relatively little difference between listening to someone read a story over the radio and listening to someone in the same room read a story.",
+    "questionStem": "Which one of the following most accurately expresses the role played in the argument by the observation that attending a live musical performance is a richer experience than is listening to recorded music?",
+    "answerChoices": {
+      "A": "It is what the columnist's argument purports to show.",
+      "B": "It is the reason given for the claim that the columnist's argument is attempting to undermine.",
+      "C": "It is what the columnist's argument purports to explain.",
+      "D": "It is what the columnist's argument purports to refute.",
+      "E": "It is what the position that the columnist tries to undermine is purported to explain."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Though ice cream is an excellent source of calcium, dairy farmers report that during the past ten years there has been a sharp decline in ice cream sales. And during the same period, sales of cheddar cheese have nearly doubled. Therefore, more and more people must be choosing to increase their intake of calcium by eating cheddar cheese rather than ice cream.",
+    "questionStem": "The reasoning above is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "fails to produce statistical evidence supporting the dairy farmers' claims",
+      "B": "fails to consider alternative explanations of the decline in sales of ice cream",
+      "C": "relies solely on the testimony of individuals who are likely to be biased",
+      "D": "presumes, without providing justification, that ice cream is a better source of calcium than is cheddar cheese",
+      "E": "presumes, without providing justification, that people who eat cheddar cheese never eat ice cream"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "No member of the Richardson Theater Group is both a performer and an administrator. Since Leon and Marta are both members of the Richardson Theater Group but neither is an administrator, it follows that both are performers.",
+    "questionStem": "Which one of the following arguments displays a flawed pattern of reasoning most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "Not all of the employees of the Tedenco Company are salaried employees of that company. Since Mr. López and Ms. Allen are both salaried employees of the Tedenco Company, it follows that they are not the only employees of the Tedenco Company.",
+      "B": "No employee of the Tedenco Company is both an accountant and a corporate attorney. Since Ms. Walsh is both an accountant and a corporate attorney, it follows that she is not an employee of the Tedenco Company.",
+      "C": "No company can have its headquarters in both Canada and Mexico. Since neither the Dumone Company nor the Tedenco Company has its headquarters in Mexico, it follows that both have their headquarters in Canada.",
+      "D": "No corporate attorney represents both the Dumone Company and the Tedenco Company. Since Ms. Tseung is a corporate attorney who represents the Dumone Company, it follows that she does not also represent the Tedenco Company.",
+      "E": "No member of the board of directors of the Dumone Company is also a member of the board of directors of the Tedenco Company. Since neither company has fewer than five board members, it follows that both boards together include at least ten members."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Chemical fertilizers not only create potential health hazards, they also destroy earthworms, which are highly beneficial to soil. For this reason alone the use of chemical fertilizers should be avoided. The castings earthworms leave behind are much richer than the soil they ingest, thus making a garden rich in earthworms much more fertile than a garden without them.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "answerChoices": {
+      "A": "Earthworms are highly beneficial to soil.",
+      "B": "Chemical fertilizers destroy earthworms.",
+      "C": "The castings that earthworms leave behind are much richer than the soil they ingest.",
+      "D": "The use of chemical fertilizers should be avoided.",
+      "E": "A garden rich in earthworms is much more fertile than a garden that is devoid of earthworms."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Medical research has established that the Beta Diet is healthier than a more conventional diet. But on average, people who have followed the Beta Diet for several decades are much more likely to be in poor health than are people whose diet is more conventional.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent conflict between the two statements above?",
+    "answerChoices": {
+      "A": "On average, people who have followed the Beta Diet for their entire lives are much more likely to have a variety of healthful habits than are people whose diet is more conventional.",
+      "B": "The Beta Diet is used primarily as a treatment for a condition that adversely affects overall health.",
+      "C": "People of average health who switch from a conventional diet to the Beta Diet generally find that their health improves substantially as a result.",
+      "D": "The Beta Diet provides dramatic health benefits for some people but only minor benefits for others.",
+      "E": "Recent research has shown that a diet high in fruits, vegetables, and skim milk is even healthier than the Beta Diet."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "A theoretical framework facilitates conceptual organization of material and fruitful expansions of research. Many historians argue that historical analysis is therefore done best within a theoretical framework. But the past is too complex for all of its main trends to be captured within a theoretical framework. Therefore,",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "there is no benefit ever to be gained in recommending to historians that they place their work within a theoretical framework",
+      "B": "theoretical frameworks are less useful in history than they are in any other discipline",
+      "C": "even the best historical analysis done within a theoretical framework fails to capture all of history's main trends",
+      "D": "the value of theoretical work in extending research has been emphasized by historians who recommend doing historical analysis within a theoretical framework",
+      "E": "there is no difference between historical analysis that is placed within a theoretical framework and historical analysis that is not"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Bethany: Psychologists have discovered a technique for replacing one's nightmares with pleasant dreams, and have successfully taught it to adults suffering from chronic nightmares. Studies have found that nightmare-prone children are especially likely to suffer from nightmares as adults. Thus, psychologists should direct efforts toward identifying nightmare-prone children so that these children can be taught the technique for replacing their nightmares with pleasant dreams.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify drawing the conclusion in Bethany's argument?",
+    "answerChoices": {
+      "A": "Psychologists should make an effort to determine why certain children are especially prone to nightmares while other children are not.",
+      "B": "Any psychological technique that can be successfully taught to a child can also be successfully taught to an adult.",
+      "C": "Psychologists should do everything they can to minimize the number of adults troubled by chronic nightmares.",
+      "D": "Identifying nightmare-prone children is generally more difficult than teaching adults the technique for replacing nightmares with pleasant dreams.",
+      "E": "Psychologists should not teach the technique for replacing nightmares with pleasant dreams to children who are unlikely to suffer from nightmares as adults."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "At one sitting, a typical doughnut eater consumes 4 doughnuts containing a total of 680 calories and 40 grams of fat. The typical bagel eater consumes exactly one bagel, at 500 calories and one or two grams of fat per sitting, though the addition of spreads can raise calorie and fat content to the four-doughnut range. Thus, as far as total calorie content is concerned, there is very little difference between what a typical doughnut eater and a typical bagel eater each consumes at one sitting.",
+    "questionStem": "The argument depends on assuming which one of the following?",
+    "answerChoices": {
+      "A": "The calories and fat in bagels have the same health impact on bagel eaters as the calories and fat in doughnuts have on doughnut eaters.",
+      "B": "Most bagel eaters are not fully aware of the calorie and fat content of a bagel.",
+      "C": "Eating bagels instead of eating doughnuts provides no real health benefit.",
+      "D": "The typical doughnut eater does not add to doughnuts any substances that increase the total caloric intake.",
+      "E": "Most typical doughnut eaters are not also bagel eaters."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Bowers: A few theorists hold the extreme view that society could flourish in a condition of anarchy, the absence of government. Some of these theorists have even produced interesting arguments to support that position. One writer, for example, contends that anarchy is laissez-faire capitalism taken to its logical extreme. But these theorists' views ignore the fundamental principle of social philosophy—that an acceptable social philosophy must promote peace and order. Any social philosophy that countenances chaos, i.e., anarchy, accordingly deserves no further attention.",
+    "questionStem": "The reasoning in Bowers's argument is most vulnerable to criticism on the grounds that",
+    "answerChoices": {
+      "A": "the meaning of a key term shifts illicitly during the course of the argument",
+      "B": "the argument fails to show that laissez-faire capitalism deserves to be rejected as a social philosophy",
+      "C": "the truth or falsity of a view is not determined by the number of people who accept it as true",
+      "D": "the argument presumes, without providing justification, that any peaceful society will flourish",
+      "E": "it is unreasonable to reject a view merely because it can be described as extreme"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Parallel",
+    "questionDifficulty": 3,
+    "stimulus": "All poets, aside from those who write only epigrams, have wit. All lyrical composers are poets. Azriel does not write epigrams, though he is a lyrical composer. So Azriel has wit.",
+    "questionStem": "The pattern of reasoning in which one of the following is most similar to that in the argument above?",
+    "answerChoices": {
+      "A": "All squeeze toys, except those designed for cats, are safe for infants. All squeeze toys are sold prewrapped. This item is not designed for cats, and it is sold prewrapped. So it must be safe for infants.",
+      "B": "Aside from the dogcatcher and the police chief, all of the politicians in town are lawyers. All of the politicians in town have websites. Sal is a politician in town, but is neither the dogcatcher nor the police chief. Since Sal is a politician in town he must have a website.",
+      "C": "All visas are assigned by this office, except for those that are issued through diplomatic channels. All visit permits are visas. Thus, the visit permit in Will's passport was assigned through diplomatic channels.",
+      "D": "All of this store's winter garments are on sale, except for the designer clothes. None of the shirts in this store are designer clothes. This shirt, therefore, since it is on sale, is a winter garment.",
+      "E": "All residential buildings are subject to the original fire code, except for those built last year. All townhouses are residential buildings. Bloom House was not built last year, and it is a townhouse, so it is subject to the original fire code."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Teachers should not do anything to cause their students to lose respect for them. And students can sense when someone is trying to hide his or her ignorance. Therefore, a teacher who does not know the answer to a question a student has asked should not pretend to know the answer.",
+    "questionStem": "The conclusion is properly drawn if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "A teacher cannot be effective unless he or she retains the respect of students.",
+      "B": "Students respect honesty above all else.",
+      "C": "Students' respect for a teacher is independent of the amount of knowledge they attribute to that teacher.",
+      "D": "Teachers are able to tell when students respect them.",
+      "E": "Students lose respect for teachers whenever they sense that the teachers are trying to hide their ignorance."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Role",
+    "questionDifficulty": 5,
+    "stimulus": "Contrary to Malthus's arguments, human food-producing capacity has increased more rapidly than human population. Yet, agricultural advances often compromise biological diversity. Therefore, Malthus's prediction that insufficient food will doom humanity to war, pestilence, and famine will likely be proven correct in the future, because a lack of biodiversity will eventually erode our capacity to produce food.",
+    "questionStem": "The statement that human food-producing capacity has increased more rapidly than human population plays which one of the following roles in the argument?",
+    "answerChoices": {
+      "A": "It is a hypothesis the argument provides reasons for believing to be presently false.",
+      "B": "It is a part of the evidence used in the argument to support the conclusion that a well-known view is misguided.",
+      "C": "It is an observation that the argument suggests actually supports Malthus's position.",
+      "D": "It is a general fact that the argument offers reason to believe will eventually change.",
+      "E": "It is a hypothesis that, according to the argument, is accepted on the basis of inadequate evidence."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "At a gathering at which bankers, athletes, and lawyers are present, all of the bankers are athletes and none of the lawyers are bankers.",
+    "questionStem": "If the statements above are true, which one of the following statements must also be true?",
+    "answerChoices": {
+      "A": "All of the athletes are bankers.",
+      "B": "Some of the lawyers are not athletes.",
+      "C": "Some of the athletes are not lawyers.",
+      "D": "All of the bankers are lawyers.",
+      "E": "None of the lawyers are athletes."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Quality control investigator: Upon testing samples of products from our supplier that were sent by our field inspectors from various manufacturing locations, our laboratory discovered that over 20 percent of the samples were defective. Since our supplier is contractually required to limit the rate of defects among items it manufactures for us to below 5 percent, it has violated its contract with us.",
+    "questionStem": "The reasoning in the quality control investigator's argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "bases its conclusion on too small a sample of items tested by the laboratory",
+      "B": "presumes, without providing justification, that the field inspectors were just as likely to choose a defective item for testing as they were to choose a nondefective item",
+      "C": "overlooks the possibility that a few of the manufacturing sites are responsible for most of the defective items",
+      "D": "overlooks the possibility that the field inspectors tend to choose items for testing that they suspect are defective",
+      "E": "presumes, without providing justification, that the field inspectors made an equal number of visits to each of the various manufacturing sites of the supplier"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "Essayist: When the first prehistoric migrations of humans from Asia to North America took place, the small bands of new arrivals encountered many species of animals that would be extinct only 2,000 years later. Since it is implausible that hunting by these small bands of humans could have had such an effect, and since disease-causing microorganisms not native to North America were undoubtedly borne by the new arrivals as well as by the animals that followed them, these microorganisms were probably the crucial factor that accounts for the extinctions.",
+    "questionStem": "Which one of the following, if true, most weakens the essayist's argument?",
+    "answerChoices": {
+      "A": "Animals weakened by disease are not only less able to avoid hunters but are also less able to avoid their other predators.",
+      "B": "Human beings generally have a substantial degree of biological immunity to the diseases carried by other species.",
+      "C": "Very few species of North American animals not hunted by the new arrivals from Asia were extinct 2,000 years after the first migrations.",
+      "D": "Individual humans and animals can carry a disease-causing microorganism without themselves suffering from the disease.",
+      "E": "Some species of North American animals became extinct more than 2,000 years after the arrival in North America of the first prehistoric human migrants from Asia."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "A recent study confirms that nutritious breakfasts make workers more productive. For one month, workers at Plant A received free nutritious breakfasts every day before work, while workers in Plant B did not. The productivity of Plant A's workers increased, while that of Plant B's workers did not.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Few workers in Plant B consumed nutritious breakfasts during the month of the study.",
+      "B": "Workers in the study from Plant A and Plant B started work at the same time of day.",
+      "C": "During the month before the study, workers at Plant A and Plant B were equally productive.",
+      "D": "Workers from Plant A took fewer vacation days per capita during the month than did workers from Plant B.",
+      "E": "Workers in Plant B were more productive during the month of the study than were workers from Plant A."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Principle Conform",
+    "questionDifficulty": 4,
+    "stimulus": "This year a flood devastated a small river town. Hollyville, also a river town, responded with an outpouring of aid in which a majority of its residents participated, a proportion that far surpassed that of a few years ago when Hollyville sent aid to victims of a highly publicized earthquake. This year's circumstances were a reversal of last year's, when Hollyville itself was the scene of a deadly tornado and so the recipient rather than the supplier of emergency aid.",
+    "questionStem": "The situation described above most closely conforms to which one of the following generalizations?",
+    "answerChoices": {
+      "A": "People are more likely to aid people they know than they are to aid strangers.",
+      "B": "Those who have received aid are more likely to be in favor of government relief programs than are those who have not.",
+      "C": "The amount of aid that victims of a disaster receive is unrelated to the extent to which the disaster is publicized.",
+      "D": "Once a disaster has struck them, people are more likely to aid others in need than they were before the disaster.",
+      "E": "People are more likely to aid those who have experienced a hardship similar to one they themselves have experienced than to aid those who have experienced a dissimilar hardship."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Most Supported",
+    "questionDifficulty": 3,
+    "stimulus": "Market analyst: According to my research, 59 percent of consumers anticipate paying off their credit card balances in full before interest charges start to accrue, intending to use the cards only to avoid carrying cash and writing checks. This research also suggests that in trying to win business from their competitors, credit card companies tend to concentrate on improving the services their customers are the most interested in. Therefore, my research would lead us to expect that",
+    "questionStem": "Which one of the following most logically completes the market analyst's argument?",
+    "answerChoices": {
+      "A": "most consumers would be indifferent about which company's credit card they use",
+      "B": "credit card companies would not make the interest rates they charge on cards the main selling point",
+      "C": "most consumers would prefer paying interest on credit card debts over borrowing money from banks",
+      "D": "most consumers would ignore the length of time a credit card company allows to pay the balance due before interest accrues",
+      "E": "the most intense competition among credit card companies would be over the number of places that they can get to accept their credit card"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "About 3 billion years ago, the Sun was only 80 percent as luminous as it is currently. Such conditions today would result in the freezing of Earth's oceans, but geological evidence shows that water rather than ice filled the oceans at that time. Heat is trapped within Earth's atmosphere through the presence of carbon dioxide, which, like methane, is a “greenhouse gas.” Only if the level of greenhouse gases were higher 3 billion years ago than it is today would Earth have retained enough heat to keep the oceans from freezing. It is likely, therefore, that the level of carbon dioxide in the atmosphere was significantly higher then than it is today.",
+    "questionStem": "Which one of the following, if true, weakens the argument?",
+    "answerChoices": {
+      "A": "Sufficient heat to keep the oceans liquid 3 billion years ago could not have been generated through geological processes such as volcanic activity.",
+      "B": "Geological studies indicate that there is much less methane in Earth's atmosphere today than there was 3 billion years ago.",
+      "C": "Geological evidence indicates that the oceans contained greater amounts of dissolved minerals 3 billion years ago, but not enough to alter their freezing points significantly.",
+      "D": "The increase in the Sun's luminosity over the past 3 billion years roughly coincided with an increasing complexity of life forms on Earth.",
+      "E": "Because the distance from Earth to the Sun has not changed significantly over the last 3 billion years, the increase in the Sun's luminosity has resulted in more radiation reaching Earth."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Commentator: For a free market to function properly, each prospective buyer of an item must be able to contact a large number of independent prospective sellers and compare the prices charged for the item to what the item is worth. Thus, despite advertised prices and written estimates available from many of its individual businesses, the auto repair industry does not constitute a properly functioning free market.",
+    "questionStem": "The conclusion of the commentator's argument follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "People do not usually shop for auto repairs but instead take their autos to their regular repair shop out of habit.",
+      "B": "Some persons who are shopping for auto repairs cannot determine what these repairs are worth.",
+      "C": "Not all auto repair shops give customers written estimates.",
+      "D": "Many auto repair shops charge more for auto repairs than these repairs are worth.",
+      "E": "Because it is not regulated, the auto repair industry does not have standardized prices."
+    },
+    "correctAnswer": "B"
+  }
+]

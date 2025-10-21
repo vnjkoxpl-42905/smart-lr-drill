@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Educators studied the performance of 200 students in a university's history classes. They found that those students who performed the best had either part-time jobs or full-time jobs, had their history classes early in the morning, and had a very limited social life, whereas those students who performed the worst had no jobs, had their history classes early in the morning, and had a very active social life.",
+    "questionStem": "Which one of the following, if true, most helps to explain the educators' findings?",
+    "answerChoices": {
+      "A": "The students compensated for any study time lost due to their jobs but they did not compensate for any study time lost due to their social lives.",
+      "B": "The students who had full-time jobs typically worked late-night hours at those jobs.",
+      "C": "Better students tend to choose classes that are scheduled to meet early in the morning.",
+      "D": "A larger percentage of those students interested in majoring in history had part-time jobs than had full-time jobs.",
+      "E": "Although having a job tends to provide a release from stress, thus increasing academic performance, having a full-time job, like having an active social life, can distract a student from studying."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "All works of art are beautiful and have something to teach us. Thus, since the natural world as a whole is both beautiful and instructive, it is a work of art.",
+    "questionStem": "The reasoning in the argument is flawed because the argument",
+    "answerChoices": {
+      "A": "uses the inherently vague term \"beautiful\" without providing an explicit definition of that term",
+      "B": "attempts to establish an evaluative conclusion solely on the basis of claims about factual matters",
+      "C": "concludes, simply because an object possesses two qualities that are each common to all works of art, that the object is a work of art",
+      "D": "presumes, without providing justification, that only objects that are beautiful are instructive",
+      "E": "fails to consider the possibility that there are many things that are both beautiful and instructive but are not part of the natural world"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Although free international trade allows countries to specialize, which in turn increases productivity, such specialization carries risks. After all, small countries often rely on one or two products for the bulk of their exports. If those products are raw materials, the supply is finite and can be used up. If they are foodstuffs, a natural disaster can wipe out a season's production overnight.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the argument as a whole?",
+    "answerChoices": {
+      "A": "Specialization within international trade comes with risks.",
+      "B": "A natural disaster can destroy a whole season's production overnight, devastating a small country's economy.",
+      "C": "A small country's supply of raw materials can be used up in a short period.",
+      "D": "Some countries rely on a small number of products for the export-based sectors of their economies.",
+      "E": "When international trade is free, countries can specialize in what they export."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Politician: Most of those at the meeting were not persuaded by Kuyler's argument, nor should they have been, for Kuyler's argument implied that it would be improper to enter into a contract with the government; and yet as many people know-Kuyler's company has had numerous lucrative contracts with the government.",
+    "questionStem": "Which one of the following describes a flaw in the politician's argument?",
+    "answerChoices": {
+      "A": "It concludes that an argument is defective merely on the grounds that the argument has failed to persuade anyone of the truth of its conclusion.",
+      "B": "It relies on testimony that is likely to be biased.",
+      "C": "It rejects an argument merely on the grounds that the arguer has not behaved in a way that is consistent with the argument.",
+      "D": "It rejects a position merely on the grounds that an inadequate argument has been given for it.",
+      "E": "It rejects an argument on the basis of an appeal to popular opinion."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Hemoglobin, a substance in human blood, transports oxygen from the lungs to the rest of the body. With each oxygen molecule it picks up, a hemoglobin molecule becomes more effective at picking up additional oxygen molecules until its maximum capacity of four oxygen molecules is reached. Grabbing an oxygen molecule changes the shape of the hemoglobin molecule, each time causing it literally to open itself to receive more oxygen.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "A hemoglobin molecule that has picked up three oxygen molecules will probably acquire a fourth oxygen molecule.",
+      "B": "The only factor determining how effective a hemoglobin molecule is at picking up oxygen molecules is how open the shape of that hemoglobin molecule is.",
+      "C": "A hemoglobin molecule that has picked up three oxygen molecules will be more effective at picking up another oxygen molecule than will a hemoglobin molecule that has picked up only one oxygen molecule.",
+      "D": "A hemoglobin molecule that has picked up four oxygen molecules will have the same shape as a hemoglobin molecule that has not picked up any oxygen molecules.",
+      "E": "Each hemoglobin molecule in human blood picks up between one and four oxygen molecules in or near the lungs and transports them to some other part of the body."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "A recent magazine editorial criticizes psychologists for not attempting to establish the order in which different areas of the brain are activated during a cognitive task such as imagining the face of a friend. However, the editorial is unfair because there is currently no technology that can detect the order of activation of brain areas.",
+    "questionStem": "Which one of the following most closely conforms to the principle to which the reasoning in the passage conforms?",
+    "answerChoices": {
+      "A": "Construction companies have been unfairly criticized for using fewer layers of heating insulation in new houses than the number of layers used in previous years. Recent technology has made insulation more efficient, so fewer layers are required.",
+      "B": "Utility companies have been unfairly criticized for not using nuclear fusion to meet the nation's electricity needs. There is no way to harness fusion that could produce enough electricity to supply even one small town.",
+      "C": "The food industry has been unfairly criticized for attempting to preserve food longer by treating it with radiation. If food remained edible for longer, the cost of food would decrease substantially.",
+      "D": "The school system has been unfairly criticized for not making familiarity with computer technology a requirement. Computer studies could not be added to the curriculum without sacrificing some other subject.",
+      "E": "CEOs of large companies have been unfairly criticized for not always using their knowledge of economic theory to run their companies. Economic theory is sometimes irrelevant to making wise corporate decisions."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Although most people know what their bad habits are and want to rid themselves of them, a majority of these people find it very difficult to do so. This is because cessation of habitual behavior is immediately and vividly painful, while whatever benefit is to be gained by the absence of the habit is perceived only dimly because it is remote.",
+    "questionStem": "The information above most strongly supports the statement that the people who are most successful at ending their bad habits are those who",
+    "answerChoices": {
+      "A": "can vividly imagine remote but attainable benefit",
+      "B": "can vividly imagine their present pain being felt in the future",
+      "C": "have succeeded in the past at modifying their behavior",
+      "D": "are relatively unaware of their own behavioral characteristics",
+      "E": "can vividly remember the pain caused them in the past by their bad habits"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "The more modern archaeologists learn about Mayan civilization, the better they understand its intellectual achievements. Not only were numerous scientific observations and predictions made by Mayan astronomers, but the people in general seem to have had a strong grasp of sophisticated mathematical concepts. We know this from the fact that the writings of the Mayan religious scribes exhibit a high degree of mathematical competence.",
+    "questionStem": "The argument's reasoning is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "fails to provide an adequate definition of the term \"intellectual achievement\"",
+      "B": "bases a generalization on a sample that is likely to be unrepresentative",
+      "C": "overlooks the impressive achievements of other past civilizations",
+      "D": "relies on two different senses of the term \"scientific\"",
+      "E": "takes a mere correlation to be evidence of a causal relationship"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Manager: There is no good reason to suppose that promoting creativity is a proper goal of an employee training program. Many jobs require little or no creativity and, in those positions, using creativity is more likely to be disruptive than innovative. Furthermore, even if creativity were in demand, there is no evidence that it can be taught.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion drawn in the manager's argument?",
+    "answerChoices": {
+      "A": "Using creativity in jobs that require little or no creativity can be disruptive.",
+      "B": "Employee training programs are not able to teach employees creativity.",
+      "C": "Many jobs require little or no creativity.",
+      "D": "There is no good reason to suppose that employee training programs should promote creativity.",
+      "E": "Creativity is in demand, but there is no evidence that it can be taught."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Producer: It has been argued that, while the government should not censor television shows, the public should boycott the advertisers of shows that promote violence and erode our country's values. But this would be censorship nonetheless, for if the public boycotted the advertisers, then they would cancel their advertisements, causing some shows to go off the air; the result would be a restriction of the shows that the public can watch.",
+    "questionStem": "The producer's conclusion is properly inferred if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "If there is neither government censorship nor boycotting of advertisers, there will be no restriction of the television shows that the public can watch.",
+      "B": "Public boycotts could force some shows off the air even though the shows neither promote violence nor erode values.",
+      "C": "For any television show that promotes violence and erodes values, there will be an audience.",
+      "D": "There is widespread public agreement about which television shows promote violence and erode values.",
+      "E": "Any action that leads to a restriction of what the public can view is censorship."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Predictions that printed books will soon be replaced by books in electronic formats such as CD-ROM are exaggerated. While research libraries may find an electronic format more convenient for scholars and scientists, bookstores and public libraries will stock books in the format desired by the general public, which will be something other than an electronic format.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Scholars and scientists find an electronic format for books the most convenient one for quick searching and cross-referencing.",
+      "B": "Publishers will continue to print books in the format stocked by bookstores and public libraries.",
+      "C": "Scholars and scientists do not usually conduct their research in public libraries.",
+      "D": "At some bookstores and libraries, the popularity of books on tape and of videos is beginning to rival that of printed books.",
+      "E": "Some members of the general public prefer to purchase books in an electronic format rather than borrow them from the library."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "To cut costs, a high school modified its air-conditioning system to increase its efficiency. The modified system, however, caused the humidity in the school air to decrease by 18 percent. Twenty-four hours after the decrease in air humidity, a 25 percent increase in the number of visits to the school nurse was reported. This shows that a decrease in humidity can make people ill.",
+    "questionStem": "The argument depends on assuming which one of the following?",
+    "answerChoices": {
+      "A": "At least some of the visits to the school nurse after the system was modified were due to illness.",
+      "B": "Most of the students at the high school suffered from the decrease in air humidity.",
+      "C": "It takes 24 hours after a person is infected with a virus for that person to exhibit symptoms.",
+      "D": "A decrease of 18 percent in air humidity causes an increase of 25 percent in one's probability of becoming ill.",
+      "E": "Modifying the air-conditioning system proved to be an ineffective way to cut costs."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Weaken",
+    "questionDifficulty": 4,
+    "stimulus": "A recent study of 10,000 people who were involved in automobile accidents found that a low percentage of those driving large automobiles at the time of their accidents were injured, but a high percentage of those who were driving small automobiles at the time of their accidents were injured. Thus, one is less likely to be injured in an automobile accident if one drives a large car rather than a small car.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "answerChoices": {
+      "A": "Most of the accidents analyzed in the study occurred in areas with very high speed limits.",
+      "B": "Most people who own small cars also drive large cars on occasion.",
+      "C": "Half of the study participants drove medium-sized cars at the time of their accidents.",
+      "D": "A large automobile is far more likely to be involved in an accident than is a small automobile.",
+      "E": "Only a small percentage of those people involved in an automobile accident are injured as a result."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Economist: A country's trade deficit may indicate weakness in its economy, but it does not in itself weaken that economy. So restricting imports to reduce a trade deficit would be like sticking a thermometer into a glass of cold water in the hope of bringing down a patient's feverish temperature.",
+    "questionStem": "The economist's argument employs which one of the following techniques?",
+    "answerChoices": {
+      "A": "claiming that a crucial assumption entails a falsehood",
+      "B": "demonstrating that an analogy explicitly used to establish a certain conclusion is faulty",
+      "C": "appealing to an analogy in order to indicate the futility of a course of action",
+      "D": "calling into question the authority on the basis of which a claim is made",
+      "E": "showing that a recommended course of action would have disastrous consequences"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "A common genetic mutation that lowers levels of the enzyme cathepsin C severely reduces a person's ability to ward off periodontitis, or gum disease. The enzyme triggers immunological reactions that destroy diseased cells and eliminate infections in the mouth. But researchers are developing ways to restore the enzyme to normal levels. Once that happens, we will be able to eliminate periodontitis.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Restoring cathepsin C to normal levels is the only way to eliminate periodontitis.",
+      "B": "Genetic mutation is the only cause of lowered levels of cathepsin C.",
+      "C": "Researchers will soon succeed in finding means of restoring cathepsin C to normal levels.",
+      "D": "Persons who do not have the genetic mutation that lowers levels of cathepsin C do not get gum disease.",
+      "E": "A person whose cathepsin C level has been restored to normal will not suffer from periodontitis."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Paradox",
+    "questionDifficulty": 4,
+    "stimulus": "A recent study of major motion pictures revealed that the vast majority of their plots were simply variations on plots that had been used many times before. Despite this fact, many people enjoy seeing several new movies each year.",
+    "questionStem": "Each of the following, if true, would contribute to an explanation of the apparent discrepancy in the information above except:",
+    "answerChoices": {
+      "A": "Movies based on standard plots are more likely to be financially successful than are ones based on original plots.",
+      "B": "If the details of their stories are sufficiently different, two movies with the same basic plot will be perceived by moviegoers as having different plots.",
+      "C": "Because of the large number of movies produced each year, the odds of a person seeing two movies with the same general plot structure in a five-year period are fairly low.",
+      "D": "A certain aesthetic pleasure is derived from seeing several movies that develop the same plot in slightly different ways.",
+      "E": "Although most modern movie plots have been used before, most of those previous uses occurred during the 1940s and 1950s."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Education critics' contention that the use of calculators in mathematics classes will undermine students' knowledge of the rationale underlying calculational procedures is clearly false. Every new information-handling technology has produced virtually the same accusation. Some Greek philosophers, for example, believed that the advent of written language would erode people's capacity to remember information and speak extemporaneously.",
+    "questionStem": "The reasoning in the argument above is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "presents only evidence whose relevancy to the issue raised by the opponents has not been established",
+      "B": "draws a conclusion based on an ambiguous notion of knowledge",
+      "C": "takes for granted that the advantages offered by new information-handling technologies always outweigh the disadvantages",
+      "D": "takes a condition that suffices to prove its conclusion to be a condition necessary for the truth of that conclusion",
+      "E": "concludes that a hypothesis is false simply because it contradicts other beliefs held by the advocates of that hypothesis"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "Scott: The Hippocratic oath demands, specifically, that doctors \"never divulge\" information about patients. Hence the psychiatrist who released tapes of a poet's therapy sessions after the poet's death violated his oath by his actions, even though the tapes were released after the poet's death and to the poet's official biographer. It makes no difference that the poet's published works were written in a confessional manner or that she had assured the psychiatrist that he could do with the tapes as he saw fit.\nBonara: I agree that doctors are bound not to divulge patient information and would not myself release such tapes without written permission from the patient. Nevertheless, I disagree that the circumstances were irrelevant in this case. I do not think the poet's psychiatrist violated the Hippocratic oath.",
+    "questionStem": "Which one of the following principles, if established, helps most to justify Scott's evaluation of the psychiatrist's actions?",
+    "answerChoices": {
+      "A": "Restrictions on the release of patient information by psychiatrists are not binding after the patient's death, since after death a person can no longer suffer harm.",
+      "B": "Once a patient has granted a psychiatrist permission to release confidential information, that information can be released to anyone at the psychiatrist's discretion.",
+      "C": "Since a psychiatrist could influence a patient's opinions during therapy, any directives to the psychiatrist by the patient must be interpreted in the light of the patient's actions outside the therapeutic setting.",
+      "D": "Since any psychiatrist's divulging to the public information about a patient could undermine the trust of other patients in their psychiatrists, no patient can release a psychiatrist from the obligation to keep patient information confidential.",
+      "E": "If a patient has expressed an intention to make public information about himself or herself that is in a psychiatrist's possession, the psychiatrist is released from the obligation to keep that information confidential."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Professor Gandolf says that all political systems that aim at preventing conflict are legitimate. However, totalitarian political systems are usually good at preventing conflict, since those who are not in power are subject to the will of the powerful. But since all totalitarian political systems are illegitimate, Professor Gandolf's principle must be false.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "At least one political system that does not aim at preventing conflict is legitimate.",
+      "B": "If a totalitarian political system prevents conflict, such prevention is only incidental to its true aims.",
+      "C": "At least one totalitarian political system aims at preventing conflict.",
+      "D": "No political system that fails to prevent conflict is legitimate.",
+      "E": "Some political systems that are not totalitarian are illegitimate."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Most Supported",
+    "questionDifficulty": 4,
+    "stimulus": "Musicologist: Ludwig van Beethoven began losing his hearing when he was 30. This loss continued gradually, but was not complete until late in his life. While it may seem that complete hearing loss would be a severe liability for a composer, in Beethoven's case it gave his later music a wonderfully introspective quality that his earlier music lacked.",
+    "questionStem": "Which one of the following statements is most strongly supported by the musicologist's claims?",
+    "answerChoices": {
+      "A": "It was more difficult for Beethoven to compose his later works than his earlier ones.",
+      "B": "Had he not lost his hearing, Beethoven's later music would have been of poorer quality than it is.",
+      "C": "Had he not lost his hearing, Beethoven would have been less introspective than he was.",
+      "D": "Beethoven's music became gradually more introspective as he grew older.",
+      "E": "Had he not lost his hearing, Beethoven's later music would probably have been different than it is."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Critic: Historians purport to discover the patterns inherent in the course of events. But historians actually impose, rather than find, such patterns by choosing what to include in and exclude from their historical narratives. Thus, properly understood, histories reveal more about the presuppositions underlying different historians' attempts to understand what happened than about what actually happened.",
+    "questionStem": "The critic's argument depends on which one of the following assumptions?",
+    "answerChoices": {
+      "A": "Historians have many presuppositions in common with one another.",
+      "B": "There is no way to determine with certainty whether a pattern described by a historian is actually present in and not merely imposed upon the events.",
+      "C": "Historians presuppose that certain historical patterns accurately describe many different eras.",
+      "D": "Most historians cannot become aware of the presuppositions that they bring to their narratives.",
+      "E": "Which pattern a historian imposes upon events is affected by that historian's presuppositions."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Since anyone who makes an agreement has an obligation to fulfill the terms of that agreement, it follows that anyone who is obligated to perform an action has agreed to perform that action. Hence, saying that one has a legal obligation to perform a given action is the same as saying that one is required to fulfill one's agreement to perform that action.",
+    "questionStem": "Which one of the following statements most accurately characterizes the argument's reasoning flaws?",
+    "answerChoices": {
+      "A": "The argument fails to make a crucial distinction between an action one is legally obligated to perform and an action with good consequences, and it takes for granted that everything true of legal obligations is true of obligations generally.",
+      "B": "The argument takes for granted that there are obligations other than those resulting from agreements made, and it fails to consider the possibility that actions that uphold agreements made are sometimes performed for reasons other than to uphold those agreements.",
+      "C": "The argument contains a premise that is logically equivalent to its conclusion, and it takes for granted that there are only certain actions that one should agree to perform.",
+      "D": "The argument treats a condition that is sufficient to make something an obligation as also a requirement for something to be an obligation, and it takes for granted that any obligation to perform an action is a legal obligation.",
+      "E": "The argument rests on an ambiguous use of the term \"action,\" and it fails to consider the possibility that people are sometimes unwilling to perform actions that they have agreed to perform."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "Method",
+    "questionDifficulty": 4,
+    "stimulus": "To predict that a device will be invented, one must develop a conception of the device that includes some details at least about how it will function and the consequences of its use. But clearly, then, the notion of predicting an invention is self-contradictory, for inventing means developing a detailed conception, and one cannot predict what has already taken place.",
+    "questionStem": "Which one of the following most accurately describes the technique of reasoning employed by the argument?",
+    "answerChoices": {
+      "A": "constructing a counterexample to a general hypothesis about the future",
+      "B": "appealing to definitions to infer the impossibility of a kind of occurrence",
+      "C": "countering a hypothesis by indicating the falsehood of the implications of that hypothesis",
+      "D": "pointing out how a problem is widely thought to be scientific yet is really conceptual",
+      "E": "attempting to show that predicting any event implies that it has in fact already taken place"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Eighteenth-century European aesthetics was reasonably successful in providing an understanding of all art, including early abstract art, until the 1960s, when artists self-consciously rebelled against earlier notions of art. Since the work of these rebellious artists is quite beautiful but outside the bounds of the aesthetic theory then current, there can be no complete theory of aesthetics.",
+    "questionStem": "The reasoning above is most vulnerable to criticism in that it",
+    "answerChoices": {
+      "A": "takes for granted that it is more important for a complete aesthetic theory to account for the beauty of traditional art than for it to account for the beauty of self-consciously rebellious art",
+      "B": "presumes, without providing justification, that artists' rebellion in the 1960s against earlier notions of art was not guided by their knowledge of eighteenth-century European aesthetic theory",
+      "C": "presumes, without providing justification, that an aesthetic theory developed in one part of the world cannot be applied in another",
+      "D": "presumes, without providing justification, that art from the 1960s is the only art that cannot be adequately addressed by eighteenth-century European aesthetics",
+      "E": "presumes, without providing justification, that eighteenth-century European aesthetics is as encompassing as an aesthetic theory can be"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT131",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Science writer: All scientists have beliefs and values that might slant their interpretations of the data from which they draw their conclusions. However, serious scientific papers are carefully reviewed by many other scientists before publication. These reviewers are likely to notice and object to biases that they do not share. Thus, any slanted interpretations of scientific data will generally have been removed before publication.",
+    "questionStem": "Which one of the following is an assumption required by the science writer's argument?",
+    "answerChoices": {
+      "A": "The scientists reviewing serious scientific papers for publication do not always have biases likely to slant their interpretations of the data in those papers.",
+      "B": "In general, biases that slant interpretations of data in serious scientific papers being reviewed for publication are not shared among all scientists.",
+      "C": "Biases that are present in published scientific papers and shared by most scientists, including those who review the papers, are unlikely to impair the scientific value of those papers.",
+      "D": "The interpretation of data is the only part of a serious scientific paper that is sometimes slanted by the beliefs and values of scientists.",
+      "E": "Slanted interpretations of data in a scientific paper can be removed only through careful review by scientists who do not share the biases of the author or authors of the paper."
+    },
+    "correctAnswer": "B"
+  }
+]
