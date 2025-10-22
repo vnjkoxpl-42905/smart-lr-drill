@@ -1377,21 +1377,19 @@ function DrillContent() {
           </div>
         </div>
 
-      {/* Compact toolbar - icon-only */}
-      {session.mode === 'full-section' && (
-        <div className="px-8 py-2 border-b border-border/50 bg-background/60">
-          <div className="flex items-center justify-end max-w-[1800px] mx-auto">
-            <HighlightToolbar 
-              mode={highlightMode} 
-              onModeChange={setHighlightMode}
-              isFlagged={isFlagged}
-              onToggleFlag={handleToggleFlag}
-              onUndo={handleUndo}
-              canUndo={highlightHistory.length > 0}
-            />
-          </div>
+      {/* Compact toolbar - Available for all modes */}
+      <div className="px-8 py-2 border-b border-border/50 bg-background/60">
+        <div className="flex items-center justify-end max-w-[1800px] mx-auto">
+          <HighlightToolbar 
+            mode={highlightMode} 
+            onModeChange={setHighlightMode}
+            isFlagged={isFlagged}
+            onToggleFlag={handleToggleFlag}
+            onUndo={handleUndo}
+            canUndo={highlightHistory.length > 0}
+          />
         </div>
-      )}
+      </div>
 
       {/* Main Content */}
       <div className="flex-1 flex overflow-hidden">
