@@ -89,34 +89,56 @@ export function HighlightedText({
                 );
               }
               
-              const getHighlightClass = (color: string) => {
-                switch(color) {
-                  case 'yellow': return 'bg-yellow-400/30';
-                  case 'pink': return 'bg-pink-400/30';
-                  case 'orange': return 'bg-orange-400/30';
-                  case 'underline': return 'underline decoration-foreground decoration-2 underline-offset-2';
-                  default: return 'bg-yellow-400/30';
+              const getHighlightStyles = (color: string) => {
+                const baseStyles = {
+                  display: 'inline' as const,
+                  padding: 0,
+                  margin: 0,
+                  border: 'none',
+                  lineHeight: 'inherit',
+                  letterSpacing: 'inherit',
+                  wordSpacing: 'inherit',
+                  verticalAlign: 'baseline',
+                  whiteSpace: 'pre-wrap' as const,
+                  background: 'none',
+                  mixBlendMode: 'normal' as const,
+                  borderRadius: 0,
+                  WebkitBoxDecorationBreak: 'clone' as const,
+                  boxDecorationBreak: 'clone' as const,
+                };
+
+                if (color === 'underline') {
+                  return {
+                    ...baseStyles,
+                    textDecoration: 'underline',
+                    textDecorationColor: 'currentColor',
+                    textDecorationThickness: '2px',
+                    textUnderlineOffset: '2px',
+                  };
                 }
+
+                const shadowColors = {
+                  yellow: 'rgba(255, 223, 0, 0.35)',
+                  pink: 'rgba(255, 120, 160, 0.35)',
+                  orange: 'rgba(255, 160, 64, 0.35)',
+                };
+
+                return {
+                  ...baseStyles,
+                  boxShadow: `inset 0 -0.6em ${shadowColors[color as keyof typeof shadowColors] || shadowColors.yellow}`,
+                };
               };
 
               segments.push(
                 <mark
                   key={`highlight-${highlight.id}`}
+                  data-highlight-id={highlight.id}
                   className={cn(
-                    getHighlightClass(highlight.color),
-                    "transition-colors",
-                    eraserMode && "cursor-pointer hover:bg-red-400/50"
+                    "hl",
+                    "transition-all",
+                    eraserMode && "cursor-pointer hover:opacity-60"
                   )}
-                  style={{
-                    padding: 0,
-                    margin: 0,
-                    border: 'none',
-                    lineHeight: 'inherit',
-                    mixBlendMode: 'normal',
-                    boxDecorationBreak: 'clone',
-                    WebkitBoxDecorationBreak: 'clone',
-                    ...(highlight.color === 'underline' ? { background: 'transparent' } : {})
-                  }}
+                  style={getHighlightStyles(highlight.color)}
                   onClick={() => eraserMode && onHighlightClick?.(highlight.id)}
                 >
                   {turnRange.turn.text.slice(highlight.start, highlight.end)}
@@ -213,34 +235,56 @@ export function HighlightedText({
           }
           
           // Add highlighted text
-          const getHighlightClass = (color: string) => {
-            switch(color) {
-              case 'yellow': return 'bg-yellow-400/30';
-              case 'pink': return 'bg-pink-400/30';
-              case 'orange': return 'bg-orange-400/30';
-              case 'underline': return 'underline decoration-foreground decoration-2 underline-offset-2';
-              default: return 'bg-yellow-400/30';
+          const getHighlightStyles = (color: string) => {
+            const baseStyles = {
+              display: 'inline' as const,
+              padding: 0,
+              margin: 0,
+              border: 'none',
+              lineHeight: 'inherit',
+              letterSpacing: 'inherit',
+              wordSpacing: 'inherit',
+              verticalAlign: 'baseline',
+              whiteSpace: 'pre-wrap' as const,
+              background: 'none',
+              mixBlendMode: 'normal' as const,
+              borderRadius: 0,
+              WebkitBoxDecorationBreak: 'clone' as const,
+              boxDecorationBreak: 'clone' as const,
+            };
+
+            if (color === 'underline') {
+              return {
+                ...baseStyles,
+                textDecoration: 'underline',
+                textDecorationColor: 'currentColor',
+                textDecorationThickness: '2px',
+                textUnderlineOffset: '2px',
+              };
             }
+
+            const shadowColors = {
+              yellow: 'rgba(255, 223, 0, 0.35)',
+              pink: 'rgba(255, 120, 160, 0.35)',
+              orange: 'rgba(255, 160, 64, 0.35)',
+            };
+
+            return {
+              ...baseStyles,
+              boxShadow: `inset 0 -0.6em ${shadowColors[color as keyof typeof shadowColors] || shadowColors.yellow}`,
+            };
           };
 
           segments.push(
             <mark
               key={`highlight-${highlight.id}`}
+              data-highlight-id={highlight.id}
               className={cn(
-                getHighlightClass(highlight.color),
-                "transition-colors",
-                eraserMode && "cursor-pointer hover:bg-red-400/50"
+                "hl",
+                "transition-all",
+                eraserMode && "cursor-pointer hover:opacity-60"
               )}
-              style={{
-                padding: 0,
-                margin: 0,
-                border: 'none',
-                lineHeight: 'inherit',
-                mixBlendMode: 'normal',
-                boxDecorationBreak: 'clone',
-                WebkitBoxDecorationBreak: 'clone',
-                ...(highlight.color === 'underline' ? { background: 'transparent' } : {})
-              }}
+              style={getHighlightStyles(highlight.color)}
               onClick={() => eraserMode && onHighlightClick?.(highlight.id)}
             >
               {paraRange.text.slice(highlight.start, highlight.end)}

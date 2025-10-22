@@ -128,4 +128,22 @@ All colors MUST be HSL.
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* Highlight styles - zero layout shift */
+  .hl {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    background: none;
+    mix-blend-mode: normal;
+    border-radius: 0;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 }

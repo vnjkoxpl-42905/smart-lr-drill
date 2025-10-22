@@ -848,21 +848,12 @@ function DrillContent() {
   }, [session, handleNext, handlePrevious, currentQuestion]);
 
   const handleTextSelection = (e: React.MouseEvent, section: 'stimulus' | 'stem') => {
-    if (highlightMode === 'none' || highlightMode === 'erase') return;
+    if (highlightMode === 'none') return;
     
     const container = e.currentTarget as HTMLElement;
     const selection = captureTextSelection(container);
     
     if (!selection || !currentQuestion) return;
-    
-    const newHighlight: Highlight = {
-      id: crypto.randomUUID(),
-      start: selection.start,
-      end: selection.end,
-      text: selection.text,
-      color: highlightMode as HighlightColor,
-      section
-    };
     
     const currentHighlights = highlights.get(currentQuestion.qid) || [];
     
@@ -873,10 +864,62 @@ function DrillContent() {
       return newHistory.slice(-MAX_HISTORY);
     });
     
-    // Use replaceOverlappingHighlights to implement "last action wins"
-    const updatedHighlights = replaceOverlappingHighlights(currentHighlights, newHighlight);
-    
-    setHighlights(new Map(highlights.set(currentQuestion.qid, updatedHighlights)));
+    if (highlightMode === 'erase') {
+      // Eraser mode: remove overlapping portions
+      const updatedHighlights = currentHighlights.filter(h => {
+        // Keep highlights from different sections
+        if (h.section !== section) return true;
+        
+        // Check for overlap
+        return h.end <= selection.start || h.start >= selection.end;
+      }).concat(
+        // Split and keep non-overlapping portions
+        currentHighlights
+          .filter(h => h.section === section && h.start < selection.end && h.end > selection.start)
+          .flatMap(h => {
+            const parts: Highlight[] = [];
+            
+            // Keep the part before the erased selection
+            if (h.start < selection.start) {
+              parts.push({
+                ...h,
+                id: `${h.id}-before`,
+                end: selection.start,
+                text: h.text.slice(0, selection.start - h.start)
+              });
+            }
+            
+            // Keep the part after the erased selection
+            if (h.end > selection.end) {
+              parts.push({
+                ...h,
+                id: `${h.id}-after`,
+                start: selection.end,
+                text: h.text.slice(selection.end - h.start)
+              });
+            }
+            
+            return parts;
+          })
+      );
+      
+      setHighlights(new Map(highlights.set(currentQuestion.qid, updatedHighlights)));
+    } else {
+      // Highlight mode: add new highlight
+      const newHighlight: Highlight = {
+        id: crypto.randomUUID(),
+        start: selection.start,
+        end: selection.end,
+        text: selection.text,
+        color: highlightMode as HighlightColor,
+        section
+      };
+      
+      // Use replaceOverlappingHighlights to implement "last action wins"
+      const updatedHighlights = replaceOverlappingHighlights(currentHighlights, newHighlight);
+      
+      setHighlights(new Map(highlights.set(currentQuestion.qid, updatedHighlights)));
+    }
     
     // Clear selection
     window.getSelection()?.removeAllRanges();
@@ -1467,7 +1510,7 @@ function DrillContent() {
                   className={cn(
                     "prose prose-lg max-w-none",
                     "text-[17px] leading-[1.8] text-foreground",
-                    (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
+                    highlightMode !== 'none' ? 'select-text cursor-text' : 'select-none cursor-default'
                   )}
                   onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
                 >
@@ -1520,7 +1563,7 @@ function DrillContent() {
               <div 
                 className={cn(
                   "text-[22px] font-semibold text-foreground leading-[1.65] tracking-tight",
-                  (highlightMode !== 'none' && highlightMode !== 'erase') ? 'select-text cursor-text' : 'select-none cursor-default'
+                  highlightMode !== 'none' ? 'select-text cursor-text' : 'select-none cursor-default'
                 )}
                 onMouseUp={(e) => handleTextSelection(e, 'stem')}
               >
