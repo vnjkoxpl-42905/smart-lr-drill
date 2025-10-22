@@ -1295,7 +1295,7 @@ function DrillContent() {
       <div
         key={key}
         className={cn(
-          "group relative flex items-start gap-4 py-5 px-5 -mx-5",
+          "group relative flex items-start gap-4 py-3.5 px-5 -mx-5",
           "transition-all duration-[120ms] ease-out",
           "border-b border-border",
           isEliminated && "opacity-55",
@@ -1506,7 +1506,7 @@ function DrillContent() {
           <>
         {/* Left Panel - Stimulus */}
         <div className="flex-1 overflow-y-auto">
-          <div className="p-8 max-w-4xl mx-auto pb-32">
+          <div className="p-8 max-w-4xl mx-auto pb-8">
             {currentQuestion.stimulus && (() => {
               const fullText = normalizeText(currentQuestion.stimulus);
               const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
@@ -1563,9 +1563,9 @@ function DrillContent() {
 
         {/* Right Panel - Question & Answers */}
         <div className="flex-1 overflow-y-auto border-l border-border">
-          <div className="p-8 max-w-3xl pb-32">
+          <div className="p-8 max-w-3xl pb-8">
             {/* Question Stem - Large and confident */}
-            <div className="mb-10">
+            <div className="mb-8">
               <div 
                 className={cn(
                   "text-[22px] font-semibold text-foreground leading-[1.65] tracking-tight",
