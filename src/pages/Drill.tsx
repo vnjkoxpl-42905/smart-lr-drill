@@ -91,6 +91,8 @@ function DrillContent() {
   const [brSelectedQids, setBrSelectedQids] = React.useState<string[]>([]);
   const [brResults, setBrResults] = React.useState<any[]>([]);
   const [showBRResults, setShowBRResults] = React.useState(false);
+  const [isRetryAfterWrong, setIsRetryAfterWrong] = React.useState(false);
+  const [correctExplanation, setCorrectExplanation] = React.useState<string>('');
   
   // New post-section flow states
   const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
@@ -296,6 +298,8 @@ function DrillContent() {
     setEliminatedAnswers(new Set());
     setQuestionStartTime(performance.now());
     setHighlightHistory([]);
+    setIsRetryAfterWrong(false);
+    setCorrectExplanation('');
     
     // For section mode, restore the saved answer if navigating back
     if (session?.mode === 'full-section' && currentQuestion) {
@@ -420,6 +424,7 @@ function DrillContent() {
     setConfidence(null);
     setAnswerLocked(false);
     setQuestionStartTime(performance.now());
+    setIsRetryAfterWrong(true); // Mark that this is a retry
   };
 
   const handleContinueToReview = () => {
@@ -594,10 +599,10 @@ function DrillContent() {
 
     // After wrong answer in adaptive mode, show Joshua's feedback automatically
     if (!correct && session.mode === 'adaptive') {
-      // Open text tutor with specific feedback
+      setIsRetryAfterWrong(false); // Reset retry flag
       setTutorChatOpen(true);
     } else {
-      // Save correct attempt to database
+      // Correct answer - save and show solution with Next button (don't auto-advance)
       await saveAttemptToDatabase({
         qid: currentQuestion.qid,
         correct: true,
@@ -653,7 +658,39 @@ function DrillContent() {
       }
 
       setSession({ ...session, attempts: newAttempts });
+      
+      // If this is a retry after wrong answer, generate explanation
+      if (isRetryAfterWrong && session.mode === 'adaptive') {
+        await generateCorrectExplanation();
+      }
+      
       setShowSolution(true);
+      // Don't auto-advance - user clicks Next
+    }
+  };
+
+  const generateCorrectExplanation = async () => {
+    if (!currentQuestion) return;
+    
+    try {
+      const { data, error } = await supabase.functions.invoke('tutor-chat', {
+        body: {
+          question: currentQuestion,
+          messages: [{
+            role: 'user',
+            content: `I got this question correct on my second try! Can you give me a super specific explanation about why choice (${selectedAnswer}) is correct? Be very specific about how it relates to the question and provide a key insight. Keep it concise but insightful.`
+          }]
+        }
+      });
+
+      if (error) throw error;
+      
+      if (data?.response) {
+        setCorrectExplanation(data.response);
+      }
+    } catch (err) {
+      console.error('Error generating explanation:', err);
+      setCorrectExplanation('Great job getting it right! The correct answer demonstrates your understanding of the key concept.');
     }
   };
 
@@ -1196,8 +1233,11 @@ function DrillContent() {
   ) => {
     const { isSelected = false, showRadio = true, inFocusedMode = false } = options;
     const isCorrect = key === currentQuestion.correctAnswer;
+    const isWrong = key === selectedAnswer && !isCorrect;
     // Hide feedback during section mode
     const showFeedback = session?.mode !== 'full-section' && answerLocked && isSelected && confidence !== null;
+    // Show green highlight when solution is revealed and this is the correct answer
+    const showGreenHighlight = showSolution && isCorrect;
 
     const isSectionMode = session?.mode === 'full-section';
     const isEliminated = eliminatedAnswers.has(key);
@@ -1209,7 +1249,8 @@ function DrillContent() {
           "group relative flex items-start gap-4 py-5 px-5 -mx-5",
           "transition-all duration-[120ms] ease-out",
           "border-b border-border",
-          isEliminated && "opacity-55"
+          isEliminated && "opacity-55",
+          showGreenHighlight && "bg-green-50 dark:bg-green-900/20 border-l-4 border-l-green-500"
         )}
       >
         {/* Radio or selected indicator */}
@@ -1580,19 +1621,42 @@ function DrillContent() {
 
             {/* Solution */}
             {showSolution && (
-              <div className="mt-6 p-4 border-t">
-                <div className="flex items-center gap-2 mb-2">
+              <div className="mt-6 p-6 border-t space-y-4">
+                <div className="flex items-center gap-2">
                   {selectedAnswer === currentQuestion.correctAnswer ? (
-                    <CheckCircle className="w-5 h-5 text-success" />
+                    <CheckCircle className="w-5 h-5 text-green-500" />
                   ) : (
                     <XCircle className="w-5 h-5 text-destructive" />
                   )}
-                  <span className="font-semibold">
+                  <span className="font-semibold text-lg">
                     {selectedAnswer === currentQuestion.correctAnswer
                       ? 'Correct!'
                       : `The correct answer is (${currentQuestion.correctAnswer}).`}
                   </span>
                 </div>
+                
+                {/* Good job message with AI explanation for retry success */}
+                {isRetryAfterWrong && selectedAnswer === currentQuestion.correctAnswer && session.mode === 'adaptive' && (
+                  <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-700 dark:text-green-400 mb-2">🎉 Good Job!</h4>
+                    <p className="text-sm text-green-600 dark:text-green-300 leading-relaxed">
+                      {correctExplanation || 'You got it right on your second try! That shows great learning.'}
+                    </p>
+                  </div>
+                )}
+
+                {/* Next button for adaptive mode */}
+                {session.mode === 'adaptive' && (
+                  <div className="flex justify-end pt-2">
+                    <Button
+                      onClick={handleNext}
+                      size="lg"
+                      className="min-w-[120px]"
+                    >
+                      Next Question
+                    </Button>
+                  </div>
+                )}
               </div>
             )}
           </div>

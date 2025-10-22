@@ -91,11 +91,11 @@ export function HighlightedText({
               
               const getHighlightClass = (color: string) => {
                 switch(color) {
-                  case 'yellow': return 'bg-yellow-300/60';
-                  case 'pink': return 'bg-pink-300/60';
-                  case 'orange': return 'bg-orange-300/60';
-                  case 'underline': return 'underline decoration-black decoration-2';
-                  default: return 'bg-yellow-300/60';
+                  case 'yellow': return 'bg-yellow-300/70';
+                  case 'pink': return 'bg-pink-300/70';
+                  case 'orange': return 'bg-orange-300/70';
+                  case 'underline': return 'underline decoration-foreground decoration-2 underline-offset-2';
+                  default: return 'bg-yellow-300/70';
                 }
               };
 
@@ -214,11 +214,11 @@ export function HighlightedText({
           // Add highlighted text
           const getHighlightClass = (color: string) => {
             switch(color) {
-              case 'yellow': return 'bg-yellow-300/60';
-              case 'pink': return 'bg-pink-300/60';
-              case 'orange': return 'bg-orange-300/60';
-              case 'underline': return 'underline decoration-black decoration-2';
-              default: return 'bg-yellow-300/60';
+              case 'yellow': return 'bg-yellow-300/70';
+              case 'pink': return 'bg-pink-300/70';
+              case 'orange': return 'bg-orange-300/70';
+              case 'underline': return 'underline decoration-foreground decoration-2 underline-offset-2';
+              default: return 'bg-yellow-300/70';
             }
           };
 

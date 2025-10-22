@@ -43,14 +43,14 @@ export function HighlightToolbar({
       {/* Color Dot Buttons - Smaller and quieter */}
       <button
         onClick={() => onModeChange(mode === 'yellow' ? 'none' : 'yellow')}
-        title="Yellow"
+        title="Bright Yellow"
         className={cn(
           "h-6 w-6 rounded-full transition-all shrink-0",
           mode === 'yellow' 
-            ? "bg-yellow-500 ring-2 ring-yellow-500/40 scale-105" 
-            : "bg-yellow-400/70 hover:bg-yellow-500 opacity-50 hover:opacity-100"
+            ? "bg-yellow-400 ring-2 ring-yellow-400/50 scale-105" 
+            : "bg-yellow-400/60 hover:bg-yellow-400 opacity-60 hover:opacity-100"
         )}
-        aria-label="Yellow highlight"
+        aria-label="Bright yellow highlight"
       />
 
       <button
@@ -59,8 +59,8 @@ export function HighlightToolbar({
         className={cn(
           "h-6 w-6 rounded-full transition-all shrink-0",
           mode === 'pink' 
-            ? "bg-pink-500 ring-2 ring-pink-500/40 scale-105" 
-            : "bg-pink-400/70 hover:bg-pink-500 opacity-50 hover:opacity-100"
+            ? "bg-pink-400 ring-2 ring-pink-400/50 scale-105" 
+            : "bg-pink-400/60 hover:bg-pink-400 opacity-60 hover:opacity-100"
         )}
         aria-label="Pink highlight"
       />
@@ -71,8 +71,8 @@ export function HighlightToolbar({
         className={cn(
           "h-6 w-6 rounded-full transition-all shrink-0",
           mode === 'orange' 
-            ? "bg-orange-500 ring-2 ring-orange-500/40 scale-105" 
-            : "bg-orange-400/70 hover:bg-orange-500 opacity-50 hover:opacity-100"
+            ? "bg-orange-400 ring-2 ring-orange-400/50 scale-105" 
+            : "bg-orange-400/60 hover:bg-orange-400 opacity-60 hover:opacity-100"
         )}
         aria-label="Orange highlight"
       />
