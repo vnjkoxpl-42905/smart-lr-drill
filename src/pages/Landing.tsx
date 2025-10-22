@@ -105,15 +105,15 @@ export default function Landing() {
       
       <div 
         className={cn(
-          "min-h-screen p-8 transition-opacity duration-300",
-          !introComplete && "opacity-0"
+          "min-h-screen p-8 transition-all duration-500",
+          introComplete ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         )}
       >
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 animate-fade-in">
         <div className="flex justify-between items-center mb-4">
           <Button 
             variant="ghost" 
-            className="gap-2"
+            className="gap-2 transition-all duration-200 hover:scale-105"
             onClick={() => navigate('/profile')}
           >
             <Avatar className="h-8 w-8">
@@ -122,13 +122,25 @@ export default function Landing() {
             <span>Profile</span>
           </Button>
           <div className="flex gap-3">
-            <Button variant="outline" onClick={() => navigate('/analytics')}>
+            <Button 
+              variant="outline" 
+              onClick={() => navigate('/analytics')}
+              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+            >
               Analytics
             </Button>
-            <Button variant="outline" onClick={() => navigate('/waj')}>
+            <Button 
+              variant="outline" 
+              onClick={() => navigate('/waj')}
+              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+            >
               Wrong Answer Journal
             </Button>
-            <Button variant="outline" onClick={() => navigate('/dashboard')}>
+            <Button 
+              variant="outline" 
+              onClick={() => navigate('/dashboard')}
+              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+            >
               Dashboard
             </Button>
           </div>

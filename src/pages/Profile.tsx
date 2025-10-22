@@ -103,7 +103,7 @@ export default function Profile() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
-      <div className="container mx-auto px-4 py-8 max-w-2xl">
+      <div className="container mx-auto px-4 py-8 max-w-2xl animate-fade-in">
         <Button
           variant="ghost"
           onClick={() => navigate('/')}
@@ -113,7 +113,7 @@ export default function Profile() {
           Back to Home
         </Button>
 
-        <Card>
+        <Card className="hover:shadow-lg transition-all duration-300">
           <CardHeader className="text-center">
             <div className="flex justify-center mb-4">
               <Avatar className="h-24 w-24">
@@ -125,7 +125,7 @@ export default function Profile() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-4">
-              <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
+              <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors duration-200">
                 <User className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
@@ -133,7 +133,7 @@ export default function Profile() {
                 </div>
               </div>
 
-              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent hover:shadow-md transition-all duration-200">
                 <CardContent className="pt-6">
                   <XPBar 
                     level={stats?.level || 1} 
@@ -144,21 +144,21 @@ export default function Profile() {
               </Card>
 
               <div className="grid grid-cols-3 gap-4">
-                <div className="p-4 rounded-lg bg-muted/50 text-center">
+                <div className="p-4 rounded-lg bg-muted/50 text-center hover:bg-muted hover:scale-105 transition-all duration-200">
                   <div className="text-2xl font-bold">{stats?.streak_current || 0}</div>
                   <div className="text-xs text-muted-foreground mt-1">Current Streak</div>
                 </div>
-                <div className="p-4 rounded-lg bg-muted/50 text-center">
+                <div className="p-4 rounded-lg bg-muted/50 text-center hover:bg-muted hover:scale-105 transition-all duration-200">
                   <div className="text-2xl font-bold">{stats?.longest_streak || 0}</div>
                   <div className="text-xs text-muted-foreground mt-1">Best Streak</div>
                 </div>
-                <div className="p-4 rounded-lg bg-muted/50 text-center">
+                <div className="p-4 rounded-lg bg-muted/50 text-center hover:bg-muted hover:scale-105 transition-all duration-200">
                   <Award className="w-6 h-6 mx-auto mb-1 text-primary" />
                   <div className="text-xs text-muted-foreground">Badges</div>
                 </div>
               </div>
 
-              <div className="p-4 rounded-lg bg-muted/50">
+              <div className="p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors duration-200">
                 <div className="text-sm text-muted-foreground mb-2">Overall Performance</div>
                 <div className="flex justify-between items-center">
                   <span className="font-medium">Questions Answered</span>
@@ -174,7 +174,7 @@ export default function Profile() {
                 </div>
               </div>
 
-              <div className="p-4 rounded-lg bg-muted/50">
+              <div className="p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors duration-200">
                 <div className="text-sm font-semibold mb-3 flex items-center gap-2">
                   <MessageSquare className="h-4 w-4" />
                   Practice Settings
@@ -206,7 +206,7 @@ export default function Profile() {
                 </div>
               </div>
 
-              <div className="p-4 rounded-lg bg-muted/50">
+              <div className="p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors duration-200">
                 <div className="text-sm font-semibold mb-3 flex items-center gap-2">
                   <Library className="h-4 w-4" />
                   Question Pool
@@ -264,7 +264,7 @@ export default function Profile() {
                 </div>
               </div>
 
-              <div className="p-4 rounded-lg bg-muted/50">
+              <div className="p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors duration-200">
                 <div className="text-sm font-semibold mb-3 flex items-center gap-2">
                   <MessageSquare className="h-4 w-4" />
                   AI Features

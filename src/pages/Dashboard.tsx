@@ -3,10 +3,14 @@ import { Card } from '@/components/ui/card';
 import { useQuestionBank } from '@/contexts/QuestionBankContext';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, BookOpen, Target, Clock, Flag, XCircle } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const { manifest, isLoading } = useQuestionBank();
+  const reviewTools = useScrollAnimation();
+  const overviewCards = useScrollAnimation();
+  const questionBank = useScrollAnimation();
 
   if (isLoading) {
     return (
@@ -51,9 +55,14 @@ const Dashboard = () => {
       {/* Content */}
       <div className="container mx-auto px-4 py-8 max-w-6xl space-y-8">
         {/* Review Tools */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div 
+          ref={reviewTools.ref}
+          className={`grid md:grid-cols-2 gap-6 transition-all duration-700 ${
+            reviewTools.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <Card 
-            className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
+            className="p-6 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1 transition-all duration-200 cursor-pointer"
             onClick={() => navigate('/flagged')}
           >
             <div className="flex items-center gap-3">
@@ -68,7 +77,7 @@ const Dashboard = () => {
           </Card>
 
           <Card 
-            className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
+            className="p-6 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1 transition-all duration-200 cursor-pointer"
             onClick={() => navigate('/waj')}
           >
             <div className="flex items-center gap-3">
@@ -84,8 +93,13 @@ const Dashboard = () => {
         </div>
 
         {/* Overview Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
-          <Card className="p-6 space-y-2">
+        <div 
+          ref={overviewCards.ref}
+          className={`grid md:grid-cols-3 gap-6 transition-all duration-700 delay-150 ${
+            overviewCards.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <Card className="p-6 space-y-2 hover:shadow-md hover:scale-[1.02] transition-all duration-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
                 <BookOpen className="w-5 h-5 text-primary" />
@@ -97,7 +111,7 @@ const Dashboard = () => {
             </div>
           </Card>
 
-          <Card className="p-6 space-y-2">
+          <Card className="p-6 space-y-2 hover:shadow-md hover:scale-[1.02] transition-all duration-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
                 <Target className="w-5 h-5 text-primary" />
@@ -109,7 +123,7 @@ const Dashboard = () => {
             </div>
           </Card>
 
-          <Card className="p-6 space-y-2">
+          <Card className="p-6 space-y-2 hover:shadow-md hover:scale-[1.02] transition-all duration-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
                 <Clock className="w-5 h-5 text-primary" />
@@ -123,11 +137,16 @@ const Dashboard = () => {
         </div>
 
         {/* Question Bank Manifest */}
-        <div className="space-y-6">
+        <div 
+          ref={questionBank.ref}
+          className={`space-y-6 transition-all duration-700 delay-300 ${
+            questionBank.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <h2 className="text-2xl font-semibold">Question Bank</h2>
           
           {/* By Section */}
-          <Card className="p-6">
+          <Card className="p-6 hover:shadow-md transition-all duration-200">
             <h3 className="font-semibold mb-4">By Section</h3>
             <div className="space-y-2">
               {manifest.sections.map((sec) => (
@@ -140,7 +159,7 @@ const Dashboard = () => {
           </Card>
 
           {/* By Question Type */}
-          <Card className="p-6">
+          <Card className="p-6 hover:shadow-md transition-all duration-200">
             <h3 className="font-semibold mb-4">By Question Type</h3>
             <div className="space-y-2">
               {qtypes.map(([qtype, count]) => (
@@ -153,7 +172,7 @@ const Dashboard = () => {
           </Card>
 
           {/* By Difficulty */}
-          <Card className="p-6">
+          <Card className="p-6 hover:shadow-md transition-all duration-200">
             <h3 className="font-semibold mb-4">By Difficulty</h3>
             <div className="space-y-2">
               {difficulties.map(([level, count]) => (

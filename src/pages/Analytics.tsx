@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { ChevronLeft } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { questionBank } from '@/lib/questionLoader';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface AnalyticsData {
   accuracyByType: Record<string, { correct: number; total: number; accuracy: number }>;
@@ -30,6 +31,9 @@ const Analytics = () => {
   const [data, setData] = React.useState<AnalyticsData | null>(null);
   const [opportunities, setOpportunities] = React.useState<OpportunityArea[]>([]);
   const [loading, setLoading] = React.useState(true);
+  const opportunitiesRef = useScrollAnimation();
+  const performanceRef = useScrollAnimation();
+  const difficultyRef = useScrollAnimation();
 
   React.useEffect(() => {
     if (!user) {
@@ -257,7 +261,12 @@ const Analytics = () => {
         ) : (
           <>
             {/* Opportunity Rings */}
-            <div className="mb-12">
+            <div 
+              ref={opportunitiesRef.ref}
+              className={`mb-12 transition-all duration-700 ${
+                opportunitiesRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+            >
               <h2 className="text-lg font-semibold text-gray-900 mb-6">Top Opportunities</h2>
               {opportunities.length === 0 ? (
                 <Card className="p-8 bg-gray-50 border-gray-200 text-center">
@@ -268,7 +277,7 @@ const Analytics = () => {
                   {opportunities.map((opp, idx) => (
                     <Card
                       key={idx}
-                      className="p-6 bg-gray-50 border-gray-200 hover:border-gray-900 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-900"
+                      className="p-6 bg-gray-50 border-gray-200 hover:border-gray-900 hover:shadow-lg hover:scale-105 hover:-translate-y-1 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-900"
                       onClick={() => startDrill(opp.type, opp.level)}
                       tabIndex={0}
                       onKeyDown={(e) => {
@@ -316,7 +325,12 @@ const Analytics = () => {
             </div>
 
             {/* Type Bars & Matrix Layout */}
-            <div className="grid lg:grid-cols-[1fr_auto] gap-8">
+            <div 
+              ref={performanceRef.ref}
+              className={`grid lg:grid-cols-[1fr_auto] gap-8 transition-all duration-700 delay-150 ${
+                performanceRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+            >
               {/* Type Bars */}
               <div>
                 <h2 className="text-lg font-semibold text-gray-900 mb-6">Performance by Type</h2>
@@ -328,7 +342,7 @@ const Analytics = () => {
                     return (
                       <div
                         key={type}
-                        className="group cursor-pointer focus:outline-none"
+                        className="group cursor-pointer focus:outline-none transition-all duration-200 hover:scale-[1.02]"
                         onClick={() => startDrill(type, undefined)}
                         tabIndex={0}
                         onKeyDown={(e) => {
