@@ -1553,7 +1553,7 @@ function DrillContent() {
           </div>
           
           {/* Question metadata */}
-          <div className="absolute bottom-24 left-8 text-xs text-muted-foreground/60 font-medium select-none">
+          <div className="absolute bottom-6 left-8 text-xs text-muted-foreground/60 font-medium select-none">
             PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
           </div>
         </div>
