@@ -60,35 +60,9 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
     [manifest]
   );
   
-  // Canonical LR question types mapping
-  const CANONICAL_QTYPES: Record<string, string> = {
-    'Flaw': 'Flaw',
-    'Strengthen': 'Strengthen',
-    'Weaken': 'Weaken',
-    'Necessary Assumption': 'Necessary Assumption',
-    'Sufficient Assumption': 'Sufficient Assumption',
-    'Most Strongly Supported': 'Most Strongly Supported',
-    'Must Be True': 'Must Be True',
-    'Main Conclusion': 'Main Conclusion',
-    'Method of Reasoning': 'Method of Reasoning',
-    'Paradox': 'Paradox',
-    'Parallel Reasoning': 'Parallel Reasoning',
-    'Parallel Flaw': 'Parallel Flaw',
-    'Role': 'Role',
-    'Principle': 'Principle',
-    'Evaluate': 'Evaluate',
-    'Disagree': 'Disagree',
-  };
-
+  // Get all question types directly from manifest (already normalized)
   const allQTypes = useMemo(() => {
-    const types = Object.keys(manifest.byQType);
-    // Map raw qtypes to canonical names
-    const canonicalSet = new Set<string>();
-    types.forEach(qtype => {
-      const canonical = CANONICAL_QTYPES[qtype] || qtype;
-      canonicalSet.add(canonical);
-    });
-    return Array.from(canonicalSet).sort((a, b) => a.localeCompare(b));
+    return Object.keys(manifest.byQType).sort((a, b) => a.localeCompare(b));
   }, [manifest]);
   
   const [qtypeSearch, setQtypeSearch] = useState('');
@@ -130,13 +104,19 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
     loadAttempts();
   }, [user]);
   
-  // Get count for a canonical qtype
-  const getQTypeCount = (canonicalType: string): number => {
-    // Find all raw qtypes that map to this canonical type
-    const rawTypes = Object.keys(manifest.byQType).filter(
-      raw => (CANONICAL_QTYPES[raw] || raw) === canonicalType
-    );
-    return rawTypes.reduce((sum, raw) => sum + (manifest.byQType[raw] || 0), 0);
+  // Get count for a question type (reflecting current filters)
+  const getQTypeCount = (qtype: string): number => {
+    let questions = questionBank.getAllQuestions().filter(q => q.qtype === qtype);
+    
+    // Apply current filters (except questionTypes)
+    if (filters.prepTests.length > 0) {
+      questions = questions.filter(q => filters.prepTests.includes(q.pt));
+    }
+    if (filters.difficulties.length > 0) {
+      questions = questions.filter(q => filters.difficulties.includes(q.difficulty));
+    }
+    
+    return questions.length;
   };
 
   // Filter and paginate questions
@@ -149,12 +129,7 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
     }
     
     if (filters.questionTypes.length > 0) {
-      // Map selected canonical types back to raw qtypes
-      const rawTypes = Object.keys(manifest.byQType).filter(raw => {
-        const canonical = CANONICAL_QTYPES[raw] || raw;
-        return filters.questionTypes.includes(canonical);
-      });
-      questions = questions.filter(q => rawTypes.includes(q.qtype));
+      questions = questions.filter(q => filters.questionTypes.includes(q.qtype));
     }
     
     if (filters.difficulties.length > 0) {
@@ -579,7 +554,7 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
                 <TableHead>Sec</TableHead>
                 <TableHead>Q#</TableHead>
                 <TableHead className="w-[300px]">Stem</TableHead>
-                <TableHead>Type</TableHead>
+                <TableHead className="w-[180px]">Type</TableHead>
                 <TableHead>Difficulty</TableHead>
                 <TableHead>Attempts</TableHead>
               </TableRow>
@@ -613,7 +588,7 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
                     <TableCell className="text-sm">{getStemPreview(q.questionStem)}</TableCell>
                     <TableCell>
                       <Badge variant="outline" className="text-xs">
-                        {CANONICAL_QTYPES[q.qtype] || q.qtype}
+                        {q.qtype}
                       </Badge>
                     </TableCell>
                     <TableCell>
