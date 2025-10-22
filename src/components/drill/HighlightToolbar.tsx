@@ -31,68 +31,68 @@ export function HighlightToolbar({
             size="icon"
             onClick={onUndo}
             disabled={!canUndo}
-            title="Undo"
-            className="h-7 w-7 shrink-0 opacity-50 hover:opacity-100"
+            title="Undo last highlight"
+            className="h-8 w-8 shrink-0 hover:bg-muted disabled:opacity-30"
           >
-            <Undo2 className="w-3.5 h-3.5" />
+            <Undo2 className="w-4 h-4" />
           </Button>
           <div className="w-px h-4 bg-border/30 mx-0.5" />
         </>
       )}
 
-      {/* Color Dot Buttons - Smaller and quieter */}
+      {/* Color Dot Buttons */}
       <button
         onClick={() => onModeChange(mode === 'yellow' ? 'none' : 'yellow')}
-        title="Bright Yellow"
+        title="Bright Yellow Highlighter"
         className={cn(
-          "h-6 w-6 rounded-full transition-all shrink-0",
+          "h-7 w-7 rounded-full transition-all shrink-0 border-2",
           mode === 'yellow' 
-            ? "bg-yellow-400 ring-2 ring-yellow-400/50 scale-105" 
-            : "bg-yellow-400/60 hover:bg-yellow-400 opacity-60 hover:opacity-100"
+            ? "bg-yellow-400 border-yellow-500 ring-2 ring-yellow-400/30 scale-110 shadow-sm" 
+            : "bg-yellow-400 border-yellow-400/50 hover:border-yellow-500 hover:scale-105"
         )}
         aria-label="Bright yellow highlight"
       />
 
       <button
         onClick={() => onModeChange(mode === 'pink' ? 'none' : 'pink')}
-        title="Pink"
+        title="Pink Highlighter"
         className={cn(
-          "h-6 w-6 rounded-full transition-all shrink-0",
+          "h-7 w-7 rounded-full transition-all shrink-0 border-2",
           mode === 'pink' 
-            ? "bg-pink-400 ring-2 ring-pink-400/50 scale-105" 
-            : "bg-pink-400/60 hover:bg-pink-400 opacity-60 hover:opacity-100"
+            ? "bg-pink-400 border-pink-500 ring-2 ring-pink-400/30 scale-110 shadow-sm" 
+            : "bg-pink-400 border-pink-400/50 hover:border-pink-500 hover:scale-105"
         )}
         aria-label="Pink highlight"
       />
 
       <button
         onClick={() => onModeChange(mode === 'orange' ? 'none' : 'orange')}
-        title="Orange"
+        title="Orange Highlighter"
         className={cn(
-          "h-6 w-6 rounded-full transition-all shrink-0",
+          "h-7 w-7 rounded-full transition-all shrink-0 border-2",
           mode === 'orange' 
-            ? "bg-orange-400 ring-2 ring-orange-400/50 scale-105" 
-            : "bg-orange-400/60 hover:bg-orange-400 opacity-60 hover:opacity-100"
+            ? "bg-orange-400 border-orange-500 ring-2 ring-orange-400/30 scale-110 shadow-sm" 
+            : "bg-orange-400 border-orange-400/50 hover:border-orange-500 hover:scale-105"
         )}
         aria-label="Orange highlight"
       />
 
       <div className="w-px h-4 bg-border/30 mx-0.5" />
 
-      {/* Utility Icon Buttons - Smaller and quieter */}
+      {/* Utility Icon Buttons */}
       <Button
         variant="ghost"
         size="icon"
         onClick={() => onModeChange(mode === 'underline' ? 'none' : 'underline')}
         className={cn(
-          "h-7 w-7 shrink-0 transition-all",
+          "h-8 w-8 shrink-0 transition-all",
           mode === 'underline' 
-            ? "bg-foreground/90 hover:bg-foreground" 
-            : "opacity-50 hover:opacity-100"
+            ? "bg-foreground text-background hover:bg-foreground/90" 
+            : "hover:bg-muted"
         )}
         title="Underline"
       >
-        <Underline className={cn("w-3.5 h-3.5", mode === 'underline' && "text-background")} />
+        <Underline className="w-4 h-4" />
       </Button>
 
       <Button
@@ -100,17 +100,17 @@ export function HighlightToolbar({
         size="icon"
         onClick={() => onModeChange(mode === 'erase' ? 'none' : 'erase')}
         className={cn(
-          "h-7 w-7 shrink-0 transition-all",
+          "h-8 w-8 shrink-0 transition-all",
           mode === 'erase' 
-            ? "bg-destructive hover:bg-destructive/90" 
-            : "opacity-50 hover:opacity-100"
+            ? "bg-destructive text-destructive-foreground hover:bg-destructive/90" 
+            : "hover:bg-muted"
         )}
-        title="Erase"
+        title="Eraser - Click and drag to remove highlights"
       >
-        <Eraser className={cn("w-3.5 h-3.5", mode === 'erase' && "text-background")} />
+        <Eraser className="w-4 h-4" />
       </Button>
 
-      {/* Flag Button - 44x44px hit area */}
+      {/* Flag Button */}
       {onToggleFlag && (
         <>
           <div className="w-px h-4 bg-border/30 mx-0.5" />
@@ -122,12 +122,12 @@ export function HighlightToolbar({
             aria-pressed={isFlagged}
             aria-label="Flag question"
             className={cn(
-              "h-11 w-11 shrink-0 transition-all",
+              "h-9 w-9 shrink-0 transition-all",
               isFlagged 
-                ? "text-foreground hover:text-foreground/80" 
+                ? "text-orange-600 hover:text-orange-700" 
                 : "text-muted-foreground hover:text-foreground"
             )}
-            title={isFlagged ? "Unflag question" : "Flag question"}
+            title={isFlagged ? "Unflag question" : "Flag for review"}
           >
             <Flag className={cn("w-5 h-5 transition-all", isFlagged && "fill-current")} />
           </Button>

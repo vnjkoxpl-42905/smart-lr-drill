@@ -118,9 +118,9 @@ export function HighlightedText({
                 }
 
                 const shadowColors = {
-                  yellow: 'rgba(255, 223, 0, 0.35)',
-                  pink: 'rgba(255, 120, 160, 0.35)',
-                  orange: 'rgba(255, 160, 64, 0.35)',
+                  yellow: 'rgba(250, 204, 21, 0.45)',
+                  pink: 'rgba(244, 114, 182, 0.45)',
+                  orange: 'rgba(251, 146, 60, 0.45)',
                 };
 
                 return {
@@ -264,9 +264,9 @@ export function HighlightedText({
             }
 
             const shadowColors = {
-              yellow: 'rgba(255, 223, 0, 0.35)',
-              pink: 'rgba(255, 120, 160, 0.35)',
-              orange: 'rgba(255, 160, 64, 0.35)',
+              yellow: 'rgba(250, 204, 21, 0.45)',
+              pink: 'rgba(244, 114, 182, 0.45)',
+              orange: 'rgba(251, 146, 60, 0.45)',
             };
 
             return {
