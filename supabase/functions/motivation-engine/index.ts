@@ -107,9 +107,11 @@ Generate a motivational message that feels personal and actionable.`;
         );
       }
       
-      const errorText = await response.text();
-      console.error("AI gateway error:", response.status, errorText);
-      throw new Error("AI gateway error");
+      console.error("AI service error:", response.status);
+      return new Response(
+        JSON.stringify({ error: "Service temporarily unavailable. Please try again." }),
+        { status: 503, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
     }
 
     const data = await response.json();
@@ -121,10 +123,10 @@ Generate a motivational message that feels personal and actionable.`;
     );
 
   } catch (error) {
-    console.error("motivation-engine error:", error);
+    console.error("Service error occurred");
     return new Response(
       JSON.stringify({ 
-        error: error instanceof Error ? error.message : "Unknown error occurred"
+        error: "Service temporarily unavailable. Please try again."
       }),
       { 
         status: 500, 

@@ -2,7 +2,7 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.75.0';
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*", // TODO: Restrict to specific domain in production
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
@@ -95,7 +95,7 @@ async function getCoachingKnowledge(supabase: any, question: any) {
       concepts: conceptsResult.data || []
     };
   } catch (error) {
-    console.error('Error fetching coaching knowledge:', error);
+    console.error('Error fetching coaching knowledge');
     return {
       strategy: null,
       reasoning: null,
@@ -372,8 +372,7 @@ Answer follow-up questions naturally. Use your knowledge base to provide detaile
     });
 
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("AI gateway error:", response.status, errorText);
+      console.error("AI service error:", response.status);
 
       if (response.status === 429) {
         return new Response(
