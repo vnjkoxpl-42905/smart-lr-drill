@@ -60,10 +60,39 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
     [manifest]
   );
   
-  const allQTypes = useMemo(() => 
-    Object.keys(manifest.byQType).sort((a, b) => a.localeCompare(b)),
-    [manifest]
-  );
+  // Canonical LR question types mapping
+  const CANONICAL_QTYPES: Record<string, string> = {
+    'Flaw': 'Flaw',
+    'Strengthen': 'Strengthen',
+    'Weaken': 'Weaken',
+    'Necessary Assumption': 'Necessary Assumption',
+    'Sufficient Assumption': 'Sufficient Assumption',
+    'Most Strongly Supported': 'Most Strongly Supported',
+    'Must Be True': 'Must Be True',
+    'Main Conclusion': 'Main Conclusion',
+    'Method of Reasoning': 'Method of Reasoning',
+    'Paradox': 'Paradox',
+    'Parallel Reasoning': 'Parallel Reasoning',
+    'Parallel Flaw': 'Parallel Flaw',
+    'Role': 'Role',
+    'Principle': 'Principle',
+    'Evaluate': 'Evaluate',
+    'Disagree': 'Disagree',
+  };
+
+  const allQTypes = useMemo(() => {
+    const types = Object.keys(manifest.byQType);
+    // Map raw qtypes to canonical names
+    const canonicalSet = new Set<string>();
+    types.forEach(qtype => {
+      const canonical = CANONICAL_QTYPES[qtype] || qtype;
+      canonicalSet.add(canonical);
+    });
+    return Array.from(canonicalSet).sort((a, b) => a.localeCompare(b));
+  }, [manifest]);
+  
+  const [qtypeSearch, setQtypeSearch] = useState('');
+  const [showZeroCounts, setShowZeroCounts] = useState(true);
   
   const allDifficulties = [1, 2, 3, 4, 5];
   
@@ -101,6 +130,15 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
     loadAttempts();
   }, [user]);
   
+  // Get count for a canonical qtype
+  const getQTypeCount = (canonicalType: string): number => {
+    // Find all raw qtypes that map to this canonical type
+    const rawTypes = Object.keys(manifest.byQType).filter(
+      raw => (CANONICAL_QTYPES[raw] || raw) === canonicalType
+    );
+    return rawTypes.reduce((sum, raw) => sum + (manifest.byQType[raw] || 0), 0);
+  };
+
   // Filter and paginate questions
   const { filteredQuestions, totalCount } = useMemo(() => {
     let questions = questionBank.getAllQuestions();
@@ -111,7 +149,12 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
     }
     
     if (filters.questionTypes.length > 0) {
-      questions = questions.filter(q => filters.questionTypes.includes(q.qtype));
+      // Map selected canonical types back to raw qtypes
+      const rawTypes = Object.keys(manifest.byQType).filter(raw => {
+        const canonical = CANONICAL_QTYPES[raw] || raw;
+        return filters.questionTypes.includes(canonical);
+      });
+      questions = questions.filter(q => rawTypes.includes(q.qtype));
     }
     
     if (filters.difficulties.length > 0) {
@@ -336,21 +379,80 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
                   <ChevronDown className="ml-2 h-4 w-4" />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-80 max-h-[400px] overflow-y-auto" align="start">
-                <div className="space-y-2">
-                  <div className="font-medium text-sm mb-2">Select Question Types</div>
-                  {allQTypes.map(qtype => (
-                    <div key={qtype} className="flex items-center space-x-2">
+              <PopoverContent className="w-80 max-h-[500px] flex flex-col" align="start">
+                <div className="space-y-3">
+                  <div className="font-medium text-sm">Select Question Types</div>
+                  
+                  {/* Search */}
+                  <div className="relative">
+                    <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      placeholder="Search types..."
+                      value={qtypeSearch}
+                      onChange={(e) => setQtypeSearch(e.target.value)}
+                      className="pl-8 h-9"
+                    />
+                  </div>
+                  
+                  {/* Controls */}
+                  <div className="flex items-center justify-between pb-2 border-b">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => {
+                        const visible = allQTypes.filter(qtype => {
+                          const count = getQTypeCount(qtype);
+                          if (!showZeroCounts && count === 0) return false;
+                          if (!qtypeSearch) return true;
+                          return qtype.toLowerCase().includes(qtypeSearch.toLowerCase());
+                        });
+                        setFilters(prev => ({
+                          ...prev,
+                          questionTypes: [...new Set([...prev.questionTypes, ...visible])]
+                        }));
+                      }}
+                      className="h-8 text-xs"
+                    >
+                      Select all shown
+                    </Button>
+                    
+                    <div className="flex items-center space-x-2">
                       <Checkbox
-                        id={`qtype-${qtype}`}
-                        checked={filters.questionTypes.includes(qtype)}
-                        onCheckedChange={() => toggleFilter('questionTypes', qtype)}
+                        id="show-zero"
+                        checked={showZeroCounts}
+                        onCheckedChange={(checked) => setShowZeroCounts(!!checked)}
                       />
-                      <label htmlFor={`qtype-${qtype}`} className="text-sm cursor-pointer flex-1">
-                        {qtype} ({manifest.byQType[qtype] || 0})
+                      <label htmlFor="show-zero" className="text-xs cursor-pointer">
+                        Show 0-count
                       </label>
                     </div>
-                  ))}
+                  </div>
+                  
+                  {/* Types List */}
+                  <div className="space-y-2 max-h-[300px] overflow-y-auto">
+                    {allQTypes
+                      .filter(qtype => {
+                        const count = getQTypeCount(qtype);
+                        if (!showZeroCounts && count === 0) return false;
+                        if (!qtypeSearch) return true;
+                        return qtype.toLowerCase().includes(qtypeSearch.toLowerCase());
+                      })
+                      .map(qtype => {
+                        const count = getQTypeCount(qtype);
+                        return (
+                          <div key={qtype} className="flex items-center space-x-2">
+                            <Checkbox
+                              id={`qtype-${qtype}`}
+                              checked={filters.questionTypes.includes(qtype)}
+                              onCheckedChange={() => toggleFilter('questionTypes', qtype)}
+                            />
+                            <label htmlFor={`qtype-${qtype}`} className="text-sm cursor-pointer flex-1">
+                              {qtype} ({count})
+                            </label>
+                          </div>
+                        );
+                      })}
+                  </div>
                 </div>
               </PopoverContent>
             </Popover>
@@ -511,7 +613,7 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
                     <TableCell className="text-sm">{getStemPreview(q.questionStem)}</TableCell>
                     <TableCell>
                       <Badge variant="outline" className="text-xs">
-                        {q.qtype}
+                        {CANONICAL_QTYPES[q.qtype] || q.qtype}
                       </Badge>
                     </TableCell>
                     <TableCell>
