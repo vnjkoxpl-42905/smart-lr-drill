@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 1,
+    "questionType": "Justify the Exception",
+    "questionDifficulty": 1,
+    "stimulus": "Police chief: This department's officers are, of course, prohibited from drinking on the job. However, there is one exception: it is extremely valuable for officers to work undercover to investigate nightclubs that have chronic crime problems, and officers may drink in moderation during such work.",
+    "questionStem": "Which one of the following, if true, most helps to justify the exception to the police department's rule stated above?",
+    "answerChoices": {
+      "A": "Only very experienced police officers are allowed to work undercover investigating nightclubs.",
+      "B": "Many nightclub patrons would suspect that people in a nightclub who refrained from drinking were police officers.",
+      "C": "Over the last several years, the police department has significantly increased its undercover operations in nightclubs.",
+      "D": "Most police officers believe that allowing officers to drink during undercover work in nightclubs does not cause significant problems.",
+      "E": "For the most part, the public is aware that police officers are allowed to drink during undercover operations in nightclubs."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 2,
+    "questionType": "Point of Agreement",
+    "questionDifficulty": 2,
+    "stimulus": "Jake: Companies have recently introduced antibacterial household cleaning products that kill common bacteria on surfaces like countertops and floors. It's clear that people who want to minimize the amount of bacteria in their homes should use cleaning products that contain antibacterial agents.\n\nKarolinka: But studies also suggest that the use of these antibacterial cleaning products can be harmful, since common bacteria that survive the use of these products will eventually produce strains of bacteria that are resistant to antibiotics. That's why antibacterial agents should not be used in household cleaning products.",
+    "questionStem": "The discussion above indicates that Jake and Karolinka agree with each other that which one of the following is true?",
+    "answerChoices": {
+      "A": "Household cleaning products with antibacterial agents kill some common bacteria.",
+      "B": "Household cleaning products with antibacterial agents remove dirt better than do products lacking those agents.",
+      "C": "The use of antibacterial agents in household cleaning products can produce antibiotic-resistant strains of bacteria.",
+      "D": "Common household bacteria are a serious health concern.",
+      "E": "People should use household cleaning products with antibacterial agents to clean their homes."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 3,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "A study of the dietary habits of a group of people who had recently developed cancer and a group without cancer found that during the previous five years the diets of the two groups' members closely matched each other in the amount of yogurt they contained. Yogurt contains galactose, which is processed in the body by an enzyme. In the people with cancer the levels of this enzyme were too low to process the galactose in the yogurt they were consuming. It can be concluded that galactose in amounts exceeding the body's ability to process it is carcinogenic.",
+    "questionStem": "Of the following, which one constitutes the strongest objection to the reasoning in the argument?",
+    "answerChoices": {
+      "A": "The argument fails to consider whether the dietary habits of everyone in the two groups were the same in all other respects.",
+      "B": "The argument neglects to recommend that people with low levels of the enzyme avoid eating yogurt.",
+      "C": "The argument focuses on only one substance that can increase the risk of cancer, when it is well known that there are many such substances.",
+      "D": "The argument overlooks the possibility that cancer causes low levels of the enzyme.",
+      "E": "The argument does not specify whether any member of either group lacked the enzyme entirely."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 4,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "Chemical-company employee: A conservation group's study of the pollutants released into the environment by 30 small chemical companies reveals that our company and four other companies together account for 60 percent of the total. Clearly, our company releases more pollutants than most chemical companies similar to us in size.",
+    "questionStem": "Which one of the following is an assumption required by the employee's argument?",
+    "answerChoices": {
+      "A": "The conservation group that produced the study is not hostile to the chemical industry.",
+      "B": "The employee's company does not produce chemicals whose processing naturally produces more pollutants than the chemicals produced by other small chemical companies.",
+      "C": "The total pollution produced by all small chemical companies combined is not greatly outweighed by that produced by large chemical companies.",
+      "D": "The four other companies mentioned by the employee do not together account for very close to 60 percent of the total pollution by the 30 companies.",
+      "E": "There is no significant variation in the quantities of pollutants released by the other 25 small chemical companies."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 5,
+    "questionType": "Evaluate the Argument",
+    "questionDifficulty": 3,
+    "stimulus": "Journalist: A recent study showed that people who drink three cups of decaffeinated coffee per day are twice as likely to develop arthritis—inflammation of joints resulting from damage to connective tissue—as those who drink three cups of regular coffee per day. Clearly, decaffeinated coffee must contain something that damages connective tissue and that is not present in regular coffee.",
+    "questionStem": "Which one of the following would be most useful to know in order to evaluate the journalist's argument?",
+    "answerChoices": {
+      "A": "whether people who exercise regularly are more likely to drink decaffeinated beverages than those who do not",
+      "B": "whether people who drink decaffeinated coffee tend to drink coffee less often than those who drink regular coffee",
+      "C": "whether the degeneration of connective tissue is slowed by consumption of caffeine and other stimulants",
+      "D": "whether most coffee drinkers drink more than three cups of coffee per day",
+      "E": "whether people who have arthritis are less likely than the general population to drink coffee of any kind"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 6,
+    "questionType": "Principle: Justify",
+    "questionDifficulty": 1,
+    "stimulus": "A company that imports and sells collectibles sought to have some of its collectible figurines classified as toys, which are subject to lower import tariffs than collectibles. The company argued that the figurines amuse customers, just as toys do. However, the government agency responsible for tariffs rejected the company's request on the grounds that the figurines are marketed as collector's items rather than toys.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the government agency's decision?",
+    "answerChoices": {
+      "A": "The tariff classification of an item should depend primarily on how the item is marketed.",
+      "B": "When importing products, a company should seek the tariff classification that results in the lowest tariffs.",
+      "C": "An object should not be classified as a collectible if it is typically used as a toy.",
+      "D": "Objects that are developed primarily to provide amusement should be subject to lower tariffs than other objects.",
+      "E": "A company should market its products as collectibles rather than toys if doing so enables it to sell them for higher prices."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 7,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "The photographs that the store developed were quite unsatisfactory. The customer claims to have handled the film correctly. Neither the film nor the camera was defective. If a store does not process pictures properly, the customer is owed a refund, so if the customer's claim is correct, the store owes her a refund.",
+    "questionStem": "The argument relies on assuming which one of the following?",
+    "answerChoices": {
+      "A": "If the store owes the customer a refund, then neither the camera nor the film was defective.",
+      "B": "If neither the film nor the camera was defective, and the customer handled the film correctly, then the store processed it improperly.",
+      "C": "If pictures are taken with a defective camera, then it is not possible for the store to develop those pictures improperly.",
+      "D": "If the customer handled the film incorrectly, that is what caused the photographs that the store developed to be unsatisfactory.",
+      "E": "If the customer's claim was not correct, then the store does not owe her a refund."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 8,
+    "questionType": "Principle: Underlying",
+    "questionDifficulty": 2,
+    "stimulus": "When weeding a vegetable garden, one should not try to remove all the weeds. It is true that the more weeds, the less productive the garden. Nevertheless, avoiding the painstaking effort of finding and pulling every single weed more than compensates for the slight productivity loss resulting from leaving a few.",
+    "questionStem": "The principle underlying which one of the following arguments is most similar to the principle underlying the argument above?",
+    "answerChoices": {
+      "A": "It is a mistake to try to remove every imperfection from one's personality. Personality imperfections make life difficult sometimes, but people cannot be truly happy if their personalities lack defects.",
+      "B": "One should not try to change every aspect of one's personality. Such a radical change is more likely to make one worse off than better off.",
+      "C": "If one is trying to improve one's personality by removing imperfections, one should not try to remove them all. For while each imperfection makes one's personality worse, it is no longer worth one's time to remove imperfections if there are only a few left.",
+      "D": "One who is trying to improve one's personality by removing imperfections should not try to remove them all. Granted, the fewer imperfections one's personality has, the happier one will be. However, it is never possible to remove all of the imperfections from one's personality.",
+      "E": "When one is trying to improve one's personality, one should not try to remove imperfections that do not cause one serious difficulties. Often, removing such an imperfection will only lead to greater imperfections."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 9,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Doctor: It would benefit public health if junk food were taxed. Not only in this country but in many other countries as well, the excessive proportion of junk food in people's diets contributes to many common and serious health problems. If junk food were much more expensive than healthful food, people would be encouraged to make dietary changes that would reduce these problems.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion drawn in the doctor's argument?",
+    "answerChoices": {
+      "A": "Taxing junk food would benefit public health.",
+      "B": "In many countries, the excessive proportion of junk food in people's diets contributes to many common and serious health problems.",
+      "C": "If junk food were much more expensive than healthful food, people would be encouraged to make dietary changes that would reduce many common and serious health problems.",
+      "D": "Taxing junk food would encourage people to reduce the proportion of junk food in their diets.",
+      "E": "Junk food should be taxed if doing so would benefit public health."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 10,
+    "questionType": "Must Be True",
+    "questionDifficulty": 1,
+    "stimulus": "Large deposits of the rare mineral nahcolite formed in salty lakes 50 million to 52 million years ago during the Eocene epoch. Laboratory tests found that, in salty water, nahcolite can form only when the atmosphere contains at least 1,125 parts per million of carbon dioxide.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "For most of the time since the Eocene epoch, the level of carbon dioxide in the atmosphere has been lower than it was during most of the Eocene epoch.",
+      "B": "Levels of carbon dioxide in the atmosphere fluctuated greatly during the Eocene epoch.",
+      "C": "Lakes were more likely to be salty during periods when the level of carbon dioxide in the atmosphere was at least 1,125 parts per million.",
+      "D": "The atmosphere contained at least 1,125 parts per million of carbon dioxide during at least some part of the Eocene epoch.",
+      "E": "No significant deposits of nahcolite have formed at any time since the Eocene epoch."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 11,
+    "questionType": "Role",
+    "questionDifficulty": 2,
+    "stimulus": "Editor: When asked to name a poet contemporaneous with Shakespeare, 60 percent of high school students picked a twentieth-century poet. Admittedly, it is hard to interpret this result accurately. Does it show that most high school students do not know any poets of Shakespeare's era, or do they just not know what \"contemporaneous\" means? However, either way, there is clearly something deeply wrong with the educational system.",
+    "questionStem": "The statement that the majority of students picked a twentieth-century poet functions primarily in the argument",
+    "answerChoices": {
+      "A": "as evidence that the educational system is producing students who are ignorant of the history of poetry",
+      "B": "as evidence of the ambiguity of some questions to illustrate that research results are difficult to interpret",
+      "C": "as evidence that the ambiguity of data should not prevent us from drawing conclusions from them",
+      "D": "as evidence that something is deeply wrong with the educational system",
+      "E": "as evidence that something is deeply wrong with the educational system"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 12,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "One should apologize only to a person one has wronged, and only for having wronged that person. To apologize sincerely is to acknowledge that one has acted wrongfully. One cannot apologize sincerely unless one intends not to repeat that wrongful act. To accept an apology sincerely is to acknowledge a wrong, but also to vow not to hold a grudge against the wrongdoer.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "If one apologizes and subsequently repeats the wrongful act for which one has apologized, then one has not apologized sincerely.",
+      "B": "One cannot sincerely accept an apology that was not sincerely offered.",
+      "C": "If one commits a wrongful act, then one should sincerely apologize for that act.",
+      "D": "An apology that cannot be sincerely accepted cannot be sincerely offered.",
+      "E": "An apology cannot be both sincerely offered and sincerely accepted unless each person acknowledges that a wrongful act has occurred."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 13,
+    "questionType": "Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "A small collection of copper-alloy kitchen implements was found in an abandoned Roman-era well. Beneath them was a cache of coins, some of which dated to 375 A.D. The implements, therefore, were dropped into the well no earlier than 375 A.D.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "The coins used in the Roman Empire often remained in circulation for many decades.",
+      "B": "The coins were found in a dense cluster that could not have been formed by coins slipping through an accumulation of larger objects.",
+      "C": "The coins had far more value than the kitchen implements did.",
+      "D": "The items in the well were probably thrown there when people evacuated the area and would have been retrieved if the people had returned.",
+      "E": "Items of jewelry found beneath the coins were probably made around 300 A.D."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 14,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "Investigators have not proved that the forest fire was started by campers. Nor have they proved that lightning triggered the fire. So the investigators have not proved that the blaze was caused by campers or lightning.",
+    "questionStem": "The flawed pattern of reasoning in which one of the following arguments most closely resembles the flawed pattern of reasoning in the argument above?",
+    "answerChoices": {
+      "A": "Kim has no reason to believe that Sada will win the election. Kim also has no reason to believe that Brown will win the election. So Kim has no reason to believe that either Sada or Brown will win the election.",
+      "B": "We have no proof either for the theory that the thief escaped through the vent in the ceiling or for the theory that the thief escaped through the window. Therefore, one theory is as plausible as the other.",
+      "C": "Most of the students in my dormitory are engineering majors, and most of the students in my dormitory are from out of town. So most of the engineering majors in my dormitory are from out of town.",
+      "D": "In some parts of the forest camping is permitted. Also, hunting is permitted in some parts of the forest. So there are some parts of the forest in which both hunting and camping are permitted.",
+      "E": "The evidence shows that the car could have been driven by Jones at the time of the accident; however, it also shows that it could have been driven by Katsarakis at the time of the accident. Therefore, the evidence shows that the car could have been driven by both Jones and Katsarakis at the time of the accident."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 15,
+    "questionType": "Resolve Paradox",
+    "questionDifficulty": 3,
+    "stimulus": "To reduce the mosquito population in a resort area, hundreds of trees were planted that bear fruit attractive to birds. Over the years, as the trees matured, they attracted a variety of bird species and greatly increased the summer bird population in the area. As expected, the birds ate many mosquitoes. However, the planting of the fruit trees had the very opposite of its intended effect.",
+    "questionStem": "Which one of the following, if true, most helps to explain the apparently paradoxical result?",
+    "answerChoices": {
+      "A": "Most of the species of birds that were attracted by the trees that were planted did not eat mosquitoes.",
+      "B": "The species of birds that were attracted in the greatest number by the fruit of the trees that were planted did not eat mosquitoes.",
+      "C": "The birds attracted to the area by the trees ate many more insects that prey on mosquitoes than they did mosquitoes.",
+      "D": "Since the trees were planted, the annual precipitation has been below average, and drier weather tends to keep mosquito populations down.",
+      "E": "Increases and decreases in mosquito populations tend to follow a cyclical pattern."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 16,
+    "questionType": "Parallel Reasoning: Complete Argument",
+    "questionDifficulty": 2,
+    "stimulus": "Roxanne promised Luke that she would finish their report while he was on vacation; however, the deadline for that report was postponed. Clearly, if you promised a friend that you would meet them for lunch but just before lunch you felt ill, it would not be wrong for you to miss the lunch; your friend would not expect you to be there if you felt ill. Similarly,",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "if Roxanne believes that Luke would not expect her to finish the report under the circumstances, then it would be wrong for Roxanne to finish it",
+      "B": "it would not be wrong for Roxanne to finish the report if Luke did not expect the deadline to be postponed",
+      "C": "if Luke would expect Roxanne to finish the report even after the deadline has been postponed, then it would be wrong for Roxanne not to finish it",
+      "D": "if Luke would not expect Roxanne to finish the report under the circumstances, then it would not be wrong for Roxanne to fail to finish it",
+      "E": "Luke would not expect Roxanne to finish the report and it would be wrong if she did finish it"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 17,
+    "questionType": "Weaken",
+    "questionDifficulty": 3,
+    "stimulus": "Politician: A major social problem is children hurting other children. The results of a recent experiment by psychologists establish that watching violent films is at least partly responsible for this aggressive behavior. The psychologists conducted an experiment in which one group of children watched a film of people punching Bobo the Clown dolls. A second group of children was not shown the film. Afterward, both groups of children played together in a room containing a Bobo doll. Most of the children who had seen the film punched the Bobo doll, while most of the other children did not.",
+    "questionStem": "Which one of the following, if true, most weakens the politician's argument?",
+    "answerChoices": {
+      "A": "Some of the children who did not punch the Bobo doll, including some who had been shown the film, chastised those who did punch the doll.",
+      "B": "The child who punched the Bobo doll the hardest and the most frequently had not been shown the film.",
+      "C": "The children who had been shown the film were found to be no more likely than the children who had not been shown the film to punch other children.",
+      "D": "Some children who had not been shown the film imitated the behavior of those who had been shown the film and who punched the doll.",
+      "E": "Many of the children who participated in the experiment had never seen a Bobo doll before the experiment."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 18,
+    "questionType": "Inconsistent with Principle",
+    "questionDifficulty": 5,
+    "stimulus": "Editorial: In order to encourage personal responsibility in adults, society should not restrict the performance of any of the actions of adults or interfere with the likely results except to prevent negative effects on others.",
+    "questionStem": "Which one of the following expresses a view that is inconsistent with the principle stated in the editorial?",
+    "answerChoices": {
+      "A": "We should not prevent the students from wasting the classroom time set aside for homework. But this does not mean that they may spend the time any way they wish. Activities disruptive to others should not be tolerated.",
+      "B": "The scientist who invented this technology is not the only one who should be allowed to profit from it. After all, there is no evidence that allowing others to profit from this technology will reduce the scientist's own profits.",
+      "C": "Even though public smoking may lead to indirect harm to others, it should not be banned. There are several other ways to eliminate this harm that do not restrict the conduct of smokers and hence are preferable to a complete ban on public smoking.",
+      "D": "Highway speed limits are a justified restriction of freedom. For drivers who speed do not risk only their own lives; such drivers often injure or kill other people. Moreover, speed limits have been shown to significantly reduce highway accident and fatality rates.",
+      "E": "It is not enough that consumable products containing harmful substances have warning labels. Many adults simply ignore such warnings and continue to consume these substances in spite of the harm it may cause them. This is why consuming such substances should be illegal."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 19,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "The goblin fern, which requires a thick layer of leaf litter on the forest floor, is disappearing from North American forests. In spots where it has recently vanished, the leaf litter is unusually thin and, unlike those places where this fern still thrives, is teeming with the European earthworm Lumbricus rubellus, which eats leaf litter. L. rubellus is thus probably responsible for the fern's disappearance.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Wherever there is a thick layer of leaf litter in North American forests, goblin ferns can be found.",
+      "B": "None of the earthworms that are native to North America eat leaf litter.",
+      "C": "Dead leaves from goblin ferns make up the greater part of the layer of leaf litter on the forest floors where the goblin fern has recently vanished.",
+      "D": "There are no spots in the forests of North America where both goblin ferns and earthworms of the species L. rubellus can be found.",
+      "E": "L. rubellus does not favor habitats where the leaf litter layer is considerably thinner than what is required by goblin ferns."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Medical reporter: Studies have consistently found that taking an aspirin a day thins the blood slightly, thereby helping to prevent or reduce the severity of heart disease. Since heart disease is one of the most common types of ill health in industrialized nations, most people in such nations would therefore be in better health if they took an aspirin a day.",
+    "questionStem": "The reasoning in the doctor's argument is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It takes for granted that if medication can reduce the severity of heart disease, it can also prevent some cases of heart disease.",
+      "B": "It overlooks the possibility that even if a disease is one of the most common in a nation, most people in that nation are not in significant danger of developing that disease.",
+      "C": "It overlooks the possibility that preventing or reducing the severity of heart disease has little or no effect on any of the other most common diseases in industrialized nations.",
+      "D": "It fails to address the possibility that taking an aspirin a day is not the single most effective measure for preventing heart disease.",
+      "E": "It fails to address the possibility that the studies on the beneficial effects of aspirin were conducted only in industrialized nations."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 21,
+    "questionType": "Must Be True",
+    "questionDifficulty": 5,
+    "stimulus": "Essayist: Winners of a Nobel prize for science, who are typically professional scientists, have all made significant contributions to science. But amateur scientists have also provided many significant contributions. And unlike professional scientists, who are often motivated by economic necessity or a desire for fame, amateur scientists are motivated by the love of discovery alone.",
+    "questionStem": "If the essayist's statements are true, then which one of the following must also be true?",
+    "answerChoices": {
+      "A": "Some amateur scientists who did not win a Nobel prize for science nevertheless made significant contributions to science.",
+      "B": "Typically, winners of a Nobel prize for science are not motivated at all by the love of discovery.",
+      "C": "The love of discovery is the motive behind many significant contributions to science.",
+      "D": "Professional scientists have made a greater overall contribution to science than have amateur scientists.",
+      "E": "A professional scientist is more likely to make a significant contribution to science if he or she is motivated by the love of discovery."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 22,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Company president: Most of our best sales representatives came to the job with a degree in engineering but little or no sales experience. Thus, when we hire sales representatives, we should favor applicants who have engineering degrees but little or no sales experience over applicants with extensive sales experience but no engineering degrees.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the company president's argument?",
+    "answerChoices": {
+      "A": "Some of the company's sales representatives completed a degree in engineering while working for the company.",
+      "B": "Most of the people hired by the company as sales representatives have had a degree in engineering but no sales experience.",
+      "C": "Most of the customers that the company's sales representatives work with have a degree in engineering.",
+      "D": "Most of the people who apply for a sales representative position with the company do not have a degree in engineering.",
+      "E": "Some of the people who the company has hired as sales representatives and who were subsequently not very good at the job did not have extensive previous sales experience."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 23,
+    "questionType": "Method of Reasoning",
+    "questionDifficulty": 5,
+    "stimulus": "Anthropologist: Every human culture has taboos against eating certain animals. Some researchers have argued that such taboos originated solely for practical reasons, pointing out, for example, that in many cultures it is taboo to eat domestic animals that provide labor and that are therefore worth more alive than dead. But that conclusion is unwarranted; taboos against eating certain animals might instead have arisen for symbolic, ritualistic reasons, and the presence of the taboos might then have led people to find other uses for those animals.",
+    "questionStem": "In the argument, the anthropologist",
+    "answerChoices": {
+      "A": "calls an explanation of a phenomenon into question by pointing out that observations cited as evidence supporting it are also compatible with an alternative explanation of the phenomenon",
+      "B": "establishes that an explanation of a phenomenon is false by demonstrating that the evidence that had been cited in support of that explanation was inadequate",
+      "C": "rejects the reasoning used to justify a hypothesis about the origins of a phenomenon, on the grounds that there exists another, more plausible hypothesis about the origins of that phenomenon",
+      "D": "argues in support of one explanation of a phenomenon by citing evidence incompatible with a rival explanation",
+      "E": "describes a hypothesis about the sequence of events involved in the origins of a phenomenon, and then argues that those events occurred in a different sequence"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 2,
+    "stimulus": "In an effort to reduce underage drinking, the Department of Health has been encouraging adolescents to take a pledge not to drink alcohol until they reach the legal age. This seems to be successful. A survey of seventeen-year-olds has found that many who do not drink report having taken a pledge to refrain from drinking, whereas almost all who drink report having never taken such a pledge.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism because the argument",
+    "answerChoices": {
+      "A": "bases a conclusion about the efficacy of a method to reduce underage drinking merely on a normative judgment about the morality of underage drinking",
+      "B": "fails to consider that an alternative method of reducing underage drinking might be more effective",
+      "C": "infers from an association between pledging not to drink and refraining from drinking that the pledging was the cause of refraining from drinking",
+      "D": "treats a condition that is sufficient to produce an outcome as though it were necessary for the outcome to occur",
+      "E": "confuses the claim that many adolescents who do not drink report having taken the pledge with the claim that many who report having taken the pledge do not drink"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 1,
+    "questionNumber": 25,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Literary critic: A folktale is a traditional story told in an entertaining way, which may lead some to think that folktales lack deeper meaning. But this is not the case. A folktale is passed along by a culture for generations, and each storyteller adds something of his or her own to the story, and in this way folktales provide great insight into the wisdom of the culture.",
+    "questionStem": "The main conclusion of the literary critic's argument can be properly inferred if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Any tale that is passed along by a culture for generations can provide great insight into the wisdom of that culture.",
+      "B": "Any tale that provides insight into the wisdom of a culture is deeply meaningful in some respect.",
+      "C": "Not every tale that lacks deep meaning or beauty is told solely for entertainment.",
+      "D": "Any tale with deep meaning provides great insight into the wisdom of the culture by which it has been passed on.",
+      "E": "A story that is told primarily for entertainment does not necessarily lack deeper meaning."
+    },
+    "correctAnswer": "B"
+  }
+]

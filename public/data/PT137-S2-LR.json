@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Planting peach trees",
+    "questionDifficulty": 2,
+    "stimulus": "Planting peach trees on their farm makes more sense for the Johnsons than planting apricot trees. Although fresh, locally grown apricots are very popular in this area, the same is true of peaches. However, individual peach trees cost much less to purchase and plant than do apricot trees, and peach trees also begin bearing fruit at a much younger age.",
+    "questionStem": "Which one of the following, if true, would most seriously weaken the argument?",
+    "answerChoices": {
+      "A": "Fresh, locally grown apricots sell at a much higher price than do fresh, locally grown peaches.",
+      "B": "Apricot trees tend to stop being productive at a younger age than do peach trees.",
+      "C": "It costs as much to water and fertilize peach trees as it does to water and fertilize apricot trees.",
+      "D": "The market for fresh, locally grown apricots has grown in recent years as awareness of the health benefits of eating fresh fruit has increased.",
+      "E": "Peach production has decreased dramatically over the last several years."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "For years, a rare variety",
+    "questionDifficulty": 2,
+    "stimulus": "For years, a rare variety of camel was endangered because much of its habitat was used as a weapons testing range. After the testing range closed, however, the population of these camels began falling even more quickly.",
+    "questionStem": "Which one of the following, if true, most helps to explain the increased rate of population loss?",
+    "answerChoices": {
+      "A": "The weapons tests had kept wildlife poachers out of the testing range.",
+      "B": "Weapons testing in the range did more harm to the camels in the first years of the testing than in later years.",
+      "C": "Because of unexploded bombs, the land within the testing range was still somewhat dangerous after the range closed down.",
+      "D": "The camels had to overcome two different outbreaks of disease during the time the testing range was in operation.",
+      "E": "The weapons tests were most harmful to the camels in years when food was scarce."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "A person reading a new book",
+    "questionDifficulty": 1,
+    "stimulus": "A person reading a new book for pleasure is like a tourist traveling to a new place. The reader reads, just as the tourist travels, to enlarge understanding rather than simply to acquire information. Thus, it is better to read fewer books and spend more time on each rather than to quickly read as many as one can, just as it is better to travel to fewer places and spend more time in each rather than to spend a small amount of time in many different places.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "Tourists typically learn something about the places they visit even when they are there only to relax.",
+      "B": "Tourists gain much more understanding of a place once they have spent several days at that place than they do in their first few days there.",
+      "C": "Many people report that they can learn far more about a place by visiting it than they can by reading about it.",
+      "D": "Tourists who have read about a place beforehand tend to stay longer in that place.",
+      "E": "Some tourists are unconcerned about gaining information about a place other than what is necessary for their immediate enjoyment."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "One way to furnish a living room",
+    "questionDifficulty": 3,
+    "stimulus": "One way to furnish a living room is with modular furniture. Instead of buying a standard sofa, for example, one can buy a left end, a right end, and a middle piece that can be combined to create an L-shaped sofa. Modular furniture, however, is far more expensive than standard furniture. On average, a three-piece modular sofa costs almost twice as much as a standard sofa of comparable size and quality.",
+    "questionStem": "Each of the following, if true, helps to account for the greater cost of modular furniture except:",
+    "answerChoices": {
+      "A": "Modular furniture, unlike standard furniture, is not mass-produced.",
+      "B": "The consumer demand for sofas sometimes increases more quickly than the supply.",
+      "C": "The most fashionable designers tend to use modular furniture designs.",
+      "D": "Because modular furniture pieces are custom ordered, they are never put on sale.",
+      "E": "Modular sofas, on average, have a greater area of upholstered surfaces than do standard sofas."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "The hormone testosterone protects",
+    "questionDifficulty": 1,
+    "stimulus": "The hormone testosterone protects brain cells from injury and reduces levels of the protein beta-amyloid in the brain. Beta-amyloid causally contributes to Alzheimer's disease, and people whose brain cells are susceptible to injury are probably more susceptible to Alzheimer's disease. So there is reason to think that ______________.",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "anyone whose brain cells are susceptible to injury will eventually develop Alzheimer's disease",
+      "B": "whether a person develops Alzheimer's disease is dependent entirely on the level of beta-amyloid in his or her brain",
+      "C": "Alzheimer's disease leads to a reduction in testosterone level",
+      "D": "only people with Alzheimer's disease are at risk for injury to brain cells",
+      "E": "a decline in testosterone level puts one at increased risk for Alzheimer's disease"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "The profitability of a business",
+    "questionDifficulty": 1,
+    "stimulus": "The profitability of a business is reduced by anything that undermines employee morale. This is why paying senior staff with stock options, which allows them to earn more when the enterprise prospers, is not a wise policy because it increases dramatically the difference in income between senior staff and employees who are paid only a fixed salary.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "Large income differences between fixed-salary employees and senior staff tend to undermine employee morale.",
+      "B": "Reductions in the profitability of a company are usually due to low employee morale.",
+      "C": "Business firms that pay senior staff with stock options are less profitable than other firms.",
+      "D": "Reducing the difference in income between senior staff and employees paid only a fixed salary invariably increases a company's profitability.",
+      "E": "Employees whose incomes rise as the profits of their employers rise are more productive than those paid only a fixed salary."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Antibiotics are standard ingredients",
+    "questionDifficulty": 3,
+    "stimulus": "Antibiotics are standard ingredients in animal feed because they keep animals healthy and increase meat yields. However, scientists have recommended phasing out this practice, believing it may make antibiotics less effective in humans. If meat yields are reduced, however, some farmers will go out of business.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "If scientists are correct that antibiotic use in animal feed makes antibiotics less effective in humans, then some farmers will go out of business.",
+      "B": "If antibiotic use in animal feed is not phased out, some antibiotics will become ineffective in humans.",
+      "C": "If the scientists' recommendation is not heeded, no farmers will go out of business due to reduced meat yields.",
+      "D": "If the health of their animals declines, most farmers will not be able to stay in business.",
+      "E": "If antibiotic use in animal feed is phased out, some farmers will go out of business unless they use other means of increasing meat yields."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Guideline: It is improper for public officials",
+    "questionDifficulty": 2,
+    "stimulus": "Guideline: It is improper for public officials to influence the award of contracts or to perform other acts related to their office in a way that benefits themselves. Even the appearance of such impropriety should be avoided.\nApplication: Greenville's mayor acted improperly in urging the award of the city's street maintenance contract to a company owned and operated by one of the mayor's relatives, whose business would have been in serious financial trouble had it not been awarded the contract.",
+    "questionStem": "Which one of the following principles most helps in justifying the application of the guideline?",
+    "answerChoices": {
+      "A": "Public officials, when fulfilling their duties, should be held to higher standards than private individuals.",
+      "B": "Publicly funded contracts should be awarded based primarily on cost and the reliability of the contractor.",
+      "C": "Creating the appearance of impropriety is as blameworthy as acting improperly.",
+      "D": "Awarding a contract to a financially troubled business should be regarded as taking excessive risk.",
+      "E": "Benefiting one's family or friends should be regarded as benefiting oneself."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "To use the pool at City Gym",
+    "questionDifficulty": 3,
+    "stimulus": "To use the pool at City Gym, one must have a membership there. Sarah has a membership at City Gym. She must therefore use the pool there at least occasionally.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "mistakes a policy that is strictly enforced for a policy to which exceptions are made",
+      "B": "treats a statement whose truth is required for the conclusion to be true as though it were a statement whose truth ensures that the conclusion is true",
+      "C": "presumes that one or the other of two alternatives must be the case without establishing that no other alternative is possible",
+      "D": "concludes that a person has a certain attribute simply because that person belongs to a group most of whose members have that attribute",
+      "E": "draws a conclusion that merely restates a claim presented in support of that conclusion"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Annie: Our university libraries",
+    "questionDifficulty": 2,
+    "stimulus": "Annie: Our university libraries have been sadly neglected. Few new books have been purchased during the last decade, and most of the older books are damaged. The university's administrators should admit that their library policies have been in error and should remedy this situation in the fastest way possible, which is to charge students a library fee and use the funds for library improvements.\nMatilda: The current poor condition of the university libraries is the fault of the library officials, not the students. Students should not have to pay for the mistakes of careless library administrators.",
+    "questionStem": "Annie and Matilda disagree about whether",
+    "answerChoices": {
+      "A": "library administrators are to blame for the poor condition of the university libraries",
+      "B": "library improvements could be most quickly effected through charging students additional fees",
+      "C": "students will ultimately benefit from the library improvements that could be funded by additional student fees",
+      "D": "those not responsible for the current condition of the libraries should bear the cost for remedying it",
+      "E": "funds for library improvements could be raised without additional student fees"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Scientists examined diamonds",
+    "questionDifficulty": 2,
+    "stimulus": "Scientists examined diamonds that were formed on Earth about 2.9 billion years ago. These diamonds had a higher-than-normal concentration of sulfur-33. This concentration can be explained only by certain chemical reactions that are stimulated by ultraviolet light. If there had been more than a trace of oxygen in Earth's atmosphere 2.9 billion years ago, then not enough ultraviolet light would have reached Earth's surface to stimulate the chemical reactions.",
+    "questionStem": "The information above most strongly supports which one of the following?",
+    "answerChoices": {
+      "A": "Most diamonds with higher-than-normal concentrations of sulfur-33 were formed at least 2.9 billion years ago.",
+      "B": "Ultraviolet light causes the oxygen in Earth's atmosphere to react chemically with sulfur-33.",
+      "C": "Earth's atmosphere contained very little, if any, oxygen 2.9 billion years ago.",
+      "D": "Sulfur-33 is rarely found in diamonds that were formed more recently than 2.9 billion years ago.",
+      "E": "The formation of diamonds occurs only in the presence of ultraviolet light."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "When a patient failed to respond",
+    "questionDifficulty": 4,
+    "stimulus": "When a patient failed to respond to prescribed medication, the doctor hypothesized that the dosage was insufficient. The doctor first advised doubling the dosage, but the patient's symptoms remained. It was then learned that the patient regularly drank an herbal beverage that often inhibits the medication's effect. The doctor then advised the patient to resume the initial dosage and stop drinking the beverage. The patient complied, but still showed no change. Finally, the doctor advised the patient to double the dosage and not drink the beverage. The patient's symptoms disappeared. Hence, the doctor's initial hypothesis was correct.",
+    "questionStem": "Which one of the following most accurately describes the manner in which the doctor's second set of recommendations and the results of its application support the doctor's initial hypothesis?",
+    "answerChoices": {
+      "A": "They establish that the doctor's concerns about the healthfulness of the beverage were well founded.",
+      "B": "They make it less plausible that the beverage actually contributed to the ineffectiveness of the prescribed medication.",
+      "C": "They give evidence that the beverage was responsible for the ineffectiveness of the prescribed medication.",
+      "D": "They suggest that the beverage was not the only cause of the ineffectiveness of the prescribed dosage.",
+      "E": "They rule out the possibility that the doctor had initially prescribed the wrong medication for the patient's ailments."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Although most builders do not",
+    "questionDifficulty": 5,
+    "stimulus": "Although most builders do not consider the experimental building material papercrete to be a promising material for large-scale construction, those who regularly work with it, primarily on small-scale projects, think otherwise. Since those who regularly use papercrete are familiar with the properties of the material, it is likely that papercrete is indeed promising for large-scale construction.",
+    "questionStem": "The argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "confuses what is promising for small-scale construction with what is promising for large-scale construction",
+      "B": "presumes that what the majority of builders thinks is promising must in fact be promising",
+      "C": "equivocates between two different meanings of the term \"promising\"",
+      "D": "does not consider the views of the builders who have the most experience working with the material",
+      "E": "fails to consider that most builders might not regularly use papercrete precisely because they are familiar with its properties"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Drama critic: There were many",
+    "questionDifficulty": 5,
+    "stimulus": "Drama critic: There were many interesting plays written last year. Surely some will gain widespread popularity for at least a few years, and some will even receive high critical acclaim, but none will be popular several centuries from now. The only plays that continue to be performed regularly over many decades and centuries are those that skillfully explore human nature, and none of the plays written last year examine human nature in a particularly skillful way.",
+    "questionStem": "The argument relies on assuming which one of the following?",
+    "answerChoices": {
+      "A": "No play will be popular several centuries from now unless it continues to be performed regularly during the intervening time.",
+      "B": "For a play to deserve high critical acclaim it must be popular for more than just a few years.",
+      "C": "There were no plays written last year that the drama critic has neither read nor seen performed.",
+      "D": "If a play does not skillfully explore human nature, it will not receive critical acclaim.",
+      "E": "Any play that skillfully examines human nature will be performed regularly over the centuries."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Doctor: It is wrong",
+    "questionDifficulty": 2,
+    "stimulus": "Doctor: It is wrong for medical researchers to keep their research confidential, even if the companies for which they work would rather that they do so. If research results are not shared, the development of effective medical treatments may be delayed, and thus humans may suffer unnecessarily.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the doctor's argument?",
+    "answerChoices": {
+      "A": "Medical researchers should never engage in any behavior that they know will cause humans to suffer.",
+      "B": "If the most important moral principle is to prevent human suffering, then it is wrong for medical researchers to keep their research confidential.",
+      "C": "Medical researchers should not keep information confidential if it is possible that sharing that information would prevent some unnecessary human suffering.",
+      "D": "Medical researchers should always attempt to develop effective medical treatments as rapidly as they can while fulfilling their other moral obligations.",
+      "E": "It is wrong for any company to ask its medical researchers to keep their research confidential, if failure to share the research might delay development of effective medical treatments."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Marife: That was a bad movie",
+    "questionDifficulty": 4,
+    "stimulus": "Marife: That was a bad movie because, by not providing viewers with all the information necessary for solving the murder, it violated a requirement of murder mysteries.\nNguyen: But the filmmaker wanted viewers to focus on the complex relationship between the chief detective and her assistant. The murder just provided the context in which the relationship developed, and should not be taken as a defining characteristic of the film.",
+    "questionStem": "Marife's and Nguyen's comments indicate that they disagree about",
+    "answerChoices": {
+      "A": "whether the movie was a bad one",
+      "B": "whether the relationship between the chief detective and her assistant was an important part of the movie",
+      "C": "whether the movie should be classified as a murder mystery",
+      "D": "the appropriateness of trying to find criteria that all mystery movies must meet",
+      "E": "whether the filmmaker wanted viewers to be able to solve the murder"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Educator: Some experimental educational",
+    "questionDifficulty": 2,
+    "stimulus": "Educator: Some experimental educational programs, based on the principle that children's first education should take place at home, instruct parents in how to be their child's \"first teacher.\" The school performance of the children in these programs is better than average. This shows that these programs are successful and should be expanded.",
+    "questionStem": "Which one of the following, if true, most weakens the educator's argument?",
+    "answerChoices": {
+      "A": "Not all small children enjoy being taught by their parents.",
+      "B": "Most of the parents participating in the programs have prior experience as educators.",
+      "C": "Surveys show that most parents would approve expanding the programs.",
+      "D": "The cost of expanding the programs has not been precisely determined.",
+      "E": "Some children who did not participate in the programs performed exceptionally well in school."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Censor: All anarchist novels",
+    "questionDifficulty": 3,
+    "stimulus": "Censor: All anarchist novels have two objectionable characteristics: a subversive outlook and the depiction of wholesale violence. Therefore, it is permissible to ban any anarchist novel that would do more harm than good to society.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the censor's reasoning?",
+    "answerChoices": {
+      "A": "If a novel has a subversive outlook but does not depict wholesale violence, it is impermissible to ban it.",
+      "B": "If a novel depicts wholesale violence, then it is permissible to ban it if doing so would do more good than harm to society.",
+      "C": "It is permissible to ban a novel only if the novel has a subversive outlook and would do more harm than good to society.",
+      "D": "It is permissible to ban a novel that would cause society more harm than good if the novel has two or more objectionable characteristics.",
+      "E": "It is permissible to ban a novel that depicts wholesale violence only if that novel has at least one other objectionable characteristic."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "In 1996, all ResearchTech",
+    "questionDifficulty": 2,
+    "stimulus": "In 1996, all ResearchTech projects were funded either by the government or by private corporations. The Gilman Survey, a ResearchTech project, was not funded by the government but was conducted in 1996. It must therefore have been funded by private corporations.",
+    "questionStem": "Which one of the following is most similar in its reasoning to the argument above?",
+    "answerChoices": {
+      "A": "Legal restrictions on consumer purchases have a variety of aims; for example, some are paternalistic, and others are designed to protect civil liberties. Ordinance 304, a legal restriction on alcohol sales, does not protect civil liberties. It must therefore be paternalistic.",
+      "B": "Legal restrictions on consumer purchases, such as Ordinance 304, are either paternalistic or protect civil liberties. Ordinance 304 is not paternalistic, so it must protect civil liberties.",
+      "C": "Ordinance 304 is not paternalistic. Since all legal restrictions on consumer purchases are either paternalistic or designed to protect the environment, the purpose of Ordinance 304 must not be to protect the environment.",
+      "D": "Legal restrictions on consumer purchases are either paternalistic or designed to protect civil liberties. All ordinances passed in 1993 are paternalistic. Since Ordinance 304 was passed in 1993, it must be a legal restriction on consumer purchases.",
+      "E": "Ordinance 304 should be exercised only in order to protect civil liberties or to protect consumers from self-harm. The mayor's last exercise of Ordinance 304 does not protect civil liberties, so it must have been intended to protect consumers from self-harm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Astronomer: Earth was bombarded",
+    "questionDifficulty": 5,
+    "stimulus": "Astronomer: Earth was bombarded repeatedly by comets and asteroids early in its history. This bombardment probably sterilized the surface and prevented life from originating during this early period in Earth's geological history. Meanwhile, Mars escaped severe bombardment, and so there could have been microbial life on Mars prior to there being such life on Earth. Because many meteorites originating from Mars have landed on Earth, life on Earth may have started when living microbes were carried here from Mars on a meteorite.",
+    "questionStem": "Which one of the following most accurately describes the role played in the astronomer's argument by the statement that there could have been microbial life on Mars prior to there being such life on Earth?",
+    "answerChoices": {
+      "A": "It is a claim for which no justification is provided but that is required in order to establish the argument's main conclusion.",
+      "B": "It is a claim for which no justification is provided and that, if true, ensures the truth of the argument's main conclusion.",
+      "C": "It is a claim for which some justification is provided and that is required in order to establish the argument's main conclusion.",
+      "D": "It is a claim for which justification is provided and that, if true, establishes the truth of the argument's main conclusion.",
+      "E": "It is a claim that provides some support for the argument's conclusion but that neither ensures the truth of that conclusion nor is required in order to establish that conclusion."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "The presence of bees",
+    "questionDifficulty": 4,
+    "stimulus": "The presence of bees is necessary for excellent pollination, which, in turn, usually results in abundant fruits and vegetables. Establishing a beehive or two near one's garden ensures the presence of bees. Keeping bees is economical, however, only if the gardener has a use for homegrown honey. Thus, gardeners who have no use for homegrown honey will tend not to have beehives, so their gardens will fail to have excellent pollination.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the reasoning of the argument?",
+    "answerChoices": {
+      "A": "The argument fails to consider the possibility that obtaining homegrown honey is only one of several advantages of beehives.",
+      "B": "The argument confuses what is necessary for pollination to take place with what would guarantee that it takes place.",
+      "C": "The argument confuses what is necessary for an abundance of fruits and vegetables with what is usually conducive to it.",
+      "D": "The argument fails to consider that bees might be present even in the absence of a particular condition that would ensure their presence.",
+      "E": "The argument bases a claim that there is a causal connection between beehives and excellent pollination on a mere association between them."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "People often praise poems",
+    "questionDifficulty": 3,
+    "stimulus": "People often praise poems for their truth. But to argue that expressing true propositions contributes to the aesthetic merit of a poem is misguided. Most of the commonplace beliefs of most people are true. Whatever the basis of poetic excellence is, it must certainly be rare rather than common.",
+    "questionStem": "Which one of the following most accurately describes the role played in the argument by the claim that whatever the basis of poetic excellence is, it must certainly be rare rather than common?",
+    "answerChoices": {
+      "A": "It is the overall conclusion drawn by the argument.",
+      "B": "It is a premise that, in conjunction with another premise, is intended to support the argument's conclusion.",
+      "C": "It is a premise offered as the sole support for the argument's conclusion.",
+      "D": "It is background information that, in itself, does not provide support for the argument's conclusion.",
+      "E": "It is a proposition for which the argument seeks to advance an explanation."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Three million dollars was recently stolen",
+    "questionDifficulty": 4,
+    "stimulus": "Three million dollars was recently stolen from the City Treasurer's Office, and, from what we know so far, we can conclude that some members of the mayor's staff are suspects. The suspects are all former employees of the City Treasurer's Office, and the mayor's staff includes former employees of that office.",
+    "questionStem": "The flawed nature of the argument above can most effectively be demonstrated by noting that, by parallel reasoning, we could conclude that",
+    "answerChoices": {
+      "A": "some painters are sculptors since some sculptors are famous and some painters are famous",
+      "B": "some cabins are skyscrapers since all skyscrapers are buildings and some buildings are cabins",
+      "C": "some tables are chairs since all tables are furniture and all chairs are furniture",
+      "D": "all supermarkets sell asparagus since all supermarkets sell food and asparagus is a food",
+      "E": "all animals are dogs since some dogs are pets and some animals are pets"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Why are violins made by Stradivarius",
+    "questionDifficulty": 1,
+    "stimulus": "Why are violins made by Stradivarius in the early 1700s far superior to most other violins? Some experts suggest secret varnishes, but there is no evidence for this. However, climatologists have found that in the 1600s and early 1700s weather patterns in the region of Italy where Stradivarius worked affected tree growth to produce wood with special acoustic properties. Therefore, it is likely that ______________.",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "some other Italian violin makers in the early 1700s produced violins that equaled the quality of Stradivarius violins",
+      "B": "Stradivarius was the only violin maker in the early 1700s to use the wood produced in that part of Italy",
+      "C": "no violin made from present-day materials could rival a Stradivarius violin for sound quality",
+      "D": "the special qualities of Stradivarius violins are due in part to the wood used to make them",
+      "E": "Stradivarius did not employ any secret techniques in making his violins"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Principle: Only if a professor",
+    "questionDifficulty": 2,
+    "stimulus": "Principle: Only if a professor believes a student knowingly presented someone else's ideas without attribution should the professor make an official determination that the student has committed plagiarism.\nApplication: It is not the case that Professor Serfin should make an official determination that Walters committed plagiarism in the term paper about Willa Cather that Walters wrote for Serfin's class.",
+    "questionStem": "Which one of the following, if true, justifies the above application of the principle?",
+    "answerChoices": {
+      "A": "Professor Serfin does not have completely compelling evidence to conclude that Walters presented someone else's ideas as if they were his own in the term paper about Willa Cather.",
+      "B": "If Walters had realized that the main thesis of his term paper is identical to the main thesis of a book he had read, Walters would have attributed the idea to the book.",
+      "C": "Although the main thesis of Walters's term paper is identical to that of a book that he did not cite, Professor Serfin is convinced that Walters did not knowingly try to pass anyone else's ideas off as his own.",
+      "D": "Walters does not believe that Professor Serfin should make an official determination that he plagiarized.",
+      "E": "Professor Serfin has no intention of making an official determination that Walters plagiarized in the class."
+    },
+    "correctAnswer": "C"
+  }
+]

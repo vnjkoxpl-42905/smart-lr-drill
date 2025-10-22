@@ -1,0 +1,427 @@
+[
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 1,
+		"questionType": "Flaw",
+		"questionDifficulty": 1,
+		"stimulus": "Mayor: There has been a long debate in city council about how to accommodate projected increases in automobile traffic. Today, our choice is clear: either we adopt my plan to build a new expressway, or we do nothing. Doing nothing is not a viable option because our existing system of roads would be in gridlock within ten years given even a conservative estimate of future traffic levels. City council should therefore adopt my plan.",
+		"questionStem": "The reasoning in the mayor's argument is most vulnerable to which one of the following criticisms?",
+		"answerChoices": {
+			"A": "It bases a projection only on conservative estimates rather than considering a wider range of estimates.",
+			"B": "It takes for granted that the options it considers are mutually exclusive.",
+			"C": "It fails to consider the possibility that the rate of increase in traffic will start to diminish after ten years.",
+			"D": "It fails to address the issue of the cost of traffic gridlock to the city's economy.",
+			"E": "It presents a choice that is limited to two options, without giving reasons for not considering any other options."
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 2,
+		"questionType": "Necessary Assumption",
+		"questionDifficulty": 2,
+		"stimulus": "Museum curator: Our ancient Egyptian collection includes an earthenware hippopotamus that resembles a child's toy. It was discovered in a tomb, upside down, with its legs broken off. We know that the ancient Egyptians believed the dead had to wage eternal war with beasts. Breaking the legs off a representation of an animal was thought to help a deceased person in this war. We conclude that, far from being a toy, this hippopotamus was a religious object.",
+		"questionStem": "Which one of the following is an assumption required by the curator's argument?",
+		"answerChoices": {
+			"A": "The tomb in which the hippopotamus was found was not the tomb of a child.",
+			"B": "Earthenware figures were never used as children's toys in ancient Egypt.",
+			"C": "The tomb in which the hippopotamus was found was not reentered from the time of burial until archaeologists opened it.",
+			"D": "The hippopotamus' legs were not broken through some natural occurrence after it was placed in the tomb.",
+			"E": "The hippopotamus was originally placed upside down in the tomb."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 3,
+		"questionType": "Strengthen",
+		"questionDifficulty": 2,
+		"stimulus": "Lawyer: Juries are traditionally given their instructions in convoluted, legalistic language. The verbiage is intended to make the instructions more precise, but greater precision is of little use if most jurors have difficulty understanding the instructions. Since it is more important for jurors to have a basic but adequate understanding of their role than it is for the details of that role to be precisely specified, jury instructions should be formulated in simple, easily comprehensible language.",
+		"questionStem": "Each of the following, if true, strengthens the lawyer's argument except:",
+		"answerChoices": {
+			"A": "Most jurors are less likely to understand instructions given in convoluted, legalistic language than instructions given in simple, easily comprehensible language.",
+			"B": "Most jurors do not have an adequate understanding of their role after being given jury instructions in convoluted, legalistic language.",
+			"C": "Jury instructions formulated in simple, easily comprehensible language can adequately describe the role of the jurors.",
+			"D": "The details of the role of the jurors cannot be specified with complete precision in simple, easily comprehensible language.",
+			"E": "Jurors do not need to know the precise details of their role in order to have an adequate understanding of that role."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 4,
+		"questionType": "Necessary Assumption",
+		"questionDifficulty": 3,
+		"stimulus": "Traditional \"talk\" therapy, in which a patient with a psychological disorder discusses it with a trained therapist, produces chemical changes in the brain. These changes seem to correspond to improvements in certain aspects of the patient's behavior. Thus, physicians will eventually be able to treat such patients as effectively through pharmacological intervention in the brain's neurochemistry as through the lengthy intermediary of traditional \"talk\" methods.",
+		"questionStem": "Which one of the following is an assumption on which the argument depends?",
+		"answerChoices": {
+			"A": "All neurochemical changes produce corresponding psychological changes.",
+			"B": "Improvements in a patient's behavior produced by \"talk\" therapy occur only through chemical changes in the brain's neurochemistry.",
+			"C": "\"Talk\" therapy has not been effective at bringing about psychological change.",
+			"D": "If chemical changes in the brain's neurochemistry correspond to improvements in patient behavior, then psychology and neuroscience will eventually be indistinguishable.",
+			"E": "Direct intervention in the brain's neurochemistry is likely to become a less expensive way of treating psychological disorders than is \"talk\" therapy."
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 5,
+		"questionType": "Weaken",
+		"questionDifficulty": 2,
+		"stimulus": "Bacteria that benefit human beings when they are present in the body are called commensals. The bacterium Helicobacter pylori plays a primary role in the development of stomach ulcers. But since stomach ulcers occur in less than 10 percent of those harboring H. pylori, and since it allegedly strengthens immune response, many scientists now consider it a commensal. But this is surely misguided. Only about 10 percent of the people who harbor Mycobacter tuberculosis—a bacterium that can cause tuberculosis—get sick from it, yet no one would call M. tuberculosis a commensal.",
+		"questionStem": "Which one of the following, if true, most seriously undermines the argument's reasoning?",
+		"answerChoices": {
+			"A": "Stomach ulcers caused by H. pylori and tuberculosis can both be effectively treated with antibiotics.",
+			"B": "Cases of tuberculosis usually last longer than ulcers caused by H. pylori.",
+			"C": "People who harbor M. tuberculosis derive no benefit from its presence.",
+			"D": "There are more people who harbor M. tuberculosis than people who harbor H. pylori.",
+			"E": "There are more people who harbor H. pylori than people who harbor M. tuberculosis."
+		},
+		"correctAnswer": "C"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 6,
+		"questionType": "Sufficient Assumption",
+		"questionDifficulty": 2,
+		"stimulus": "Most apartments on the upper floors of The Vista Arms apartment building have scenic views. So there is in the building at least one studio apartment with scenic views.",
+		"questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+		"answerChoices": {
+			"A": "All of the apartments on the lower floors of the building have scenic views.",
+			"B": "All of the apartments in the building have scenic views.",
+			"C": "Most of the apartments in the building are studio apartments.",
+			"D": "Most of the apartments with scenic views are on the upper floors of the building.",
+			"E": "Most of the apartments on the upper floors of the building are studio apartments."
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 7,
+		"questionType": "Principle Strengthen",
+		"questionDifficulty": 2,
+		"stimulus": "Mike: Tom did not tell me that I could use his computer, but it would not be wrong for me to use it anyway. Last week Tom used Mary's bicycle even though she had not told him he could use it.",
+		"questionStem": "Which one of the following principles, if valid, would most help to justify Mike's reasoning?",
+		"answerChoices": {
+			"A": "Using the possessions of others without their permission is not always theft.",
+			"B": "Generally one should tell the truth, but there are cases in which it is permissible not to.",
+			"C": "If people have used your property without your permission, it is not wrong for you to use their property without their permission.",
+			"D": "It is permissible to treat people in a way that is similar to the way in which they have treated others.",
+			"E": "Using another person's property is wrong if the person is harmed by that use."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 8,
+		"questionType": "Flaw",
+		"questionDifficulty": 2,
+		"stimulus": "Robinson: Wexell says that the museum wasted its money in purchasing props and costumes from famous stage productions, because such items have no artistic significance outside the context of a performance. But many of the props and costumes are too old and fragile for use in a performance. So clearly, the museum did not waste its money, for displaying these items is the only way of making them available to the public.",
+		"questionStem": "The reasoning in Robinson's argument is most vulnerable to criticism on the grounds that it",
+		"answerChoices": {
+			"A": "offers anecdotal evidence insufficient to support a general claim",
+			"B": "gives reasons that do not address the point made in Wexell's argument",
+			"C": "attacks the person making the argument rather than the substance of the argument",
+			"D": "concludes that a claim is false merely on the grounds that the evidence for it is insufficient",
+			"E": "takes a condition that is sufficient for the conclusion to be true as one that is necessary for the conclusion to be true"
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 9,
+		"questionType": "Principle Conform",
+		"questionDifficulty": 2,
+		"stimulus": "In a party game, one person leaves the room with the understanding that someone else will relate a recent dream to the remaining group. The person then returns and tries to reconstruct the dream by asking only yes-or-no questions. In fact, no dream has been related: the group simply answers the questions according to some arbitrary rule. Surprisingly, the person usually constructs a dream narrative that is both coherent and ingenious.",
+		"questionStem": "The example presented above most closely conforms to which one of the following propositions?",
+		"answerChoices": {
+			"A": "The presumption that something has order and coherence can lead one to imbue it with order and coherence.",
+			"B": "One is less apt to reach a false understanding of what someone says than to make no sense out of it at all.",
+			"C": "Dreams are often just collections of images and ideas without coherent structures.",
+			"D": "Interpreting another person's dream requires that one understand the dream as a coherent narrative.",
+			"E": "People often invent clever and coherent stories to explain their behavior to other people."
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 10,
+		"questionType": "Necessary Assumption",
+		"questionDifficulty": 3,
+		"stimulus": "Computer manufacturers have sought to make computer chips ever smaller, since decreasing the size of a computer's central processing unit (CPU) chip—without making that CPU chip any less sophisticated—will proportionally increase the speed of the CPU chip and the computer containing it. But since CPU chips cannot be made significantly smaller without decreasing their sophistication, computers cannot currently be made significantly faster.",
+		"questionStem": "Which one of the following is an assumption on which the argument depends?",
+		"answerChoices": {
+			"A": "Computers cannot currently be made faster unless their CPU chips are made smaller.",
+			"B": "Even if CPU chips are made slightly less sophisticated, they cannot currently be made much smaller.",
+			"C": "If both the size and the sophistication of a CPU chip are decreased, the speed of that chip will decrease.",
+			"D": "Few, if any, computer manufacturers believe that computers can be made significantly faster.",
+			"E": "Increasing the sophistication of a CPU chip without increasing its size will proportionally increase its speed."
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 11,
+		"questionType": "Flaw",
+		"questionDifficulty": 3,
+		"stimulus": "In the last year, biologists have learned that there are many more species of amphibians in existence than had previously been known. This definitely undermines environmentalists' claim that pollution is eliminating many of these species every year.",
+		"questionStem": "The reasoning in the argument above is most vulnerable to criticism on the grounds that it involves a confusion between",
+		"answerChoices": {
+			"A": "kinds of things and the things that are of those kinds",
+			"B": "a condition necessary for a phenomenon and one that is sufficient for it",
+			"C": "a cause and an effect",
+			"D": "a correlation between two phenomena and a causal relationship between them",
+			"E": "changes in our knowledge of objects and changes in the objects themselves"
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 12,
+		"questionType": "Principle Strengthen",
+		"questionDifficulty": 4,
+		"stimulus": "Because dried peat moss, which is derived from sphagnum moss, contains no chemical additives and is a renewable resource, many gardeners use large amounts of it as a soil conditioner in the belief that the practice is environmentally sound. They are mistaken. The millions of acres of sphagnum moss in the world contribute more oxygen to the atmosphere than do all of the world's rain forests combined, and the garden soil industry is depleting these areas much faster than they can renew themselves.",
+		"questionStem": "Which one of the following principles, if valid, most helps to justify the argument's reasoning?",
+		"answerChoices": {
+			"A": "Using a product may be environmentally unsound even if the product is a renewable resource and contains no chemical additive.",
+			"B": "A practice is not environmentally sound if it significantly reduces the amount of oxygen entering the atmosphere.",
+			"C": "A practice is environmentally sound if it helps to protect rain forests that contribute large amounts of oxygen to the atmosphere.",
+			"D": "If the environmental benefits of a practice outweigh the environmental costs, that practice can be legitimately considered environmentally sound.",
+			"E": "If the practices of an industry threaten a vital resource, those practices should be banned."
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 13,
+		"questionType": "Flaw",
+		"questionDifficulty": 4,
+		"stimulus": "Brooks: I'm unhappy in my job, but I don't know whether I can accept the risks involved in quitting my job.\nMorgenstern: The only risk in quitting is that of not finding another job. If you don't find one, you're going to be pretty unhappy. But you're already unhappy, so you might as well just quit.",
+		"questionStem": "Morgenstern's argument is flawed in that it",
+		"answerChoices": {
+			"A": "fails to take into account that unhappiness can vary in intensity or significance",
+			"B": "relies on an assumption that is tantamount to assuming that the conclusion is true",
+			"C": "mischaracterizes what Brooks says",
+			"D": "conflates two different types of risk",
+			"E": "reaches a generalization on the basis of a single case"
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 14,
+		"questionType": "Must Be True",
+		"questionDifficulty": 2,
+		"stimulus": "Only Canadian films are shown at the Lac Nichoutec Film Festival. This year, most of the films that won prizes at that festival also won prizes at international film festivals.",
+		"questionStem": "If the above statements are true, which one of the following statements must also be true?",
+		"answerChoices": {
+			"A": "This year, most of the Canadian films that were shown at international film festivals won prizes at the Lac Nichoutec Film Festival.",
+			"B": "Most of the Canadian films produced this year were shown at the Lac Nichoutec Film Festival.",
+			"C": "Some of the films that won prizes at international film festivals this year were Canadian films.",
+			"D": "This year, not every film that won a prize at the Lac Nichoutec Film Festival was also shown at an international film festival.",
+			"E": "This year, at least one film that won a prize at an international film festival was not shown at the Lac Nichoutec Film Festival."
+		},
+		"correctAnswer": "C"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 15,
+		"questionType": "Flaw",
+		"questionDifficulty": 3,
+		"stimulus": "Commentator: Many social critics claim that contemporary journalists' cynical tendency to look for selfish motives behind the seemingly altruistic actions of powerful people undermines our society's well-being by convincing people that success is invariably associated with greed and mendacity. But the critics' claim is absurd. The cynicism of contemporary journalists cannot be a contributing factor to the undermining of our society's well-being, for journalists have always been cynics. Today's journalists are, if anything, more restrained than their predecessors.",
+		"questionStem": "The reasoning in the commentator's argument is most vulnerable to criticism on the grounds that it overlooks the possibility that",
+		"answerChoices": {
+			"A": "widespread cynicism is beneficial to the well-being of society",
+			"B": "cynicism about the motives of powerful people increases with the amount of information one has about them",
+			"C": "the work of contemporary journalists reflects a cynicism that is not really genuine",
+			"D": "any accurate description of human behavior portrays it as selfish",
+			"E": "cynicism of this type on the part of journalists has always had a negative effect on the well-being of society"
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 16,
+		"questionType": "Parallel",
+		"questionDifficulty": 3,
+		"stimulus": "The owners of Uptown Apartments are leaning toward not improving the apartment complex; they believe that the increased rents they could charge for improved apartments would not cover the costs of the improvements. But the improvements would make the surrounding housing, which they also own, more valuable and rentable for higher rents. So the owners should make the improvements.",
+		"questionStem": "The reasoning in which one of the following is most similar to the reasoning in the argument above?",
+		"answerChoices": {
+			"A": "John's injured knee does not cause him a lot of pain, so he does not want to undergo the pain of surgery to heal it. But the surgery would enable him to exercise regularly again. Thus John should have the surgery.",
+			"B": "Since its fishing season lasts only six months, Laketown Fishing Company prefers renting boats to buying its own. But since boats can be used for other purposes during the fishing season, it has made the wrong decision.",
+			"C": "Max's mechanic thinks there is a crack in the left cylinder head of Max's car and wants to remove the engine to check. Such a diagnostic engine removal would cost about $175, even if the cylinder head does not need replacement. But if the cylinder head is cracked and is not replaced, the engine will be ruined. So Max should have the mechanic check for the crack.",
+			"D": "Because of dental problems, Leona cut her consumption of candy. Consequently, she learned to enjoy fruit more. Thus, dental problems, which can lead to other health problems, led in her case to an improved diet and better health overall.",
+			"E": "Bulk Fruit Company is deciding whether to market a new hybrid fruit. It is enthusiastic about the idea, since research suggests that people will come to like this fruit. Therefore, it is in the long-term interest of the company to market the hybrid fruit."
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 17,
+		"questionType": "Strengthen",
+		"questionDifficulty": 2,
+		"stimulus": "Ditalgame Corporation's computer video games are subject to widespread illegal copying. To combat this piracy, Ditalgame will begin using a new copy protection feature on its games. Ditalgame's president predicts a substantial increase in sales of the company's games once the new copy protection feature is implemented.",
+		"questionStem": "Which one of the following, if true, provides the most support for the president's prediction?",
+		"answerChoices": {
+			"A": "Ditalgame has spent millions of dollars developing the new copy protection feature, and the company can recoup these costs only if its sales increase substantially.",
+			"B": "Over the last several years, the market for computer games has grown steadily, but Ditalgame's share of that market has shrunk considerably.",
+			"C": "The copy protection feature causes a copied game to be playable just long enough for most people to come to enjoy it so much that they decide they have to have it.",
+			"D": "Game Review Monthly, the most commonly read magazine among people who frequently copy computer games, generally gives favorable reviews to Ditalgame games.",
+			"E": "Computer games produced by Ditalgame are copied more frequently than computer games produced by Ditalgame's main competitors."
+		},
+		"correctAnswer": "C"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 18,
+		"questionType": "Main Conclusion",
+		"questionDifficulty": 3,
+		"stimulus": "Columnist: It may soon be possible for an economy to function without paper money. Instead, the government would electronically record all transactions as they take place. However, while this may be technologically feasible it would never be willingly accepted by a society, for it gives the government too much power. People are rightly distrustful of governments with too much power.",
+		"questionStem": "Which one of the following most accurately expresses the overall conclusion of the columnist's argument?",
+		"answerChoices": {
+			"A": "A society would never willingly accept a system in which, in lieu of paper money, the government keeps track of every transaction electronically.",
+			"B": "It is reasonable for people to distrust a government that has too much power.",
+			"C": "New technology may soon make it possible for an economy to operate without paper money.",
+			"D": "People are right to be unwilling to give the government the power it would need to operate an economy without paper money.",
+			"E": "Even though it may be technologically feasible, no government will be able to operate an economy without the use of paper money."
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 19,
+		"questionType": "Sufficient Assumption",
+		"questionDifficulty": 3,
+		"stimulus": "Social scientist: Since the body of thought known as Marxism claims to describe rigorously an inexorable historical movement toward the socialization of the means of production, it should be regarded as a scientific theory. Thus, certain interpreters, in taking Marxism as a political program aimed at radically transforming society, have misconstrued it.",
+		"questionStem": "The social scientist's conclusion follows logically if which one of the following is assumed?",
+		"answerChoices": {
+			"A": "The description that Marxism gives of certain historical phenomena in the economic sphere is as rigorous as it is claimed to be.",
+			"B": "The aims of science are incompatible with the aims of those who would seek to transform society by political means.",
+			"C": "Only bodies of thought consisting purely of rigorous description are scientific theories.",
+			"D": "Scientific theories cannot be correctly interpreted to be, or to imply, political programs.",
+			"E": "The means of production will inevitably become socialized regardless of any political programs designed to make that occur."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 20,
+		"questionType": "Agree/Disagree",
+		"questionDifficulty": 4,
+		"stimulus": "Daniel: There are certain actions that moral duty obliges us to perform regardless of their consequences. However, an action is not morally good simply because it fulfills a moral obligation. No action can be morally good unless it is performed with the right motivations.\nCarrie: Our motivations for our actions are not subject to our conscious control. Therefore, the only thing that can be required for an action to be morally good is that it fulfill a moral obligation.",
+		"questionStem": "The dialogue most supports the claim that Daniel and Carrie are committed to disagreeing with each other about the truth of which one of the following statements?",
+		"answerChoices": {
+			"A": "No one can be morally required to do something that is impossible to do.",
+			"B": "Some actions that are performed with the right motivations are not morally good.",
+			"C": "All actions that fulfill moral obligations are performed in order to fulfill moral obligations.",
+			"D": "An action performed with the wrong motivations cannot be morally good.",
+			"E": "If a person's motivations for acting are based on a sense of duty, then that person's action is morally good."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 21,
+		"questionType": "Flaw",
+		"questionDifficulty": 3,
+		"stimulus": "The mayor was not telling the truth when he said that the bridge renovation did not waste taxpayers' money. The very commission he set up to look into government waste reported that the Southern Tier Project, of which the bridge renovation was a part, was egregiously wasteful.",
+		"questionStem": "The reasoning in the argument is flawed in that the argument",
+		"answerChoices": {
+			"A": "infers that a part has a certain quality merely on the grounds that the whole to which it belongs has that quality",
+			"B": "draws a general conclusion about government waste on the basis of a single instance of such waste",
+			"C": "attacks the mayor's character rather than assessing the strength of the evidence supporting the mayor's claim",
+			"D": "puts forward evidence that presupposes an important part of the claim that the argument attempts to support",
+			"E": "rejects a position on the grounds that the motives of the person who has advanced the position were not disinterested"
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 22,
+		"questionType": "Most Supported",
+		"questionDifficulty": 4,
+		"stimulus": "The airport's runways are too close to each other to allow simultaneous use of adjacent runways when visibility is poor, so the airport allows only 30 planes an hour to land in poor weather; in good weather 60 planes an hour are allowed to land. Because airline schedules assume good weather, bad weather creates serious delays.",
+		"questionStem": "Which one of the following is most strongly supported by the information above?",
+		"answerChoices": {
+			"A": "In poor weather, only half as many planes are allowed to land each hour on any one runway at the airport as are allowed to land on it in good weather.",
+			"B": "When the weather at the airport is good it is likely that there are planes landing on two adjacent runways at any given time.",
+			"C": "If any two of the airport's runways are used simultaneously, serious delays result.",
+			"D": "Airlines using the airport base their schedules on the assumption that more than 30 planes an hour will be allowed to land at the airport.",
+			"E": "In good weather, there are few if any seriously delayed flights at the airport."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 23,
+		"questionType": "Paradox",
+		"questionDifficulty": 2,
+		"stimulus": "As a general rule, the larger a social group of primates, the more time its members spend grooming one another. The main purpose of this social grooming is the maintenance of social cohesion. Furthermore, group size among primates tends to increase proportionally with the size of the neocortex, the seat of higher thought in the brain. Extrapolating upon the relationship between group size and neocortex size, we can infer that early human groups were quite large. But unexpectedly, there is strong evidence that, apart from parents grooming their children, these humans spent virtually no time grooming one another.",
+		"questionStem": "Which one of the following, if true, would do most to resolve the apparent discrepancy described above?",
+		"answerChoices": {
+			"A": "Early humans were much more likely to groom themselves than are the members of other primate species.",
+			"B": "Early humans developed languages, which provided a more effective way of maintaining social cohesion than social grooming.",
+			"C": "Early humans were not as extensively covered with hair as are other primates, and consequently they had less need for social grooming.",
+			"D": "While early humans probably lived in large groups, there is strong evidence that they hunted in small groups.",
+			"E": "Many types of primates other than humans have fairly large neocortex regions and display frequent social grooming."
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 24,
+		"questionType": "Parallel Flaw",
+		"questionDifficulty": 3,
+		"stimulus": "Had the party's economic theories been sound and had it succeeded in implementing its program, the inflation rate would have lessened considerably. But because the inflation rate actually increased, the party's economic theories were far off the mark.",
+		"questionStem": "The flawed reasoning in which one of the following arguments most closely resembles the flawed reasoning in the argument above?",
+		"answerChoices": {
+			"A": "If the people who inhabited the valley for so long had been invaded, or if there had been a dramatic climatic change, there would have been changes in the valley's architecture. But architecture in the valley remained the same throughout their stay. Thus, the valley people must not have been invaded at any time during their stay.",
+			"B": "Many people fear that if the opposition party wins the election and keeps its promise to cut wages dramatically, workers in key industries will strike. But because the workers have promised not to strike, these workers must think the party will not keep its promise of a dramatic wage cut.",
+			"C": "If the company had succeeded in selling its subsidiaries and used the cash to purchase the new patent, its stock price would have doubled in the last two years. But the price of the stock did not increase in that time. Thus, the company must have failed to sell its subsidiaries.",
+			"D": "City residents were expected to show a great deal of support for the rebels if the battle was won and the jailed rebel leaders freed. Residents have shown a great deal of support for the rebels for the last three days. Therefore, the rebels must have won the battle.",
+			"E": "If the television station's new weather forecasting equipment had been worth the investment, the accuracy of its forecasts would have risen, along with its ratings. But the station's ratings actually decreased. Thus, the new equipment is no improvement on the old."
+		},
+		"correctAnswer": "C"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 2,
+		"questionNumber": 25,
+		"questionType": "Method",
+		"questionDifficulty": 4,
+		"stimulus": "When a group is unable to reach a consensus, group members are often accused of being stubborn, bull-headed, or unyielding. Such epithets often seem abusive, are difficult to prove, and rarely help the group reach a resolution. Those who wish to make such an accusation stick, however, should choose \"unyielding,\" because one can always appeal to the fact that the accused has not yielded; obviously if one acknowledges that a person has not yielded, then one cannot deny that the person is unyielding, at least on this issue.",
+		"questionStem": "Which one of the following most accurately describes the argumentative technique employed above?",
+		"answerChoices": {
+			"A": "rejecting a tactic on the grounds that it constitutes an attack on the character of a person and has no substance in fact",
+			"B": "rejecting a tactic on the grounds that the tactic makes it virtually impossible for the group to reach a consensus on the issue in question",
+			"C": "conditionally advocating a tactic on the grounds that it results in an accusation that is less offensive than the alternatives",
+			"D": "conditionally advocating a tactic on the grounds that it results in an argument that would help the group to reach a consensus on the issue in question",
+			"E": "conditionally advocating a tactic on the grounds that it results in an argument for which one could not consistently accept the premise but deny the conclusion"
+		},
+		"correctAnswer": "E"
+	}
+]

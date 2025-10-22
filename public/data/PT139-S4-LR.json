@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 1,
+    "stimulus": "Scientists generally believe that no deep-sea creature can detect red light, but they need to reassess that view. Researchers recently discovered a foot-long deep-sea creature of the genus Erenna with bioluminescent red lights on some of its tentacles. These red lights, which are shaped like a common food source for small, deep-sea fish, probably function as lures to attract prey.",
+    "questionStem": "Which one of the following most accurately expresses the overall conclusion drawn in the argument?",
+    "answerChoices": {
+      "A": "Red lights on the tentacles of a newly discovered deep-sea creature probably function as lures.",
+      "B": "Red lights on the tentacles of a newly discovered deep-sea creature are shaped like a common food source for small, deep-sea fish.",
+      "C": "A foot-long deep-sea creature of the genus Erenna has been discovered recently.",
+      "D": "Scientists generally believe that deep-sea creatures cannot detect red light.",
+      "E": "Scientists need to reconsider the belief that deep-sea creatures cannot detect red light."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Must Be True",
+    "questionDifficulty": 1,
+    "stimulus": "For house painting, acrylic paints are an excellent choice. They provide everything that a good paint should provide: smooth and even coverage, quick drying time, durability, and easy cleanup. Even acrylics, however, cannot correct such surface defects as badly cracked paint. Such conditions indicate some underlying problem, such as water damage, that needs repair.",
+    "questionStem": "Which one of the following is most strongly supported by the statements above?",
+    "answerChoices": {
+      "A": "Badly cracked paint is not a result of harsh weather conditions.",
+      "B": "Acrylics are the only paints that provide everything that most homeowners need from a paint.",
+      "C": "Acrylics should not be used to paint over other types of house paint.",
+      "D": "It is not a requirement of house paints that they correct surface defects such as badly cracked paint.",
+      "E": "Acrylic paints come in as wide a range of colors as do any other paints."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Letter to the editor: You have asserted that philanthropists want to make the nonprofit sector as efficient as private business in this country. Philanthropists want no such thing, of course. Why would anyone want to make nonprofits as inefficient as Byworks Corporation, which has posted huge losses for years?",
+    "questionStem": "The reasoning of the argument in the letter is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "draws a conclusion about what ought to be the case from premises that are entirely about what is the case",
+      "B": "takes the condition of one member of a category to be representative of the category in general",
+      "C": "rejects a claim by attacking the proponent of the claim rather than addressing the claim itself",
+      "D": "concludes that a claim must be false because of the mere absence of evidence in its favor",
+      "E": "concludes that a phenomenon will have a certain property merely because the phenomenon's cause has that property"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "Method of Reasoning",
+    "questionDifficulty": 2,
+    "stimulus": "Statistical records of crime rates probably often reflect as much about the motives and methods of those who compile or cite them as they do about the actual incidence of crime. The police may underreport crime in order to convey the impression of their own success or overreport crime to make the case for a budget increase. Politicians may magnify crime rates to get elected or minimize them to remain in office. Newspapers, of course, often sensationalize crime statistics to increase readership.",
+    "questionStem": "The argument proceeds by doing which one of the following?",
+    "answerChoices": {
+      "A": "evaluating evidence for and against its conclusion",
+      "B": "citing examples in support of its conclusion",
+      "C": "deriving implications of a generalization that it assumes to be true",
+      "D": "enumerating problems for which it proposes a general solution",
+      "E": "showing how evidence that apparently contradicts its conclusion actually supports that conclusion"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "Resolve Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "Physiologist: The likelihood of developing osteoporosis is greatly increased by a deficiency of calcium in the diet. Dairy products usually contain more calcium per serving than do fruits and vegetables. Yet in countries where dairy products are rare, and fruits and vegetables are the main source of calcium, the incidence of osteoporosis is much lower than in countries where people consume a great deal of calcium from dairy products.",
+    "questionStem": "Which one of the following, if true, would most help to resolve the apparent discrepancy described by the physiologist?",
+    "answerChoices": {
+      "A": "A healthy human body eventually loses the excess calcium that it takes in.",
+      "B": "Many people who eat large quantities of fruits and vegetables also consume dairy products.",
+      "C": "There are more people who have a calcium deficiency than there are who have developed osteoporosis.",
+      "D": "People who have calcium deficiencies are also likely to have deficiencies in other minerals.",
+      "E": "The fats in dairy products tend to inhibit the body's calcium absorption."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Principle: Underlying",
+    "questionDifficulty": 2,
+    "stimulus": "A first-term board member should not be on the finance committee unless he or she is an accountant or his or her membership on the committee is supported by all the members of the board.",
+    "questionStem": "Which one of the following arguments most closely conforms to the principle stated above?",
+    "answerChoices": {
+      "A": "Simkins is a first-term board member and not an accountant; thus, Simkins should not be on the finance committee.",
+      "B": "Timmons is a third-term board member but not an accountant; thus, if all other board members think that Timmons should be on the finance committee, then Timmons should be on that committee.",
+      "C": "Ruiz is on the finance committee but is not an accountant; thus, Ruiz's membership must have been supported by all the members of the board.",
+      "D": "Klein is a first-term board member who is not an accountant; thus, Klein should not be allowed on the finance committee if any board member opposes Klein's appointment to that committee.",
+      "E": "Mabry is a board member who is not an accountant; thus, because Mabry's membership on the finance committee is opposed by most board members, Mabry should not be allowed on that committee."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Most respondents to a magazine survey who had recently listened to a taped reading of a certain best-selling novel said that they had enjoyed the novel, while most respondents who had recently read the novel themselves said they had not enjoyed it. These survey results support the contention that a person who listens to a taped reading of a novel is more likely to enjoy the novel than a person who reads it is.",
+    "questionStem": "Which one of the following, if true, would most weaken the argument?",
+    "answerChoices": {
+      "A": "Most of the respondents who had listened to a taped reading of the novel had never read it, and most of the respondents who had read the novel had never listened to a taped reading of it.",
+      "B": "Most people can read a novel in considerably less time than it would take them to listen to a taped reading of it.",
+      "C": "When people are asked their opinion of a best-selling novel that they have read or listened to on tape, they are more likely to say that they enjoyed the novel than that they did not enjoy it.",
+      "D": "Many novels that are available in text versions are not available in audio versions.",
+      "E": "The novel in question, unlike most novels, included dialogue in many different dialects that are more understandable when heard than when read."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 3,
+    "stimulus": "To qualify as a medical specialist, one must usually graduate from a university, then complete approximately four years of medical school, followed by a residency of two to six years in one's specialty. Finally, a physician who desires to become a recognized specialist must complete an evaluation program directed by a medical specialty board. Therefore, anyone who has qualified as a recognized medical specialist is competent to practice in his or her specialty.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "People who are not highly motivated will not complete the demanding course of study and examination required to become qualified as a recognized medical specialist.",
+      "B": "Only the most talented people will successfully complete the rigorous course of study necessary for qualification as a recognized medical specialist.",
+      "C": "No one incompetent to practice a particular specialty completes the evaluation program for that specialty.",
+      "D": "Usually, six to ten years of medical training beyond a university degree is sufficient to render someone competent to practice in his or her medical specialty.",
+      "E": "Usually, six to ten years of medical training beyond a university degree is necessary to render someone competent to practice in his or her medical specialty."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "Must Be True",
+    "questionDifficulty": 4,
+    "stimulus": "Archaeologists are currently analyzing plant remains found at a site that was last occupied more than 10,000 years ago. If the plants were cultivated, then the people who occupied the site discovered agriculture thousands of years before any other people are known to have done so. On the other hand, if the plants were wild—that is, uncultivated—then the people who occupied the site ate a wider variety of wild plants than did any other people at the time.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "The archaeologists analyzing the plant remains at the site will be able to determine whether the plants were cultivated or were wild.",
+      "B": "The people who occupied the site used some plants in ways that no other people did at that time.",
+      "C": "If the people who occupied the site had reached a more advanced stage in the use of wild plants than any other people at the time, then the plants found at the site were uncultivated.",
+      "D": "If the people who occupied the site discovered agriculture thousands of years before people anywhere else are known to have done so, then there are remains of cultivated plants at the site.",
+      "E": "It is more likely that the people who occupied the site discovered agriculture thousands of years before people anywhere else did than it is that they ate a wider variety of wild plants than any other people at the time."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Parallel Reasoning",
+    "questionDifficulty": 1,
+    "stimulus": "In a test of fuel efficiency, car X and car Y yielded the same average fuel mileage, even though car X was driven in a less fuel-efficient manner than car Y was. Thus, car X is more fuel efficient than car Y.",
+    "questionStem": "Which one of the following arguments is most similar in its reasoning to the argument above?",
+    "answerChoices": {
+      "A": "In an experiment, subject X consistently gave lower pain ratings in response to pinpricks than subject Y did. Therefore, it is reasonable to conclude that subjects X and Y experience pain differently.",
+      "B": "Our hamster gained the same amount of weight as our neighbors' hamster, even though our hamster ate more than theirs. So it must be that our hamster burned more calories than theirs did.",
+      "C": "When on his bicycle, Roland makes better time coasting down a hill than pedaling on a horizontal path. So he would make even better time on the hills if he were to pedal rather than coast.",
+      "D": "When asked to judge the value of various pieces of antique furniture, I gave lower estimates on average than you did. So in those cases where we both gave the same estimate, I must have overestimated the piece's value.",
+      "E": "Jean demonstrates a high level of visual acuity when she wears prescription glasses. Thus, it must be that without those prescription glasses, she would demonstrate a lower level of visual acuity."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Flaw",
+    "questionDifficulty": 4,
+    "stimulus": "Plumb-Ace advertises that its plumbers are more qualified than plumbers at any other major plumbing firm in the region because Plumb-Ace plumbers must complete a very difficult certification process. Plumb-Ace plumbers may or may not be more qualified, but clearly the certification process is not very difficult, because nearly everyone who takes the written portion of the certification exam passes it very easily.",
+    "questionStem": "The reasoning in the argument is flawed in that it",
+    "answerChoices": {
+      "A": "treats something that is necessary to make a certification process very difficult as if it were sufficient by itself to make the process very difficult",
+      "B": "takes for granted that plumbers are not qualified unless they complete some certification process",
+      "C": "overlooks the possibility that plumbers at other firms in the region complete certification processes that are even easier than that completed by Plumb-Ace's plumbers",
+      "D": "infers that a claim is false on the grounds that an inadequate argument has been given for that claim",
+      "E": "presumes that since one part of a whole lacks a certain characteristic, the whole must lack that characteristic as well"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Historian: The early Egyptian pharaohs spent as much wealth on largely ceremonial and hugely impressive architecture as they did on roads and irrigation systems. This was not mere frivolousness, however, for if people under a pharaoh's rule could be made to realize the extent of their ruler's mastery of the physical world, their loyalty could be maintained without military coercion.",
+    "questionStem": "The claim that early Egyptian expenditure on largely ceremonial architecture was not frivolous plays which one of the following roles in the historian's argument?",
+    "answerChoices": {
+      "A": "It is a conclusion purportedly justified by the argument's appeal to the psychological effects of these structures on the Egyptian population.",
+      "B": "It is offered in support of the claim that Egyptian pharaohs spent as much on ceremonial architecture as they did on roads and irrigation systems.",
+      "C": "It is a premise given in support of the claim that the loyalty of people under a pharaoh's rule was maintained over time without reliance on military force.",
+      "D": "It is offered as an illustration of the principle that social and political stability do not depend ultimately on force.",
+      "E": "It is a premise used to justify the pharaohs' policy of spending scarce resources on structures that have only military utility."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 2,
+    "stimulus": "The proposed change to the patent system is bound to have a chilling effect on scientific research. Under current rules, researchers have one full year after the initial publication of a new discovery to patent the discovery. This allows research results to be shared widely prior to the patent application. The proposed change would have the application precede initial publication, which would delay the communication of discoveries.",
+    "questionStem": "The conclusion drawn above follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "The proposed change will encourage more patent applications to be filed.",
+      "B": "Dramatic advances in scientific research have occurred while the current patent system has been in place.",
+      "C": "Delays in the communication of discoveries will have a chilling effect on scientific research.",
+      "D": "Most researchers oppose the proposed change to the patent system.",
+      "E": "The current rules for patent applications facilitate progress in scientific research by rewarding the communication of discoveries."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Parallel Reasoning: Questionable",
+    "questionDifficulty": 4,
+    "stimulus": "Every time people get what they want they feel pleasure. Pleasure is a natural result of getting what one wants. We can conclude that no one fundamentally desires anything except pleasure.",
+    "questionStem": "Which one of the following uses questionable reasoning most similar to that used in the argument above?",
+    "answerChoices": {
+      "A": "I sure am enjoying the party even though I was sure I would not, so I guess I wanted to come after all.",
+      "B": "I have never been skiing, but just thinking about it terrifies me, so I guess I must not want to learn how.",
+      "C": "Every time I eat pizza I get a stomachache, so I suppose the reason I eat pizza in the first place is so that I can have a stomachache.",
+      "D": "Every time I have gone to a party with Julio I have enjoyed myself, so I expect I will enjoy myself if Julio and I go to a party tonight.",
+      "E": "I never enjoy a soccer game without eating hot dogs, so I guess I would not enjoy going to a basketball game if I could not eat hot dogs at the game."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Logical Counter",
+    "questionDifficulty": 3,
+    "stimulus": "Linguist: You philosophers say that we linguists do not have a deep understanding of language, but you have provided no evidence.\n\nPhilosopher: Well, you have said that you believe that \"Joan and Ivan are siblings\" is identical in meaning to \"Ivan and Joan are siblings.\" But this cannot be the case, for the sentences are physically different; yet for two things to be identical, they must have all the same attributes.",
+    "questionStem": "Of the following, which one is the strongest logical counter that the linguist can make to the philosopher?",
+    "answerChoices": {
+      "A": "Two things can have a few minor differences and still be identical.",
+      "B": "Two sentences can be identical physically, and yet, depending on the context in which they are uttered, not be identical in meaning.",
+      "C": "It is necessarily true that Joan is Ivan's sibling if Ivan is Joan's sibling.",
+      "D": "The issue is not whether the two sentences are completely identical, but whether they mean the same thing.",
+      "E": "A linguist has more experience with language than a philosopher, and so is in a better position to answer such questions."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Salespeople always steer customers toward products from which they make their highest commissions, and all salespeople in major health stores work on commission. Hence, when you buy vitamin supplements in a major health store, you can be sure that the claims the salespeople make about the quality of the products are inaccurate.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "offers as a premise a claim that merely paraphrases the conclusion and for which no support is provided",
+      "B": "infers that some claims are inaccurate solely on the basis of the source of those claims",
+      "C": "infers that just because a group of people has a certain property, each member of the group has that property",
+      "D": "takes a condition that is sufficient for the conclusion to be true as one that is necessary for the conclusion to be true",
+      "E": "relies on the claims of an authority on a topic outside that authority's area of expertise"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "Principle: Justify",
+    "questionDifficulty": 4,
+    "stimulus": "Because no other theory has been able to predict it so simply and accurately, the advance of the perihelion of Mercury is sometimes cited as evidence in support of Einstein's theory of general relativity. However, this phenomenon was already well known when Einstein developed his theory, and he quite probably adjusted his equations to generate the correct numbers for the perihelion advance. Therefore, accounting for this advance should not be counted as evidence in support of Einstein's theory.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the argument above?",
+    "answerChoices": {
+      "A": "Unless a phenomenon predicted by a scientific theory is unknown at the time the theory is developed, the theory should not be credited with the discovery of that phenomenon.",
+      "B": "A phenomenon that is predicted by a scientific theory should not count as evidence in favor of that theory unless the theory was developed with that phenomenon in mind.",
+      "C": "Unless a theory can accurately account for all relevant phenomena that are already well known at the time of its development, it cannot be regarded as well supported.",
+      "D": "If a theory is adjusted specifically to account for some particular phenomenon, a match between that theory and that phenomenon should not count as evidence in favor of the theory.",
+      "E": "If a theory is adjusted to generate the correct predictions for some phenomenon that is already known to the scientist developing the theory, the theory should not be counted as predicting that phenomenon."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Computer store manager: Last year we made an average of 13 percent profit on the high-end computer models—those priced over $1,000—that we sold, while low-end models—those priced below $1,000—typically returned at least 25 percent profit. Since there is a limit to how many models we can display and sell, we should sell only low-end models. This would maximize our profits, since we would probably sell as many low-end models if that is all we sold as we would sell both kinds combined if we continued to sell both.",
+    "questionStem": "The reasoning in the manager's argument is vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "The argument fails to consider the possibility that the money earned on each high-end computer is significantly higher than the money earned on each low-end computer.",
+      "B": "The argument fails to address the possibility that, despite the price differential, the store sold as many high-end models as low-end models last year.",
+      "C": "The argument ignores the possibility that some customers who come into a computer store expecting to purchase a low-end model end up purchasing a high-end model.",
+      "D": "The argument presumes, without providing justification, that the sole objective in managing the computer store should be maximizing profits.",
+      "E": "The argument fails to recognize that future sales of low-end computers may not be the same as past sales."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "Weaken",
+    "questionDifficulty": 5,
+    "stimulus": "Professor: Economists argue that buying lottery tickets is an unwise use of resources, because the average payoff for the tickets sold in a lottery is much lower than the cost of a ticket. But this reasoning is faulty. The average amount paid out on individual insurance policies is much lower than the average cost of a policy, yet nobody would argue that purchasing insurance is an unwise use of resources.",
+    "questionStem": "Which one of the following, if true, most weakens the professor's argument?",
+    "answerChoices": {
+      "A": "Individuals spend, on average, much more on insurance than on lottery tickets.",
+      "B": "Insurance companies generally retain a higher proportion of total revenue than do organizations that sponsor lotteries.",
+      "C": "Taking small financial risks can often greatly increase one's chances of obtaining much larger benefits.",
+      "D": "In general, the odds of winning the grand prize in a lottery are significantly lower than the odds of collecting a settlement from a typical insurance policy.",
+      "E": "The protection against loss that insurance provides is more important to one's well-being than is the possibility of a windfall gain."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "Must Be True",
+    "questionDifficulty": 5,
+    "stimulus": "Unusually large and intense forest fires swept the tropics in 1997. The tropics were quite susceptible to fire at that time because of the widespread drought caused by an unusually strong El Niño, an occasional global weather phenomenon. Many scientists believe the strength of the El Niño was enhanced by the global warming caused by air pollution.",
+    "questionStem": "Which one of the following can be properly inferred from the information above?",
+    "answerChoices": {
+      "A": "Air pollution was largely responsible for the size and intensity of the forest fires that swept the tropics in 1997.",
+      "B": "If the El Niño in 1997 had not been unusually strong, few if any large and intense forest fires would have swept the tropics in that year.",
+      "C": "Forest fires in the tropics are generally larger and more intense than usual during a strong El Niño.",
+      "D": "At least some scientists believe that air pollution was responsible for the size and intensity of the forest fires that swept the tropics in 1997.",
+      "E": "If air pollution enhanced the strength of the El Niño in 1997, then it also contributed to the widespread drought in that year."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 5,
+    "stimulus": "If Skiff's book is published this year, Professor Nguyen vows she will urge the dean to promote Skiff. Thus, if Skiff's book is as important and as well written as Skiff claims, he will be promoted, for Nguyen will certainly keep her promise, and the dean will surely promote Skiff if Nguyen recommends it.",
+    "questionStem": "The argument's conclusion can be properly inferred if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Skiff's book will be published this year if it is as important as he claims it is.",
+      "B": "Skiff needs to publish a book before he can be promoted.",
+      "C": "Professor Nguyen believes that Skiff's book is well written.",
+      "D": "Skiff's book will not be published unless it is as important and as well written as he claims it is.",
+      "E": "Skiff will not be promoted unless Professor Nguyen urges the dean to do so."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "If the magazine's circulation continues to rise as it has over the last ten years, in another ten years it will be the largest-selling martial arts magazine in the world. Unfortunately, it has now become clear that the magazine's publisher will not allow the managing editor to make the changes she has proposed, and without these changes, the magazine's circulation will not rise as quickly over the next ten years as it has over the last ten. So the magazine will not be the largest-selling martial arts magazine ten years from now.",
+    "questionStem": "The argument's reasoning is flawed because the argument",
+    "answerChoices": {
+      "A": "identifies some changes required for the magazine's circulation to continue its rapid increase and concludes from this that no other changes are needed",
+      "B": "equates a reduction in the rate at which the magazine's circulation is increasing with a decline in the magazine's circulation",
+      "C": "draws a conclusion that simply restates a claim that is presented in support of that conclusion",
+      "D": "takes a single fact that is incompatible with a general claim as enough to show that claim to be false",
+      "E": "treats an occurrence that will ensure a certain outcome as something that is required for that outcome"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Strengthen",
+    "questionDifficulty": 5,
+    "stimulus": "Botanist: In an experiment, scientists raised domesticated radishes in a field with wild radishes, which are considered weeds. Within several generations, the wild radishes began to show the same flower color as the domesticated ones. This suggests that resistance to pesticides, which is often a genetically engineered trait, would also be passed from domesticated crop plants to their relatives that are considered weeds.",
+    "questionStem": "Which one of the following, if true, most strengthens the botanist's argument?",
+    "answerChoices": {
+      "A": "It is much easier in principle for genetic traits to be passed from wild plants to their domesticated relatives than it is for such traits to be passed from the domesticated plant to the wild relative.",
+      "B": "When the ratio of domesticated radishes to wild radishes in the field increased, the speed with which the flower color passed to the wild radishes also increased.",
+      "C": "Radishes are not representative of crop plants in general with respect to the ease with which various traits are passed among members of closely related species.",
+      "D": "The flower color of the domesticated radishes had not been introduced into them via genetic engineering.",
+      "E": "It is more difficult for flower color to be transferred between domesticated and wild radishes than it is for almost any other trait to be passed between any two similarly related plant species."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Parents who consistently laud their children for every attempt to accomplish something, whether successful or not, actually erode the youngsters' sense of self-esteem. Children require commendation for their achievements, but if uniformly praised for both what they have accomplished and what they have merely attempted, they will eventually discount all words of commendation. In effect, such children never hear any praise at all.",
+    "questionStem": "Which one of the following most accurately expresses the overall conclusion of the argument?",
+    "answerChoices": {
+      "A": "Parents should praise their children for their achievements.",
+      "B": "Children whose actions are praised undeservedly eventually learn to discount all words of praise.",
+      "C": "Parents need to distinguish between their own expectations for their children and what their children are actually capable of accomplishing.",
+      "D": "Children's self-esteem will suffer if their parents uniformly praise their attempts to accomplish things regardless of their success or failure.",
+      "E": "Children will develop low self-esteem if their parents do not praise them when they succeed."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT139",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Point of Agreement",
+    "questionDifficulty": 3,
+    "stimulus": "Pauline: Some environmentalists claim that for the salmon to be saved, the hydroelectric dams on the river must be breached. But if the dams are breached, given the region's growing population and booming industry, electrical costs will skyrocket.\n\nRoger: The dams are already producing electricity at optimal capacity. So regardless of whether they are breached, we will have to find additional energy sources for the region.",
+    "questionStem": "The dialogue provides the most support for the claim that Pauline and Roger agree that",
+    "answerChoices": {
+      "A": "production from other energy sources cannot be increased in the near future to compensate for electricity production lost by breaching the dams",
+      "B": "there will be no significant decrease in demand for electricity in the region in the near future",
+      "C": "if the dams remain in service but do not operate at optimal capacity, electrical costs in the region will rise",
+      "D": "some environmentalists who advocate saving the salmon believe that that goal overrides concerns about electrical costs",
+      "E": "finding additional energy sources will not decrease the electrical costs in the region"
+    },
+    "correctAnswer": "B"
+  }
+]

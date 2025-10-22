@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 1,
+    "questionType": "Economist: Prosperity is a driving force",
+    "questionDifficulty": 2,
+    "stimulus": "Economist: Prosperity is a driving force behind increases in the release of carbon dioxide, the main cause of global warming. As incomes rise, more people spend money on energy-consuming devices such as cars, thereby producing more carbon dioxide. Also, in countries that experienced deep economic recessions, there were steep drops in carbon dioxide emissions.",
+    "questionStem": "Which one of the following most accurately states the overall conclusion drawn in the economist's argument?",
+    "answerChoices": {
+      "A": "Carbon dioxide is the main cause of global warming.",
+      "B": "Prosperity is an important cause of increases in the release of carbon dioxide.",
+      "C": "When incomes rise, more people spend money on energy-consuming devices.",
+      "D": "Countries that experienced deep economic recessions also experienced steep drops in carbon dioxide emissions.",
+      "E": "When people spend money on energy-consuming devices, more carbon dioxide is produced as a result."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 2,
+    "questionType": "Spokesperson: Contrary to what some",
+    "questionDifficulty": 2,
+    "stimulus": "Spokesperson: Contrary to what some have claimed, our group's \"Clean City\" campaign has been a rousing success. After all, the amount of trash on the city's streets today is significantly lower than when the campaign began.",
+    "questionStem": "Which one of the following is an assumption required by the spokesperson's argument?",
+    "answerChoices": {
+      "A": "The amount of trash on the city's streets was not declining at the same rate or faster before the campaign began than it did during the campaign.",
+      "B": "Those who claim that the campaign has not been a rousing success are unaware of the degree of the decline in the amount of trash since the campaign began.",
+      "C": "The campaign has been more successful in reducing the amount of trash on the city's streets than has any other campaign in the past.",
+      "D": "The spokesperson's group did not receive any special funding to support the planning or execution of the campaign.",
+      "E": "The amount of trash on the city's streets has declined steadily throughout the course of the campaign."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 3,
+    "questionType": "Consumption of sugar affects",
+    "questionDifficulty": 2,
+    "stimulus": "Consumption of sugar affects the level of unmetabolized sugar in the blood; the level rises following consumption of sugar. Yet people who consume large amounts of sugar tend to have below-average levels of unmetabolized sugar in their blood.",
+    "questionStem": "Which one of the following, if true, helps most to resolve the apparent paradox described above?",
+    "answerChoices": {
+      "A": "Persons who are overweight tend to have below-average levels of unmetabolized sugar in their blood.",
+      "B": "Fruits, vegetables, meats, and dairy products often contain as much sugar as sweets.",
+      "C": "Consuming large amounts of sugar causes the body to secrete abnormally high amounts of insulin, a sugar-metabolizing enzyme.",
+      "D": "Consuming large amounts of sugar can lead eventually to the failure of the body to produce enough insulin, a sugar-metabolizing enzyme.",
+      "E": "Sugar passes into the bloodstream before it can be metabolized."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 4,
+    "questionType": "An economist has argued that consumers",
+    "questionDifficulty": 3,
+    "stimulus": "An economist has argued that consumers often benefit when government permits a corporation to obtain a monopoly. Without competition, a corporation can raise prices without spending nearly as much on advertising. The corporation can then invest the extra money in expensive research or industrial infrastructure that it could not otherwise afford, passing the fruits of these investments on to consumers.",
+    "questionStem": "Which one of the following, if true, most strengthens the economist's argument?",
+    "answerChoices": {
+      "A": "The benefits to consumers are typically greater if a corporation invests in expensive research or industrial infrastructure than if that corporation spends the same amount of money in any other way.",
+      "B": "The government's permitting a corporation to obtain a monopoly is advantageous for consumers only if that corporation passes the fruits of at least some of its investments on to consumers.",
+      "C": "If a corporation obtains a monopoly, the disadvantage to consumers of any higher prices will be outweighed by the advantages from extra investments in expensive research or industrial infrastructure made by that corporation.",
+      "D": "Even if a corporation is not permitted to obtain a monopoly, it typically invests some money in expensive research or industrial infrastructure.",
+      "E": "If obtaining a monopoly enables a corporation to raise its prices and invest less money in advertising, that corporation will almost inevitably do so."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 5,
+    "questionType": "A natural history museum",
+    "questionDifficulty": 2,
+    "stimulus": "A natural history museum contains several displays of wild animals. These displays are created by drying and mounting animal skins. In some of the older displays, the animals' skins have started to deteriorate because of low humidity and the heat of the lights. The older displays are lit by tungsten lamps but the newer ones are lit by compact fluorescent lamps designed for use in museums. These lamps give off as much light as the tungsten lamps but less heat.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following?",
+    "answerChoices": {
+      "A": "Some of the older displays will last longer if the tungsten lamps that illuminate them are replaced by compact fluorescent lamps.",
+      "B": "The displays that are lit by many compact fluorescent lamps are more prone to deterioration than the displays that are lit by a few tungsten lamps.",
+      "C": "More of the displays are lit by compact fluorescent lamps than are lit by tungsten lamps.",
+      "D": "The newer displays will not be subject to deterioration because of low humidity.",
+      "E": "The humidity in the museum is lower today than it was when the older displays were first put in place."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 6,
+    "questionType": "Columnist: Contrary to what many people",
+    "questionDifficulty": 4,
+    "stimulus": "Columnist: Contrary to what many people believe, the number of species on Earth is probably not dwindling. Extinction is a natural process, and about as many species are likely to go extinct this year as went extinct in 1970. But the emergence of new species is also a natural process; there is no reason to doubt that new species are emerging at about the same rate as they have been for the last several centuries.",
+    "questionStem": "Which one of the following, if true, most weakens the columnist's argument?",
+    "answerChoices": {
+      "A": "In 1970 fewer new species emerged than went extinct.",
+      "B": "The regions of the world where new species tend to emerge at the highest rate are also where species tend to go extinct at the highest rate.",
+      "C": "The vast majority of the species that have ever existed are now extinct.",
+      "D": "There is no more concern now about extinction of species than there was in 1970.",
+      "E": "Scientists are now better able to identify species facing serious risk of extinction than they were in 1970."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 7,
+    "questionType": "Even though MacArthur's diet book",
+    "questionDifficulty": 1,
+    "stimulus": "Even though MacArthur's diet book helped many people lose weight, MacArthur should not have published it. It recommended such small portions of fruits and vegetables that it undoubtedly damaged the health of many who followed the diet. MacArthur is a physician, so MacArthur either knew or should have known that diets low in fruits and vegetables are unhealthful.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the argument's reasoning?",
+    "answerChoices": {
+      "A": "One should not undertake an action if one knows that doing so would seriously damage the health of many people.",
+      "B": "One should not follow a particular method for achieving some end if doing so has the potential to damage one's health.",
+      "C": "One should publish a book recommending certain health-related measures if doing so is likely to improve many people's lives without also causing harm.",
+      "D": "One should not publish a book recommending a particular means of attaining a goal unless one knows that the particular means can bring about that goal.",
+      "E": "One should not publish a book recommending a particular course of action if one either knows or ought to know that taking that course of action would be unhealthful."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 8,
+    "questionType": "Principle: If the burden",
+    "questionDifficulty": 3,
+    "stimulus": "Principle: If the burden of a proposed policy change would fall disproportionately on people with low incomes, that policy change should not be made.\nApplication: The city of Centerburgh plans to reintroduce rock salt as a road de-icing agent, after having stopped its use several years ago on the grounds that it accelerated the corrosion of automobiles. Although the city claims that cars are now better protected from salt's corrosive properties than they were even as recently as five years ago, the city's plan should be halted.",
+    "questionStem": "Which one of the following, if true of Centerburgh, most justifies the above application of the principle?",
+    "answerChoices": {
+      "A": "Individuals with low incomes are more likely to use public transportation and are less likely to drive cars than are individuals with higher incomes.",
+      "B": "Road maintenance is primarily funded by local sales taxes, which disproportionately burden people with low incomes.",
+      "C": "Cars now cost twice what they did when rock salt was last used as a road de-icing agent.",
+      "D": "People with low incomes are more likely to purchase older vehicles than are people with higher incomes.",
+      "E": "Among drivers, those with low incomes are less likely than those with higher incomes to use roads that have been treated with de-icing agents."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 9,
+    "questionType": "In a medical study of all of",
+    "questionDifficulty": 2,
+    "stimulus": "In a medical study of all of the residents of Groverhill, 35 people reported consulting their physician last year seeking relief from severe headaches. Those same physicians' records, however, indicate that 105 consultations occurred last year with Groverhill patients seeking relief from severe headaches. Obviously, then, many residents who consulted physicians for this condition did not remember doing so.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "generalizes inappropriately from an unrepresentative sample of residents of Groverhill",
+      "B": "fails to consider whether any residents of Groverhill visit physicians who are not located in Groverhill",
+      "C": "overlooks the possibility that residents of Groverhill visited their physicians more than once during the year for the same condition",
+      "D": "fails to provide any evidence to support the claim that the residents of Groverhill have an unusually high occurrence of severe headaches",
+      "E": "takes for granted that every resident of Groverhill who suffers from severe headaches would consult a physician about this condition"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 10,
+    "questionType": "Economist: In free market systems",
+    "questionDifficulty": 2,
+    "stimulus": "Economist: In free market systems, the primary responsibility of corporate executives is to determine a nation's industrial technology, the pattern of work organization, location of industry, and resource allocation. They also are the decision makers, though subject to significant consumer control, on what is to be produced and in what quantities. In short, a large category of major decisions is turned over to business executives. Thus, business executives have become public officials.",
+    "questionStem": "Which one of the following, if true, most weakens the economist's argument?",
+    "answerChoices": {
+      "A": "Most of the decisions made by business executives in free market systems are made by the government in countries with centrally planned economies.",
+      "B": "Making decisions about patterns of work organization, resource allocation, and location of industry is not the core of a public official's job.",
+      "C": "The salaries of business executives are commensurate with the salaries of high-ranking public officials.",
+      "D": "What a country produces and in what quantities is not always completely controlled by corporate executives.",
+      "E": "Public officials and business executives often cooperate in making decisions of national importance."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 11,
+    "questionType": "Science fiction creates an appetite",
+    "questionDifficulty": 4,
+    "stimulus": "Science fiction creates an appetite for interstellar space exploration among certain people. Unfortunately, this appetite cannot be satisfied with any technology humanity will soon possess. Since gaps between expectations and reality spur discontent, no doubt one effect of science fiction has been to create an unproductive dissatisfaction with the way the world actually is.",
+    "questionStem": "Which one of the following is an assumption the argument requires?",
+    "answerChoices": {
+      "A": "The fact that the appetite for interstellar space exploration cannot be satisfied with any technology humanity will soon possess has created a gap between reality and some people's expectations.",
+      "B": "If science fiction has created an unproductive dissatisfaction with the way the world actually is, it has done so only by creating an appetite for interstellar space exploration among certain people.",
+      "C": "Few if any of the appetites that science fiction has created in people could be satisfied with any technology humanity will soon possess.",
+      "D": "Most people unrealistically expect that technology that humanity will soon possess could satisfy the appetite for interstellar space exploration.",
+      "E": "If the appetites science fiction has created in people could all be satisfied with technologies that humanity will soon possess, then science fiction could not create an unproductive dissatisfaction with the way the world is."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 12,
+    "questionType": "Tamika: Many people have been",
+    "questionDifficulty": 3,
+    "stimulus": "Tamika: Many people have been duped by the claims of those who market certain questionable medical products. Their susceptibility is easy to explain: most people yearn for easy solutions to complex medical problems but don't have the medical knowledge necessary to see through the sellers' fraudulent claims. However, the same explanation cannot be given for a recent trend among medical professionals toward a susceptibility to fraudulent claims. They, of course, have no lack of medical knowledge.",
+    "questionStem": "Tamika's argument proceeds by",
+    "answerChoices": {
+      "A": "showing by analogy that medical professionals should not be susceptible to the fraudulent claims of those who market certain medical products",
+      "B": "arguing against a hypothesis by showing that the hypothesis cannot account for the behavior of everyone",
+      "C": "explaining the susceptibility of medical professionals to the fraudulent claims of those marketing certain medical products by casting doubt on the expertise of the professionals",
+      "D": "arguing that since two groups are disanalogous in important respects, there must be different explanations for their similar behavior",
+      "E": "arguing that an explanation should be accepted in spite of apparent evidence against it"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 13,
+    "questionType": "Business ethicist: Managers of corporations",
+    "questionDifficulty": 2,
+    "stimulus": "Business ethicist: Managers of corporations have an obligation to serve shareholders as the shareholders would want to be served. Therefore, corporate managers have an obligation to act in the shareholders' best interest.",
+    "questionStem": "The business ethicist's conclusion follows logically if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "Corporate managers are always able to discern what is in the best interest of shareholders.",
+      "B": "Shareholders would want to be served only in ways that are in their own best interest.",
+      "C": "A corporate manager's obligations to shareholders take precedence over any other obligations the manager may have.",
+      "D": "The shareholders have interests that can best be served by corporate managers.",
+      "E": "All shareholders want to be served in identical ways."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 14,
+    "questionType": "Astronomer: Does a recent meteorite",
+    "questionDifficulty": 3,
+    "stimulus": "Astronomer: Does a recent meteorite from Mars contain fossilized bacteria? Professor Tagar, a biologist, argues that the bacteria-like structures found in the meteorite cannot be fossilized bacteria, on the grounds that they are one-tenth of 1 percent the volume of the smallest earthly bacteria. However, Tagar's view cannot be right. Tagar does not accept the views of biologists Swiderski and Terrada, who maintain that Martian bacteria would shrink to one-tenth of 1 percent of their normal volume when water or other nutrients were in short supply.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the reasoning in the astronomer's argument?",
+    "answerChoices": {
+      "A": "The argument presumes, without providing justification, that the authorities cited have always held the views attributed to them.",
+      "B": "The argument provides no justification for giving preference to the views of one rather than the other of two competing sets of authorities.",
+      "C": "The argument takes for granted that the number of authorities supporting a particular hypothesis is an indication of how accurate that hypothesis is.",
+      "D": "The argument appeals to views that contradict rather than support one another.",
+      "E": "The argument presumes, without providing justification, that the opinions of all experts are equally justified."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 15,
+    "questionType": "Any good garden compost",
+    "questionDifficulty": 4,
+    "stimulus": "Any good garden compost may appropriately be used for soil drainage and fertility. The best compost is 40 to 60 percent organic matter and is dark brown in color. However, compost that emits a strong ammonia smell should not be used for drainage and fertility, for that smell means that the organic matter has not sufficiently decomposed.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Compost that is 80 percent organic matter has probably not decomposed sufficiently.",
+      "B": "If compost is less than 40 percent organic matter and is not dark brown in color, then it will make soil less fertile and will worsen soil drainage.",
+      "C": "If compost is 50 percent organic matter and that organic matter is sufficiently decomposed, then the compost is good.",
+      "D": "In the best garden compost, the organic matter is completely decomposed.",
+      "E": "Compost that is dark brown in color and emits a strong ammonia smell is not good garden compost."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 16,
+    "questionType": "Professor: Unfortunately, pharmaceutical",
+    "questionDifficulty": 4,
+    "stimulus": "Professor: Unfortunately, pharmaceutical companies and other profit-driven institutions provide nearly all of the funding for the chemistry department's research. Moreover, unless we can secure more funding for basic science research, it is highly unlikely that any significant advances in basic research will come out of the department. Thus, without increased funding from sources other than profit-driven institutions, the chemistry department is unlikely to gain the prestige that only achievements in basic science research confer.",
+    "questionStem": "Which one of the following is an assumption on which the professor's argument relies?",
+    "answerChoices": {
+      "A": "If the chemistry department secures more funding for basic science research, its members will make significant advances in basic science.",
+      "B": "If the chemistry department's prestige increases substantially, then it is highly likely that the department's funding from sources other than profit-driven institutions will subsequently increase.",
+      "C": "Members of the chemistry department are unlikely to make significant advances in basic science research if the department does not forego the funding it currently receives from profit-driven institutions.",
+      "D": "The chemistry department's funding for basic science research is not likely to increase if its funding from sources other than profit-driven institutions does not increase.",
+      "E": "The profit-driven institutions that currently provide almost all of the chemistry department's funding are not likely to benefit from basic scientific research."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 17,
+    "questionType": "In order to save money",
+    "questionDifficulty": 4,
+    "stimulus": "In order to save money, many consumers redeem coupons that are distributed by retail stores. However, in general, retail stores that distribute and accept store coupons as a way of discounting the prices on certain products charge more for their products, on average, than other retail stores charge for the same products even after lower prices available on coupon-discounted products are factored in. This is because producing and distributing coupons usually costs a great deal. To compensate for this expense without reducing profits, retail stores must pass it on to consumers.",
+    "questionStem": "Which one of the following can be properly inferred from the information above?",
+    "answerChoices": {
+      "A": "Many consumers who redeem coupons save little if any money, overall, by doing so.",
+      "B": "Retail stores that distribute coupons generally compensate for the expense of producing and distributing coupons by charging higher prices for certain products.",
+      "C": "The profits of retail stores that use coupons are not significantly lower, on average, than the profits of similar stores that do not use coupons.",
+      "D": "At least some retail stores that do not use coupons do not have expenses that they pass on to consumers.",
+      "E": "The undiscounted price charged for a good for which a retail store offers a coupon will be higher than the price charged for that same good by a retail store that does not offer a coupon for it."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 18,
+    "questionType": "Psychologist: Birth-order effects",
+    "questionDifficulty": 4,
+    "stimulus": "Psychologist: Birth-order effects, the alleged effects of when one was born relative to the births of siblings, have not been detected in studies of adult personality that use standard personality tests. However, they have been detected in birth-order studies that are based on parents' and siblings' reports of the subjects' personalities. All of these birth-order studies, taken together, show that birth order has no lasting effect on personality; instead, birth order affects merely how a sibling's behavior is perceived.",
+    "questionStem": "Which one of the following is an assumption required by the psychologist's argument?",
+    "answerChoices": {
+      "A": "Standard personality tests will detect at least some birth-order effects on personality, if those effects exist.",
+      "B": "The behavior patterns people display when they are with family are significantly different from those they display otherwise.",
+      "C": "Parents' and siblings' perceptions of a person's personality tend not to change between that person's early childhood and adulthood.",
+      "D": "Standard personality tests have detected significant birth-order effects in some studies of young children's personalities.",
+      "E": "Parents and siblings have accurate perceptions of the behavior patterns of other family members."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 19,
+    "questionType": "If the jury did not return",
+    "questionDifficulty": 2,
+    "stimulus": "If the jury did not return a verdict, there would still be media trucks outside the courthouse. There are no media trucks outside the courthouse, so the jury must have returned a verdict.",
+    "questionStem": "The pattern of reasoning in the argument above is most similar to that in which one of the following arguments?",
+    "answerChoices": {
+      "A": "If a hurricane arises off the coast this summer, our town will see less tourism than usual. But since there will be no hurricane this summer, there will be no less tourism than usual.",
+      "B": "If Peter did not buy a house, he would have rented an apartment. Peter did not rent an apartment, so he must have bought a house.",
+      "C": "Renate promised Linus that if his car was not working, she would drive him to work. Linus's car is not working, so Renate must have driven him to work.",
+      "D": "If Kay's television was not working last night, she would have gone to a movie. Her television has not been working for the past week, so she must have gone to a movie last night.",
+      "E": "If Ralph had told Manuela about the problem, Manuela would have solved it. But Ralph did not tell Manuela about the problem, so someone else must have solved it."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 20,
+    "questionType": "A salesperson who makes",
+    "questionDifficulty": 3,
+    "stimulus": "A salesperson who makes a sale does not change the desires of the customer. Rather, the salesperson finds out what these desires are and then convinces the customer that a particular product will satisfy them. Persuading people to vote for a politician to whom they are initially indifferent is not significantly different. After discovering what policies the prospective voter would like to see in place, one tries to ______________.",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "show that the opponents of the politician in question do not favor all of those policies",
+      "B": "disguise any difference between the policies the politician supports and the policies supported by other candidates",
+      "C": "convince the voter that the policies favored by the politician in question are preferable to those favored by the voter",
+      "D": "demonstrate that the politician is a person of outstanding character and is interested in some of the same issues as the voter",
+      "E": "persuade the voter that voting for the politician in question is the best way to get these policies adopted"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 21,
+    "questionType": "Farmer: My neighbor claims",
+    "questionDifficulty": 4,
+    "stimulus": "Farmer: My neighbor claims that my pesticides are spreading to her farm in runoff water, but she is wrong. I use only organic pesticides, and there is no evidence that they harm either people or domestic animals. Furthermore, I am careful to avoid spraying on my neighbor's land.",
+    "questionStem": "Which one of the following most accurately describes a reasoning flaw in the farmer's argument?",
+    "answerChoices": {
+      "A": "It treats lack of evidence that organic pesticides harm people or domestic animals as proof that they cannot do so.",
+      "B": "It presumes, without providing justification, that being careful to avoid something usually results in its avoidance.",
+      "C": "It does not address the neighbor's claim that pesticides used by the farmer are spreading onto her land.",
+      "D": "It fails to provide an alternative explanation for the presence of pesticides on the neighbor's land.",
+      "E": "It ignores the possibility that pesticides might have dangerous effects other than harming people or domestic animals."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 22,
+    "questionType": "Linguist: One group of art critics",
+    "questionDifficulty": 3,
+    "stimulus": "Linguist: One group of art critics claims that postimpressionist paintings are not really art and so should be neither studied nor displayed. Another group of critics disagrees, insisting that these paintings are works of art. But since the second group grants that there are paintings that are not works of art and should therefore be ignored in the manner suggested by the first group, their disagreement is not over the meaning of the word \"art.\"",
+    "questionStem": "The claim that there are paintings that are not works of art plays which one of the following roles in the linguist's argument?",
+    "answerChoices": {
+      "A": "It is a contention that the argument purports to show is the main point of disagreement between the two groups of critics mentioned.",
+      "B": "It is cited as a commonly accepted reason for accepting a hypothesis for which the argument offers independent evidence.",
+      "C": "It is a claim whose acceptance by critics who differ on other issues is cited by the argument as evidence of its truth.",
+      "D": "It is a claim about the nature of art that according to the argument accounts for disputes that only appear to concern the aesthetic merits of certain types of paintings.",
+      "E": "It is a claim whose acceptance by both of the two disputing parties is cited as evidence for a conclusion the argument draws about the disagreement."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 23,
+    "questionType": "Biologists found that off",
+    "questionDifficulty": 4,
+    "stimulus": "Biologists found that off the northeast coast of a certain country the P-plankton population has recently dropped 10 percent. Additionally, fish species X, Y, and Z are beginning to show extraordinarily high death rates in the region. Since these species of fish are known to sometimes eat P-plankton, biologists believe the two phenomena are connected, but the exact nature of the connection is unknown. No other species in the ecosystem appear to be affected.",
+    "questionStem": "Which one of the following, if true, most helps to explain the biologists' findings?",
+    "answerChoices": {
+      "A": "Several major pharmaceutical companies in the region have been secretly dumping large amounts of waste into the ocean for many years.",
+      "B": "A new strain of bacteria is attacking P-plankton by destroying their cell walls and is attacking the respiratory systems of fish species X, Y, and Z.",
+      "C": "A powerful toxin in the water is killing off P-plankton by inhibiting their production of a chemical they use in reproduction.",
+      "D": "Fish species X, Y, and Z are all experiencing widespread starvation within the affected region, and the loss of P-plankton is driving their death rates up even higher.",
+      "E": "Global warming has changed the climatic conditions of the ocean all along the northeast coast of the country."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 24,
+    "questionType": "Nightbird is an unsigned painting",
+    "questionDifficulty": 2,
+    "stimulus": "Nightbird is an unsigned painting that some attribute to the celebrated artist Larocque. Experts agree that it was painted in a style indistinguishable from that of Larocque and that if it was not painted by Larocque, it was undoubtedly painted by one of his students. A recent analysis showed that the painting contains orpiment, a pigment never yet found in a work attributed to Larocque. Therefore, the painting must have been done by one of Larocque's students.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "answerChoices": {
+      "A": "Few of Larocque's students ever used painting techniques that differed from Larocque's.",
+      "B": "Larocque never signed any of his paintings.",
+      "C": "No painting currently recognized as the work of one of Larocque's students contains orpiment.",
+      "D": "None of Larocque's students is considered to be an important artist.",
+      "E": "The use of orpiment became more popular in the years after Larocque's death."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 4,
+    "questionNumber": 25,
+    "questionType": "Advertisement: The dental profession",
+    "questionDifficulty": 3,
+    "stimulus": "Advertisement: The dental profession knows that brushing with Blizzard toothpaste is the best way to fight cavities. We surveyed five dentists, and each agreed that the tartar control formula found in Blizzard is the most effective cavity-fighting formula available in a toothpaste.",
+    "questionStem": "The flawed reasoning in which one of the following is most similar to the flawed reasoning in the advertisement?",
+    "answerChoices": {
+      "A": "The nation's voters know that Gomez is the candidate whose policies would be best for the nation. Of ten voters polled, each said that Gomez would be a very popular leader.",
+      "B": "Some of the nation's voters believe that Gomez is the candidate who would be best for the nation. Of the ten voters we surveyed, each agreed that the policies Gomez is committed to would be the best policies for the nation to adopt.",
+      "C": "The nation's voters generally believe that Gomez is the candidate who would be best for the nation. We polled thousands of voters in the nation, and they agreed that the policies Gomez is committed to would help the nation more than those supported by any of the other candidates.",
+      "D": "The nation's voters know that electing Gomez would be the best way to help the nation. The ten voters we polled all agreed that the policies Gomez is committed to would help the nation more than any other policies.",
+      "E": "We know that electing Gomez would be the best course for the nation to follow because, of ten voters we surveyed, each agreed that electing Gomez would help the nation."
+    },
+    "correctAnswer": "D"
+  }
+]

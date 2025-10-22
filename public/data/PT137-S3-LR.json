@@ -1,0 +1,427 @@
+[
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 1,
+    "questionType": "A research study revealed",
+    "questionDifficulty": 1,
+    "stimulus": "A research study revealed that, in most cases, once existing highways near urban areas are widened and extended in an attempt to reduce traffic congestion and resulting delays for motorists, these problems actually increase rather than decrease.",
+    "questionStem": "Which one of the following, if true, most helps to explain the discrepancy between the intended results of the highway improvements and the results revealed in the study?",
+    "answerChoices": {
+      "A": "Widened and extended roads tend to attract many more motorists than used them before their improvement.",
+      "B": "Typically, road widening or extension projects are undertaken only after the population near the road in question has increased and then leveled off, leaving a higher average population level.",
+      "C": "As a general rule, the greater the number of lanes on a given length of highway, the lower the rate of accidents per 100,000 vehicles traveling on it.",
+      "D": "Rural, as compared to urban, traffic usually includes a larger proportion of trucks and vehicles used by farmers.",
+      "E": "Urban traffic generally moves at a slower pace and involves more congestion and delays than rural and suburban traffic."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 2,
+    "questionType": "A study found that consumers",
+    "questionDifficulty": 1,
+    "stimulus": "A study found that consumers reaching supermarket checkout lines within 40 minutes after the airing of an advertisement for a given product over the store's audio system were significantly more likely to purchase the product advertised than were consumers who checked out prior to the airing. Apparently, these advertisements are effective.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "answerChoices": {
+      "A": "During the study, for most of the advertisements more people went through the checkout lines after they were aired than before they were aired.",
+      "B": "A large proportion of the consumers who bought a product shortly after the airing of an advertisement for it reported that they had not gone to the store intending to buy that product.",
+      "C": "Many of the consumers reported that they typically bought at least one of the advertised products every time they shopped at the store.",
+      "D": "Many of the consumers who bought an advertised product and who reached the checkout line within 40 minutes of the advertisement's airing reported that they could not remember hearing the advertisement.",
+      "E": "Many of the consumers who bought an advertised product reported that they buy that product only occasionally."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 3,
+    "questionType": "Unless the building permit",
+    "questionDifficulty": 2,
+    "stimulus": "Unless the building permit is obtained by February 1 of this year or some of the other activities necessary for construction of the new library can be completed in less time than originally planned, the new library will not be completed on schedule. It is now clear that the building permit cannot be obtained by February 1, so the new library will not be completed on schedule.",
+    "questionStem": "The conclusion drawn follows logically from the premises if which one of the following is assumed?",
+    "answerChoices": {
+      "A": "All of the other activities necessary for construction of the library will take at least as much time as originally planned.",
+      "B": "The officials in charge of construction of the new library have admitted that it probably will not be completed on schedule.",
+      "C": "The application for a building permit was submitted on January 2 of this year, and processing building permits always takes at least two months.",
+      "D": "The application for a building permit was rejected the first time it was submitted, and it had to be resubmitted with a revised building plan.",
+      "E": "It is not possible to convince authorities to allow construction of the library to begin before the building permit is obtained."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 4,
+    "questionType": "In a study of patients",
+    "questionDifficulty": 2,
+    "stimulus": "In a study of patients who enrolled at a sleep clinic because of insomnia, those who inhaled the scent of peppermint before going to bed were more likely to have difficulty falling asleep than were patients who inhaled the scent of bitter orange. Since it is known that inhaling bitter orange does not help people fall asleep more easily, this study shows that inhaling the scent of peppermint makes insomnia worse.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument above?",
+    "answerChoices": {
+      "A": "Several studies have shown that inhaling the scent of peppermint tends to have a relaxing effect on people who do not suffer from insomnia.",
+      "B": "The patients who inhaled the scent of bitter orange were, on average, suffering from milder cases of insomnia than were the patients who inhaled the scent of peppermint.",
+      "C": "Because the scents of peppermint and bitter orange are each very distinctive, it was not possible to prevent the patients from knowing that they were undergoing some sort of study of the effects of inhaling various scents.",
+      "D": "Some of the patients who enrolled in the sleep clinic also had difficulty staying asleep once they fell asleep.",
+      "E": "Several studies have revealed that in many cases inhaling certain pleasant scents can dramatically affect the degree to which a patient suffers from insomnia."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 5,
+    "questionType": "Dogs learn best when they are trained",
+    "questionDifficulty": 1,
+    "stimulus": "Dogs learn best when they are trained using both voice commands and hand signals. After all, a recent study shows that dogs who were trained using both voice commands and hand signals were twice as likely to obey as were dogs who were trained using only voice commands.",
+    "questionStem": "The claim that dogs learn best when they are trained using both voice commands and hand signals figures in the argument in which one of the following ways?",
+    "answerChoices": {
+      "A": "It is an explicit premise of the argument.",
+      "B": "It is an implicit assumption of the argument.",
+      "C": "It is a statement of background information offered to help facilitate understanding the issue in the argument.",
+      "D": "It is a statement that the argument claims is supported by the study.",
+      "E": "It is an intermediate conclusion that is offered as direct support for the argument's main conclusion."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 6,
+    "questionType": "Of the many test pilots",
+    "questionDifficulty": 2,
+    "stimulus": "Of the many test pilots who have flown the new plane, none has found it difficult to operate. So it is unlikely that the test pilot flying the plane tomorrow will find it difficult to operate.",
+    "questionStem": "The reasoning in which one of the following arguments is most similar to the reasoning in the argument above?",
+    "answerChoices": {
+      "A": "All of the many book reviewers who read Rachel Nguyen's new novel thought that it was particularly well written. So it is likely that the average reader will enjoy the book.",
+      "B": "Many of the book reviewers who read Wim Jashka's new novel before it was published found it very entertaining. So it is unlikely that most people who buy the book will find it boring.",
+      "C": "Neither of the two reviewers who enjoyed Sharlene Lo's new novel hoped that Lo would write a sequel. So it is unlikely that the review of the book in next Sunday's newspaper will express hope that Lo will write a sequel.",
+      "D": "Many reviewers have read Kip Landau's new novel, but none of them enjoyed it. So it is unlikely that the reviewer for the local newspaper will enjoy the book when she reads it.",
+      "E": "None of the reviewers who have read Gray Ornsby's new novel were offended by it. So it is unlikely that the book will offend anyone in the general public who reads it."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 7,
+    "questionType": "Scientist: Any theory that is to be taken seriously",
+    "questionDifficulty": 2,
+    "stimulus": "Scientist: Any theory that is to be taken seriously must affect our perception of the world. Of course, this is not, in itself, enough for a theory to be taken seriously. To see this, one need only consider astrology.",
+    "questionStem": "The point of the scientist's mentioning astrology in the argument is to present",
+    "answerChoices": {
+      "A": "an example of a theory that should not be taken seriously because it does not affect our perception of the world",
+      "B": "an example of something that should not be considered a theory",
+      "C": "an example of a theory that should not be taken seriously despite its affecting our perception of the world",
+      "D": "an example of a theory that affects our perception of the world, and thus should be taken seriously",
+      "E": "an example of a theory that should be taken seriously, even though it does not affect our perception of the world"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 8,
+    "questionType": "Clark: Our local community theater",
+    "questionDifficulty": 2,
+    "stimulus": "Clark: Our local community theater often produces plays by critically acclaimed playwrights. In fact, the production director says that critical acclaim is one of the main factors considered in the selection of plays to perform. So, since my neighbor Michaela's new play will be performed by the theater this season, she must be a critically acclaimed playwright.",
+    "questionStem": "The reasoning in Clark's argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "takes a condition necessary for a playwright's being critically acclaimed to be a condition sufficient for a playwright's being critically acclaimed",
+      "B": "fails to consider that several different effects may be produced by a single cause",
+      "C": "treats one main factor considered in the selection of plays to perform as though it were a condition that must be met in order for a play to be selected",
+      "D": "uses as evidence a source that there is reason to believe is unreliable",
+      "E": "provides no evidence that a playwright's being critically acclaimed is the result rather than the cause of his or her plays being selected for production"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 9,
+    "questionType": "Legal theorist: Governments should not",
+    "questionDifficulty": 3,
+    "stimulus": "Legal theorist: Governments should not be allowed to use the personal diaries of an individual who is the subject of a criminal prosecution as evidence against that individual. A diary is a silent conversation with oneself and there is no relevant difference between speaking to oneself, writing one's thoughts down, and keeping one's thoughts to oneself.",
+    "questionStem": "Which one of the following principles, if valid, provides the most support for the legal theorist's argument?",
+    "answerChoices": {
+      "A": "Governments should not be allowed to compel corporate officials to surrender interoffice memos to government investigators.",
+      "B": "When crime is a serious problem, governments should be given increased power to investigate and prosecute suspected wrongdoers, and some restrictions on admissible evidence should be relaxed.",
+      "C": "Governments should not be allowed to use an individual's remarks to prosecute the individual for criminal activity unless the remarks were intended for other people.",
+      "D": "Governments should not have the power to confiscate an individual's personal correspondence to use as evidence against the individual in a criminal trial.",
+      "E": "Governments should do everything in their power to investigate and prosecute suspected wrongdoers."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 10,
+    "questionType": "A ring of gas emitting X-rays",
+    "questionDifficulty": 2,
+    "stimulus": "A ring of gas emitting X-rays flickering 450 times per second has been observed in a stable orbit around a black hole. In light of certain widely accepted physical theories, that rate of flickering can best be explained if the ring of gas has a radius of 49 kilometers. But the gas ring could not maintain an orbit so close to a black hole unless the black hole was spinning.",
+    "questionStem": "The statements above, if true, most strongly support which one of the following, assuming that the widely accepted physical theories referred to above are correct?",
+    "answerChoices": {
+      "A": "Black holes that have orbiting rings of gas with radii greater than 49 kilometers are usually stationary.",
+      "B": "Only rings of gas that are in stable orbits around black holes emit flickering X-rays.",
+      "C": "The black hole that is within the ring of gas observed by the astronomers is spinning.",
+      "D": "X-rays emitted by rings of gas orbiting black holes cause those black holes to spin.",
+      "E": "A black hole is stationary only if it is orbited by a ring of gas with a radius of more than 49 kilometers."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 11,
+    "questionType": "A mass of",
+    "questionDifficulty": 2,
+    "stimulus": "A mass of \"black water\" containing noxious organic material swept through Laurel Bay last year. Some scientists believe that this event was a naturally occurring but infrequent phenomenon. The black water completely wiped out five species of coral in the bay, including mounds of coral that were more than two centuries old. Therefore, even if this black water phenomenon has struck the bay before, it did not reach last year's intensity at any time in the past two centuries.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "answerChoices": {
+      "A": "Masses of black water such as that observed last summer come into the bay more frequently than just once every two centuries.",
+      "B": "Every species of coral in the bay was seriously harmed by the mass of black water that swept in last year.",
+      "C": "The mass of black water that swept through the bay last year did not decimate any plant or animal species that makes use of coral.",
+      "D": "The mounds of centuries-old coral that were destroyed were not in especially fragile condition just before the black water swept in last year.",
+      "E": "Older specimens of coral in the bay were more vulnerable to damage from the influx of black water than were young specimens."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 12,
+    "questionType": "Many nurseries sell fruit trees",
+    "questionDifficulty": 3,
+    "stimulus": "Many nurseries sell fruit trees that they label \"miniature.\" Not all nurseries, however, use this term in the same way. While some nurseries label any nectarine trees of the Stark Sweet Melody variety as \"miniature,\" for example, others do not. One thing that is clear is that if a variety of fruit tree is not suitable for growing in a tub or a pot, no tree of that variety can be correctly labeled “miniature.\"",
+    "questionStem": "Which one of the following can be properly inferred from the information above?",
+    "answerChoices": {
+      "A": "Most nurseries mislabel at least some of their fruit trees.",
+      "B": "Some of the nurseries have correctly labeled nectarine trees of the Stark Sweet Melody variety only if the variety is unsuitable for growing in a tub or a pot.",
+      "C": "Any nectarine tree of the Stark Sweet Melody variety that a nursery labels \"miniature\" is labeled incorrectly.",
+      "D": "Some nectarine trees that are not labeled \"miniature\" are labeled incorrectly.",
+      "E": "Unless the Stark Sweet Melody variety of nectarine tree is suitable for growing in a tub or a pot, some nurseries mislabel this variety of tree."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 13,
+    "questionType": "Psychologist: Identical twins",
+    "questionDifficulty": 3,
+    "stimulus": "Psychologist: Identical twins are virtually the same genetically. Moreover, according to some studies, identical twins separated at birth and brought up in vastly different environments show a strong tendency to report similar ethical beliefs, dress in the same way, and have similar careers. Thus, many of our inclinations must be genetic in origin, and not subject to environmental influences.",
+    "questionStem": "Which one of the following, if true, would most weaken the psychologist's argument?",
+    "answerChoices": {
+      "A": "Many people, including identical twins, undergo radical changes in their lifestyles at some point in their lives.",
+      "B": "While some studies of identical twins separated at birth reveal a high percentage of similar personality traits, they also show a few differences.",
+      "C": "Scientists are far from being able to link any specific genes to specific inclinations.",
+      "D": "Identical twins who grow up together tend to develop different beliefs, tastes, and careers in order to differentiate themselves from each other.",
+      "E": "Twins who are not identical tend to develop different beliefs, tastes, and careers."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 14,
+    "questionType": "Human beings can live happily",
+    "questionDifficulty": 2,
+    "stimulus": "Human beings can live happily only in a society where love and friendship are the primary motives for actions. Yet economic needs can be satisfied in the absence of this condition, as, for example, in a merchant society where only economic utility motivates action. It is obvious then that human beings ______________.",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "answerChoices": {
+      "A": "can live happily only when economic utility is not a motivator in their society",
+      "B": "cannot achieve happiness unless their economic needs have already been satisfied",
+      "C": "cannot satisfy economic needs by means of interactions with family members and close friends",
+      "D": "can satisfy their basic economic needs without obtaining happiness",
+      "E": "cannot really be said to have satisfied their economic needs unless they are happy"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 15,
+    "questionType": "Technologically, it is already possible",
+    "questionDifficulty": 3,
+    "stimulus": "Technologically, it is already possible to produce nonpolluting cars that burn hydrogen rather than gasoline. But the national system of fuel stations that would be needed to provide the hydrogen fuel for such cars does not yet exist. However, this infrastructure is likely to appear and grow rapidly. A century ago no fuel-distribution infrastructure existed for gasoline-powered vehicles, yet it quickly developed in response to consumer demand.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion drawn in the argument?",
+    "answerChoices": {
+      "A": "It is already technologically possible to produce nonpolluting cars that burn hydrogen rather than gasoline.",
+      "B": "The fuel-distribution infrastructure for hydrogen-powered cars still needs to be created.",
+      "C": "If a new kind of technology is developed, the infrastructure needed to support that technology is likely to quickly develop in response to consumer demands.",
+      "D": "The fuel-distribution infrastructure for hydrogen-powered cars is likely to appear and grow rapidly.",
+      "E": "Hydrogen-powered vehicles will be similar to gasoline-powered vehicles with regard to the amount of consumer demand for their fuel-distribution infrastructure."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 16,
+    "questionType": "Wildlife management experts",
+    "questionDifficulty": 3,
+    "stimulus": "Wildlife management experts should not interfere with the natural habitats of creatures in the wild, because manipulating the environment to make it easier for an endangered species to survive in a habitat invariably makes it harder for nonendangered species to survive in that habitat.",
+    "questionStem": "The argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "fails to consider that wildlife management experts probably know best how to facilitate the survival of an endangered species in a habitat",
+      "B": "fails to recognize that a nonendangered species can easily become an endangered species",
+      "C": "overlooks the possibility that saving an endangered species in a habitat is incompatible with preserving the overall diversity of species in that habitat",
+      "D": "presumes, without providing justification, that the survival of each endangered species is equally important to the health of the environment",
+      "E": "takes for granted that preserving a currently endangered species in a habitat does not have higher priority than preserving species in that habitat that are not endangered"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 17,
+    "questionType": "Any food that is not sterilized",
+    "questionDifficulty": 4,
+    "stimulus": "Any food that is not sterilized and sealed can contain disease-causing bacteria. Once sterilized and properly sealed, however, it contains no bacteria. There are many different acceptable food-preservation techniques; each involves either sterilizing and sealing food or else at least slowing the growth of disease-causing bacteria. Some of the techniques may also destroy natural food enzymes that cause food to spoil or discolor quickly.",
+    "questionStem": "If the statements above are true, which one of the following must be true?",
+    "answerChoices": {
+      "A": "All food preserved by an acceptable method is free of disease-causing bacteria.",
+      "B": "Preservation methods that destroy enzymes that cause food to spoil do not sterilize the food.",
+      "C": "Food preserved by a sterilization method is less likely to discolor quickly than food preserved with other methods.",
+      "D": "Any nonsterilized food preserved by an acceptable method can contain disease-causing bacteria.",
+      "E": "If a food contains no bacteria, then it has been preserved by an acceptable method."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 18,
+    "questionType": "Activities that pose risks",
+    "questionDifficulty": 3,
+    "stimulus": "Activities that pose risks to life are acceptable if and only if each person who bears the risks either gains some net benefit that cannot be had without such risks, or bears the risks voluntarily.",
+    "questionStem": "Which one of the following judgments most closely conforms to the principle above?",
+    "answerChoices": {
+      "A": "A door-to-door salesperson declines to replace his older car with a new model with more safety features; this is acceptable because the decision not to replace the car is voluntary.",
+      "B": "A smoker subjects people to secondhand smoke at an outdoor public meeting; the resulting risks are acceptable because the danger from secondhand smoke is minimal outdoors, where smoke dissipates quickly.",
+      "C": "A motorcyclist rides without a helmet; the risk of fatal injury to the motorcyclist thus incurred is acceptable because the motorcyclist incurs this risk willingly.",
+      "D": "Motor vehicles are allowed to emit certain low levels of pollution; the resulting health risks are acceptable because all users of motor vehicles share the resulting benefit of inexpensive, convenient travel.",
+      "E": "A nation requires all citizens to spend two years in national service; since such service involves no risk to life, the policy is acceptable."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 19,
+    "questionType": "Ecologist: One theory attributes",
+    "questionDifficulty": 4,
+    "stimulus": "Ecologist: One theory attributes the ability of sea butterflies to avoid predation to their appearance, while another attributes this ability to various chemical compounds they produce. Recently we added each of the compounds to food pellets, one compound per pellet. Predators ate the pellets no matter which one of the compounds was present. Thus the compounds the sea butterflies produce are not responsible for their ability to avoid predation.",
+    "questionStem": "The reasoning in the ecologist's argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "presumes, without providing justification, that the two theories are incompatible with each other",
+      "B": "draws a conclusion about a cause on the basis of nothing more than a statistical correlation",
+      "C": "treats a condition sufficient for sea butterflies' ability to avoid predators as a condition required for this ability",
+      "D": "infers, from the claim that no individual member of a set has a certain effect, that the set as a whole does not have that effect",
+      "E": "draws a conclusion that merely restates material present in one or more of its premises"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 20,
+    "questionType": "Principle: One should criticize",
+    "questionDifficulty": 5,
+    "stimulus": "Principle: One should criticize the works or actions of another person only if the criticism will not seriously harm the person criticized and one does so in the hope or expectation of benefiting someone other than oneself.\nApplication: Jarrett should not have criticized Ostertag's essay in front of the class, since the defects in it were so obvious that pointing them out benefited no one.",
+    "questionStem": "Which one of the following, if true, justifies the above application of the principle?",
+    "answerChoices": {
+      "A": "Jarrett knew that the defects in the essay were so obvious that pointing them out would benefit no one.",
+      "B": "Jarrett's criticism of the essay would have been to Ostertag's benefit only if Ostertag had been unaware of the defects in the essay at the time.",
+      "C": "Jarrett knew that the criticism might antagonize Ostertag.",
+      "D": "Jarrett hoped to gain prestige by criticizing Ostertag.",
+      "E": "Jarrett did not expect the criticism to be to Ostertag's benefit."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 21,
+    "questionType": "Safety consultant: Judged by the number",
+    "questionDifficulty": 4,
+    "stimulus": "Safety consultant: Judged by the number of injuries per licensed vehicle, minivans are the safest vehicles on the road. However, in carefully designed crash tests, minivans show no greater ability to protect their occupants than other vehicles of similar size do. Thus, the reason minivans have such a good safety record is probably not that they are inherently safer than other vehicles, but rather that they are driven primarily by low-risk drivers.",
+    "questionStem": "Which one of the following, if true, most strengthens the safety consultant's argument?",
+    "answerChoices": {
+      "A": "When choosing what kind of vehicle to drive, low-risk drivers often select a kind that they know to perform particularly well in crash tests.",
+      "B": "Judged by the number of accidents per licensed vehicle, minivans are no safer than most other kinds of vehicles are.",
+      "C": "Minivans tend to carry more passengers at any given time than do most other vehicles.",
+      "D": "In general, the larger a vehicle is, the greater its ability to protect its occupants.",
+      "E": "Minivans generally have worse braking and emergency handling capabilities than other vehicles of similar size."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 22,
+    "questionType": "Consumer advocate: There is no doubt",
+    "questionDifficulty": 5,
+    "stimulus": "Consumer advocate: There is no doubt that the government is responsible for the increased cost of gasoline, because the government's policies have significantly increased consumer demand for fuel, and as a result of increasing demand, the price of gasoline has risen steadily.",
+    "questionStem": "Which one of the following is an assumption required by the consumer advocate's argument?",
+    "answerChoices": {
+      "A": "The government can bear responsibility for that which it indirectly causes.",
+      "B": "The government is responsible for some unforeseen consequences of its policies.",
+      "C": "Consumer demand for gasoline cannot increase without causing gasoline prices to increase.",
+      "D": "The government has an obligation to ensure that demand for fuel does not increase excessively.",
+      "E": "If the government pursues policies that do not increase the demand for fuel, gasoline prices tend to remain stable."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 23,
+    "questionType": "A species in which mutations",
+    "questionDifficulty": 4,
+    "stimulus": "A species in which mutations frequently occur will develop new evolutionary adaptations in each generation. Since species survive dramatic environmental changes only if they develop new evolutionary adaptations in each generation, a species in which mutations frequently occur will survive dramatic environmental changes.",
+    "questionStem": "The flawed pattern of reasoning in which one of the following is most closely parallel to that in the argument above?",
+    "answerChoices": {
+      "A": "In a stone wall that is properly built, every stone supports another stone. Since a wall's being sturdy depends upon its being properly built, only walls that are composed entirely of stones supporting other stones are sturdy.",
+      "B": "A play that is performed before a different audience every time will never get the same reaction from any two audiences. Since no plays are performed before the same audience every time, no play ever gets the same reaction from any two audiences.",
+      "C": "A person who is perfectly honest will tell the truth in every situation. Since in order to be a morally upright person one must tell the truth at all times, a perfectly honest person will also be a morally upright person.",
+      "D": "An herb garden is productive only if the soil that it is planted in is well drained. Since soil that is well drained is good soil, an herb garden is not productive unless it is planted in good soil.",
+      "E": "A diet that is healthful is well balanced. Since a well-balanced diet includes fruits and vegetables, one will not be healthy unless one eats fruits and vegetables."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 24,
+    "questionType": "Music critic: How well an underground",
+    "questionDifficulty": 5,
+    "stimulus": "Music critic: How well an underground rock group's recordings sell is no mark of that group's success as an underground group. After all, if a recording sells well, it may be because some of the music on the recording is too trendy to be authentically underground; accordingly, many underground musicians consider it desirable for a recording not to sell well. But weak sales may simply be the result of the group's incompetence.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the music critic's argument?",
+    "answerChoices": {
+      "A": "If an underground rock group is successful as an underground group, its recordings will sell neither especially well nor especially poorly.",
+      "B": "An underground rock group is unsuccessful as an underground group if it is incompetent or if any of its music is too trendy to be authentically underground, or both.",
+      "C": "Whether an underground group's recordings meet criteria that many underground musicians consider desirable is not a mark of that group's success.",
+      "D": "An underground rock group is successful as an underground group if the group is competent but its recordings nonetheless do not sell well.",
+      "E": "For an underground rock group, competence and the creation of authentically underground music are not in themselves marks of success."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT137",
+    "sectionNumber": 3,
+    "questionNumber": 25,
+    "questionType": "Graham: The defeat of the world's chess",
+    "questionDifficulty": 2,
+    "stimulus": "Graham: The defeat of the world's chess champion by a computer shows that any type of human intellectual activity governed by fixed principles can be mastered by machines and thus that a truly intelligent machine will inevitably be devised.\nAdelaide: But you are overlooking the fact that the computer in the case you cite was simply an extension of the people who programmed it. It was their successful distillation of the principles of chess that enabled them to defeat a chess champion using a computer.",
+    "questionStem": "The statements above provide the most support for holding that Graham and Adelaide disagree about whether",
+    "answerChoices": {
+      "A": "chess is the best example of a human intellectual activity that is governed by fixed principles",
+      "B": "chess is a typical example of the sorts of intellectual activities in which human beings characteristically engage",
+      "C": "a computer's defeat of a human chess player is an accomplishment that should be attributed to the computer",
+      "D": "intelligence can be demonstrated by the performance of an activity in accord with fixed principles",
+      "E": "tools can be designed to aid in any human activity that is governed by fixed principles"
+    },
+    "correctAnswer": "C"
+  }
+]

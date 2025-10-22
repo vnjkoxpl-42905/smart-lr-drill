@@ -1,0 +1,444 @@
+[
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 1,
+		"questionType": "Flaw",
+		"questionDifficulty": 1,
+		"stimulus": "According to the official results of last week's national referendum, 80 percent voted in favor of the proposal. But those results must be rigged. Everyone I know voted against the proposal, which is clear evidence that most people voted against it.",
+		"questionStem": "Which one of the following most accurately describes a flaw in the reasoning of the argument?",
+		"answerChoices": {
+			"A": "The argument uses evidence drawn from a sample that is unlikely to be representative of the general population.",
+			"B": "The argument presumes the truth of the conclusion that it sets out to prove.",
+			"C": "The argument rejects a claim by attacking the proponents of the claim rather than addressing the claim itself.",
+			"D": "The argument fails to make a needed distinction between how people should have voted and how they actually voted.",
+			"E": "The argument defends a claim solely on the grounds that most people believe it."
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 2,
+		"questionType": "Principle Strengthen",
+		"questionDifficulty": 1,
+		"stimulus": "Editorial: It is usually desirable for people to have access to unregulated information, such as is found on the Internet. But a vast array of misinformation will always show up on the Internet, and it is difficult to determine which information is accurate. Accurate information is useless unless it can easily be distinguished from misinformation; thus, the information on the Internet should somehow be regulated.",
+		"questionStem": "Which one of the following principles, if valid, most helps to justify the editorial's argument?",
+		"answerChoices": {
+			"A": "It is never possible to regulate misinformation without restricting people's access to accurate information.",
+			"B": "Even if information is regulated, accurate information is often indistinguishable from misinformation.",
+			"C": "Regulation of information makes it easy for people to distinguish between accurate information and misinformation.",
+			"D": "It is acceptable for people to have access to a vast array of misinformation only if accurate information is never overlooked as a result.",
+			"E": "It is usually more desirable for people to have access to useless, unregulated misinformation than it is for them to have access only to accurate but regulated information."
+		},
+		"correctAnswer": "C"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 3,
+		"questionType": "Necessary Assumption",
+		"questionDifficulty": 2,
+		"stimulus": "Some members have criticized the club's president for inviting Dr. Hines to speak at the annual awards banquet without consulting other club members beforehand. But a few years ago the previous club president hired a tax accountant even though he had not discussed it with club members beforehand. So the current president acted appropriately in the way in which she invited Dr. Hines.",
+		"questionStem": "Which one of the following is an assumption on which the argument relies?",
+		"answerChoices": {
+			"A": "The previous club president had also invited speakers without first consulting other club members.",
+			"B": "At the time the previous club president hired the tax accountant, most club members did not expect to be consulted about such matters.",
+			"C": "Dr. Hines accepted the president's invitation to speak at the club's annual awards banquet.",
+			"D": "The club president has more discretion in hiring an accountant than in hiring a speaker.",
+			"E": "The club's previous president acted appropriately in hiring the tax accountant without first consulting other club members."
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 4,
+		"questionType": "Weaken",
+		"questionDifficulty": 1,
+		"stimulus": "Company spokesperson: Household Products magazine claims that our Filterator X water filter does not remove chemical contaminants in significant amounts. This attack on the quality of our product is undermined by the experience of the millions of Filterator X owners who are satisfied with the product's performance.",
+		"questionStem": "Which one of the following, if true, most seriously undermines the company spokesperson's argument?",
+		"answerChoices": {
+			"A": "Household Products did not evaluate whether the Filterator X water filter significantly improved the taste of drinking water.",
+			"B": "Most Filterator X owners have no way to determine how effectively the product removes chemical contaminants from water.",
+			"C": "People whose household water contains chemical contaminants are more likely than other people to buy a Filterator X water filter.",
+			"D": "Very few people who own a Filterator X read Household Products on a consistent basis.",
+			"E": "Household Products' evaluations of Filterator X water filters have been consistently negative."
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 5,
+		"questionType": "Main Conclusion",
+		"questionDifficulty": 3,
+		"stimulus": "A famous artist once claimed that all great art imitates nature. If this claim is correct, then any music that is great art would imitate nature. But while some music may imitate ocean waves or the galloping of horses, for example, most great music imitates nothing at all.",
+		"questionStem": "Which one of the following most accurately expresses the main point of the argument?",
+		"answerChoices": {
+			"A": "Music is inferior to the other arts.",
+			"B": "Either the artist's claim is incorrect, or most great music is not great art.",
+			"C": "Like some great music, some great painting and sculpture may fail to imitate nature.",
+			"D": "Some elements of nature cannot be represented adequately by great art.",
+			"E": "Sounds that do not imitate nature are not great music."
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 6,
+		"questionType": "Weaken",
+		"questionDifficulty": 3,
+		"stimulus": "Patricia: During Japan's Tokugawa period, martial arts experts known as ninjas were trained for the purposes of espionage and assassination. Yet at that time there was actually very little ninja activity in Japan, and most Japanese did not fear ninjas.\nTamara: That is not true. Many wealthy Japanese during the Tokugawa period had their houses constructed with intentionally squeaky floors so that they would receive warning if a ninja were in the house.",
+		"questionStem": "Of the following, which one, if true, is the strongest counter Patricia can make to Tamara's objection?",
+		"answerChoices": {
+			"A": "Many poor Japanese during the Tokugawa period also had houses constructed with intentionally squeaky floors.",
+			"B": "As part of their secret training, ninjas learned to walk on squeaky floors without making a sound.",
+			"C": "The wealthy made up a small portion of Japan's population during the Tokugawa period.",
+			"D": "The fighting prowess of ninjas was exaggerated to mythic proportions in the years following the Tokugawa period.",
+			"E": "There were very few ninjas at any time other than during the Tokugawa period."
+		},
+		"correctAnswer": "C"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 7,
+		"questionType": "Necessary Assumption",
+		"questionDifficulty": 2,
+		"stimulus": "Philosopher: Both the consequences and the motives of human actions have bearing on the moral worth of those actions. Nonetheless, to be a moral agent one must have free will, because one cannot be a moral agent without desiring to conform to a principle.",
+		"questionStem": "The philosopher's argument requires the assumption that",
+		"answerChoices": {
+			"A": "one cannot be a moral agent if one lacks a concern for the consequences of actions",
+			"B": "desiring to conform to a principle requires free will",
+			"C": "nobody who acts without taking the consequences of the action into consideration is free",
+			"D": "it is impossible to have desires without also being a moral agent",
+			"E": "it is impossible to perform morally worthy actions without at some time conforming to a principle"
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 8,
+		"questionType": "Weaken",
+		"questionDifficulty": 2,
+		"stimulus": "A significant amount of the acquisition budget of a typical university library is spent on subscriptions to scholarly journals. Over the last several years, the average subscription rate a library pays for such a journal has increased dramatically, even though the costs of publishing a scholarly journal have remained fairly constant. Obviously, then, in most cases publishing a scholarly journal must be much more profitable now than it was several years ago.",
+		"questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+		"answerChoices": {
+			"A": "Many university libraries have begun to charge higher and higher fines for overdue books and periodicals as a way of passing on increased journal subscription costs to library users.",
+			"B": "A university library's acquisition budget usually represents only a small fraction of its total operating budget.",
+			"C": "Publishing a scholarly journal is an expensive enterprise, and publishers of such journals cannot survive financially if they consistently lose money.",
+			"D": "Most subscribers to scholarly journals are individuals, not libraries, and the subscription rates for individuals have generally remained unchanged for the past several years.",
+			"E": "The majority of scholarly journals are published no more than four times a year."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 9,
+		"questionType": "Main Conclusion",
+		"questionDifficulty": 2,
+		"stimulus": "Terrence Gurney suggests that because his books appeal to a wide audience, he is not given due credit for his literary achievements. Surely he is mistaken. Gurney's books tell interesting stories, but the writing is flat, leaving no lasting impression on the reader. This is likely the reason that Gurney has not received praise for literary achievement.",
+		"questionStem": "Which one of the following most accurately states the argument's overall conclusion?",
+		"answerChoices": {
+			"A": "Terrence Gurney is mistaken when he suggests that the wide appeal of his books has prevented him from being given due credit for his literary achievements.",
+			"B": "Terrence Gurney's books are not significant literary achievements.",
+			"C": "Even though Terrence Gurney's books tell interesting stories, his writing is flat and leaves no lasting impression on the reader.",
+			"D": "Terrence Gurney has not been given due credit for his literary achievements because his books appeal to such a wide audience.",
+			"E": "Terrence Gurney should have received some praise for his literary achievements despite the fact that his writing is flat and leaves no lasting impression on the reader."
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 10,
+		"questionType": "Paradox",
+		"questionDifficulty": 3,
+		"stimulus": "In an experiment designed to show how life may have begun on Earth, scientists demonstrated that an electrical spark—or lightning—could produce amino acids, the building blocks of Earth's life. However, unless the spark occurs in a \"reducing\" atmosphere, that is, one rich in hydrogen and lean in oxygen, amino acids do not form readily and tend to break apart when they do form. Scientists now believe that Earth's atmosphere was actually rich in oxygen and lean in nitrogen at the time life began.",
+		"questionStem": "Assuming that the scientists' current belief about Earth's atmosphere at the time life began is correct, which one of the following, if true, would most help to explain how lightning could have produced the first amino acids on Earth?",
+		"answerChoices": {
+			"A": "Meteorite impacts at the time life began on Earth temporarily created a reducing atmosphere around the impact site.",
+			"B": "A single amino acid could have been sufficient to begin the formation of life on Earth.",
+			"C": "Earth's atmosphere has changed significantly since life first began.",
+			"D": "Lightning was less common on Earth at the time life began than it is now.",
+			"E": "Asteroids contain amino acids, and some of these amino acids could survive an asteroid's impact with Earth."
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 11,
+		"questionType": "Principle Strengthen",
+		"questionDifficulty": 3,
+		"stimulus": "Art critic: The Woerner Journalism Award for criticism was given to Nan Paulsen for her reviews of automobiles. This is inappropriate. The criticism award should be given for criticism, which Paulsen's reviews clearly were not. After all, cars are utilitarian things, not works of art. And objects that are not works of art do not reveal important truths about the culture that produced them.",
+		"questionStem": "Which one of the following principles, if valid, most helps to justify the reasoning in the art critic's argument?",
+		"answerChoices": {
+			"A": "The Woerner Journalism Award for criticism should not be given to a writer who portrays utilitarian objects as works of art.",
+			"B": "Reviews of objects cannot appropriately be considered to be criticism unless the objects reveal important truths about the culture that produced them.",
+			"C": "Unless a review is written for the purpose of revealing important truths about the writer's culture, that review should not be considered to be criticism.",
+			"D": "The Woerner Journalism Award for criticism should not be given to writers who do not consider themselves to be critics.",
+			"E": "All writing that reveals important truths about a culture should be considered to be criticism."
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 12,
+		"questionType": "Strengthen",
+		"questionDifficulty": 4,
+		"stimulus": "Manager: Our company's mail-order sales have recently increased 25 percent. This increase started around the time we started offering unlimited free shipping, rather than just free shipping on orders over $50. Thus, our change in policy probably caused the increase.",
+		"questionStem": "Which one of the following, if true, most strengthens the manager's argument?",
+		"answerChoices": {
+			"A": "Mail-order sales have been decreasing for companies that do not offer unlimited free shipping.",
+			"B": "The company did not widely advertise its change in policy.",
+			"C": "The company's profits from mail-order sales have increased since the change in policy.",
+			"D": "The company's change in policy occurred well after its competitors started offering unlimited free shipping.",
+			"E": "Most companies offer free shipping only on mail-order purchases over $50."
+		},
+		"correctAnswer": "A"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 13,
+		"questionType": "Parallel",
+		"questionDifficulty": 2,
+		"stimulus": "Proponents of nuclear power point out that new nuclear plants are so technologically sophisticated that the chances of a meltdown are extremely small. This is true, but it would still be unwise to build nuclear power plants, since the consequences of a meltdown are absolutely catastrophic.",
+		"questionStem": "The pattern of reasoning in which one of the following is most similar to that in the argument above?",
+		"answerChoices": {
+			"A": "Many mountain climbers claim that their sport is safe because mishaps, though often fatal, are rare. However, mountain climbing is very risky: although the number of mishaps is small, so is the number of mountain climbers. Hence, the chance of a fatal mishap during mountain climbing is not as slim as it may seem.",
+			"B": "Eating a serving of vegetables just once will not improve your health. It is nonetheless prudent to do so, for eating vegetables every day will make you much healthier over time.",
+			"C": "Skydivers always use two parachutes: a main chute and an auxiliary one in case the main chute malfunctions. Thus, the risk of a fatal mishap is low. Nonetheless, it is foolish to skydive, for though the risk is small, the rewards from skydiving are also small.",
+			"D": "The risk of serious injury when bungee jumping is quite low. Nonetheless, it is reckless to engage in that activity, for the injuries that would result in the case of an accident are so extreme that it is not worth the risk.",
+			"E": "People complain about having to wear seat belts because they believe the chances of traffic accidents are slim. This is true; on any given trip it is unlikely that a collision will occur. However, it is still unwise to ride in a car without a seat belt, for the effort it takes to put one on is minimal."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 14,
+		"questionType": "Principle Strengthen",
+		"questionDifficulty": 1,
+		"stimulus": "University president: Research institutions have an obligation to promote research in any field of theoretical investigation if that research shows some promise of yielding insights into the causes of practical problems that affect people's quality of life.",
+		"questionStem": "The principle stated by the university president, if valid, most helps to justify which one of the following actions?",
+		"answerChoices": {
+			"A": "A university denies a grant application from a faculty member for work on a solution to a famous mathematical puzzle that has no relation to practical concerns.",
+			"B": "A government agency funds a research project in astrophysics designed to determine whether there are theoretical limits on the magnitude of planets in distant solar systems.",
+			"C": "A university funds a research position in the physics department that involves no teaching but has the responsibility for managing all the grant applications by members of the physics faculty.",
+			"D": "A foundation decides not to fund a research proposal in applied mathematics that sought to model certain poorly understood aspects of economic behavior.",
+			"E": "A research institute funds an investigation into the mathematical properties of folded structures that is likely to aid in understanding the structure of proteins that cause disease."
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 15,
+		"questionType": "Paradox",
+		"questionDifficulty": 4,
+		"stimulus": "Carpal tunnel syndrome, a nerve disorder that affects the hands and wrists, is often caused by repetitive motions such as typing on a keyboard. A recent study of office workers found that, among those who do similar amounts of typing, workers reporting the least control over their own work had almost three times the risk of developing carpal tunnel syndrome as did those who reported the most control.",
+		"questionStem": "Which one of the following, if true, most helps to explain the study's findings?",
+		"answerChoices": {
+			"A": "Office workers who have the most control over their own work tend to do significantly less typing than do those who have the least control over their own work.",
+			"B": "Feeling a lack of control over one's own work tends to put one under emotional stress that makes one more susceptible to nerve disorders.",
+			"C": "The keyboards on which office workers type tend to put typists' arms and hands in positions that promote the development of carpal tunnel syndrome.",
+			"D": "Among office workers who rarely use keyboards, the rate of carpal tunnel syndrome is much higher for those who feel that they lack control over their own work.",
+			"E": "Office workers who have the most control over their own work tend to perform repetitive motions other than typing more often than do office workers with the least control over their own work."
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 16,
+		"questionType": "Principle Strengthen",
+		"questionDifficulty": 2,
+		"stimulus": "Principle: Employees of telemarketing agencies should never do anything that predisposes people to dislike the agencies' clients.\nApplication: If an employee of a telemarketing agency has been told by a person the employee has called that he or she does not want to buy the product of a client of the agency, the employee should not try to talk that person into doing so.",
+		"questionStem": "Which one of the following, if true, justifies the given application of the principle above?",
+		"answerChoices": {
+			"A": "Any employee of a telemarketing agency is likely to be able to determine whether trying to talk someone into buying the product of a client of the agency after the person has said that he or she does not want to will likely engender animosity toward the client.",
+			"B": "Some employees of telemarketing agencies are unlikely to be certain about whether trying to talk someone into buying the product of a client of the agency after the person has said that he or she does not want to will likely engender animosity toward the client.",
+			"C": "Any employee of a telemarketing agency who tries to get someone to buy the product of a client of the agency after the person has said that he or she does not want to will engender animosity toward the client.",
+			"D": "Some people that an employee of a telemarketing agency calls to ask them to buy the product of a client of the agency will refuse to do so even though they are not predisposed to dislike the client.",
+			"E": "People who are already predisposed to dislike the client of a telemarketing agency are more likely to refuse to buy the product of that client than are people who are predisposed to like the client."
+		},
+		"correctAnswer": "C"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 17,
+		"questionType": "Sufficient Assumption",
+		"questionDifficulty": 4,
+		"stimulus": "Although Pluto has an atmosphere and is much larger than any asteroid, Pluto is not a true planet. Pluto formed in orbit around the planet Neptune and was then ejected from orbit around Neptune when Triton, Neptune's largest moon, was captured by Neptune's gravity.",
+		"questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+		"answerChoices": {
+			"A": "No celestial body can simultaneously be a moon and a planet.",
+			"B": "Not all celestial bodies that have an atmosphere and orbit the sun are true planets.",
+			"C": "If Pluto had not been ejected from its orbit around Neptune, Pluto would not have its current orbit around the sun and would still be a moon.",
+			"D": "The size of a celestial body in orbit around the sun is not relevant to determining whether or not it is a true planet.",
+			"E": "For a celestial body to be a true planet it must have formed in orbit around the sun exclusively."
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 18,
+		"questionType": "Paradox",
+		"questionDifficulty": 4,
+		"stimulus": "A high-calorie diet providing adequate fats was a crucial requirement for the evolution of the anatomically modern human brain, a process that began among our early human ancestors. Food resources that could support such a diet were most abundant and reliable in the shore environments that were available to early humans. Nevertheless, the human brain's evolution took place almost exclusively in savanna and woodland areas.",
+		"questionStem": "Which one of the following, if true, would most help to resolve the apparent conflict presented above?",
+		"answerChoices": {
+			"A": "Early humans had a significantly lower metabolic rate than anatomically modern humans, allowing them to expend their fat reserves more efficiently.",
+			"B": "The brains of the earliest known humans were 30 percent smaller than the anatomically modern human brain.",
+			"C": "Prehistoric savanna and woodland areas offered more reliable and abundant resources than they do today.",
+			"D": "The techniques used to explore the archaeology of prehistoric shore sites have only recently been developed.",
+			"E": "Gathering food in shore environments required a significantly greater expenditure of calories by early humans than did gathering food in other environments."
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 19,
+		"questionType": "Agree/Disagree",
+		"questionDifficulty": 3,
+		"stimulus": "Editor Y: This is a good photograph: the composition is attractive, especially in the way the image is blurred by smoke in one corner.\nEditor Z: It's very pretty, but it's a bad photograph. It doesn't make a statement; there's no obvious reason for the smoke to be there.",
+		"questionStem": "The editors' dialogue provides the most support for the claim that they disagree with each other about whether",
+		"answerChoices": {
+			"A": "a photograph's composition should be related to a statement that it makes",
+			"B": "a photograph that is not attractive can still be a good photograph",
+			"C": "a photograph that makes no statement can still be attractive",
+			"D": "attractiveness by itself can make a photograph a good photograph",
+			"E": "attractive composition and prettiness are the same feature"
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 20,
+		"questionType": "Sufficient Assumption",
+		"questionDifficulty": 4,
+		"stimulus": "University president: We will be forced to reduce spending next year if we do not increase our enrollment. So, if we are to maintain the quality of the education we provide, we must market our programs more aggressively. Without such marketing we will be unable to increase our enrollment.",
+		"questionStem": "The conclusion of the university president's argument can be properly drawn if which one of the following is assumed?",
+		"answerChoices": {
+			"A": "The university will not maintain the quality of the education it provides if it increases its enrollment.",
+			"B": "The university will not need to reduce spending next year if it increases its enrollment.",
+			"C": "The university will increase its enrollment if it markets its programs more aggressively.",
+			"D": "The university will not maintain the quality of the education it provides if it reduces spending next year.",
+			"E": "The university will not need to reduce spending next year if it markets its programs more aggressively."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 21,
+		"questionType": "Must Be True",
+		"questionDifficulty": 4,
+		"stimulus": "If the city starts requiring residents to sort the materials that they put out for recycling, then many residents will put more recyclables in with their regular garbage. This will result in more recyclables being buried in the city's landfill. However, because of the cost of having city workers do the sorting, the sanitation department will not stay within its budget unless the sorting requirement for residents is implemented.",
+		"questionStem": "Which one of the following statements logically follows from the information above?",
+		"answerChoices": {
+			"A": "Most of the city's residents will continue to recycle even if a sorting requirement is implemented.",
+			"B": "If the city starts requiring residents to sort their recyclables, then all of the residents who continue to recycle will sort their recyclables.",
+			"C": "Implementing the sorting requirement would not cause the city's annual cost of sending garbage to its landfill to exceed its current annual cost of sorting recyclables.",
+			"D": "The amount of recyclables going to the city's landfill will increase if the sanitation department stays within its budget.",
+			"E": "If the city implements the sorting requirement, the sanitation department will stay within its budget."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 22,
+		"questionType": "Flaw",
+		"questionDifficulty": 3,
+		"stimulus": "Meerkat \"sentinels,\" so-called because they watch for predators while other meerkat group members forage, almost never fall victim to those predators, yet the foragers often do. This advantage accruing to the sentinel does not mean that its watchful behavior is entirely self-interested. On the contrary, the sentinel's behavior is an example of animal behavior motivated at least in part by altruism. The loud bark emitted by the sentinel as it dashes for the cover of the nearest hole alerts other group members to the presence of danger.",
+		"questionStem": "Which one of the following is a questionable reasoning technique employed in the argument?",
+		"answerChoices": {
+			"A": "appealing to evidence that tends to undermine rather than support the argument's conclusion",
+			"B": "appealing to evidence that presupposes the truth of the argument's conclusion",
+			"C": "inferring solely from an effect produced by an action that a purpose of the action is to produce that effect",
+			"D": "inferring solely from the claim that the behavior of a meerkat sentinel is not entirely selfish that this behavior is entirely altruistic",
+			"E": "concluding that a claim is false on the grounds that insufficient evidence has been offered to support it"
+		},
+		"correctAnswer": "C"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 23,
+		"questionType": "Agree/Disagree",
+		"questionDifficulty": 4,
+		"stimulus": "Alex: Shrimp farming results in damage to the environment, because investors make quick profits from such farming and then abandon the farms.\nJolene: I disagree. Although some shrimp farms have proved unsustainable and have been quickly abandoned, properly built shrimp farms take a long time to construct and are costly to operate. Most owners try to make sure that their farms are productive for many years.",
+		"questionStem": "Their dialogue provides the most support for the claim that Alex and Jolene disagree with each other over whether",
+		"answerChoices": {
+			"A": "most owners of shrimp farms eventually abandon their farms",
+			"B": "shrimp farming often yields a quick, easy profit",
+			"C": "shrimp farming hardly ever damages the environment",
+			"D": "abandonment of a shrimp farm results in damage to the environment",
+			"E": "some shrimp farmers are environmentally irresponsible"
+		},
+		"correctAnswer": "B"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 24,
+		"questionType": "Parallel Flaw",
+		"questionDifficulty": 5,
+		"stimulus": "No one who works at Leila's Electronics has received both a poor performance evaluation and a raise. Lester has not received a raise, so it must be that he has received a poor performance evaluation.",
+		"questionStem": "The flawed reasoning in the argument above is most similar to the reasoning in which one of the following arguments?",
+		"answerChoices": {
+			"A": "No one who lives in a house both owns it and pays rent on it. So, since my next-door neighbors pay rent on their house, it must be that they do not own it.",
+			"B": "No one who lives in a house both owns it and pays rent on it. My next-door neighbors own their house. Therefore, it must be that they do not pay rent on it.",
+			"C": "My neighbors have not paid any rent on their house. Since anyone who lives in a house but does not rent it owns it, it must be that they own it.",
+			"D": "My next-door neighbors do not own their house. Since no one who lives in a house both owns it and pays rent on it, it must be that my next-door neighbors pay rent on their house.",
+			"E": "Anyone who lives in a house but does not own it pays rent on it. My next-door neighbors do not own their house. Therefore, it must be that they pay rent on it."
+		},
+		"correctAnswer": "D"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 25,
+		"questionType": "Flaw",
+		"questionDifficulty": 2,
+		"stimulus": "Numerous studies have demonstrated a pronounced negative correlation between high-fiber diets and the incidence of colon cancer. For example, the colon cancer rate in Western countries is much higher than in many non-Western countries where people eat more fiber-rich foods, such as fruits and vegetables. Furthermore, in Scandinavia it has been conclusively shown that the higher the colon cancer rate in a given area, the lower the consumption in that area of cereals, which, like fruits and vegetables, are high in fiber. All of this shows that insufficient consumption of fiber causes colon cancer, and sufficient consumption of fiber prevents it.",
+		"questionStem": "The argument's reasoning is vulnerable to criticism because the argument overlooks the possibility that",
+		"answerChoices": {
+			"A": "the consumption of fiber in many countries is rising appreciably",
+			"B": "the risk of many types of cancer is reduced by high-fiber diets",
+			"C": "fiber is difficult for many people to include in their diets",
+			"D": "the fiber in fruits and vegetables and the fiber in cereals have cancer-fighting properties to different degrees",
+			"E": "foods containing fiber also contain other substances that, when consumed, tend to prevent colon cancer"
+		},
+		"correctAnswer": "E"
+	},
+	{
+		"practiceTest": "PT136",
+		"sectionNumber": 4,
+		"questionNumber": 26,
+		"questionType": "Main Conclusion",
+		"questionDifficulty": 3,
+		"stimulus": "Anthropologist: Many people think that if human language evolved, then something like it must be present in those species most closely related to humans, such as chimpanzees. They reason that since new traits evolve gradually, something like human language, albeit cruder, must exist in some species from which humans evolved. This general line of argument may be reasonable, but it simply does not follow that chimpanzees have anything like human language, because humans did not evolve from chimpanzees. While chimpanzees are indeed closely related to humans, this is because both evolved from a common ancestor. The evolution of human language might easily have begun after the extinction of that common ancestor.",
+		"questionStem": "Which one of the following most accurately expresses the main conclusion of the anthropologist's argument?",
+		"answerChoices": {
+			"A": "Humans did not evolve from chimpanzees, but rather from some extinct species.",
+			"B": "The assumption that something like human language must exist in some species from which humans evolved has no clearcut linguistic implications for chimpanzees.",
+			"C": "The communicative systems of chimpanzees are cruder than human language.",
+			"D": "Human language is a by-product of human intelligence, which chimpanzees lack.",
+			"E": "The evolution of human language began after the disappearance of an extinct species from which both humans and chimpanzees evolved."
+		},
+		"correctAnswer": "B"
+	}
+]
