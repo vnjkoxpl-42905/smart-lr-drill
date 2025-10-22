@@ -92,7 +92,7 @@ export function HighlightedText({
               const getHighlightStyles = (color: string) => {
                 const baseStyles = {
                   display: 'inline' as const,
-                  padding: 0,
+                  padding: '2px 0',
                   margin: 0,
                   border: 'none',
                   lineHeight: 'inherit',
@@ -100,8 +100,6 @@ export function HighlightedText({
                   wordSpacing: 'inherit',
                   verticalAlign: 'baseline',
                   whiteSpace: 'pre-wrap' as const,
-                  background: 'none',
-                  mixBlendMode: 'normal' as const,
                   borderRadius: 0,
                   WebkitBoxDecorationBreak: 'clone' as const,
                   boxDecorationBreak: 'clone' as const,
@@ -110,6 +108,7 @@ export function HighlightedText({
                 if (color === 'underline') {
                   return {
                     ...baseStyles,
+                    background: 'none',
                     textDecoration: 'underline',
                     textDecorationColor: 'currentColor',
                     textDecorationThickness: '2px',
@@ -117,15 +116,20 @@ export function HighlightedText({
                   };
                 }
 
-                const shadowColors = {
-                  yellow: 'rgba(250, 204, 21, 0.65)',
-                  pink: 'rgba(244, 114, 182, 0.65)',
-                  orange: 'rgba(251, 146, 60, 0.65)',
+                const highlightColors = {
+                  yellow: 'rgba(250, 204, 21, 0.5)',
+                  pink: 'rgba(244, 114, 182, 0.5)',
+                  orange: 'rgba(251, 146, 60, 0.5)',
                 };
+
+                const bgColor = highlightColors[color as keyof typeof highlightColors] || highlightColors.yellow;
 
                 return {
                   ...baseStyles,
-                  boxShadow: `inset 0 -0.7em 0 ${shadowColors[color as keyof typeof shadowColors] || shadowColors.yellow}`,
+                  backgroundImage: `linear-gradient(${bgColor}, ${bgColor})`,
+                  backgroundPosition: '0 0.15em',
+                  backgroundSize: '100% calc(100% - 0.3em)',
+                  backgroundRepeat: 'no-repeat',
                 };
               };
 
@@ -238,7 +242,7 @@ export function HighlightedText({
           const getHighlightStyles = (color: string) => {
             const baseStyles = {
               display: 'inline' as const,
-              padding: 0,
+              padding: '2px 0',
               margin: 0,
               border: 'none',
               lineHeight: 'inherit',
@@ -246,8 +250,6 @@ export function HighlightedText({
               wordSpacing: 'inherit',
               verticalAlign: 'baseline',
               whiteSpace: 'pre-wrap' as const,
-              background: 'none',
-              mixBlendMode: 'normal' as const,
               borderRadius: 0,
               WebkitBoxDecorationBreak: 'clone' as const,
               boxDecorationBreak: 'clone' as const,
@@ -256,6 +258,7 @@ export function HighlightedText({
             if (color === 'underline') {
               return {
                 ...baseStyles,
+                background: 'none',
                 textDecoration: 'underline',
                 textDecorationColor: 'currentColor',
                 textDecorationThickness: '2px',
@@ -263,15 +266,20 @@ export function HighlightedText({
               };
             }
 
-            const shadowColors = {
-              yellow: 'rgba(250, 204, 21, 0.65)',
-              pink: 'rgba(244, 114, 182, 0.65)',
-              orange: 'rgba(251, 146, 60, 0.65)',
+            const highlightColors = {
+              yellow: 'rgba(250, 204, 21, 0.5)',
+              pink: 'rgba(244, 114, 182, 0.5)',
+              orange: 'rgba(251, 146, 60, 0.5)',
             };
+
+            const bgColor = highlightColors[color as keyof typeof highlightColors] || highlightColors.yellow;
 
             return {
               ...baseStyles,
-              boxShadow: `inset 0 -0.7em 0 ${shadowColors[color as keyof typeof shadowColors] || shadowColors.yellow}`,
+              backgroundImage: `linear-gradient(${bgColor}, ${bgColor})`,
+              backgroundPosition: '0 0.15em',
+              backgroundSize: '100% calc(100% - 0.3em)',
+              backgroundRepeat: 'no-repeat',
             };
           };
 
