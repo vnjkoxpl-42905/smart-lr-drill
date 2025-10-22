@@ -91,11 +91,11 @@ export function HighlightedText({
               
               const getHighlightClass = (color: string) => {
                 switch(color) {
-                  case 'yellow': return 'bg-yellow-300/70';
-                  case 'pink': return 'bg-pink-300/70';
-                  case 'orange': return 'bg-orange-300/70';
+                  case 'yellow': return 'bg-yellow-400/30';
+                  case 'pink': return 'bg-pink-400/30';
+                  case 'orange': return 'bg-orange-400/30';
                   case 'underline': return 'underline decoration-foreground decoration-2 underline-offset-2';
-                  default: return 'bg-yellow-300/70';
+                  default: return 'bg-yellow-400/30';
                 }
               };
 
@@ -105,13 +105,14 @@ export function HighlightedText({
                   className={cn(
                     getHighlightClass(highlight.color),
                     "transition-colors",
-                    eraserMode && "cursor-pointer hover:bg-red-400/70"
+                    eraserMode && "cursor-pointer hover:bg-red-400/50"
                   )}
                   style={{
                     padding: 0,
                     margin: 0,
                     border: 'none',
                     lineHeight: 'inherit',
+                    mixBlendMode: 'normal',
                     boxDecorationBreak: 'clone',
                     WebkitBoxDecorationBreak: 'clone',
                     ...(highlight.color === 'underline' ? { background: 'transparent' } : {})
@@ -214,11 +215,11 @@ export function HighlightedText({
           // Add highlighted text
           const getHighlightClass = (color: string) => {
             switch(color) {
-              case 'yellow': return 'bg-yellow-300/70';
-              case 'pink': return 'bg-pink-300/70';
-              case 'orange': return 'bg-orange-300/70';
+              case 'yellow': return 'bg-yellow-400/30';
+              case 'pink': return 'bg-pink-400/30';
+              case 'orange': return 'bg-orange-400/30';
               case 'underline': return 'underline decoration-foreground decoration-2 underline-offset-2';
-              default: return 'bg-yellow-300/70';
+              default: return 'bg-yellow-400/30';
             }
           };
 
@@ -228,13 +229,14 @@ export function HighlightedText({
               className={cn(
                 getHighlightClass(highlight.color),
                 "transition-colors",
-                eraserMode && "cursor-pointer hover:bg-red-400/70"
+                eraserMode && "cursor-pointer hover:bg-red-400/50"
               )}
               style={{
                 padding: 0,
                 margin: 0,
                 border: 'none',
                 lineHeight: 'inherit',
+                mixBlendMode: 'normal',
                 boxDecorationBreak: 'clone',
                 WebkitBoxDecorationBreak: 'clone',
                 ...(highlight.color === 'underline' ? { background: 'transparent' } : {})
