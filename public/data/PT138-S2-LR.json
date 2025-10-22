@@ -1,0 +1,444 @@
+[
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 1,
+    "questionType": "Most Supported",
+    "questionDifficulty": 1,
+    "stimulus": "Technician: Laboratory mice that are used for research aimed at improving human health are usually kept in small cages. Such an environment is neither normal nor healthy for mice. Moreover, the reliability of research using animals is diminished if those animals are not in an environment that is normal for them.",
+    "questionStem": "Which one of the following can be properly inferred from the technician's statements?",
+    "answerChoices": {
+      "A": "The conditions under which laboratory mice are kept are not likely to change in the near future.",
+      "B": "If laboratory mice were kept under better conditions, it would be appropriate to use them for research aimed at improving human health.",
+      "C": "Research using laboratory mice that is aimed at improving human health is compromised by the conditions under which the mice are kept.",
+      "D": "Those who conduct research aimed at improving human health will develop new research techniques.",
+      "E": "Laboratory mice that are used for research that is not directly related to human health are not usually kept in small cages."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 2,
+    "questionType": "Evaluate",
+    "questionDifficulty": 2,
+    "stimulus": "\"Dumping\" is defined as selling a product in another country for less than production cost. Shrimp producers from Country F are selling shrimp in Country G below the cost of producing shrimp in Country G. So Country F's producers are dumping shrimp.",
+    "questionStem": "In order to evaluate the argument above, it is necessary to determine whether",
+    "answerChoices": {
+      "A": "\"production cost\" in the definition of dumping refers to the cost of producing the product in the country where it originates or in the country where it is sold",
+      "B": "there is agreement among experts about whether dumping is harmful to the economy of the country in which products are sold for less than production cost",
+      "C": "shrimp producers from Country F charge more for shrimp that they sell within their own country than for shrimp that they sell in Country G",
+      "D": "shrimp producers from Country F will eventually go out of business if they continue to sell shrimp in Country G for less than production cost",
+      "E": "shrimp producers from Country F are selling shrimp in Country G for considerably less than production cost or just slightly less"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 3,
+    "questionType": "Paradox",
+    "questionDifficulty": 1,
+    "stimulus": "Scientist: Venus contains a hot molten core, like that of Earth. Also like Earth, Venus must expel the excess heat the core generates. On Earth, this occurs entirely through active volcanos and fissures created when tectonic plates separate. Yet Venus has neither active volcanos nor fissures caused by the movement of tectonic plates.",
+    "questionStem": "Which one of the following, if true, does the most to resolve the apparent discrepancy described by the scientist?",
+    "answerChoices": {
+      "A": "Rock on the surface of Venus remains solid at much higher temperatures than does rock on Earth.",
+      "B": "The surface of Venus is relatively thin, allowing internally produced heat to radiate into space.",
+      "C": "The interior of Venus undergoes greater fluctuations in temperature than does that of Earth.",
+      "D": "Though Venus lacks active volcanoes and heat-diffusing fissures, it has surface movement somewhat like that of Earth.",
+      "E": "The atmosphere of Venus is significantly hotter than that of Earth."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 4,
+    "questionType": "Weaken",
+    "questionDifficulty": 2,
+    "stimulus": "Columnist: The managers of some companies routinely donate a certain percentage of their companies' profits each year to charity. Although this practice may seem totally justified and even admirable, it is not. After all, corporate profits are not the property of the managers, but of the companies' owners. The legendary Robin Hood may have stolen from the rich to give to the poor, but he was nevertheless stealing.",
+    "questionStem": "Which one of the following, if true, most weakens the analogy used in the argument?",
+    "answerChoices": {
+      "A": "The profits that a company makes in a given year are, in part, returned to the owners of the company.",
+      "B": "Managers who routinely donate a certain percentage of corporate profits to charity do so with the owners' tacit consent.",
+      "C": "Company managers often donate part of their own income to charities or other philanthropic organizations.",
+      "D": "Any charity that accepts corporate donations needs to be able to account for how that money is spent.",
+      "E": "Charities often solicit contributions from companies as well as private individuals."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 5,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 2,
+    "stimulus": "Principle: A law whose purpose is to protect wild animal populations should not be enforced against those whose actions do not threaten wild animal populations.\nApplication: Even though there is a law against capturing wild snakes, which was enacted to protect wild snake populations, snake charmers who violate this law should not be prosecuted.",
+    "questionStem": "Which one of the following, if true, most justifies the above application of the principle?",
+    "answerChoices": {
+      "A": "Since there are relatively few snake charmers and they each capture relatively few snakes per year, snake charmers have a minimal effect on wild populations.",
+      "B": "Many attempts to prosecute snake charmers under this law have failed because prosecutors lacked adequate knowledge of the procedures used to capture snakes.",
+      "C": "Very few, if any, snake charmers are aware that there is a law that prohibits the capture of wild snakes.",
+      "D": "Snake populations are much less threatened than the populations of several other species for which capture is legal.",
+      "E": "Snake charmers capture wild snakes only because they believe they would be unable to earn a living otherwise."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 6,
+    "questionType": "Paradox",
+    "questionDifficulty": 2,
+    "stimulus": "A film makes a profit if the number of people who see it is sufficient to generate revenues from ticket sales greater than the amount spent to make it. Hence, the primary goal of movie executives is to maximize the number of people who see a film. However, it is not the primary goal of television executives to maximize the number of viewers for their shows.",
+    "questionStem": "Which one of the following, if true, most helps to explain the difference between the goals of movie executives and those of television executives?",
+    "answerChoices": {
+      "A": "More people are willing to see a film more than once than are willing to watch a television show more than once.",
+      "B": "There is no analog in television to the large profits that owners of movie theaters make by selling refreshments to their customers.",
+      "C": "The average cost of producing an hour of film is much greater than the average cost of producing an hour of television.",
+      "D": "Television shows make their profits from sponsors, who are chiefly concerned with the purchasing power of the people who watch a television show.",
+      "E": "Over half of the most popular television shows are shows that viewers do not have to pay to watch."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 7,
+    "questionType": "Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "Several companies that make herbal teas containing ginseng assert in their marketing that ginseng counteracts the effects of stress. As a result, many people buy these products hoping to improve their health. Yet no definitive scientific study links ginseng with the relief of stress. Thus, these marketing campaigns make false claims.",
+    "questionStem": "The reasoning in the argument is flawed in that the argument",
+    "answerChoices": {
+      "A": "rejects an argument because of its source without evaluating the argument's logical strength",
+      "B": "concludes that a claim is false merely on the grounds that it has not been shown to be true",
+      "C": "draws an inference on the basis of a sample that is likely to be unrepresentative",
+      "D": "fails to address the possibility that many people buy herbal teas containing ginseng because they enjoy drinking the tea",
+      "E": "fails to address the possibility that some ingredients other than ginseng in the herbal teas containing ginseng counteract the effects of stress"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 8,
+    "questionType": "Most Supported",
+    "questionDifficulty": 2,
+    "stimulus": "Scientists conjecture that certain microbes consume organic molecules in exposed shale and similar sediments. In so doing, the microbes remove oxygen from the atmosphere and generate carbon dioxide, a gas that, evidence indicates, promotes global warming. They also conjecture that these microbes reproduce more quickly at higher temperatures.",
+    "questionStem": "The scientists' conjectures, if true, provide the most support for which one of the following statements?",
+    "answerChoices": {
+      "A": "The microbes' activity will soon diminish as the organic molecules in exposed sediments are depleted.",
+      "B": "Every organism that generates carbon dioxide reproduces more quickly at high temperatures.",
+      "C": "If global warming occurs, it will be exacerbated by the activity of the microbes.",
+      "D": "The microbes do not remove any element other than oxygen from the atmosphere.",
+      "E": "A significant portion of the carbon dioxide in Earth's atmosphere was produced by the microbes."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 9,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 1,
+    "stimulus": "A diet whose protein comes from fish is much healthier than one whose protein comes from red meat. Yet if everyone were to adopt this healthier diet, most of the marine species on which it is based would become extinct, making it impossible. Hence, we should not recommend the universal adoption of such a diet.",
+    "questionStem": "The reasoning in which one of the following arguments most closely resembles that in the argument above?",
+    "answerChoices": {
+      "A": "Some studies have provided evidence that taking a vitamin E supplement every day reduces one's risk of heart attack. However, it has not been conclusively established that vitamin E supplements are safe for all people. So we should not recommend that everyone take vitamin E supplements every day.",
+      "B": "Governments are within their rights to tax tobacco heavily and spend this tax revenue on education. If these taxes become too high, however, people might smoke less, thereby reducing the funding thus generated for education. So such taxes might eventually have to be supplemented by other sources of revenue.",
+      "C": "A consumer is better off when limiting purchases to what he or she truly needs and saving or investing any remaining income. If everyone did this, however, the economy would be thrown into a severe recession, thereby making saving and investing impossible for most people. So we should not recommend this spending pattern to everyone.",
+      "D": "If legislators spent less time campaigning, they would have more time to do the jobs for which they were elected. But if they did not spend so much time campaigning, they probably would not get reelected. So it is not surprising that legislators spend so much time campaigning.",
+      "E": "If we restrict land development in wilderness areas, we help preserve many of the species that now inhabit these areas. But we also thereby reduce the proliferation of the admittedly smaller number of species, such as deer, that flourish in developed areas. So it is not always clear which areas should be designated as wilderness areas."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 10,
+    "questionType": "Most Supported",
+    "questionDifficulty": 5,
+    "stimulus": "People who are allergic to cats are actually allergic to certain proteins found in the animals' skin secretions and saliva; which particular proteins are responsible, however, varies from allergy sufferer to allergy sufferer. Since all cats shed skin and spread saliva around their environment, there is no such thing as a cat incapable of provoking allergic reactions, although it is common for a given cat to cause an allergic reaction in some—but not all—people who are allergic to cats.",
+    "questionStem": "Which one of the following statements is most strongly supported by the information above?",
+    "answerChoices": {
+      "A": "Any particular individual will be allergic to some breeds of cat but not to others.",
+      "B": "No cat is capable of causing an allergic reaction in all types of allergy sufferers.",
+      "C": "Not all cats are identical with respect to the proteins contained in their skin secretions and saliva.",
+      "D": "The allergic reactions of some people who are allergic to cats are more intense than the allergic reactions of other allergy sufferers.",
+      "E": "There is no way to predict whether a given cat will produce an allergic reaction in a particular allergy sufferer."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 11,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Cartographer: Maps are like language: they can be manipulated in order to mislead. That most people are not generally misled by words, however, should not lead us to think that most people are not susceptible to being misled by maps. Most people are taught to be cautious interpreters of language, but education in the sophisticated use of maps is almost nonexistent.",
+    "questionStem": "Which one of the following most accurately describes how the statement that most people are taught to be cautious interpreters of language functions in the cartographer's argument?",
+    "answerChoices": {
+      "A": "It is offered as an analogical case that helps to clarify the meaning of the argument's conclusion.",
+      "B": "It is a conclusion drawn from the claim that education in the sophisticated use of maps is almost nonexistent.",
+      "C": "It is part of a distinction drawn in order to support the argument's conclusion.",
+      "D": "It is offered as support for the contention that maps have certain relevant similarities to language.",
+      "E": "It is the conclusion drawn in the argument."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 12,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "Journalist: A book claiming that a new drug has dangerous side effects has recently been criticized by a prominent physician. However, the physician is employed by the company that manufactures that drug, and hence probably has personal reasons to deny that the drug is dangerous. Therefore, the critique does not provide legitimate grounds to reject the book's claims about the drug's side effects.",
+    "questionStem": "The reasoning in the journalist's argument is most vulnerable to criticism on which one of the following grounds?",
+    "answerChoices": {
+      "A": "It fails to address adequately the possibility that the critique of the book called into question other claims made in the book in addition to the claim that the drug has dangerous side effects.",
+      "B": "It takes for granted that anyone even remotely associated with a company that manufactures a drug is unable to fairly weigh evidence concerning possible dangerous side effects of that drug.",
+      "C": "It overlooks the possibility that the author of the book was biased for personal reasons in favor of the claim that the drug has dangerous side effects.",
+      "D": "It fails to address adequately the possibility that someone who has personal reasons to deny a claim may nonetheless provide legitimate grounds for denying that claim.",
+      "E": "It overlooks the possibility that even if a critique does not provide legitimate grounds to reject a claim, this failure need not be the result of any personal biases of the author."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 13,
+    "questionType": "Strengthen",
+    "questionDifficulty": 3,
+    "stimulus": "A computer game publisher has recently released its latest adventure game. The game's inventive puzzles and compelling plot induce even casual players to become preoccupied with completing it. The game can be purchased from retail outlets or rented for two-day intervals. The publisher offers a rebate equal to the cost of one rental for renters who go on to purchase the game, saving them a significant portion of the purchase price. Since the rate of sales now meets expectations and rentals are exceeding expectations, the publisher predicts that soon sales of the game will also exceed expectations.",
+    "questionStem": "Which one of the following, if true, most helps to justify the publisher's prediction?",
+    "answerChoices": {
+      "A": "The game can be purchased directly from the publisher as well as from retailers.",
+      "B": "It takes several weeks for most players to complete the game.",
+      "C": "The publisher's games are among the most popular computer games on the market.",
+      "D": "Most people who complete the game do not play it extensively afterward.",
+      "E": "Some people buy and complete the game and then give it away to a friend."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 14,
+    "questionType": "Evaluate",
+    "questionDifficulty": 3,
+    "stimulus": "City dog licensing records show that more cocker spaniels are registered to addresses in the Flynn Heights neighborhood than to addresses in all other neighborhoods combined. So if an animal control officer finds a stray cocker spaniel anywhere near Flynn Heights, it is likely that the dog belongs to someone in Flynn Heights.",
+    "questionStem": "Which one of the following would be most useful to know in order to evaluate the argument?",
+    "answerChoices": {
+      "A": "whether cocker spaniels are more likely than dogs of other breeds to stray from their owners",
+      "B": "whether there are more cocker spaniels registered to addresses in Flynn Heights than any other breed of dog",
+      "C": "whether the city's animal control officers find more stray dogs in and around Flynn Heights than in any other part of the city",
+      "D": "whether the number of pets owned, per capita, is greater for residents of Flynn Heights than for residents of any other neighborhood",
+      "E": "whether residents of Flynn Heights are more likely to license their dogs than residents of other neighborhoods are"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 15,
+    "questionType": "Necessary Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Psychologists recently conducted a study in which people from widely disparate cultures were asked to examine five photographs. Each photograph depicted the face of a person expressing one of five basic human emotions—fear, happiness, disgust, anger, and sadness. The people in the study were asked to identify the emotion being expressed in each photograph. For each photograph, everyone identified the same emotion. This shows that people are genetically predisposed to associate certain facial expressions with certain basic emotions.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "answerChoices": {
+      "A": "For each photograph, the emotion that the subjects agreed was being expressed was the emotion that the person photographed was, in fact, feeling.",
+      "B": "One's emotional disposition is not influenced by one's culture.",
+      "C": "Some behaviors that are present in people from widely disparate cultures are nonetheless culturally influenced.",
+      "D": "If there is a behavior common to people of widely disparate cultures, then there is probably a genetic predisposition to that behavior.",
+      "E": "The people whose faces were depicted in the photographs were not all from the same culture."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 16,
+    "questionType": "Principle Strengthen",
+    "questionDifficulty": 4,
+    "stimulus": "Judge: The defendant admits noncompliance with national building codes but asks that penalties not be imposed because he was confused as to whether national or local building codes applied to the area in which he was building. This excuse might be acceptable had he been charged with noncompliance with local codes, but since he is charged with noncompliance with national codes, his excuse is unacceptable.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the judge's reasoning?",
+    "answerChoices": {
+      "A": "Local codes and national codes must not overlap with each other.",
+      "B": "Local codes may be less strict, but not more strict, than national codes.",
+      "C": "Any behavior required by national codes is also required by local codes.",
+      "D": "Ignorance of the difference between two codes is not an adequate excuse for noncompliance.",
+      "E": "A behavior that is in compliance with one law is not necessarily in compliance with another."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 17,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Brianna: It would have been better to buy a tree last summer rather than this summer. The one we bought this summer is struggling to survive this summer's drought. If we had bought one last summer, it would have been able to survive this summer's drought, because last summer's normal rainfall would have enabled it to develop established roots. Trees with established roots can better withstand droughts.",
+    "questionStem": "Which one of the following most accurately expresses the overall conclusion drawn in Brianna's argument?",
+    "answerChoices": {
+      "A": "It would have been better to buy a tree last summer rather than this summer.",
+      "B": "The tree purchased this summer is struggling to survive this summer's drought.",
+      "C": "If a tree had been purchased last summer, it would be better able to survive this summer's drought.",
+      "D": "A tree purchased last summer would have established roots.",
+      "E": "Trees with established roots can better withstand droughts."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 18,
+    "questionType": "Must Be True",
+    "questionDifficulty": 3,
+    "stimulus": "Every delegate to the convention is a party member. Some delegates to the convention are government officials, and each government official who is at the convention is a speaker at the convention, as well.",
+    "questionStem": "If the statements above are true, then which one of the following statements must be true?",
+    "answerChoices": {
+      "A": "Every party member at the convention is a delegate to the convention.",
+      "B": "At least some speakers at the convention are neither delegates nor party members.",
+      "C": "At least some speakers at the convention are delegates to the convention.",
+      "D": "All speakers at the convention are government officials.",
+      "E": "Every government official at the convention is a party member."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 19,
+    "questionType": "Main Conclusion",
+    "questionDifficulty": 2,
+    "stimulus": "Research into artificial intelligence will fail to produce truly intelligent machines unless the focus of the discipline is radically changed. Progress has been made in creating devices of tremendous computational sophistication, but the present focus on computational ability to the exclusion of other abilities will produce devices only as capable of displaying true intelligence as a human being would be who was completely devoid of emotional and other noncognitive responses.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion argued for above?",
+    "answerChoices": {
+      "A": "The current focus of research into artificial intelligence will produce devices no more capable of displaying true intelligence than a person would be who lacked emotions and other noncognitive responses.",
+      "B": "If the current focus of research into artificial intelligence is not radically changed, this research will not be able to produce machines capable of true intelligence.",
+      "C": "Despite progress in creating machines of great computational sophistication, current research into artificial intelligence has failed to fulfill its objectives.",
+      "D": "The capacity to express noncognitive responses such as emotion is at least as important for true intelligence as is computational sophistication.",
+      "E": "If a machine is not capable of producing humanlike noncognitive responses, then it cannot be regarded as truly intelligent."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 20,
+    "questionType": "Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "A study found that when rating the educational value of specific children's television shows parents tend to base their judgments primarily on how much they themselves enjoyed the shows, and rarely took into account the views of educational psychologists as to the shows' educational value. Accordingly, if the psychologists' views are sound, parents have little reason to trust their own ratings of the educational value of children's television shows.",
+    "questionStem": "The argument is most vulnerable to criticism on the grounds that it",
+    "answerChoices": {
+      "A": "relies on a sample that is likely to be unrepresentative of the population with which the conclusion is concerned",
+      "B": "takes for granted that parents do not enjoy the same sort of children's television shows that children themselves enjoy",
+      "C": "takes for granted that the educational value of a television show should be the only consideration for a parent trying to decide whether a child should watch the show",
+      "D": "fails to rule out the possibility that parents' ratings of the shows based on their own enjoyment coincide closely with the educational psychologists' views of the shows' educational values",
+      "E": "takes for granted that educational psychologists are the only people who can judge the educational value of children's television shows with a high degree of accuracy"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 21,
+    "questionType": "Agree/Disagree",
+    "questionDifficulty": 5,
+    "stimulus": "Justine: Pellman, Inc. settled the lawsuit out of court by paying $1 million. That Pellman settled instead of going to trial indicates their corporate leaders expected to lose in court.\nSimon: It's unclear whether Pellman's leaders expected to lose in court. But I think they expected that, whether they won or lost the case, the legal fees involved in going to trial would have been more costly than the settlement. So settling the lawsuit seemed the most cost-effective solution.",
+    "questionStem": "The dialogue provides the most support for the claim that Justine and Simon disagree with each other about which one of the following?",
+    "answerChoices": {
+      "A": "If the lawsuit against Pellman had gone to trial, it is likely that Pellman would have lost in court.",
+      "B": "Pellman's corporate leaders were able to accurately estimate their chances of winning in court.",
+      "C": "If Pellman's legal fees for going to trial would have been more costly than the settlement, then settling the lawsuit was the most cost-effective solution for the corporation.",
+      "D": "If Pellman's corporate leaders had expected that the legal fees for going to trial would have been less costly than the settlement, they would have taken the lawsuit to trial.",
+      "E": "If Pellman's corporate leaders had expected to win in court, then they would not have settled the lawsuit out of court for $1 million."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 22,
+    "questionType": "Role",
+    "questionDifficulty": 3,
+    "stimulus": "Astrologer: Although some scientists have claimed that there is no correlation between people's astrological signs and their personality types, this claim is scientifically unjustified. Since science does not have precise criteria for distinguishing one personality type from another, scientific studies cannot be used to disprove a correlation between personality type and any other phenomenon.",
+    "questionStem": "Which one of the following most accurately describes the role played in the astrologer's argument by the statement that scientific studies cannot be used to disprove a correlation between personality type and any other phenomenon?",
+    "answerChoices": {
+      "A": "It is a claim offered as support for a conclusion that is in turn offered as support for the overall conclusion drawn in the argument.",
+      "B": "It is a conclusion for which support is offered and that in turn is offered as support for the overall conclusion drawn in the argument.",
+      "C": "It is the overall conclusion drawn in the argument.",
+      "D": "It summarizes a position that the argument as a whole is directed toward discrediting.",
+      "E": "It provides a specific instance of the general principle that the argument as a whole is directed toward establishing."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 23,
+    "questionType": "Sufficient Assumption",
+    "questionDifficulty": 4,
+    "stimulus": "Ethicist: Only when we know a lot about the events that led to an action are we justified in praising or blaming a person for that action—as we sometimes are. We must therefore reject Tolstoy's rash claim that if we knew a lot about the events leading up to any action, we would cease to regard that action as freely performed.",
+    "questionStem": "Which one of the following, if assumed, enables the conclusion of the ethicist's argument to be properly drawn?",
+    "answerChoices": {
+      "A": "People should not be regarded as subject to praise or blame for actions that were caused by conditions beyond their control.",
+      "B": "Whether an act is one for which the person doing it is genuinely responsible is not determined by how much information others possess about that act.",
+      "C": "We can be justified in praising or blaming a person for an action only when we regard that action as freely performed.",
+      "D": "The responsibility a person bears for an action is not a matter of degree; however, our inclination to blame or praise whoever performed the action varies with the amount of information available.",
+      "E": "If we do not know much about the events leading up to any given action, we will regard that action as freely performed."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 24,
+    "questionType": "Flaw",
+    "questionDifficulty": 5,
+    "stimulus": "Studies have found that human tears contain many of the same hormones that the human body produces in times of emotional stress. Hence, shedding tears removes significant quantities of these hormones from the body. Therefore, crying must have the effect of reducing emotional stress.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+    "answerChoices": {
+      "A": "overlooks the possibility that if crying has a tendency to reduce emotional stress, this tendency might arise because of something other than the shedding of tears",
+      "B": "confuses a condition that is required for the production of a given phenomenon with a condition that in itself would be sufficient to cause the production of that phenomenon",
+      "C": "fails to adequately address the possibility that, even if one phenomenon causally contributes to a second phenomenon, the second phenomenon may causally influence the first as well",
+      "D": "fails to adequately distinguish between two distinct factors that are jointly responsible for causing a given phenomenon",
+      "E": "takes for granted that because certain substances are present whenever a condition occurs, those substances are a cause of that condition"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 25,
+    "questionType": "Parallel Flaw",
+    "questionDifficulty": 3,
+    "stimulus": "If squirrels eat from a bird feeder, it will not attract many birds. However, squirrels eat from a bird feeder only if it lacks a protective cover. So a bird feeder will not attract many birds if it does not have a protective cover.",
+    "questionStem": "The flawed pattern of reasoning in the argument above is most similar to that in which one of the following arguments?",
+    "answerChoices": {
+      "A": "If a tire's pressure is too low, the tire will wear out prematurely, and if a tire wears out prematurely, a likely cause is that the pressure was too low. So if a car owner checks the tire pressure regularly, the tires will not wear out prematurely.",
+      "B": "If a tire's pressure is too low, the tire will wear out prematurely. But tire pressure will become too low only if the car owner neglects to check the pressure regularly. So a tire will wear out prematurely if the car owner neglects to check the pressure regularly.",
+      "C": "Tires wear out prematurely if car owners neglect to check the tire pressure regularly. Unless car owners are unaware of this fact, they check the tire pressure regularly. So car owners need to be made aware of the consequences of neglecting to check the tire pressure.",
+      "D": "If a tire's pressure is too low, the tire will wear out prematurely. But tire pressure will become too low if the car owner neglects to check the pressure regularly. Therefore, if the car owner neglects to check the pressure regularly, a tire will wear out prematurely.",
+      "E": "If a tire's pressure is too low, the tire will wear out prematurely. But it will also wear out prematurely if it is often driven on gravel roads. Therefore, if a tire is often driven on gravel roads, keeping its pressure from becoming too low will not help it to last longer."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "practiceTest": "PT138",
+    "sectionNumber": 2,
+    "questionNumber": 26,
+    "questionType": "Method",
+    "questionDifficulty": 2,
+    "stimulus": "Sarah: When commercial fishing boats with permits to fish for certain species accidentally catch a type of fish for which they have no permit, the latter must be thrown back. This is a very wasteful practice because many, if not most, of the rejected fish do not survive. Fishing permits should therefore be altered so that fishers can keep fish caught accidentally.\nAmar: Making it legal to keep those fish would probably lead to a lot more \"accidents.\"",
+    "questionStem": "The technique Amar uses in responding to Sarah's argument is to",
+    "answerChoices": {
+      "A": "question whether Sarah's recommendation can be put into practice",
+      "B": "point out that Sarah used a crucial term in two distinct senses",
+      "C": "allude to a factor that supposedly strengthens the case for Sarah's recommendation",
+      "D": "contend that Sarah's recommendation has an important negative consequence",
+      "E": "maintain that Sarah overlooks important lessons from past policies"
+    },
+    "correctAnswer": "D"
+  }
+]
