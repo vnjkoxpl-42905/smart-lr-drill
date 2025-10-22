@@ -1295,7 +1295,7 @@ function DrillContent() {
       <div
         key={key}
         className={cn(
-          "group relative flex items-start gap-4 py-3.5 px-5 -mx-5",
+          "group relative flex items-start gap-3 py-2.5 px-4 -mx-4",
           "transition-all duration-[120ms] ease-out",
           "border-b border-border",
           isEliminated && "opacity-55",
@@ -1341,7 +1341,7 @@ function DrillContent() {
             htmlFor={`answer-${key}`}
             className={cn(
               "flex-1 cursor-pointer",
-              "text-[18px] leading-[1.75]",
+              "text-[16px] leading-[1.6]",
               "font-normal text-foreground",
               "select-none",
               "transition-all duration-[120ms]",
@@ -1503,7 +1503,7 @@ function DrillContent() {
           <>
         {/* Left Panel - Stimulus */}
         <div className="flex-1 overflow-y-auto">
-          <div className="p-8 max-w-4xl mx-auto pb-8">
+          <div className="p-6 max-w-4xl mx-auto pb-4">
             {currentQuestion.stimulus && (() => {
               const fullText = normalizeText(currentQuestion.stimulus);
               const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
@@ -1512,7 +1512,7 @@ function DrillContent() {
                 <div 
                   className={cn(
                     "prose prose-lg max-w-none",
-                    "text-[17px] leading-[1.8] text-foreground",
+                    "text-[15px] leading-[1.6] text-foreground",
                     highlightMode !== 'none' ? 'select-text cursor-text' : 'select-none cursor-default'
                   )}
                   onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
@@ -1560,12 +1560,12 @@ function DrillContent() {
 
         {/* Right Panel - Question & Answers */}
         <div className="flex-1 overflow-y-auto border-l border-border">
-          <div className="p-8 max-w-3xl pb-8">
+          <div className="p-6 max-w-3xl pb-4">
             {/* Question Stem - Large and confident */}
-            <div className="mb-8">
+            <div className="mb-5">
               <div 
                 className={cn(
-                  "text-[22px] font-semibold text-foreground leading-[1.65] tracking-tight",
+                  "text-[19px] font-semibold text-foreground leading-[1.5] tracking-tight",
                   highlightMode !== 'none' ? 'select-text cursor-text' : 'select-none cursor-default'
                 )}
                 onMouseUp={(e) => handleTextSelection(e, 'stem')}
