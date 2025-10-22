@@ -13,6 +13,28 @@ serve(async (req) => {
 
   try {
     const { transcript, question, selectedAnswer, showContrast } = await req.json();
+
+    // Input validation
+    if (!transcript || typeof transcript !== 'string' || transcript.length > 5000) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid transcript (max 5000 characters)' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (!question || typeof question !== 'object') {
+      return new Response(
+        JSON.stringify({ error: 'Invalid question data' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (question.stimulus && typeof question.stimulus === 'string' && question.stimulus.length > 10000) {
+      return new Response(
+        JSON.stringify({ error: 'Question stimulus too long (max 10000 characters)' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
     
     const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
     if (!LOVABLE_API_KEY) {

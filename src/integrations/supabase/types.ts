@@ -696,6 +696,7 @@ export type Database = {
           schema_version: number | null
           student_label: string | null
           token_hash: string
+          user_id: string | null
         }
         Insert: {
           class_id: string
@@ -706,6 +707,7 @@ export type Database = {
           schema_version?: number | null
           student_label?: string | null
           token_hash: string
+          user_id?: string | null
         }
         Update: {
           class_id?: string
@@ -716,6 +718,7 @@ export type Database = {
           schema_version?: number | null
           student_label?: string | null
           token_hash?: string
+          user_id?: string | null
         }
         Relationships: []
       }
@@ -962,7 +965,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_user_class_id: {
+        Args: { uid: string }
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never

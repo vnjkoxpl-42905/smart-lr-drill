@@ -13,6 +13,44 @@ serve(async (req) => {
 
   try {
     const { userContext } = await req.json();
+
+    // Input validation
+    if (!userContext || typeof userContext !== 'object') {
+      return new Response(
+        JSON.stringify({ error: 'Invalid user context' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Validate userContext properties
+    if (userContext.streak !== undefined && (typeof userContext.streak !== 'number' || userContext.streak < 0 || userContext.streak > 10000)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid streak value' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (userContext.recentAccuracy !== undefined && (typeof userContext.recentAccuracy !== 'number' || userContext.recentAccuracy < 0 || userContext.recentAccuracy > 100)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid accuracy value' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (userContext.weakTypes !== undefined && (!Array.isArray(userContext.weakTypes) || userContext.weakTypes.length > 50)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid weak types array' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (userContext.daysSinceLastPractice !== undefined && (typeof userContext.daysSinceLastPractice !== 'number' || userContext.daysSinceLastPractice < 0 || userContext.daysSinceLastPractice > 3650)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid days since practice value' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     
     if (!LOVABLE_API_KEY) {

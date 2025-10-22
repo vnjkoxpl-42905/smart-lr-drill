@@ -12,6 +12,15 @@ serve(async (req) => {
 
   try {
     const { request } = await req.json();
+
+    // Input validation
+    if (!request || typeof request !== 'string' || request.length > 500) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid request (max 500 characters)' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     
     if (!LOVABLE_API_KEY) {
