@@ -1361,32 +1361,30 @@ function DrillContent() {
           </Label>
         </div>
         
-        {/* × elimination toggle - only in section mode */}
-        {isSectionMode && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handleEliminateAnswer(key);
-            }}
+        {/* × elimination toggle */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            handleEliminateAnswer(key);
+          }}
+          className={cn(
+            "shrink-0 flex items-center justify-center",
+            "w-11 h-11 -my-3 -mr-3",
+            "rounded-md transition-all duration-[120ms]",
+            "hover:bg-accent/50 active:scale-95",
+            "text-muted-foreground hover:text-foreground"
+          )}
+          aria-pressed={isEliminated}
+          aria-label={`Cross out choice ${key}`}
+          title={isEliminated ? `Restore choice ${key}` : `Cross out choice ${key}`}
+        >
+          <XCircle 
             className={cn(
-              "shrink-0 flex items-center justify-center",
-              "w-11 h-11 -my-3 -mr-3",
-              "rounded-md transition-all duration-[120ms]",
-              "hover:bg-accent/50 active:scale-95",
-              "text-muted-foreground hover:text-foreground"
-            )}
-            aria-pressed={isEliminated}
-            aria-label={`Cross out choice ${key}`}
-            title={isEliminated ? `Restore choice ${key}` : `Cross out choice ${key}`}
-          >
-            <XCircle 
-              className={cn(
-                "w-5 h-5 transition-all duration-[120ms]",
-                isEliminated ? "fill-current" : "fill-none"
-              )} 
-            />
-          </button>
-        )}
+              "w-5 h-5 transition-all duration-[120ms]",
+              isEliminated ? "fill-current" : "fill-none"
+            )} 
+          />
+        </button>
       </div>
     );
   };
