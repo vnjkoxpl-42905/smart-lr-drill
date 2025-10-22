@@ -14,7 +14,7 @@ import { CapsuleCard } from '@/components/dashboard/CapsuleCard';
 import { ActionNav } from '@/components/dashboard/ActionNav';
 import { RecentPerformanceWidget } from '@/components/dashboard/RecentPerformanceWidget';
 import { SectionSelector } from '@/components/drill/SectionSelector';
-import { TypeDrillPicker } from '@/components/drill/TypeDrillPicker';
+import { QuestionPicker } from '@/components/drill/QuestionPicker';
 import { NaturalDrillCreator } from '@/components/drill/NaturalDrillCreator';
 import { LoginIntro } from '@/components/LoginIntro';
 import { BookOpen, Target, Clock, Flag, XCircle, TrendingUp } from 'lucide-react';
@@ -321,7 +321,7 @@ export default function Home() {
 
             {selectedAction === 'type-drill' && manifest && (
               <div className="animate-slide-up">
-                <TypeDrillPicker
+                <QuestionPicker
                   manifest={manifest}
                   onStartDrill={handleStartTypeDrill}
                   onCancel={() => setSelectedAction(null)}

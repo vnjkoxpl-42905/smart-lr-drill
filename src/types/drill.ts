@@ -25,6 +25,7 @@ export interface TypeDrillConfig {
   difficulties: number[];
   pts: number[];
   count: number; // number of questions to drill
+  selectedQids?: string[]; // optional pre-selected question IDs
 }
 
 export interface DrillSession {

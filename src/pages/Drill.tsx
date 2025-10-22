@@ -150,11 +150,20 @@ function DrillContent() {
         setHasTimer(config.timer.mode !== 'unlimited');
       } else if (mode === 'type-drill' && state.config) {
         const config = state.config as TypeDrillConfig;
-        rawQuestions = questionBank.getQuestionsByFilter({
-          qtypes: config.qtypes.length > 0 ? config.qtypes : undefined,
-          difficulties: config.difficulties.length > 0 ? config.difficulties : undefined,
-          pts: config.pts.length > 0 ? config.pts : undefined,
-        });
+        
+        // If specific questions were selected, use those directly
+        if (config.selectedQids && config.selectedQids.length > 0) {
+          rawQuestions = config.selectedQids
+            .map(qid => questionBank.getQuestion(qid))
+            .filter(Boolean) as LRQuestion[];
+        } else {
+          // Otherwise, filter by criteria
+          rawQuestions = questionBank.getQuestionsByFilter({
+            qtypes: config.qtypes.length > 0 ? config.qtypes : undefined,
+            difficulties: config.difficulties.length > 0 ? config.difficulties : undefined,
+            pts: config.pts.length > 0 ? config.pts : undefined,
+          });
+        }
       }
 
       // Apply question pool filtering only if classId is available
@@ -189,47 +198,52 @@ function DrillContent() {
         }
       }
 
-      // For type-drill, apply balanced selection from available pool
+      // For type-drill, apply balanced selection from available pool (only if not pre-selected)
       let finalQuestions = available;
       if (mode === 'type-drill' && state.config) {
         const config = state.config as TypeDrillConfig;
         
-        // Balanced mix: group by type × level, round-robin select
-        const groups = new Map<string, LRQuestion[]>();
-        
-        for (const q of available) {
-          const key = `${q.qtype}-${q.difficulty}`;
-          if (!groups.has(key)) groups.set(key, []);
-          groups.get(key)!.push(q);
-        }
-        
-        // Shuffle each group
-        for (const [, questions] of groups) {
-          for (let i = questions.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [questions[i], questions[j]] = [questions[j], questions[i]];
+        // Skip pool filtering if questions were pre-selected
+        if (config.selectedQids && config.selectedQids.length > 0) {
+          finalQuestions = available; // Use them directly
+        } else {
+          // Balanced mix: group by type × level, round-robin select
+          const groups = new Map<string, LRQuestion[]>();
+          
+          for (const q of available) {
+            const key = `${q.qtype}-${q.difficulty}`;
+            if (!groups.has(key)) groups.set(key, []);
+            groups.get(key)!.push(q);
           }
-        }
-        
-        // Round-robin select
-        let selected: LRQuestion[] = [];
-        const groupArrays = Array.from(groups.values());
-        
-        while (selected.length < config.count && groupArrays.some(g => g.length > 0)) {
-          for (const group of groupArrays) {
-            if (group.length > 0 && selected.length < config.count) {
-              selected.push(group.shift()!);
+          
+          // Shuffle each group
+          for (const [, questions] of groups) {
+            for (let i = questions.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [questions[i], questions[j]] = [questions[j], questions[i]];
             }
           }
+          
+          // Round-robin select
+          let selected: LRQuestion[] = [];
+          const groupArrays = Array.from(groups.values());
+          
+          while (selected.length < config.count && groupArrays.some(g => g.length > 0)) {
+            for (const group of groupArrays) {
+              if (group.length > 0 && selected.length < config.count) {
+                selected.push(group.shift()!);
+              }
+            }
+          }
+          
+          // Final shuffle for variety
+          for (let i = selected.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [selected[i], selected[j]] = [selected[j], selected[i]];
+          }
+          
+          finalQuestions = selected;
         }
-        
-        // Final shuffle for variety
-        for (let i = selected.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [selected[i], selected[j]] = [selected[j], selected[i]];
-        }
-        
-        finalQuestions = selected;
       }
 
       questionQueue = finalQuestions.map(q => q.qid);

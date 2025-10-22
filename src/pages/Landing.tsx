@@ -4,7 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useQuestionBank } from '@/contexts/QuestionBankContext';
 import { ModeSelector } from '@/components/drill/ModeSelector';
 import { SectionSelector } from '@/components/drill/SectionSelector';
-import { TypeDrillPicker } from '@/components/drill/TypeDrillPicker';
+import { QuestionPicker } from '@/components/drill/QuestionPicker';
 import { NaturalDrillCreator } from '@/components/drill/NaturalDrillCreator';
 import { LoginIntro } from '@/components/LoginIntro';
 import { Button } from '@/components/ui/button';
@@ -178,7 +178,7 @@ export default function Landing() {
       )}
 
       {selectedMode === 'type-drill' && manifest && (
-        <TypeDrillPicker
+        <QuestionPicker
           manifest={manifest}
           onStartDrill={handleStartTypeDrill}
           onCancel={() => setSelectedMode(null)}
