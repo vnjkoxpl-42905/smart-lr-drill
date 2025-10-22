@@ -10,7 +10,6 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { useToast } from '@/hooks/use-toast';
 import { Eye, EyeOff } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
-import { SplashCursor } from '@/components/ui/splash-cursor';
 
 export default function Auth() {
   const navigate = useNavigate();
@@ -267,7 +266,6 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
-      <SplashCursor />
       {/* Ambient warm gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-surface-elevated to-accent-bronze/5" />
       

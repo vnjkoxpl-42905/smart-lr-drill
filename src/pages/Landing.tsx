@@ -11,7 +11,6 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { User } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { SplashCursor } from '@/components/ui/splash-cursor';
 import type { DrillMode, FullSectionConfig, TypeDrillConfig } from '@/types/drill';
 
 export default function Landing() {
@@ -97,7 +96,6 @@ export default function Landing() {
 
   return (
     <>
-      <SplashCursor />
       {showIntro && (
         <LoginIntro 
           firstName={getFirstName()} 
