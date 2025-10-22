@@ -918,6 +918,12 @@ function DrillContent() {
       // Use replaceOverlappingHighlights to implement "last action wins"
       const updatedHighlights = replaceOverlappingHighlights(currentHighlights, newHighlight);
       
+      console.log('✓ Highlight created:', {
+        color: highlightMode,
+        text: selection.text.substring(0, 30) + '...',
+        totalHighlights: updatedHighlights.length
+      });
+      
       setHighlights(new Map(highlights.set(currentQuestion.qid, updatedHighlights)));
     }
     

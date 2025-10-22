@@ -118,14 +118,14 @@ export function HighlightedText({
                 }
 
                 const shadowColors = {
-                  yellow: 'rgba(250, 204, 21, 0.45)',
-                  pink: 'rgba(244, 114, 182, 0.45)',
-                  orange: 'rgba(251, 146, 60, 0.45)',
+                  yellow: 'rgba(250, 204, 21, 0.65)',
+                  pink: 'rgba(244, 114, 182, 0.65)',
+                  orange: 'rgba(251, 146, 60, 0.65)',
                 };
 
                 return {
                   ...baseStyles,
-                  boxShadow: `inset 0 -0.6em ${shadowColors[color as keyof typeof shadowColors] || shadowColors.yellow}`,
+                  boxShadow: `inset 0 -0.7em 0 ${shadowColors[color as keyof typeof shadowColors] || shadowColors.yellow}`,
                 };
               };
 
@@ -264,14 +264,14 @@ export function HighlightedText({
             }
 
             const shadowColors = {
-              yellow: 'rgba(250, 204, 21, 0.45)',
-              pink: 'rgba(244, 114, 182, 0.45)',
-              orange: 'rgba(251, 146, 60, 0.45)',
+              yellow: 'rgba(250, 204, 21, 0.65)',
+              pink: 'rgba(244, 114, 182, 0.65)',
+              orange: 'rgba(251, 146, 60, 0.65)',
             };
 
             return {
               ...baseStyles,
-              boxShadow: `inset 0 -0.6em ${shadowColors[color as keyof typeof shadowColors] || shadowColors.yellow}`,
+              boxShadow: `inset 0 -0.7em 0 ${shadowColors[color as keyof typeof shadowColors] || shadowColors.yellow}`,
             };
           };
 
