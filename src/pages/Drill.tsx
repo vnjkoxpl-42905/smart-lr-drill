@@ -28,7 +28,7 @@ import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
 import { captureTextSelection, replaceOverlappingHighlights, type Highlight, type HighlightColor } from '@/lib/highlightUtils';
-import { ArrowLeft, CheckCircle, XCircle, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import { ArrowLeft, CheckCircle, X, XCircle, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import {
@@ -1378,10 +1378,9 @@ function DrillContent() {
           aria-label={`Cross out choice ${key}`}
           title={isEliminated ? `Restore choice ${key}` : `Cross out choice ${key}`}
         >
-          <XCircle 
+          <X 
             className={cn(
-              "w-5 h-5 transition-all duration-[120ms]",
-              isEliminated ? "fill-current" : "fill-none"
+              "w-5 h-5 transition-all duration-[120ms]"
             )} 
           />
         </button>
