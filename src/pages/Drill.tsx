@@ -1295,9 +1295,9 @@ function DrillContent() {
       <div
         key={key}
         className={cn(
-          "group relative flex items-start gap-4 py-4 px-4 mb-7",
+          "group relative flex items-start gap-4 py-3.5 px-5 -mx-5",
           "transition-all duration-[120ms] ease-out",
-          "rounded-lg border border-border bg-card/40",
+          "border-b border-border",
           isEliminated && "opacity-55",
           showGreenHighlight && "bg-green-50 dark:bg-green-900/20 border-l-4 border-l-green-500"
         )}
@@ -1341,14 +1341,14 @@ function DrillContent() {
             htmlFor={`answer-${key}`}
             className={cn(
               "flex-1 cursor-pointer",
-              "text-[18px] leading-[1.65]",
+              "text-[18px] leading-[1.75]",
               "font-normal text-foreground",
               "select-none",
               "transition-all duration-[120ms]",
               isEliminated && "line-through decoration-2 decoration-muted-foreground"
             )}
           >
-            <span className="font-semibold mr-2.5 text-muted-foreground whitespace-nowrap">({key})</span>
+            <span className="font-semibold mr-3 text-muted-foreground">({key})</span>
             <span>{text}</span>
             {!isSectionMode && showFeedback && (
               <Badge
@@ -1479,7 +1479,7 @@ function DrillContent() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex overflow-hidden gap-8">
+      <div className="flex-1 flex overflow-hidden">
         {poolExhausted ? (
           <div className="flex-1 overflow-y-auto p-8">
             <QuestionPoolExhausted
@@ -1512,7 +1512,7 @@ function DrillContent() {
                 <div 
                   className={cn(
                     "prose prose-lg max-w-none",
-                    "text-[18px] leading-[1.65] text-foreground",
+                    "text-[17px] leading-[1.8] text-foreground",
                     highlightMode !== 'none' ? 'select-text cursor-text' : 'select-none cursor-default'
                   )}
                   onMouseUp={(e) => handleTextSelection(e, 'stimulus')}
@@ -1559,7 +1559,7 @@ function DrillContent() {
         </div>
 
         {/* Right Panel - Question & Answers */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto border-l border-border">
           <div className="p-8 max-w-3xl pb-8">
             {/* Question Stem - Large and confident */}
             <div className="mb-8">
