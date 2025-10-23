@@ -32,7 +32,7 @@ import { captureTextSelection, replaceOverlappingHighlights, type Highlight, typ
 import { ArrowLeft, CheckCircle, X, XCircle, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -1660,33 +1660,35 @@ function DrillContent() {
             </Button>
 
             {/* Question Metadata - Center */}
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button
-                  onClick={() => {
-                    const text = `PT${currentQuestion.pt}-S${currentQuestion.section}-Q${currentQuestion.qnum}`;
-                    navigator.clipboard.writeText(text);
-                    toast.success('Question ID copied to clipboard');
-                  }}
-                  className="px-3 py-1.5 rounded-md bg-accent/30 text-foreground border border-border/50 text-sm font-medium hover:bg-accent/40 transition-colors"
-                >
-                  <span className="hidden sm:inline">
-                    PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
-                  </span>
-                  <span className="sm:hidden">
-                    Q{currentQuestion.qnum}
-                  </span>
-                </button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <div className="space-y-1">
-                  <p className="font-semibold">PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}</p>
-                  <p className="text-xs text-muted-foreground">Type: {currentQuestion.qtype}</p>
-                  <p className="text-xs text-muted-foreground">Difficulty: {currentQuestion.difficulty}/5</p>
-                  <p className="text-xs text-muted-foreground mt-2">Click to copy ID</p>
-                </div>
-              </TooltipContent>
-            </Tooltip>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button
+                    onClick={() => {
+                      const text = `PT${currentQuestion.pt}-S${currentQuestion.section}-Q${currentQuestion.qnum}`;
+                      navigator.clipboard.writeText(text);
+                      toast.success('Question ID copied to clipboard');
+                    }}
+                    className="px-3 py-1.5 rounded-md bg-accent/30 text-foreground border border-border/50 text-sm font-medium hover:bg-accent/40 transition-colors"
+                  >
+                    <span className="hidden sm:inline">
+                      PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
+                    </span>
+                    <span className="sm:hidden">
+                      Q{currentQuestion.qnum}
+                    </span>
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <div className="space-y-1">
+                    <p className="font-semibold">PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}</p>
+                    <p className="text-xs text-muted-foreground">Type: {currentQuestion.qtype}</p>
+                    <p className="text-xs text-muted-foreground">Difficulty: {currentQuestion.difficulty}/5</p>
+                    <p className="text-xs text-muted-foreground mt-2">Click to copy ID</p>
+                  </div>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
 
             <div className="flex items-center gap-2 sm:gap-6">
               {poolStatus && (
