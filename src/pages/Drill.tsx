@@ -1881,19 +1881,20 @@ React.useEffect(() => {
                     userAnswer={selectedAnswer}
                     attemptNumber={tutorAttemptNumber}
                     mode={session?.mode}
-onClose={() => {
-  console.debug('Tutor closed, returning to', { qid: currentQuestion?.qid });
-  // Prevent unintended auto-submit right after closing tutor
-  setSuppressAutoSubmitOnce(true);
-  setTutorChatOpen(false);
-  setTutorQuestionSnapshot(null);
-  setAnswerLocked(false); // Clear red state, re-enable choices
-  // Clear previous selection to allow fresh retry (adaptive mode only)
-  if (session?.mode === 'adaptive') {
-    setSelectedAnswer('');
-    setConfidence(null);
-  }
-}}
+                onClose={() => {
+                  console.debug('Tutor closed, returning to', { qid: currentQuestion?.qid });
+                  // Prevent unintended auto-submit right after closing tutor
+                  setSuppressAutoSubmitOnce(true);
+                  setTutorChatOpen(false);
+                  setTutorQuestionSnapshot(null);
+                  setAnswerLocked(false); // Clear red state, re-enable choices
+                  // Clear previous selection to allow fresh retry (adaptive mode only)
+                  if (session?.mode === 'adaptive') {
+                    setSelectedAnswer('');
+                    setConfidence(null);
+                    setEliminatedAnswers(new Set()); // Clear eliminated choices for fresh retry
+                  }
+                }}
                   />
                 </ErrorBoundary>
               </div>
