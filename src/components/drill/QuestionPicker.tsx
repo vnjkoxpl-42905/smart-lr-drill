@@ -12,7 +12,7 @@ import { ChevronDown, X, Search, AlertCircle, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { TypeDrillConfig } from '@/types/drill';
 import type { QuestionManifest, LRQuestion } from '@/lib/questionLoader';
-import { questionBank } from '@/lib/questionLoader';
+import { questionBank, CANONICAL_QTYPES } from '@/lib/questionLoader';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -60,13 +60,17 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
     [manifest]
   );
   
-  // Get all question types directly from manifest (already normalized)
-  const allQTypes = useMemo(() => {
-    return Object.keys(manifest.byQType).sort((a, b) => a.localeCompare(b));
-  }, [manifest]);
-  
+  // Question type filter UI state
   const [qtypeSearch, setQtypeSearch] = useState('');
   const [showZeroCounts, setShowZeroCounts] = useState(true);
+  
+  // Get all canonical question types with counts
+  const allQTypesWithCounts = useMemo(() => {
+    return CANONICAL_QTYPES.allTypes.map(type => ({
+      type,
+      count: manifest.byQType[type] || 0
+    }));
+  }, [manifest]);
   
   const allDifficulties = [1, 2, 3, 4, 5];
   
@@ -246,46 +250,72 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
   
   // Create drill
   const handleCreateSet = () => {
+    let questionsToUse: LRQuestion[] = [];
+    
+    // If no questions are manually selected, use filtered questions
     if (selectedQids.size === 0) {
+      // Check if we have any filters applied (at least question types)
+      if (filters.questionTypes.length === 0) {
+        toast({
+          title: "No questions selected",
+          description: "Please select question types or manually select questions from the table.",
+          variant: "destructive",
+        });
+        return;
+      }
+      
+      // Use filtered questions
+      if (filteredQuestions.length === 0) {
+        toast({
+          title: "No questions match filters",
+          description: "Try relaxing your filters to find more questions.",
+          variant: "destructive",
+        });
+        return;
+      }
+      
+      // Default to 10 random questions from filtered pool (or all if fewer)
+      const count = Math.min(10, filteredQuestions.length);
+      const shuffled = questionBank.shuffleQuestions(filteredQuestions);
+      questionsToUse = shuffled.slice(0, count);
+      
       toast({
-        title: "No questions selected",
-        description: "Please select at least one question to create a drill.",
-        variant: "destructive",
+        title: `Created set with ${questionsToUse.length} questions`,
+        description: `Using ${questionsToUse.length} random questions matching your filters.`,
       });
-      return;
+    } else {
+      // Use manually selected questions
+      questionsToUse = Array.from(selectedQids)
+        .map(qid => questionBank.getQuestion(qid))
+        .filter(Boolean) as LRQuestion[];
+      
+      if (questionsToUse.length === 0) {
+        toast({
+          title: "Invalid selection",
+          description: "None of the selected questions could be found. Please try again.",
+          variant: "destructive",
+        });
+        return;
+      }
+      
+      if (questionsToUse.length !== selectedQids.size) {
+        toast({
+          title: "Some questions unavailable",
+          description: `${selectedQids.size - questionsToUse.length} selected questions could not be found and were skipped.`,
+        });
+      }
     }
     
-    // Validate that all selected questions still exist
-    const selectedQuestions = Array.from(selectedQids)
-      .map(qid => questionBank.getQuestion(qid))
-      .filter(Boolean) as LRQuestion[];
-    
-    if (selectedQuestions.length === 0) {
-      toast({
-        title: "Invalid selection",
-        description: "None of the selected questions could be found. Please try again.",
-        variant: "destructive",
-      });
-      return;
-    }
-    
-    if (selectedQuestions.length !== selectedQids.size) {
-      toast({
-        title: "Some questions unavailable",
-        description: `${selectedQids.size - selectedQuestions.length} selected questions could not be found and were skipped.`,
-      });
-    }
-    
-    const qtypes = Array.from(new Set(selectedQuestions.map(q => q.qtype)));
-    const difficulties = Array.from(new Set(selectedQuestions.map(q => q.difficulty)));
-    const pts = Array.from(new Set(selectedQuestions.map(q => q.pt)));
+    const qtypes = Array.from(new Set(questionsToUse.map(q => q.qtype)));
+    const difficulties = Array.from(new Set(questionsToUse.map(q => q.difficulty)));
+    const pts = Array.from(new Set(questionsToUse.map(q => q.pt)));
     
     const config: TypeDrillConfig = {
       qtypes,
       difficulties,
       pts,
-      count: selectedQuestions.length,
-      selectedQids: selectedQuestions.map(q => q.qid), // Use validated qids
+      count: questionsToUse.length,
+      selectedQids: questionsToUse.map(q => q.qid),
     };
     
     onStartDrill(config);
@@ -354,7 +384,7 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
                   <ChevronDown className="ml-2 h-4 w-4" />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-80 max-h-[500px] flex flex-col" align="start">
+              <PopoverContent className="w-80 max-h-[500px] flex flex-col z-[1000] bg-popover" align="start">
                 <div className="space-y-3">
                   <div className="font-medium text-sm">Select Question Types</div>
                   
@@ -375,7 +405,8 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
                       variant="ghost"
                       size="sm"
                       onClick={() => {
-                        const visible = allQTypes.filter(qtype => {
+                        // Get all visible types based on current search/filter
+                        const visible = CANONICAL_QTYPES.allTypes.filter(qtype => {
                           const count = getQTypeCount(qtype);
                           if (!showZeroCounts && count === 0) return false;
                           if (!qtypeSearch) return true;
@@ -403,30 +434,43 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
                     </div>
                   </div>
                   
-                  {/* Types List */}
-                  <div className="space-y-2 max-h-[300px] overflow-y-auto">
-                    {allQTypes
-                      .filter(qtype => {
+                  {/* Types List - Grouped by Category */}
+                  <div className="space-y-3 max-h-[300px] overflow-y-auto">
+                    {CANONICAL_QTYPES.groups.map(group => {
+                      // Filter types in this group
+                      const visibleTypes = group.types.filter(qtype => {
                         const count = getQTypeCount(qtype);
                         if (!showZeroCounts && count === 0) return false;
                         if (!qtypeSearch) return true;
                         return qtype.toLowerCase().includes(qtypeSearch.toLowerCase());
-                      })
-                      .map(qtype => {
-                        const count = getQTypeCount(qtype);
-                        return (
-                          <div key={qtype} className="flex items-center space-x-2">
-                            <Checkbox
-                              id={`qtype-${qtype}`}
-                              checked={filters.questionTypes.includes(qtype)}
-                              onCheckedChange={() => toggleFilter('questionTypes', qtype)}
-                            />
-                            <label htmlFor={`qtype-${qtype}`} className="text-sm cursor-pointer flex-1">
-                              {qtype} ({count})
-                            </label>
+                      });
+                      
+                      // Don't show group if no visible types
+                      if (visibleTypes.length === 0) return null;
+                      
+                      return (
+                        <div key={group.name} className="space-y-2">
+                          <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                            {group.name}
                           </div>
-                        );
-                      })}
+                          {visibleTypes.map(qtype => {
+                            const count = getQTypeCount(qtype);
+                            return (
+                              <div key={qtype} className="flex items-center space-x-2 pl-2">
+                                <Checkbox
+                                  id={`qtype-${qtype}`}
+                                  checked={filters.questionTypes.includes(qtype)}
+                                  onCheckedChange={() => toggleFilter('questionTypes', qtype)}
+                                />
+                                <label htmlFor={`qtype-${qtype}`} className="text-sm cursor-pointer flex-1">
+                                  {qtype} <span className="text-muted-foreground">({count})</span>
+                                </label>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </PopoverContent>
@@ -678,10 +722,16 @@ export function QuestionPicker({ manifest, onStartDrill, onCancel }: QuestionPic
               
               <Button
                 onClick={handleCreateSet}
-                disabled={selectedQids.size === 0}
+                disabled={selectedQids.size === 0 && filters.questionTypes.length === 0}
                 className="min-w-[140px]"
               >
-                Create Set {selectedQids.size > 0 && `(${selectedQids.size})`}
+                {selectedQids.size > 0 ? (
+                  <>Create Set ({selectedQids.size})</>
+                ) : filters.questionTypes.length > 0 ? (
+                  <>Create Set (10 random)</>
+                ) : (
+                  <>Create Set</>
+                )}
               </Button>
             </div>
           </div>

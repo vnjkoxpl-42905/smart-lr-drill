@@ -162,31 +162,237 @@ function hashQid(pt: number, section: number, qnum: number): string {
   return `PT${pt}-S${section}-Q${qnum}`;
 }
 
-// Normalize question type to canonical taxonomy
-function normalizeQType(raw: string): string {
-  const map: Record<string, string> = {
-    'Must be True': 'Must Be True',
-    'Flaw': 'Flaw',
-    'Paradox': 'Paradox',
-    'Strengthen': 'Strengthen',
-    'Weaken': 'Weaken',
-    'Necessary Assumption': 'Necessary Assumption',
-    'Sufficient Assumption': 'Sufficient Assumption',
-    'Main Conclusion': 'Main Point',
-    'Main Point': 'Main Point',
-    'Role': 'Role',
-    'Method': 'Method of Reasoning',
-    'Method of Reasoning': 'Method of Reasoning',
-    'Parallel Flaw': 'Parallel Flaw',
-    'Parallel': 'Parallel Reasoning',
-    'Parallel Reasoning': 'Parallel Reasoning',
-    'Principle-Conform': 'Principle',
-    'Principle': 'Principle',
-    'Most Supported': 'Most Strongly Supported',
-    'Agree/Disagree': 'Point at Issue',
-    'Point at Issue': 'Point at Issue',
-  };
-  return map[raw] || raw || 'Unknown';
+// Canonical LR Question Type Taxonomy (grouped and ordered)
+export const CANONICAL_QTYPES = {
+  groups: [
+    {
+      name: 'ASSUMPTION / OBJECTION',
+      types: [
+        'Flaw',
+        'Necessary Assumption',
+        'Weaken',
+        'Strengthen',
+        'Sufficient Assumption',
+        'Principle-Strengthen',
+        'Evaluate'
+      ]
+    },
+    {
+      name: 'INFERENCE',
+      types: [
+        'Most Strongly Supported',
+        'Must Be True',
+        'Agree/Disagree',
+        'Must Be False'
+      ]
+    },
+    {
+      name: 'MATCH',
+      types: [
+        'Method of Reasoning',
+        'Main Conclusion',
+        'Parallel Flaw',
+        'Role',
+        'Parallel Reasoning',
+        'Principle-Conform'
+      ]
+    },
+    {
+      name: 'OTHER',
+      types: ['Paradox']
+    }
+  ],
+  // Flat list of all canonical types
+  allTypes: [
+    'Flaw', 'Necessary Assumption', 'Weaken', 'Strengthen', 'Sufficient Assumption',
+    'Principle-Strengthen', 'Evaluate', 'Most Strongly Supported', 'Must Be True',
+    'Agree/Disagree', 'Must Be False', 'Method of Reasoning', 'Main Conclusion',
+    'Parallel Flaw', 'Role', 'Parallel Reasoning', 'Principle-Conform', 'Paradox'
+  ]
+};
+
+// Comprehensive synonym mapping to canonical types
+const TYPE_SYNONYMS: Record<string, string> = {
+  // Flaw variants
+  'Flaw': 'Flaw',
+  'Flaw in Reasoning': 'Flaw',
+  'Error in Reasoning': 'Flaw',
+  
+  // Assumption variants
+  'Necessary Assumption': 'Necessary Assumption',
+  'Assumption': 'Necessary Assumption',
+  'Sufficient Assumption': 'Sufficient Assumption',
+  
+  // Strengthen/Weaken variants
+  'Strengthen': 'Strengthen',
+  'Weaken': 'Weaken',
+  'Justify the Exception': 'Strengthen',
+  
+  // Principle variants
+  'Principle-Strengthen': 'Principle-Strengthen',
+  'Principle: Strengthen': 'Principle-Strengthen',
+  'Principle: Justify': 'Principle-Strengthen',
+  'Principle-Conform': 'Principle-Conform',
+  'Principle: Conform': 'Principle-Conform',
+  'Principle: Underlying': 'Principle-Conform',
+  'Principle': 'Principle-Conform',
+  
+  // Evaluation
+  'Evaluate': 'Evaluate',
+  'Evaluate the Argument': 'Evaluate',
+  
+  // Inference variants
+  'Most Strongly Supported': 'Most Strongly Supported',
+  'Most Supported': 'Most Strongly Supported',
+  'Main Point': 'Main Conclusion',
+  'Main Conclusion': 'Main Conclusion',
+  'Must Be True': 'Must Be True',
+  'Must be True': 'Must Be True',
+  'Must Be False': 'Must Be False',
+  
+  // Agreement/Disagreement
+  'Agree/Disagree': 'Agree/Disagree',
+  'Point at Issue': 'Agree/Disagree',
+  'Point of Agreement': 'Agree/Disagree',
+  'Disagree': 'Agree/Disagree',
+  
+  // Method and Role
+  'Method of Reasoning': 'Method of Reasoning',
+  'Method': 'Method of Reasoning',
+  'Role': 'Role',
+  'Role in the Argument': 'Role',
+  
+  // Parallel
+  'Parallel Reasoning': 'Parallel Reasoning',
+  'Parallel': 'Parallel Reasoning',
+  'Parallel Flaw': 'Parallel Flaw',
+  
+  // Paradox
+  'Paradox': 'Paradox',
+  'Resolve the Paradox': 'Paradox',
+  'Explain the Discrepancy': 'Paradox',
+};
+
+// Infer question type from question stem using regex patterns
+function inferTypeFromStem(stem: string): string {
+  const lower = stem.toLowerCase();
+  
+  // Paradox patterns
+  if (lower.includes('explain') && (lower.includes('discrepancy') || lower.includes('paradox') || 
+      lower.includes('apparent conflict') || lower.includes('seemingly contradictory'))) {
+    return 'Paradox';
+  }
+  
+  // Weaken patterns
+  if (lower.includes('weaken') || lower.includes('undermines') || lower.includes('casts doubt') ||
+      lower.includes('calls into question')) {
+    return 'Weaken';
+  }
+  
+  // Strengthen patterns
+  if (lower.includes('strengthen') || lower.includes('supports') || lower.includes('justifies')) {
+    return 'Strengthen';
+  }
+  
+  // Flaw patterns
+  if (lower.includes('flaw') || lower.includes('error') || lower.includes('vulnerable to criticism')) {
+    return 'Flaw';
+  }
+  
+  // Assumption patterns
+  if (lower.includes('assumption') && (lower.includes('requires') || lower.includes('depends'))) {
+    return 'Necessary Assumption';
+  }
+  if (lower.includes('assumption') && lower.includes('if assumed')) {
+    return 'Sufficient Assumption';
+  }
+  
+  // Must Be True / Most Supported
+  if (lower.includes('must be true') || lower.includes('properly inferred')) {
+    return 'Must Be True';
+  }
+  if (lower.includes('most (strongly )?supported') || lower.includes('most justifies')) {
+    return 'Most Strongly Supported';
+  }
+  
+  // Main Conclusion
+  if (lower.includes('main (point|conclusion)') || lower.includes('expresses the (main )?conclusion')) {
+    return 'Main Conclusion';
+  }
+  
+  // Method of Reasoning
+  if (lower.includes('proceeds by') || lower.includes('method') || lower.includes('technique of argumentation')) {
+    return 'Method of Reasoning';
+  }
+  
+  // Role
+  if (lower.includes('role') || lower.includes('claim.*figures')) {
+    return 'Role';
+  }
+  
+  // Parallel
+  if (lower.includes('parallel') && lower.includes('flaw')) {
+    return 'Parallel Flaw';
+  }
+  if (lower.includes('parallel') || lower.includes('most similar') || lower.includes('same pattern')) {
+    return 'Parallel Reasoning';
+  }
+  
+  // Principle
+  if (lower.includes('principle') && (lower.includes('justify') || lower.includes('support'))) {
+    return 'Principle-Strengthen';
+  }
+  if (lower.includes('principle') && (lower.includes('conform') || lower.includes('illustrate'))) {
+    return 'Principle-Conform';
+  }
+  
+  // Agree/Disagree
+  if (lower.includes('disagree') || lower.includes('point.*issue') || lower.includes('dispute')) {
+    return 'Agree/Disagree';
+  }
+  
+  // Evaluate
+  if (lower.includes('evaluate') || lower.includes('useful to know')) {
+    return 'Evaluate';
+  }
+  
+  return 'Unknown';
+}
+
+// Robust normalization with synonym mapping and stem inference
+function normalizeQType(raw: string, questionStem?: string): string {
+  if (!raw || raw.trim() === '') {
+    if (questionStem) return inferTypeFromStem(questionStem);
+    return 'Unknown';
+  }
+  
+  const trimmed = raw.trim();
+  
+  // Check if it's already a canonical type
+  if (CANONICAL_QTYPES.allTypes.includes(trimmed)) {
+    return trimmed;
+  }
+  
+  // Check synonym map
+  if (TYPE_SYNONYMS[trimmed]) {
+    return TYPE_SYNONYMS[trimmed];
+  }
+  
+  // Check if it looks like corrupted data (starts with article, contains speaker tags, or is a sentence fragment)
+  const isCorrupted = /^(A |An |The |Advertisement|[A-Z][a-z]+ (said|argued|claims))/.test(trimmed) ||
+                      trimmed.length > 50 ||
+                      /\s{2,}/.test(trimmed);
+  
+  if (isCorrupted && questionStem) {
+    const inferred = inferTypeFromStem(questionStem);
+    if (inferred !== 'Unknown') {
+      return inferred;
+    }
+  }
+  
+  // Last resort: return as-is and log
+  console.warn(`Unknown question type encountered: "${trimmed}"`);
+  return 'Unknown';
 }
 
 export class QuestionBank {
@@ -223,7 +429,7 @@ export class QuestionBank {
           }
 
           const difficulty = item.questionDifficulty || item.Question_Difficulty || 3;
-          const qtype = normalizeQType(item.questionType || '');
+          const qtype = normalizeQType(item.questionType || '', item.questionStem);
 
           this.questions.set(qid, {
             qid,
@@ -266,7 +472,23 @@ export class QuestionBank {
       this.manifest.byDifficulty[q.difficulty] = (this.manifest.byDifficulty[q.difficulty] || 0) + 1;
     }
 
-    console.log('Question bank loaded:', this.manifest);
+    // Log summary with unknown types
+    const unknownCount = this.manifest.byQType['Unknown'] || 0;
+    const uniqueTypes = Object.keys(this.manifest.byQType).length;
+    console.log('Question bank loaded:', {
+      total: this.manifest.totalQuestions,
+      uniqueTypes,
+      unknownCount,
+      types: Object.keys(this.manifest.byQType).sort()
+    });
+    
+    if (unknownCount > 0) {
+      const unknownQuestions = Array.from(this.questions.values())
+        .filter(q => q.qtype === 'Unknown')
+        .slice(0, 5);
+      console.warn(`Found ${unknownCount} questions with unknown types. Sample:`, 
+        unknownQuestions.map(q => ({ qid: q.qid, stem: q.questionStem.substring(0, 80) })));
+    }
   }
 
   getManifest(): QuestionManifest {
