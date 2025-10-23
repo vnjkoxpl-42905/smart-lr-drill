@@ -25,6 +25,7 @@ import { LRSectionResults } from '@/components/drill/LRSectionResults';
 import { EnhancedBlindReview } from '@/components/drill/EnhancedBlindReview';
 import { PracticeSetResults } from '@/components/drill/PracticeSetResults';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
+import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
@@ -73,6 +74,7 @@ function DrillContent() {
   const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
+  const [tutorQuestionSnapshot, setTutorQuestionSnapshot] = React.useState<LRQuestion | null>(null);
   
   const [tutorMessages, setTutorMessages] = React.useState<Array<{role: 'user' | 'assistant'; content: string}>>([]);
   const [wajModalOpen, setWajModalOpen] = React.useState(false);
@@ -672,6 +674,12 @@ function DrillContent() {
       setIsRetryAfterWrong(true);
       setTimeout(() => {
         if (currentQuestion) {
+          console.debug('Opening tutor:', {
+            qid: currentQuestion.qid,
+            mode: session.mode,
+            hasSnapshot: !!currentQuestion
+          });
+          setTutorQuestionSnapshot(currentQuestion);
           setTutorChatOpen(true);
         }
       }, 150);
@@ -749,9 +757,26 @@ function DrillContent() {
     if (!currentQuestion) return;
     
     try {
+      const questionData = {
+        qid: currentQuestion.qid,
+        pt: currentQuestion.pt,
+        section: currentQuestion.section,
+        qnum: currentQuestion.qnum,
+        qtype: currentQuestion.qtype,
+        level: currentQuestion.difficulty,
+        stimulus: currentQuestion.stimulus,
+        questionStem: currentQuestion.questionStem,
+        answerChoices: currentQuestion.answerChoices,
+        userAnswer: selectedAnswer,
+        correctAnswer: currentQuestion.correctAnswer,
+        breakdown: currentQuestion.breakdown,
+        answerChoiceExplanations: currentQuestion.answerChoiceExplanations,
+        reasoningType: currentQuestion.reasoningType,
+      };
+
       const { data, error } = await supabase.functions.invoke('tutor-chat', {
         body: {
-          question: currentQuestion,
+          question: questionData,
           messages: [{
             role: 'user',
             content: `I got this question correct on my second try! Can you give me a super specific explanation about why choice (${selectedAnswer}) is correct? Be very specific about how it relates to the question and provide a key insight. Keep it concise but insightful.`
@@ -761,8 +786,8 @@ function DrillContent() {
 
       if (error) throw error;
       
-      if (data?.response) {
-        setCorrectExplanation(data.response);
+      if (data?.content) {
+        setCorrectExplanation(data.content);
       }
     } catch (err) {
       console.error('Error generating explanation:', err);
@@ -1662,33 +1687,37 @@ function DrillContent() {
             </Button>
 
             {/* Question Metadata - Center */}
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button
-                  onClick={() => {
-                    const text = `PT${currentQuestion.pt}-S${currentQuestion.section}-Q${currentQuestion.qnum}`;
-                    navigator.clipboard.writeText(text);
-                    toast('Question ID copied to clipboard');
-                  }}
-                  className="px-3 py-1.5 rounded-md bg-accent/30 text-foreground border border-border/50 text-sm font-medium hover:bg-accent/40 transition-colors"
-                >
-                  <span className="hidden sm:inline">
-                    PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
-                  </span>
-                  <span className="sm:hidden">
-                    Q{currentQuestion.qnum}
-                  </span>
-                </button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <div className="space-y-1">
-                  <p className="font-semibold">PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}</p>
-                  <p className="text-xs text-muted-foreground">Type: {currentQuestion.qtype}</p>
-                  <p className="text-xs text-muted-foreground">Difficulty: {currentQuestion.difficulty}/5</p>
-                  <p className="text-xs text-muted-foreground mt-2">Click to copy ID</p>
-                </div>
-              </TooltipContent>
-            </Tooltip>
+            {currentQuestion ? (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button
+                    onClick={() => {
+                      const text = `PT${currentQuestion.pt}-S${currentQuestion.section}-Q${currentQuestion.qnum}`;
+                      navigator.clipboard.writeText(text);
+                      toast('Question ID copied to clipboard');
+                    }}
+                    className="px-3 py-1.5 rounded-md bg-accent/30 text-foreground border border-border/50 text-sm font-medium hover:bg-accent/40 transition-colors"
+                  >
+                    <span className="hidden sm:inline">
+                      PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
+                    </span>
+                    <span className="sm:hidden">
+                      Q{currentQuestion.qnum}
+                    </span>
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <div className="space-y-1">
+                    <p className="font-semibold">PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}</p>
+                    <p className="text-xs text-muted-foreground">Type: {currentQuestion.qtype}</p>
+                    <p className="text-xs text-muted-foreground">Difficulty: {currentQuestion.difficulty}/5</p>
+                    <p className="text-xs text-muted-foreground mt-2">Click to copy ID</p>
+                  </div>
+                </TooltipContent>
+              </Tooltip>
+            ) : (
+              <div className="h-8" />
+            )}
 
             <div className="flex items-center gap-2 sm:gap-6">
               {poolStatus && (
@@ -1793,17 +1822,27 @@ function DrillContent() {
               </div>
             )}
 
-            {tutorChatOpen && currentQuestion && (
+            {tutorChatOpen && tutorQuestionSnapshot && (
               <div className="mt-6">
-                <TutorChatModal
-                  open={tutorChatOpen}
-                  question={currentQuestion}
-                  userAnswer={selectedAnswer}
-                  onClose={() => {
+                <ErrorBoundary
+                  onReset={() => {
                     setTutorChatOpen(false);
-                    setAnswerLocked(false); // Clear red state, re-enable choices
+                    setTutorQuestionSnapshot(null);
+                    setAnswerLocked(false);
                   }}
-                />
+                >
+                  <TutorChatModal
+                    open={tutorChatOpen}
+                    question={tutorQuestionSnapshot}
+                    userAnswer={selectedAnswer}
+                    onClose={() => {
+                      console.debug('Closing tutor modal');
+                      setTutorChatOpen(false);
+                      setTutorQuestionSnapshot(null);
+                      setAnswerLocked(false); // Clear red state, re-enable choices
+                    }}
+                  />
+                </ErrorBoundary>
               </div>
             )}
           </div>

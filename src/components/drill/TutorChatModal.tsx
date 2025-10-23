@@ -83,6 +83,7 @@ export function TutorChatModal({
     if (!question) return;
 
     setIsLoading(true);
+    console.debug('TutorChatModal: Loading initial Socratic question', { qid: question.qid });
     try {
       const questionData = {
         qid: question.qid,
@@ -132,6 +133,7 @@ export function TutorChatModal({
     if (!input.trim() || !question || isLoading) return;
 
     const userMessage = input.trim();
+    console.debug('TutorChatModal: Sending user message', { qid: question.qid });
     setInput('');
     setMessages((prev) => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
@@ -187,7 +189,12 @@ export function TutorChatModal({
     }
   };
 
+  // Early return guards
   if (!open) return null;
+  if (!question) {
+    console.warn('TutorChatModal: opened without a valid question');
+    return null;
+  }
 
   return (
     <Card className="relative overflow-hidden rounded-lg border bg-card shadow-sm animate-in slide-in-from-top-2 duration-300">
