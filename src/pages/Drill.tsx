@@ -407,15 +407,13 @@ function DrillContent() {
         }
       }
 
-      // Adaptive mode: if user picks a wrong answer (before confidence), open tutor immediately
-      if (session?.mode === 'adaptive' && currentQuestion && !tutorChatOpen && confidence === null) {
-        const isWrong = answer !== currentQuestion.correctAnswer;
-        if (isWrong) {
-          setIsRetryAfterWrong(true);
-          setTutorChatOpen(true);
-          setShowSolution(false);
-          setShowReviewButton(false);
-        }
+      // Adaptive mode retry: if already have confidence and retrying, auto-submit
+      if (session?.mode === 'adaptive' && isRetryAfterWrong && confidence !== null) {
+        setAnswerLocked(true);
+        // Trigger submit after state updates
+        requestAnimationFrame(() => {
+          handleSubmit();
+        });
       }
     }
   };
@@ -669,9 +667,11 @@ function DrillContent() {
 
       setSession({ ...session, attempts: newAttempts });
 
-      // THEN open tutor (do not reveal solution yet)
+      // Show red "Wrong" for 150ms, then open tutor (do not reveal solution yet)
       setIsRetryAfterWrong(true);
-      setTutorChatOpen(true);
+      setTimeout(() => {
+        setTutorChatOpen(true);
+      }, 150);
     } else {
       // Correct answer - save and show solution with Next button (don't auto-advance)
       await saveAttemptToDatabase({
@@ -1767,7 +1767,10 @@ function DrillContent() {
                   open={tutorChatOpen}
                   question={currentQuestion}
                   userAnswer={selectedAnswer}
-                  onClose={() => setTutorChatOpen(false)}
+                  onClose={() => {
+                    setTutorChatOpen(false);
+                    setAnswerLocked(false); // Clear red state, re-enable choices
+                  }}
                 />
               </div>
             )}
