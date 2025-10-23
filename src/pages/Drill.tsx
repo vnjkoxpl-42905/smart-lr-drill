@@ -23,6 +23,7 @@ import { SectionComplete } from '@/components/drill/SectionComplete';
 import { ScoreReport } from '@/components/drill/ScoreReport';
 import { LRSectionResults } from '@/components/drill/LRSectionResults';
 import { EnhancedBlindReview } from '@/components/drill/EnhancedBlindReview';
+import { PracticeSetResults } from '@/components/drill/PracticeSetResults';
 import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
@@ -47,6 +48,7 @@ import { QuestionPoolService } from '@/lib/questionPoolService';
 import { QuestionPoolChip } from '@/components/drill/QuestionPoolChip';
 import { QuestionPoolExhausted } from '@/components/drill/QuestionPoolExhausted';
 import { toast } from 'sonner';
+import { QuestionTimer } from '@/lib/questionTimer';
 
 const adaptiveEngine = new AdaptiveEngine();
 
@@ -106,6 +108,12 @@ function DrillContent() {
   const [poolExhausted, setPoolExhausted] = React.useState(false);
   const [classId, setClassId] = React.useState<string>('');
   
+  // Practice-set mode state
+  const [isPracticeSetMode, setIsPracticeSetMode] = React.useState(false);
+  const questionTimer = React.useRef(new QuestionTimer());
+  const [hideTimer, setHideTimer] = React.useState(false);
+  const [showAnswerRevealed, setShowAnswerRevealed] = React.useState<Map<string, boolean>>(new Map());
+  
   const timer = hasTimer ? useTimerContext() : null;
 
   // BR only for Full Section and Type Drill modes
@@ -151,8 +159,10 @@ function DrillContent() {
       } else if (mode === 'type-drill' && state.config) {
         const config = state.config as TypeDrillConfig;
         
-        // If specific questions were selected, use those directly
+        // Detect practice-set mode (Build-a-Set)
         if (config.selectedQids && config.selectedQids.length > 0) {
+          setIsPracticeSetMode(true);
+          setHasTimer(true); // Enable stopwatch timer
           rawQuestions = config.selectedQids
             .map(qid => questionBank.getQuestion(qid))
             .filter(Boolean) as LRQuestion[];
@@ -261,7 +271,7 @@ function DrillContent() {
     initializeSession();
   }, [state, navigate, classId, settings.allowRepeats, settings.preferUnseen, settings.recycleAfterDays]);
 
-  // Load current question
+  // Load current question and start timing
   React.useEffect(() => {
     if (!session) return;
 
@@ -353,32 +363,46 @@ function DrillContent() {
   };
 
   const handleAnswerSelect = (answer: string) => {
-    // Prevent changes after confidence is selected (truly locked)
-    if (confidence !== null) return;
+    // In practice-set mode, don't lock after answer selection
+    // In other modes, prevent changes after confidence is selected
+    if (!isPracticeSetMode && confidence !== null) return;
     
     // Toggle behavior: clicking same answer deselects it
     if (selectedAnswer === answer) {
       setSelectedAnswer('');
-      // For section mode, clear the saved answer
-      if (session?.mode === 'full-section' && currentQuestion) {
+      // For section/practice-set mode, clear the saved answer
+      if ((session?.mode === 'full-section' || isPracticeSetMode) && currentQuestion) {
         const newAttempts = new Map(session.attempts);
         newAttempts.delete(currentQuestion.qid);
         setSession({ ...session, attempts: newAttempts });
+        
+        // Record answer change in practice-set mode
+        if (isPracticeSetMode) {
+          questionTimer.current.recordAnswer(currentQuestion.qid, '');
+        }
       }
     } else {
       setSelectedAnswer(answer);
-      // For section mode, auto-save the answer (no feedback)
-      if (session?.mode === 'full-section' && currentQuestion) {
+      // For section/practice-set mode, auto-save the answer
+      if ((session?.mode === 'full-section' || isPracticeSetMode) && currentQuestion) {
         const newAttempts = new Map(session.attempts);
+        const existingAttempt = newAttempts.get(currentQuestion.qid);
+        
         newAttempts.set(currentQuestion.qid, {
           selectedAnswer: answer,
-          correct: false, // Will be evaluated at the end
-          timeMs: 0,
+          correct: answer === currentQuestion.correctAnswer,
+          timeMs: isPracticeSetMode ? questionTimer.current.getTotalTime(currentQuestion.qid) : 0,
           timestamp: Date.now(),
-          confidence: null,
+          confidence: existingAttempt?.confidence || null,
           reviewDone: false,
+          answerRevealed: existingAttempt?.answerRevealed || false,
         });
         setSession({ ...session, attempts: newAttempts });
+        
+        // Record answer change in practice-set mode
+        if (isPracticeSetMode) {
+          questionTimer.current.recordAnswer(currentQuestion.qid, answer);
+        }
       }
     }
   };
@@ -708,6 +732,133 @@ function DrillContent() {
     }
   };
 
+
+  // Practice-set mode handlers
+  const handleShowAnswer = () => {
+    if (!currentQuestion || !isPracticeSetMode) return;
+    
+    // Mark answer as revealed
+    setShowAnswerRevealed(prev => new Map(prev).set(currentQuestion.qid, true));
+    
+    // Update session to track revealed status
+    if (session) {
+      const newAttempts = new Map(session.attempts);
+      const existingAttempt = newAttempts.get(currentQuestion.qid);
+      if (existingAttempt) {
+        newAttempts.set(currentQuestion.qid, {
+          ...existingAttempt,
+          answerRevealed: true,
+        });
+        setSession({ ...session, attempts: newAttempts });
+      }
+    }
+    
+    setShowSolution(true);
+  };
+
+  const handlePracticeSetNext = () => {
+    if (!session) return;
+    
+    // Pause timer on current question
+    if (currentQuestion) {
+      questionTimer.current.pause();
+    }
+    
+    // Move to next
+    if (session.currentIndex < session.questionQueue.length - 1) {
+      setSession({
+        ...session,
+        currentIndex: session.currentIndex + 1,
+      });
+    } else {
+      // Finished
+      handleFinishPracticeSet();
+    }
+  };
+
+  const handlePracticeSetPrevious = () => {
+    if (!session) return;
+    
+    // Pause timer on current question
+    if (currentQuestion) {
+      questionTimer.current.pause();
+    }
+    
+    // Move to previous
+    if (session.currentIndex > 0) {
+      setSession({
+        ...session,
+        currentIndex: session.currentIndex - 1,
+      });
+    }
+  };
+
+  const handleFinishPracticeSet = async () => {
+    if (!session || !user) return;
+    
+    // Pause timer
+    if (timer) timer.pause();
+    
+    // Save all attempts with timing data
+    for (const [qid, attempt] of session.attempts) {
+      const question = questionBank.getQuestion(qid);
+      if (!question || !attempt.selectedAnswer) continue;
+      
+      const timingMetrics = questionTimer.current.getMetrics(qid);
+      
+      await saveAttemptToDatabase({
+        qid,
+        correct: attempt.correct,
+        time_ms: timingMetrics.totalTimeMs,
+        qtype: question.qtype,
+        level: question.difficulty,
+        confidence: attempt.confidence || null,
+        mode: 'practice-set',
+      });
+      
+      // Log to WAJ if wrong
+      if (!attempt.correct) {
+        const { logWrongAnswer } = await import('@/lib/wajService');
+        try {
+          await logWrongAnswer({
+            user_id: user.id,
+            qid,
+            pt: question.pt,
+            section: question.section,
+            qnum: question.qnum,
+            qtype: question.qtype,
+            level: question.difficulty,
+            chosen_answer: attempt.selectedAnswer,
+            correct_answer: question.correctAnswer,
+            time_ms: timingMetrics.totalTimeMs,
+            confidence_1_5: attempt.confidence || null,
+          });
+        } catch (error) {
+          console.error('Failed to log to WAJ:', error);
+        }
+      }
+    }
+    
+    // Show results
+    setPostSectionScreen('score-report');
+  };
+
+  const handleConfidenceSelect = (level: number) => {
+    if (!currentQuestion || !session || !isPracticeSetMode) return;
+    
+    setConfidence(level);
+    
+    // Update session with confidence
+    const newAttempts = new Map(session.attempts);
+    const existingAttempt = newAttempts.get(currentQuestion.qid);
+    if (existingAttempt) {
+      newAttempts.set(currentQuestion.qid, {
+        ...existingAttempt,
+        confidence: level,
+      });
+      setSession({ ...session, attempts: newAttempts });
+    }
+  };
 
   const handleNext = () => {
     if (!session) return;
@@ -1078,6 +1229,28 @@ function DrillContent() {
   }
   
   if (postSectionScreen === 'score-report' && session) {
+    // Use PracticeSetResults for practice-set mode
+    if (isPracticeSetMode) {
+      return (
+        <PracticeSetResults
+          session={session}
+          onReviewWrong={() => {
+            const wrongQids = session.questionQueue.filter(qid => {
+              const attempt = session.attempts.get(qid);
+              return attempt && !attempt.correct;
+            });
+            setAutoReviewQids(wrongQids);
+            setPostSectionScreen('review');
+          }}
+          onReviewAll={() => {
+            setAutoReviewQids(session.questionQueue);
+            setPostSectionScreen('review');
+          }}
+          onBack={() => navigate('/')}
+        />
+      );
+    }
+    
     // Use new LR Section Results for full-section mode
     if (session.mode === 'full-section') {
       return (
@@ -1643,8 +1816,8 @@ function DrillContent() {
               </RadioGroup>
             )}
 
-            {/* Confidence selector - only for adaptive mode */}
-            {session.mode === 'adaptive' && selectedAnswer && !tutorChatOpen && (
+            {/* Confidence selector - for adaptive and practice-set modes */}
+            {(session.mode === 'adaptive' || isPracticeSetMode) && selectedAnswer && !tutorChatOpen && (
               <div className="space-y-3 pt-8">
                 <Label className="text-sm font-medium">Confidence (1–5)</Label>
                 <div className="flex gap-2">
@@ -1653,11 +1826,15 @@ function DrillContent() {
                       key={level}
                       variant={confidence === level ? 'default' : 'outline'}
                       onClick={() => {
-                        setConfidence(level);
-                        setAnswerLocked(true);
+                        if (isPracticeSetMode) {
+                          handleConfidenceSelect(level);
+                        } else {
+                          setConfidence(level);
+                          setAnswerLocked(true);
+                        }
                       }}
                       className="flex-1"
-                      disabled={showSolution}
+                      disabled={!isPracticeSetMode && showSolution}
                     >
                       {level}
                     </Button>
@@ -1665,9 +1842,22 @@ function DrillContent() {
                 </div>
               </div>
             )}
+            
+            {/* Show Answer button for practice-set mode */}
+            {isPracticeSetMode && selectedAnswer && !showSolution && (
+              <div className="flex justify-center pt-6">
+                <Button
+                  onClick={handleShowAnswer}
+                  variant="outline"
+                  size="lg"
+                >
+                  Show Answer
+                </Button>
+              </div>
+            )}
 
-            {/* Submit button for non-adaptive, non-section modes */}
-            {session.mode !== 'adaptive' && session.mode !== 'full-section' && selectedAnswer && !showSolution && (
+            {/* Submit button for non-adaptive, non-section, non-practice-set modes */}
+            {session.mode !== 'adaptive' && session.mode !== 'full-section' && !isPracticeSetMode && selectedAnswer && !showSolution && (
               <div className="flex justify-end gap-3 pt-6 mt-2">
                 <Button
                   onClick={handleSubmitNonAdaptive}
@@ -1725,15 +1915,15 @@ function DrillContent() {
         )}
       </div>
 
-      {/* Sticky Bottom Navigation Bar - Section Mode Only */}
-      {session.mode === 'full-section' && (
+      {/* Sticky Bottom Navigation Bar - Section & Practice-Set Modes */}
+      {(session.mode === 'full-section' || isPracticeSetMode) && (
         <div className="fixed bottom-0 left-0 right-0 bg-background/98 backdrop-blur-sm border-t border-border shadow-lg z-50 animate-slide-up">
           <div className="px-6 py-3 flex items-center justify-between gap-6 max-w-[1800px] mx-auto">
             {/* Previous Button */}
             <Button
               variant="ghost"
               size="lg"
-              onClick={handlePrevious}
+              onClick={isPracticeSetMode ? handlePracticeSetPrevious : handlePrevious}
               disabled={session.currentIndex === 0 || timer?.isPaused}
               className={cn(
                 "rounded-lg transition-all duration-150 min-w-[100px]",
@@ -1757,6 +1947,10 @@ function DrillContent() {
                       key={qid}
                       onClick={() => {
                         if (!timer?.isPaused) {
+                          // Pause timer on current question before switching
+                          if (isPracticeSetMode && currentQuestion) {
+                            questionTimer.current.pause();
+                          }
                           setSession({ ...session, currentIndex: index });
                         }
                       }}
@@ -1782,7 +1976,7 @@ function DrillContent() {
             <Button
               variant="default"
               size="lg"
-              onClick={handleNext}
+              onClick={isPracticeSetMode ? handlePracticeSetNext : handleNext}
               disabled={timer?.isPaused}
               className="rounded-lg shadow-md min-w-[100px] font-medium transition-all duration-150 hover:shadow-lg"
             >
@@ -1841,6 +2035,14 @@ export default function Drill() {
 
   // Calculate timer config
   const getTimerConfig = (): { mode: 'countdown' | 'stopwatch'; durationMs?: number } | null => {
+    // Practice-set mode (type-drill with selectedQids) uses stopwatch
+    if (state?.mode === 'type-drill' && state.config) {
+      const config = state.config as TypeDrillConfig;
+      if (config.selectedQids && config.selectedQids.length > 0) {
+        return { mode: 'stopwatch' };
+      }
+    }
+    
     if (state?.mode === 'full-section' && state.config) {
       const config = state.config as FullSectionConfig;
       const timerMode = config.timer.mode;
@@ -1860,6 +2062,7 @@ export default function Drill() {
       
       return { mode: 'countdown', durationMs };
     }
+    
     return null;
   };
 
@@ -1875,3 +2078,4 @@ export default function Drill() {
 
   return <DrillContent />;
 }
+

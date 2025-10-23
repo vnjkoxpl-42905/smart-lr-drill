@@ -1,6 +1,6 @@
 // Drill mode types and interfaces
 
-export type DrillMode = 'adaptive' | 'full-section' | 'type-drill' | 'natural-drill';
+export type DrillMode = 'adaptive' | 'full-section' | 'type-drill' | 'natural-drill' | 'practice-set';
 
 export type { Highlight, HighlightColor } from '@/lib/highlightUtils';
 
@@ -44,6 +44,7 @@ export interface DrillSession {
     brMarked?: boolean; // Marked for Blind Review
     switchCount?: number; // Number of answer changes
     revisitCount?: number; // Number of times returned to question
+    answerRevealed?: boolean; // Tracks if "Show Answer" clicked
   }>;
   sessionId?: string; // For tracking BR sessions
 }

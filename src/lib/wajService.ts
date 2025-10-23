@@ -43,7 +43,7 @@ export async function logWrongAnswer(params: {
   correct_answer: string;
   time_ms: number;
   confidence_1_5: number | null;
-  review: {
+  review?: {
     q1: string;
     q2: string;
     q3: string;
