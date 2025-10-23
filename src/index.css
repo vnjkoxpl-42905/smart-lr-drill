@@ -122,11 +122,24 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  @media (min-width: 640px) {
+    body {
+      font-size: 16px;
+    }
+  }
+
+  /* Touch-friendly spacing and targets */
+  @media (max-width: 767px) {
+    input, textarea, select, button {
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
   }
 
   /* Highlight styles - zero layout shift */

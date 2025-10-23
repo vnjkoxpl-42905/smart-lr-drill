@@ -105,15 +105,15 @@ export default function Landing() {
       
       <div 
         className={cn(
-          "min-h-screen p-8 transition-all duration-500",
+          "min-h-screen p-4 sm:p-6 lg:p-8 transition-all duration-500",
           introComplete ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         )}
       >
-      <div className="text-center mb-12 animate-fade-in">
-        <div className="flex justify-between items-center mb-4">
+      <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6">
           <Button 
             variant="ghost" 
-            className="gap-2 transition-all duration-200 hover:scale-105"
+            className="gap-2 transition-all duration-200 hover:scale-105 min-h-[44px]"
             onClick={() => navigate('/profile')}
           >
             <Avatar className="h-8 w-8">
@@ -121,32 +121,33 @@ export default function Landing() {
             </Avatar>
             <span>Profile</span>
           </Button>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
             <Button 
               variant="outline" 
               onClick={() => navigate('/analytics')}
-              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 min-h-[44px] text-sm sm:text-base"
             >
               Analytics
             </Button>
             <Button 
               variant="outline" 
               onClick={() => navigate('/waj')}
-              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 min-h-[44px] text-sm sm:text-base"
             >
-              Wrong Answer Journal
+              <span className="hidden sm:inline">Wrong Answer Journal</span>
+              <span className="sm:hidden">WAJ</span>
             </Button>
             <Button 
               variant="outline" 
               onClick={() => navigate('/dashboard')}
-              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5"
+              className="transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 min-h-[44px] text-sm sm:text-base"
             >
               Dashboard
             </Button>
           </div>
         </div>
-        <h1 className="text-4xl font-bold mb-4">LR Smart Drill</h1>
-        <p className="text-lg text-muted-foreground">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4">LR Smart Drill</h1>
+        <p className="text-base sm:text-lg text-muted-foreground px-4">
           Welcome back! Ready to practice?
         </p>
       </div>
@@ -156,13 +157,13 @@ export default function Landing() {
       )}
 
       {selectedMode === 'adaptive' && (
-        <div className="max-w-2xl mx-auto text-center space-y-6">
-          <h2 className="text-2xl font-bold">Start drill</h2>
-          <div className="flex gap-3 justify-center">
-            <Button onClick={handleStartAdaptive} size="lg">
+        <div className="max-w-2xl mx-auto text-center space-y-6 px-4">
+          <h2 className="text-xl sm:text-2xl font-bold">Start drill</h2>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button onClick={handleStartAdaptive} size="lg" className="min-h-[48px] w-full sm:w-auto">
               Begin
             </Button>
-            <Button variant="outline" onClick={() => setSelectedMode(null)}>
+            <Button variant="outline" onClick={() => setSelectedMode(null)} className="min-h-[48px] w-full sm:w-auto">
               Back
             </Button>
           </div>

@@ -1611,19 +1611,19 @@ function DrillContent() {
         )}
 
         {/* Header - Clean and minimal */}
-        <div className="px-8 py-4 border-b border-border bg-background/95 backdrop-blur-sm sticky top-0 z-40">
+        <div className="px-4 sm:px-8 py-3 sm:py-4 border-b border-border bg-background/95 backdrop-blur-sm sticky top-0 z-40">
           <div className="flex items-center justify-between max-w-[1800px] mx-auto">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => handleNavigation('/')}
-              className="text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground min-h-[40px]"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Exit
+              <ArrowLeft className="w-4 h-4 mr-1 sm:mr-2" />
+              <span className="text-sm sm:text-base">Exit</span>
             </Button>
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2 sm:gap-6">
               {poolStatus && (
                 <QuestionPoolChip
                   status={poolStatus}
@@ -1633,16 +1633,16 @@ function DrillContent() {
               )}
               
               {hasTimer && timer && (
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 sm:gap-3">
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={timer.isPaused ? timer.resume : timer.pause}
-                    className="h-8 w-8 p-0"
+                    className="h-8 w-8 min-h-[40px] min-w-[40px] p-0"
                   >
                     {timer.isPaused ? <Play className="w-4 h-4" /> : <Pause className="w-4 h-4" />}
                   </Button>
-                  <div className="text-lg font-mono font-semibold tabular-nums text-foreground">
+                  <div className="text-base sm:text-lg font-mono font-semibold tabular-nums text-foreground">
                     {timer.label}
                   </div>
                 </div>
@@ -1652,7 +1652,7 @@ function DrillContent() {
         </div>
 
       {/* Compact toolbar - Available for all modes */}
-      <div className="px-8 py-2 border-b border-border/50 bg-background/60">
+      <div className="px-4 sm:px-8 py-2 border-b border-border/50 bg-background/60">
         <div className="flex items-center justify-end max-w-[1800px] mx-auto">
           <HighlightToolbar 
             mode={highlightMode} 
@@ -1666,7 +1666,7 @@ function DrillContent() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
         {poolExhausted ? (
           <div className="flex-1 overflow-y-auto p-8">
             <QuestionPoolExhausted
@@ -1689,8 +1689,8 @@ function DrillContent() {
         ) : (
           <>
         {/* Left Panel - Stimulus */}
-        <div className="flex-1 overflow-y-auto">
-          <div className="p-6 max-w-4xl mx-auto pb-4">
+        <div className="flex-1 overflow-y-auto lg:max-h-full">
+          <div className="p-4 sm:p-6 max-w-4xl mx-auto pb-4">
             {currentQuestion.stimulus && (() => {
               const fullText = normalizeText(currentQuestion.stimulus);
               const stimulusHighlights = highlights.get(currentQuestion.qid)?.filter(h => h.section === 'stimulus') || [];
@@ -1740,14 +1740,14 @@ function DrillContent() {
           </div>
           
           {/* Question metadata */}
-          <div className="absolute bottom-6 left-8 text-xs text-muted-foreground/60 font-medium select-none">
+          <div className="sticky bottom-4 left-4 sm:left-8 text-xs text-muted-foreground/60 font-medium select-none bg-background/80 backdrop-blur-sm px-2 py-1 rounded w-fit">
             PT{currentQuestion.pt}-S{currentQuestion.section}-Q{currentQuestion.qnum}
           </div>
         </div>
 
         {/* Right Panel - Question & Answers */}
-        <div className="flex-1 overflow-y-auto border-l border-border">
-          <div className="p-6 max-w-3xl pb-4">
+        <div className="flex-1 overflow-y-auto lg:border-l border-border lg:max-h-full">
+          <div className="p-4 sm:p-6 max-w-3xl pb-4">
             {/* Question Stem - Large and confident */}
             <div className="mb-5">
               <div 
