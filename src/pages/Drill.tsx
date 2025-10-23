@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
-
+import { ConfidenceSelector } from '@/components/drill/ConfidenceSelector';
 import { ReviewModal } from '@/components/drill/ReviewModal';
 import { VoiceCoachChip } from '@/components/drill/VoiceCoachChip';
 import { VoiceCoachModal } from '@/components/drill/VoiceCoachModal';
@@ -95,6 +95,7 @@ function DrillContent() {
   const [showBRResults, setShowBRResults] = React.useState(false);
   const [isRetryAfterWrong, setIsRetryAfterWrong] = React.useState(false);
   const [correctExplanation, setCorrectExplanation] = React.useState<string>('');
+  const [showReviewButton, setShowReviewButton] = React.useState(false);
   
   // New post-section flow states
   const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
@@ -324,6 +325,7 @@ function DrillContent() {
     setHighlightHistory([]);
     setIsRetryAfterWrong(false);
     setCorrectExplanation('');
+    setShowReviewButton(false);
     
     // For section mode, restore the saved answer if navigating back
     if (session?.mode === 'full-section' && currentQuestion) {
@@ -364,8 +366,8 @@ function DrillContent() {
 
   const handleAnswerSelect = (answer: string) => {
     // In practice-set mode, don't lock after answer selection
-    // In other modes, prevent changes after confidence is selected
-    if (!isPracticeSetMode && confidence !== null) return;
+    // In adaptive mode after wrong answer, allow unlimited retries (don't lock)
+    if (!isPracticeSetMode && !isRetryAfterWrong && confidence !== null) return;
     
     // Toggle behavior: clicking same answer deselects it
     if (selectedAnswer === answer) {
@@ -452,24 +454,6 @@ function DrillContent() {
       }
     }
   }, [confidence, answerLocked, showSolution, tutorChatOpen, session?.mode]);
-
-  const handleTryAgain = () => {
-    setTutorChatOpen(false);
-    setTutorMessages([]);
-    setVoiceCoachOpen(false);
-    setShowVoiceChip(false);
-    setSelectedAnswer('');
-    setConfidence(null);
-    setAnswerLocked(false);
-    setQuestionStartTime(performance.now());
-    setIsRetryAfterWrong(true); // Mark that this is a retry
-  };
-
-  const handleContinueToReview = () => {
-    setTutorChatOpen(false);
-    setTutorMessages([]);
-    setWajModalOpen(true);
-  };
 
   const saveAttemptToDatabase = async (attemptData: {
     qid: string;
@@ -635,10 +619,52 @@ function DrillContent() {
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // After wrong answer in adaptive mode, show Joshua's feedback automatically
+    // After wrong answer in adaptive mode, save attempt FIRST then show Joshua's feedback
     if (!correct && session.mode === 'adaptive') {
-      setIsRetryAfterWrong(false); // Reset retry flag
+      // SAVE ATTEMPT FIRST
+      await saveAttemptToDatabase({
+        qid: currentQuestion.qid,
+        correct: false,
+        time_ms: timeMs,
+        qtype: currentQuestion.qtype,
+        level: currentQuestion.difficulty,
+        confidence,
+        mode: session.mode,
+      });
+
+      // Update session
+      const newAttempts = new Map(session.attempts);
+      newAttempts.set(currentQuestion.qid, {
+        selectedAnswer,
+        correct: false,
+        timeMs,
+        timestamp: Date.now(),
+        confidence,
+        reviewDone: false,
+      });
+
+      // Record with adaptive engine
+      adaptiveEngine.recordAttempt({
+        qid: currentQuestion.qid,
+        correct: false,
+        time_ms: timeMs,
+        qtype: currentQuestion.qtype,
+        difficulty: currentQuestion.difficulty,
+        timestamp: new Date(),
+      });
+
+      // Track question usage
+      if (classId && session?.mode) {
+        QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
+      }
+
+      setSession({ ...session, attempts: newAttempts });
+
+      // THEN open tutor and show solution
+      setIsRetryAfterWrong(true);
       setTutorChatOpen(true);
+      setShowSolution(true);
+      setShowReviewButton(true); // Show optional Review button
     } else {
       // Correct answer - save and show solution with Next button (don't auto-advance)
       await saveAttemptToDatabase({
@@ -1732,8 +1758,7 @@ function DrillContent() {
                   open={tutorChatOpen}
                   question={currentQuestion}
                   userAnswer={selectedAnswer}
-                  onClose={handleContinueToReview}
-                  onTryAgain={handleTryAgain}
+                  onClose={() => setTutorChatOpen(false)}
                 />
               </div>
             )}
@@ -1804,7 +1829,6 @@ function DrillContent() {
               <RadioGroup
                 value={selectedAnswer}
                 onValueChange={handleAnswerSelect}
-                disabled={confidence !== null}
                 className="space-y-0 -mx-5"
               >
                 {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
@@ -1820,26 +1844,18 @@ function DrillContent() {
             {(session.mode === 'adaptive' || isPracticeSetMode) && selectedAnswer && !tutorChatOpen && (
               <div className="space-y-3 pt-8">
                 <Label className="text-sm font-medium">Confidence (1–5)</Label>
-                <div className="flex gap-2">
-                  {[1, 2, 3, 4, 5].map((level) => (
-                    <Button
-                      key={level}
-                      variant={confidence === level ? 'default' : 'outline'}
-                      onClick={() => {
-                        if (isPracticeSetMode) {
-                          handleConfidenceSelect(level);
-                        } else {
-                          setConfidence(level);
-                          setAnswerLocked(true);
-                        }
-                      }}
-                      className="flex-1"
-                      disabled={!isPracticeSetMode && showSolution}
-                    >
-                      {level}
-                    </Button>
-                  ))}
-                </div>
+                <ConfidenceSelector
+                  value={confidence}
+                  onChange={(level) => {
+                    if (isPracticeSetMode) {
+                      handleConfidenceSelect(level);
+                    } else {
+                      setConfidence(level);
+                      setAnswerLocked(true);
+                    }
+                  }}
+                  disabled={!isPracticeSetMode && !isRetryAfterWrong && showSolution}
+                />
               </div>
             )}
             
@@ -1893,6 +1909,17 @@ function DrillContent() {
                       {correctExplanation || 'You got it right on your second try! That shows great learning.'}
                     </p>
                   </div>
+                )}
+
+                {/* Optional Review button for WAJ */}
+                {showReviewButton && session.mode === 'adaptive' && (
+                  <Button
+                    variant="outline"
+                    onClick={() => setWajModalOpen(true)}
+                    className="w-full mt-4"
+                  >
+                    Review in Journal
+                  </Button>
                 )}
 
                 {/* Next button for adaptive mode */}
@@ -2002,7 +2029,10 @@ function DrillContent() {
         open={voiceCoachOpen}
         question={currentQuestion}
         selectedAnswer={selectedAnswer}
-        onTryAgain={handleTryAgain}
+        onTryAgain={() => {
+          // For adaptive mode: close and allow retry
+          setVoiceCoachOpen(false);
+        }}
         onMicroDrill={(questions) => {
           // Navigate to micro-drill with the 2 generated questions
           navigate('/drill', {
@@ -2017,7 +2047,11 @@ function DrillContent() {
             }
           });
         }}
-        onSaveToJournal={handleContinueToReview}
+        onSaveToJournal={() => {
+          // Open WAJ modal
+          setVoiceCoachOpen(false);
+          setWajModalOpen(true);
+        }}
         onClose={() => setVoiceCoachOpen(false)}
         showContrast={settings.showContrast}
       />

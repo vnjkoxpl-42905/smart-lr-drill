@@ -5,7 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
 import { supabase } from '@/integrations/supabase/client';
-import { Loader2, Sparkles, RefreshCw } from 'lucide-react';
+import { Loader2, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { LRQuestion } from '@/lib/questionLoader';
 import { toast } from 'sonner';
@@ -20,15 +20,13 @@ interface TutorChatModalProps {
   question: LRQuestion | null;
   userAnswer: string;
   onClose: () => void;
-  onTryAgain: () => void;
 }
 
 export function TutorChatModal({ 
   open, 
   question, 
   userAnswer, 
-  onClose, 
-  onTryAgain 
+  onClose
 }: TutorChatModalProps) {
   const [messages, setMessages] = React.useState<Message[]>([]);
   const [input, setInput] = React.useState('');
@@ -256,21 +254,12 @@ export function TutorChatModal({
             Send
           </Button>
           <Button 
-            onClick={onTryAgain}
-            variant="outline"
-            className="flex-1"
-            size="sm"
-          >
-            <RefreshCw className="w-4 h-4 mr-1" />
-            Try Again
-          </Button>
-          <Button 
             variant="outline" 
             onClick={onClose} 
             className="flex-1"
             size="sm"
           >
-            Continue
+            Return to question
           </Button>
         </div>
       </CardFooter>
