@@ -434,14 +434,8 @@ function DrillContent() {
         }
       }
 
-      // Adaptive mode retry: if already have confidence and retrying, auto-submit
-      if (session?.mode === 'adaptive' && isRetryAfterWrong && confidence !== null) {
-        setAnswerLocked(true);
-        // Trigger submit after state updates
-        requestAnimationFrame(() => {
-          handleSubmit();
-        });
-      }
+      // In adaptive retry mode, user must select confidence again for each attempt
+      // No auto-submit - user controls when to submit
     }
   };
 
@@ -1894,6 +1888,11 @@ onClose={() => {
   setTutorChatOpen(false);
   setTutorQuestionSnapshot(null);
   setAnswerLocked(false); // Clear red state, re-enable choices
+  // Clear previous selection to allow fresh retry (adaptive mode only)
+  if (session?.mode === 'adaptive') {
+    setSelectedAnswer('');
+    setConfidence(null);
+  }
 }}
                   />
                 </ErrorBoundary>
