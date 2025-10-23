@@ -76,6 +76,7 @@ function DrillContent() {
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
   const [suppressAutoSubmitOnce, setSuppressAutoSubmitOnce] = React.useState(false);
   const [tutorQuestionSnapshot, setTutorQuestionSnapshot] = React.useState<LRQuestion | null>(null);
+  const [advanceToken, setAdvanceToken] = React.useState(0);
   
   const [tutorMessages, setTutorMessages] = React.useState<Array<{role: 'user' | 'assistant'; content: string}>>([]);
   const [wajModalOpen, setWajModalOpen] = React.useState(false);
@@ -276,46 +277,8 @@ function DrillContent() {
     initializeSession();
   }, [state, navigate, classId, settings.allowRepeats, settings.preferUnseen, settings.recycleAfterDays]);
 
-  // Load current question and start timing
-  React.useEffect(() => {
-    if (!session) return;
-
-    if (session.mode === 'adaptive') {
-      // Adaptive mode: use engine to select
-      const allQuestions = questionBank.getAllQuestions();
-      const recentQids = new Set(
-        Array.from(session.attempts.keys()).slice(-10)
-      );
-      
-      // Calculate current ability from attempts
-      const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
-        const q = questionBank.getQuestion(qid)!;
-        return {
-          qid,
-          correct: attempt.correct,
-          time_ms: attempt.timeMs,
-          qtype: q.qtype,
-          difficulty: q.difficulty,
-          timestamp: new Date(attempt.timestamp),
-        };
-      });
-      
-      const ability = adaptiveEngine.calculateAbility(attemptRecords);
-      const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
-      
-      setCurrentQuestion(nextQuestion);
-    } else {
-      // Full Section or Type Drill: sequential
-      if (session.currentIndex < session.questionQueue.length) {
-        const qid = session.questionQueue[session.currentIndex];
-        const question = questionBank.getQuestion(qid);
-        setCurrentQuestion(question || null);
-      } else {
-        // Finished
-        setCurrentQuestion(null);
-      }
-    }
-
+  // Reset UI when currentQuestion changes
+  const resetForNewQuestion = React.useCallback(() => {
     setSelectedAnswer('');
     setConfidence(null);
     setShowSolution(false);
@@ -330,18 +293,77 @@ function DrillContent() {
     setIsRetryAfterWrong(false);
     setCorrectExplanation('');
     setShowReviewButton(false);
-    
-    // For section mode, restore the saved answer if navigating back
-    if (session?.mode === 'full-section' && currentQuestion) {
-      const savedAttempt = session.attempts.get(currentQuestion.qid);
-      if (savedAttempt) {
-        setSelectedAnswer(savedAttempt.selectedAnswer);
+    checkIfFlagged();
+  }, []);
+
+  // Run reset whenever currentQuestion changes
+  React.useEffect(() => {
+    if (currentQuestion) {
+      resetForNewQuestion();
+      
+      // For section mode, restore the saved answer if navigating back
+      if (session?.mode === 'full-section') {
+        const savedAttempt = session.attempts.get(currentQuestion.qid);
+        if (savedAttempt) {
+          setSelectedAnswer(savedAttempt.selectedAnswer);
+        }
       }
     }
+  }, [currentQuestion, resetForNewQuestion, session?.mode, session?.attempts]);
+
+  // Load current question (non-adaptive modes)
+  React.useEffect(() => {
+    if (!session) return;
     
-    // Check if current question is flagged
-    checkIfFlagged();
-  }, [session]);
+    // Skip adaptive mode - handled by separate effect
+    if (session.mode === 'adaptive') return;
+
+    // Full Section or Type Drill: sequential
+    if (session.currentIndex < session.questionQueue.length) {
+      const qid = session.questionQueue[session.currentIndex];
+      const question = questionBank.getQuestion(qid);
+      console.debug('[Non-adaptive] set currentQuestion due to index', { index: session.currentIndex, qid });
+      setCurrentQuestion(question || null);
+    } else {
+      // Finished
+      setCurrentQuestion(null);
+    }
+  }, [session?.mode, session?.currentIndex, session?.questionQueue]);
+
+  // Adaptive progression: only advance when advanceToken changes
+  React.useEffect(() => {
+    if (!session || session.mode !== 'adaptive') return;
+    if (advanceToken === 0) return; // wait for initial kick-off
+    
+    const allQuestions = questionBank.getAllQuestions();
+    
+    // Calculate current ability from attempts
+    const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
+      const q = questionBank.getQuestion(qid)!;
+      return {
+        qid,
+        correct: attempt.correct,
+        time_ms: attempt.timeMs,
+        qtype: q.qtype,
+        difficulty: q.difficulty,
+        timestamp: new Date(attempt.timestamp),
+      };
+    });
+    
+    const ability = adaptiveEngine.calculateAbility(attemptRecords);
+    const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
+    
+    console.debug('[Adaptive] set currentQuestion due to advanceToken', { advanceToken, qid: nextQuestion?.qid });
+    setCurrentQuestion(nextQuestion || null);
+  }, [advanceToken, session?.mode]);
+
+  // Initial adaptive question kick-off
+  React.useEffect(() => {
+    if (session?.mode === 'adaptive' && advanceToken === 0 && !currentQuestion) {
+      console.debug('[Adaptive] Initial kick-off, setting advanceToken to 1');
+      setAdvanceToken(1);
+    }
+  }, [session?.mode, advanceToken, currentQuestion]);
 
   const checkIfFlagged = async () => {
     if (!currentQuestion || !user) {
@@ -933,8 +955,9 @@ React.useEffect(() => {
     if (!session) return;
 
     if (session.mode === 'adaptive') {
-      // Just trigger re-render to get next question
-      setSession({ ...session });
+      // Increment advanceToken to trigger next question selection
+      console.debug('[handleNext] Advancing adaptive question');
+      setAdvanceToken(t => t + 1);
     } else {
       // Move to next in queue
       if (session.currentIndex < session.questionQueue.length - 1) {
@@ -1852,7 +1875,7 @@ React.useEffect(() => {
                     question={tutorQuestionSnapshot}
                     userAnswer={selectedAnswer}
 onClose={() => {
-  console.debug('Closing tutor modal');
+  console.debug('Tutor closed, returning to', { qid: currentQuestion?.qid });
   // Prevent unintended auto-submit right after closing tutor
   setSuppressAutoSubmitOnce(true);
   setTutorChatOpen(false);
