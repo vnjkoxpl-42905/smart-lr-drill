@@ -79,6 +79,7 @@ export type Database = {
           set_id: string | null
           time_ms: number
           timestamp_iso: string | null
+          user_id: string | null
           voice_used: boolean | null
         }
         Insert: {
@@ -106,6 +107,7 @@ export type Database = {
           set_id?: string | null
           time_ms: number
           timestamp_iso?: string | null
+          user_id?: string | null
           voice_used?: boolean | null
         }
         Update: {
@@ -133,6 +135,7 @@ export type Database = {
           set_id?: string | null
           time_ms?: number
           timestamp_iso?: string | null
+          user_id?: string | null
           voice_used?: boolean | null
         }
         Relationships: []
@@ -965,10 +968,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      get_user_class_id: {
-        Args: { uid: string }
-        Returns: string
-      }
+      get_user_class_id: { Args: { uid: string }; Returns: string }
     }
     Enums: {
       [_ in never]: never

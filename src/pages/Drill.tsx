@@ -1512,6 +1512,16 @@ function DrillContent() {
     const answerEntries = Object.entries(currentQuestion.answerChoices);
     const selectedIndex = answerEntries.findIndex(([key]) => key === selectedAnswer);
     
+    // Guard against invalid selectedIndex
+    if (selectedIndex === -1) {
+      console.warn('Selected answer not found in answer choices', { selectedAnswer, qid: currentQuestion.qid });
+      return {
+        before: [],
+        selected: answerEntries[0] || ['A', ''], // Fallback to first answer
+        after: answerEntries.slice(1),
+      };
+    }
+    
     return {
       before: answerEntries.slice(0, selectedIndex),
       selected: answerEntries[selectedIndex],
