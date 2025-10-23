@@ -671,7 +671,9 @@ function DrillContent() {
       // Show red "Wrong" for 150ms, then open tutor (do not reveal solution yet)
       setIsRetryAfterWrong(true);
       setTimeout(() => {
-        setTutorChatOpen(true);
+        if (currentQuestion) {
+          setTutorChatOpen(true);
+        }
       }, 150);
     } else {
       // Correct answer - save and show solution with Next button (don't auto-advance)
@@ -1667,7 +1669,7 @@ function DrillContent() {
                     onClick={() => {
                       const text = `PT${currentQuestion.pt}-S${currentQuestion.section}-Q${currentQuestion.qnum}`;
                       navigator.clipboard.writeText(text);
-                      toast.success('Question ID copied to clipboard');
+                      toast('Question ID copied to clipboard');
                     }}
                     className="px-3 py-1.5 rounded-md bg-accent/30 text-foreground border border-border/50 text-sm font-medium hover:bg-accent/40 transition-colors"
                   >
@@ -1793,7 +1795,7 @@ function DrillContent() {
               </div>
             )}
 
-            {tutorChatOpen && (
+            {tutorChatOpen && currentQuestion && (
               <div className="mt-6">
                 <TutorChatModal
                   open={tutorChatOpen}
