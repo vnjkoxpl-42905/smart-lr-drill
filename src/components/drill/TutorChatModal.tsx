@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -205,8 +206,8 @@ export function TutorChatModal({
     return null;
   }
 
-  return (
-    <Card className="relative overflow-hidden rounded-lg border bg-card shadow-sm animate-in slide-in-from-top-2 duration-300">
+  const tutorCard = (
+    <Card className="relative overflow-hidden rounded-lg border bg-card shadow-sm">
       <CardHeader className="relative px-4 py-3 border-b">
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-primary" />
@@ -285,4 +286,18 @@ export function TutorChatModal({
       </CardFooter>
     </Card>
   );
+
+  // In adaptive mode, render as a full-screen modal overlay
+  if (mode === 'adaptive') {
+    return (
+      <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onClose()}>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-hidden p-0">
+          {tutorCard}
+        </DialogContent>
+      </Dialog>
+    );
+  }
+
+  // In other modes, render inline as before
+  return tutorCard;
 }

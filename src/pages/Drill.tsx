@@ -649,11 +649,20 @@ React.useEffect(() => {
   const handleSubmit = async () => {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
 
+    console.debug('handleSubmit called', {
+      mode: session.mode,
+      qid: currentQuestion.qid,
+      selectedAnswer,
+      correctAnswer: currentQuestion.correctAnswer
+    });
+
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // Adaptive mode: Open tutor after EVERY submission with latest answer
+    // Adaptive mode: Tutor-first flow
     if (session.mode === 'adaptive') {
+      console.debug('Adaptive mode submit:', { correct, selectedAnswer });
+      
       // Calculate attempt number for this question
       const attemptsForThisQuestion = Array.from(session.attempts.entries())
         .filter(([qid]) => qid === currentQuestion.qid);
@@ -699,22 +708,30 @@ React.useEffect(() => {
       setSession({ ...session, attempts: newAttempts });
 
       if (!correct) {
-        // Wrong answer: Show feedback but DON'T reveal solution
+        // WRONG ANSWER: Show tutor ONLY, no solution reveal
+        console.debug('Wrong answer - opening tutor:', {
+          qid: currentQuestion.qid,
+          attempt: currentAttemptNumber,
+          answer: selectedAnswer
+        });
+        
         setIsRetryAfterWrong(true);
+        // Make sure solution is hidden
+        setShowSolution(false);
+        setShowReviewButton(false);
+        
+        // Open tutor after brief delay
         setTimeout(() => {
           if (currentQuestion) {
-            console.debug('Opening tutor (wrong answer):', {
-              qid: currentQuestion.qid,
-              attempt: currentAttemptNumber,
-              answer: selectedAnswer
-            });
             setTutorQuestionSnapshot(currentQuestion);
             setTutorAttemptNumber(currentAttemptNumber);
             setTutorChatOpen(true);
           }
         }, 150);
       } else {
-        // Correct answer - Log to WAJ and show solution with Next button
+        // CORRECT ANSWER: Log to WAJ and reveal solution with actions
+        console.debug('Correct answer - showing solution');
+        
         const { logCorrectAnswer } = await import('@/lib/wajService');
         try {
           await logCorrectAnswer({
@@ -739,9 +756,9 @@ React.useEffect(() => {
           await generateCorrectExplanation();
         }
         
+        // Reveal solution with Next and optional journal button
         setShowSolution(true);
         setShowReviewButton(true);
-        // Don't auto-advance - user clicks Next
       }
     } else {
       // Non-adaptive modes: original behavior
@@ -1893,6 +1910,8 @@ React.useEffect(() => {
                     setSelectedAnswer('');
                     setConfidence(null);
                     setEliminatedAnswers(new Set()); // Clear eliminated choices for fresh retry
+                    setShowSolution(false); // Ensure solution stays hidden
+                    setShowReviewButton(false); // Hide review button
                   }
                 }}
                   />
