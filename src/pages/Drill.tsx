@@ -1046,7 +1046,7 @@ function DrillContent() {
 
   // Enhanced keyboard navigation for section mode
   React.useEffect(() => {
-    if (session?.mode !== 'full-section') return;
+    if (session?.mode !== 'full-section' || !currentQuestion) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       // Prevent if user is typing in an input
