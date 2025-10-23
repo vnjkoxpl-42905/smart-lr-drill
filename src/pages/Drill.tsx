@@ -102,6 +102,7 @@ function DrillContent() {
   const [isRetryAfterWrong, setIsRetryAfterWrong] = React.useState(false);
   const [correctExplanation, setCorrectExplanation] = React.useState<string>('');
   const [showReviewButton, setShowReviewButton] = React.useState(false);
+  const [isGrading, setIsGrading] = React.useState(false);
   
   // New post-section flow states
   const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
@@ -392,10 +393,17 @@ function DrillContent() {
   };
 
   const handleAnswerSelect = (answer: string) => {
+    // Disable interactions while grading or when tutor is open
+    if (isGrading || tutorChatOpen) return;
+
     // In practice-set mode, don't lock after answer selection
     // In adaptive mode after wrong answer, allow unlimited retries (don't lock)
     if (!isPracticeSetMode && !isRetryAfterWrong && confidence !== null) return;
-    
+
+    // Any new selection should hide any solution/journal UI until finished
+    setShowSolution(false);
+    setShowReviewButton(false);
+
     // Toggle behavior: clicking same answer deselects it
     if (selectedAnswer === answer) {
       setSelectedAnswer('');
@@ -404,7 +412,7 @@ function DrillContent() {
         const newAttempts = new Map(session.attempts);
         newAttempts.delete(currentQuestion.qid);
         setSession({ ...session, attempts: newAttempts });
-        
+
         // Record answer change in practice-set mode
         if (isPracticeSetMode) {
           questionTimer.current.recordAnswer(currentQuestion.qid, '');
@@ -416,7 +424,7 @@ function DrillContent() {
       if ((session?.mode === 'full-section' || isPracticeSetMode) && currentQuestion) {
         const newAttempts = new Map(session.attempts);
         const existingAttempt = newAttempts.get(currentQuestion.qid);
-        
+
         newAttempts.set(currentQuestion.qid, {
           selectedAnswer: answer,
           correct: answer === currentQuestion.correctAnswer,
@@ -427,7 +435,7 @@ function DrillContent() {
           answerRevealed: existingAttempt?.answerRevealed || false,
         });
         setSession({ ...session, attempts: newAttempts });
-        
+
         // Record answer change in practice-set mode
         if (isPracticeSetMode) {
           questionTimer.current.recordAnswer(currentQuestion.qid, answer);
@@ -1113,6 +1121,7 @@ React.useEffect(() => {
       }
       // Number keys 1-5 for selecting A-E
       else if (['1', '2', '3', '4', '5'].includes(e.key)) {
+        if (tutorChatOpen || isGrading) return;
         e.preventDefault();
         const answerKeys = Object.keys(currentQuestion.answerChoices);
         const answerIndex = parseInt(e.key) - 1;
