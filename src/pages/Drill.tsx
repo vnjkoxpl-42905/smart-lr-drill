@@ -74,6 +74,7 @@ function DrillContent() {
   const [confidence, setConfidence] = React.useState<number | null>(null);
   const [showSolution, setShowSolution] = React.useState(false);
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
+  const [suppressAutoSubmitOnce, setSuppressAutoSubmitOnce] = React.useState(false);
   const [tutorQuestionSnapshot, setTutorQuestionSnapshot] = React.useState<LRQuestion | null>(null);
   
   const [tutorMessages, setTutorMessages] = React.useState<Array<{role: 'user' | 'assistant'; content: string}>>([]);
@@ -457,15 +458,20 @@ function DrillContent() {
     }
   };
 
-  // Auto-submit when confidence is selected (adaptive only)
-  React.useEffect(() => {
-    if (session?.mode === 'adaptive') {
-      // Adaptive: wait for confidence
-      if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
-        handleSubmit();
-      }
+// Auto-submit when confidence is selected (adaptive only)
+React.useEffect(() => {
+  if (session?.mode === 'adaptive') {
+    // If we just closed the tutor, skip one auto-submit cycle
+    if (suppressAutoSubmitOnce) {
+      setSuppressAutoSubmitOnce(false);
+      return;
     }
-  }, [confidence, answerLocked, showSolution, tutorChatOpen, session?.mode]);
+    // Adaptive: wait for confidence
+    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
+      handleSubmit();
+    }
+  }
+}, [confidence, answerLocked, showSolution, tutorChatOpen, session?.mode, suppressAutoSubmitOnce]);
 
   const saveAttemptToDatabase = async (attemptData: {
     qid: string;
@@ -1845,12 +1851,14 @@ function DrillContent() {
                     open={tutorChatOpen}
                     question={tutorQuestionSnapshot}
                     userAnswer={selectedAnswer}
-                    onClose={() => {
-                      console.debug('Closing tutor modal');
-                      setTutorChatOpen(false);
-                      setTutorQuestionSnapshot(null);
-                      setAnswerLocked(false); // Clear red state, re-enable choices
-                    }}
+onClose={() => {
+  console.debug('Closing tutor modal');
+  // Prevent unintended auto-submit right after closing tutor
+  setSuppressAutoSubmitOnce(true);
+  setTutorChatOpen(false);
+  setTutorQuestionSnapshot(null);
+  setAnswerLocked(false); // Clear red state, re-enable choices
+}}
                   />
                 </ErrorBoundary>
               </div>
