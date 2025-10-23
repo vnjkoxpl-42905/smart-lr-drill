@@ -76,6 +76,7 @@ function DrillContent() {
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
   const [suppressAutoSubmitOnce, setSuppressAutoSubmitOnce] = React.useState(false);
   const [tutorQuestionSnapshot, setTutorQuestionSnapshot] = React.useState<LRQuestion | null>(null);
+  const [tutorAttemptNumber, setTutorAttemptNumber] = React.useState(1);
   const [advanceToken, setAdvanceToken] = React.useState(0);
   
   const [tutorMessages, setTutorMessages] = React.useState<Array<{role: 'user' | 'assistant'; content: string}>>([]);
@@ -657,12 +658,17 @@ React.useEffect(() => {
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // After wrong answer in adaptive mode, save attempt FIRST then show Joshua's feedback
-    if (!correct && session.mode === 'adaptive') {
+    // Adaptive mode: Open tutor after EVERY submission with latest answer
+    if (session.mode === 'adaptive') {
+      // Calculate attempt number for this question
+      const attemptsForThisQuestion = Array.from(session.attempts.entries())
+        .filter(([qid]) => qid === currentQuestion.qid);
+      const currentAttemptNumber = attemptsForThisQuestion.length + 1;
+
       // SAVE ATTEMPT FIRST
       await saveAttemptToDatabase({
         qid: currentQuestion.qid,
-        correct: false,
+        correct,
         time_ms: timeMs,
         qtype: currentQuestion.qtype,
         level: currentQuestion.difficulty,
@@ -674,7 +680,7 @@ React.useEffect(() => {
       const newAttempts = new Map(session.attempts);
       newAttempts.set(currentQuestion.qid, {
         selectedAnswer,
-        correct: false,
+        correct,
         timeMs,
         timestamp: Date.now(),
         confidence,
@@ -684,7 +690,7 @@ React.useEffect(() => {
       // Record with adaptive engine
       adaptiveEngine.recordAttempt({
         qid: currentQuestion.qid,
-        correct: false,
+        correct,
         time_ms: timeMs,
         qtype: currentQuestion.qtype,
         difficulty: currentQuestion.difficulty,
@@ -698,24 +704,59 @@ React.useEffect(() => {
 
       setSession({ ...session, attempts: newAttempts });
 
-      // Show red "Wrong" for 150ms, then open tutor (do not reveal solution yet)
-      setIsRetryAfterWrong(true);
-      setTimeout(() => {
-        if (currentQuestion) {
-          console.debug('Opening tutor:', {
+      if (!correct) {
+        // Wrong answer: Show feedback but DON'T reveal solution
+        setIsRetryAfterWrong(true);
+        setTimeout(() => {
+          if (currentQuestion) {
+            console.debug('Opening tutor (wrong answer):', {
+              qid: currentQuestion.qid,
+              attempt: currentAttemptNumber,
+              answer: selectedAnswer
+            });
+            setTutorQuestionSnapshot(currentQuestion);
+            setTutorAttemptNumber(currentAttemptNumber);
+            setTutorChatOpen(true);
+          }
+        }, 150);
+      } else {
+        // Correct answer - Log to WAJ and show solution with Next button
+        const { logCorrectAnswer } = await import('@/lib/wajService');
+        try {
+          await logCorrectAnswer({
+            user_id: user?.id || '',
             qid: currentQuestion.qid,
-            mode: session.mode,
-            hasSnapshot: !!currentQuestion
+            pt: currentQuestion.pt,
+            section: currentQuestion.section,
+            qnum: currentQuestion.qnum,
+            qtype: currentQuestion.qtype,
+            level: currentQuestion.difficulty,
+            chosen_answer: selectedAnswer,
+            correct_answer: currentQuestion.correctAnswer,
+            time_ms: timeMs,
+            confidence_1_5: confidence,
           });
-          setTutorQuestionSnapshot(currentQuestion);
-          setTutorChatOpen(true);
+        } catch (error) {
+          console.error('Failed to log to WAJ:', error);
         }
-      }, 150);
+        
+        // If this is a retry after wrong answer, generate explanation
+        if (isRetryAfterWrong) {
+          await generateCorrectExplanation();
+        }
+        
+        setShowSolution(true);
+        setShowReviewButton(true);
+        // Don't auto-advance - user clicks Next
+      }
     } else {
-      // Correct answer - save and show solution with Next button (don't auto-advance)
+      // Non-adaptive modes: original behavior
+      const correct = selectedAnswer === currentQuestion.correctAnswer;
+      const timeMs = Math.floor(performance.now() - questionStartTime);
+
       await saveAttemptToDatabase({
         qid: currentQuestion.qid,
-        correct: true,
+        correct,
         time_ms: timeMs,
         qtype: currentQuestion.qtype,
         level: currentQuestion.difficulty,
@@ -742,42 +783,12 @@ React.useEffect(() => {
         timestamp: new Date(),
       });
 
-      // Track question usage
       if (classId && session?.mode) {
         QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
       }
 
-      // Log correct answer to WAJ if there's an existing wrong entry
-      const { logCorrectAnswer } = await import('@/lib/wajService');
-      try {
-        await logCorrectAnswer({
-          user_id: user?.id || '',
-          qid: currentQuestion.qid,
-          pt: currentQuestion.pt,
-          section: currentQuestion.section,
-          qnum: currentQuestion.qnum,
-          qtype: currentQuestion.qtype,
-          level: currentQuestion.difficulty,
-          chosen_answer: selectedAnswer,
-          correct_answer: currentQuestion.correctAnswer,
-          time_ms: timeMs,
-          confidence_1_5: confidence,
-        });
-      } catch (error) {
-        console.error('Failed to log to WAJ:', error);
-      }
-
       setSession({ ...session, attempts: newAttempts });
-      
-      
-      // If this is a retry after wrong answer, generate explanation
-      if (isRetryAfterWrong && session.mode === 'adaptive') {
-        await generateCorrectExplanation();
-      }
-      
       setShowSolution(true);
-      setShowReviewButton(true);
-      // Don't auto-advance - user clicks Next
     }
   };
 
@@ -1874,6 +1885,8 @@ React.useEffect(() => {
                     open={tutorChatOpen}
                     question={tutorQuestionSnapshot}
                     userAnswer={selectedAnswer}
+                    attemptNumber={tutorAttemptNumber}
+                    mode={session?.mode}
 onClose={() => {
   console.debug('Tutor closed, returning to', { qid: currentQuestion?.qid });
   // Prevent unintended auto-submit right after closing tutor

@@ -19,13 +19,17 @@ interface TutorChatModalProps {
   open: boolean;
   question: LRQuestion | null;
   userAnswer: string;
+  attemptNumber?: number;
+  mode?: string;
   onClose: () => void;
 }
 
 export function TutorChatModal({ 
   open, 
   question, 
-  userAnswer, 
+  userAnswer,
+  attemptNumber = 1,
+  mode,
   onClose
 }: TutorChatModalProps) {
   const [messages, setMessages] = React.useState<Message[]>([]);
@@ -41,12 +45,12 @@ export function TutorChatModal({
     }
   }, [messages]);
 
-  // Initialize with Socratic question
+  // Initialize with Socratic question - re-initialize when attemptNumber changes
   React.useEffect(() => {
-    if (open && question && initializing) {
+    if (open && question && (initializing || attemptNumber)) {
       loadInitialQuestion();
     }
-  }, [open, question, initializing]);
+  }, [open, question, initializing, attemptNumber]);
 
   // Reset when modal closes
   React.useEffect(() => {
@@ -83,7 +87,11 @@ export function TutorChatModal({
     if (!question) return;
 
     setIsLoading(true);
-    console.debug('TutorChatModal: Loading initial Socratic question', { qid: question.qid });
+    console.debug('TutorChatModal: Loading initial Socratic question', { 
+      qid: question.qid, 
+      attempt: attemptNumber,
+      answer: userAnswer 
+    });
     try {
       const questionData = {
         qid: question.qid,
@@ -100,6 +108,7 @@ export function TutorChatModal({
         breakdown: question.breakdown,
         answerChoiceExplanations: question.answerChoiceExplanations,
         reasoningType: question.reasoningType,
+        attemptNumber,
       };
 
       const { data, error } = await supabase.functions.invoke('tutor-chat', {
@@ -241,29 +250,33 @@ export function TutorChatModal({
       </CardContent>
 
       <CardFooter className="relative p-3 border-t flex-col gap-2">
-        <Textarea
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyPress={handleKeyPress}
-          placeholder="Ask a follow-up question..."
-          rows={1}
-          disabled={isLoading}
-          className="resize-none text-sm"
-        />
+        {mode !== 'adaptive' && (
+          <Textarea
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyPress={handleKeyPress}
+            placeholder="Ask a follow-up question..."
+            rows={1}
+            disabled={isLoading}
+            className="resize-none text-sm"
+          />
+        )}
         
         <div className="flex gap-2 w-full">
-          <Button 
-            onClick={handleSend} 
-            disabled={!input.trim() || isLoading} 
-            className="flex-1"
-            size="sm"
-          >
-            Send
-          </Button>
+          {mode !== 'adaptive' && (
+            <Button 
+              onClick={handleSend} 
+              disabled={!input.trim() || isLoading} 
+              className="flex-1"
+              size="sm"
+            >
+              Send
+            </Button>
+          )}
           <Button 
             variant="outline" 
             onClick={onClose} 
-            className="flex-1"
+            className={mode === 'adaptive' ? 'w-full' : 'flex-1'}
             size="sm"
           >
             Return to question
