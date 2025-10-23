@@ -406,6 +406,17 @@ function DrillContent() {
           questionTimer.current.recordAnswer(currentQuestion.qid, answer);
         }
       }
+
+      // Adaptive mode: if user picks a wrong answer (before confidence), open tutor immediately
+      if (session?.mode === 'adaptive' && currentQuestion && !tutorChatOpen && confidence === null) {
+        const isWrong = answer !== currentQuestion.correctAnswer;
+        if (isWrong) {
+          setIsRetryAfterWrong(true);
+          setTutorChatOpen(true);
+          setShowSolution(false);
+          setShowReviewButton(false);
+        }
+      }
     }
   };
 
@@ -562,10 +573,8 @@ function DrillContent() {
       QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
     }
     
-    // Auto-advance to next question after 1.5 seconds
-    setTimeout(() => {
-      handleNext();
-    }, 1500);
+    // Stay on the same screen; user can press Next when ready
+    // (Removed auto-advance)
   };
 
   const handleSubmitNonAdaptive = async () => {
@@ -660,11 +669,9 @@ function DrillContent() {
 
       setSession({ ...session, attempts: newAttempts });
 
-      // THEN open tutor and show solution
+      // THEN open tutor (do not reveal solution yet)
       setIsRetryAfterWrong(true);
       setTutorChatOpen(true);
-      setShowSolution(true);
-      setShowReviewButton(true); // Show optional Review button
     } else {
       // Correct answer - save and show solution with Next button (don't auto-advance)
       await saveAttemptToDatabase({
@@ -723,12 +730,14 @@ function DrillContent() {
 
       setSession({ ...session, attempts: newAttempts });
       
+      
       // If this is a retry after wrong answer, generate explanation
       if (isRetryAfterWrong && session.mode === 'adaptive') {
         await generateCorrectExplanation();
       }
       
       setShowSolution(true);
+      setShowReviewButton(true);
       // Don't auto-advance - user clicks Next
     }
   };
