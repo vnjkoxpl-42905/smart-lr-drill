@@ -326,7 +326,7 @@ function inferTypeFromStem(stem: string): string {
   }
   
   // Role
-  if (lower.includes('role') || lower.includes('claim.*figures')) {
+  if (lower.includes('role') || /claim.*figures/.test(lower)) {
     return 'Role';
   }
   

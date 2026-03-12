@@ -157,12 +157,16 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
       newQidEliminated.add(answer);
       // Deselect if currently selected
       if (brAnswers.get(currentQid) === answer) {
-        setBrAnswers(new Map(brAnswers.set(currentQid, '')));
+        const newMap = new Map(brAnswers);
+        newMap.set(currentQid, '');
+        setBrAnswers(newMap);
         timerRef.current.recordAnswer(currentQid, '');
       }
     }
     
-    setEliminatedAnswers(new Map(eliminatedAnswers.set(currentQid, newQidEliminated)));
+    const newEliminated = new Map(eliminatedAnswers);
+    newEliminated.set(currentQid, newQidEliminated);
+    setEliminatedAnswers(newEliminated);
   };
 
   const handleToggleFlag = async () => {

@@ -819,6 +819,12 @@ React.useEffect(() => {
       setSession({ ...session, attempts: newAttempts });
       setShowSolution(true);
     }
+    } catch (err) {
+      console.error('handleSubmit error:', err);
+      toast.error('Something went wrong. Please try again.');
+    } finally {
+      setIsGrading(false);
+    }
   };
 
   const generateCorrectExplanation = async () => {
