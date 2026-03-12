@@ -108,7 +108,7 @@ function DrillContent() {
   // New post-section flow states
   const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
   const [autoReviewQids, setAutoReviewQids] = React.useState<string[]>([]);
-  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
+  const [longPressTimer, setLongPressTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
   
   // Question pool state
   const [poolStatus, setPoolStatus] = React.useState<string>('');
