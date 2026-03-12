@@ -316,7 +316,7 @@ function inferTypeFromStem(stem: string): string {
   }
   
   // Main Conclusion
-  if (lower.includes('main (point|conclusion)') || lower.includes('expresses the (main )?conclusion')) {
+  if (/main\s+(point|conclusion)/.test(lower) || /expresses\s+the\s+(main\s+)?conclusion/.test(lower)) {
     return 'Main Conclusion';
   }
   
