@@ -660,11 +660,16 @@ React.useEffect(() => {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
     if (isGrading) return; // Prevent double-submit
     setIsGrading(true);
+    // Capture immutable snapshot to avoid stale state
+    const submittedAnswer = selectedAnswer;
+    const submittedQuestion = currentQuestion;
+    const submittedConfidence = confidence;
+
     console.debug('handleSubmit called', {
       mode: session.mode,
-      qid: currentQuestion.qid,
-      selectedAnswer,
-      correctAnswer: currentQuestion.correctAnswer
+      qid: submittedQuestion.qid,
+      selectedAnswer: submittedAnswer,
+      correctAnswer: submittedQuestion.correctAnswer
     });
 
     const correct = selectedAnswer === currentQuestion.correctAnswer;
