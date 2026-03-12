@@ -672,7 +672,8 @@ React.useEffect(() => {
       correctAnswer: submittedQuestion.correctAnswer
     });
 
-    const correct = selectedAnswer === currentQuestion.correctAnswer;
+    try {
+    const correct = submittedAnswer === submittedQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
     // Adaptive mode: Tutor-first flow
