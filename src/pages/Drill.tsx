@@ -123,8 +123,7 @@ function DrillContent() {
   const [hideTimer, setHideTimer] = React.useState(false);
   const [showAnswerRevealed, setShowAnswerRevealed] = React.useState<Map<string, boolean>>(new Map());
   
-  // Always call hook unconditionally (Rules of Hooks) - use null fallback when no timer
-  const timerContext = useTimerContext();
+  const timer = useTimerContextSafe();
   const timer = hasTimer ? timerContext : null;
 
   // BR only for Full Section and Type Drill modes
