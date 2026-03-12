@@ -124,7 +124,6 @@ function DrillContent() {
   const [showAnswerRevealed, setShowAnswerRevealed] = React.useState<Map<string, boolean>>(new Map());
   
   const timer = useTimerContextSafe();
-  const timer = hasTimer ? timerContext : null;
 
   // BR only for Full Section and Type Drill modes
   const brEnabled = session?.mode === 'full-section' || session?.mode === 'type-drill';
