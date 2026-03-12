@@ -494,7 +494,7 @@ React.useEffect(() => {
       return;
     }
     // Adaptive: wait for confidence
-    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
+    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen && !isGrading) {
       handleSubmit();
     }
   }
