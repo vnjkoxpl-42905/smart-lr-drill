@@ -658,7 +658,8 @@ React.useEffect(() => {
 
   const handleSubmit = async () => {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
-
+    if (isGrading) return; // Prevent double-submit
+    setIsGrading(true);
     console.debug('handleSubmit called', {
       mode: session.mode,
       qid: currentQuestion.qid,
