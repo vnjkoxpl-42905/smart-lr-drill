@@ -311,7 +311,7 @@ function inferTypeFromStem(stem: string): string {
   if (lower.includes('must be true') || lower.includes('properly inferred')) {
     return 'Must Be True';
   }
-  if (lower.includes('most (strongly )?supported') || lower.includes('most justifies')) {
+  if (/most\s+(strongly\s+)?supported/.test(lower) || lower.includes('most justifies')) {
     return 'Most Strongly Supported';
   }
   
