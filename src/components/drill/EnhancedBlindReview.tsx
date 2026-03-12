@@ -79,7 +79,9 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   const handleAnswerSelect = (answer: string) => {
     // Toggle behavior: clicking same answer deselects it
     const newAnswer = brAnswers.get(currentQid) === answer ? '' : answer;
-    setBrAnswers(new Map(brAnswers.set(currentQid, newAnswer)));
+    const newMap = new Map(brAnswers);
+    newMap.set(currentQid, newAnswer);
+    setBrAnswers(newMap);
     timerRef.current.recordAnswer(currentQid, newAnswer);
   };
 
