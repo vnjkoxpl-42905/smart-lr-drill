@@ -86,7 +86,9 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   };
 
   const handleRationaleChange = (rationale: string) => {
-    setBrRationales(new Map(brRationales.set(currentQid, rationale)));
+    const newMap = new Map(brRationales);
+    newMap.set(currentQid, rationale);
+    setBrRationales(newMap);
   };
 
   const handlePrevious = () => {
