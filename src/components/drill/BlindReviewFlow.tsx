@@ -146,6 +146,7 @@ export function BlindReviewFlow({ session, selectedQids, onComplete }: BlindRevi
     });
     
     const currentHighlights = highlights.get(currentQid) || [];
+    const updated = currentHighlights.filter(h => h.id !== highlightId);
     const newHighlights = new Map(highlights);
     newHighlights.set(currentQid, updated);
     setHighlights(newHighlights);
