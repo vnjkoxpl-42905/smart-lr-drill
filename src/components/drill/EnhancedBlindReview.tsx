@@ -34,7 +34,7 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   const [flaggedQuestions, setFlaggedQuestions] = React.useState<Set<string>>(new Set());
   const [jumpToInput, setJumpToInput] = React.useState('');
   const timerRef = React.useRef(new QuestionTimer());
-  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
+  const [longPressTimer, setLongPressTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
 
   const currentQid = reviewQids[currentIndex];
   const currentQuestion = questionBank.getQuestion(currentQid);
