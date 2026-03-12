@@ -46,12 +46,15 @@ export function TutorChatModal({
     }
   }, [messages]);
 
-  // Initialize with Socratic question - re-initialize when attemptNumber changes
+  // Initialize with Socratic question - track previous attempt to avoid duplicate calls
+  const prevInitRef = React.useRef<string>('');
   React.useEffect(() => {
-    if (open && question && (initializing || attemptNumber)) {
-      loadInitialQuestion();
-    }
-  }, [open, question, initializing, attemptNumber]);
+    if (!open || !question) return;
+    const initKey = `${question.qid}-${attemptNumber}`;
+    if (prevInitRef.current === initKey) return;
+    prevInitRef.current = initKey;
+    loadInitialQuestion();
+  }, [open, question?.qid, attemptNumber]);
 
   // Reset when modal closes
   React.useEffect(() => {

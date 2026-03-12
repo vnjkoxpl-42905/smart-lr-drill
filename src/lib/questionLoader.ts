@@ -311,12 +311,12 @@ function inferTypeFromStem(stem: string): string {
   if (lower.includes('must be true') || lower.includes('properly inferred')) {
     return 'Must Be True';
   }
-  if (lower.includes('most (strongly )?supported') || lower.includes('most justifies')) {
+  if (/most\s+(strongly\s+)?supported/.test(lower) || lower.includes('most justifies')) {
     return 'Most Strongly Supported';
   }
   
   // Main Conclusion
-  if (lower.includes('main (point|conclusion)') || lower.includes('expresses the (main )?conclusion')) {
+  if (/main\s+(point|conclusion)/.test(lower) || /expresses\s+the\s+(main\s+)?conclusion/.test(lower)) {
     return 'Main Conclusion';
   }
   
@@ -326,7 +326,7 @@ function inferTypeFromStem(stem: string): string {
   }
   
   // Role
-  if (lower.includes('role') || lower.includes('claim.*figures')) {
+  if (lower.includes('role') || /claim.*figures/.test(lower)) {
     return 'Role';
   }
   

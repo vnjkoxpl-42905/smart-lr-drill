@@ -23,7 +23,7 @@ import { ScoreReport } from '@/components/drill/ScoreReport';
 import { LRSectionResults } from '@/components/drill/LRSectionResults';
 import { EnhancedBlindReview } from '@/components/drill/EnhancedBlindReview';
 import { PracticeSetResults } from '@/components/drill/PracticeSetResults';
-import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
+import { TimerProvider, useTimerContextSafe } from '@/contexts/TimerContext';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
@@ -108,7 +108,7 @@ function DrillContent() {
   // New post-section flow states
   const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
   const [autoReviewQids, setAutoReviewQids] = React.useState<string[]>([]);
-  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
+  const [longPressTimer, setLongPressTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
   
   // Question pool state
   const [poolStatus, setPoolStatus] = React.useState<string>('');
@@ -123,7 +123,7 @@ function DrillContent() {
   const [hideTimer, setHideTimer] = React.useState(false);
   const [showAnswerRevealed, setShowAnswerRevealed] = React.useState<Map<string, boolean>>(new Map());
   
-  const timer = hasTimer ? useTimerContext() : null;
+  const timer = useTimerContextSafe();
 
   // BR only for Full Section and Type Drill modes
   const brEnabled = session?.mode === 'full-section' || session?.mode === 'type-drill';
@@ -494,7 +494,7 @@ React.useEffect(() => {
       return;
     }
     // Adaptive: wait for confidence
-    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
+    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen && !isGrading) {
       handleSubmit();
     }
   }
@@ -658,15 +658,22 @@ React.useEffect(() => {
 
   const handleSubmit = async () => {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
+    if (isGrading) return; // Prevent double-submit
+    setIsGrading(true);
+    // Capture immutable snapshot to avoid stale state
+    const submittedAnswer = selectedAnswer;
+    const submittedQuestion = currentQuestion;
+    const submittedConfidence = confidence;
 
     console.debug('handleSubmit called', {
       mode: session.mode,
-      qid: currentQuestion.qid,
-      selectedAnswer,
-      correctAnswer: currentQuestion.correctAnswer
+      qid: submittedQuestion.qid,
+      selectedAnswer: submittedAnswer,
+      correctAnswer: submittedQuestion.correctAnswer
     });
 
-    const correct = selectedAnswer === currentQuestion.correctAnswer;
+    try {
+    const correct = submittedAnswer === submittedQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
     // Adaptive mode: Tutor-first flow
@@ -811,6 +818,12 @@ React.useEffect(() => {
 
       setSession({ ...session, attempts: newAttempts });
       setShowSolution(true);
+    }
+    } catch (err) {
+      console.error('handleSubmit error:', err);
+      toast.error('Something went wrong. Please try again.');
+    } finally {
+      setIsGrading(false);
     }
   };
 

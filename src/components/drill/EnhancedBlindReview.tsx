@@ -34,7 +34,7 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   const [flaggedQuestions, setFlaggedQuestions] = React.useState<Set<string>>(new Set());
   const [jumpToInput, setJumpToInput] = React.useState('');
   const timerRef = React.useRef(new QuestionTimer());
-  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
+  const [longPressTimer, setLongPressTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
 
   const currentQid = reviewQids[currentIndex];
   const currentQuestion = questionBank.getQuestion(currentQid);
@@ -79,12 +79,16 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
   const handleAnswerSelect = (answer: string) => {
     // Toggle behavior: clicking same answer deselects it
     const newAnswer = brAnswers.get(currentQid) === answer ? '' : answer;
-    setBrAnswers(new Map(brAnswers.set(currentQid, newAnswer)));
+    const newMap = new Map(brAnswers);
+    newMap.set(currentQid, newAnswer);
+    setBrAnswers(newMap);
     timerRef.current.recordAnswer(currentQid, newAnswer);
   };
 
   const handleRationaleChange = (rationale: string) => {
-    setBrRationales(new Map(brRationales.set(currentQid, rationale)));
+    const newMap = new Map(brRationales);
+    newMap.set(currentQid, rationale);
+    setBrRationales(newMap);
   };
 
   const handlePrevious = () => {
@@ -153,12 +157,16 @@ export function EnhancedBlindReview({ session, reviewQids, onComplete, onBack }:
       newQidEliminated.add(answer);
       // Deselect if currently selected
       if (brAnswers.get(currentQid) === answer) {
-        setBrAnswers(new Map(brAnswers.set(currentQid, '')));
+        const newMap = new Map(brAnswers);
+        newMap.set(currentQid, '');
+        setBrAnswers(newMap);
         timerRef.current.recordAnswer(currentQid, '');
       }
     }
     
-    setEliminatedAnswers(new Map(eliminatedAnswers.set(currentQid, newQidEliminated)));
+    const newEliminated = new Map(eliminatedAnswers);
+    newEliminated.set(currentQid, newQidEliminated);
+    setEliminatedAnswers(newEliminated);
   };
 
   const handleToggleFlag = async () => {
