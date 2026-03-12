@@ -23,7 +23,7 @@ import { ScoreReport } from '@/components/drill/ScoreReport';
 import { LRSectionResults } from '@/components/drill/LRSectionResults';
 import { EnhancedBlindReview } from '@/components/drill/EnhancedBlindReview';
 import { PracticeSetResults } from '@/components/drill/PracticeSetResults';
-import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
+import { TimerProvider, useTimerContextSafe } from '@/contexts/TimerContext';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
