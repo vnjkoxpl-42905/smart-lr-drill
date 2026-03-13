@@ -16,7 +16,7 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
   // Typewriter effect
   const typeCharacter = useCallback(() => {
     let currentIndex = 0;
-    const typingTimers: ReturnType<typeof setTimeout>[] = [];
+    const typingTimers: NodeJS.Timeout[] = [];
     
     const scheduleNextChar = () => {
       if (currentIndex < fullText.length) {
@@ -64,7 +64,7 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
 
   // Start typewriter when text-reveal phase begins
   useEffect(() => {
-    let typingTimers: ReturnType<typeof setTimeout>[] = [];
+    let typingTimers: NodeJS.Timeout[] = [];
     
     if (phase === 'text-reveal' && !prefersReducedMotion) {
       typingTimers = typeCharacter();

@@ -4,6 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useUserSettings } from '@/contexts/UserSettingsContext';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
@@ -23,13 +24,13 @@ import { ScoreReport } from '@/components/drill/ScoreReport';
 import { LRSectionResults } from '@/components/drill/LRSectionResults';
 import { EnhancedBlindReview } from '@/components/drill/EnhancedBlindReview';
 import { PracticeSetResults } from '@/components/drill/PracticeSetResults';
-import { TimerProvider, useTimerContextSafe } from '@/contexts/TimerContext';
+import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
 import { normalizeText } from '@/lib/utils';
 import { captureTextSelection, replaceOverlappingHighlights, type Highlight, type HighlightColor } from '@/lib/highlightUtils';
-import { ArrowLeft, CheckCircle, X, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import { ArrowLeft, CheckCircle, X, XCircle, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
@@ -48,7 +49,6 @@ import type { DrillMode, DrillSession, FullSectionConfig, TypeDrillConfig, Timer
 import { QuestionPoolService } from '@/lib/questionPoolService';
 import { QuestionPoolChip } from '@/components/drill/QuestionPoolChip';
 import { QuestionPoolExhausted } from '@/components/drill/QuestionPoolExhausted';
-import { AdaptiveExplanationPanel } from '@/components/drill/AdaptiveExplanationPanel';
 import { toast } from 'sonner';
 import { QuestionTimer } from '@/lib/questionTimer';
 
@@ -102,13 +102,11 @@ function DrillContent() {
   const [isRetryAfterWrong, setIsRetryAfterWrong] = React.useState(false);
   const [correctExplanation, setCorrectExplanation] = React.useState<string>('');
   const [showReviewButton, setShowReviewButton] = React.useState(false);
-  const [isGrading, setIsGrading] = React.useState(false);
-  const [hadWrongAttempt, setHadWrongAttempt] = React.useState(false); // Track if user had any wrong attempts
   
   // New post-section flow states
   const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
   const [autoReviewQids, setAutoReviewQids] = React.useState<string[]>([]);
-  const [longPressTimer, setLongPressTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
+  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
   
   // Question pool state
   const [poolStatus, setPoolStatus] = React.useState<string>('');
@@ -123,7 +121,7 @@ function DrillContent() {
   const [hideTimer, setHideTimer] = React.useState(false);
   const [showAnswerRevealed, setShowAnswerRevealed] = React.useState<Map<string, boolean>>(new Map());
   
-  const timer = useTimerContextSafe();
+  const timer = hasTimer ? useTimerContext() : null;
 
   // BR only for Full Section and Type Drill modes
   const brEnabled = session?.mode === 'full-section' || session?.mode === 'type-drill';
@@ -296,7 +294,6 @@ function DrillContent() {
     setIsRetryAfterWrong(false);
     setCorrectExplanation('');
     setShowReviewButton(false);
-    setHadWrongAttempt(false);
     checkIfFlagged();
   }, []);
 
@@ -395,17 +392,10 @@ function DrillContent() {
   };
 
   const handleAnswerSelect = (answer: string) => {
-    // Disable interactions while grading or when tutor is open
-    if (isGrading || tutorChatOpen) return;
-
     // In practice-set mode, don't lock after answer selection
     // In adaptive mode after wrong answer, allow unlimited retries (don't lock)
     if (!isPracticeSetMode && !isRetryAfterWrong && confidence !== null) return;
-
-    // Any new selection should hide any solution/journal UI until finished
-    setShowSolution(false);
-    setShowReviewButton(false);
-
+    
     // Toggle behavior: clicking same answer deselects it
     if (selectedAnswer === answer) {
       setSelectedAnswer('');
@@ -414,7 +404,7 @@ function DrillContent() {
         const newAttempts = new Map(session.attempts);
         newAttempts.delete(currentQuestion.qid);
         setSession({ ...session, attempts: newAttempts });
-
+        
         // Record answer change in practice-set mode
         if (isPracticeSetMode) {
           questionTimer.current.recordAnswer(currentQuestion.qid, '');
@@ -426,7 +416,7 @@ function DrillContent() {
       if ((session?.mode === 'full-section' || isPracticeSetMode) && currentQuestion) {
         const newAttempts = new Map(session.attempts);
         const existingAttempt = newAttempts.get(currentQuestion.qid);
-
+        
         newAttempts.set(currentQuestion.qid, {
           selectedAnswer: answer,
           correct: answer === currentQuestion.correctAnswer,
@@ -437,7 +427,7 @@ function DrillContent() {
           answerRevealed: existingAttempt?.answerRevealed || false,
         });
         setSession({ ...session, attempts: newAttempts });
-
+        
         // Record answer change in practice-set mode
         if (isPracticeSetMode) {
           questionTimer.current.recordAnswer(currentQuestion.qid, answer);
@@ -494,7 +484,7 @@ React.useEffect(() => {
       return;
     }
     // Adaptive: wait for confidence
-    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen && !isGrading) {
+    if (answerLocked && confidence !== null && !showSolution && !tutorChatOpen) {
       handleSubmit();
     }
   }
@@ -658,28 +648,12 @@ React.useEffect(() => {
 
   const handleSubmit = async () => {
     if (!currentQuestion || !selectedAnswer || confidence === null || !session) return;
-    if (isGrading) return; // Prevent double-submit
-    setIsGrading(true);
-    // Capture immutable snapshot to avoid stale state
-    const submittedAnswer = selectedAnswer;
-    const submittedQuestion = currentQuestion;
-    const submittedConfidence = confidence;
 
-    console.debug('handleSubmit called', {
-      mode: session.mode,
-      qid: submittedQuestion.qid,
-      selectedAnswer: submittedAnswer,
-      correctAnswer: submittedQuestion.correctAnswer
-    });
-
-    try {
-    const correct = submittedAnswer === submittedQuestion.correctAnswer;
+    const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // Adaptive mode: Tutor-first flow
+    // Adaptive mode: Open tutor after EVERY submission with latest answer
     if (session.mode === 'adaptive') {
-      console.debug('Adaptive mode submit:', { correct, selectedAnswer });
-      
       // Calculate attempt number for this question
       const attemptsForThisQuestion = Array.from(session.attempts.entries())
         .filter(([qid]) => qid === currentQuestion.qid);
@@ -725,31 +699,22 @@ React.useEffect(() => {
       setSession({ ...session, attempts: newAttempts });
 
       if (!correct) {
-        // WRONG ANSWER: Show tutor ONLY, no solution reveal
-        console.debug('Wrong answer - opening tutor:', {
-          qid: currentQuestion.qid,
-          attempt: currentAttemptNumber,
-          answer: selectedAnswer
-        });
-        
+        // Wrong answer: Show feedback but DON'T reveal solution
         setIsRetryAfterWrong(true);
-        setHadWrongAttempt(true); // Track that user had at least one wrong attempt
-        // Make sure solution is hidden
-        setShowSolution(false);
-        setShowReviewButton(false);
-        
-        // Open tutor after brief delay
         setTimeout(() => {
           if (currentQuestion) {
+            console.debug('Opening tutor (wrong answer):', {
+              qid: currentQuestion.qid,
+              attempt: currentAttemptNumber,
+              answer: selectedAnswer
+            });
             setTutorQuestionSnapshot(currentQuestion);
             setTutorAttemptNumber(currentAttemptNumber);
             setTutorChatOpen(true);
           }
         }, 150);
       } else {
-        // CORRECT ANSWER: Log to WAJ and reveal solution with actions
-        console.debug('Correct answer - showing solution');
-        
+        // Correct answer - Log to WAJ and show solution with Next button
         const { logCorrectAnswer } = await import('@/lib/wajService');
         try {
           await logCorrectAnswer({
@@ -774,9 +739,9 @@ React.useEffect(() => {
           await generateCorrectExplanation();
         }
         
-        // Reveal solution with Next and optional journal button
         setShowSolution(true);
         setShowReviewButton(true);
+        // Don't auto-advance - user clicks Next
       }
     } else {
       // Non-adaptive modes: original behavior
@@ -818,12 +783,6 @@ React.useEffect(() => {
 
       setSession({ ...session, attempts: newAttempts });
       setShowSolution(true);
-    }
-    } catch (err) {
-      console.error('handleSubmit error:', err);
-      toast.error('Something went wrong. Please try again.');
-    } finally {
-      setIsGrading(false);
     }
   };
 
@@ -1137,7 +1096,6 @@ React.useEffect(() => {
       }
       // Number keys 1-5 for selecting A-E
       else if (['1', '2', '3', '4', '5'].includes(e.key)) {
-        if (tutorChatOpen || isGrading) return;
         e.preventDefault();
         const answerKeys = Object.keys(currentQuestion.answerChoices);
         const answerIndex = parseInt(e.key) - 1;
@@ -1580,6 +1538,31 @@ React.useEffect(() => {
     ? (session.currentIndex / session.questionQueue.length) * 100
     : undefined;
 
+  const isAnswered = session.attempts.has(currentQuestion.qid);
+  const previousAttempt = session.attempts.get(currentQuestion.qid);
+
+  // Helper function to get answer groups split by selected answer
+  const getAnswerGroups = () => {
+    const answerEntries = Object.entries(currentQuestion.answerChoices);
+    const selectedIndex = answerEntries.findIndex(([key]) => key === selectedAnswer);
+    
+    // Guard against invalid selectedIndex
+    if (selectedIndex === -1) {
+      console.warn('Selected answer not found in answer choices', { selectedAnswer, qid: currentQuestion.qid });
+      return {
+        before: [],
+        selected: answerEntries[0] || ['A', ''], // Fallback to first answer
+        after: answerEntries.slice(1),
+      };
+    }
+    
+    return {
+      before: answerEntries.slice(0, selectedIndex),
+      selected: answerEntries[selectedIndex],
+      after: answerEntries.slice(selectedIndex + 1),
+    };
+  };
+
   // Helper function to render a single answer choice
   const renderAnswerChoice = (
     key: string, 
@@ -1593,15 +1576,11 @@ React.useEffect(() => {
   ) => {
     const { isSelected = false, showRadio = true, inFocusedMode = false } = options;
     const isCorrect = key === currentQuestion.correctAnswer;
-    const isAdaptiveMode = session?.mode === 'adaptive';
-    
-    // For adaptive mode: show green ONLY on the selected answer when solution is shown (which means it's correct)
-    // For other modes: show green on correct answer when solution is shown
-    const showGreenHighlight = showSolution && (
-      isAdaptiveMode 
-        ? (isSelected && isCorrect) // Adaptive: green only on selected (which is correct)
-        : isCorrect // Other modes: green on correct answer
-    );
+    const isWrong = key === selectedAnswer && !isCorrect;
+    // Hide feedback during section mode
+    const showFeedback = session?.mode !== 'full-section' && answerLocked && isSelected && confidence !== null;
+    // Show green highlight when solution is revealed and this is the correct answer
+    const showGreenHighlight = showSolution && isCorrect;
 
     const isSectionMode = session?.mode === 'full-section';
     const isEliminated = eliminatedAnswers.has(key);
@@ -1665,34 +1644,40 @@ React.useEffect(() => {
           >
             <span className="font-semibold mr-3 text-muted-foreground">({key})</span>
             <span>{text}</span>
+            {!isSectionMode && showFeedback && (
+              <Badge
+                variant={isCorrect ? 'default' : 'destructive'}
+                className="ml-2"
+              >
+                {isCorrect ? 'Correct' : 'Wrong'}
+              </Badge>
+            )}
           </Label>
         </div>
         
-        {/* × elimination toggle - hide when solution is shown in adaptive mode */}
-        {!(isAdaptiveMode && showSolution) && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handleEliminateAnswer(key);
-            }}
+        {/* × elimination toggle */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            handleEliminateAnswer(key);
+          }}
+          className={cn(
+            "shrink-0 flex items-center justify-center",
+            "w-11 h-11 -my-3 -mr-3",
+            "rounded-md transition-all duration-[120ms]",
+            "hover:bg-accent/50 active:scale-95",
+            "text-muted-foreground hover:text-foreground"
+          )}
+          aria-pressed={isEliminated}
+          aria-label={`Cross out choice ${key}`}
+          title={isEliminated ? `Restore choice ${key}` : `Cross out choice ${key}`}
+        >
+          <X 
             className={cn(
-              "shrink-0 flex items-center justify-center",
-              "w-11 h-11 -my-3 -mr-3",
-              "rounded-md transition-all duration-[120ms]",
-              "hover:bg-accent/50 active:scale-95",
-              "text-muted-foreground hover:text-foreground"
-            )}
-            aria-pressed={isEliminated}
-            aria-label={`Cross out choice ${key}`}
-            title={isEliminated ? `Restore choice ${key}` : `Cross out choice ${key}`}
-          >
-            <X 
-              className={cn(
-                "w-5 h-5 transition-all duration-[120ms]"
-              )} 
-            />
-          </button>
-        )}
+              "w-5 h-5 transition-all duration-[120ms]"
+            )} 
+          />
+        </button>
       </div>
     );
   };
@@ -1896,22 +1881,19 @@ React.useEffect(() => {
                     userAnswer={selectedAnswer}
                     attemptNumber={tutorAttemptNumber}
                     mode={session?.mode}
-                onClose={() => {
-                  console.debug('Tutor closed, returning to', { qid: currentQuestion?.qid });
-                  // Prevent unintended auto-submit right after closing tutor
-                  setSuppressAutoSubmitOnce(true);
-                  setTutorChatOpen(false);
-                  setTutorQuestionSnapshot(null);
-                  setAnswerLocked(false); // Clear red state, re-enable choices
-                  // Clear previous selection to allow fresh retry (adaptive mode only)
-                  if (session?.mode === 'adaptive') {
-                    setSelectedAnswer('');
-                    setConfidence(null);
-                    setEliminatedAnswers(new Set()); // Clear eliminated choices for fresh retry
-                    setShowSolution(false); // Ensure solution stays hidden
-                    setShowReviewButton(false); // Hide review button
-                  }
-                }}
+onClose={() => {
+  console.debug('Tutor closed, returning to', { qid: currentQuestion?.qid });
+  // Prevent unintended auto-submit right after closing tutor
+  setSuppressAutoSubmitOnce(true);
+  setTutorChatOpen(false);
+  setTutorQuestionSnapshot(null);
+  setAnswerLocked(false); // Clear red state, re-enable choices
+  // Clear previous selection to allow fresh retry (adaptive mode only)
+  if (session?.mode === 'adaptive') {
+    setSelectedAnswer('');
+    setConfidence(null);
+  }
+}}
                   />
                 </ErrorBoundary>
               </div>
@@ -1942,16 +1924,37 @@ React.useEffect(() => {
 
             {/* Answer choices */}
             {tutorChatOpen ? (
-              // When tutor is open: show all choices visible (no blur) but not clickable
-              // Only the currently selected answer is highlighted
-              <div className="space-y-0 pointer-events-none">
-                {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
-                  renderAnswerChoice(key, text, { 
-                    isSelected: key === selectedAnswer,
-                    showRadio: true,
-                    inFocusedMode: false
-                  })
-                )}
+              <div className="space-y-0">
+                {(() => {
+                  const { before, selected, after } = getAnswerGroups();
+                  
+                  return (
+                    <>
+                      {before.length > 0 && (
+                        <div className="opacity-20 blur-[1px] pointer-events-none">
+                          {before.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
+                        </div>
+                      )}
+
+                      <div className="relative my-4">
+                        <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-accent-bronze/10 rounded-lg blur-sm" />
+                        <div className="relative">
+                          {renderAnswerChoice(selected[0], selected[1], { 
+                            isSelected: true, 
+                            showRadio: false,
+                            inFocusedMode: true
+                          })}
+                        </div>
+                      </div>
+
+                      {after.length > 0 && (
+                        <div className="opacity-20 blur-[1px] pointer-events-none">
+                          {after.map(([key, text]) => renderAnswerChoice(key, text, { showRadio: false, inFocusedMode: true }))}
+                        </div>
+                      )}
+                    </>
+                  );
+                })()}
               </div>
             ) : (
               <RadioGroup
@@ -2013,67 +2016,55 @@ React.useEffect(() => {
               </div>
             )}
 
-            {/* Solution - Adaptive mode: clean success state */}
-            {showSolution && session.mode === 'adaptive' && (
-              <div className="mt-6 space-y-4">
-                {/* Auto-reveal explanation panel */}
-                <AdaptiveExplanationPanel
-                  question={currentQuestion}
-                  selectedAnswer={selectedAnswer}
-                  isVisible={true}
-                />
-
-                {/* Action buttons */}
-                <div className="flex flex-wrap gap-3 pt-4 border-t border-border">
-                  <Button
-                    onClick={handleNext}
-                    size="lg"
-                    className="flex-1 min-w-[140px]"
-                  >
-                    Next Question
-                  </Button>
-                  
-                  <Button
-                    variant="outline"
-                    onClick={() => {
-                      // Toggle full explanation visibility (could expand inline or open modal)
-                      toast.info('Full explanation shown above');
-                    }}
-                    className="flex-1 min-w-[140px]"
-                  >
-                    View Full Explanation
-                  </Button>
-                  
-                  {/* Only show WAJ button if user had wrong attempts */}
-                  {hadWrongAttempt && (
-                    <Button
-                      variant="outline"
-                      onClick={() => setWajModalOpen(true)}
-                      className="flex-1 min-w-[140px]"
-                    >
-                      Wrong Answer Journal
-                    </Button>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* Solution - Non-adaptive modes */}
-            {showSolution && session.mode !== 'adaptive' && (
+            {/* Solution */}
+            {showSolution && (
               <div className="mt-6 p-6 border-t space-y-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className={cn(
-                    "w-5 h-5",
-                    selectedAnswer === currentQuestion.correctAnswer 
-                      ? "text-green-500" 
-                      : "text-muted-foreground"
-                  )} />
+                  {selectedAnswer === currentQuestion.correctAnswer ? (
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                  ) : (
+                    <XCircle className="w-5 h-5 text-destructive" />
+                  )}
                   <span className="font-semibold text-lg">
                     {selectedAnswer === currentQuestion.correctAnswer
                       ? 'Correct!'
                       : `The correct answer is (${currentQuestion.correctAnswer}).`}
                   </span>
                 </div>
+                
+                {/* Good job message with AI explanation for retry success */}
+                {isRetryAfterWrong && selectedAnswer === currentQuestion.correctAnswer && session.mode === 'adaptive' && (
+                  <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-green-700 dark:text-green-400 mb-2">🎉 Good Job!</h4>
+                    <p className="text-sm text-green-600 dark:text-green-300 leading-relaxed">
+                      {correctExplanation || 'You got it right on your second try! That shows great learning.'}
+                    </p>
+                  </div>
+                )}
+
+                {/* Optional Review button for WAJ */}
+                {showReviewButton && session.mode === 'adaptive' && (
+                  <Button
+                    variant="outline"
+                    onClick={() => setWajModalOpen(true)}
+                    className="w-full mt-4"
+                  >
+                    Review in Journal
+                  </Button>
+                )}
+
+                {/* Next button for adaptive mode */}
+                {session.mode === 'adaptive' && (
+                  <div className="flex justify-end pt-2">
+                    <Button
+                      onClick={handleNext}
+                      size="lg"
+                      className="min-w-[120px]"
+                    >
+                      Next Question
+                    </Button>
+                  </div>
+                )}
               </div>
             )}
           </div>

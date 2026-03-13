@@ -130,9 +130,7 @@ export function BlindReviewFlow({ session, selectedQids, onComplete }: BlindRevi
     });
     
     const updatedHighlights = replaceOverlappingHighlights(currentHighlights, newHighlight);
-    const newHighlights = new Map(highlights);
-    newHighlights.set(currentQid, updatedHighlights);
-    setHighlights(newHighlights);
+    setHighlights(new Map(highlights.set(currentQid, updatedHighlights)));
     
     window.getSelection()?.removeAllRanges();
   };
@@ -147,9 +145,7 @@ export function BlindReviewFlow({ session, selectedQids, onComplete }: BlindRevi
     
     const currentHighlights = highlights.get(currentQid) || [];
     const updated = currentHighlights.filter(h => h.id !== highlightId);
-    const newHighlights = new Map(highlights);
-    newHighlights.set(currentQid, updated);
-    setHighlights(newHighlights);
+    setHighlights(new Map(highlights.set(currentQid, updated)));
   };
 
   const handleUndo = () => {

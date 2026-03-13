@@ -238,7 +238,7 @@ export default function WrongAnswerJournal() {
                 </div>
 
                 <div className="space-y-4">
-                  {(Array.isArray(selectedEntry.history_json) ? selectedEntry.history_json as WAJHistoryItem[] : []).map((item, idx) => (
+                  {(selectedEntry.history_json as WAJHistoryItem[]).map((item, idx) => (
                     <Card key={idx} className="p-4">
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">

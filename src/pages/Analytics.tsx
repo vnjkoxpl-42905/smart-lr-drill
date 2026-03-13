@@ -202,7 +202,7 @@ const Analytics = () => {
 
   const startDrill = (type?: string, level?: number, count = 6) => {
     const manifest = questionBank.getManifest();
-    const pts = Object.keys(manifest.byPT).map(k => parseInt(k.replace(/\D/g, ''), 10)).filter(n => !isNaN(n));
+    const pts = Object.keys(manifest.byPT).map(Number);
     
     navigate('/drill', {
       state: {

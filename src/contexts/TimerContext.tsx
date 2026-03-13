@@ -37,7 +37,3 @@ export function useTimerContext() {
   }
   return context;
 }
-
-export function useTimerContextSafe(): TimerContextValue | null {
-  return React.useContext(TimerContext);
-}
