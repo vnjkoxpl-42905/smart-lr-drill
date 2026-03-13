@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+// RadioGroup removed - using custom radio indicators to avoid Radix context errors
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
@@ -1604,12 +1604,12 @@ React.useEffect(() => {
             isSectionMode && !isEliminated && "hover:opacity-70"
           )}
         >
-          {inFocusedMode && isSelected ? (
+          {isSelected ? (
             <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
               <div className="w-2 h-2 rounded-full bg-primary-foreground" />
             </div>
           ) : showRadio ? (
-            <RadioGroupItem value={key} id={`answer-${key}`} className="mt-0 pointer-events-none" />
+            <div className="w-5 h-5 rounded-full border-2 border-muted-foreground/40" />
           ) : (
             <div className="w-5 h-5" />
           )}
@@ -1957,18 +1957,14 @@ onClose={() => {
                 })()}
               </div>
             ) : (
-              <RadioGroup
-                value={selectedAnswer}
-                onValueChange={handleAnswerSelect}
-                className="space-y-0 -mx-5"
-              >
+              <div className="space-y-0 -mx-5">
                 {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
                   renderAnswerChoice(key, text, { 
                     isSelected: key === selectedAnswer,
                     showRadio: true
                   })
                 )}
-              </RadioGroup>
+              </div>
             )}
 
             {/* Confidence selector - for adaptive and practice-set modes */}
