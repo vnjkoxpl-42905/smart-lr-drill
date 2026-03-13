@@ -1604,12 +1604,12 @@ React.useEffect(() => {
             isSectionMode && !isEliminated && "hover:opacity-70"
           )}
         >
-          {inFocusedMode && isSelected ? (
+          {isSelected ? (
             <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
               <div className="w-2 h-2 rounded-full bg-primary-foreground" />
             </div>
           ) : showRadio ? (
-            <RadioGroupItem value={key} id={`answer-${key}`} className="mt-0 pointer-events-none" />
+            <div className="w-5 h-5 rounded-full border-2 border-muted-foreground/40" />
           ) : (
             <div className="w-5 h-5" />
           )}
