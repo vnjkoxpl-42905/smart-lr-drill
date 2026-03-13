@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-// RadioGroup removed - using custom radio indicators to avoid Radix context errors
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { TimerControls } from '@/components/drill/TimerControls';
 import { TutorChatModal } from '@/components/drill/TutorChatModal';
@@ -76,8 +76,6 @@ function DrillContent() {
   const [tutorChatOpen, setTutorChatOpen] = React.useState(false);
   const [suppressAutoSubmitOnce, setSuppressAutoSubmitOnce] = React.useState(false);
   const [tutorQuestionSnapshot, setTutorQuestionSnapshot] = React.useState<LRQuestion | null>(null);
-  const [tutorAttemptNumber, setTutorAttemptNumber] = React.useState(1);
-  const [advanceToken, setAdvanceToken] = React.useState(0);
   
   const [tutorMessages, setTutorMessages] = React.useState<Array<{role: 'user' | 'assistant'; content: string}>>([]);
   const [wajModalOpen, setWajModalOpen] = React.useState(false);
@@ -278,8 +276,46 @@ function DrillContent() {
     initializeSession();
   }, [state, navigate, classId, settings.allowRepeats, settings.preferUnseen, settings.recycleAfterDays]);
 
-  // Reset UI when currentQuestion changes
-  const resetForNewQuestion = React.useCallback(() => {
+  // Load current question and start timing
+  React.useEffect(() => {
+    if (!session) return;
+
+    if (session.mode === 'adaptive') {
+      // Adaptive mode: use engine to select
+      const allQuestions = questionBank.getAllQuestions();
+      const recentQids = new Set(
+        Array.from(session.attempts.keys()).slice(-10)
+      );
+      
+      // Calculate current ability from attempts
+      const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
+        const q = questionBank.getQuestion(qid)!;
+        return {
+          qid,
+          correct: attempt.correct,
+          time_ms: attempt.timeMs,
+          qtype: q.qtype,
+          difficulty: q.difficulty,
+          timestamp: new Date(attempt.timestamp),
+        };
+      });
+      
+      const ability = adaptiveEngine.calculateAbility(attemptRecords);
+      const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
+      
+      setCurrentQuestion(nextQuestion);
+    } else {
+      // Full Section or Type Drill: sequential
+      if (session.currentIndex < session.questionQueue.length) {
+        const qid = session.questionQueue[session.currentIndex];
+        const question = questionBank.getQuestion(qid);
+        setCurrentQuestion(question || null);
+      } else {
+        // Finished
+        setCurrentQuestion(null);
+      }
+    }
+
     setSelectedAnswer('');
     setConfidence(null);
     setShowSolution(false);
@@ -294,77 +330,18 @@ function DrillContent() {
     setIsRetryAfterWrong(false);
     setCorrectExplanation('');
     setShowReviewButton(false);
-    checkIfFlagged();
-  }, []);
-
-  // Run reset whenever currentQuestion changes
-  React.useEffect(() => {
-    if (currentQuestion) {
-      resetForNewQuestion();
-      
-      // For section mode, restore the saved answer if navigating back
-      if (session?.mode === 'full-section') {
-        const savedAttempt = session.attempts.get(currentQuestion.qid);
-        if (savedAttempt) {
-          setSelectedAnswer(savedAttempt.selectedAnswer);
-        }
+    
+    // For section mode, restore the saved answer if navigating back
+    if (session?.mode === 'full-section' && currentQuestion) {
+      const savedAttempt = session.attempts.get(currentQuestion.qid);
+      if (savedAttempt) {
+        setSelectedAnswer(savedAttempt.selectedAnswer);
       }
     }
-  }, [currentQuestion, resetForNewQuestion, session?.mode, session?.attempts]);
-
-  // Load current question (non-adaptive modes)
-  React.useEffect(() => {
-    if (!session) return;
     
-    // Skip adaptive mode - handled by separate effect
-    if (session.mode === 'adaptive') return;
-
-    // Full Section or Type Drill: sequential
-    if (session.currentIndex < session.questionQueue.length) {
-      const qid = session.questionQueue[session.currentIndex];
-      const question = questionBank.getQuestion(qid);
-      console.debug('[Non-adaptive] set currentQuestion due to index', { index: session.currentIndex, qid });
-      setCurrentQuestion(question || null);
-    } else {
-      // Finished
-      setCurrentQuestion(null);
-    }
-  }, [session?.mode, session?.currentIndex, session?.questionQueue]);
-
-  // Adaptive progression: only advance when advanceToken changes
-  React.useEffect(() => {
-    if (!session || session.mode !== 'adaptive') return;
-    if (advanceToken === 0) return; // wait for initial kick-off
-    
-    const allQuestions = questionBank.getAllQuestions();
-    
-    // Calculate current ability from attempts
-    const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
-      const q = questionBank.getQuestion(qid)!;
-      return {
-        qid,
-        correct: attempt.correct,
-        time_ms: attempt.timeMs,
-        qtype: q.qtype,
-        difficulty: q.difficulty,
-        timestamp: new Date(attempt.timestamp),
-      };
-    });
-    
-    const ability = adaptiveEngine.calculateAbility(attemptRecords);
-    const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
-    
-    console.debug('[Adaptive] set currentQuestion due to advanceToken', { advanceToken, qid: nextQuestion?.qid });
-    setCurrentQuestion(nextQuestion || null);
-  }, [advanceToken, session?.mode]);
-
-  // Initial adaptive question kick-off
-  React.useEffect(() => {
-    if (session?.mode === 'adaptive' && advanceToken === 0 && !currentQuestion) {
-      console.debug('[Adaptive] Initial kick-off, setting advanceToken to 1');
-      setAdvanceToken(1);
-    }
-  }, [session?.mode, advanceToken, currentQuestion]);
+    // Check if current question is flagged
+    checkIfFlagged();
+  }, [session]);
 
   const checkIfFlagged = async () => {
     if (!currentQuestion || !user) {
@@ -434,8 +411,14 @@ function DrillContent() {
         }
       }
 
-      // In adaptive retry mode, user must select confidence again for each attempt
-      // No auto-submit - user controls when to submit
+      // Adaptive mode retry: if already have confidence and retrying, auto-submit
+      if (session?.mode === 'adaptive' && isRetryAfterWrong && confidence !== null) {
+        setAnswerLocked(true);
+        // Trigger submit after state updates
+        requestAnimationFrame(() => {
+          handleSubmit();
+        });
+      }
     }
   };
 
@@ -652,17 +635,12 @@ React.useEffect(() => {
     const correct = selectedAnswer === currentQuestion.correctAnswer;
     const timeMs = Math.floor(performance.now() - questionStartTime);
 
-    // Adaptive mode: Open tutor after EVERY submission with latest answer
-    if (session.mode === 'adaptive') {
-      // Calculate attempt number for this question
-      const attemptsForThisQuestion = Array.from(session.attempts.entries())
-        .filter(([qid]) => qid === currentQuestion.qid);
-      const currentAttemptNumber = attemptsForThisQuestion.length + 1;
-
+    // After wrong answer in adaptive mode, save attempt FIRST then show Joshua's feedback
+    if (!correct && session.mode === 'adaptive') {
       // SAVE ATTEMPT FIRST
       await saveAttemptToDatabase({
         qid: currentQuestion.qid,
-        correct,
+        correct: false,
         time_ms: timeMs,
         qtype: currentQuestion.qtype,
         level: currentQuestion.difficulty,
@@ -674,7 +652,7 @@ React.useEffect(() => {
       const newAttempts = new Map(session.attempts);
       newAttempts.set(currentQuestion.qid, {
         selectedAnswer,
-        correct,
+        correct: false,
         timeMs,
         timestamp: Date.now(),
         confidence,
@@ -682,6 +660,57 @@ React.useEffect(() => {
       });
 
       // Record with adaptive engine
+      adaptiveEngine.recordAttempt({
+        qid: currentQuestion.qid,
+        correct: false,
+        time_ms: timeMs,
+        qtype: currentQuestion.qtype,
+        difficulty: currentQuestion.difficulty,
+        timestamp: new Date(),
+      });
+
+      // Track question usage
+      if (classId && session?.mode) {
+        QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
+      }
+
+      setSession({ ...session, attempts: newAttempts });
+
+      // Show red "Wrong" for 150ms, then open tutor (do not reveal solution yet)
+      setIsRetryAfterWrong(true);
+      setTimeout(() => {
+        if (currentQuestion) {
+          console.debug('Opening tutor:', {
+            qid: currentQuestion.qid,
+            mode: session.mode,
+            hasSnapshot: !!currentQuestion
+          });
+          setTutorQuestionSnapshot(currentQuestion);
+          setTutorChatOpen(true);
+        }
+      }, 150);
+    } else {
+      // Correct answer - save and show solution with Next button (don't auto-advance)
+      await saveAttemptToDatabase({
+        qid: currentQuestion.qid,
+        correct: true,
+        time_ms: timeMs,
+        qtype: currentQuestion.qtype,
+        level: currentQuestion.difficulty,
+        confidence,
+        mode: session.mode,
+      });
+
+      const newAttempts = new Map(session.attempts);
+      newAttempts.set(currentQuestion.qid, {
+        selectedAnswer,
+        correct,
+        timeMs,
+        timestamp: Date.now(),
+        confidence,
+        reviewDone: false,
+      });
+
       adaptiveEngine.recordAttempt({
         qid: currentQuestion.qid,
         correct,
@@ -696,93 +725,37 @@ React.useEffect(() => {
         QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
       }
 
-      setSession({ ...session, attempts: newAttempts });
-
-      if (!correct) {
-        // Wrong answer: Show feedback but DON'T reveal solution
-        setIsRetryAfterWrong(true);
-        setTimeout(() => {
-          if (currentQuestion) {
-            console.debug('Opening tutor (wrong answer):', {
-              qid: currentQuestion.qid,
-              attempt: currentAttemptNumber,
-              answer: selectedAnswer
-            });
-            setTutorQuestionSnapshot(currentQuestion);
-            setTutorAttemptNumber(currentAttemptNumber);
-            setTutorChatOpen(true);
-          }
-        }, 150);
-      } else {
-        // Correct answer - Log to WAJ and show solution with Next button
-        const { logCorrectAnswer } = await import('@/lib/wajService');
-        try {
-          await logCorrectAnswer({
-            user_id: user?.id || '',
-            qid: currentQuestion.qid,
-            pt: currentQuestion.pt,
-            section: currentQuestion.section,
-            qnum: currentQuestion.qnum,
-            qtype: currentQuestion.qtype,
-            level: currentQuestion.difficulty,
-            chosen_answer: selectedAnswer,
-            correct_answer: currentQuestion.correctAnswer,
-            time_ms: timeMs,
-            confidence_1_5: confidence,
-          });
-        } catch (error) {
-          console.error('Failed to log to WAJ:', error);
-        }
-        
-        // If this is a retry after wrong answer, generate explanation
-        if (isRetryAfterWrong) {
-          await generateCorrectExplanation();
-        }
-        
-        setShowSolution(true);
-        setShowReviewButton(true);
-        // Don't auto-advance - user clicks Next
-      }
-    } else {
-      // Non-adaptive modes: original behavior
-      const correct = selectedAnswer === currentQuestion.correctAnswer;
-      const timeMs = Math.floor(performance.now() - questionStartTime);
-
-      await saveAttemptToDatabase({
-        qid: currentQuestion.qid,
-        correct,
-        time_ms: timeMs,
-        qtype: currentQuestion.qtype,
-        level: currentQuestion.difficulty,
-        confidence,
-        mode: session.mode,
-      });
-
-      const newAttempts = new Map(session.attempts);
-      newAttempts.set(currentQuestion.qid, {
-        selectedAnswer,
-        correct,
-        timeMs,
-        timestamp: Date.now(),
-        confidence,
-        reviewDone: false,
-      });
-
-      adaptiveEngine.recordAttempt({
-        qid: currentQuestion.qid,
-        correct,
-        time_ms: timeMs,
-        qtype: currentQuestion.qtype,
-        difficulty: currentQuestion.difficulty,
-        timestamp: new Date(),
-      });
-
-      if (classId && session?.mode) {
-        QuestionPoolService.markQuestionSeen(currentQuestion.qid, classId, session.mode);
+      // Log correct answer to WAJ if there's an existing wrong entry
+      const { logCorrectAnswer } = await import('@/lib/wajService');
+      try {
+        await logCorrectAnswer({
+          user_id: user?.id || '',
+          qid: currentQuestion.qid,
+          pt: currentQuestion.pt,
+          section: currentQuestion.section,
+          qnum: currentQuestion.qnum,
+          qtype: currentQuestion.qtype,
+          level: currentQuestion.difficulty,
+          chosen_answer: selectedAnswer,
+          correct_answer: currentQuestion.correctAnswer,
+          time_ms: timeMs,
+          confidence_1_5: confidence,
+        });
+      } catch (error) {
+        console.error('Failed to log to WAJ:', error);
       }
 
       setSession({ ...session, attempts: newAttempts });
+      
+      
+      // If this is a retry after wrong answer, generate explanation
+      if (isRetryAfterWrong && session.mode === 'adaptive') {
+        await generateCorrectExplanation();
+      }
+      
       setShowSolution(true);
+      setShowReviewButton(true);
+      // Don't auto-advance - user clicks Next
     }
   };
 
@@ -960,9 +933,8 @@ React.useEffect(() => {
     if (!session) return;
 
     if (session.mode === 'adaptive') {
-      // Increment advanceToken to trigger next question selection
-      console.debug('[handleNext] Advancing adaptive question');
-      setAdvanceToken(t => t + 1);
+      // Just trigger re-render to get next question
+      setSession({ ...session });
     } else {
       // Move to next in queue
       if (session.currentIndex < session.questionQueue.length - 1) {
@@ -1604,12 +1576,12 @@ React.useEffect(() => {
             isSectionMode && !isEliminated && "hover:opacity-70"
           )}
         >
-          {isSelected ? (
+          {inFocusedMode && isSelected ? (
             <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
               <div className="w-2 h-2 rounded-full bg-primary-foreground" />
             </div>
           ) : showRadio ? (
-            <div className="w-5 h-5 rounded-full border-2 border-muted-foreground/40" />
+            <RadioGroupItem value={key} id={`answer-${key}`} className="mt-0 pointer-events-none" />
           ) : (
             <div className="w-5 h-5" />
           )}
@@ -1879,20 +1851,13 @@ React.useEffect(() => {
                     open={tutorChatOpen}
                     question={tutorQuestionSnapshot}
                     userAnswer={selectedAnswer}
-                    attemptNumber={tutorAttemptNumber}
-                    mode={session?.mode}
 onClose={() => {
-  console.debug('Tutor closed, returning to', { qid: currentQuestion?.qid });
+  console.debug('Closing tutor modal');
   // Prevent unintended auto-submit right after closing tutor
   setSuppressAutoSubmitOnce(true);
   setTutorChatOpen(false);
   setTutorQuestionSnapshot(null);
   setAnswerLocked(false); // Clear red state, re-enable choices
-  // Clear previous selection to allow fresh retry (adaptive mode only)
-  if (session?.mode === 'adaptive') {
-    setSelectedAnswer('');
-    setConfidence(null);
-  }
 }}
                   />
                 </ErrorBoundary>
@@ -1957,14 +1922,18 @@ onClose={() => {
                 })()}
               </div>
             ) : (
-              <div className="space-y-0 -mx-5">
+              <RadioGroup
+                value={selectedAnswer}
+                onValueChange={handleAnswerSelect}
+                className="space-y-0 -mx-5"
+              >
                 {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
                   renderAnswerChoice(key, text, { 
                     isSelected: key === selectedAnswer,
                     showRadio: true
                   })
                 )}
-              </div>
+              </RadioGroup>
             )}
 
             {/* Confidence selector - for adaptive and practice-set modes */}
