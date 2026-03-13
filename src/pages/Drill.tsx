@@ -1957,18 +1957,14 @@ onClose={() => {
                 })()}
               </div>
             ) : (
-              <RadioGroup
-                value={selectedAnswer}
-                onValueChange={handleAnswerSelect}
-                className="space-y-0 -mx-5"
-              >
+              <div className="space-y-0 -mx-5">
                 {Object.entries(currentQuestion.answerChoices).map(([key, text]) => 
                   renderAnswerChoice(key, text, { 
                     isSelected: key === selectedAnswer,
                     showRadio: true
                   })
                 )}
-              </RadioGroup>
+              </div>
             )}
 
             {/* Confidence selector - for adaptive and practice-set modes */}
