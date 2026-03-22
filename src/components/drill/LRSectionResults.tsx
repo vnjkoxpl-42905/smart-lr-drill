@@ -191,7 +191,7 @@ export function LRSectionResults({ session, brResults, classId, onBack }: LRSect
             const question = questionBank.getQuestion(stat.qid);
             if (question) {
               await logWrongAnswer({
-                user_id: user.id,
+                class_id: resolvedClassId,
                 qid: stat.qid,
                 pt: question.pt,
                 section: question.section,

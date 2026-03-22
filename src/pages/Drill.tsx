@@ -1346,6 +1346,7 @@ React.useEffect(() => {
         <LRSectionResults
           session={session}
           brResults={brResults}
+          classId={classId}
           onBack={() => navigate('/')}
         />
       );
