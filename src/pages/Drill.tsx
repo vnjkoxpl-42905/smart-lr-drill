@@ -538,7 +538,7 @@ React.useEffect(() => {
     const { logWrongAnswer } = await import('@/lib/wajService');
     try {
       await logWrongAnswer({
-        user_id: user?.id || '',
+        class_id: classId,
         qid: currentQuestion.qid,
         pt: currentQuestion.pt,
         section: currentQuestion.section,
