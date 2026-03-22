@@ -47,7 +47,7 @@ interface FocusArea {
   accuracy: number;
 }
 
-export function LRSectionResults({ session, brResults, onBack }: LRSectionResultsProps) {
+export function LRSectionResults({ session, brResults, classId, onBack }: LRSectionResultsProps) {
   const { user } = useAuth();
   const [expandedRows, setExpandedRows] = React.useState<Set<string>>(new Set());
   const [activeFilter, setActiveFilter] = React.useState<string | null>(null);
