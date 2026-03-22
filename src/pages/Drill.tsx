@@ -1232,6 +1232,7 @@ React.useEffect(() => {
             section: currentQuestion.section,
             qnum: currentQuestion.qnum,
             user_id: user.id,
+            class_id: classId,
           } as any);
         
         if (error && error.code !== '23505') { // Ignore unique constraint violation
