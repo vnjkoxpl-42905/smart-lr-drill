@@ -1461,7 +1461,7 @@ React.useEffect(() => {
       const medianTimeMs = times.length > 0 ? times[Math.floor(times.length / 2)] : 0;
 
       // Save BR session
-      const classId = (user as any).user_metadata?.class_id || user.id;
+      const brClassId = classId;
       await supabase.from('blind_review_sessions').insert({
         class_id: classId,
         session_id: sessionId,
