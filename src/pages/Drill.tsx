@@ -112,6 +112,7 @@ function DrillContent() {
   const [availablePoolSize, setAvailablePoolSize] = React.useState(0);
   const [poolExhausted, setPoolExhausted] = React.useState(false);
   const [classId, setClassId] = React.useState<string>('');
+  const [advanceToken, setAdvanceToken] = React.useState(0);
   
   // Practice-set mode state
   const [isPracticeSetMode, setIsPracticeSetMode] = React.useState(false);
