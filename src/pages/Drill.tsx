@@ -942,8 +942,8 @@ React.useEffect(() => {
     if (!session) return;
 
     if (session.mode === 'adaptive') {
-      // Just trigger re-render to get next question
-      setSession({ ...session });
+      // Increment advanceToken to trigger adaptive question selection
+      setAdvanceToken(t => t + 1);
     } else {
       // Move to next in queue
       if (session.currentIndex < session.questionQueue.length - 1) {
