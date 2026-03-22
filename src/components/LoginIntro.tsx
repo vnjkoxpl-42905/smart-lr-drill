@@ -16,7 +16,7 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
   // Typewriter effect
   const typeCharacter = useCallback(() => {
     let currentIndex = 0;
-    const typingTimers: NodeJS.Timeout[] = [];
+    const typingTimers: ReturnType<typeof setTimeout>[] = [];
     
     const scheduleNextChar = () => {
       if (currentIndex < fullText.length) {
