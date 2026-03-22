@@ -160,7 +160,7 @@ export function LRSectionResults({ session, brResults, classId, onBack }: LRSect
           if (s.initialCorrect) byDifficulty[s.difficulty].correct++;
         });
 
-        const classId = (user as any).user_metadata?.class_id || '';
+        const resolvedClassId = classId;
         const pt = session.fullSectionConfig?.pt || 0;
         const section = session.fullSectionConfig?.section || 0;
 
