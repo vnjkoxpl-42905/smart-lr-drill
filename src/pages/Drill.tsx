@@ -489,8 +489,14 @@ React.useEffect(() => {
     if (!question) return;
     
     try {
+      if (!classId) {
+        console.error('Cannot save attempt: missing class_id');
+        toast.error('Session error: missing class ID. Your answer was not saved.');
+        return;
+      }
       const { error } = await (supabase as any).from('attempts').insert({
         user_id: user?.id,
+        class_id: classId,
         qid: attemptData.qid,
         pt: question.pt,
         section: question.section,
