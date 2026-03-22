@@ -64,7 +64,7 @@ export function LoginIntro({ firstName, onComplete }: LoginIntroProps) {
 
   // Start typewriter when text-reveal phase begins
   useEffect(() => {
-    let typingTimers: NodeJS.Timeout[] = [];
+    let typingTimers: ReturnType<typeof setTimeout>[] = [];
     
     if (phase === 'text-reveal' && !prefersReducedMotion) {
       typingTimers = typeCharacter();
