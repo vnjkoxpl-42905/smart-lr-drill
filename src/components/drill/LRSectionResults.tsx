@@ -19,6 +19,7 @@ import type { DrillSession, BlindReviewResult } from '@/types/drill';
 interface LRSectionResultsProps {
   session: DrillSession;
   brResults?: BlindReviewResult[];
+  classId: string;
   onBack: () => void;
 }
 
@@ -46,7 +47,7 @@ interface FocusArea {
   accuracy: number;
 }
 
-export function LRSectionResults({ session, brResults, onBack }: LRSectionResultsProps) {
+export function LRSectionResults({ session, brResults, classId, onBack }: LRSectionResultsProps) {
   const { user } = useAuth();
   const [expandedRows, setExpandedRows] = React.useState<Set<string>>(new Set());
   const [activeFilter, setActiveFilter] = React.useState<string | null>(null);
@@ -159,12 +160,12 @@ export function LRSectionResults({ session, brResults, onBack }: LRSectionResult
           if (s.initialCorrect) byDifficulty[s.difficulty].correct++;
         });
 
-        const classId = (user as any).user_metadata?.class_id || '';
+        const resolvedClassId = classId;
         const pt = session.fullSectionConfig?.pt || 0;
         const section = session.fullSectionConfig?.section || 0;
 
         await supabase.from('section_history').insert({
-          class_id: classId,
+          class_id: resolvedClassId,
           pt,
           section,
           section_mode: session.mode,
@@ -190,7 +191,7 @@ export function LRSectionResults({ session, brResults, onBack }: LRSectionResult
             const question = questionBank.getQuestion(stat.qid);
             if (question) {
               await logWrongAnswer({
-                user_id: user.id,
+                class_id: resolvedClassId,
                 qid: stat.qid,
                 pt: question.pt,
                 section: question.section,

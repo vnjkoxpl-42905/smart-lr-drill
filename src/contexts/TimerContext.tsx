@@ -37,3 +37,8 @@ export function useTimerContext() {
   }
   return context;
 }
+
+/** Safe version that returns null when no TimerProvider is present (no crash). */
+export function useTimerContextSafe(): TimerContextValue | null {
+  return React.useContext(TimerContext);
+}

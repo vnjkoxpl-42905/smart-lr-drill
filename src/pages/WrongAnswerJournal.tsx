@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sh
 import { ArrowLeft, Play } from 'lucide-react';
 import { getWAJEntries, type WAJEntry, type WAJHistoryItem } from '@/lib/wajService';
 import { questionBank } from '@/lib/questionLoader';
+import { supabase } from '@/integrations/supabase/client';
 
 function formatTime(ms: number): string {
   const seconds = Math.floor(ms / 1000);
@@ -27,6 +28,7 @@ export default function WrongAnswerJournal() {
   const [entries, setEntries] = React.useState<WAJEntry[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [selectedEntry, setSelectedEntry] = React.useState<WAJEntry | null>(null);
+  const [classId, setClassId] = React.useState<string>('');
   const [filters, setFilters] = React.useState<{
     qtype?: string;
     level?: number;
@@ -38,16 +40,30 @@ export default function WrongAnswerJournal() {
     if (!user) navigate('/auth');
   }, [user, navigate]);
 
+  // Resolve class_id
   React.useEffect(() => {
-    if (user) loadEntries();
-  }, [filters, user]);
+    const fetchClassId = async () => {
+      if (!user) return;
+      const { data: student } = await supabase
+        .from('students')
+        .select('class_id')
+        .eq('user_id', user.id)
+        .maybeSingle();
+      if (student?.class_id) setClassId(student.class_id);
+    };
+    fetchClassId();
+  }, [user]);
+
+  React.useEffect(() => {
+    if (classId) loadEntries();
+  }, [filters, classId]);
 
   const loadEntries = async () => {
-    if (!user) return;
+    if (!classId) return;
     
     setLoading(true);
     try {
-      const data = await getWAJEntries(user.id, filters);
+      const data = await getWAJEntries(classId, filters);
       setEntries(data);
     } catch (error) {
       console.error('Failed to load WAJ entries:', error);

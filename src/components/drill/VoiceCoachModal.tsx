@@ -37,7 +37,7 @@ export function VoiceCoachModal({
   const [error, setError] = React.useState('');
   
   const recognitionRef = React.useRef<any>(null);
-  const timerRef = React.useRef<NodeJS.Timeout | null>(null);
+  const timerRef = React.useRef<ReturnType<typeof setInterval> | null>(null);
   const startTimeRef = React.useRef<number>(0);
 
   React.useEffect(() => {

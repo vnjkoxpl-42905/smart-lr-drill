@@ -24,7 +24,7 @@ import { ScoreReport } from '@/components/drill/ScoreReport';
 import { LRSectionResults } from '@/components/drill/LRSectionResults';
 import { EnhancedBlindReview } from '@/components/drill/EnhancedBlindReview';
 import { PracticeSetResults } from '@/components/drill/PracticeSetResults';
-import { TimerProvider, useTimerContext } from '@/contexts/TimerContext';
+import { TimerProvider, useTimerContextSafe } from '@/contexts/TimerContext';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { questionBank } from '@/lib/questionLoader';
 import { AdaptiveEngine } from '@/lib/adaptiveEngine';
@@ -104,7 +104,7 @@ function DrillContent() {
   // New post-section flow states
   const [postSectionScreen, setPostSectionScreen] = React.useState<'complete' | 'review' | 'score-report' | null>(null);
   const [autoReviewQids, setAutoReviewQids] = React.useState<string[]>([]);
-  const [longPressTimer, setLongPressTimer] = React.useState<NodeJS.Timeout | null>(null);
+  const [longPressTimer, setLongPressTimer] = React.useState<ReturnType<typeof setTimeout> | null>(null);
   
   // Question pool state
   const [poolStatus, setPoolStatus] = React.useState<string>('');
@@ -112,6 +112,7 @@ function DrillContent() {
   const [availablePoolSize, setAvailablePoolSize] = React.useState(0);
   const [poolExhausted, setPoolExhausted] = React.useState(false);
   const [classId, setClassId] = React.useState<string>('');
+  const [advanceToken, setAdvanceToken] = React.useState(0);
   
   // Practice-set mode state
   const [isPracticeSetMode, setIsPracticeSetMode] = React.useState(false);
@@ -119,7 +120,7 @@ function DrillContent() {
   const [hideTimer, setHideTimer] = React.useState(false);
   const [showAnswerRevealed, setShowAnswerRevealed] = React.useState<Map<string, boolean>>(new Map());
   
-  const timer = hasTimer ? useTimerContext() : null;
+  const timer = useTimerContextSafe();
 
   // BR only for Full Section and Type Drill modes
   const brEnabled = session?.mode === 'full-section' || session?.mode === 'type-drill';
@@ -132,11 +133,14 @@ function DrillContent() {
       const { data: student } = await supabase
         .from('students')
         .select('class_id')
-        .eq('id', user.id)
+        .eq('user_id', user.id)
         .maybeSingle();
       
       if (student?.class_id) {
         setClassId(student.class_id);
+      } else {
+        console.error('No student record found for user:', user.id);
+        toast.error('Session error: could not resolve your class. Please log out and back in.');
       }
     };
     
@@ -276,46 +280,67 @@ function DrillContent() {
     initializeSession();
   }, [state, navigate, classId, settings.allowRepeats, settings.preferUnseen, settings.recycleAfterDays]);
 
-  // Load current question and start timing
+  // Adaptive mode: select next question only when advanceToken changes
   React.useEffect(() => {
-    if (!session) return;
+    if (!session || session.mode !== 'adaptive') return;
 
-    if (session.mode === 'adaptive') {
-      // Adaptive mode: use engine to select
-      const allQuestions = questionBank.getAllQuestions();
-      const recentQids = new Set(
-        Array.from(session.attempts.keys()).slice(-10)
-      );
-      
-      // Calculate current ability from attempts
-      const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
-        const q = questionBank.getQuestion(qid)!;
-        return {
-          qid,
-          correct: attempt.correct,
-          time_ms: attempt.timeMs,
-          qtype: q.qtype,
-          difficulty: q.difficulty,
-          timestamp: new Date(attempt.timestamp),
-        };
-      });
-      
-      const ability = adaptiveEngine.calculateAbility(attemptRecords);
-      const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
-      
-      setCurrentQuestion(nextQuestion);
+    const allQuestions = questionBank.getAllQuestions();
+    const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
+      const q = questionBank.getQuestion(qid)!;
+      return {
+        qid,
+        correct: attempt.correct,
+        time_ms: attempt.timeMs,
+        qtype: q.qtype,
+        difficulty: q.difficulty,
+        timestamp: new Date(attempt.timestamp),
+      };
+    });
+    
+    const ability = adaptiveEngine.calculateAbility(attemptRecords);
+    const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
+    
+    setCurrentQuestion(nextQuestion);
+    resetPerQuestionState();
+  }, [advanceToken]);
+
+  // Non-adaptive mode: load question based on session.currentIndex
+  React.useEffect(() => {
+    if (!session || session.mode === 'adaptive') return;
+
+    if (session.currentIndex < session.questionQueue.length) {
+      const qid = session.questionQueue[session.currentIndex];
+      const question = questionBank.getQuestion(qid);
+      setCurrentQuestion(question || null);
     } else {
-      // Full Section or Type Drill: sequential
-      if (session.currentIndex < session.questionQueue.length) {
-        const qid = session.questionQueue[session.currentIndex];
-        const question = questionBank.getQuestion(qid);
-        setCurrentQuestion(question || null);
-      } else {
-        // Finished
-        setCurrentQuestion(null);
-      }
+      setCurrentQuestion(null);
     }
 
+    resetPerQuestionState();
+    
+    // For section mode, restore the saved answer if navigating back
+    if (session?.mode === 'full-section') {
+      const qid = session.questionQueue[session.currentIndex];
+      if (qid) {
+        const savedAttempt = session.attempts.get(qid);
+        if (savedAttempt) {
+          setSelectedAnswer(savedAttempt.selectedAnswer);
+        }
+      }
+    }
+    
+    // Check if current question is flagged
+    checkIfFlagged();
+  }, [session?.currentIndex, session?.mode]);
+
+  // Also trigger initial adaptive selection when session first initializes
+  React.useEffect(() => {
+    if (session?.mode === 'adaptive' && !currentQuestion) {
+      setAdvanceToken(t => t + 1);
+    }
+  }, [session?.mode]);
+
+  const resetPerQuestionState = () => {
     setSelectedAnswer('');
     setConfidence(null);
     setShowSolution(false);
@@ -330,18 +355,7 @@ function DrillContent() {
     setIsRetryAfterWrong(false);
     setCorrectExplanation('');
     setShowReviewButton(false);
-    
-    // For section mode, restore the saved answer if navigating back
-    if (session?.mode === 'full-section' && currentQuestion) {
-      const savedAttempt = session.attempts.get(currentQuestion.qid);
-      if (savedAttempt) {
-        setSelectedAnswer(savedAttempt.selectedAnswer);
-      }
-    }
-    
-    // Check if current question is flagged
-    checkIfFlagged();
-  }, [session]);
+  };
 
   const checkIfFlagged = async () => {
     if (!currentQuestion || !user) {
@@ -486,8 +500,14 @@ React.useEffect(() => {
     if (!question) return;
     
     try {
+      if (!classId) {
+        console.error('Cannot save attempt: missing class_id');
+        toast.error('Session error: missing class ID. Your answer was not saved.');
+        return;
+      }
       const { error } = await (supabase as any).from('attempts').insert({
         user_id: user?.id,
+        class_id: classId,
         qid: attemptData.qid,
         pt: question.pt,
         section: question.section,
@@ -529,7 +549,7 @@ React.useEffect(() => {
     const { logWrongAnswer } = await import('@/lib/wajService');
     try {
       await logWrongAnswer({
-        user_id: user?.id || '',
+        class_id: classId,
         qid: currentQuestion.qid,
         pt: currentQuestion.pt,
         section: currentQuestion.section,
@@ -729,7 +749,7 @@ React.useEffect(() => {
       const { logCorrectAnswer } = await import('@/lib/wajService');
       try {
         await logCorrectAnswer({
-          user_id: user?.id || '',
+          class_id: classId,
           qid: currentQuestion.qid,
           pt: currentQuestion.pt,
           section: currentQuestion.section,
@@ -890,7 +910,7 @@ React.useEffect(() => {
         const { logWrongAnswer } = await import('@/lib/wajService');
         try {
           await logWrongAnswer({
-            user_id: user.id,
+            class_id: classId,
             qid,
             pt: question.pt,
             section: question.section,
@@ -933,8 +953,8 @@ React.useEffect(() => {
     if (!session) return;
 
     if (session.mode === 'adaptive') {
-      // Just trigger re-render to get next question
-      setSession({ ...session });
+      // Increment advanceToken to trigger adaptive question selection
+      setAdvanceToken(t => t + 1);
     } else {
       // Move to next in queue
       if (session.currentIndex < session.questionQueue.length - 1) {
@@ -1212,6 +1232,7 @@ React.useEffect(() => {
             section: currentQuestion.section,
             qnum: currentQuestion.qnum,
             user_id: user.id,
+            class_id: classId,
           } as any);
         
         if (error && error.code !== '23505') { // Ignore unique constraint violation
@@ -1326,6 +1347,7 @@ React.useEffect(() => {
         <LRSectionResults
           session={session}
           brResults={brResults}
+          classId={classId}
           onBack={() => navigate('/')}
         />
       );
@@ -1452,7 +1474,11 @@ React.useEffect(() => {
       const medianTimeMs = times.length > 0 ? times[Math.floor(times.length / 2)] : 0;
 
       // Save BR session
-      const classId = (user as any).user_metadata?.class_id || user.id;
+      if (!classId) {
+        console.error('Cannot save BR results: missing class_id');
+        toast.error('Session error: missing class ID.');
+        return;
+      }
       await supabase.from('blind_review_sessions').insert({
         class_id: classId,
         session_id: sessionId,
