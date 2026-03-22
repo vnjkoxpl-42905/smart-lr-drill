@@ -132,11 +132,14 @@ function DrillContent() {
       const { data: student } = await supabase
         .from('students')
         .select('class_id')
-        .eq('id', user.id)
+        .eq('user_id', user.id)
         .maybeSingle();
       
       if (student?.class_id) {
         setClassId(student.class_id);
+      } else {
+        console.error('No student record found for user:', user.id);
+        toast.error('Session error: could not resolve your class. Please log out and back in.');
       }
     };
     
