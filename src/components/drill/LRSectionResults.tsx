@@ -165,7 +165,7 @@ export function LRSectionResults({ session, brResults, classId, onBack }: LRSect
         const section = session.fullSectionConfig?.section || 0;
 
         await supabase.from('section_history').insert({
-          class_id: classId,
+          class_id: resolvedClassId,
           pt,
           section,
           section_mode: session.mode,
