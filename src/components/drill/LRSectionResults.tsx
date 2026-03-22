@@ -19,6 +19,7 @@ import type { DrillSession, BlindReviewResult } from '@/types/drill';
 interface LRSectionResultsProps {
   session: DrillSession;
   brResults?: BlindReviewResult[];
+  classId: string;
   onBack: () => void;
 }
 

@@ -1472,7 +1472,11 @@ React.useEffect(() => {
       const medianTimeMs = times.length > 0 ? times[Math.floor(times.length / 2)] : 0;
 
       // Save BR session
-      const brClassId = classId;
+      if (!classId) {
+        console.error('Cannot save BR results: missing class_id');
+        toast.error('Session error: missing class ID.');
+        return;
+      }
       await supabase.from('blind_review_sessions').insert({
         class_id: classId,
         session_id: sessionId,
