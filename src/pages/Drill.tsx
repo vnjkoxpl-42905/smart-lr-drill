@@ -280,46 +280,67 @@ function DrillContent() {
     initializeSession();
   }, [state, navigate, classId, settings.allowRepeats, settings.preferUnseen, settings.recycleAfterDays]);
 
-  // Load current question and start timing
+  // Adaptive mode: select next question only when advanceToken changes
   React.useEffect(() => {
-    if (!session) return;
+    if (!session || session.mode !== 'adaptive') return;
 
-    if (session.mode === 'adaptive') {
-      // Adaptive mode: use engine to select
-      const allQuestions = questionBank.getAllQuestions();
-      const recentQids = new Set(
-        Array.from(session.attempts.keys()).slice(-10)
-      );
-      
-      // Calculate current ability from attempts
-      const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
-        const q = questionBank.getQuestion(qid)!;
-        return {
-          qid,
-          correct: attempt.correct,
-          time_ms: attempt.timeMs,
-          qtype: q.qtype,
-          difficulty: q.difficulty,
-          timestamp: new Date(attempt.timestamp),
-        };
-      });
-      
-      const ability = adaptiveEngine.calculateAbility(attemptRecords);
-      const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
-      
-      setCurrentQuestion(nextQuestion);
+    const allQuestions = questionBank.getAllQuestions();
+    const attemptRecords = Array.from(session.attempts.entries()).map(([qid, attempt]) => {
+      const q = questionBank.getQuestion(qid)!;
+      return {
+        qid,
+        correct: attempt.correct,
+        time_ms: attempt.timeMs,
+        qtype: q.qtype,
+        difficulty: q.difficulty,
+        timestamp: new Date(attempt.timestamp),
+      };
+    });
+    
+    const ability = adaptiveEngine.calculateAbility(attemptRecords);
+    const nextQuestion = adaptiveEngine.selectNextQuestion(allQuestions, ability, 0.15);
+    
+    setCurrentQuestion(nextQuestion);
+    resetPerQuestionState();
+  }, [advanceToken]);
+
+  // Non-adaptive mode: load question based on session.currentIndex
+  React.useEffect(() => {
+    if (!session || session.mode === 'adaptive') return;
+
+    if (session.currentIndex < session.questionQueue.length) {
+      const qid = session.questionQueue[session.currentIndex];
+      const question = questionBank.getQuestion(qid);
+      setCurrentQuestion(question || null);
     } else {
-      // Full Section or Type Drill: sequential
-      if (session.currentIndex < session.questionQueue.length) {
-        const qid = session.questionQueue[session.currentIndex];
-        const question = questionBank.getQuestion(qid);
-        setCurrentQuestion(question || null);
-      } else {
-        // Finished
-        setCurrentQuestion(null);
-      }
+      setCurrentQuestion(null);
     }
 
+    resetPerQuestionState();
+    
+    // For section mode, restore the saved answer if navigating back
+    if (session?.mode === 'full-section') {
+      const qid = session.questionQueue[session.currentIndex];
+      if (qid) {
+        const savedAttempt = session.attempts.get(qid);
+        if (savedAttempt) {
+          setSelectedAnswer(savedAttempt.selectedAnswer);
+        }
+      }
+    }
+    
+    // Check if current question is flagged
+    checkIfFlagged();
+  }, [session?.currentIndex, session?.mode]);
+
+  // Also trigger initial adaptive selection when session first initializes
+  React.useEffect(() => {
+    if (session?.mode === 'adaptive' && !currentQuestion) {
+      setAdvanceToken(t => t + 1);
+    }
+  }, [session?.mode]);
+
+  const resetPerQuestionState = () => {
     setSelectedAnswer('');
     setConfidence(null);
     setShowSolution(false);
@@ -334,18 +355,7 @@ function DrillContent() {
     setIsRetryAfterWrong(false);
     setCorrectExplanation('');
     setShowReviewButton(false);
-    
-    // For section mode, restore the saved answer if navigating back
-    if (session?.mode === 'full-section' && currentQuestion) {
-      const savedAttempt = session.attempts.get(currentQuestion.qid);
-      if (savedAttempt) {
-        setSelectedAnswer(savedAttempt.selectedAnswer);
-      }
-    }
-    
-    // Check if current question is flagged
-    checkIfFlagged();
-  }, [session]);
+  };
 
   const checkIfFlagged = async () => {
     if (!currentQuestion || !user) {
